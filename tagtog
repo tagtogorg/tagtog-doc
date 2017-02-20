@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 import sys
-assert sys.version_info[0] == 3, "This script requires Python 3"
-
 import getpass
+import glob
 try:
     import requests
 except:
     print("ERROR - You need to install requests: pip install requests")
     sys.exit(-1)
+
+
+assert sys.version_info[0] == 3, "This script requires Python 3"
 
 
 # CHANGE TO YOUR INSTALLATION'S URL TOGETHER WITH THE RIGHT PORT NUMBER -- Example: http://localhost:9000/

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import sys
-import getpass
+import os
 import glob
+from itertools import chain
 try:
     import requests
 except:
@@ -30,6 +31,7 @@ __doc__ = \
 
 def parse_arguments(argv=[]):
     import argparse
+    import getpass
 
     parser = argparse.ArgumentParser(description=__doc__)
 
@@ -74,7 +76,23 @@ def upload(args, filepath_iterator):
     print(response, response.text)
 
 
+def gen_filepaths_generator(paths):
+    generator = []
+    for path in paths:
+        generator = chain(generator, gen_filespath_generator(path))
+    return generator
+
+
+def gen_filespath_generator(path):
+    if os.path.isfile(path):
+        return [path]
+    elif os.path.isdir(path):
+        return (subpath for subpath in glob.iglob(path + "/**", recursive=True) if os.path.isfile(subpath))
+    else:
+        return []  # resilient
+
+
 if __name__ == "__main__":
     args = parse_arguments(sys.argv[1:])
-    print(args)
-    upload(args, args.paths)
+    files_to_upload = gen_filepaths_generator(args.paths)
+    upload(args, files_to_upload)

@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 import sys
-import getpass
-
 assert sys.version_info[0] == 3, "This script requires Python 3"
+
+import getpass
+try:
+    import requests
+except:
+    print("ERROR - You need to install requests: pip install requests")
+    sys.exit(-1)
+
 
 # CHANGE TO YOUR INSTALLATION'S URL TOGETHER WITH THE RIGHT PORT NUMBER -- Example: http://localhost:9000/
 __default_domain__ = "https://www.tagtog.net/"
@@ -25,11 +31,11 @@ def parse_arguments(argv=[]):
 
     parser = argparse.ArgumentParser(description=__doc__)
 
-     # Future-proof for other possible actions
+    # Future-proof for other possible actions
     parser.add_argument("action", choices=["upload"], help="Action to execute -- Only 'upload' is possible")
 
     parser.add_argument("--domain", default=__default_domain__, help="tagtog domain, e.g. http://localhost:9000/")
-    parser.add_argument("--entrypoint", default="/api/0.1/documents")
+    parser.add_argument("--entrypoint", default="api/0.1/documents")
 
     parser.add_argument('--user', required=True, help="tagtog username making the request")
     parser.add_argument('--password', required=False, default=None, help="User's password -- if not given, the password is prompted")
@@ -39,11 +45,34 @@ def parse_arguments(argv=[]):
     parser.add_argument("paths", nargs='+', help="paths of files or folders containing (recursively) the files to upload")
 
     args = parser.parse_args(argv)
+
+    if not args.domain.endswith("/"):
+        args.domain += "/"
+
     if args.password is None:
         args.password = getpass.getpass(prompt="tagtog password: ")
+
+    if args.owner is None:
+        args.owner = args.user
+
+    args.req_url = args.domain + args.entrypoint
+    args.req_auth = requests.auth.HTTPBasicAuth(username=args.user, password=args.password)
+    args.password = None  # Hide
+    args.req_params = {"owner": args.owner, "project": args.project, "output": "null"}
+
     return args
+
+
+def upload(args, filepath_iterator):
+    files = []
+    for filepath in filepath_iterator:
+        files.append(("files", open(filepath, "rb")))
+
+    response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files)
+    print(response, response.text)
 
 
 if __name__ == "__main__":
     args = parse_arguments(sys.argv[1:])
     print(args)
+    upload(args, args.paths)

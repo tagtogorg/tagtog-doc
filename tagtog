@@ -2,7 +2,7 @@
 import sys
 import os
 import glob
-from itertools import chain
+from itertools import islice, chain
 try:
     import requests
 except:
@@ -13,7 +13,7 @@ except:
 assert sys.version_info[0] == 3, "This script requires Python 3"
 
 
-# CHANGE TO YOUR INSTALLATION'S URL TOGETHER WITH THE RIGHT PORT NUMBER -- Example: http://localhost:9000/
+# CHANGE TO YOUR INSTALLATION'S URL INCLUDING THE PORT NUMBER -- Example: http://localhost:9000/
 __default_domain__ = "https://www.tagtog.net/"
 
 __author__ = "tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks)"
@@ -68,12 +68,26 @@ def parse_arguments(argv=[]):
 
 
 def upload(args, filepath_iterator):
-    files = []
-    for filepath in filepath_iterator:
-        files.append(("files", open(filepath, "rb")))
+    BATCH_SIZE = 2
 
-    response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files)
-    print(response, response.text)
+    batch_index = 0
+    while True:
+        batch_index += 1
+        batch = islice(filepath_iterator, BATCH_SIZE)
+        first = next(batch, None)
+        if first is None:
+            return
+        else:
+            batch = chain([first], batch)
+
+        files = []
+        for filepath in batch:
+            files.append(("files", open(filepath, "rb")))
+
+        response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files)
+        print("batch", batch_index, response, response.text)
+        if response != 200:
+            return
 
 
 def gen_filepaths_generator(paths):

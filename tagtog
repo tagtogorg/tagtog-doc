@@ -37,6 +37,9 @@ def parse_arguments(argv=[]):
 
     # Future-proof for other possible actions
     parser.add_argument("action", choices=["upload"], help="Action to execute -- Only 'upload' is possible")
+    if argv[0] != "upload":
+        print("ERROR the first argument must be 'upload'")
+        sys.exit(-1)
 
     parser.add_argument("--domain", default=__default_domain__, help="tagtog domain, e.g. http://localhost:9000/")
     parser.add_argument("--entrypoint", default="api/0.1/documents")

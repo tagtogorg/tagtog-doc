@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import sys
 import os
 import glob
@@ -8,7 +9,6 @@ try:
 except:
     print("ERROR - You need to install requests: pip install requests")
     sys.exit(-1)
-
 
 assert sys.version_info[0] == 3, "This script requires Python 3"
 

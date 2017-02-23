@@ -50,6 +50,8 @@ def parse_arguments(argv=[]):
     parser.add_argument("--owner", required=False, help="Owner of the project to upload the files to -- Defaults to the user")
     parser.add_argument("--project", required=True, help="Project name to upload the files to")
 
+    parser.add_argument("--output", default="null", help="Output type to get from tagtog's response")
+
     parser.add_argument("paths", nargs='+', help="paths of files or folders containing (recursively) the files to upload")
 
     args = parser.parse_args(argv)
@@ -66,7 +68,7 @@ def parse_arguments(argv=[]):
     args.req_url = args.domain + args.entrypoint
     args.req_auth = requests.auth.HTTPBasicAuth(username=args.user, password=args.password)
     args.password = None  # Hide
-    args.req_params = {"owner": args.owner, "project": args.project, "output": "null"}
+    args.req_params = {"owner": args.owner, "project": args.project, "output": args.output}
 
     return args
 

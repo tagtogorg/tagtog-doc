@@ -56,7 +56,7 @@ def parse_arguments(argv=[]):
     upload_parser = add_common_arguments(upload_parser, default_output="null")
     upload_parser.set_defaults(func=upload_print)
 
-    upload_parser.add_argument("paths", nargs='+', help="paths of files or folders containing (recursively) the files to upload")
+    upload_parser.add_argument("paths", nargs="+", help="paths of files or folders containing (recursively) the files to upload")
 
     # -----------------------------------------------------------------------------------------------------------------
 
@@ -64,7 +64,7 @@ def parse_arguments(argv=[]):
     search_parser = add_common_arguments(search_parser, default_output="search")
     search_parser.set_defaults(func=search_print)
 
-    search_parser.add_argument("search", nargs='+', help="search query")
+    search_parser.add_argument("search", nargs="+", help="search query")
 
     # -----------------------------------------------------------------------------------------------------------------
 

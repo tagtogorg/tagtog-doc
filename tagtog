@@ -8,6 +8,7 @@ try:
     import requests
 except:
     print("ERROR - You need to install requests: pip install requests")
+    # TODO python 3.5
     sys.exit(-1)
 
 assert sys.version_info[0] == 3, "This script requires Python 3"
@@ -41,6 +42,7 @@ def parse_arguments(argv=[]):
     if argv[0] != "upload":
         print("ERROR the first argument must be 'upload'")
         sys.exit(-1)
+    # TODO add functionality for download
 
     parser.add_argument("--domain", default=__default_domain__, help="tagtog domain, e.g. http://localhost:9000/")
     parser.add_argument("--entrypoint", default="api/0.1/documents")
@@ -93,6 +95,7 @@ def upload(args, filepath_iterator):
         response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files)
         print("batch", batch_index, response, response.text)
         if response != 200:
+            # TODO allow for next batches to continue ?
             return
 
 

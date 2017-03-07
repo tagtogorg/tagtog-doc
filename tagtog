@@ -177,7 +177,7 @@ def print_search(args):
 
 
 def search(args):
-    response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth)
+    response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth)
 
     if response.ok:
         return (response.json(), response)
@@ -190,11 +190,22 @@ def search(args):
 
 def print_download(args):
     next_page = 0
-    while next_page != 1:
+    download_output = args.output
+
+    while next_page != -1:
+        args.req_params["output"] = "search"
         (json, response) = search(args)
 
         if json:
-            ???
+            next_page = json["pages"]["next"]
+            args.req_params["output"] = download_output
+
+            for doc in json["docs"]:
+                print(doc)
+
+        else:
+            print("ERROR;", response.status_code, response.reason)
+            sys.exit(-1)
 
 def search(args):
     response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth)

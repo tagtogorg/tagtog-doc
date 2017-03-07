@@ -117,16 +117,20 @@ def upload(args):
             batch = chain([first], batch)
 
         files = []
+        filepaths = []
         for filepath in batch:
+            filepaths.append(filepath)
             files.append(("files", open(filepath, "rb")))
 
         response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files)
         print("batch", batch_index, response, response.text)
 
         if response != 200:
+            print("\tERROR; could not upload the files:", filepaths)
+
             num_consecutive_errors += 1
             if num_consecutive_errors == MAX_NUM_CONSECUTIVE_ERRORS:
-                print("ERROR; too many consecutive failed requireds")
+                print("FATAL; too many consecutive failed requireds")
                 sys.exit(-1)
         else:
             num_consecutive_errors = 0

@@ -54,17 +54,26 @@ def parse_arguments(argv=[]):
 
     upload_parser = subparsers.add_parser("upload", help='Upload files to tagtog')
     upload_parser = add_common_arguments(upload_parser, default_output="null")
-    upload_parser.set_defaults(func=upload_print)
+    upload_parser.set_defaults(func=print_upload)
 
     upload_parser.add_argument("paths", nargs="+", help="paths of files or folders containing (recursively) the files to upload")
 
     # -----------------------------------------------------------------------------------------------------------------
 
-    search_parser = subparsers.add_parser("search", help='Search documents by query')
+    search_parser = subparsers.add_parser("search", help='Search documents by query, e.g. `*` (all)')
     search_parser = add_common_arguments(search_parser, default_output="search")
-    search_parser.set_defaults(func=search_print)
+    search_parser.set_defaults(func=print_search)
 
     search_parser.add_argument("search", nargs="+", help="search query")
+
+    # -----------------------------------------------------------------------------------------------------------------
+
+    downld_parser = subparsers.add_parser("download", help='Download documents by search query, e.g. `updated:[NOW-1DAY to NOW]')
+    downld_parser = add_common_arguments(downld_parser, default_output="ann.json")
+    downld_parser.set_defaults(func=print_download)
+
+    downld_parser.add_argument("search", nargs="+", help="search query")
+    downld_parser.add_argument("--folder", default=".", help="search query")
 
     # -----------------------------------------------------------------------------------------------------------------
 
@@ -90,7 +99,7 @@ def parse_arguments(argv=[]):
 
     # -----------------------------------------------------------------------------------------------------------------
 
-    if args.action == "search":
+    if args.action in ["search", "download"]:
         args.search = " ".join(args.search)
         args.req_params["search"] = args.search
 
@@ -99,7 +108,7 @@ def parse_arguments(argv=[]):
     return args
 
 
-def upload_print(args):
+def print_upload(args):
     filepath_iterator = gen_filepaths_generator(args.paths)
 
     BATCH_SIZE = 10
@@ -157,7 +166,8 @@ def gen_filespath_generator(path):
 
 # -----------------------------------------------------------------------------------------------------------------
 
-def search_print(args):
+
+def print_search(args):
     (json, response) = search(args)
 
     if json:
@@ -165,6 +175,26 @@ def search_print(args):
     else:
         print("ERROR;", response.status_code, response.reason)
 
+
+def search(args):
+    response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth)
+
+    if response.ok:
+        return (response.json(), response)
+    else:
+        return (None, response)
+
+
+# -----------------------------------------------------------------------------------------------------------------
+
+
+def print_download(args):
+    next_page = 0
+    while next_page != 1:
+        (json, response) = search(args)
+
+        if json:
+            ???
 
 def search(args):
     response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth)

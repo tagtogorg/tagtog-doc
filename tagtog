@@ -201,19 +201,24 @@ def print_download(args):
             args.req_params["output"] = download_output
 
             for doc in json["docs"]:
-                print(doc)
+                args.req_params["ids"] = doc["id"]
+                response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth)
+                if response.ok:
+                    content_disposition = response.headers["Content-Disposition"]
+                    if content_disposition:
+                        filename = content_disposition[10:-1]  # e.g filename="aVqgBChe0bUw_mP1ti_ypKdrg2gC-PCM000600172907.json"
+                    else:
+                        filename = doc["id"] + "." + download_output
+
+                    filepath = os.path.join(args.folder, filename)
+                    with open(filepath, "wb") as f:
+                        f.write(response.content)
+                        print("downloaded:", filepath)
 
         else:
             print("ERROR;", response.status_code, response.reason)
             sys.exit(-1)
 
-def search(args):
-    response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth)
-
-    if response.ok:
-        return (response.json(), response)
-    else:
-        return (None, response)
 
 # -----------------------------------------------------------------------------------------------------------------
 

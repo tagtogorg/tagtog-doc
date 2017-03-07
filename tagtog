@@ -102,6 +102,9 @@ def upload(args):
     filepath_iterator = gen_filepaths_generator(args.paths)
 
     BATCH_SIZE = 10
+    MAX_NUM_CONSECUTIVE_ERRORS = 3
+
+    num_consecutive_errors = 0
 
     batch_index = 0
     while True:
@@ -119,9 +122,14 @@ def upload(args):
 
         response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files)
         print("batch", batch_index, response, response.text)
+
         if response != 200:
-            # TODO allow for next batches to continue ?
-            return
+            num_consecutive_errors += 1
+            if num_consecutive_errors == MAX_NUM_CONSECUTIVE_ERRORS:
+                print("ERROR; too many consecutive failed requireds")
+                sys.exit(-1)
+        else:
+            num_consecutive_errors = 0
 
 
 def gen_filepaths_generator(paths):

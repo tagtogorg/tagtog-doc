@@ -54,6 +54,7 @@ def parse_arguments(argv=[]):
 
     upload_parser = subparsers.add_parser("upload", help='Upload files to tagtog')
     upload_parser = add_common_arguments(upload_parser, default_output="null")
+    upload_parser.set_defaults(func=upload)
 
     upload_parser.add_argument("paths", nargs='+', help="paths of files or folders containing (recursively) the files to upload")
 
@@ -61,6 +62,7 @@ def parse_arguments(argv=[]):
 
     search_parser = subparsers.add_parser("search", help='Search documents by query')
     search_parser = add_common_arguments(search_parser, default_output="search")
+    search_parser.set_defaults(func=search)
 
     search_parser.add_argument("search", nargs='+', help="search query")
 
@@ -88,18 +90,18 @@ def parse_arguments(argv=[]):
 
     # -----------------------------------------------------------------------------------------------------------------
 
-    if args.search is not None:
+    if args.action == "search":
         args.search = " ".join(args.search)
-
-    print(args)
 
     # -----------------------------------------------------------------------------------------------------------------
 
     return args
 
 
-def upload(args, filepath_iterator):
-    BATCH_SIZE = 2
+def upload(args):
+    filepath_iterator = gen_filepaths_generator(args.paths)
+
+    BATCH_SIZE = 10
 
     batch_index = 0
     while True:
@@ -139,10 +141,15 @@ def gen_filespath_generator(path):
         return []  # resilient
 
 
+# -----------------------------------------------------------------------------------------------------------------
+
+def search(args):
+    raise NotImplementedError
+
+# -----------------------------------------------------------------------------------------------------------------
+
 if __name__ == "__main__":
     args = parse_arguments(sys.argv[1:])
-    # print("Uploading documents to:", args.domain)
-    # print()
-    #
-    # files_to_upload = gen_filepaths_generator(args.paths)
-    # upload(args, files_to_upload)
+    print("Domain:", args.domain)
+    print()
+    args.func(args)

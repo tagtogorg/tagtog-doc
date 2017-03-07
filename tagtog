@@ -54,7 +54,7 @@ def parse_arguments(argv=[]):
 
     upload_parser = subparsers.add_parser("upload", help='Upload files to tagtog')
     upload_parser = add_common_arguments(upload_parser, default_output="null")
-    upload_parser.set_defaults(func=upload)
+    upload_parser.set_defaults(func=upload_print)
 
     upload_parser.add_argument("paths", nargs='+', help="paths of files or folders containing (recursively) the files to upload")
 
@@ -62,7 +62,7 @@ def parse_arguments(argv=[]):
 
     search_parser = subparsers.add_parser("search", help='Search documents by query')
     search_parser = add_common_arguments(search_parser, default_output="search")
-    search_parser.set_defaults(func=search)
+    search_parser.set_defaults(func=search_print)
 
     search_parser.add_argument("search", nargs='+', help="search query")
 
@@ -92,13 +92,14 @@ def parse_arguments(argv=[]):
 
     if args.action == "search":
         args.search = " ".join(args.search)
+        args.req_params["search"] = args.search
 
     # -----------------------------------------------------------------------------------------------------------------
 
     return args
 
 
-def upload(args):
+def upload_print(args):
     filepath_iterator = gen_filepaths_generator(args.paths)
 
     BATCH_SIZE = 10
@@ -123,17 +124,18 @@ def upload(args):
             files.append(("files", open(filepath, "rb")))
 
         response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files)
-        print("batch", batch_index, response, response.text)
+        print("batch", batch_index, response.status_code, response.reason, "--", response.text)
 
-        if response != 200:
+        if response.ok:
+            num_consecutive_errors = 0
+
+        else:
             print("\tERROR; could not upload the files:", filepaths)
 
             num_consecutive_errors += 1
             if num_consecutive_errors == MAX_NUM_CONSECUTIVE_ERRORS:
                 print("FATAL; too many consecutive failed requireds")
                 sys.exit(-1)
-        else:
-            num_consecutive_errors = 0
 
 
 def gen_filepaths_generator(paths):
@@ -155,8 +157,22 @@ def gen_filespath_generator(path):
 
 # -----------------------------------------------------------------------------------------------------------------
 
+def search_print(args):
+    (json, response) = search(args)
+
+    if json:
+        print(json)
+    else:
+        print("ERROR;", response.status_code, response.reason)
+
+
 def search(args):
-    raise NotImplementedError
+    response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth)
+
+    if response.ok:
+        return (response.json(), response)
+    else:
+        return (None, response)
 
 # -----------------------------------------------------------------------------------------------------------------
 

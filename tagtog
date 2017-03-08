@@ -13,7 +13,7 @@ except:
     # TODO python 3.5
     sys.exit(-1)
 
-assert sys.version_info[0] == 3, "This script requires Python 3"
+assert sys.version_info.major == 3, "This script requires Python 3"
 
 
 # CHANGE TO YOUR INSTALLATION'S URL INCLUDING THE PORT NUMBER -- Example: http://localhost:9000/

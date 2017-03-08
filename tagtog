@@ -20,7 +20,7 @@ assert sys.version_info.major == 3, "This script requires Python 3"
 __default_domain__ = "https://www.tagtog.net/"
 
 __author__ = "tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks)"
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __doc__ = \
     """
     tagtog official script to Upload & Search & Download documents.

@@ -3,6 +3,7 @@
 import sys
 import os
 import glob
+import fnmatch
 from itertools import islice, chain
 import argparse
 import getpass
@@ -10,17 +11,16 @@ try:
     import requests
 except:
     print("ERROR - You need to install requests: pip install requests")
-    # TODO python 3.5
     sys.exit(-1)
 
-assert sys.version_info[0] == 3, "This script requires Python 3"
+assert sys.version_info.major == 3, "This script requires Python 3"
 
 
 # CHANGE TO YOUR INSTALLATION'S URL INCLUDING THE PORT NUMBER -- Example: http://localhost:9000/
 __default_domain__ = "https://www.tagtog.net/"
 
 __author__ = "tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks)"
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __doc__ = \
     """
     tagtog official script to Upload & Search & Download documents.
@@ -57,6 +57,7 @@ def parse_arguments(argv=[]):
     upload_parser.set_defaults(func=print_upload)
 
     upload_parser.add_argument("paths", nargs="+", help="paths of files or folders containing (recursively) the files to upload")
+    upload_parser.add_argument("--extension", default="json", help="extension of files to upload when recursively reading files from a folder, e.g. json or txt")
 
     # -----------------------------------------------------------------------------------------------------------------
 
@@ -99,6 +100,10 @@ def parse_arguments(argv=[]):
 
     # -----------------------------------------------------------------------------------------------------------------
 
+    if args.action in ["upload"]:
+        if args.extension.startswith("."):
+            args.extension = args.extension[1:]
+
     if args.action in ["search", "download"]:
         args.search = " ".join(args.search)
         args.req_params["search"] = args.search
@@ -109,11 +114,12 @@ def parse_arguments(argv=[]):
 
 
 def print_upload(args):
-    filepath_iterator = gen_filepaths_generator(args.paths)
+    filepath_iterator = gen_filepaths_generator(args.paths, args.extension)
 
     BATCH_SIZE = 10
     MAX_NUM_CONSECUTIVE_ERRORS = 3
 
+    num_uploaded_files = 0
     num_consecutive_errors = 0
 
     batch_index = 0
@@ -122,6 +128,7 @@ def print_upload(args):
         batch = islice(filepath_iterator, BATCH_SIZE)
         first = next(batch, None)
         if first is None:
+            print("\nFinished; num uploaded files:", num_uploaded_files)
             return
         else:
             batch = chain([first], batch)
@@ -137,6 +144,7 @@ def print_upload(args):
 
         if response.ok:
             num_consecutive_errors = 0
+            num_uploaded_files += len(response.json()["ids"])
 
         else:
             print("\tERROR; could not upload the files:", filepaths)
@@ -147,18 +155,22 @@ def print_upload(args):
                 sys.exit(-1)
 
 
-def gen_filepaths_generator(paths):
+def gen_filepaths_generator(paths, extension):
     generator = []
     for path in paths:
-        generator = chain(generator, gen_filespath_generator(path))
+        generator = chain(generator, gen_filespath_generator(path, extension))
     return generator
 
 
-def gen_filespath_generator(path):
+def gen_filespath_generator(path, extension):
     if os.path.isfile(path):
         return [path]
     elif os.path.isdir(path):
-        return (subpath for subpath in glob.iglob(path + "/**", recursive=True) if os.path.isfile(subpath))
+        if sys.version_info.minor >= 5:  # >= Python 3.5
+            return (subpath for subpath in glob.iglob(path + "/**/*." + extension, recursive=True) if os.path.isfile(subpath))
+        else:
+            return (os.path.join(root, filename) for root, dirnames, filenames in os.walk(path) for filename in fnmatch.filter(filenames, "*." + extension))
+
     else:
         print("warning, cannot read:", path)
         return []  # resilient

@@ -243,7 +243,7 @@ def print_download(args):
                 del args.req_params["ids"]
 
                 if response.ok:
-                    content_disposition = response.headers["Content-Disposition"]
+                    content_disposition = response.headers.get("Content-Disposition")
                     if content_disposition:
                         filename = content_disposition[10:-1]  # e.g filename="aVqgBChe0bUw_mP1ti_ypKdrg2gC-PCM000600172907.json"
                     else:

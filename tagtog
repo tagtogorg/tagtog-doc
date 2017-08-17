@@ -15,9 +15,7 @@ except:
 
 assert sys.version_info.major == 3, "This script requires Python 3"
 
-
-# CHANGE TO YOUR INSTALLATION'S URL INCLUDING THE PORT NUMBER -- Example: http://localhost:9000/
-__default_domain__ = "https://www.tagtog.net/"
+# ---------------------------------------------------------------------------------------------------------------------
 
 __author__ = "tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks)"
 __version__ = "0.1.1"
@@ -30,6 +28,12 @@ __doc__ = \
     API documentation: https://github.com/tagtog/tagtog-doc/wiki/API-documents-v0.1
     """.format(__version__, __author__)
 
+# ---------------------------------------------------------------------------------------------------------------------
+
+DEFAULT_DOMAIN = os.environ.get('TAGTOG_DOMAIN') or "https://www.tagtog.net/"
+
+# ---------------------------------------------------------------------------------------------------------------------
+
 
 def parse_arguments(argv=[]):
     parser = argparse.ArgumentParser(prog="tagtog", description=__doc__)
@@ -38,7 +42,7 @@ def parse_arguments(argv=[]):
     # -----------------------------------------------------------------------------------------------------------------
 
     def add_common_arguments(parser, default_output):
-        parser.add_argument("--domain", default=__default_domain__, help="tagtog domain, e.g. http://localhost:9000/")
+        parser.add_argument("--domain", default=DEFAULT_DOMAIN, help="tagtog domain, e.g. http://localhost:80/. You can set the default with the environment variable `TAGTOG_DOMAIN`")
         parser.add_argument("--entrypoint", default="api/0.1/documents")
 
         parser.add_argument('--user', required=True, help="tagtog username making the request")

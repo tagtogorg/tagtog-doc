@@ -49,6 +49,7 @@ def parse_arguments(argv=[]):
         parser.add_argument('--password', default=None, help="User's password -- if not given, the password is prompted")
         parser.add_argument("--owner", help="Project owner in tagtog -- defaults to the user")
         parser.add_argument("--project", required=True, help="Project name in tagtog to operate on")
+        parser.add_argument("--member", required=False, help="(Optional) Project member name to operate documents on")
 
         parser.add_argument("--output", default=default_output, help="Output type of tagtog's response")
 
@@ -101,6 +102,8 @@ def parse_arguments(argv=[]):
     args.req_auth = requests.auth.HTTPBasicAuth(username=args.user, password=args.password)
     args.password = None  # Hide
     args.req_params = {"owner": args.owner, "project": args.project, "output": args.output}
+    if args.member:
+        args.req_params["member"] = args.member
 
     # -----------------------------------------------------------------------------------------------------------------
 

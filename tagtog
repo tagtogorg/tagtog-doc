@@ -153,7 +153,7 @@ def print_upload(args):
             filepaths.append(filepath)
             files.append(("files", open(filepath, "rb")))
 
-        response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files)
+        response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files, verify=False)
         print("batch", batch_index, response.status_code, response.reason, "--", response.text)
 
         if response.ok:
@@ -208,7 +208,7 @@ def print_search(args):
 
 
 def search(args):
-    response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth)
+    response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=False)
 
     if response.ok:
         return (response.json(), response)
@@ -233,7 +233,7 @@ def print_download(args):
 
             for doc in json["docs"]:
                 args.req_params["ids"] = doc["id"]
-                response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth)
+                response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=False)
                 if response.ok:
                     content_disposition = response.headers["Content-Disposition"]
                     if content_disposition:

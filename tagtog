@@ -158,7 +158,7 @@ def print_upload(args):
 
         if response.ok:
             num_consecutive_errors = 0
-            num_uploaded_files += len(response.json()["ids"])
+            num_uploaded_files += response.json()["ok"]
 
         else:
             print("\tERROR; could not upload the files:", filepaths)

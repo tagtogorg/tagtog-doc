@@ -169,6 +169,11 @@ def print_upload(args):
                 sys.exit(-1)
 
 
+def print_ids_upload(args):
+    response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, verify=False)
+    print(response)
+
+
 def gen_filepaths_generator(paths, extension):
     generator = []
     for path in paths:

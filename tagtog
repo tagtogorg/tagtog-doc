@@ -253,7 +253,7 @@ def print_download(args):
                         print("downloaded:", filepath)
 
         else:
-            print("ERROR;", response.status_code, response.reason)
+            print("ERROR;", response.status_code, response.reason, response.text)
             sys.exit(-1)
 
 

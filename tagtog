@@ -84,7 +84,7 @@ def parse_arguments(argv=[]):
     downld_parser.set_defaults(func=print_download)
 
     downld_parser.add_argument("search", nargs="+", help="search query")
-    downld_parser.add_argument("--folder", default=".", help="search query")
+    downld_parser.add_argument("--output_folder", default=".", help="(Optional; defaults to '.') folder path where to store the result files to")
 
     # -----------------------------------------------------------------------------------------------------------------
 
@@ -226,9 +226,11 @@ def search(args):
 def print_download(args):
     next_page = 0
     download_output = args.output
+    os.makedirs(args.output_folder, exist_ok=True)  # Make sure the output folder exists
 
     while next_page != -1:
         args.req_params["output"] = "search"
+        args.req_params["page"] = next_page
         (json, response) = search(args)
 
         if json:
@@ -247,7 +249,7 @@ def print_download(args):
                     else:
                         filename = doc["id"] + "." + download_output
 
-                    filepath = os.path.join(args.folder, filename)
+                    filepath = os.path.join(args.output_folder, filename)
                     with open(filepath, "wb") as f:
                         f.write(response.content)
                         print("downloaded:", filepath)

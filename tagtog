@@ -39,17 +39,21 @@ def parse_arguments(argv=[]):
     parser = argparse.ArgumentParser(prog="tagtog", description=__doc__)
     subparsers = parser.add_subparsers(dest="action")
 
+    def str2bool(x):
+        return True if x.lower() in {'yes', 'true', 't', 'y', '1'} else False
+
     # -----------------------------------------------------------------------------------------------------------------
 
     def add_common_arguments(parser, default_output):
         parser.add_argument("--domain", default=DEFAULT_DOMAIN, help="tagtog domain, e.g. http://localhost:80/. You can set the default with the environment variable `TAGTOG_DOMAIN`")
         parser.add_argument("--entrypoint", default="api/0.1/documents")
 
-        parser.add_argument('--user', required=True, help="tagtog username making the request")
+        parser.add_argument("--user", required=True, help="tagtog username making the request")
         parser.add_argument('--password', default=None, help="User's password -- if not given, the password is prompted")
         parser.add_argument("--owner", help="Project owner in tagtog -- defaults to the user")
         parser.add_argument("--project", required=True, help="Project name in tagtog to operate on")
         parser.add_argument("--member", required=False, help="(Optional) Project member name to operate documents on")
+        parser.add_argument("--verify_ssl", type=str2bool, default=True, help="(Optional) Choose to verify or not the ssl certificate of the endpoint domain when making http requests; true by default")
 
         parser.add_argument("--output", default=default_output, help="Output type of tagtog's response")
 
@@ -153,7 +157,7 @@ def print_upload(args):
             filepaths.append(filepath)
             files.append(("files", open(filepath, "rb")))
 
-        response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files, verify=False)
+        response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files, verify=args.verify_ssl)
         print("batch", batch_index, response.status_code, response.reason, "--", response.text)
 
         if response.ok:
@@ -170,7 +174,7 @@ def print_upload(args):
 
 
 def print_ids_upload(args):
-    response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, verify=False)
+    response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, verify=args.verify_ssl)
     print(response)
 
 
@@ -208,7 +212,7 @@ def print_search(args):
 
 
 def search(args):
-    response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=False)
+    response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=args.verify_ssl)
 
     if response.ok:
         return (response.json(), response)
@@ -233,7 +237,7 @@ def print_download(args):
 
             for doc in json["docs"]:
                 args.req_params["ids"] = doc["id"]
-                response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=False)
+                response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=args.verify_ssl)
                 if response.ok:
                     content_disposition = response.headers["Content-Disposition"]
                     if content_disposition:

@@ -134,7 +134,7 @@ def parse_arguments(argv=[]):
 def print_upload(args):
     filepath_iterator = gen_filepaths_generator(args.paths, args.extension)
 
-    BATCH_SIZE = 10
+    batch_size = 10 if args.output == "null" else 1
     MAX_NUM_CONSECUTIVE_ERRORS = 3
 
     num_uploaded_files = 0
@@ -143,7 +143,7 @@ def print_upload(args):
     batch_index = 0
     while True:
         batch_index += 1
-        batch = islice(filepath_iterator, BATCH_SIZE)
+        batch = islice(filepath_iterator, batch_size)
         first = next(batch, None)
         if first is None:
             print("\nFinished; num uploaded files:", num_uploaded_files)
@@ -158,11 +158,12 @@ def print_upload(args):
             files.append(("files", open(filepath, "rb")))
 
         response = requests.put(args.req_url, params=args.req_params, auth=args.req_auth, files=files, verify=args.verify_ssl)
-        print("batch", batch_index, response.status_code, response.reason, "--", response.text)
+        print("batch", batch_index, response.status_code, response.reason)
+        print("\t" + response.text)
 
         if response.ok:
             num_consecutive_errors = 0
-            num_uploaded_files += response.json()["ok"]
+            num_uploaded_files += response.json()["ok"] if args.output == "null" else batch_size
 
         else:
             print("\tERROR; could not upload the files:", filepaths)

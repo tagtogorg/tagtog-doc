@@ -133,8 +133,11 @@ You can create different types of Document Labels:
 You can see an example using the `enum` type below:
 
 ***
+
 ![Settings - new document label](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-doclabels.PNG)
+
 ***
+
 Once saved, you can start using them in the web editor.
 
 > Currently you cannot get document labels automatically. However, as a workaround, based on the entities extracted automatically you can infer the document label.

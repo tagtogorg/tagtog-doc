@@ -6,14 +6,14 @@ A project is a collection of documents and rules to annotate documents manually 
 
 ***
 
-![Create a project](https://github.com/tagtog/tagtog-doc/blob/master/resources/new-project.PNG)
+![Create a project](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/new-project.PNG)
 
 ***
 
 
 2. You can now briefly **define your project**:
 
-![Define a new project](https://github.com/tagtog/tagtog-doc/blob/master/resources/define-new-proj.PNG)
+![Define a new project](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/define-new-proj.PNG)
 
 * **Project name** (mandatory): choose a name for your project.
 * **Description** (optional): what is the problem you are trying to solve? describe it briefly. It can help other users to understand your goal.

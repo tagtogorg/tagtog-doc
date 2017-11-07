@@ -25,7 +25,7 @@ A project is a collection of documents and rules to annotate documents manually 
 
 While defining a project, if you have [selected some entities](#create-a-project) to be extracted automatically, you may want start uploading text to get results right away. Otherwise, you need to configure its settings either to annotate manually or automatically. `Settings` can be found in the project bar under the project title:
 
-![Project bar](https://github.com/tagtog/tagtog-doc/blob/master/resources/settings-bar.PNG)
+![Project bar](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-bar.PNG)
 
 Let's go over what you can configure under Settings:
 
@@ -36,11 +36,11 @@ You can enrich the text using the [markdown syntax](https://github.com/adam-p/ma
 
 ***
 
-![Setting Guidelines](https://github.com/tagtog/tagtog-doc/blob/master/resources/settings-guidelines.PNG)
+![Setting Guidelines](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-guidelines.PNG)
 
 ***
 
-Clicking on `Edit` you turn on the mode to edit the guidelines. Clicking on `View` you are on the preview mode and you can observe the result of your changes. Once it looks as you want it, you can save clicking on the save button ![Save guidelines](https://github.com/tagtog/tagtog-doc/blob/master/resources/save-guidelines.PNG)
+Clicking on `Edit` you turn on the mode to edit the guidelines. Clicking on `View` you are on the preview mode and you can observe the result of your changes. Once it looks as you want it, you can save clicking on the save button ![Save guidelines](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/save-guidelines.PNG)
 
 ### Annotatable sections
 
@@ -54,7 +54,7 @@ You can also select how to annotate `Figures & Tables` as in `always`, `never` o
 
 ***
 
-![Settings - Annotatables](https://github.com/tagtog/tagtog-doc/blob/master/resources/settings-annotatables.PNG)
+![Settings - Annotatables](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-annotatables.PNG)
 
 ***
 
@@ -69,7 +69,7 @@ You should add one or more entity types. Each entity is defined by a name, a des
 
 ***
 
-![Settings - Entity Types](https://github.com/tagtog/tagtog-doc/blob/master/resources/settings-entities-types.PNG)
+![Settings - Entity Types](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-entities-types.PNG)
 
 ***
 
@@ -98,7 +98,7 @@ In order to upload a dictionary, click on `New Dictionary` under the entity type
 
 ***
 
-![Settings - new dictionary](https://github.com/tagtog/tagtog-doc/blob/master/resources/new-dictionary-upload.PNG)
+![Settings - new dictionary](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/new-dictionary-upload.PNG)
 
 ***
 
@@ -111,7 +111,7 @@ You can **manually annotate relations** in text. For that you must first create 
 
 ***
 
-![Settings - New Relation type](https://github.com/tagtog/tagtog-doc/blob/master/resources/settings-new-relation-type.PNG)
+![Settings - New Relation type](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-new-relation-type.PNG)
 
 ***
 
@@ -133,7 +133,7 @@ You can create different types of Document Labels:
 You can see an example using the `enum` type below:
 
 ***
-![Settings - new document label](https://github.com/tagtog/tagtog-doc/blob/master/resources/settings-doclabels.PNG)
+![Settings - new document label](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-doclabels.PNG)
 ***
 Once saved, you can start using them in the web editor.
 
@@ -152,7 +152,7 @@ You can define webhooks to notify an external system after an specific action in
 
 ***
 
-![Settings - webhook](https://github.com/tagtog/tagtog-doc/blob/master/resources/settings-webhook.PNG)
+![Settings - webhook](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-webhook.PNG)
 
 ***
 
@@ -175,7 +175,7 @@ In this panel you can invite users to your project so they can collaborate in th
 
 To **add a new member** simply write his/her tagtog username in the text box and click on `Add Member`. Once added, they will receive an email notification.
 
-![Settings - members](https://github.com/tagtog/tagtog-doc/blob/master/resources/settings-members.PNG)
+![Settings - members](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-members.PNG)
 
 ## Remove a project
 

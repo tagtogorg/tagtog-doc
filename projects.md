@@ -4,7 +4,7 @@
 
 A project is a collection of documents and rules to annotate documents manually or automatically. Create a new project is the starting point for each user.
 
-## Create a project
+## Creating a project
 1. Once you have signed up and you have a user account, you are **ready to create a new project**:
 
 ***

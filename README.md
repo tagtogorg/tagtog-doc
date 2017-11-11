@@ -1,7 +1,7 @@
 **Welcome!** :open_hands: Public documentation for [tagtog](https://www.tagtog.net/)
 
 ### Web app
-Documentation for the application running at [https://www.tagtog.net/](https://www.tagtog.net/)
+Documentation for the application running at [https://www.tagtog.net/](https://www.tagtog.net/) or your on-premises instance.
 
 * [Projects](projects.md)
 * [Documents pool](documentpool.md)

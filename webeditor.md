@@ -105,7 +105,7 @@ You can remove relations in the Relation Tally in the Side bar. You cannot remov
 
 ### Normalizations
 
-Each dictionary you have defined at _Settings-Dictionaries_ allows you to normalize entities. For more information check the documentation about [normalizations](Projects-documentation#dictionaries) at Project Settings. You can see the normalizations of each entity opening its annotation menu, bottom. 
+Each dictionary you have defined at _Settings-Dictionaries_ allows you to normalize entities. For more information check the documentation about [normalizations](projects.html#dictionaries) at Project Settings. You can see the normalizations of each entity opening its annotation menu, bottom. 
 
 Each dictionary associated to the Entity Type of the entity will display a text box. If the text box is not empty, the entity is normalized to that value. Otherwise, the entity is not normalized.
 

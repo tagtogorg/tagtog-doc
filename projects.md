@@ -1,5 +1,3 @@
-[< Back](../tagtog-doc/)
-
 # Projects
 
 * TOC

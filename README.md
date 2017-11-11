@@ -1,4 +1,4 @@
-Welcome! :open_hands: Public documentation for [tagtog](https://www.tagtog.net/)
+**Welcome!** :open_hands: Public documentation for [tagtog](https://www.tagtog.net/)
 
 ### Web app
 Documentation for the application running at [https://www.tagtog.net/](https://www.tagtog.net/)

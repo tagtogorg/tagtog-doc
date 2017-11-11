@@ -147,7 +147,7 @@ If you click on that option, a list of actions shows up:
 
 ### Pre-annotations
 
-The defaults in this menu will follow the settings in _Settings-Annotations_. The changes in this menu won't change these defaults and only will affect the current document. There are two options: pre-selections and pre-deselections. You can find more information about pre-annotations [here](Web-editor#pre-annotations).
+The defaults in this menu will follow the settings in _Settings-Annotations_. The changes in this menu won't change these defaults and only will affect the current document. There are two options: pre-selections and pre-deselections. You can find more information about pre-annotations [here](#pre-annotations).
 
 ### Save
 

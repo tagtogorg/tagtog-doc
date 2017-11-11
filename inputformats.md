@@ -1,4 +1,4 @@
-[< Back](../tagtog-doc)
+[< Back to index](../tagtog-doc)
 
 
 

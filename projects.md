@@ -153,7 +153,7 @@ Once saved, you can start using them in the web editor.
 
 You can define webhooks to notify an external system after an specific action in tagtog or [API](https://github.com/tagtog/tagtog-doc/wiki/API-documents-v0.1). These actions are: upload a new document and save a document.
 * End Point URL: URL pointing to the external system
-* Format: document format to be sent o the End Point. Currently you can select: [ann.json](ann.json), docJSON (used internally for some customers) and [PubAnnotation](http://pubannotation.org/)
+* Format: document format to be sent o the End Point. Currently you can select: [ann.json](https://github.com/tagtog/tagtog-doc/wiki/ann.json), docJSON (used internally for some customers) and [PubAnnotation](http://pubannotation.org/)
 * `Trigger only if change originates in the GUI` : if you check this option, the API changes won't create a call to the webhook. The call will be done only when a user uploads a new doc via web editor or saves it in the web editor.
 * Authentication: 
   * None: no authentication

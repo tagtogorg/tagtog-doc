@@ -83,8 +83,8 @@ As an example of dictionary let's use the entity type `vehicleModel`. For exampl
 
 ***
 
-| VWGOLF7      | Volkswagen Golf 7  | Golf Mk7  |  Golf VII  |
-| ------------ |:------------------:| ---------:|-----------:|
+***VWGOLF7*** _tab_ ***Volkswagen Golf 7*** _tab_ ***Golf Mk7*** _tab_ ***Golf VII*** 
+
 
 ***
 

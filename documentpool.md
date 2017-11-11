@@ -5,7 +5,7 @@
 
 > **What is a document?** Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: [Input file formats](https://github.com/tagtog/tagtog-doc/wiki/Input-File-Formats)
 
-In the **pool** you store your documents. We will use _pool view _ to refer to the screen listing your documents.
+In the **pool** you store your documents. We will use _pool view_ to refer to the screen listing your documents.
 
 The pool is paginated and you can change move to the next or previous page using the navigation menu.
 

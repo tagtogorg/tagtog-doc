@@ -30,7 +30,7 @@ A project is a collection of documents and rules to annotate documents manually 
 
 # Settings - Configure a project
 
-While defining a project, if you have [selected some entities](#create-a-project) to be extracted automatically, you may want start uploading text to get results right away. Otherwise, you need to configure its settings either to annotate manually or automatically. `Settings` can be found in the project bar under the project title:
+While defining a project, if you have [selected some entities](#creating-a-project) to be extracted automatically, you may want start uploading text to get results right away. Otherwise, you need to configure its settings either to annotate manually or automatically. `Settings` can be found in the project bar under the project title:
 
 ![Project bar](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-bar.PNG)
 

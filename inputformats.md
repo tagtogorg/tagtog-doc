@@ -1,6 +1,12 @@
 [< Back](../tagtog-doc)
 
+
+
 # Accepted input formats
+
+* TOC
+{:toc}
+
 ## Files
 * `.xml`
   * [NCBI Journal Publishing Tag Set](http://jats.nlm.nih.gov/publishing/) (versions JATS 1.0 and NLM 2.x and 3.0). This includes all [PLOS journals](http://www.plos.org/) or [F1000Research articles](http://f1000research.com/).

@@ -14,9 +14,9 @@ This is a **web app**, so you don't need anything else than a web browser to use
 
 The _web editor view_ is mainly divided into:
 
-* Document area
-* Toolbar
-* Sidebar
+* **Document area**
+* **Toolbar**
+* **Sidebar**
 
 # Document area
 

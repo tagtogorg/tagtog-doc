@@ -1,6 +1,8 @@
 # Projects
 
+* TOC
 {:toc}
+
 
 A project is a collection of documents and rules to annotate documents manually or automatically. Create a new project is the starting point for each user.
 

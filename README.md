@@ -1,4 +1,4 @@
-Public documentation for [https://www.tagtog.net/](https://www.tagtog.net/)
+Welcome! :open_hands: Public documentation for [https://www.tagtog.net/](https://www.tagtog.net/)
 
 * tagtog web app documentation:
   * [Projects](projects.md)

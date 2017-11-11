@@ -1,11 +1,11 @@
 Welcome! :open_hands: Public documentation for [https://www.tagtog.net/](https://www.tagtog.net/)
 
-* tagtog web app documentation:
+* tagtog **web app** documentation:
   * [Projects](projects.md)
   * [Documents pool](documentpool.md)
   * [Web Editor](webeditor.md)
-* [API specification](https://github.com/tagtog/tagtog-doc/wiki/API-documents-v0.1)
-* Accepted formats:
+* [**API** specification](https://github.com/tagtog/tagtog-doc/wiki/API-documents-v0.1)
+* Accepted **formats**:
   * [Input](inputformats.md)
   * [Output](outputformats.md)
 

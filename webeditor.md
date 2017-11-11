@@ -1,3 +1,8 @@
+[< Back](../tagtog-doc)
+
+* TOC
+{:toc}
+
 # Web editor
 
 The web editor is designed to annotate text while making comfortable to read it, thus improving the annotation task efficiency. It is used to manually **annotate text** or train a machine to automatically annotate text. If you train a machine to annotate text, you eventually are **identifying relevant information in text**.

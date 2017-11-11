@@ -166,15 +166,7 @@ Once you have confirmed a document, many of the actions cannot be done anymore. 
 
 ![Editor - View/output](https://github.com/tagtog/tagtog-doc/raw/master/resources/editor-view.PNG)
 
-The visualization in the web editor is just one of many tagtog supports. Additionally, you can display the document in the following formats:
-
-* **ann.json**: more information in the [https://github.com/tagtog/tagtog-doc/wiki/ann.json](official doc for this format)
-* **TSV**: more information in the [https://www.tagtog.net/-doc/formats/outFullTsv_v0_2](official doc for this format)
-* **PubAnnotation**: more information in the [http://www.pubannotation.org/docs/annotation-format/](official doc for this format)
-* **BioC**: more information in the [http://bioc.sourceforge.net/](official doc for this format)
-* **docJSON**: only available for some users. Documentation not available.
-* **html**: you can see the document in HTML. No annotations provided within this format.
-* **text**: you can see the document in plain text. No annotations provided within this format.
+The visualization in the web editor is just one of many tagtog supports. Additionally, you can display the document in the following formats: [output formats](outputformats.html)
 
 ## Clear annotations
 

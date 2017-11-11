@@ -28,7 +28,7 @@ A project is a collection of documents and rules to annotate documents manually 
 * **Language**: Right now only English is supported.
 * **Entities**: We have some already built "machines" that can help you to identify relevant information (entities in this case) in the text from the scratch. Currently these are related to the biomedical field: GGP (Gene or Gene Product), Organism, Mutation, [SNOMED CT](https://en.wikipedia.org/wiki/SNOMED_CT) (Clinical Terms), Sequencing Platform. In the future there will be more connected to more domains.
 
-## Configure a project
+## Settings - Configure a project
 
 While defining a project, if you have [selected some entities](#create-a-project) to be extracted automatically, you may want start uploading text to get results right away. Otherwise, you need to configure its settings either to annotate manually or automatically. `Settings` can be found in the project bar under the project title:
 

@@ -22,5 +22,5 @@
 ## Raw
 * plain text
 * IDs for known document repositories:
-  * PubMed
-  * PubMed Central
+  * [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/)
+  * [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/)

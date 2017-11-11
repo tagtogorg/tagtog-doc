@@ -1,14 +1,12 @@
 [< Back](../tagtog-doc)
 
-# Projects
-
 * TOC
 {:toc}
 
 
 A project is a collection of documents and rules to annotate documents manually or automatically. Create a new project is the starting point for each user.
 
-## Creating a project
+# Creating a project
 1. Once you have signed up and you have a user account, you are **ready to create a new project**:
 
 ***
@@ -28,7 +26,7 @@ A project is a collection of documents and rules to annotate documents manually 
 * **Language**: Right now only English is supported.
 * **Entities**: We have some already built "machines" that can help you to identify relevant information (entities in this case) in the text from the scratch. Currently these are related to the biomedical field: GGP (Gene or Gene Product), Organism, Mutation, [SNOMED CT](https://en.wikipedia.org/wiki/SNOMED_CT) (Clinical Terms), Sequencing Platform. In the future there will be more connected to more domains.
 
-## Settings - Configure a project
+# Settings - Configure a project
 
 While defining a project, if you have [selected some entities](#create-a-project) to be extracted automatically, you may want start uploading text to get results right away. Otherwise, you need to configure its settings either to annotate manually or automatically. `Settings` can be found in the project bar under the project title:
 
@@ -36,7 +34,7 @@ While defining a project, if you have [selected some entities](#create-a-project
 
 Let's go over what you can configure under Settings:
 
-### Guidelines
+## Guidelines
 You can write the annotation guidelines for you or your team. It should define what and how manually annotate. More clear it is, better the annotations will be and better the training data you can provide with.
 
 You can enrich the text using the [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
@@ -49,7 +47,7 @@ You can enrich the text using the [markdown syntax](https://github.com/adam-p/ma
 
 Clicking on `Edit` you turn on the mode to edit the guidelines. Clicking on `View` you are on the preview mode and you can observe the result of your changes. Once it looks as you want it, you can save clicking on the save button ![Save guidelines](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/save-guidelines.PNG)
 
-### Annotatable sections
+## Annotatable sections
 
 > This section is specific to scientific papers. If you are not processing scientific papers, make sure `All` option is selected.
 
@@ -66,7 +64,7 @@ You can also select how to annotate `Figures & Tables` as in `always`, `never` o
 ***
 
 
-### Entities
+## Entities
 
 Here you should define what type of information you want to annotate manually or automatically. Meaning, which type of information you want to identify in text. You achieve this by defining `Entity Types`. 
 
@@ -80,7 +78,7 @@ You should add one or more entity types. Each entity is defined by a name, a des
 
 ***
 
-### Dictionaries
+## Dictionaries
 
 As soon as you create one entity type, it will appear in the `Dictionaries` panel. **Each entity type can have associated one or more dictionaries**.
 
@@ -112,7 +110,7 @@ In order to upload a dictionary, click on `New Dictionary` under the entity type
 * **Upload**: you can use this option to upload a [local dictionary file](https://www.tagtog.net/-doc/formats/EntityDictionaryTsv_v0_1) from your computer. If a dictionary file was uploaded previously, it will be replaced with the new dictionary. Once you have uploaded a dictionary, if you upload any text, in the web editor you can see how the **entities are identified automatically** :sunglasses:
 * **Download**: you can use this option to download the dictionary being used in tagtog to your computer.
 
-### Relations
+## Relations
 
 You can **manually annotate relations** in text. For that you must first create a new `Relation Type` by clicking the `New Relation Type` button. Afterwards you should choose two `Entity Types`, those types you want to identify relations for. Optionally you can add a description for the relation. For example, below you can see a new relation type between vehicle parts and vehicle models.
 
@@ -126,7 +124,7 @@ Once the relation type is created, you can manually annotate relations in the we
 
 > Currently you cannot extract relations in text automatically. However, as a workaround, you can extract the entities automatically and based on the distance in text infer a relation.
 
-### Document labels
+## Document labels
 
 Document Labels are used to mark the documents or text you upload. It is another type of annotation, but affecting the whole document. This can be useful for intent detection, or machine training.
 
@@ -149,7 +147,7 @@ Once saved, you can start using them in the web editor.
 
 > Currently you cannot get document labels automatically. However, as a workaround, based on the entities extracted automatically you can infer the document label.
 
-### Webhooks
+## Webhooks
 
 You can define webhooks to notify an external system after an specific action in tagtog or [API](https://github.com/tagtog/tagtog-doc/wiki/API-documents-v0.1). These actions are: upload a new document and save a document.
 * End Point URL: URL pointing to the external system
@@ -166,18 +164,18 @@ You can define webhooks to notify an external system after an specific action in
 
 ***
 
-### Annotations
+## Annotations
 
-#### Pre-annotations
+### Pre-annotations
 These are the annotations that are done automatically while you are manually annotating a document. For example, if you annote the gene: `BRA2` . All the mentions of `BRA2` in this text will be automatically annotated. In this panel you can decide which are the **default settings** for pre-annotations. You can always change these settings in the web editor for specific documents.
   * Pre-select: those annotations that will be **added** automatically upon creation of a new annotation.
   * Pre-deselect: those annotations that will be **removed** automatically upon removal of an existing annotation.
 
-#### Machine Learning 
+### Machine Learning 
 Each time you `Confirm` the annotations of a single document, a machine learning model is being trained with the annotations. Next time you upload a new document, this model can predict new annotations based on the learning. You can remove or add new annotations to continue training the machine and get more accurate results.
   * `Use machine learning for automatic annotations (dictionary annotations are independent and always activated)` : currently this option is experimental and we cannot guarantee it works as expected. 
 
-### Members
+## Members
 
 In this panel you can invite users to your project so they can collaborate in the annotation tasks. Currently there are two roles:
 * **admin**: the person who create the project
@@ -187,7 +185,7 @@ To **add a new member** simply write his/her tagtog username in the text box and
 
 ![Settings - members](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/settings-members.PNG)
 
-## Remove a project
+# Remove a project
 
 To remove a project go to the list of projects (you can go easily clicking in the tagtog icon on the top left). Click the `Delete` option in the project card. 
 

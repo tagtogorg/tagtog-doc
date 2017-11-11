@@ -1,8 +1,5 @@
 [< Back](../tagtog-doc)
 
-
-# Web editor
-
 * TOC
 {:toc}
 
@@ -19,11 +16,11 @@ The _web editor view_ is mainly divided into:
 * Toolbar
 * Sidebar
 
-## Document area
+# Document area
 
 The text is displayed in the document area. There you can read and annotate.
 
-### Text annotations
+## Text annotations
 
 Once a piece of text is annotated, it becomes an entity. In tagtog you can operate with entities and do things as normalize them, relate them, etc.
 
@@ -31,7 +28,7 @@ Each annotation is highlighted with a color. The color depends on each Entity Ty
 
 ![Editor - text annotations](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/editor-annotations.PNG)
 
-#### Create new text annotations
+### Create new text annotations
 
 A new text annotation is done by highlighting text. Position your cursor at the beginning of the text you want to highlight. Press and hold your primary mouse button (commonly the left-button). While holding the mouse button, drag the cursor to the end of the text and let go of the mouse button. Once completed, all text from the beginning to the end should be highlighted using the same Entity Type used in the previous text annotation. 
 
@@ -53,7 +50,7 @@ You cannot annotate text starting in a paragraph and ending in a second paragrap
 
 > The maximum length of a text annotation is `180` characters.
 
-##### Pre-annotations
+### Pre-annotations
 
 Annotations that are created automatically upon adding/removing an annotation. Those only works if the pre-select or pre-deselect options are enabled in the toolbar.
 
@@ -73,7 +70,7 @@ Annotations that are created automatically upon adding/removing an annotation. T
 
 ***
 
-#### Annotation menu
+### Annotation menu
 By clicking on the primary mouse button (commonly the left-button) on a text annotation, you display the **annotation menu**. 
 
 ![Editor - annotation menu](https://github.com/tagtog/tagtog-doc/raw/master/resources/editor-menuann.PNG)
@@ -86,25 +83,25 @@ From here you can:
 * **Change Type**: change the Entity Type of an entity. If you hover the mouse, the list of possible Entity Classes will show up.
 * **Normalizations**: at the bottom of the annotation menu you can see the normalizations.
 
-#### Relations
+### Relations
 
 Currently tagtog supports bidirectional relationships (A relates to B, and B relates to A) to connect only two entities. If you want to connect more than two entities you need to create more than one relation.
 
 In order to set or see relations, remember you need first to define at least one Relation Type in _Settings - Relations_. Otherwise the option to See or Add relations in the menu will be disabled.
 
-##### Add a new relation
+#### Add a new relation
 
 You can start a relation using the annotation menu (option `Add Relation`). The relation will start in this annotation. After clicking this option, only will be visible the annotations with an Entity Type that can held a relation with the Entity Type of the first annotation. Rest will be faded. Click on one of the available entities to set the relation. From that moment, both entities will be connected. Both entities will have an icon with two arrows ![Icon for relations](https://github.com/tagtog/tagtog-doc/raw/master/resources/relation-bidirectional-icon.PNG)
 
-##### See Relations
+#### See Relations
 
 Once an entity is part of one or more relations, you can see these by clicking this option in the annotation menu (option `See Relations`)
 
-##### Remove Relation
+#### Remove Relation
 
 You can remove relations in the Relation Tally in the Side bar. You cannot remove relations from the annotation menu.
 
-#### Normalizations
+### Normalizations
 
 Each dictionary you have defined at _Settings-Dictionaries_ allows you to normalize entities. For more information check the documentation about [normalizations](Projects-documentation#dictionaries) at Project Settings. You can see the normalizations of each entity opening its annotation menu, bottom. 
 
@@ -114,19 +111,19 @@ You can always change the normalization of an entity if there is an existing dic
 
 In case you want to remove a normalization, just remove any character in the normalization text box and click on ↵ or just press `Enter`
 
-## Toolbar
+# Toolbar
 
-### Original source
+## Original source
 
 In case the document or text comes from a known provider, clicking this link you access to the original source. 
 
 For example, if you upload a PubMed document by PubMedId, tagtog understands the source. Clicking on this button you will go to this paper in Pubmed.
 
-### Annotations from other users
+## Annotations from other users
 
 In tagtog you can collaborate with other users to annotate faster or improve the quality of annotations. Each user has a version of the annotations for a single document, e.g. _UserA _can have 20 annotations, _UserB_ can have 5 different annotations on the same exact document. In addition to these versions, each document has a `master `version which is usually treated as the final/official version.
 
-#### See annotations from other users.
+### See annotations from other users.
 
 Click on the user list to show all the users. Click on the one you are interested and the annotations done by that user will show up in the document area.
 
@@ -134,7 +131,7 @@ Depending on your permissions you are able to edit or not the different versions
 
 ![Editor - members](https://github.com/tagtog/tagtog-doc/raw/master/resources/editor-members.PNG)
 
-#### Import annotations from other versions
+### Import annotations from other versions
 
 You may want to start from the annotations of other user or import your annotations to `master`. You can use the import option in the toolbar: ![Editor - import annotations](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/editor-toolbar-import-ann.PNG)
 
@@ -145,17 +142,17 @@ If you click on that option, a list of actions shows up:
 
 ![Editor - Copy annotations](https://github.com/tagtog/tagtog-doc/blob/master/resources/editor-copy-annotations.PNG?raw=true)
 
-### Pre-annotations
+## Pre-annotations
 
 The defaults in this menu will follow the settings in _Settings-Annotations_. The changes in this menu won't change these defaults and only will affect the current document. There are two options: pre-selections and pre-deselections. You can find more information about pre-annotations [here](#pre-annotations).
 
-### Save
+## Save
 
 Each time a change is made in the document (e.g. new annotation or relation added), the Save button will turn green to indicate there are changes to save. Click the button ![Editor - Save document](https://github.com/tagtog/tagtog-doc/raw/master/resources/editor-save-button.PNG) to save the changes. 
 
 If you accidentally leave the page without saving the changes you will be prompted with a message so you can confirm.
 
-### Confirm
+## Confirm
 
 Usually users confirm the document one the annotations has been reviewed. This is sometimes used to indicate that this document can be used as training data for AI or that all annotations has been reviewed by a human.
 
@@ -163,7 +160,7 @@ To confirm a document click on the button with the icon ![Editor - Confirm docum
 
 Once you have confirmed a document, many of the actions cannot be done anymore. You can undo the confirm action by clicking again in the button. This is a toggle button.
 
-### View / output mode
+## View / output mode
 
 ![Editor - View/output](https://github.com/tagtog/tagtog-doc/raw/master/resources/editor-view.PNG)
 
@@ -177,19 +174,19 @@ The visualization in the web editor is just one of many tagtog supports. Additio
 * **html**: you can see the document in HTML. No annotations provided within this format.
 * **text**: you can see the document in plain text. No annotations provided within this format.
 
-### Clear annotations
+## Clear annotations
 
 Click on the button with the icon ![Editor - Clean annotations](https://github.com/tagtog/tagtog-doc/raw/master/resources/editor-clean.PNG) to remove all the annotations in the current document. This won't remove the document. 
 
-### Remove documents
+## Remove documents
 
 Click on the button with the icon ![Editor - Remove document](https://github.com/tagtog/tagtog-doc/raw/master/resources/editor-doc-remove.PNG) to remove the current document from the document pool.
 
-### Pool navigator
+## Pool navigator
 
 These are two buttons, each with an arrow pointing to left and right. If you click on the button with the left arrow, the previous document in the pool will be loaded. If you click on the button with the right arrow, the next document in the pool will be loaded.
 
-### Hotkeys map
+## Hotkeys map
 
 If you hover the mouse on the icon with the text `hotkeys` the list of hotkeys is displayed.
 
@@ -199,15 +196,15 @@ If you hover the mouse on the icon with the text `hotkeys` the list of hotkeys i
 * `r` : start relation (only available when the annotation menu is visible)
 * `d` : delete annotation (only available when the annotation menu is visible)
 
-## Side bar
+# Side bar
 The side bar is placed on the right side of the screen and it is mainly used to display statistics of the current document.
 
-### Document labels
+## Document labels
 If you have any document label configured at _Settings-Document Labels_ you will find this section in the side bar. Here the user can define the document label for the current document. Once a change is made, you can save the document as usual.
 
 ![Editor - document labels](https://github.com/tagtog/tagtog-doc/raw/master/resources/editor-doc-label.PNG)
 
-### Entity tally
+## Entity tally
 
 ![editor - entity tally](https://github.com/tagtog/tagtog-doc/raw/master/resources/editor-entity-tally.PNG)
 
@@ -223,7 +220,7 @@ If you hover the mouse on the counter, it will show you how many of these annota
 
 If you click on any of the items, the document area will move to the annotation in the document. The border of the annotation displayed will wider than usual so it is easier to spot.
 
-### Relation tally
+## Relation tally
 
 You will only see content here if you have relation types defined at _Settings-Relations_.
 

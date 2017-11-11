@@ -1,6 +1,6 @@
 # tagtog-doc
 
-Public documentation for https://www.tagtog.net/
+Public documentation for [https://www.tagtog.net/](https://www.tagtog.net/)
 
 * tagtog webapp documentation:
   * [projects](projects.md)

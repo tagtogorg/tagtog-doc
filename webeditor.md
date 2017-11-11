@@ -224,3 +224,4 @@ It keeps the count of the relations defined in the current document. In this sec
 
 If you click on a relation on this section, the document area will move to the first annotation related. The border of both annotations will be wider than usual so they are easier to spot.
 
+[< Back to index](../tagtog-doc)

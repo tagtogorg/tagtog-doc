@@ -39,5 +39,5 @@ Use the test folder to test the **performance of the machine learning methods**.
 
 > Only mind the test folder if you are using machine learning to annotate automatically.
 
-
+[< Back to index](../tagtog-doc)
 

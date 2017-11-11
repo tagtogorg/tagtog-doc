@@ -2,6 +2,7 @@ Public documentation for [https://www.tagtog.net/](https://www.tagtog.net/)
 
 * tagtog web app documentation:
   * [Projects](projects.md)
+  * [Documents pool] (documentpool.md)
   * [Web Editor](webeditor.md)
 * [API specification](https://github.com/tagtog/tagtog-doc/wiki/API-documents-v0.1)
 * Formats:

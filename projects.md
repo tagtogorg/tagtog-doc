@@ -192,3 +192,5 @@ To **add a new member** simply write his/her tagtog username in the text box and
 To remove a project go to the list of projects (you can go easily clicking in the tagtog icon on the top left). Click the `Delete` option in the project card. 
 
 You cannot remove projects for which you are not the `admin`.
+
+[< Back to index](../tagtog-doc)

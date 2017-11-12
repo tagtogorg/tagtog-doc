@@ -7,10 +7,14 @@ Documentation for the application running at [https://www.tagtog.net/](https://w
 * [Documents pool](documentpool.md)
 * [Web Editor](webeditor.md)
 
+***
+
 ### :electric_plug: API
 * [Specification v0.1](https://github.com/tagtog/tagtog-doc/wiki/API-documents-v0.1)
 
 > Also use the [tagtog script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog) to do many common operations in tagtog using the API: upload, search, and download documents!
+
+***
 
 ### :book: Accepted formats
 * [Input](inputformats.md)

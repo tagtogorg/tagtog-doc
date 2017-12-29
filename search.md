@@ -43,4 +43,15 @@ Documents such as biomedical have usually associated an id (e.g. PubMed articles
 
 ![Search by Document ID](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/docIdsearch.png)
 
+# API
+
+General documentation for the API: [API documentation](https://github.com/tagtog/tagtog-doc/wiki/API-documents-v0.1)
+
+## Search parameter
+
+[Search parameter options](https://github.com/tagtog/tagtog-doc/wiki/search-parameter)
+
+## Search output
+
+[Search output format](https://github.com/tagtog/tagtog-doc/wiki/search-(format))
 

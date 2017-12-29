@@ -16,14 +16,12 @@ Documentation for the application running at [https://www.tagtog.net/](https://w
 
 ***
 
-### :mag: Search
-Search using the Web app and API. Find out how to perform concept search.
-* [Search doc](search.md)
-
-
 ### :book: Accepted formats
 * [Input](inputformats.md)
 * [Output](outputformats.md)
 
+***
 
-
+### :mag: Search
+Search using the Web app and API. Find out how to perform concept search.
+* [Search doc](search.md)

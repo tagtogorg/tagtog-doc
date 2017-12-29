@@ -8,6 +8,12 @@ If you click on the arrow on the right side the advance search panel shows up.
 
 ![Advance search](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/advancesearch.png)
 
+## Search box
+
+If you type in the search box any term it will retrieve all documents that contain that string. For more advance ways of searching or concept search you can use the syntax described here: https://github.com/tagtog/tagtog-doc/wiki/search-parameter, it is valid for the web app and the API. 
+
+You can also use the advance search panel to perform more advance search queries in a more friendly way.
+
 ## Advance search
 
 ### Annotation complete
@@ -31,3 +37,5 @@ This will help you find all the documents that contain at least one entity norma
 Documents such as biomedical have usually associated an id (e.g. PubMed articles). Type the id in order to find matching documents. You can also use wildcard characters as in the example below:
 
 ![Search by Document ID](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/docIdsearch.png)
+
+

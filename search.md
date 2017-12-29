@@ -1,3 +1,8 @@
+[< Back to index](../tagtog-doc/)
+
+* TOC
+{:toc}
+
 # Web app
 
 You can find the search bar in the main toolbar from the web app.

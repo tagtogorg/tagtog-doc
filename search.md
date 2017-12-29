@@ -2,11 +2,11 @@
 
 You can find the search bar in the main toolbar from the web app.
 
-![Search Bar](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/searchbar.PNG)
+![Search Bar](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/searchbar.png)
 
 If you click on the arrow on the right side the advance search panel shows up.
 
-![Advance search](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/advancesearch.PNG)
+![Advance search](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/advancesearch.png)
 
 ## Advance search
 

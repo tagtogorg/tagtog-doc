@@ -19,8 +19,8 @@ You can upload files you have on your computer. Formats accepted:
 * **.html** (sections are not recognized. Currently, the text content is just stripped out.).
 
 ## Bundle files
-* **.tar.gz** bundle of files with accepted format
-* **.zip**. bundle of files with accepted format
+* ~~**.tar.gz** bundle of files with accepted format~~ coming soon!
+* ~~**.zip**. bundle of files with accepted format~~ coming soon!
 
 ## Raw
 * **Text**: plain text, just copy and paste the text you want to analyze.

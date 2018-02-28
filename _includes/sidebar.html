@@ -1,0 +1,21 @@
+
+
+<div id="sidebar">
+  <header>
+    <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
+      <div class="centered">
+        <a href="{{ site.baseurl }}/">
+          <img class="logo" src="/assets/img/circle_2leafstext.png" title="Documentation for tagtog app" alt="Documentation for tagtog app">
+        </a>
+      </div>
+    </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
+  </header>
+  {% include sidebar-nav-links.html %}
+
+  {% if site.version %}
+    <span class="site-version">Docs v{{ site.version }}</span>
+  {% endif %}
+
+  {% include sidebar-icon-links.html %}
+  {% include copyright.html %}
+</div>

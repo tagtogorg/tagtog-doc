@@ -2,29 +2,41 @@
 layout: page
 title: API
 sidebar_link: true
+
+api_document_url: https://www.tagtog.net/-api/documents/v1
+api_username: yourUsername
+api_pwd: yourPassword
+api_project: yourProjectName
+api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector function for the clinical effectiveness of monoclonal antibodies, is triggered by the engagement of the antibody Fc domain with the Fcγ receptors expressed by innate immune cells such as natural killer (NK) cells and macrophages.
 ---
-<p>API to process documents or plain text.</p>
-<div class="page-section">
-  <div class="two-third-col">
-    
-    
-    <table style="width:100%;white-space:nowrap;">
-      <tr>
-        <td><strong>Version</strong></td>
-        <td><code>0.1.33</code></td>
-      </tr>
-      <tr>
-        <td><strong>Endpoint</strong></td>
-        <td>Documents</td>
-      </tr>
-      <tr>
-        <td><strong>URL</strong></td>
-        <td><a href="https://www.tagtog.net/api/0.1/documents">https://tagtog.net/api/0.1/documents</a></td>
-      </tr>
-    </table>
+<div class="two-third-col">
+  <br/>
+  <p>Thanks for choosing the Documents API to build NLP solutions into your app or website. Getting started with a new API can be challenging, so we have created a step-by-step guide that walks you through how to make your first API calls and more.</p>
+</div>
+<div class="one-third-col">
+  <div class="message">
+    You will need an <strong>account at tagtog</strong>. Sign up at tagtog.net if you are using the cloud version or check with your admin if you are using an on-premises version.
   </div>
-  <div class="one-third-col">
-  </div>
+</div>
+
+
+<div class="two-third-col">
+  <table style="width:100%;white-space:nowrap;">
+    <tr>
+      <td><strong>Version</strong></td>
+      <td><code>1.0</code></td>
+    </tr>
+    <tr>
+      <td><strong>Endpoint</strong></td>
+      <td>Documents</td>
+    </tr>
+    <tr>
+      <td><strong>URL</strong></td>
+      <td><a href="{{ page.api_document_url }}">{{ page.api_document_url }}</a></td>
+    </tr>
+  </table>
+</div>
+<div class="one-third-col">
 </div>
 <div class="two-third-col">
   <h2>Authentication</h2>
@@ -32,205 +44,273 @@ sidebar_link: true
 </div>
 <div class="one-third-col">
 </div>
-
-
-
-
-
-## Authentication
-
-The current API supports [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Note that the username and password are secured via an https connection.
-
-**For free requests**, with some limitations, you can leave the `username:password` combination empty.
-
-## Parameters
-
-The following are the supported parameters in this API version. Those marked as `PUT` can be sent in a PUT request and must be contained in the request body. In addition, those marked as `GET` can be sent in GET or PUT requests and be contained in the body (if PUT) or directly in the URL (which is limited to 2000 characters).
-
-Additionally, those parameters marked with `DELETE` can be sent in an http DELETE request for the the deletion of documents. Using `DELETE`, the output is a single integer indicating the number of effectively deleted documents -- the `output` parameter is discarded.
-
-Those parameters with defined value `...` represent non-empty value lists. Those with defined value `.` represent single values. In particular, all API submissions can be for 1 or more documents (non-empty list). In practice, however, different `output` formats allow either only 1 document or multiple ones.
-
-* Input (each subgroup is incompatible with each other. See below for documentation):
-  * By id:
-    * (GET+DELETE) `idType`=. (defaults to `tagtogID`)
-    * (GET+DELETE) `ids`=... (comma-separated list of ids, all of the same type. For DELETE to work, the `idType` must be `tagtogID`)
-  * (PUT) `text`=. (free text / string)
-  * (GET) `url`=. (or synonym `target`=.) (url pointing to a document resource)
-  * (PUT) `files`=...
-  * (GET+DELETE) `search`= [see search options](https://github.com/tagtog/tagtog-doc/wiki/search-parameter). Compatible with the outputs: 
-    * [`search`](https://github.com/tagtog/tagtog-doc/wiki/search-(format)) (default)
-    * `authors`
-    * `csv` (in this case, the query is ignored & all documents are returned)
-
-* (GET) `ontologies`=... -- comma-separated list of the names of your project's ontologies/dictionaries to use for the document entity tagging; defaults to `ontologies=*`, meaning all project-defined ontologies/dictionaries. **Example**: `ontologies=City,Name,SwissProt`. If empty (as in `ontologies=`), no analysis is performed, which effectively serves the purpose of uploading documents as is. **Note:** you can include (the name of) your own dictionaries and also the [[tagtog-ml supported ontologies]].
-* (GET) `output`=. (defaults to `visualize` -- _See below for documentation_)
-
-### Optional Parameters
-
-* Project specific:
-  * (GET) `owner`=. (defaults to the username sending the request)
-  * (GET) `member`=. (defaults to `master`, aka project official annotations. Otherwise this is only applicable if the project has multiple team members)
-  * (GET) `folder`=. (defaults to `pool`; possible values: `{pool, test}`)
-
-* Other:
-  * (GET) `page`=. (Number: page number in a paginated search; see `search` parameter)
-  * (GET) `part`=. (specific document part/section as referenced by the the element if of the `html`) -- **Note:** currently it works only with outputs `html` and `txt` (and their synonyms)
-  * (GET) `ann`=. (specific annotation as uniquely identified in the `ann.json`) -- **Note:** currently it works only with output `json-ld`
-
-
-### Parameters planned for a next API version
-
-* _no specific plans_
-
-
-## Input
-
-### `idType`
-
-Possible values are:
-
-* `tagtogID` -- tagtog-internal document id or `docid`. Its use implicitly means that the document already exists in the associated project.
-* `PMID` -- PubMed ID
-* `PMCID` -- PubMed Central ID
-
-### `files`
-
-Any file accepted by tagtog at the time of the request or as limited by the current API version, if any. See [input formats](http://tagtog.github.io/tagtog-doc/inputformats.html).
-
-
-## `output` Formats
-
-General description of the output formats accepted here: [output formats](http://tagtog.github.io/tagtog-doc/outputformats.html)
-
-The output format can be specified with the `output` parameter. Formats prefixed with `1` support one document only. In practice, for these outputs you must submit multiple API requests to obtain multiple document results. Those formats prefixed with `n` support multiple documents. In practice, for these outputs a single API request suffices to obtain results of multiple documents.
-
-* (1) `visualize` -- choose to visualize the document resource returning the web page directly (`web` or `web-editor-only` if the [User Agent](https://en.wikipedia.org/wiki/User_agent) is a recognized browser and a tagtog project information was given, i.e. `web`, or, respectively, no tagtog project was given, i.e., `web-editor-only`) or otherwise return the `weburl` (typically, the User Agent will be a command line program)
-* (1) `web` -- visual representation of the document and its annotations on the tagtog web interface (HTML page)
-* (1) `web-editor-only` -- analogously as `web`, yet _without_ the information of a tagtog project, i.e., only the document editor is shown.
-* (1) `weburl` -- url of the document resource and its annotations pointing to the tagtog web interface
-* (n) `null` -- special output to signify that no document output is desired. A JSON response of the request will be returned instead. Note, you can use `null` for uploading multiple files at once.
-* (1) `ann.json` -- annotations part of the [anndoc format](anndoc)
-* (1) `html` or `xml` -- content part of the [anndoc format](anndoc)
-* (1) `txt` or `text` -- document content in plain text
-* (n) `tsv`-- [see here (you must be logged in tagtog)](https://www.tagtog.net/-doc/formats/outFullTsv_v0_2). **Note:** doesn't work at the moment
-* (n) `search` -- [JSON format](https://github.com/tagtog/tagtog-doc/wiki/search-(format)) for a search's results. Compatible only with the input `search`
-* (n) `csv` -- list of the project's documents and their master (official) annotation status'. **Note:** currently it works only with input `search=*`
-* (1) `pubannotation` -- [See here](http://www.pubannotation.org/docs/annotation-format/)
-* (1) `docjson` -- experimental output
-* (1) `json-ld` -- [See here](http://restful-open-annotation.github.io/spec/)
-* (1) `bioc` -- [See here](http://bioc.sourceforge.net/)
-* (n) `authors` -- (json format) it will retrieve a ranking with list of authors that has written the documents found with the parameter `search`. `authors-1` will limit the ranking to the author who wrote the largest amount of publications. You can use `authors-2`, `authors-3`, ..., `authors-200`. By default 20. [See the output format here] (https://github.com/tagtog/tagtog-doc/wiki/Authors-view-example)
-
-**Note**: all output formats are returned in their latest format versions. The format versions cannot be chosen.
-
----
-
-# Examples
-
-## Upload (files) & Search & Download
-
-### 🐍 python
-
-[Use the official tagtog script 😀](https://github.com/tagtog/tagtog-doc/blob/master/tagtog)
-
-
-## Annotate a web site
-
-Upload and annotate URL.
-
-### 💻 curl
-
-Please remember to use basic authentication.
-
+<div class="two-third-col">
+  <h2>Import and annotate text</h2>
+  <p>One of the most common scenarios using tagtog is to annotate text automatically. The API is the perfect way to automate this task.</p>
+  <h3>Plain text <code>POST</code></h3>
+  <p>Annotates plain text.</p>
+  <p><strong>Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>text</code></td>
+      <td>-</td>
+      <td>{{ page.api_plain_text }}</td>
+      <td>Plain text</td>
+    </tr>
+    <tr>
+      <td><code>project</code></td>
+      <td>-</td>
+      <td>{{ page.api_project }}</td>
+      <td>Name of the project</td>
+    </tr>
+    <tr>
+      <td><code>owner</code></td>
+      <td>Username sending the request</td>
+      <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
+      <td>Owner of the project you want to use</td>
+    </tr>
+    <tr>
+      <td><code>output</code></td>
+      <td><code>ann.json</code></td>
+      <td>The format of the output you want to be returned by the API. <a href=".">Output formats</a>.</td>
+    </tr>
+  </table>
+  <p><strong>Optional Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>members</code></td>
+      <td><code>master</code> aka project official annotations</td>
+      <td>john</td>
+      <td><p>Project member you want to use</p>
+          <p>Only applicable if the project has multiple team members</p></td>
+    </tr>
+    <tr>
+      <td><code>folder</code></td>
+      <td><code>pool</code></td>
+      <td><code>pool</code></td>
+      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href=".">More information</a></td>
+    </tr>
+  </table>
+</div>
+<div class="one-third-col">
+</div>
+<div class="two-third-col">
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-plain-text">cURL</a></li>
+      <li><a href="#tab-2-plain-text">Python</a></li>
+      <li><a href="#tab-3-plain-text">JavaScript</a></li>
+    </ul>
+    <div class="tab">
+<div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u yourUsername:yourPassword 'https://www.tagtog.net/api/0.1/documents?project=yourprojectname&owner=yourusername&url=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fprojects%2Fgap%2Fcgi-bin%2Fstudy.cgi%3Fstudy_id%3Dphs000980.v1.p1&output=ann.json'
+curl -u {{ page.api_username }}: {{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
 ```
-
-### 🌐browser
-
-Remember you need to be logged in if you want to use the API through the browser.
-
-https://www.tagtog.net/api/0.1/documents?project=yourprojectname&owner=yourusername&url=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fprojects%2Fgap%2Fcgi-bin%2Fstudy.cgi%3Fstudy_id%3Dphs000980.v1.p1&output=visualize
-
-
-## Annotate one document with PMID (or PMCID)
-
-Upload and annotate a PubMed article using its PMID
-
-### 💻 curl
-
-Please remember to use basic authentication.
-
-```shell
-curl -u yourUsername:yourPassword 'https://www.tagtog.net/api/0.1/documents?project=yourprojectname&owner=yourusername&idType=PMID&ids=23596191&output=bioc'
-```
-
-### 🌐browser
-
-Remember you need to be logged in if you want to use the API through the browser.
-
-https://www.tagtog.net/api/0.1/documents?project=yourprojectname&owner=yourusername&idType=PMID&ids=23596191&output=ann.json
-
-## Annotate plain text
-
-Upload and annotate plain text.
-
-### 💻 curl
-
-Please remember to use basic authentication. 
-
-```shell
-curl -u yourUsername:yourPassword -X PUT -d 'text=Antibody-dependent cellular cytotoxicity (ADCC), a key effector function for the clinical effectiveness of monoclonal antibodies, is triggered by the engagement of the antibody Fc domain with the Fcγ receptors expressed by innate immune cells such as natural killer (NK) cells and macrophages. Here, we fused cancer cell-binding peptides to the Fc domain of human IgG1 to engineer novel peptide-Fc fusion proteins with ADCC activity' 'https://www.tagtog.net/api/0.1/documents?project=yourprojectname&owner=yourusername&output=pubannotation'
-```
-
-### 🐍 python
-
+</div>
+<div id="tab-2-plain-text" class="tab-content" markdown="1">
 ```python
-#pip install requests
 import requests
 
-url = 'https://www.tagtog.net/api/0.1/documents'
-auth = requests.auth.HTTPBasicAuth(username='<your_username>', password='<your_password>')
-params = {'project':'<your_project>', 'owner':'<your_username>', 'output':'ann.json'}
-text = 'Antibody-dependent cellular cytotoxicity (ADCC), a key effector function for the clinical effectiveness of monoclonal antibodies'
-payload = {'text': text}
-response = requests.put(url, params=params, auth=auth, data=payload)
-print(response, response.text)
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
+payload = {'text': '{{ page.api_plain_text }}'}
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, data=payload)
+print(response.text)
 ```
-
----
-## Search documents in a project
-
-### 💻 curl
-
-The following call will retrieve the documents matching the search string, in this case `*` represents all documents.
-
+<p style="float:right">{% include github-link.html target="snippets/api_python_annotate_plain_text.py" %}</p>
+</div>
+<div id="tab-3-plain-text" class="tab-content" markdown="1">
+```javascript
+fetch('{{ page.api_document_url }}?project=myProject&owner={{ page.api_username }}&output=ann.json', {
+    method: 'POST',
+    headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}'), 
+              'Accept': 'application/json', 
+              'Content-Type': 'application/json',
+             },
+    body: JSON.stringify({'text':'{{ page.api_plain_text }}'})
+}).then(response => response.json()).then(json => {
+  console.log(json);
+}).catch(function(error) {
+  console.log('Error: ', error);
+});
+```
+<p style="float:right">{% include github-link.html target="snippets/api_js_annotate_plain_text.html" %}</p>
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response</p>
+<div markdown="1">
+```json
+{
+  "anncomplete":false,
+  "sources":[],
+  "entities":
+    [
+      { "classId":"e_1","part":"s1p1","offsets":[{"start":251, "text":"natural killer"}],"confidence":{"state":"pre-added", "who":["ml:dpeker","prob":0.3287},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O14763","url":null},"recName":"Tumor necrosis factor receptor superfamily member 10B","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.3287}}}},
+      { "classId":"e_1","part":"s1p1","offsets":[{"start":267,"text":"NK"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.3287},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O14763","url":null},"recName":"Tumor necrosis factor receptor superfamily member 10B","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.3287}}}}
+    ],
+    "metas":{},
+    "relations":[],
+    "annotatable":{"parts":["s1h1","s1p1"]}
+}
+```
+</div>
+</div>
+<div class="two-third-col">
+  <h3>PubMed Abstracts <code>POST</code> <code>GET</code></h3>
+  <p>Import one or more PubMed abstracts and annotate them.</p>
+  <p><strong>Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>idType</code></td>
+      <td><code>tagtogID</code></td>
+      <td><code>PMID</code></td>
+      <td>Type of Id. <a href=".">List of idTypes</a></td>
+    </tr>
+    <tr>
+      <td><code>ids</code></td>
+      <td>-</td>
+      <td>23596191,29438695</td>
+      <td>Comma-separated list of ids, all of the same type. The response is limited to the last id imported. </td>
+    </tr>
+    <tr>
+      <td><code>project</code></td>
+      <td>-</td>
+      <td>{{ page.api_project }}</td>
+      <td>Name of the project</td>
+    </tr>
+    <tr>
+      <td><code>owner</code></td>
+      <td>Username sending the request</td>
+      <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
+      <td>Owner of the project you want to use</td>
+    </tr>
+    <tr>
+      <td><code>output</code></td>
+      <td><code>ann.json</code></td>
+      <td>The format of the output you want to be returned by the API. <a href=".">Output formats</a>.</td>
+    </tr>
+  </table>
+  <p><strong>Optional Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>members</code></td>
+      <td><code>master</code> aka project official annotations</td>
+      <td>john</td>
+      <td><p>Project member you want to use</p>
+          <p>Only applicable if the project has multiple team members</p></td>
+    </tr>
+    <tr>
+      <td><code>folder</code></td>
+      <td><code>pool</code></td>
+      <td><code>pool</code></td>
+      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href=".">More information</a></td>
+    </tr>
+  </table>
+</div>
+<div class="one-third-col">
+</div>
+<div class="two-third-col">
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-pmid">cURL</a></li>
+      <li><a href="#tab-2-pmid">Python</a></li>
+      <li><a href="#tab-3-pmid">JavaScript</a></li>
+    </ul>
+    <div class="tab">
+<div id="tab-1-pmid" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u yourUsername:yourPassword 'https://www.tagtog.net/api/0.1/documents?project=project_name&search=*'
+curl -u {{ page.api_username }}: {{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&idType=PMID&ids=23596191,29438695&output=ann.json'
 ```
+</div>
+<div id="tab-2-pmid" class="tab-content" markdown="1">
+```python
+import requests
 
-The format of the output: [search format](https://github.com/tagtog/tagtog-doc/wiki/search-(format))
-To build the search string: [search parameter](https://github.com/tagtog/tagtog-doc/wiki/search-parameter)
+tagtogAPIUrl = "{{ page.api_document_url }}"
 
----
-
-## Get documents already uploaded
-
-You need the Id of the document before you get it. If you don't have this Id, you can find it using the `search` feature. In the next example, we use this id to get the document in `ann.json` format.
-
-```shell
-curl -u yourUsername:yourPassword 'https://www.tagtog.net/api/0.1/documents?project=project_name&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'idType':'PMID', 'ids':['23596191','29438695'], 'output':'ann.json'}
+response = requests.post(tagtogAPIUrl, params=params, auth=auth)
+print(response.text)
 ```
-
----
-
-## Delete all documents in a project
-
-### 💻 curl
-
-```shell
-curl -u yourUsername:yourPassword -X DELETE 'https://www.tagtog.net/api/0.1/documents?project=yourProject&search=*'
+<p style="float:right">{% include github-link.html target="snippets/api_python_annotate_pmids.py" %}</p>
+</div>
+<div id="tab-3-pmid" class="tab-content" markdown="1">
+```javascript
+fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUsername&idType=PMID&ids=23596191,29438695&output=ann.json', {
+    method: 'POST',
+    headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'), 
+              'Accept': 'application/json', 
+              'Content-Type': 'application/json',
+            },
+  }).then(response => response.json()).then(json => {
+    console.log(json);
+  }).catch(function(error) {
+    console.log('Error: ', error);
+  });
+}
 ```
-
-Similarly, fine-tune the `search` parameter to delete only those documents returned by the search; `search=*` finds all and therefore the DELETE call deletes all documents.
+<p style="float:right">{% include github-link.html target="snippets/api_js_annotate_pmids.html" %}</p>
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response</p>
+<div markdown="1">
+```json
+{
+  "anncomplete":false,
+  "sources":[{"name":"PMID","id":"23596191","url":"http://www.ncbi.nlm.nih.gov/pubmed/23596191"}],
+  "entities":
+  [
+    {"classId":"e_1","part":"s1h1","offsets":[{"start":60,"text":"RETICULATA-RELATED"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":315,"text":"RETICULATA-RELATED"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":335,"text":"RER"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":444,"text":"RER1"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O15258","url":null},"recName":"Protein RER1","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":561,"text":"PROTEIN"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.3289},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q8IVL6","url":null},"recName":"Prolyl 3-hydroxylase 3","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.3289}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1127,"text":"rer1"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.4836},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O15258","url":null},"recName":"Protein RER1","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.4836}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1265,"text":"RER1"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O15258","url":null},"recName":"Protein RER1","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1303,"text":"RER1"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O15258","url":null},"recName":"Protein RER1","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1391,"text":"RER"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1587,"text":"RER"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1591,"text":"proteins"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.4073},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q15517","url":null},"recName":"Corneodesmosin","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.4073}}}}
+  ],
+  "metas":{},
+  "relations":[],
+  "annotatable":{"parts":["s1h1","s2h1","s2p1"]}
+}
+```
+</div>
+</div>

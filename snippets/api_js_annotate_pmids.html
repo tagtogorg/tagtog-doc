@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample illustrating the use of tagtog API and JavaScript</title>
+  </head>
+  <body>
+    <p>This sample shows how to annotate text using tagtog, the API and JavaScript. You can serve this page from your local server.</p>
+    <p><button>Annotate plain text and check the result in console</button></p>
+    <script>
+      function annotateText() {
+        fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUsername&idType=PMID&ids=23596191,29438695&output=ann.json', {
+          method: 'POST',
+          headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'), 
+                    'Accept': 'application/json', 
+                    'Content-Type': 'application/json',
+                  },
+        }).then(response => response.json()).then(json => {
+          console.log(json);
+        }).catch(function(error) {
+          console.log('Error: ', error);
+        });
+      }
+    
+      var submitBtn = document.querySelector('button');
+      submitBtn.addEventListener('click', annotateText);
+    </script>
+  </body>
+</html>

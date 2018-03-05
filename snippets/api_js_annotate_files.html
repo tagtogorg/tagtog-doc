@@ -8,18 +8,20 @@
   </head>
   <body>
     <p>This sample shows how to annotate text using tagtog, the API and JavaScript. You can serve this page from your local server.</p>
-    <p><button>Annotate plain text and check the result in console</button></p>
+    <input name="myFile" type="file">
+    <p><button>Annotate files and check the result in console</button></p>
     <script>
       function annotateText() {
+        var input = document.querySelector('input[type="file"]')
+        var data = new FormData()
+        data.append('file', input.files[0])
+
         fetch('https://www.tagtog.net/-api/documents/v1?project=yourProject&owner=yourUsername&output=ann.json', {
           method: 'POST',
-          headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'), 
-                    'Accept': 'application/json', 
-                    'Content-Type': 'application/json',
-                  },
-          body: JSON.stringify({'text':'Antibody-dependent cellular cytotoxicity (ADCC), a key effector function for the clinical effectiveness of monoclonal antibodies, is triggered by the engagement of the antibody Fc domain with the Fcγ receptors expressed by innate immune cells such as natural killer (NK) cells and macrophages.'})
-        }).then(response => response.json()).then(json => {
-          console.log(json);
+          headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword')},
+          body: data
+        }).then(response => response.text()).then(text => {
+          console.log(text);
         }).catch(function(error) {
           console.log('Error: ', error);
         });
@@ -30,5 +32,3 @@
     </script>
   </body>
 </html>
-
-

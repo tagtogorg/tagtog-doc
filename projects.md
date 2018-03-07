@@ -2,6 +2,7 @@
 layout: page
 title: Projects
 sidebar_link: true
+group: webapp
 ---
 
 
@@ -309,67 +310,7 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Members</h4>
-
-      <p>In this panel you can invite other users to your project so they can collaborate in the annotation tasks. Currently, these are the roles avaible:</p>
-      <table style="width:100%">
-        <tr>
-          <th>Role</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><code>admin</code></td>
-          <td>The user who created the project.</td>
-        </tr>
-        <tr>
-          <td><code>supercurator</code></td>
-          <td>Those users invited as collaborators to a project.</td>
-        </tr>
-      </table>
-
-      <h5>Admin role</h5>
-      <table style="width:100%">
-        <tr>
-          <th>Component</th>
-          <th>Privileges</th>
-        </tr>
-        <tr>
-          <td>Master annotations</td>
-          <td>Replace master annotations using the annotations from other project member.</td>
-        </tr>
-        <tr>
-          <td>Guidelines</td>
-          <td>Edit project guidelines.</td>
-        </tr>
-        <tr>
-          <td>Entities</td>
-          <td>Edit or create entity types.</td>
-        </tr>
-        <tr>
-          <td>Document labels</td>
-          <td>Edit or create document labels</td>
-        </tr>
-        <tr>
-          <td>Entity labels</td>
-          <td>Edit or create entity labels</td>
-        </tr>
-        <tr>
-          <td>Dictionaries</td>
-          <td>Edit or create dictionaries</td>
-        </tr>
-        <tr>
-          <td>Annotatables</td>
-          <td>Edit options under the Annotatables settings</td>
-        </tr>
-        <tr>
-          <td>Annotations</td>
-          <td>Edit options under the Annotations settings</td>
-        </tr>
-        <tr>
-          <td>Project</td>
-          <td>Delete project</td>
-        </tr>
-      </table>
-
+      <p>In this panel you can invite other users to your project so they can collaborate in the annotation tasks. These are the roles available and the ones planned:</p>
     </div>
     <div class="one-third-col">
       {% include image.html name="settings-members.PNG" %}
@@ -387,7 +328,6 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Remove a project</h4>
-
       <p>To remove a project go to the list of projects (you can go easily clicking in the tagtog logo on the top left). Click the <code>Delete</code> option in the project card.</p>
     </div>
     <div class="one-third-col">

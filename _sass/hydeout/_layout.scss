@@ -23,7 +23,7 @@
 */
 
 @mixin number-x {
-  $list-colors: #ece919, #e7901e, #e74d1e, #b31884, #a234d5, #5b22f7;
+  $list-colors: #ece919, #e7901e, #e74d1e, #b31884, #a234d5, #5b22f7, #0769b9;
   $item-list: null;
   @for $i from 1 through (length($list-colors) - 1) {
     .number-#{$i} {
@@ -186,6 +186,12 @@ body {
   font-size: 0.75rem;
   margin: 20px 0 0 20px;
   width: 600px;
+}
+
+.sidebar-group-title {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-top: 1.2rem;
 }
 
 

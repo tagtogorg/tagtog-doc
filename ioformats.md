@@ -2,6 +2,7 @@
 layout: page
 title: Input / Output formats
 sidebar_link: true
+group: formats
 ---
 <div class="page-section">
   <h2>Input formats</h2>
@@ -106,16 +107,8 @@ sidebar_link: true
         <td>Only annotations. Official documentation</td>
       </tr>
       <tr>
-        <td><code>TSV</code>, <code>CSV</code></td>
+        <td><code>CSV</code></td>
         <td><a href="https://www.tagtog.net/-doc/formats/outFullTsv_v0_2">Official documentation</a></td>
-      </tr>
-      <tr>
-        <td><code>JSON-LD</code></td>
-        <td><a href="http://restful-open-annotation.github.io/spec/json-ld.html">Official documentation</a></td>
-      </tr>
-      <tr>
-        <td><code>BioC</code></td>
-        <td>Only annotations. <a href="http://bioc.sourceforge.net/">Official documentation</a></td>
       </tr>
       <tr>
         <td><code>docJSON</code></td>

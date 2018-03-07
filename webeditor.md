@@ -2,6 +2,7 @@
 layout: page
 title: Annotation editor
 sidebar_link: true
+group: webapp
 ---
 
 <div class="page-section">
@@ -227,7 +228,7 @@ sidebar_link: true
     </div>
     <div class="two-third-col">
       <h4>Annotations from other users</h4>
-      <p>Click on the user list to show all the project members. Click on the one you are interested and the document annotated by that user will be displayed in the document area.</p>
+      <p>Click on the user list to show all the project members. Click on the one you are interested, the document annotated by that user will be displayed in the document area.</p>
       <p>Depending on your permissions you are able to edit or not the different versions of the annotations. A locker icon {% include inline-image.html name="editor-member-locker.png" width="15" %} indicates that your permissions on that version are read-only.</p>
     </div>
     <div class="one-third-col">
@@ -250,7 +251,7 @@ sidebar_link: true
           <td>Copy to mine</td>
           <td>Replace your annotations with the version displayed in the document area.</td>
         </tr>
-      </table>      
+      </table>   
     </div>
     <div class="one-third-col">
       {% include image.html name="editor-copy-annotations.png" width="300" %}
@@ -355,7 +356,7 @@ sidebar_link: true
     </div>
     <div class="one-third-col">
       <div class="message">
-        <strong>What is an unique entity?</strong> a group of entity with the same Entity Type and text.
+        <strong>What is a unique entity?</strong> a group of entity with the same Entity Type and text.
       </div>
     </div>
     <div class="two-third-col">

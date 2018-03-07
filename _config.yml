@@ -5,13 +5,22 @@ highlighter:      rouge
 # Setup
 title:            tagtog
 tagline:          'A text annotation tool to train AI'
-description:      'Documentation for <a href="https://tagtog.net">tagtog</a>'
-url:              https://fongandrew.github.io/hydeout
+description:      'Official documentation for <a href="https://tagtog.net">tagtog</a>'
+url:              https://docs.tagtog.net
 baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
+groups:
+  - id: webapp
+    name: Web Application
+  - id: api
+    name: API
+  - id: search
+    name: Concept Search
+  - id: formats
+    name: Formats supported
 
 author:
   name:           'tagtog sp.z.o.o'

@@ -9,5 +9,4 @@ $(document).ready(function() {
   });
   var anchors = new AnchorJS();
   anchors.add();
-
 });

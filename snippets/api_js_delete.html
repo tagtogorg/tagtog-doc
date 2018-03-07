@@ -7,12 +7,12 @@
     <title>Sample illustrating the use of tagtog API and JavaScript</title>
   </head>
   <body>
-    <p>This sample shows how to search using tagtog, the API and JavaScript. You can serve this page from your local server. Check the search results in the console.</p>
-    <p><button>Click to search</button></p>
+    <p>This sample shows how to delete documents using tagtog, the API and JavaScript. You can serve this page from your local server. Check the result in the console.</p>
+    <p><button>Click to delete docs</button></p>
     <script>
       function search() {
-        fetch('https://www.tagtog.net/-api/documents/v1?project=yourProject&owner=yourUsername&search=entity:GGP:P02649', {
-          method: 'GET',
+        fetch('https://www.tagtog.net/-api/documents/v1?project=yourProject&owner=yourUsername&search=entity:gene', {
+          method: 'DELETE',
           headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword')},
         }).then(response => response.text()).then(text => {
           console.log(text);

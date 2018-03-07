@@ -2,6 +2,7 @@
 layout: page
 title: The document pool
 sidebar_link: true
+group: webapp
 ---
 
 <div class="two-third-col">

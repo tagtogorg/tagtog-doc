@@ -1,7 +1,8 @@
 ---
 layout: page
-title: API
+title: API doc v1.0
 sidebar_link: true
+group: api
 
 api_document_url: https://www.tagtog.net/-api/documents/v1
 api_username: yourUsername
@@ -81,7 +82,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>output</code></td>
       <td><code>visualize</code></td>
       <td><code>ann.json</code></td>
-      <td>The format of the output you want to be returned by the API. <a href=".">Output formats</a>.</td>
+      <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
   <p><strong>Optional Parameters</strong></p>
@@ -227,7 +228,7 @@ PUBMED IDS
       <td><code>output</code></td>
       <td><code>visualize</code></td>
       <td><code>ann.json</code></td>
-      <td>The format of the output you want to be returned by the API. <a href=".">Output formats</a>.</td>
+      <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
   <p><strong>Optional Parameters</strong></p>
@@ -378,7 +379,7 @@ URLS
       <td><code>output</code></td>
       <td><code>visualize</code></td>
       <td><code>weburl</code></td>
-      <td>The format of the output you want to be returned by the API. <a href=".">Output formats</a>.</td>
+      <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
   <p><strong>Optional Parameters</strong></p>
@@ -416,7 +417,7 @@ URLS
       <li><a href="#tab-3-url">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">The example below imports an URL and retrieves the web link for the annotated document. That link redirects to the annotated document at the tagtog app.</p>
+    <p class="code-desc">The example below imports a URL and retrieves the web link for the annotated document. That link redirects to the annotated document at the tagtog app.</p>
 <div id="tab-1-url" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}: {{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl'
@@ -499,7 +500,7 @@ FILES
       <td><code>output</code></td>
       <td><code>visualize</code></td>
       <td><code>ann.json</code></td>
-      <td>The format of the output you want to be returned by the API. <a href=".">Output formats</a>.</td>
+      <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
   <p><strong>Optional Parameters</strong></p>
@@ -611,4 +612,488 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 }
 ```
 </div>
+</div>
+
+
+
+
+<div class="two-third-col">
+  <h2>Search documents in a project <code>GET</code></h2>
+  <p>You can search using the documents API. Search across your pool folder and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
+  <p>Learn how to <strong>build search queries</strong> <a href=".">here</a>.</p>
+  <p><strong>Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>search</code></td>
+      <td>-</td>
+      <td>entity:GGP:P02649</td>
+      <td>Search query. Learn how to build queries <a href=".">here</a>.</td>
+    </tr>
+    <tr>
+      <td><code>project</code></td>
+      <td>-</td>
+      <td>{{ page.api_project }}</td>
+      <td>Name of the project</td>
+    </tr>
+    <tr>
+      <td><code>owner</code></td>
+      <td>Username sending the request</td>
+      <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
+      <td>Owner of the project you want to use</td>
+    </tr>
+  </table>
+  <p><strong>Optional Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>page</code></td>
+      <td>0</td>
+      <td>1</td>
+      <td>Number: page number in a paginated search.</td>
+    </tr>
+    <tr>
+      <td><code>output</code></td>
+      <td><code>search</code></td>
+      <td><code>search</code></td>
+      <td><p>You can choose between <code>search</code> or <code>csv</code></p>
+          <p><code>search</code> (<a href="#search-response-format">search response</a>): use it to perform search queries.</p>
+          <p><code>csv</code>: it ignores the query parameter and retrieve the id of each document and the status of each document (true if annotations are completed, false if not)</p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="one-third-col">
+  {% include message.html message='Search queries through the API return a response with the JSON <code>search response</code>. <a href="#search-response-format"> Documentation</a>' %}
+</div>
+<div class="two-third-col">
+  
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-plain-text">cURL</a></li>
+      <li><a href="#tab-2-plain-text">Python</a></li>
+      <li><a href="#tab-3-plain-text">JavaScript</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example searches across your document pool to find documents that have at least one entity normalized to the gene <a href="https://www.uniprot.org/uniprot/P02649">P02649</a>.</p>
+<div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}: {{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649'
+```
+</div>
+<div id="tab-2-plain-text" class="tab-content" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'search':'entity:GGP:P02649'}
+response = requests.get(tagtogAPIUrl, params=params, auth=auth)
+print(response.text)
+```
+<p style="float:right">{% include github-link.html target="snippets/api_python_search.py" %}</p>
+</div>
+<div id="tab-3-plain-text" class="tab-content" markdown="1">
+```javascript
+fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649', {
+  method: 'GET',
+  headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
+}).then(response => response.text()).then(text => {
+  console.log(text);
+}).catch(function(error) {
+  console.log('Error: ', error);
+});
+```
+<p style="float:right">{% include github-link.html target="snippets/api_js_search.html" %}</p>
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p><code>Search response</code></p>
+<div markdown="1">
+```json
+{
+  "version":"0.1.0",
+  "search":"entity:GGP:P02649",
+  "totalFound":1,
+  "pages":{"current":0,"previous":-1,"next":-1},
+  "docs":
+    [
+      {"id":"aMHKzF_lIoNrdh9pAx298njgIezy-text", "header":"Certain genes make you more likely to develop Alzheimer's disease. Genes control the function of every cell in your body. Some genes determine basic characterist", "anncomplete":false, "updated":"2018-03-03T20:59:56.467Z"}
+    ]
+}
+```
+</div>
+</div>
+
+<div class="two-third-col">
+  <h3>Search response format</h3>
+  <p>Response format for search queries.</p>
+<div markdown="1">
+```javascript
+{
+  "version": "String: this format's version, e.g. 0.1.0",
+  "search": "String: user search query",
+  "totalFound": "Number: total number of documents that match the search query",
+  "pages": {
+    //the search is paginated
+    "current": "Number: paginated search's current page",
+    "previous": "Number: paginated search's previous page; -1 if current page == 0",
+    "next": "Number: paginated search's current page; -1 if current page is the last page",
+  }
+  "docs": 
+  [
+    {
+      "id": "String: full tagtogID -- Use this to download the document",
+      "header": "String: title if the document has a natural title or otherwise an excerpt of the text's start",
+      "anncomplete": "Boolean: status for the document's annotation completion",
+      "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2017-02-23T08:31:40.874Z",
+    },
+    //next documents in the array of results...
+  ]
+}
+```
+</div>
+</div>
+<div class="one-third-col">
+
+</div>
+
+
+
+
+
+<div class="two-third-col">
+  <h2>Get existing documents <code>GET</code></h2>
+  <p>You can use the API to export documents already imported. You need the Id of the document before you get it. If you don't have this Id, you can find it using the <a href=".">search</a> feature. You can export only 1 document within each request.</p>
+</div>
+<div class="two-third-col">
+  <p><strong>Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>output</code></td>
+      <td><code>visualization</code></td>
+      <td><code>ann.json</code></td>
+      <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
+    </tr>
+    <tr>
+      <td><code>idType</code></td>
+      <td><code>tagtogID</code></td>
+      <td><code>tagtogID</code></td>
+      <td>Type of Id. <a href=".">List of idTypes</a></td>
+    </tr>
+    <tr>
+      <td><code>ids</code></td>
+      <td>-</td>
+      <td>aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text</td>
+      <td>Comma-separated list of ids, all of the same type. The response is limited to the last id imported. </td>
+    </tr>
+    <tr>
+      <td><code>project</code></td>
+      <td>-</td>
+      <td>{{ page.api_project }}</td>
+      <td>Name of the project</td>
+    </tr>
+    <tr>
+      <td><code>owner</code></td>
+      <td>Username sending the request</td>
+      <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
+      <td>Owner of the project you want to use</td>
+    </tr>
+  </table>
+  
+</div>
+<div class="one-third-col">
+  
+</div>
+
+<div class="two-third-col">
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-del">cURL</a></li>
+      <li><a href="#tab-2-del">Python</a></li>
+      <li><a href="#tab-3-del">JavaScript</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example exports a tagtgog document into <code>ann.json</code> format. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
+<div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}: {{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
+```
+</div>
+<div id="tab-2-del" class="tab-content" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'output':'ann.json'}
+response = requests.get(tagtogAPIUrl, params=params, auth=auth)
+print(response.text)
+```
+<p style="float:right">{% include github-link.html target="snippets/api_python_getdoc.py" %}</p>
+</div>
+<div id="tab-3-del" class="tab-content" markdown="1">
+```javascript
+fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json', {
+  method: 'GET',
+  headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
+}).then(response => response.text()).then(text => {
+  console.log(text);
+}).catch(function(error) {
+  console.log('Error: ', error);
+});
+```
+<p style="float:right">{% include github-link.html target="snippets/api_js_getdoc.html" %}</p>
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response <code>ann.json</code></p>
+<div markdown="1">
+```json
+{
+  "anncomplete":false,
+  "sources":[{"name":"PMID","id":"23596191","url":"http://www.ncbi.nlm.nih.gov/pubmed/23596191"}],
+  "entities":
+  [
+    {"classId":"e_1","part":"s1h1","offsets":[{"start":60,"text":"RETICULATA-RELATED"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":315,"text":"RETICULATA-RELATED"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":335,"text":"RER"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":444,"text":"RER1"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O15258","url":null},"recName":"Protein RER1","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":561,"text":"PROTEIN"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.3289},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q8IVL6","url":null},"recName":"Prolyl 3-hydroxylase 3","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.3289}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1127,"text":"rer1"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.4836},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O15258","url":null},"recName":"Protein RER1","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.4836}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1265,"text":"RER1"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O15258","url":null},"recName":"Protein RER1","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1303,"text":"RER1"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"O15258","url":null},"recName":"Protein RER1","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.7737}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1391,"text":"RER"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1587,"text":"RER"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q13123","url":null},"recName":"Protein Red","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.6519}}}},
+    {"classId":"e_1","part":"s2p1","offsets":[{"start":1591,"text":"proteins"}],"confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.4073},"fields":{},"normalizations":{"n_2":{"source":{"name":"SwissProt","id":"Q15517","url":null},"recName":"Corneodesmosin","confidence":{"state":"pre-added","who":["ml:dpeker"],"prob":0.4073}}}}
+  ],
+  "metas":{},
+  "relations":[],
+  "annotatable":{"parts":["s1h1","s2h1","s2p1"]}
+}
+```
+</div>
+</div>
+
+
+
+<div class="two-third-col">
+  <h2>Delete documents <code>DELETE</code></h2>
+  <p>You can delete documents in your project using the API. Fine-tune the <code>search</code> parameter to delete only those documents returned by the search query.</p>
+  <p>This request returns the number of documents deleted.</p>
+</div>
+<div class="two-third-col">
+  <p><strong>Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>search</code></td>
+      <td>-</td>
+      <td>entity:GGP</td>
+      <td>Search query to list the documents to remove. Learn how to build queries <a href=".">here</a></td>
+    </tr>
+    <tr>
+      <td><code>project</code></td>
+      <td>-</td>
+      <td>{{ page.api_project }}</td>
+      <td>Name of the project</td>
+    </tr>
+    <tr>
+      <td><code>owner</code></td>
+      <td>Username sending the request</td>
+      <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
+      <td>Owner of the project you want to use</td>
+    </tr>
+  </table>
+  
+</div>
+<div class="one-third-col">
+
+  {% include message.html message='<code>search&equals;*</code> finds all and therefore the <code>DELETE</code> call deletes all documents.' %}
+</div>
+
+<div class="two-third-col">
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-del">cURL</a></li>
+      <li><a href="#tab-2-del">Python</a></li>
+      <li><a href="#tab-3-del">JavaScript</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example deletes all documents that contain at least one entity of type <code>gene</code>.</p>
+<div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}: {{ page.api_pwd }} -X DELETE '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:gene'
+```
+</div>
+<div id="tab-2-del" class="tab-content" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'search':'entity:gene'}
+response = requests.delete(tagtogAPIUrl, params=params, auth=auth)
+print(response.text)
+```
+<p style="float:right">{% include github-link.html target="snippets/api_python_delete.py" %}</p>
+</div>
+<div id="tab-3-del" class="tab-content" markdown="1">
+```javascript
+fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:gene', {
+  method: 'DELETE',
+  headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
+}).then(response => response.text()).then(text => {
+  console.log(text);
+}).catch(function(error) {
+  console.log('Error: ', error);
+});
+```
+<p style="float:right">{% include github-link.html target="snippets/api_js_delete.html" %}</p>
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response </p>
+<div markdown="1">
+```javascript
+4 //number of documents deleted
+```
+</div>
+</div>
+
+<div class="two-third-col">
+<h2><code>output</code> parameter</h2>
+<p>These are the different types of outputs supported by the API.</p>
+<table style="width:100%;">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>visualize</code></td>
+    <td>This is the default value. Choose to visualize the document resource returning the web page directly (<code>web</code> or <code>web-editor-only</code> if the User Agent is a recognized browser and a tagtog project information was given, i.e. web, or, respectively, no tagtog project was given, i.e., <code>web-editor-only</code>) or otherwise return the <code>weburl</code> (typically, the User Agent will be a command line program)</td>
+  </tr>
+  <tr>
+    <td><code>web</code></td>
+    <td>Visual representation of the document and its annotations on the tagtog web interface (HTML page).</td>
+  </tr>
+  <tr>
+    <td><code>web-editor-only</code></td>
+    <td>Analogously as <code>web</code>, yet without the information of a tagtog project, i.e., only the document editor layout. Useful in case you want to create iFrames in your web app.</td>
+  </tr>
+  <tr>
+    <td><code>weburl</code></td>
+    <td>URL of the annotated document at tagtog web interface.</td>
+  </tr>
+  <tr>
+    <td><code>null</code></td>
+    <td>Special output to signify that no document output is desired. A JSON response of the request will be returned instead. Example:
+<div markdown="1">
+```javascript
+{
+  "ok":1 //number of documents successfully changed,
+  "errors":0 //number of documents with errors,
+  "items": //list of documents changed
+  [
+    { "origid":"text",
+      "names":["text.txt"], 
+      "tagtogID":"aOM6EFIvULWc6J.7MAYQB3V2sF84-text", 
+      "result":"created"}
+  ],
+  "warnings":[[]]
+}
+```
+<p>You can use this parameter, for example, if you need the API to return you the id of each document imported.</p>
+
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td><code>ann.json</code></td>
+    <td>Annotations part of the <a href=".">anndoc format documentation</a>.</td>
+  </tr>
+  <tr>
+    <td><code>html</code> <code>xml</code></td>
+    <td>Content part of the <a href=".">anndoc format documentation</a>.</td>
+  </tr>
+  <tr>
+    <td><code>text</code></td>
+    <td>Document content in plain text.</td>
+  </tr>
+  <tr>
+    <td><code>csv</code></td>
+    <td>List of the project's documents and their master (official) annotation status. Currently it works only with parameter <code>search=*</code></td>
+  </tr>
+  <tr>
+    <td><code>docjson</code></td>
+    <td><a href=".">Documentation</a></td>
+  </tr>
+</table>
+
+</div>
+<div class="one-third-col">
+{% include message.html message="<strong>Note</strong>: all output formats are returned in their latest format versions. The format versions cannot be chosen." %}
+</div>
+
+
+
+<div class="two-third-col">
+<h2><code>idType</code> parameter</h2>
+<p>Possible values for the parameter are described below.</p>
+<table style="width:100%;">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>tagtogID</code></td>
+    <td>This is the default value. tagtog-internal document id or docid. Its use implicitly means that the document already exists in the associated project.</td>
+  </tr>
+  <tr>
+    <td><code>PMID</code></td>
+    <td>PubMed ID.</td>
+  </tr>
+  <tr>
+    <td><code>PMCID</code></td>
+    <td>PubMed Central ID.</td>
+  </tr>
+</table>
+<br/>
+</div>
+<div class="one-third-col">
+
+
 </div>

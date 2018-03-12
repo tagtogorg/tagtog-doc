@@ -3,13 +3,15 @@
   `sidebar_link: true` in the front-matter. See readme for usage.
 {% endcomment %}
 {% assign pages_list = site.pages %}
-{% for group in site.groups %}
+{% for group in site.sidebar_toc %}
   <span class="sidebar-group-title">{{ group.name }}</span>
-  {% for node in pages_list %}
-    {% if node.title != null and node.group == group.id and node.sidebar_link %}
-      <a class="page-link {% if page.url == node.url %} active{% endif %}"
-        href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
-    {% endif %}
+  {% for page_id in group.pages %}
+    {% for node in pages_list %}
+      {% if node.title != null and node.id == page_id and node.sidebar_link %}
+        <a class="page-link {% if page.url == node.url %} active{% endif %}"
+          href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 {% endfor %}
 

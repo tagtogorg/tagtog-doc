@@ -12,15 +12,24 @@ baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # If you want to move just the blog index pages but keep
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
-groups:
-  - id: webapp
-    name: Web Application
-  - id: api
-    name: API
-  - id: search
-    name: Concept Search
-  - id: formats
-    name: Formats supported
+sidebar_toc:
+  - name: Web Application
+    pages:
+      - projects
+      - document_pool
+      - webeditor
+      - collaboration
+  - name: API
+    pages:
+      - api
+  - name: Concept Search
+    pages:
+      - search_queries
+  - name: Formats
+    pages:
+      - formats
+      - anndoc
+      - dictionaries
 
 author:
   name:           'tagtog sp.z.o.o'

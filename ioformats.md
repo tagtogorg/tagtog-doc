@@ -2,7 +2,7 @@
 layout: page
 title: Input / Output formats
 sidebar_link: true
-group: formats
+id: formats
 ---
 <div class="page-section">
   <h2>Input formats</h2>
@@ -107,12 +107,12 @@ group: formats
         <td>Only annotations. Official documentation</td>
       </tr>
       <tr>
-        <td><code>CSV</code></td>
-        <td><a href="https://www.tagtog.net/-doc/formats/outFullTsv_v0_2">Official documentation</a></td>
-      </tr>
-      <tr>
         <td><code>docJSON</code></td>
         <td>Designed for some specific users. Annotations and text content. Documentation not available.</td>
+      </tr>
+      <tr>
+        <td><code>pubannotation</code></td>
+        <td><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></td>
       </tr>
       <tr>
         <td><code>HTML</code>, <code>XML</code></td>

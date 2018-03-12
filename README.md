@@ -1,4 +1,7 @@
-Official documentation for [tagtog](https://www.tagtog.net).
+Repo hosting the official documentation for [tagtog](https://www.tagtog.net). 
+
+Take a look at [docs.tagtog.net](https://docs.tagtog.net/)
+
 # Issues
 Please report any issues here or contact us at <info@tagtog.net>
 # Do you want to contribute?

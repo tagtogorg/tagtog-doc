@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Building search queries
+title: Search queries
 sidebar_link: true
-group: search
+id: search_queries
 
 api_document_url: https://www.tagtog.net/-api/documents/v1
 api_username: yourUsername
@@ -11,13 +11,13 @@ api_project: yourProjectName
 ---
 
 <div class="two-third-col">
-  <p>Here you can learn how to build your search queries. Search queries are sent in the parameter <code>search</code></p>
+  <p>Here you can learn how to build your search queries.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='To build more advanced queries you can base on the <a href="http://lucene.apache.org/core/3_1_0/queryparsersyntax.html ">Query Parser Syntax from Lucene</a>' %}
 </div>
 <div class="two-third-col">
-  <h4>Search by string</h4>
+  <h3>Search by string</h3>
   <p>Retrieve documents containing a specific string. Example: <code>insulin</code></p>
 </div>
 <div class="one-third-col">

@@ -2,7 +2,7 @@
 layout: page
 title: Annotation in groups
 sidebar_link: true
-group: webapp
+id: collaboration
 ---
 <div class="two-third-col">
   <p>tagtog is a is a multi-user tool. Collaborate with other users to annotate faster and improve the quality of your annotations.</p>

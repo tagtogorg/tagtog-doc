@@ -3,12 +3,12 @@ layout: page
 title: Dictionary TSV format
 sidebar_link: true
 version: 0.1
-group: formats
+id: dictionaries
 ---
 
 <div class="two-third-col">
-  <p>This is the format of dictionary files used at tagtog. More information about dictionaries here: <a href=".">Dictionaries</a></p>
-  <p>The dictionary file to upload must be a <code>.tsv</code> file (tab-separated values) (or a comprassed <code>.zip</code> or <code>.tar.gz</code> containing a single <code>.tsv</code>).</p>
+  <p>Dictionaries are used to <a href="/webeditor.html#type-of-annotations">normalize entities</a>. This is the format of dictionary files used at tagtog.</p>
+  <p>The dictionary file to upload must be a <code>.tsv</code> file (tab-separated values) (or a comprassed <code>.zip</code> or <code>.tar.gz</code> containing a single <code>.tsv</code>). To upload dictionary files visit <i>Settings > Dictionaries</i>.</p>
   <p>The dictionary format should follow this pattern:</p>
 
   <div markdown="1">
@@ -42,6 +42,7 @@ group: formats
 </div>
 <div class="one-third-col">
   {% include message.html message="<strong>Note</strong>: the id is not considered a name. If you want it to be a name, put it in the list of names. Only in the basic case where the entity has 1 sole name and this matches the id, the name can be omitted and is therefore defined implicitly." %}
+  {% include message.html message="The ids in a dictionary cannot contain spaces and must match the regular expression: <code>^[a-zA-Z0-9_\-:\.\@]+$ </code>" %}
   {% include message.html message="<strong>Note</strong>: the names must NOT be tokenized." %}
 </div>
 

@@ -1,8 +1,9 @@
 ---
 layout: page
-title: API doc v1.0
+version: 1.0
+title: API doc
 sidebar_link: true
-group: api
+id: api
 
 api_document_url: https://www.tagtog.net/-api/documents/v1
 api_username: yourUsername
@@ -25,7 +26,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
   <table style="width:100%;white-space:nowrap;">
     <tr>
       <td><strong>Version</strong></td>
-      <td><code>1.0</code></td>
+      <td><code>{{ page.version }}</code></td>
     </tr>
     <tr>
       <td><strong>Endpoint</strong></td>
@@ -675,6 +676,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 </div>
 <div class="one-third-col">
   {% include message.html message='Search queries through the API return a response with the JSON <code>search response</code>. <a href="#search-response-format"> Documentation</a>' %}
+  {% include message.html message='Use the search features to retrieve the progress of the annotation tasks.' %}
 </div>
 <div class="two-third-col">
   
@@ -820,10 +822,27 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       <td>Owner of the project you want to use</td>
     </tr>
   </table>
+
+  <p><strong>Optional Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>members</code></td>
+      <td><code>master</code> aka project official annotations</td>
+      <td>john</td>
+      <td><p>Project member you want to use</p>
+          <p>Only applicable if the project has multiple team members</p></td>
+    </tr>
+  </table>
   
 </div>
 <div class="one-third-col">
-  
+  {% include message.html message="If while manual annotating you create <strong>pre-annotations</strong>, they will also appear in the output" %}
 </div>
 
 <div class="two-third-col">
@@ -899,8 +918,6 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 </div>
 </div>
 
-
-
 <div class="two-third-col">
   <h2>Delete documents <code>DELETE</code></h2>
   <p>You can delete documents in your project using the API. Fine-tune the <code>search</code> parameter to delete only those documents returned by the search query.</p>
@@ -934,10 +951,8 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td>Owner of the project you want to use</td>
     </tr>
   </table>
-  
 </div>
 <div class="one-third-col">
-
   {% include message.html message='<code>search&equals;*</code> finds all and therefore the <code>DELETE</code> call deletes all documents.' %}
 </div>
 
@@ -1020,7 +1035,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </tr>
   <tr>
     <td><code>null</code></td>
-    <td>Special output to signify that no document output is desired. A JSON response of the request will be returned instead. Example:
+    <td>Special output to signify that no document output is desired. A JSON response of the request will be returned instead. For example, when importing a document:
 <div markdown="1">
 ```javascript
 {

@@ -2,38 +2,24 @@
 layout: page
 title: Projects
 sidebar_link: true
-group: webapp
+id: projects
 ---
 
 
 A project is a collection of documents and rules to annotate documents manually or automatically.
-<div class="page-section">
+
 
   <div class="two-third-col">
     <h3>Creating a project</h3>
     <p>Once you have signed up and you have a user account, you are ready to create a new project.</p>
+    <p class="numbered-item"><span class="number-1">1</span>Choose a <strong>name</strong> for your project</p><br>
+    <p class="numbered-item"><span class="number-2">2</span>Choose <strong>one or more already trained machine learning models</strong> (we call them 'machines'). Machines are split into categories (e.g. Biomedical). Each model extract specific information from text.</p>
+    
+  </div>
+  <div class="one-third-col">
     {% include image.html name="define-new-proj.PNG" caption="Defining a new project"%}
+    {% include message.html message="If you want to <strong>customize</strong> your own machine, simply don't select any pre-trained model. Train later your own machine learning model from the scratch." %}
   </div>
-  <div class="one-third-col">
-    
-  </div>
-  <div class="two-third-col">
-    <p class="numbered-item"><span class="number-1">1</span>Choose a <strong>name</strong> for your project</p> 
-  </div>
-  <div class="one-third-col">
-    
-  </div>
-  <div class="two-third-col">
-    <p class="numbered-item"><span class="number-2">2</span>Choose one or more already trained machine learning models (we call them 'machines'). Machines are split into categories (e.g. Biomedical). Each model extract specific information from text.</p>
-  </div>
-  <div class="one-third-col">
-    <div class="message">
-      If you want to <strong>customize</strong> your own machine, simply don't select any. Train later your own machine learning model from the scratch.
-    </div>
-  </div>
-</div>
-
-<div class="page-section">
 
   <div class="two-third-col">
     <h3>Project settings</h3>
@@ -43,21 +29,18 @@ A project is a collection of documents and rules to annotate documents manually 
     
   </div>
 
-
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Guidelines</h4>
-      <p>You can write the annotation guidelines for you or your team. It should define what and how to manually annotate. The more clear it is, the better the annotations and the training data you can generate.</p>
-
+      <p>You can write the <strong>annotation guidelines</strong> for you or your team. It should define what and how to manually annotate. The more clear it is, the better the annotations and the training data you can generate.</p>
     </div>
     <div class="one-third-col">
       {% include image.html name="settings-guidelines.PNG" %}
     </div>
-
     <div class="two-third-col">
       <p>Clicking on <code>Edit</code> you turn on the mode to edit the guidelines. Clicking on <code>View</code> you are on the preview mode and you can see the results of your changes. Once it is ready, just save it {% include inline-image.html name="save-guidelines.PNG" width="30" %}.
       </p>
-      <p>Only user with <strong>admin role</strong> can edit the guidelines.</p>
+      <p>Only users with <strong>admin role</strong> can edit the guidelines.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
@@ -72,7 +55,7 @@ A project is a collection of documents and rules to annotate documents manually 
       <h4>Annotatable sections</h4>
       <p>Here you select which sections you want to manually or automatically annotate in scientific papers. The available sections are: <code>Title</code>, <code>Abstract</code>, <code>Introduction & Background</code>, <code>Materials & Methods</code>, <code>Results, Conclusion & Discussion</code>, <code>Other</code>. The sections not selected will be grayed out in the editor and manual annotations disabled.</p>
       <p>You can also select how to annotate <code>Figures & Tables</code> as in <code>always</code>, <code>never</code> or <code>section-dependant</code>.</p>
-      <p>If you want to <strong>disable manual annotation</strong> you can uncheck all the options. If every single option is unchecked you will be able to see text as usual in the editor, however the manual annotation won't be possible.</p>
+      <p>To <strong>disable manual annotation</strong>, uncheck each section. Users will be able to read text in the editor as usual , however manual annotation won't be possible.</p>
     </div>
     <div class="one-third-col">
       {% include image.html name="settings-annotatables.PNG" %}
@@ -84,27 +67,31 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Entities</h4>
-      <p>Here you should define what type of information you want to annotate manually or automatically. Meaning, which type of information you want to identify in text. You achieve this by defining <code>Entity Types</code>.</p>
+      <p>Here you should define what type of information you want to annotate manually or automatically. Meaning, which type of information you want to identify or annotate in text. You achieve this by defining <code>Entity Types</code> (a.k.a. Entity Classes).</p>
       {% include image.html name="settings-entities-types.PNG" caption="You define entity types from the user interface"%}
     </div>
     <div class="one-third-col">
       <div class="message">
         <strong>What is an entity?</strong>&nbsp; a named entity is a real-world object, such as persons, locations, organizations, products, etc. Examples of named entities include Barack Obama, New York City, Volkswagen Golf, or anything that can be named. Entities are instances of <code>Entity Types</code> (e.g., New York City is an instance of a City, wheel is an instance of a Vehicle part).
       </div>
-    </div>
-    <div class="two-third-col">
-      <p>You must add one or more entity types. Each entity is defined by a <code>name</code>, <code>description</code> and <code>color</code>. For example in the project in the picture above we want to extract vehicle information and for that we have created entity types to annotate vehicle parts (<code>vehiclePart</code>), vehicle types, (<code>vehicleType</code>) and vehicle model (<code>vehicleModel</code>). In order to easily identify the entities in the text, we will assign to each entity type a color. </p>
-    </div>
-    <div class="one-third-col">
       <div class="message">
         <strong>Accesibility tip</strong>: use colors that are easy to distinguish. Keep in mind color blind users.
       </div>
+      <div class="message">
+        The name for an Entity type should contain only letters, numbers, or underscores, and must start with a letter. Minimum length: 3 characters. Maximum length: 24 characters.
+      </div>
+    </div>
+    <div class="two-third-col">
+      <p>You must add one or more entity types. Each entity is defined by a <code>name</code>, <code>description</code> (optional) and <code>color</code>. For example in the project in the picture above we want to extract vehicle information and for that we have created entity types to annotate vehicle parts (<code>vehiclePart</code>), vehicle types, (<code>vehicleType</code>) and vehicle model (<code>vehicleModel</code>). In order to easily identify the entities in the text, we will assign to each entity type a color.</p>
+    </div>
+    <div class="one-third-col">
+      
     </div>
   </div>
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Dictionaries</h4>
-      <p>As soon as you create one entity type, this will appear in the <code>Dictionaries</code> panel. Each entity type can have associated one or more dictionaries. From here you can upload, replace or download dictionaries.</p>
+      <p>As soon as you create one entity type, this will appear in the <code>Dictionaries</code> panel. Each entity type can have associated one or more dictionaries (<a href="/dictionary-format.html">Dictionary format</a>). From here you can upload, replace or download dictionaries.</p>
       {% include image.html name="settings-dictionaries.PNG" caption="Once you have created a dictionary, you can upload/replace or download the dictionary file"%}
       <p>As an example of dictionary let's use the entity type <code>vehicleModel</code>. For example, <code>Volkswagen Golf 7</code>, <code>Golf Mk7</code> and <code>Golf VII</code> all identify the same canonical or unique object, this object can be identify with an ID, e.g.: <code>VWGOLF7</code>. Let's create our entry in the dictionary:</p>
       <div class="highlight">
@@ -113,23 +100,24 @@ A project is a collection of documents and rules to annotate documents manually 
     </div>
     <div class="one-third-col">
       <div class="message">
-        <strong>What is a dictionary?</strong> A simple list of terms with their synonyms. E.g. the model <code>Volkswagen Golf 7</code> is also known as <code>Golf Mk7</code>. This list facilitates NER, i.e. the <strong>automatic extraction of entities</strong> in text and their normalization. The <strong>normalization</strong> of entities is the process to identify a canonical unambiguous reference to an entity. <a href="https://www.tagtog.net/-doc/formats/EntityDictionaryTsv_v0_1">Dictionary format</a>.
+        <strong>What is a dictionary?</strong> A simple list of terms with their synonyms. E.g. the model <code>Volkswagen Golf 7</code> is also known as <code>Golf Mk7</code>. This list facilitates NER, i.e. the <strong>automatic extraction of entities</strong> in text and their normalization. The <strong>normalization</strong> of entities is the process to identify a canonical unambiguous reference to an entity. <a href="/dictionary-format.html">Dictionary format</a>.
       </div>
     </div>
     <div class="two-third-col">
-      <p>The process of normalization <strong>facilitates the retrieval of information</strong>, e.g. How many error reports mention the vehicle <code>Golf Mk7</code>?</p>
-      <p>tagtog applies grammar rules to identify potential entities as plurals, tenses, etc.</p>
-      <p>In order to upload a dictionary, click on <code>New Dictionary</code> under the entity type name and Save it. Two options will show up: <code>Download Dictionary</code> and <code>Upload Dictionary</code>.</p>
+      <p>When you create a dictionary, you don't to cover cases as plural, tenses, etc. tagtog uses the dictionary enties and applies <strong>grammar rules</strong> to identify potential entities doing such modificions for you.</p>
+      <p>In order to upload a dictionary, you first need to create a dictionary. Click on <code>New Dictionary</code> under the entity type name and Save it. Two options will show up: <code>Download Dictionary</code> and <code>Upload Dictionary</code>.</p>
     </div>
     <div class="one-third-col">
+      {% include message.html message="The process of normalization <strong>facilitates the retrieval of information</strong>, e.g. How many error reports mention the vehicle <code>Golf Mk7</code>?" %}
     </div>
     <div class="two-third-col">
-    <p><strong>Upload/Replace</strong>: you can use this option to upload a dictionary file. If the file was uploaded previously, it will be replaced with the new dictionary. Once you have uploaded a dictionary, if you upload any text, in the web editor you can see how the entities are identified automatically.</p>
+    <p><strong>Upload/Replace</strong>: you can use this option to upload a dictionary file. If the file was uploaded previously, it will be replaced with the new dictionary. Once you uploaded a dictionary, all new text imported is annotated automatically following the dictionary rules.</p>
     </div>
     <div class="one-third-col">
     </div>
     <div class="two-third-col">
       <p><strong>Download</strong>: you can use this option to download the dictionary being used in tagtog to your computer. This is very useful to make large edit operations and later replace the existing dictionary.</p>
+      <p>Dictionaries are <strong>automatically updated</strong> if a user adds new normalizations using the web editor. <a href="/webeditor.html#update-dictionary-from-annotation-editor">More information</a>.</p>
     </div>
     <div class="one-third-col">
     </div>
@@ -138,13 +126,13 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Relations</h4>
-      <p>You can <strong> annotate relations</strong> in text. For that you must first create a new <code>Relation Type</code> by clicking the <code>New Relation Type</code> button. Afterwards you must choose two <code>Entity Types</code>, those types you want to identify relations for. Optionally you can add a description for the relation. For example, below you can see a new relation type between vehicle parts and vehicle models.</p>
+      <p>You can <strong> annotate relations</strong> in text. For that you must first create a new <code>Relation Type</code> by clicking the <code>New Relation Type</code> button. After just choose two Entity Types, those types you want to identify relations for. Optionally you can add a <code>description</code> for the relation. For example, a new relation type between vehicle parts and vehicle models.</p>
     </div>
     <div class="one-third-col">
       {% include image.html name="settings-new-relation-type.PNG"%}
     </div>
     <div class="two-third-col">
-      <p>Currently you cannot extract relations in text automatically. However, as a workaround, you can extract the entities automatically and based on the distance in text infer a relation.</p>
+      <p>Currently you cannot extract relations in text automatically. However, as a workaround, you can extract the entities automatically and based on the distance in text, infer a relation.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
@@ -180,13 +168,16 @@ A project is a collection of documents and rules to annotate documents manually 
     </div>
     <div class="one-third-col">
       <div class="message">
-        <strong>What is a document label?</strong> an attribute assigned to a fragment of text (document). This attribute makes a reference to the whole text and not just a text span or entity.
+        <strong>What is a document label?</strong> an attribute assigned to a fragment of text (document). This attribute makes a reference to the whole text and not just to a text span or entity.
+      </div>
+      <div class="message">
+        The name for a Document Label should contain only letters, numbers, or underscores, and must start with a letter. Minimum length: 3 characters. Maximum length: 24 characters.
       </div>
     </div>
     <div class="two-third-col">
-      {% include image.html name="settings-doclabels.PNG" caption="Setting a document label with the <code>enum</code> type"%}
+      {% include image.html name="settings-doclabel.PNG" caption="Setting a document label with the <code>enum</code> type"%}
       <p>Once saved, you can start using them in the web editor.</p>
-      <p>Soon you will be able to generate document labels automatically within tagtgo. Now, as a workaround, you can infer the document label based on the entities extracted automatically.</p>
+      <p>Soon you will be able to generate document labels automatically within tagtog. Now, as a workaround, you can infer the document label based on the entities extracted automatically.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
@@ -212,27 +203,26 @@ A project is a collection of documents and rules to annotate documents manually 
         </tr>
         <tr>
           <td><code>string</code></td>
-          <td>One or more words describing an entity. This is particularly handy whether you don't have a specific list of options or if you do, it might change often. e.g. you can add comments to entities </td>
+          <td>One or more words describing an entity. This is particularly handy whether you don't have a specific list of options or if you do, it might change often. e.g. you can add comments to entities.</td>
         </tr>
         <tr>
           <td><code>enum</code></td>
-          <td>list of options which can describe an entity. <strong>In this case the options should be written in the description of the label separated by commas</strong>. e.g. if you are processing CVs you could add an entity label to the entities identifying skills. This enum entity label <code>skill type</code> could have the values <code>soft skill</code> and <code>hard skill</code>. </td>
+          <td>list of options to describe an entity. In this case the options should be <strong> written in the description of the label separated by commas</strong>. e.g. if you are processing CVs you could add an entity label to the entities identifying skills. This enum entity label <code>skill type</code> have the values <code>soft skill</code> and <code>hard skill</code>.</td>
         </tr>
       </table>
     </div>
     <div class="one-third-col">
-      <div class="message">
-        <strong>What is an entity label?</strong> an attribute assigned to an entity.
-      </div>
+      {% include message.html message="<strong>What is an entity label?</strong> an attribute assigned to an entity." %}
+      {% include message.html message="The name for an Entity Label should contain only letters, numbers, or underscores, and must start with a letter. Minimum length: 3 characters. Maximum length: 24 characters." %}
     </div>
     <div class="two-third-col">
-      {% include image.html name="settings-doclabels.PNG" caption="Setting a entity label with the <code>enum</code> type"%}
+      {% include image.html name="settings-entitylabel.PNG" caption="Setting an entity label with the <code>enum</code> type"%}
       <p>Once saved, you can start using them in the web editor.</p>
-      <p>Soon you will be able to generate document labels automatically within tagtgo. Now, as a workaround, you can infer the document label based on the entities extracted automatically.</p>
+      <p>Soon you will be able to generate entity labels automatically within tagtog.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
-        <strong>Tip</strong>: document labels are very useful for text classification or intent detection. You can use document labels to train a machine learning model and generate these automatically.
+        <strong>Tip</strong>: an entity itself contains information as entity type, text, etc. Entity labels are useful to add additional attributes to entities. 
       </div>
     </div>
   </div>
@@ -254,11 +244,11 @@ A project is a collection of documents and rules to annotate documents manually 
         </tr>
         <tr>
           <td>Format</td>
-          <td>Format to be sent to the End Point. Currently you can select: <code>ann.json</code>, <code>docJSON</code> (used internally for some of our users) and <code>PubAnnotation</code>(<a href="http://pubannotation.org/">link</a>)</td>
+          <td>Format to be sent to the End Point. Currently you can select: <code>ann.json</code> (<a href="/ann.doc.html#ann-json">docs</a>), <code>docJSON</code> (used internally for some users) and <code>PubAnnotation</code>(<a href="http://www.pubannotation.org/docs/annotation-format/">docs</a>)</td>
         </tr>
         <tr>
           <td>Only GUI trigger</td>
-          <td>Check it if you don't want API changes to trigger the webhook. Leave it unchecked if you want that both, API and GUI changes, trigger the webhook.</td>
+          <td>Check it if you want only GUI changes to trigger the webhook. Leave it unchecked if you want that both, API and GUI changes, trigger the webhook.</td>
         </tr>
         <tr>
           <td>Authentication</td>
@@ -276,21 +266,8 @@ A project is a collection of documents and rules to annotate documents manually 
     <div class="two-third-col">
       <h4>Annotations</h4>
       <h5>Pre-annotations</h5>
-      <p>These are the annotations that are created automatically while you are manually annotating a document. For example, if you annote the gene: <code>BRA2</code> . All the mentions of <code>BRA2</code> in this text will be automatically annotated. In this panel you can decide which are the <strong>default settings</strong> for pre-annotations. You can always change these settings in the web editor for specific documents.</p>
-      <table style="width:100%">
-        <tr>
-          <th>Preannotation type</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>Pre-select</td>
-          <td>Those annotations that will be <strong>added</strong> automatically upon creation of a new annotation. Only match-string annotations will be added.</td>
-        </tr>
-        <tr>
-          <td>Pre-deselect</td>
-          <td>Those annotations that will be <strong>removed</strong> automatically upon removal of an existing annotation. Only match-string annotations will be deselected.</td>
-        </tr>
-      </table>
+      <p>These are the annotations that are created automatically while you are manually annotating a document. For example, if you annote the gene: <code>BRA2</code>. All the mentions of <code>BRA2</code> in this text will be automatically annotated (<a href="/webeditor.html#pre-annotations">more information on pre-annotations</a>).</p>
+      <p>In this panel you can decide which are the <strong>default settings</strong> for pre-annotations: pre-selections and pre-deselections. You can always change these settings in the web editor for specific documents.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
@@ -310,7 +287,7 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Members</h4>
-      <p>In this panel you can invite other users to your project so they can collaborate in the annotation tasks. These are the roles available and the ones planned:</p>
+      <p>In this panel you can invite other users to your project so they can collaborate in the annotation tasks. For more info about roles and collaborative annotation, go <a href="/collaboration.html">here</a>.</p>
     </div>
     <div class="one-third-col">
       {% include image.html name="settings-members.PNG" %}
@@ -328,7 +305,7 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Remove a project</h4>
-      <p>To remove a project go to the list of projects (you can go easily clicking in the tagtog logo on the top left). Click the <code>Delete</code> option in the project card.</p>
+      <p>To remove a project go to the list of projects (you can go easily by clicking in the tagtog logo on the top left). Click the <code>Delete</code> option in the project card.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
@@ -336,4 +313,3 @@ A project is a collection of documents and rules to annotate documents manually 
       </div>
     </div>
   </div>
-</div>

@@ -3,7 +3,7 @@ layout: page
 title: ann.doc format
 sidebar_link: true
 version: 2.0
-group: formats
+id: anndoc
 ---
 
 <div class="two-third-col">

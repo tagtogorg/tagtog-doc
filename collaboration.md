@@ -25,11 +25,11 @@ id: collaboration
     </tr>
     <tr>
       <td><code>supercurator</code></td>
-      <td>Users invited as collaborators to a project. They can only see their annotations and <code>master</code>'s. They can edit <code>master</code>'s annotations. They can export master into their annotations.</td>
+      <td>Users invited as collaborators to a project who only can see their annotations and <code>master</code>'s. They can edit <code>master</code>'s annotations and export these into their annotations.</td>
     </tr>
     <tr>
       <td><code class="soon">curator</code></td>
-      <td><span class="soon">Users invited as collaborators to a project. They can only edit their own annotations. They cannot edit <code>master</code>'s annotations. They can export master into their annotations.</span> Coming soon.</td>
+      <td><span class="soon">Users invited as collaborators to a project who only can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations.</span> Coming soon.</td>
     </tr>
     <tr>
       <td><code class="soon">reader</code></td>
@@ -92,11 +92,11 @@ id: collaboration
 
 <div class="two-third-col">
   <h2>Annotation flows</h2>
-  <p>There are different ways you can organise your annotation tasks. These are the most common:</p>
+  <p>There are different ways you can organize your annotation tasks. These are the most common:</p>
   <br/>
   <h4>Each annotator annotates each document</h4>
   <p>This flow is ideal for those projects requiring high-quality annotations and complex annotation tasks (specific skills required, divergent interpretations, etc.).</p>
-  <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. Once you create a project you become its <code>admin</code>. Go to <i>Settings > Members</i> to add members to your project. Currently, each project member is added as <code>supercurator</code>.</p>
+  <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. Once you create a project, you become its <code>admin</code>. Go to <i>Settings > Members</i> to add members to your project. Currently, each project member is added as <code>supercurator</code>.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -109,13 +109,13 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Any project member can import the documents to be annotate by the group. Any project member can see these documents.</p> 
+  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Any project member can import the documents to be annotated by the group. Any project member can see these documents.</p> 
 </div>
 <div class="one-third-col">
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-4">4</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations. When the annotations version of a document is complete, the user mark her/his version as completed by clicking the Confirm button. Each user will do the same when their version is completed.</p> 
+  <p class="numbered-item"><span class="number-4">4</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations. When the annotations' version of a document is complete, the user mark her/his version as completed by clicking the Confirm button. Each user will do the same when their version is completed.</p> 
 </div>
 <div class="one-third-col">
 </div>
@@ -131,7 +131,7 @@ id: collaboration
   <br/>
   <h4>Documents to annotate are distributed among annotators</h4>
   <p>Make this choice if the annotation task is simple. If you assign each document to only one annotator, the quality of the annotations depends on the user assigned. </p>
-  <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. Once you create a project you become its <code>admin</code>. Go to <i>Settings > Members</i> to add members to your project. Currently, each project member is added as <code>supercurator</code> role.</p>
+  <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. Once you create a project, you become its <code>admin</code>. Go to <i>Settings > Members</i> to add members to your project. Currently, each project member is added as <code>supercurator</code> role.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -144,7 +144,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Any project member can import the documents to be annotate by the group. Any project member can see these documents.</p>
+  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Any project member can import the documents to be annotated by the group. Any project member can see these documents.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -192,7 +192,7 @@ id: collaboration
   <br/>
   <h4>Documents to annotate are distributed among annotators. No review.</h4>
   <p>Make this choice if time is a constraint and you trust the annotations to be produced. This is the simplest flow and there is no review step.</p>
-  <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. Once you create a project you become its <code>admin</code>. Go to <i>Settings > Members</i> to add members to your project. Currently, each project member is added as <code>supercurator</code> role.</p>
+  <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. Once you create a project, you become its <code>admin</code>. Go to <i>Settings > Members</i> to add members to your project. Currently, each project member is added as <code>supercurator</code> role.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -205,7 +205,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Any project member can import the documents to be annotate by the group. Any project member can see these documents.</p>
+  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Any project member can import the documents to be annotated by the group. Any project member can see these documents.</p>
 </div>
 <div class="one-third-col">
 </div>

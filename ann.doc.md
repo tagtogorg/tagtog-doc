@@ -7,7 +7,7 @@ id: anndoc
 ---
 
 <div class="two-third-col">
-  <p><code>anndoc</code> is a standoff format for document annotations consisting of two files:</p>
+  <p><code>ann.doc</code> is a standoff format for document annotations consisting of two files:</p>
   <table style="width:100%;">
     <tr>
       <th>File</th>
@@ -34,7 +34,7 @@ id: anndoc
 
 <div class="two-third-col">
   <h3><code>ann.json</code></h3>
-  <p>An <code>ann.json</code> can represent the 5 annotion types listed below. Each annotation type is identified by a prefix and an id (e.g. <code>e_1</code>). This value is unique in a project and cannot be changed.</p>
+  <p>An <code>ann.json</code> can represent the 5 annotation types listed below. Each annotation type is identified by a prefix and an id (e.g. <code>e_1</code>). This value is unique in a project and cannot be changed.</p>
   <table style="width:100%;">
     <tr>
       <th>Prefix</th>
@@ -120,7 +120,7 @@ id: anndoc
       <td><p>Array of relations (of entities) annotated in the document. Note that <code>type</code> and <code>directed</code> properties are already defined by this relation's type. They may be deleted in the future. However, so far they are here written explicitly to make this file's annotations as self-contained as possible.</p>
       <p><code>classId</code> relation type (a.k.a. relation class) id</p>
       <p><code>type</code> <code>linked</code>, <code>part-of</code>, <code>anaphora</code> or user-defined.</p>
-      <p><code>directed</code> bool indicating the direction of the relation. <code>true</code> if A->B or B<-A, <code>false</code> if A<->B</p>
+      <p><code>directed</code> boolean value indicating the direction of the relation. <code>true</code> if A->B or B<-A, <code>false</code> if A<->B</p>
       <p><code>entities</code> identifies the entities related converting their partId + offsets to a hash string. Format: <code>partId|e_id|start,end</code>. E.g. <code>["s1p1|e_1|9,17", "s1p1|e_3|55,62"]</code> For the moment we expect relations of 2 entities only (that is, no 3 or more). However, the array format is flexible to support more in the future.</p>
       <p><code>connectingWords</code> the connecting words tell whether there is evidence that some words, typically verbs, supports the argument that the entities are related. This can be `null` if none.</p>
       <p><code>confidence</code> each relation has a <code>confidence</code> object attached to represent the probability of this annotation.</p>
@@ -128,8 +128,8 @@ id: anndoc
     </tr>
     <tr>
       <td><code>confidence</code></td>
-      <td><p><code>state</code> can be empty (manual annotation) or have the following values: , <code>pre-added</code> (automatic annotation or preannotation -preselected-), <code>pre-removed</code> (preannotation -predeselected-).</p>
-      <p><code>who</code> string array. Each string represents who performed the annotation. Possibly multiple actors, prefixed by either <code>ml:</code> (automatic annotation or preannotation) or <code>user:</code> (manual annotation)</p>
+      <td><p><code>state</code> can be empty (manual annotation) or have the following values: <code>pre-added</code> (automatic annotation or pre-annotation -preselected-), <code>pre-removed</code> (pre-annotation -predeselected-).</p>
+      <p><code>who</code> string array. Each string represents who performed the annotation. Possibly multiple actors, prefixed by either <code>ml:</code> (automatic annotation or pre-annotation) or <code>user:</code> (manual annotation).</p>
       <p><code>prob</code> aggregated probability between all actors.</p>
       </td>
     </tr>

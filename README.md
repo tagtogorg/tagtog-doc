@@ -81,7 +81,7 @@ Template `inline-image.html`:
 ```
 
 ### Features not yet ready
-To mention features that will be ready soon, use the CSS class `soon`. The content will be faded
+To mention features that will be ready soon or have been temporarily disabled, use the CSS class `soon`. The content will be faded
 
 ```html
 <div class="soon">

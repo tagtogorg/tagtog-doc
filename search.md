@@ -5,8 +5,8 @@ sidebar_link: true
 id: search
 ---
 <div class="two-third-col">
-  <p>Traditional search is built around string matching. tagtog uses your annotated data to create a <strong>semantic layer</strong> allowing users to perform queries across their documents using concepts, labels and other metadata. This augmentation of the search functionality makes easier to discover patterns or find actionable insights. This is a major benefit when you have built a model that annotates text automatically and you want to grasp the intelligence of the data processed.</p>
-  <p>This search engine can be used through the user interface or the API. Learn <a href="/search-queries.html">how to build queries</a> and make the most of the concept search.</p> 
+  <p>Traditional search is built around string matching. tagtog uses your annotated data to create a <strong>semantic layer</strong> allowing users to perform queries across their documents using concepts, labels and other metadata. The augmentation of the search functionality makes easier to discover patterns or find actionable insights. This is a major benefit when you have built a model that annotates text automatically and you want to grasp the intelligence of the data processed.</p>
+  <p>The search engine can be used through the user interface or the API. Learn <a href="/search-queries.html">how to build queries</a> and make the most of the concept search.</p> 
 </div>
 <div class="one-third-col">
 </div>
@@ -21,7 +21,7 @@ id: search
 </div>
 <div class="two-third-col">
   <h3>Advance search</h3>
-  <p>You can access the advance search panel by clicking on the arrow on the right side of the search box. This panel uses the data from your project settings (dictionaries included) to automatically create search queries in a friendly way.</p>
+  <p>You can access the advance search panel by clicking on the arrow on the right side of the search box. This panel uses the data from your project settings (dictionaries included) to automatically create search queries friendly.</p>
   {% include image.html name="advancesearch.png" %}
 </div>
 <div class="one-third-col">
@@ -42,7 +42,7 @@ id: search
 <div class="two-third-col">
   <h4>Normalization</h4>
   <p>Just start typing the first 3 characters of one of the names of the entity you are looking for. All the possible entities gathered across all your dictionaries will show up. Click on one of the items to display the search query on the normalization text box and, when you are ready, just click on the Search button {% include inline-image.html name="search-button.png" width="28" %} to retrieve all the documents that contain at least one entity normalized to that name. In the case of the picture below, all documents containing entities with the name: minivan, people carrier, etc.</p>
-  <p>The search results are paginated. If your query retrieves a long list of results, you will find a <code>Load more</code> link at the bottomo of the list. Just click it to load more results.</p>
+  <p>The search results are paginated. If your query retrieves a long list of results, you will find a <code>Load more</code> link at the bottom of the list. Just click it to load more results.</p>
   {% include image.html name="search_normalization.png" caption=""%}
 </div>
 <div class="one-third-col">
@@ -59,7 +59,7 @@ id: search
 
 <div class="two-third-col">
   <h2>API</h2>
-  <p>You can also search using the API. You can use it <a href="/#index-your-data">directly as your search interface</a> or simply augment your existing engine. Discover everything you can do checking the <a href="/API.html#search-documents-in-a-project-get">documentation</a>.</p>
+  <p>You can also search using the API. You can use it <a href="/#index-your-data">directly as your search interface</a> or simply augment your existing engine. Discover everything you can in the <a href="/API.html#search-documents-in-a-project-get">documentation</a>.</p>
 </div>
 <div class="one-third-col">
 </div>

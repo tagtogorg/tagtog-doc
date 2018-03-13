@@ -55,7 +55,7 @@ A project is a collection of documents and rules to annotate documents manually 
       <h4>Annotatable sections</h4>
       <p>Here you select which sections you want to manually or automatically annotate in scientific papers. The available sections are: <code>Title</code>, <code>Abstract</code>, <code>Introduction & Background</code>, <code>Materials & Methods</code>, <code>Results, Conclusion & Discussion</code>, <code>Other</code>. The sections not selected will be grayed out in the editor and manual annotations disabled.</p>
       <p>You can also select how to annotate <code>Figures & Tables</code> as in <code>always</code>, <code>never</code> or <code>section-dependant</code>.</p>
-      <p>To <strong>disable manual annotation</strong>, uncheck each section. Users will be able to read text in the editor as usual , however manual annotation won't be possible.</p>
+      <p>To <strong>disable manual annotation</strong>, uncheck each section. Users will be able to read text in the editor as usual, however manual annotation won't be possible.</p>
     </div>
     <div class="one-third-col">
       {% include image.html name="settings-annotatables.PNG" %}
@@ -75,7 +75,7 @@ A project is a collection of documents and rules to annotate documents manually 
         <strong>What is an entity?</strong>&nbsp; a named entity is a real-world object, such as persons, locations, organizations, products, etc. Examples of named entities include Barack Obama, New York City, Volkswagen Golf, or anything that can be named. Entities are instances of <code>Entity Types</code> (e.g., New York City is an instance of a City, wheel is an instance of a Vehicle part).
       </div>
       <div class="message">
-        <strong>Accesibility tip</strong>: use colors that are easy to distinguish. Keep in mind color blind users.
+        <strong>Accessibility tip</strong>: use colors that are easy to distinguish. Keep in mind color blind users.
       </div>
       <div class="message">
         The name for an Entity type should contain only letters, numbers, or underscores, and must start with a letter. Minimum length: 3 characters. Maximum length: 24 characters.
@@ -93,7 +93,7 @@ A project is a collection of documents and rules to annotate documents manually 
       <h4>Dictionaries</h4>
       <p>As soon as you create one entity type, this will appear in the <code>Dictionaries</code> panel. Each entity type can have associated one or more dictionaries (<a href="/dictionary-format.html">Dictionary format</a>). From here you can upload, replace or download dictionaries.</p>
       {% include image.html name="settings-dictionaries.PNG" caption="Once you have created a dictionary, you can upload/replace or download the dictionary file"%}
-      <p>As an example of dictionary let's use the entity type <code>vehicleModel</code>. For example, <code>Volkswagen Golf 7</code>, <code>Golf Mk7</code> and <code>Golf VII</code> all identify the same canonical or unique object, this object can be identify with an ID, e.g.: <code>VWGOLF7</code>. Let's create our entry in the dictionary:</p>
+      <p>As an example of dictionary, let's use the entity type <code>vehicleModel</code>. For example, <code>Volkswagen Golf 7</code>, <code>Golf Mk7</code> and <code>Golf VII</code> all identify the same canonical or unique object, this object can be identified with an ID, e.g.: <code>VWGOLF7</code>. Let's create our entry in the dictionary:</p>
       <div class="highlight">
         VWGOLF7&emsp;Volkswagen Golf 7&emsp;Golf Mk7&emsp;Golf VII
       </div>
@@ -104,7 +104,7 @@ A project is a collection of documents and rules to annotate documents manually 
       </div>
     </div>
     <div class="two-third-col">
-      <p>When you create a dictionary, you don't to cover cases as plural, tenses, etc. tagtog uses the dictionary enties and applies <strong>grammar rules</strong> to identify potential entities doing such modificions for you.</p>
+      <p>When you create a dictionary, you don't need to cover cases as plural, tenses, etc. tagtog uses the dictionary entries and applies <strong>grammar rules</strong> to identify potential entities doing such modifications for you.</p>
       <p>In order to upload a dictionary, you first need to create a dictionary. Click on <code>New Dictionary</code> under the entity type name and Save it. Two options will show up: <code>Download Dictionary</code> and <code>Upload Dictionary</code>.</p>
     </div>
     <div class="one-third-col">
@@ -144,7 +144,7 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Document labels</h4>
-      <p>Document Labels are used to mark the documents or text you upload. It is another type of annotation, but affecting the whole document.</p>
+      <p>Labels used to mark the documents or text you import. It is another type of annotation, but affecting the whole document.</p>
       <p>To create a new Document Label, click on the button <code>New Document Label</code>. Then, write a <code>name</code> for the label (required), <code>type</code> (required) and <code>description</code> (optional).</p>
       <p>You can create different types of Document Labels:</p>
       <table style="width:100%">
@@ -168,7 +168,7 @@ A project is a collection of documents and rules to annotate documents manually 
     </div>
     <div class="one-third-col">
       <div class="message">
-        <strong>What is a document label?</strong> an attribute assigned to a fragment of text (document). This attribute makes a reference to the whole text and not just to a text span or entity.
+        <strong>What is a document label?</strong> An attribute assigned to a fragment of text (document). This attribute makes a reference to the whole text and not just to a text span or entity.
       </div>
       <div class="message">
         The name for a Document Label should contain only letters, numbers, or underscores, and must start with a letter. Minimum length: 3 characters. Maximum length: 24 characters.
@@ -176,7 +176,7 @@ A project is a collection of documents and rules to annotate documents manually 
     </div>
     <div class="two-third-col">
       {% include image.html name="settings-doclabel.PNG" caption="Setting a document label with the <code>enum</code> type"%}
-      <p>Once saved, you can start using them in the web editor.</p>
+      <p>Once saved, you can start using them on the web editor.</p>
       <p>Soon you will be able to generate document labels automatically within tagtog. Now, as a workaround, you can infer the document label based on the entities extracted automatically.</p>
     </div>
     <div class="one-third-col">
@@ -189,7 +189,7 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Entity labels</h4>
-      <p>Entity Labels are used to add attributes to existing entities. You can add one or more entity labels to a specific entity.</p>
+      <p>Labels used to add attributes to existing entities. You can add one or more entity labels to a specific entity.</p>
       <p>To create a new Entity Label, click on the button <code>New Document Label</code>. Then, write a <code>name</code> for the label (required), <code>type</code> (required) and <code>description</code> (optional).</p>
       <p>You can create different types of Entity Labels:</p>
       <table style="width:100%">
@@ -212,12 +212,12 @@ A project is a collection of documents and rules to annotate documents manually 
       </table>
     </div>
     <div class="one-third-col">
-      {% include message.html message="<strong>What is an entity label?</strong> an attribute assigned to an entity." %}
+      {% include message.html message="<strong>What is an entity label?</strong> An attribute assigned to an entity." %}
       {% include message.html message="The name for an Entity Label should contain only letters, numbers, or underscores, and must start with a letter. Minimum length: 3 characters. Maximum length: 24 characters." %}
     </div>
     <div class="two-third-col">
       {% include image.html name="settings-entitylabel.PNG" caption="Setting an entity label with the <code>enum</code> type"%}
-      <p>Once saved, you can start using them in the web editor.</p>
+      <p>Once saved, you can start using them on the web editor.</p>
       <p>Soon you will be able to generate entity labels automatically within tagtog.</p>
     </div>
     <div class="one-third-col">
@@ -230,7 +230,7 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Webhooks</h4>
-      <p>You can define webhooks to notify an external system after an specific action in tagtog or API. These actions are: upload a new document and save a document.</p>
+      <p>You can define webhooks to notify an external system after a specific action in tagtog or API. These actions are: upload a new document and save a document.</p>
         
       <p>This is the required information to configure a webhook:</p>
       <table style="width:100%">
@@ -266,8 +266,8 @@ A project is a collection of documents and rules to annotate documents manually 
     <div class="two-third-col">
       <h4>Annotations</h4>
       <h5>Pre-annotations</h5>
-      <p>These are the annotations that are created automatically while you are manually annotating a document. For example, if you annote the gene: <code>BRA2</code>. All the mentions of <code>BRA2</code> in this text will be automatically annotated (<a href="/webeditor.html#pre-annotations">more information on pre-annotations</a>).</p>
-      <p>In this panel you can decide which are the <strong>default settings</strong> for pre-annotations: pre-selections and pre-deselections. You can always change these settings in the web editor for specific documents.</p>
+      <p>These are the annotations that are created automatically while you are manually annotating a document. For example, if you annotate the gene: <code>BRA2</code>. All the mentions of <code>BRA2</code> in this text will be automatically annotated (<a href="/webeditor.html#pre-annotations">more information on pre-annotations</a>).</p>
+      <p>In this panel you can decide which are the <strong>default settings</strong> for pre-annotations: pre-selections and pre-deselections. You can always change these settings on the web editor for specific documents.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
@@ -287,7 +287,7 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Members</h4>
-      <p>In this panel you can invite other users to your project so they can collaborate in the annotation tasks. For more info about roles and collaborative annotation, go <a href="/collaboration.html">here</a>.</p>
+      <p>In this panel you can invite other users to your project, so they can collaborate in the annotation tasks. For more info about roles and collaborative annotation, go <a href="/collaboration.html">here</a>.</p>
     </div>
     <div class="one-third-col">
       {% include image.html name="settings-members.PNG" %}
@@ -298,14 +298,14 @@ A project is a collection of documents and rules to annotate documents manually 
     </div>
     <div class="one-third-col">
       <div class="message">
-        You can invite only users who have already an account at tagtog (either on your on-premises instace or on the cloud version)
+        You can invite only users who have already an account at tagtog (either on your on-premises instance or on the cloud version)
       </div>
     </div>
    </div>
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Remove a project</h4>
-      <p>To remove a project go to the list of projects (you can go easily by clicking in the tagtog logo on the top left). Click the <code>Delete</code> option in the project card.</p>
+      <p>To remove a project go to the list of projects (you can go easily by clicking in the tagtog logo on the top left). Click on the <code>Delete</code> button in the project card.</p>
     </div>
     <div class="one-third-col">
       <div class="message">

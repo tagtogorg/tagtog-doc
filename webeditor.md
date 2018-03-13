@@ -8,7 +8,7 @@ id: webeditor
 <div class="page-section">
   <div class="two-third-col">
     <h2>Introduction</h2>
-    <p>The core of tagtog the text annotation editor for data augmentation. This editor is designed to make the user feel comfortable annotating text. We have created a minimalistic user interface to interfere as less as possible in the reading experience to increase annotator's focus and the efficiency during annotation tasks.</p>
+    <p>The core of tagtog the text annotation editor for data augmentation. This editor is designed to make the user feel comfortable annotating text. We have created a minimalist user interface to interfere as little as possible in the reading experience to increase annotator's focus and the efficiency during annotation tasks.</p>
     <p>The annotation editor is used to <strong>manually annotate text</strong> or/and <strong>train a machine learning model to automatically annotate text</strong>. By enabling automatic annotations you can build <a href="/#what-can-you-achieve">awesome stuff</a> you didn't think of at first.</p>
     <p>This web editor includes features as automatic annotations, <a href="https://medium.com/@tagtog/overlapping-text-annotations-19d7ac5b247a" title="Medium - Overlapping text annotations, gain flexibility">overlapping text annotations</a> or support for full-text articles, that reduce significantly the time required to annotate text.</p>
 
@@ -16,10 +16,10 @@ id: webeditor
   </div>
   <div class="one-third-col">
     <div class="message">
-      The editor is part of a <strong>web app</strong>. You don't need anything else than a web browser to use it. If you are using an <strong>on-premises</strong> version, contact the internal administrator of the application to understand how to access the app. If you are using the <strong>Cloud</strong> version, just go to <a href="https://tagtog.net">tagtog.net</a>.
+      The editor is part of a <strong>web app</strong>. You don't need anything than a web browser to use it. If you are using an <strong>on-premises</strong> version, contact the internal administrator of the application to understand how to access the app. If you are using the <strong>Cloud</strong> version, just go to <a href="https://tagtog.net">tagtog.net</a>.
     </div>
     <div class="message">
-      By protecting the reading experience the tool is more accesible. This is specially important when you involve <strong>subject matter experts</strong> in your annotation projects.
+      By protecting the reading experience the tool is more accessible. This is specially important when you involve <strong>subject matter experts</strong> in your annotation projects.
     </div>
   </div>
 </div>
@@ -27,7 +27,7 @@ id: webeditor
 <div class="page-section">
   <div class="two-third-col">
     <h2>Type of annotations</h2>
-    <p>You can annotate at text span level or at document level. Let's take a look to the type of annotaitons you can create using tagtog:</p>
+    <p>You can annotate at text span level or at document level. Let's take a look to the type of annotations you can create using tagtog:</p>
     <table style="width:100%">
       <tr>
         <th>Annotation type</th>
@@ -39,7 +39,7 @@ id: webeditor
       </tr>
       <tr>
         <td>Normalization</td>
-        <td>Id assigned to a named entity. These annotations help in <strong>disambiguation</strong>. Normalization or canonicalization is the process for assigning an id or unique name to data that has more than one possible representation. This process is supported by <a href="/projects.html#dictionaries">dictionaries</a>. For example an <code>air filter</code> in automotive can make reference to a <code>cabin air filter</code> or a <code>engine air filter</code>. With tagtog you can assign the correct reference to the entity. Each entity can have assigned one or more Ids (e.g. Id from Wikipedia, and an Id from your internal database).</td>
+        <td>Id assigned to a named entity. These annotations help in <strong>disambiguation</strong>. Normalization or canonicalization is the process for assigning an id or unique name to data that has more than one possible representation. This process is supported by <a href="/projects.html#dictionaries">dictionaries</a>. For example an <code>air filter</code> in automotive can make reference to a <code>cabin air filter</code> or an <code>engine air filter</code>. With tagtog you can assign the correct reference to the entity. Each entity can have assigned one or more Ids (e.g. Id from Wikipedia, and an Id from your internal database).</td>
       </tr>
       <tr>
         <td>Entity label</td>
@@ -60,14 +60,14 @@ id: webeditor
     </table> 
   </div>
   <div class="one-third-col">
-    {% include message.html message="Text annotation is <strong>flexible</strong>, tagtog supports the annotation of any text span: parts of words, words, sentences, etc. On the top of that you can create annotations overlapping text spans, or load pre-annotated data with these annotations." %}
+    {% include message.html message="Text annotation in tagtog is <strong>flexible</strong>, tagtog supports the annotation of any text span: parts of words, words, sentences, etc. On the top of that you can create annotations overlapping text spans, or load pre-annotated data with these annotations." %}
   </div>
 </div>
 
 <div class="page-section">
   <div class="two-third-col">
     <h2>Hotkeys map</h2>
-    <p>If you hover the mouse on the icon <kbd>hotkeys</kbd> the list of hotkeys is displayed.</p>
+    <p>If you hover the mouse on the icon <kbd>hotkeys</kbd>, the list of hotkeys is displayed.</p>
     <table style="width:100%">
       <tr>
         <th>Hotkey</th>
@@ -87,7 +87,7 @@ id: webeditor
       </tr>
       <tr>
         <td class="centered"><kbd>r</kbd></td>
-        <td>Start relation (only available when the annotation menu is visible)</td>
+        <td>Start a new relation (only available when the annotation menu is visible)</td>
       </tr>
       <tr>
         <td class="centered"><kbd>d</kbd></td>
@@ -112,7 +112,7 @@ id: webeditor
       <p>The text is displayed in the document area. There you can read and annotate text.</p>
       <h4>Text annotations</h4>
       <p>Once a piece of text is annotated, it becomes an entity. In tagtog you can operate with entities and do things as normalize them, relate them, etc.</p>
-      <p>The background color of each annotation depends is the color picked for the Entity Type. The font color changes based on the background color so the contrast is appropriate to read.</p>
+      <p>The background color of each annotation depends on the color picked for the Entity Type. The font color changes based on the background color so the contrast is appropriate to read.</p>
       <br/>
       {% include image.html name="editor-annotations.PNG" caption="In green the gene names, in red the mutations. Font color change depending on the entity background color" %}
     </div>
@@ -120,10 +120,10 @@ id: webeditor
     </div>
     <div class="two-third-col">
       <h5>Create new text annotations</h5>
-      <p>A new text annotation is created by <strong>highlighting text with the mouse</strong>. Position the cursor at the beginning of the text you want to highlight. Press and hold your primary mouse button (commonly the left-button). While holding the mouse button, drag the cursor to the end of the text and let go of the mouse button. Once completed, all the text from the beginning to the end should be highlighted using the same Entity Type used in the previous text annotation. Currently the only way to change the entity type used for new annotations is by first changing the entity type of an existing annotation.</p>
+      <p>A new text annotation is created by <strong>highlighting text with the mouse</strong>. Position the cursor at the beginning of the text you want to highlight. Press and hold your primary mouse button (commonly the left-button). While holding the mouse button, drag the cursor to the end of the text and let go of the mouse button. Once completed, all the text from the beginning to the end should be highlighted using the same Entity Type used in the previous text annotation. Currently the only way to change the entity type used for new annotations is by first changing the entity type of existing annotation.</p>
       <p>Tips & tricks:</p>
       <ul>
-        <li>If you <strong>double-click</strong> you will annotate the word you clicked.</li>
+        <li>If you <strong>double-click</strong>, you annotate the word clicked.</li>
         <li>If you try to annotate a word that starts or ends in <i>space</i>, the space won't be annotated.</li>
       </ul>
     </div>
@@ -144,7 +144,7 @@ id: webeditor
     </div>
     <div class="two-third-col">
       <h5>Pre-annotations</h5>
-      <p>Pre-annotations are automatic annotations created upon the creation or removal of other <strong>equal annotation</strong> (same entity type and same text). These type of annotations increase annotator's <strong>efficiency</strong> as potential candidates for new/to-remove annotations are automatically identified.</p>
+      <p>Automatic annotations created upon the creation or removal of other <strong>equal annotation</strong> (same entity type and same text). These type of annotations increase annotator's <strong>efficiency</strong> as potential candidates for new/to-remove annotations are automatically identified.</p>
       <table style="width:100%">
         <tr>
           <th>Pre-annotation type</th>
@@ -183,7 +183,7 @@ id: webeditor
         <tr>
           <td>Add relation</td>
           <td class="centered"><kbd>r</kbd></td>
-          <td><p>Start a relation if a Relation Type is defined for the Entity Type of this entity. Once the relation is initializated, you can see highlighted the annotations you can relate your entity to. Other annotations are faded to indicate that you cannot relate the entity to these.</p>
+          <td><p>Start a relation if a Relation Type is defined for the Entity Type of this entity. Once the relation is initialized, you can see highlighted the annotations you can relate your entity to. Other annotations are faded to indicate that you cannot relate the entity to these.</p>
           <p>Click on one of the available entities to set the relation. From that moment, both entities will be connected. Both entities will display this icon on the top {% include inline-image.html name="relation-bidirectional-icon.png" width="20" %}.</p></td>
         </tr>
         <tr>
@@ -194,13 +194,13 @@ id: webeditor
         <tr>
           <td>Change Type</td>
           <td class="centered">-</td>
-          <td>Change the Entity Type of an entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up.</td>
+          <td>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up.</td>
         </tr>
         <tr>
           <td>Normalizations</td>
           <td class="centered"><kbd>↵</kbd></td>
           <td><p>Each <a href="/projects.html#dictionaries">dictionary</a> created for the entity type will appear as an input box. If the box is not empty, the entity is normalized to that value.</p>
-          <p>If you type at least 3 characters a list of recommended dictionary entries will appear. To select a normalization simply choose an entry and press the <kbd>↵</kbd> key or click the ↵ icon.</p></td>
+          <p>If you type at least 3 characters, a list of recommended dictionary entries will appear. To select a normalization simply choose an entry and press the <kbd>↵</kbd> key or click the ↵ icon.</p></td>
         </tr>
       </table>
     </div>
@@ -217,7 +217,7 @@ id: webeditor
         <p>You can always download the most updated version of a dictionary at <i>Settings > Dictionaries</i>.</p>
       </div>
       <div class="one-third-col">
-        {% include message.html message="tagtog triggers automatically asynchronous calls to update dictionaries when a new normalizations is added. You don't need to save the document to update a dictionary." %}
+        {% include message.html message="tagtog triggers automatically asynchronous calls to update dictionaries when a new normalization is added. You don't need to save the document to update a dictionary." %}
       </div>
   <div class="page-subsection">
     <div class="two-third-col">
@@ -235,9 +235,9 @@ id: webeditor
     </div>
     <div class="two-third-col">
       <h4>Annotations from other users</h4>
-      <p>Click on the user list to show all the project members. Click on the one you are interested, the version of thea annotations for that user will be displayed on the top of the document area.</p>
+      <p>Click on the user list to show all the project members. Click on the one you are interested, the version of the annotations for that user will be displayed on the document area.</p>
       <p>Depending on your permissions you are able to edit or not the different versions of the annotations. A locker icon {% include inline-image.html name="editor-member-locker.png" width="15" %} indicates that your permissions on that version are read-only.</p>
-      <p><a href="/collaboration.html">More information on Collaborative annotation</a></p>
+      <p><a href="/collaboration.html">More information on multi-user annotation</a></p>
     </div>
     <div class="one-third-col">
       {% include image.html name="editor-members.PNG" width="150"%}
@@ -260,7 +260,7 @@ id: webeditor
           <td>Replace your annotations with the version displayed in the document area.</td>
         </tr>
       </table>  
-      <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on Collaborative annotation</a></p> 
+      <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p> 
     </div>
     <div class="one-third-col">
       {% include image.html name="editor-copy-annotations.png" width="300" %}
@@ -285,7 +285,7 @@ id: webeditor
       <h4>Confirm a document</h4>
       <p>Usually users confirm the document once the <strong>annotations has been reviewed</strong>. This is used to indicate that this document can be used as training data for AI, or simply that all annotations has been reviewed by a human. There are different <a href="/collaboration.html#annotation-flows">annotation flows</a> you can use for your project.</p>
       <p>To confirm a document click on the button with the icon {% include inline-image.html name="editor-confirm-button.PNG" width="80" %}</p>
-      <p>Once you have confirmed a document, many actions are disabled. You can undo the confirm action by clicking again the button. It is a toggle button.</p>
+      <p>Once you have confirmed a document, many actions are disabled. You can undo the Confirm action by clicking again the button. It is a toggle button.</p>
     </div>
     <div class="one-third-col">
       <div class="message">If you have <code>Machine Learning</code> activated in Settings, each time you confirm a document, a <strong>model will be trained automatically</strong> in the background together with all the previously confirmed documents.</div>
@@ -294,7 +294,7 @@ id: webeditor
       <h4>View / output mode</h4>
       <p>Here you can select which way you want to display or export the annotated document.</p>
       <p>Annotated documents can be exported in various formats: <a href="/ioformats.html#output-formats">output formats</a></p>
-      <p><code>tagtog Web Editor</code> refers to the visualizatoin of the annotated document in the annotation editor.</p>
+      <p><code>tagtog Web Editor</code> refers to the visualization of the annotated document in the annotation editor.</p>
       <br/>
       <h4>Clear annotations</h4>
       <p>Click on the button with the icon {% include inline-image.html name="editor-clean.PNG" width="20" %} to remove all the annotations in the current document. This won't remove the document. </p>
@@ -338,7 +338,7 @@ id: webeditor
       <br/>
       <h4>Entity tally</h4>
       <p>The entity tally displays statistics for each entity type in the current document.</p>
-      <p>On the top of this section you find a summary with the number entities annotated and the entities not normalized. E.g. {% include inline-image.html name="editor-tally-headline.PNG" width="190"%}. Below the header, you can find the stadistics for the annotations in the current document:</p>
+      <p>On the top of this section you find a summary with the number entities annotated and the entities not normalized. E.g. {% include inline-image.html name="editor-tally-headline.PNG" width="190"%}. Below the header, you can find the statistics for the annotations in the current document:</p>
       <br/>
       {% include image.html name="editor-tally-icons.png" width="600" caption="Entities are classified under Entity types. For each type some statistics are displayed: number of entities, manual annotated entities, automatic annotated entities, normalized entities" %}
       <br/>
@@ -356,17 +356,17 @@ id: webeditor
         </tr>
         <tr>
           <td><code>Text</code></td>
-          <td>Group annotations by text. It is very common that in the same text, the same entity is repeated multiple times. Sometimes it is better to understand that only two unique entities have been identified in this text, e.g. gene <code>BRCA2</code> and gene <code>HER2</code> insted of getting the total number of annotations, included repeated ones.</td>
+          <td>Group annotations by text. It is very common that in the same text, the same entity is repeated multiple times. Sometimes it is better to understand that only two unique entities have been identified in this text, e.g. gene <code>BRCA2</code> and gene <code>HER2</code> instead of getting the total number of annotations, included repeated ones.</td>
         </tr>
         <tr>
           <td><code>No group</code></td>
-          <td>Entities are not grouped. They will appear one by one in the same order they appear in text. This is very handy if you need to review each single annotation. <span class="soon">Soon we will enable hotkeys so you can navigate this menu fast and easily</span>.</td>
+          <td>Entities are not grouped. They will appear one by one, in the same order they appear in text. This is very handy if you need to review each single annotation. <span class="soon">Soon we will enable hotkeys so you can navigate this menu fast and easily</span>.</td>
         </tr> 
       </table>
     </div>
     <div class="one-third-col">
       <div class="message">
-        <strong>What is a unique entity?</strong> a group of entity with the same Entity Type and text.
+        <strong>What is a unique entity?</strong> A group of entity with the same Entity Type and text.
       </div>
     </div>
     <div class="two-third-col">
@@ -380,7 +380,7 @@ id: webeditor
     <div class="two-third-col">
       <br/>
       <h4>Relation tally</h4>
-      <p>It keeps the count of the relations defined in the current document. In this section you can <strong>remove</strong> existing relations, clicking on the button {% include inline-image.html name="editor-clean.PNG" width="20" %}</p>
+      <p>It keeps the count of the relations defined in the current document. In this section you can <strong>remove</strong> existing relations, clicking on the button {% include inline-image.html name="editor-clean.PNG" width="20" %}.</p>
       <p>This tally only appears if you have relation types defined at <i>Settings > Relations</i>.</p>
     </div>
     <div class="one-third-col">

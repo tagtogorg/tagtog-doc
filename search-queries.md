@@ -27,13 +27,13 @@ api_project: yourProjectName
 
 <div class="two-third-col">
   <h3>Search by entity type</h3>
-  <p>Retrieve all documents containing at least one entity that belongs to the given entity type. Example: <code>entity:disease</code> , retrieves all documents with at least one entity of the type <code>disease</code>.</p>
+  <p>Retrieve all documents containing at least one entity that belongs to the given entity type. Example: <code>entity:disease</code>, retrieves all documents with at least one entity of the type <code>disease</code>.</p>
   <p>If you add a term, e.g. <code>entity:disease:cancer</code>, you can find all documents containing at least one entity using that term.</p>
   <br/>
   <p>Only by using the entity type id, you can also perform more advanced queries as:</p>
   <ul>
-    <li><code>count</code> e.g. <code>count_e_1:[2 TO *]</code>): retrieves documents with at least 2 annotations of the type <code>e_1</code>.</li>
-    <li><code>norms_count_uniq</code> e.g. <code>norms_count_uniq_e_1:[2 TO *]</code> retrieves documents with at least 2 annotations of the type <code>e_1</code> that are normalized to different unique names (e.g Rezulin and Romozin - same diabetic drug sold under different commercial names - would be normalized to troglitazone, so it would count 1 unique entity normalized, not 2).</li>
+    <li><code>count</code> e.g. <code>count_e_1:[2 TO *]</code>): retrieve documents with at least 2 annotations of the type <code>e_1</code>.</li>
+    <li><code>norms_count_uniq</code> e.g. <code>norms_count_uniq_e_1:[2 TO *]</code> retrieve documents with at least 2 annotations of the type <code>e_1</code> that are normalized to different unique names (e.g Rezulin and Romozin - same diabetic drug sold under different commercial names - would be normalized to troglitazone, so it would count 1 unique entity normalized, not 2).</li>
   </ul>
 </div>
 <div class="one-third-col">
@@ -43,7 +43,7 @@ api_project: yourProjectName
 
 <div class="two-third-col">
   <h3>Search by normalization</h3>
-  <p>Retrieve all documents containing at least one entity that normalizes to the given normalization. Example: <code>entity:genes:HER2</code> , retrieves all documents with at least one entity <code>gene</code> that normalizes to <code>HER2</code>.</p>
+  <p>Retrieve all documents containing at least one entity that normalizes to the given normalization. Example: <code>entity:genes:HER2</code>, retrieves all documents with at least one entity <code>gene</code> that normalizes to <code>HER2</code>.</p>
 </div>
 <div class="one-third-col">
 
@@ -72,7 +72,7 @@ api_project: yourProjectName
 <div class="two-third-col">
   <h3>Fuzzy search</h3>
   <p>Find similar terms (string based search) based on the Levenshtein Distance, or Edit Distance algorithm. Use <code>~</code> at the end of a single word term. Example: <code>roam~</code> will also find terms as <code>foam</code>.</p>
-  <p>You cand fine tune the <strong>similarity level</strong> by adding, at the end, a number between <code>0</code> (less similar) and <code>1</code> (more similar). Example: <code>roam~0.8</code>.</p>
+  <p>You can fine tune the <strong>similarity level</strong> by adding, at the end, a number between <code>0</code> (less similar) and <code>1</code> (more similar). Example: <code>roam~0.8</code>.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='The default similarity level is <code>0.5</code>.' %}
@@ -125,7 +125,7 @@ api_project: yourProjectName
     <tr>
       <td><code>language</code></td>
       <td><code>language:fre</code></td>
-      <td>Retrieves all documents written in the language specified</td>
+      <td>Retrieve all documents written in the language specified</td>
     </tr>
     <tr>
       <td><code>orgs</code></td>

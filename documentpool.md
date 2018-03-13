@@ -8,10 +8,10 @@ id: document_pool
 <div class="two-third-col">
   <p>Your documents are listed in the <strong>pool</strong>. The pool is paginated and you can move to the next or previous page using the navigation menu.</p>
     <h3>Upload text</h3>
-    <p>In order to <strong>upload</strong> a new document, please click on {% include inline-image.html name="add-content-button.png" width="70" %}. Once clicked a modal menu is displayed.</p>
+    <p>In order to <strong>upload</strong> a new document, please click on {% include inline-image.html name="add-content-button.png" width="70" %}. Once clicked, a modal menu is displayed.</p>
     <p>The different formats accepted are described here: <a href="/ioformats.html#input-formats">Input formats</a></p>
     <h3>Remove a document</h3>
-    <p>You can remove a document in the web editor view or in the pool view by clicking on the remove button {% include inline-image.html name="editor-doc-remove.png" %}</p>
+    <p>You can remove a document on the web editor view or in the pool view by clicking on the remove button {% include inline-image.html name="editor-doc-remove.png" %}.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='<strong>What is a document?</strong>&nbsp;Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: <a href="https://github.com/tagtog/tagtog-doc/wiki/Input-File-Formats">input formats</a>'%}
@@ -20,7 +20,8 @@ id: document_pool
 
 <div class="two-third-col">
   <h3>Manually confirmed documents</h3>
-  <p>In the pool, each document has a checkmark, when green, it means the document has been confirmed. Manually confirmed documents are those with <strong>all annotations complete</strong>. Depending on the project it can also mean that the annotations has been reviewed by a human and those can be used as training data.</p>
+  <p>In the pool, each document has a check mark, when green, it means the document is confirmed.</p>
+  <p>Manually confirmed documents are those with <strong>all annotations complete</strong>. Depending on the project it can also mean that the annotations have been reviewed by a human, and they can be used as training data.</p>
   <p>Confirm documents is helpful to keep the progress of the annotation tasks.</p>
 </div>
 

@@ -212,7 +212,7 @@ PUBMED IDS
       <td><code>ids</code></td>
       <td>-</td>
       <td>23596191, 29438695</td>
-      <td>Comma-separated list of ids, all of the same type. The response is limited to the last id imported. </td>
+      <td>Comma-separated list of ids, all the same type. The response is limited to the last id imported. </td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -270,7 +270,7 @@ PUBMED IDS
       <li><a href="#tab-3-pmid">JavaScript</a></li>
     </ul>
     <div class="tab">
-      <p class="code-desc">The example belows imports a list of PMIDs and retrieves the annotations of the last document in <code>ann.json</code> format.</p>
+      <p class="code-desc">The example below imports a list of PMIDs and retrieves the annotations of the last document in <code>ann.json</code> format.</p>
 <div id="tab-1-pmid" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&idType=PMID&ids=23596191,29438695&output=ann.json'
@@ -805,7 +805,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       <td><code>ids</code></td>
       <td>-</td>
       <td class="break-all">aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text</td>
-      <td>Comma-separated list of ids, all of the same type. The response is limited to the last id imported. </td>
+      <td>Comma-separated list of ids, all the same type. The response is limited to the last id imported. </td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -852,7 +852,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       <li><a href="#tab-3-del">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">This example exports a tagtgog document into <code>ann.json</code> format. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
+    <p class="code-desc">This example exports a tagtog document into <code>ann.json</code> format. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
 <div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'

@@ -82,7 +82,7 @@ id: formats
       </tr>
       <tr>
         <td>URL</td>
-        <td>web address pointing to any website. e.g. <code>http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000245.v1.p1</code>. This is an experimental feature and you may find errors rendering the text depending on the HTML being analyzed.</td>
+        <td>Web address pointing to any website. e.g. <code>http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000245.v1.p1</code>. This is an experimental feature and you may find errors rendering the text depending on the HTML being analyzed.</td>
       </tr>
 
     </table>

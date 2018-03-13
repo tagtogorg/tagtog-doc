@@ -19,6 +19,20 @@ cd tagtog-doc
 4. `cd tagtog-doc`
 5. Run jekyll locally `bundle exec jekyll serve`
 
+## Add new pages
+1. Create a markdown `.md` file and add the [frontmatter](https://jekyllrb.com/docs/frontmatter/).
+```html
+---
+layout: page
+title: Multi-user annotation
+sidebar_link: true
+id: collaboration
+---
+```
+Choose an `id` and a `title`. Change the flag `sidebar_link` appropriately if you want a link to appear in the sidebar.
+
+2. If the item is to appear in the side bar, add it to the `_config.yml` var `sidebar_toc`.
+ 
 ## Style guide
 
 Documentation theme is based on [https://fongandrew.github.io/hydeout/](https://fongandrew.github.io/hydeout/)

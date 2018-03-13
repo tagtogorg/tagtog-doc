@@ -1,6 +1,6 @@
 Repo hosting the official documentation for [tagtog](https://www.tagtog.net). 
 
-Take a look at [docs.tagtog.net](https://docs.tagtog.net/)
+Take a look at [docs.tagtog.net](https://docs.tagtog.net/).
 
 # Issues
 Please report any issues here or contact us at <info@tagtog.net>
@@ -20,6 +20,8 @@ cd tagtog-doc
 5. Run jekyll locally `bundle exec jekyll serve`
 
 ## Style guide
+
+Documentation theme is based on [https://fongandrew.github.io/hydeout/](https://fongandrew.github.io/hydeout/)
 
 ### Layout
 The documentation content is displayed in a two columns layout.

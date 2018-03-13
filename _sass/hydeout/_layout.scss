@@ -65,14 +65,27 @@ body {
 #sidebar {
   flex: 0 0 auto;
   padding: $section-spacing;
+  display: inline-block;
 
   .site-title {
     font-family: "Abril Fatface", serif;
     font-weight: normal;
-    font-size: $large-font-size;
+    font-size: 1rem;
     color: rgba(255,255,255,.75);
     margin-top: 0;
     margin-bottom: $heading-spacing;
+
+    h1 {
+      font-size: 0.9rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      color: white;
+    }
+    
+    span {
+      font-size: 0.8rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    }
 
     a {
       color: inherit;
@@ -83,12 +96,36 @@ body {
   }
 
   .logo { 
-    width: 80px;
-    height: 80px;
-    margin-left: -10px;
+    width: 40%;
+    margin: -10px 0 0 0;
+    float: left;
   }
+}
 
-  
+#copyright{
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.site-version{
+  font-size: 0.8rem;
+}
+
+#tagtog-link {
+  background-image: url('/assets/img/tagtog_icon_2leafs.png');
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100px;
+  padding-bottom: 10px;
+}
+
+.sidebar-head-title {
+  display: inline-block;
 }
 
 // Container is flexbox as well -- we want content div to stretch and fill
@@ -192,7 +229,7 @@ body {
 
 .sidebar-group-title {
   font-size: 1.2rem;
-  font-weight: bolder;
+  font-weight: bold;
   margin-top: 1.2rem;
 }
 
@@ -268,7 +305,7 @@ body {
 
   // Bigger title
   .site-title {
-    font-size: 3.25rem;
+    font-size: 1rem;
     color: white;
   }
 
@@ -334,7 +371,7 @@ body {
 
   #sidebar {
     .site-title {
-      font-size: 3.25rem;
+      font-size: 1rem;
 
       a { color: white; }
       .back-arrow { display: none; }
@@ -412,6 +449,7 @@ body {
 
 #sidebar-nav-links {
   flex-flow: column nowrap;
+  clear: both;
 }
 
 #sidebar-icon-links {

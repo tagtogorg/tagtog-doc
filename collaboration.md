@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Annotation in groups
+title: Multi-user annotation
 sidebar_link: true
 id: collaboration
 ---
 <div class="two-third-col">
-  <p>tagtog is a is a multi-user tool. Collaborate with other users to annotate faster and improve the quality of your annotations.</p>
-  <p>It supports different roles as annotator or admin. Each user can annotate their own copy of the text to annotate, facilitating the review process and measurement of inter-annotator agreement.</p>
+  <p>tagtog is a multi-user tool. Collaborate with other users to annotate faster and improve the quality of your annotations.</p>
+  <p>It supports different roles as annotator or admin. Each user can annotate their own copy of the text, facilitating the review process and measurement of inter-annotator agreement.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message="Both, Cloud and On-premises versions allow multi-user annotation." %}
@@ -95,7 +95,7 @@ id: collaboration
   <p>There are different ways you can organise your annotation tasks. These are the most common:</p>
   <br/>
   <h4>Each annotator annotates each document</h4>
-  <p>This flow is ideal for those projects requiring high-quality annotations and those complex annotation tasks (specific skills required, divergent interpretations, etc.).</p>
+  <p>This flow is ideal for those projects requiring high-quality annotations and complex annotation tasks (specific skills required, divergent interpretations, etc.).</p>
   <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. Once you create a project you become its <code>admin</code>. Go to <i>Settings > Members</i> to add members to your project. Currently, each project member is added as <code>supercurator</code>.</p>
 </div>
 <div class="one-third-col">
@@ -105,7 +105,7 @@ id: collaboration
   <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here the admin writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='You can create the guidelines at <i>Settings - Guidelines</i>' %}
+  {% include message.html message='You can create the guidelines at <i>Settings > Guidelines</i>' %}
 </div>
 
 <div class="two-third-col">
@@ -130,7 +130,7 @@ id: collaboration
 <div class="two-third-col">
   <br/>
   <h4>Documents to annotate are distributed among annotators</h4>
-  <p>Make this choice if the annotation task is simple and time is a constraint. If you assign each document to only one annotator, the quality of the annotations depends on the user assigned. </p>
+  <p>Make this choice if the annotation task is simple. If you assign each document to only one annotator, the quality of the annotations depends on the user assigned. </p>
   <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. Once you create a project you become its <code>admin</code>. Go to <i>Settings > Members</i> to add members to your project. Currently, each project member is added as <code>supercurator</code> role.</p>
 </div>
 <div class="one-third-col">
@@ -162,14 +162,67 @@ id: collaboration
 </div>
 <div class="one-third-col">
   
-  {% include message.html message='You can always assign a document to more than one user. Check out <a href="#each-annotator-annotate-each-document">this annotation flow</a> for details.'%}
+  {% include message.html message='You can always assign a document to more than one user. Check out <a href="#each-annotator-annotates-each-document">this annotation flow</a> for details.'%}
 </div>
 
 <div class="two-third-col">
   <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. Admin reviews the annotated documents and if ready, import the user annotations to the <code>master</code> version (final version). To indicate the annotations for this document are reviewed, admin clicks the Confirm button in the <code>master</code> version.</p> 
 </div>
 <div class="one-third-col">
-  {% include message.html message="If the Review step is not required, the annotator can annotate directly on the <code>master</code> version. When ready, the user marks the annotations of each document as completed by clicking the Confirm button." %}
+  {% include message.html message='If the Review step is not required, the annotator can annotate directly on the <code>master</code> version. When ready, the user marks the annotations of each document as completed by clicking the Confirm button. Check <a href="/collaboration.html#documents-to-annotate-are-distributed-among-annotators-no-review">this flow</a>.' %}
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="two-third-col">
+  <br/>
+  <h4>Documents to annotate are distributed among annotators. No review.</h4>
+  <p>Make this choice if time is a constraint and you trust the annotations to be produced. This is the simplest flow and there is no review step.</p>
+  <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. Once you create a project you become its <code>admin</code>. Go to <i>Settings > Members</i> to add members to your project. Currently, each project member is added as <code>supercurator</code> role.</p>
+</div>
+<div class="one-third-col">
+</div>
+
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here the admin writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message='You can create the guidelines at <i>Settings - Guidelines</i>' %}
+</div>
+
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Any project member can import the documents to be annotate by the group. Any project member can see these documents.</p>
+</div>
+<div class="one-third-col">
+</div>
+
+<div class="two-third-col">
+<br>
+  <p class="numbered-item"><span class="number-4">4</span><strong>Assign each document to one annotator</strong>. To identify a document you use the document id. </p>
+</div>
+<div class="one-third-col">
+  {% include message.html message="Currently you need to distribute documents among users manually. Coming soon a fully automated mechanism will dispatch the documents among users automatically." %}
+</div>
+
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Each user annotates only the <code>master</code> version of the assigned documents. Once a document is annotated, user marks the annotations as completed by clicking the Confirm button. <code>admin</code> can check the progress in the document pool.</p>
+</div>
+<div class="one-third-col">
+</div>
+
 
 

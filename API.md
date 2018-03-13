@@ -1,7 +1,7 @@
 ---
 layout: page
 version: 1.0
-title: API doc
+title: API docs
 sidebar_link: true
 id: api
 
@@ -13,7 +13,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 ---
 <div class="two-third-col">
   <br/>
-  <p>Thanks for choosing the Documents API to build NLP solutions into your app or website. Getting started with a new API can be challenging, so we have created a step-by-step guide that walks you through how to make your first API calls and more.</p>
+  <p>Thanks for choosing the <strong>Documents API</strong> to build NLP solutions into your app or website. Getting started with a new API can be challenging, so we have created a step-by-step guide that walks you through how to make your first API calls and more.</p>
 </div>
 <div class="one-third-col">
   <div class="message">
@@ -99,17 +99,18 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has multiple team members</p></td>
+          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href=".">More information</a></td>
+      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
 <div class="one-third-col">
+  {% include message.html message='Imported documents are visible in the <a href="/documentpool.html">document pool</a>'%}
 </div>
 <div class="two-third-col">
   
@@ -124,7 +125,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     <p class="code-desc">The example below imports plain text and retrieve the automatic annotations in <code>ann.json</code> format.</p>
 <div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}: {{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
 ```
 </div>
 <div id="tab-2-plain-text" class="tab-content" markdown="1">
@@ -205,7 +206,7 @@ PUBMED IDS
       <td><code>idType</code></td>
       <td><code>tagtogID</code></td>
       <td><code>PMID</code></td>
-      <td>Type of Id. <a href=".">List of idTypes</a></td>
+      <td>Type of Id. <a href="/API.html#idtype-parameter">List of idTypes</a></td>
     </tr>
     <tr>
       <td><code>ids</code></td>
@@ -245,13 +246,13 @@ PUBMED IDS
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has multiple team members</p></td>
+          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href=".">More information</a></td>
+      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -272,7 +273,7 @@ PUBMED IDS
       <p class="code-desc">The example belows imports a list of PMIDs and retrieves the annotations of the last document in <code>ann.json</code> format.</p>
 <div id="tab-1-pmid" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}: {{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&idType=PMID&ids=23596191,29438695&output=ann.json'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&idType=PMID&ids=23596191,29438695&output=ann.json'
 ```
 </div>
 <div id="tab-2-pmid" class="tab-content" markdown="1">
@@ -396,13 +397,13 @@ URLS
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has multiple team members</p></td>
+          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href=".">More information</a></td>
+      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -421,7 +422,7 @@ URLS
     <p class="code-desc">The example below imports a URL and retrieves the web link for the annotated document. That link redirects to the annotated document at the tagtog app.</p>
 <div id="tab-1-url" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}: {{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl'
 ```
 </div>
 <div id="tab-2-url" class="tab-content" markdown="1">
@@ -481,9 +482,9 @@ FILES
     </tr>
     <tr>
       <td><code>files</code></td>
-      <td><code>-</code></td>
+      <td>-</td>
       <td>text.txt, text2.txt</td>
-      <td>List of files to annotate</td>
+      <td>List of files to annotate. <a href="/ioformats.html#files">Supported input formats</a></td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -517,13 +518,13 @@ FILES
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has multiple team members</p></td>
+          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href=".">More information</a></td>
+      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -620,8 +621,8 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 <div class="two-third-col">
   <h2>Search documents in a project <code>GET</code></h2>
-  <p>You can search using the documents API. Search across your pool folder and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
-  <p>Learn how to <strong>build search queries</strong> <a href=".">here</a>.</p>
+  <p>You can <a href="/search.html">search</a> using the documents API. Search across your pool folder and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
+  <p>Learn how to <strong>build search queries</strong> <a href="/search-queries.html">here</a>.</p>
   <p><strong>Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -634,7 +635,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td><code>search</code></td>
       <td>-</td>
       <td>entity:GGP:P02649</td>
-      <td>Search query. Learn how to build queries <a href=".">here</a>.</td>
+      <td><strong>Search query</strong>. Learn how to build queries <a href="/search-queries.html">here</a>.</td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -683,18 +684,18 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-1-plain-text">cURL</a></li>
-      <li><a href="#tab-2-plain-text">Python</a></li>
-      <li><a href="#tab-3-plain-text">JavaScript</a></li>
+      <li class="current"><a href="#tab-1-search">cURL</a></li>
+      <li><a href="#tab-2-search">Python</a></li>
+      <li><a href="#tab-3-search">JavaScript</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example searches across your document pool to find documents that have at least one entity normalized to the gene <a href="https://www.uniprot.org/uniprot/P02649">P02649</a>.</p>
-<div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
+<div id="tab-1-search" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}: {{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649'
 ```
 </div>
-<div id="tab-2-plain-text" class="tab-content" markdown="1">
+<div id="tab-2-search" class="tab-content" markdown="1">
 ```python
 import requests
 
@@ -707,7 +708,7 @@ print(response.text)
 ```
 <p style="float:right">{% include github-link.html target="snippets/api_python_search.py" %}</p>
 </div>
-<div id="tab-3-plain-text" class="tab-content" markdown="1">
+<div id="tab-3-search" class="tab-content" markdown="1">
 ```javascript
 fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649', {
   method: 'GET',
@@ -775,12 +776,9 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
 </div>
 
 
-
-
-
 <div class="two-third-col">
   <h2>Get existing documents <code>GET</code></h2>
-  <p>You can use the API to export documents already imported. You need the Id of the document before you get it. If you don't have this Id, you can find it using the <a href=".">search</a> feature. You can export only 1 document within each request.</p>
+  <p>You can use the API to export documents already imported. You need the Id of the document before you get it. If you don't have this Id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
 </div>
 <div class="two-third-col">
   <p><strong>Parameters</strong></p>
@@ -801,7 +799,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       <td><code>idType</code></td>
       <td><code>tagtogID</code></td>
       <td><code>tagtogID</code></td>
-      <td>Type of Id. <a href=".">List of idTypes</a></td>
+      <td>Type of Id. <a href="/API.html#idtype-parameter">List of idTypes</a></td>
     </tr>
     <tr>
       <td><code>ids</code></td>
@@ -836,7 +834,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has multiple team members</p></td>
+          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
     </tr>
   </table>
   
@@ -857,7 +855,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
     <p class="code-desc">This example exports a tagtgog document into <code>ann.json</code> format. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
 <div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}: {{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
 ```
 </div>
 <div id="tab-2-del" class="tab-content" markdown="1">
@@ -920,7 +918,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 <div class="two-third-col">
   <h2>Delete documents <code>DELETE</code></h2>
-  <p>You can delete documents in your project using the API. Fine-tune the <code>search</code> parameter to delete only those documents returned by the search query.</p>
+  <p>You can delete documents in your project using the API. Fine-tune the <code>search</code> parameter to delete only those documents returned by the <a href="/search-queries.html">search query</a>.</p>
   <p>This request returns the number of documents deleted.</p>
 </div>
 <div class="two-third-col">
@@ -968,7 +966,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     <p class="code-desc">This example deletes all documents that contain at least one entity of type <code>gene</code>.</p>
 <div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}: {{ page.api_pwd }} -X DELETE '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:gene'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:gene'
 ```
 </div>
 <div id="tab-2-del" class="tab-content" markdown="1">
@@ -1058,11 +1056,11 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </tr>
   <tr>
     <td><code>ann.json</code></td>
-    <td>Annotations part of the <a href=".">anndoc format documentation</a>.</td>
+    <td>Annotations part of the <a href="/ann.doc.html#ann-json">anndoc format documentation</a>.</td>
   </tr>
   <tr>
     <td><code>html</code> <code>xml</code></td>
-    <td>Content part of the <a href=".">anndoc format documentation</a>.</td>
+    <td>Content part of the <a href="/ann.doc.html#plain-html">anndoc format documentation</a>.</td>
   </tr>
   <tr>
     <td><code>text</code></td>
@@ -1074,13 +1072,13 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </tr>
   <tr>
     <td><code>docjson</code></td>
-    <td><a href=".">Documentation</a></td>
+    <td>Format used internally by some users</td>
   </tr>
 </table>
 
 </div>
 <div class="one-third-col">
-{% include message.html message="<strong>Note</strong>: all output formats are returned in their latest format versions. The format versions cannot be chosen." %}
+  {% include message.html message="<strong>Note</strong>: all output formats are returned in their latest format versions. The format versions cannot be chosen." %}
 </div>
 
 
@@ -1095,15 +1093,23 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </tr>
   <tr>
     <td><code>tagtogID</code></td>
-    <td>This is the default value. tagtog-internal document id or docid. Its use implicitly means that the document already exists in the associated project.</td>
+    <td>This is the default value. tagtog-internal document id or docid (e.g. <code>ai1AzDk4wQzbL.BKzlrA_CrK8gJi-text</code>). Its use implicitly means that the document already exists in the associated project.</td>
   </tr>
   <tr>
     <td><code>PMID</code></td>
-    <td>PubMed ID.</td>
+    <td><a href="https://en.wikipedia.org/wiki/PubMed#PubMed_identifier">PubMed ID</a>.</td>
   </tr>
   <tr>
     <td><code>PMCID</code></td>
-    <td>PubMed Central ID.</td>
+    <td><a href="https://en.wikipedia.org/wiki/PubMed#PubMed_identifier">PubMed Central ID</a>.</td>
+  </tr>
+  <tr class="soon">
+    <td><code>WikipediaID</code></td>
+    <td>Wikipedia ID. Cooming soon.</td>
+  </tr>
+  <tr class="soon">
+    <td><code>TweetID</code></td>
+    <td><a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object">Tweet ID</a>. e.g: <a href="https://twitter.com/tagtog_net/status/931029434814959616">931029434814959616</a>. Coming soon</td>
   </tr>
 </table>
 <br/>

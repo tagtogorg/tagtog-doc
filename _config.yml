@@ -6,12 +6,9 @@ highlighter:      rouge
 title:            tagtog
 tagline:          'A text annotation tool to train AI'
 description:      'Official documentation for <a href="https://tagtog.net">tagtog</a>'
+app_url:          https://www.tagtog.net
 url:              https://docs.tagtog.net
-baseurl:          # the optional subpath of your site, e.g. "/blog"
-                  # NB: This applies to all pages in your Jekyll site.
-                  # If you want to move just the blog index pages but keep
-                  # other pages at root, see the paginate_path and
-                  # sidebar_blog_link below.
+baseurl:          
 sidebar_toc:
   - name: Web Application
     pages:
@@ -24,6 +21,7 @@ sidebar_toc:
       - api
   - name: Concept Search
     pages:
+      - search
       - search_queries
   - name: Formats
     pages:

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The document pool
+title: Document pool
 sidebar_link: true
 id: document_pool
 ---

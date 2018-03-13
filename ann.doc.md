@@ -41,23 +41,23 @@ id: anndoc
       <th>Name</th>
     </tr>
     <tr>
-      <td><code>m_</code></td>
+      <td class="centered"><code>m_</code></td>
       <td>Meta (a.k.a. Document Label)</td>
     </tr>
     <tr>
-      <td><code>e_</code></td>
+      <td class="centered"><code>e_</code></td>
       <td>Entity type (a.k.a Entity class)</td>
     </tr>
     <tr>
-      <td><code>r_</code></td>
+      <td class="centered"><code>r_</code></td>
       <td>Relation</td>
     </tr>
     <tr>
-      <td><code>f_</code></td>
+      <td class="centered"><code>f_</code></td>
       <td>Field (a.k.a. Entity Label)</td>
     </tr>
     <tr>
-      <td><code>n_</code></td>
+      <td class="centered"><code>n_</code></td>
       <td>Normalization</td>
     </tr>
   </table>

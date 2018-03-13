@@ -4,15 +4,17 @@
 {% endcomment %}
 {% assign pages_list = site.pages %}
 {% for group in site.sidebar_toc %}
-  <span class="sidebar-group-title">{{ group.name }}</span>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">{{ group.name }}</div>
   {% for page_id in group.pages %}
     {% for node in pages_list %}
       {% if node.title != null and node.id == page_id and node.sidebar_link %}
-        <a class="page-link {% if page.url == node.url %} active{% endif %}"
-          href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+        <div><a class="page-link {% if page.url == node.url %} active{% endif %}"
+          href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></div>
       {% endif %}
     {% endfor %}
   {% endfor %}
+  </div>
 {% endfor %}
 
 

@@ -211,7 +211,7 @@ PUBMED IDS
     <tr>
       <td><code>ids</code></td>
       <td>-</td>
-      <td>23596191,29438695</td>
+      <td>23596191, 29438695</td>
       <td>Comma-separated list of ids, all of the same type. The response is limited to the last id imported. </td>
     </tr>
     <tr>
@@ -362,7 +362,7 @@ URLS
     <tr>
       <td><code>url</code></td>
       <td><code>-</code></td>
-      <td><a href="https://en.wikipedia.org/wiki/Autonomous_cruise_control_system">https://en.wikipedia.org/wiki/Autonomous_cruise_control_system</a></td>
+      <td class="break-all"><a href="https://en.wikipedia.org/wiki/Autonomous_cruise_control_system">https://en.wikipedia.org/wiki/Autonomous_cruise_control_system</a></td>
       <td>URL no annotate</td>
     </tr>
     <tr>
@@ -804,7 +804,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
     <tr>
       <td><code>ids</code></td>
       <td>-</td>
-      <td>aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text</td>
+      <td class="break-all">aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text</td>
       <td>Comma-separated list of ids, all of the same type. The response is limited to the last id imported. </td>
     </tr>
     <tr>
@@ -1010,7 +1010,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 <div class="two-third-col">
 <h2><code>output</code> parameter</h2>
 <p>These are the different types of outputs supported by the API.</p>
-<table style="width:100%;">
+<table style="width:100%;" class="table-with-code">
   <tr>
     <th>Name</th>
     <th>Description</th>

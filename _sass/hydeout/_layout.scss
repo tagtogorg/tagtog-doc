@@ -62,6 +62,7 @@ body {
   font-weight: lighter;
 }
 
+
 #sidebar {
   flex: 0 0 auto;
   padding: $section-spacing;
@@ -224,7 +225,8 @@ body {
 .code-desc {
   font-size: 0.75rem;
   margin: 20px 0 0 20px;
-  width: 600px;
+  width: 100%;
+  padding: 0px 30px 0 0;
 }
 
 .sidebar-group-title {
@@ -240,6 +242,10 @@ body {
 .clean-table {
   border: none !important;
   font-size: 100%;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 .clean-table tbody tr td {
@@ -270,11 +276,11 @@ body {
 
 // Hide secondary nav content in sidebar
 // Hide lead paragraph in sidebar
-#sidebar {
+/*#sidebar {
   header ~ *, header ~ nav, p.lead {
     display: none;
   }
-}
+}*/
 
 // Make header elements blend into sidebar / background
 .container > header {
@@ -328,10 +334,47 @@ body {
 }
 
 /* -----------------------------------------------------------
-  Medium Desktop screens
+  Mobile screens only
 ----------------------------------------------------------- */
 
-@media (min-width: $large-breakpoint) and (max-width: $medium-breakpoint) {
+@media (max-width: $large-breakpoint) {
+  #sidebar nav {
+    text-align: center;
+  }
+
+  #copyright {
+    display: none;
+  }
+
+  .sidebar-group {
+    display: inline-block !important;
+    vertical-align: top;
+    margin-right: 20px;
+    
+  }
+
+  .home #sidebar header ~ nav, #sidebar header ~ nav {
+    display: block;
+  }
+
+  #sidebar {
+    padding: 1rem;
+  }
+
+  #sidebar .logo { 
+    float: left;
+
+      width: 15%;
+      float: none;
+  }
+
+}
+
+/* -----------------------------------------------------------
+  Medium Desktop down to Mobile screens
+----------------------------------------------------------- */
+
+@media (max-width: $medium-breakpoint) {
   .two-third-col {
     width: 100%;
   }
@@ -343,6 +386,12 @@ body {
   .half-col {
     width: 100%;
   }
+
+  .table-with-code {
+    table-layout: fixed;
+  }
+  
+
 }
 
 
@@ -482,6 +531,8 @@ body {
   Set $sidebar-stick variable to affix sidebar contents to the
   bottom of the sidebar in tablets and up.
 ----------------------------------------------------------- */
+/*
+
 
 @if $sidebar-sticky {
   @media (min-width: $large-breakpoint) {
@@ -498,7 +549,7 @@ body {
   Flip the orientation of the page by placing the `#sidebar`
   on the right.
 ----------------------------------------------------------- */
-
+/*
 @if $layout-reverse {
   @media (min-width: $large-breakpoint) {
     .container {
@@ -506,3 +557,5 @@ body {
     }
   }
 }
+
+*/

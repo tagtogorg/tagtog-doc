@@ -49,13 +49,16 @@ Template `message.html`:
 Use it to display images. Optionally you can set the `width` and the `caption`.
 
 Template `image.html`:
-{% include image.html name="editor-import.png" caption="Upload box where you can select how to import text" %}
 
+```html
+{% include image.html name="editor-import.png" caption="Upload box where you can select how to import text" %}
+```
 
 #### Inline images
 Use it to display an image within the text. You can optionally set the `width` to adjust the size of the image.
 
 Template `inline-image.html`:
+
 ```html
 {% include inline-image.html name="image-inline.png" width="70" %}
 ```

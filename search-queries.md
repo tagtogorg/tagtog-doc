@@ -96,7 +96,7 @@ api_project: yourProjectName
     <li><code>entity:GGP AND entity:Mutation</code> search for documents that contain <code>GGP</code> entities and <code>Mutation</code> entities.</li>
     <li><code>"type 1 diabetes" OR insulin</code> search for documents that contain "type 1 diabetes" or "insulin".</li>
     <li><code>"type 1 diabetes" NOT insulin</code> search for documents that contain "type 1 diabetes" but not "insulin". This operator cannot be used with just one term.</li>
-    <li><code>-diabetes</code> search for documents that don't contain the term "diabetes". Only string based search.</li>
+    <li><code>-entity:GGP</code> search for documents that don't contain mentions of genes, i.e. <code>GGP</code> entities.</li>
   </ul>
   
 </div>

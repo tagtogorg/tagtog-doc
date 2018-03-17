@@ -89,5 +89,12 @@ To mention features that will be ready soon or have been temporarily disabled, u
 </div>
 ```
 
+### Mix Markdown and HTML
+
+```html
+<div markdown="1">
+  Your markdown
+</div>
+```
 
 

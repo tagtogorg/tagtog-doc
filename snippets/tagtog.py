@@ -25,7 +25,7 @@ __doc__ = \
 
     Version: {}
     Author: {}
-    API documentation: https://github.com/tagtog/tagtog-doc/wiki/API-documents-v0.1
+    API documentation: http://docs.tagtog.net/API.html
     """.format(__version__, __author__)
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -45,17 +45,17 @@ def parse_arguments(argv=[]):
     # -----------------------------------------------------------------------------------------------------------------
 
     def add_common_arguments(parser, default_output):
-        parser.add_argument("--domain", default=DEFAULT_DOMAIN, help="tagtog domain, e.g. http://localhost:80/. You can set the default with the environment variable `TAGTOG_DOMAIN`")
-        parser.add_argument("--entrypoint", default="api/0.1/documents")
+        parser.add_argument("--domain", "-d", default=DEFAULT_DOMAIN, help="tagtog domain, e.g. http://localhost:80/. You can set the default with the environment variable `TAGTOG_DOMAIN`")
+        parser.add_argument("--entrypoint", default="-api/documents/v1")
 
-        parser.add_argument("--user", required=True, help="tagtog username making the request")
-        parser.add_argument('--password', default=None, help="User's password -- if not given, the password is prompted")
-        parser.add_argument("--owner", help="Project owner in tagtog -- defaults to the user")
-        parser.add_argument("--project", required=True, help="Project name in tagtog to operate on")
-        parser.add_argument("--member", required=False, help="(Optional) Project member name to operate documents on")
+        parser.add_argument("--user", "-u", required=True, help="tagtog username making the request")
+        parser.add_argument('--password', "-w", default=None, help="User's password -- if not given, the password is prompted")
+        parser.add_argument("--owner", "-o", help="Project owner in tagtog -- defaults to the user")
+        parser.add_argument("--project", "-p", required=True, help="Project name in tagtog to operate on")
+        parser.add_argument("--member", "-m", required=False, help="(Optional) Project member name to operate documents on")
         parser.add_argument("--verify_ssl", type=str2bool, default=True, help="(Optional) Choose to verify or not the ssl certificate of the endpoint domain when making http requests; true by default")
 
-        parser.add_argument("--output", default=default_output, help="Output type of tagtog's response")
+        parser.add_argument("--output", "-t", default=default_output, help="Output type of tagtog's response")
 
         return parser
 
@@ -66,8 +66,8 @@ def parse_arguments(argv=[]):
     upload_parser.set_defaults(func=print_upload)
 
     upload_parser.add_argument("paths", nargs="+", help="paths of files or folders containing (recursively) the files to upload or otherwise the ids in the external repository (see idType) of documents to upload")
-    upload_parser.add_argument("--extension", default="json", help="extension of files to upload when recursively reading files from a folder, e.g. json or txt")
-    upload_parser.add_argument("--idType", choices=["PMID", "PMCID"], help="(Optional) id type of external repositories to use for document upload. See tagtog API")
+    upload_parser.add_argument("--extension", "-e", default="json", help="extension of files to upload when recursively reading files from a folder, e.g. json or txt")
+    upload_parser.add_argument("--idType", "-i", choices=["PMID", "PMCID"], help="(Optional) id type of external repositories to use for document upload. See tagtog API")
 
     # -----------------------------------------------------------------------------------------------------------------
 

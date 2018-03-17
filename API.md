@@ -1118,8 +1118,89 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 </div>
 <div class="two-third-col">
-  <h2>Scripts</h2>
-  <p>Use this {% include inline-image.html name="icon_leafs.png" width="18" %}<a href="https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python script</strong></a> to do many common operations in tagtog using the API: upload (also folders), search, and download documents!</p>
+  <h2>Clients</h2>
+  <h3>Python tagtog script</h3>
+  <p>If you want to use an <strong>already built API client</strong>. You have the {% include inline-image.html name="icon_leafs.png" width="18" %}<a href="https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python API script</strong></a> to do many common operations in tagtog using the API: upload (also folders), search, and download documents!</p>
+  <div markdown="1">
+```shell
+usage: tagtog [-h] {upload,search,download} ...
+
+tagtog official script to Upload & Search & Download documents. Version: 0.1.2
+Author: tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks) API
+documentation: http://docs.tagtog.net/API.html
+
+positional arguments:
+  {upload,search,download}
+    upload              Upload files to tagtog
+    search              Search documents by query, e.g. `*` (all)
+    download            Download documents by search query, e.g.
+                        `updated:[NOW-1DAY to NOW]
+
+optional arguments:
+  -h, --help            show this help message and exit
+```
+  </div>
 </div>
 <div class="one-third-col">
+</div>
+<div class="two-third-col">
+  <h4>Search</h4>
+  <p>It uses the API to search documents in your project. Parameters can be consulted <a href="#search-documents-in-a-project-get">here</a> or using <code>tagtog.py search --help</code>. You can learn how to build search queries <a href="/search-queries.html">here</a></p> 
+  <p>The example below retrieves all the documents from your project.</p>
+  <div markdown="1">
+```shell
+python tagtog.py search '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }}
+```
+  </div>
+</div>
+<div class="one-third-col">
+  {% include message.html message="If you use the on-premises version, you can set the domain using the <code>domain</code> parameter." %}
+</div>
+<div class="two-third-col">
+  <h4>Upload</h4>
+  <p>It uses the API to upload documents to your project.</p>
+  <h5>Upload PMIDs</h5>
+  <p>Parameters can be consulted <a href="#pubmed-abstracts-post-get">here</a> or using <code>tagtog.py upload --help</code>.</p> 
+  <p>The example below upload the abstract from two PMIDs to your project. Remember to indicate which is the <a href="#idtype-parameter">type of id</a> (<code>--idType</code> or <code>-i</code>) for the document.</p>
+  <div markdown="1">
+```shell
+python tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} -i PMID
+```
+  </div>
+
+  <h5>Upload files</h5>
+  <p>Parameters can be consulted using <code>tagtog.py upload --help</code>. You must include the parameter <code>--extension</code> or <code>-e</code> to indicate the extension of the files to upload (e.g. <code>txt</code>, <code>pdf</code>, etc.). These are the  <a href="/ioformats.html#input-formats">input files supported</a></p> 
+  <p>The example below upload the PDF documents of a folder, to your project.</p>
+  <div markdown="1">
+```shell
+python tagtog.py upload ./myfolder -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} --extension pdf
+```
+  </div>
+
+  <p>The example below upload a single file to your project.</p>
+  <div markdown="1">
+```shell
+python tagtog.py upload ./myfile.txt -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }}
+```
+  </div>
+</div>
+<div class="one-third-col">
+ 
+</div>
+<div class="two-third-col">
+  <h4>Download</h4>
+  <p>It uses the API to download documents from your project. In one call to the script you can <strong>download all documents matching a search query</strong>.</p>
+  <p>Parameters can be consulted using <code>tagtog.py download --help</code>.</p>
+  <p>You can indicate the folder where you can store the downloaded documents using the parameter <code>--output_folder</code> (it defaults to the folder where the script is running).</p>
+  <p>Use the parameter <code>--output</code> or <code>-t</code> to indicate the <a href="/ioformats.html#output-formats">output type</a> for the downloaded files.</p>
+  <p>You can learn how to build search queries <a href="/search-queries.html">here</a></p>
+  <p>The example below download the annotations (<code>ann.json</code>) for all the documents in a project.</p>
+   <div markdown="1">
+```shell
+python tagtog.py download '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} --output_folder ./myDownloadFolder -t ann.json
+```
+  </div>
+</div>
+<div class="one-third-col">
+ {% include message.html message='The search query <code>*</code> finds all documents in a project.' %}
 </div>

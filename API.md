@@ -1118,7 +1118,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 </div>
 <div class="two-third-col">
-  <h2>Clients</h2>
+  <h2>API Clients</h2>
   <h3>Python tagtog script</h3>
   <p>If you want to use an <strong>already built API client</strong>. You have the {% include inline-image.html name="icon_leafs.png" width="18" %}<a href="https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python API script</strong></a> to do many common operations in tagtog using the API: upload (also folders), search, and download documents!</p>
   <div markdown="1">

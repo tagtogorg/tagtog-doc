@@ -121,6 +121,6 @@ To mention features that will be ready soon or have been temporarily disabled, u
 
 ### Emojis
 
-Use https://gist.github.com/rxaviers/7360908 , e.g. {{`:bookmark_tabs:`}} :bookmark_tabs:
+Use https://gist.github.com/rxaviers/7360908 , e.g. `:bookmark_tabs:` :bookmark_tabs:
 
 

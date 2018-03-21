@@ -59,6 +59,28 @@ Template `message.html`:
 {% include message.html message="your tips and tricks"%}
 ```
 
+### Lists
+
+#### Ordered lists
+
+Combine CSS classes `numbered-item` and `number-x`, where `x` is the order in the list. Currently the style is limited to the first 6 items. You decide the values for the ordered list, it can be numbers (1,2,3 ...), letters (A, B, C ...), etc. You can choose the order (e.g. 3, 2, 1).
+
+```html
+<p class="numbered-item"><span class="number-1">1</span>Description 1.</p>
+<p class="numbered-item"><span class="number-2">2</span>Description 2.</p>
+<p class="numbered-item"><span class="number-3">3</span>Description 3.</p>
+```
+
+#### Unordered lists
+
+Combine CSS classes `list-item` and `list-item-x`, where `x` is the order in the list. Currently the style is limited to the first 6 items.
+
+```html
+<p class="list-item"><span class="list-item-1"></span>Description.</p>
+<p class="list-item"><span class="list-item-2"></span>Description.</p>
+<p class="list-item"><span class="list-item-3"></span>Description.</p>
+```
+
 ### Images
 
 #### Regular images
@@ -96,5 +118,9 @@ To mention features that will be ready soon or have been temporarily disabled, u
   Your markdown
 </div>
 ```
+
+### Emojis
+
+Use https://gist.github.com/rxaviers/7360908 , e.g. {{`:bookmark_tabs:`}} :bookmark_tabs:
 
 

@@ -22,6 +22,9 @@ sidebar_toc:
   - name: API
     pages:
       - api
+  - name: AI
+    pages:
+      - ml
   - name: Concept Search
     pages:
       - search
@@ -44,6 +47,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+  - jemoji
 
 # Custom vars
 version:            1.0.0

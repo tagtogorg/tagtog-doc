@@ -25,11 +25,16 @@
 @mixin number-x {
   $list-colors: #ece919, #e7901e, #e74d1e, #b31884, #a234d5, #5b22f7, #0769b9;
   $item-list: null;
+  $item-list-regular: null;
   @for $i from 1 through (length($list-colors) - 1) {
     .number-#{$i} {
       background: linear-gradient(180deg, nth($list-colors, $i) 0%, nth($list-colors, $i+1) 70%);
     }
+    .list-item-#{$i} {
+      background: linear-gradient(180deg, nth($list-colors, $i) 0%, nth($list-colors, $i+1) 70%);
+    }
    $item-list: append($item-list, unquote(".number-#{$i}"), comma);
+   $item-list-regular: append($item-list-regular, unquote(".list-item-#{$i}"), comma);
   }
   #{$item-list} {
     font-size: 1.5rem;
@@ -43,6 +48,20 @@
     margin-bottom: 10px;
     margin-top: -2px;
   }
+
+  #{$item-list-regular} {
+    font-size: 1.5rem;
+    border-radius: 50%;
+    color: white;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+
 }
 
 @include number-x;
@@ -189,7 +208,7 @@ body {
   margin: 0;
 }
 
-.numbered-item {
+.numbered-item, .list-item {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -276,6 +295,10 @@ body {
   font-size: 0.8rem;
 }
 
+.emoji {
+  display: inline-block;
+  margin: 0;
+}
 
 /* -----------------------------------------------------------
   Mobile view

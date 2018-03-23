@@ -211,6 +211,11 @@ body {
 .numbered-item, .list-item {
   margin-top: 20px;
   margin-bottom: 20px;
+  clear: both;
+}
+
+.list-item {
+  margin-left: 15px;
 }
 
 .drop-number {

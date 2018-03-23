@@ -30,12 +30,10 @@ id: dictionaries
 
 <div class="two-third-col">
   <p>The syntax is simple:</p>
-  <ul>
-    <li>Each entity is defined in a new line. All columns are separated by tabs.</li>
-    <li>The first column is the entity's <strong>unique id</strong>. It can be an internal id (e.g. your database) or recognized (using known sources as Wikipedia)</li>
-    <li>After the id, a list of names follows. These are considered different names (synonyms) of the entity.</li>
-    <li>You can define <strong>recommended names</strong> and, optionally, <strong>alternative names</strong>. At least one recommended name must be given. Alternative names are those placed after the special delimiter <code>@@@</code> (also separated within tabs). Use them when you know that some names appear less frequently than the standard ones. With this information, the system can handle synonyms better.</li>
-  </ul>
+  <p class="list-item"><span class="list-item-1"></span>Each entity is defined in a new line. All columns are separated by tabs.</p>
+  <p class="list-item"><span class="list-item-2"></span>The first column is the entity's <strong>unique id</strong>. It can be an internal id (e.g. your database) or recognized (using known sources as Wikipedia).</p>
+  <p class="list-item"><span class="list-item-3"></span>After the id, a list of names follows. These are considered different names (synonyms) of the entity.</p>
+  <p class="list-item"><span class="list-item-4"></span>You can define <strong>recommended names</strong> and, optionally, <strong>alternative names</strong>. At least one recommended name must be given. Alternative names are those placed after the special delimiter <code>@@@</code> (also separated within tabs). Use them when you know that some names appear less frequently than the standard ones. With this information, the system can handle synonyms better.</p>
 
   <p>If you want to check out a sample, you can <strong>download this dictionary</strong>: <a href="/assets/dictionaries/arabidopsis_proteins_and_genes_swissprot.zip">Arabidopsis gene names (source: SwissProt)</a>.</p>
 

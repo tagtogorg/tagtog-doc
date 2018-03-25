@@ -1,43 +1,43 @@
-[< Back to index](../tagtog-doc/)
+---
+layout: page
+title: Document pool
+sidebar_link: true
+id: document_pool
+---
 
-# Document pool
+<div class="two-third-col">
+  <p>Your documents are listed in the <strong>pool</strong>. The pool is paginated and you can move to the next or previous page using the navigation menu.</p>
+    <h3>Upload text</h3>
+    <p>In order to <strong>upload</strong> a new document, please click on {% include inline-image.html name="add-content-button.png" width="70" %}. Once clicked, a modal menu is displayed.</p>
+    <p>The different formats accepted are described here: <a href="/ioformats.html#input-formats">Input formats</a></p>
+    <h3>Remove a document</h3>
+    <p>You can remove a document on the web editor view or in the pool view by clicking on the remove button {% include inline-image.html name="editor-doc-remove.png" %}.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message='<strong>What is a document?</strong>&nbsp;Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: <a href="https://github.com/tagtog/tagtog-doc/wiki/Input-File-Formats">input formats</a>'%}
+  {% include image.html name="editor-upload-box.png" caption="Upload box where you can select how to import text" %}
+</div>
 
-* TOC
-{:toc}
+<div class="two-third-col">
+  <h3>Manually confirmed documents</h3>
+  <p>In the pool, each document has a check mark, when green, it means the document is confirmed.</p>
+  <p>Manually confirmed documents are those with <strong>all annotations complete</strong>. Depending on the project it can also mean that the annotations have been reviewed by a human, and they can be used as training data.</p>
+  <p>Confirm documents is helpful to keep the progress of the annotation tasks.</p>
+</div>
 
-> **What is a document?** Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: [input formats](https://github.com/tagtog/tagtog-doc/wiki/Input-File-Formats)
+<div class="one-third-col">
+  {% include message.html message="If you are training a model within tagtog, only those documents marked as confirmed are used as <strong>training data</strong> for your machine learning model."%}
+  {% include message.html message='Using the API, you can also <a href="/API.html#search-documents-in-a-project-get">retrieve which documents are complete</a>.' %}
+</div>
 
-In the **pool** you store your documents. We will use _pool view_ to refer to the screen listing your documents.
+<div class="two-third-col">
+  <h3>Test folder</h3>
+  Use the test folder to test the <strong>performance of the machine learning methods</strong>. Add here a few documents and annotate them manually. These, so called <strong>gold standard</strong> or set, will never be used for real training. Make sure documents inside this folder have everything tagged correctly according to the most recent guidelines.
+</div>
 
-The pool is paginated and you can change move to the next or previous page using the navigation menu.
-
-![Navigation menu in the document pool](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/pool-doc-navigator.PNG)
-
-# Upload a document
-
-In order to **upload** a new document, please click on the button with the text `+Content`. Once clicked a modal menu appears:
-
-![Web editor - upload document box](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/editor-upload-box.png)
-
-The different formats accepted are described here: [input formats](inputformats.html)
-
-# Remove a document
-
-You can remove a document in the web editor view or in the pool view. Below, highlighted the button to remove a document from the pool view.
-
-![Remove a document in the pool view](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/editor-remove-doc.PNG)
-
-# Manually confirmed documents
-
-Manually confirmed (or completed) documents are those which have **all the annotations reviewed by a human**. This action is usually performed to a document as annotation-review-complete or ready for training a machine/AI. In the pool view, you can see if a document has been marked as confirmed when the checkmark is in green. You can see the difference between a confirmed document and another not confirmed below:
-
-![Confirmed document in pool view](https://raw.githubusercontent.com/tagtog/tagtog-doc/master/resources/pool-confirmed.PNG)
-
-# Test folder
-
-Use the test folder to test the **performance of the machine learning methods**. Add here a few documents and annotate them manually. These, so called **gold documents**, will never be used for real training. 
-
-> Only mind the test folder if you are using machine learning to annotate automatically.
-
-[< Back to index](../tagtog-doc)
+<div class="one-third-col">
+  <div class="message">
+    Only mind the test folder if you are using machine learning to annotate automatically.
+  </div>
+</div>
 

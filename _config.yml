@@ -1,4 +1,67 @@
-theme: jekyll-theme-cayman
-markdown: kramdown
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Setup
+title:            tagtog
+tagline:          'A text annotation tool to train AI'
+description:      'Official documentation for <a href="https://tagtog.net">tagtog</a>'
+app_url:          https://www.tagtog.net
+url:              https://docs.tagtog.net
+baseurl:          
+sidebar_toc:
+  - name: Tutorials
+    pages:
+      - quick_tutorials
+  - name: Web Application
+    pages:
+      - projects
+      - document_pool
+      - webeditor
+      - collaboration
+  - name: API
+    pages:
+      - api
+  - name: AI
+    pages:
+      - ml
+  - name: Concept Search
+    pages:
+      - search
+      - search_queries
+  - name: Formats
+    pages:
+      - formats
+      - anndoc
+      - dictionaries
+
+author:
+  name:           'tagtog sp.z.o.o'
+  url:            https://twitter.com/tagtog_net
+
+paginate:         5
+# paginate_path:    '/page:num'
+                    # Or '/blog/page:num' if you want to move your index pages
+
 plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
   - jemoji
+
+# Custom vars
+version:            1.0.0
+sidebar_home_link:  true
+search_page:   false
+# sidebar_blog_link:  '/blog'   # By default, your home page is your blog
+                                # page. If you change your paginate_path,
+                                # set this to the root of the paginate_path
+                                # to enable a separate blog link.
+github:
+  repo:             https://github.com/tagtog/
+
+defaults:
+- scope:
+    path: "assets/img"
+  values:
+    image: true

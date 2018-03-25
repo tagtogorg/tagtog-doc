@@ -18,7 +18,7 @@ id: quick_tutorials
   <p><strong>Overlapping annotations</strong> increase the flexibility and allow you to make the most out of your data. Learn how to use them and in which scenarios.</p>
 </div>
 <div class="one-third-col">
-  {% include image.html name="overlapped_cropped.PNG" %}
+  {% include image.html name="overlapped_cropped.png" %}
 </div>
 
 

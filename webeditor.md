@@ -135,7 +135,7 @@ id: webeditor
       <p>Just create a new annotation that is contained within the span of existing one or that only overlaps part of it. Overlapping text annotations are recognizable at a glance while not disturbing you from reading the text.</p>
       {% include image.html name="editor-contained-ann.PNG" caption="Example of contained annotation, the car make <code>Toyota</code> is contained in the model <code>Toyota Corolla</code>" %}
       {% include image.html name="editor-overlapped-ann.PNG" caption="Three entities annotated, two annotations are overlapping" %}
-      {% include image.html name="editor-same-span-ann.PNG" caption="Sample of customer feedback. Two annotations (first in pink, second in yellow) within the same span representing a vehicle part and the failing part." %}
+      {% include image.html name="editor-same-span-ann.png" caption="Sample of customer feedback. Two annotations (first in pink, second in yellow) within the same span representing a vehicle part and the failing part." %}
       <br>
     </div>
     <div class="one-third-col">
@@ -263,7 +263,7 @@ id: webeditor
       <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p> 
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-copy-annotations.png" width="300" %}
+      {% include image.html name="editor-copy-annotations.PNG" width="300" %}
     </div>
     <div class="two-third-col">
       <h4>Pre-annotations</h4>
@@ -272,7 +272,7 @@ id: webeditor
     </p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-pre-annotations.png" width="300" %}
+      {% include image.html name="editor-pre-annotations.PNG" width="300" %}
     </div>
     <div class="two-third-col">
       <h4>Save a document</h4>

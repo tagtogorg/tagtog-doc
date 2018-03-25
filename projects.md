@@ -175,7 +175,7 @@ A project is a collection of documents and rules to annotate documents manually 
       </div>
     </div>
     <div class="two-third-col">
-      {% include image.html name="settings-doclabel.PNG" caption="Setting a document label with the <code>enum</code> type"%}
+      {% include image.html name="settings-doclabel.png" caption="Setting a document label with the <code>enum</code> type"%}
       <p>Once saved, you can start using them on the web editor.</p>
       <p>Soon you will be able to generate document labels automatically within tagtog. Now, as a workaround, you can infer the document label based on the entities extracted automatically.</p>
     </div>

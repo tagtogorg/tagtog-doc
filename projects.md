@@ -18,7 +18,7 @@ A project is a collection of documents and rules to annotate documents manually 
   </div>
   <div class="one-third-col">
     {% include image.html name="define-new-proj.PNG" caption="Defining a new project"%}
-    {% include message.html message="If you want to <strong>customize</strong> your own machine, simply don't select any pre-trained model. Train later your own machine learning model from the scratch." %}
+    {% include message.html message="If you want to <strong>customize</strong> your own machine, simply don't select any pre-trained model. Train later your own machine learning model from scratch." %}
   </div>
 
   <div class="two-third-col">

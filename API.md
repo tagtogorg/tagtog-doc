@@ -846,18 +846,18 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-1-del">cURL</a></li>
-      <li><a href="#tab-2-del">Python</a></li>
-      <li><a href="#tab-3-del">JavaScript</a></li>
+      <li class="current"><a href="#tab-1-getdoc">cURL</a></li>
+      <li><a href="#tab-2-getdoc">Python</a></li>
+      <li><a href="#tab-3-getdoc">JavaScript</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example exports a tagtog document into <code>ann.json</code> format. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
-<div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
+<div id="tab-1-getdoc" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
 ```
 </div>
-<div id="tab-2-del" class="tab-content" markdown="1">
+<div id="tab-2-getdoc" class="tab-content" markdown="1">
 ```python
 import requests
 
@@ -870,7 +870,7 @@ print(response.text)
 ```
 <p style="float:right">{% include github-link.html target="snippets/api_python_getdoc.py" %}</p>
 </div>
-<div id="tab-3-del" class="tab-content" markdown="1">
+<div id="tab-3-getdoc" class="tab-content" markdown="1">
 ```javascript
 fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json', {
   method: 'GET',

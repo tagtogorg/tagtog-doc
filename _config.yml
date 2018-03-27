@@ -50,7 +50,7 @@ plugins:
   - jemoji
 
 # Custom vars
-version:            1.0.0
+version:            1.0.1
 sidebar_home_link:  true
 search_page:   false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog

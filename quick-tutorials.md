@@ -22,7 +22,7 @@ id: quick_tutorials
 </div>
 <div class="two-third-col">
 
-  <h2><a title="tagtog at Medium - Finding Pokemon names in text using dictionaries and tagtog" href="https://medium.com/@tagtog/finding-pokemon-names-in-text-using-dictionaries-and-tagtog-140ac43d65e1">How to build a very simple pipeline that ingests a dictionary to recognize Pokémon names.</a></h2>
+  <h2><a title="tagtog at Medium - Finding Pokemon names in text using dictionaries and tagtog" href="https://medium.com/@tagtog/finding-pokemon-names-in-text-using-dictionaries-and-tagtog-140ac43d65e1">How to build a very simple pipeline to recognize Pokémon names using a dictionary</a></h2>
   <p>Dictionaries are simple controlled vocabularies, and yet a powerful resource when you have a well-defined list of items you want to recognize in text, especially if those items are identified with different names. Learn how to use them and when to use them with a practical example.</p>
 </div>
 <div class="one-third-col">

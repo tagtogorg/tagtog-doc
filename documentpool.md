@@ -11,7 +11,7 @@ id: document_pool
     <p>In order to <strong>upload</strong> a new document, please click on {% include inline-image.html name="add-content-button.png" width="70" %}. Once clicked, a modal menu is displayed.</p>
     <p>The different formats accepted are described here: <a href="/ioformats.html#input-formats">Input formats</a></p>
     <h3>Remove a document</h3>
-    <p>You can remove a document on the web editor view or in the pool view by clicking on the remove button {% include inline-image.html name="editor-doc-remove.png" %}.</p>
+    <p>You can remove a document on the web editor view or in the pool view by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='<strong>What is a document?</strong>&nbsp;Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: <a href="https://github.com/tagtog/tagtog-doc/wiki/Input-File-Formats">input formats</a>'%}

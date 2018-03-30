@@ -10,7 +10,8 @@ id: ml
   <p><strong>Two of the main barriers to Machine Learning are deployment and scaling</strong>. Deploying manually models requires time and engineering resources. Scaling the usage of these models requires a powerful infrastructure, the effort to maintain it and cost control. With tagtog, this complexity is transparent to users. <strong>We take care of the training mechanisms, the deployment and the handling of usage spikes</strong>. You only focus on problem solving using the web editor to indicate what you want to recognize in text. This will be the training data tagtog learns from. All without writing any code, empowering experts in any field to train and use machine learning models.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='tagtog with machine learning capabilities is offered on the tagtog <strong>Cloud or On-premises</strong> (<a title="tagtog plans" href="https://www.tagtog.net/-pricing">plans</a>). You can install it within your infrastructure or any public cloud (AWS, Google, Azure, etc.).' %}
+  {% include image.html name="robot.drone.svg" %}
+  
 </div>
 
 <div class="two-third-col">
@@ -20,7 +21,7 @@ id: ml
   <p class="list-item"><span class="list-item-3"></span><strong>Index your data</strong>. Use automatic annotations to augment your data and improve discoverability (e.g. augment records with mutation mentions using standard names, easier to find). You can either import the results into your own system or use the <a href="/API.html#search-documents-in-a-project-get" title="Search API">Search API</a> to find suitable records across the data imported.</p>
 </div>
 <div class="one-third-col">
-
+  {% include message.html message='tagtog with machine learning capabilities is offered on the tagtog <strong>Cloud or On-premises</strong> (<a title="tagtog plans" href="https://www.tagtog.net/-pricing">plans</a>). You can install it within your infrastructure or any public cloud (AWS, Google, Azure, etc.).' %}
 </div>
 
 <div class="two-third-col">

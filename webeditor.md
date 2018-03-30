@@ -15,6 +15,7 @@ id: webeditor
     {% include image.html name="editor-mainview-described.PNG" caption="tagtog annotation editor with text span annotations and document labels. The editor is mainly divided into: Document area, Toolbar and Sidebar. "%}
   </div>
   <div class="one-third-col">
+    {% include image.html name="robot.ann.svg" width=200 %}
     <div class="message">
       The editor is part of a <strong>web app</strong>. You don't need anything than a web browser to use it. If you are using an <strong>on-premises</strong> version, contact the internal administrator of the application to understand how to access the app. If you are using the <strong>Cloud</strong> version, just go to <a href="https://tagtog.net">tagtog.net</a>.
     </div>
@@ -105,6 +106,7 @@ id: webeditor
     <p>The editor is mainly divided into: <strong>Document area</strong>, <strong>Toolbar</strong> and <strong>Sidebar</strong>.</p>
   </div>
   <div class="one-third-col">
+      
   </div>
   <div class="page-subsection">
     <div class="two-third-col">
@@ -117,6 +119,7 @@ id: webeditor
       {% include image.html name="editor-annotations.PNG" caption="In green the gene names, in red the mutations. Font color change depending on the entity background color" %}
     </div>
     <div class="one-third-col">
+      {% include image.html name="robot.ann.svg" width=300 %}
     </div>
     <div class="two-third-col">
       <h5>Create new text annotations</h5>

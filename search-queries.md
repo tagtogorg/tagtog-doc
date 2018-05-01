@@ -114,6 +114,15 @@ api_project: yourProjectName
 </div>
 
 <div class="two-third-col">
+  <h3>Search confirmed documents</h3>
+  <p>You can search which documents are confirmed with query: <code>anncomplete:true</code>.</p>
+  <p>You can search which documents are not confirmed with query: <code>anncomplete:false</code>.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message="Here, a confirmed document means a document with the master version of the annotations confirmed." %}
+</div>
+
+<div class="two-third-col">
   <h3>Experimental search query fields</h3>
   <p>These are currently valid for scientific articles.</p>
   <table style="width:100%">

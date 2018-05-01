@@ -1149,7 +1149,7 @@ optional arguments:
   <p>The example below retrieves all the documents from your project.</p>
   <div markdown="1">
 ```shell
-python tagtog.py search '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }}
+python3 tagtog.py search '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }}
 ```
   </div>
 </div>
@@ -1164,7 +1164,7 @@ python tagtog.py search '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p 
   <p>The example below upload the abstract from two PMIDs to your project. Remember to indicate which is the <a href="#idtype-parameter">type of id</a> (<code>--idType</code> or <code>-i</code>) for the document.</p>
   <div markdown="1">
 ```shell
-python tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} -i PMID
+python3 tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} -i PMID
 ```
   </div>
 
@@ -1173,14 +1173,14 @@ python tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page.
   <p>The example below upload the PDF documents of a folder, to your project.</p>
   <div markdown="1">
 ```shell
-python tagtog.py upload ./myfolder -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} --extension pdf
+python3 tagtog.py upload ./myfolder -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} --extension pdf
 ```
   </div>
 
   <p>The example below upload a single file to your project.</p>
   <div markdown="1">
 ```shell
-python tagtog.py upload ./myfile.txt -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }}
+python3 tagtog.py upload ./myfile.txt -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }}
 ```
   </div>
 </div>
@@ -1197,7 +1197,7 @@ python tagtog.py upload ./myfile.txt -u {{ page.api_username }} -w {{ page.api_p
   <p>The example below download the annotations (<code>ann.json</code>) for all the documents in a project.</p>
    <div markdown="1">
 ```shell
-python tagtog.py download '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} --output_folder ./myDownloadFolder -t ann.json
+python3 tagtog.py download '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} --output_folder ./myDownloadFolder -t ann.json
 ```
   </div>
 </div>

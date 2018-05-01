@@ -59,6 +59,15 @@ api_project: yourProjectName
 <div class="one-third-col">
 </div>
 
+<div class="two-third-col">
+  <h3>Search confirmed documents</h3>
+  <p>You can search which documents are confirmed with query: <code>anncomplete:true</code>.</p>
+  <p>You can search which documents are not confirmed with query: <code>anncomplete:false</code>.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message="Here, a <strong>confirmed document</strong> means a document with the master version of the annotations confirmed." %}
+</div>
+
 
 <div class="two-third-col">
   <h3>Wildcard search</h3>
@@ -111,15 +120,6 @@ api_project: yourProjectName
 </div>
 <div class="one-third-col">
   {% include message.html message="The current list of <br/><strong>special characters</strong> are <code>+</code> <code>-</code> <code>!</code> <code>&quot;</code> <code>&amp;&amp;</code> <code>&verbar;&verbar;</code> <code>(</code> <code>)</code> <code>{</code> <code>}</code> <code>[</code> <code>]</code> <code>&Hat;</code> <code>~</code> <code>*</code> <code>?</code> <code>:</code> <code>\</code>" %}
-</div>
-
-<div class="two-third-col">
-  <h3>Search confirmed documents</h3>
-  <p>You can search which documents are confirmed with query: <code>anncomplete:true</code>.</p>
-  <p>You can search which documents are not confirmed with query: <code>anncomplete:false</code>.</p>
-</div>
-<div class="one-third-col">
-  {% include message.html message="Here, a confirmed document means a document with the master version of the annotations confirmed." %}
 </div>
 
 <div class="two-third-col">

@@ -109,19 +109,19 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Any project member can import the documents to be annotated by the group. Any project member can see these documents.</p> 
+  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Any project member can import the documents to be annotated by the group. Any project member can see these documents.</p>
 </div>
 <div class="one-third-col">
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-4">4</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations. When the annotations' version of a document is complete, the user mark her/his version as completed by clicking the Confirm button. Each user will do the same when their version is completed.</p> 
+  <p class="numbered-item"><span class="number-4">4</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations. When the annotations' version of a document is complete, the user mark her/his version as completed by clicking the Confirm button. Each user will do the same when their version is completed.</p>
 </div>
 <div class="one-third-col">
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-5">5</span><strong>Review</strong>. The admin can review every annotation version for each document and check whether they are completed or not. The admin can import any of these versions to <code>master</code> (final version) and mark this version as completed by clicking the Confirm button to indicate the annotations for this document are reviewed and ready.</p> 
+  <p class="numbered-item"><span class="number-5">5</span><strong>Review</strong>. The admin can review every annotation version for each document and check whether they are completed or not. The admin can import any of these versions to <code>master</code> (final version) and mark this version as completed by clicking the Confirm button to indicate the annotations for this document are reviewed and ready.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='The admin can use annotation versions to calculate the <a href="https://corpuslinguisticmethods.wordpress.com/2014/01/15/what-is-inter-annotator-agreement/">Inter-annotator agreement</a>' %}
@@ -161,12 +161,12 @@ id: collaboration
   <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations for the documents assigned. Once completed, the user mark her/his version as completed by clicking the Confirm button.</p>
 </div>
 <div class="one-third-col">
-  
+
   {% include message.html message='You can always assign a document to more than one user. Check out <a href="#each-annotator-annotates-each-document">this annotation flow</a> for details.'%}
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. Admin reviews the annotated documents and if ready, import the user annotations to the <code>master</code> version (final version). To indicate the annotations for this document are reviewed, admin clicks the Confirm button in the <code>master</code> version.</p> 
+  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. Admin reviews the annotated documents and if ready, import the user annotations to the <code>master</code> version (final version). To indicate the annotations for this document are reviewed, admin clicks the Confirm button in the <code>master</code> version.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='If the Review step is not required, the annotator can annotate directly on the <code>master</code> version. When ready, the user marks the annotations of each document as completed by clicking the Confirm button. Check <a href="/collaboration.html#documents-to-annotate-are-distributed-among-annotators-no-review">this flow</a>.' %}
@@ -223,6 +223,3 @@ id: collaboration
 </div>
 <div class="one-third-col">
 </div>
-
-
-

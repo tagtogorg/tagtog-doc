@@ -1,4 +1,4 @@
-Repo hosting the official documentation for [tagtog](https://www.tagtog.net). 
+Repo hosting the official documentation for [tagtog](https://www.tagtog.net).
 
 Take a look at [docs.tagtog.net](https://docs.tagtog.net/).
 
@@ -30,7 +30,7 @@ cd tagtog-doc
     ---
     ```
     Choose an `id` and a `title`. Change the flag `sidebar_link` appropriately if you want a link to appear in the sidebar.
-  
+
 2. If the item is to appear in the side bar, add it to the `_config.yml` var `sidebar_toc`.
 3. Follow the style guide below.
 
@@ -102,8 +102,9 @@ Template `inline-image.html`:
 {% include inline-image.html name="image-inline.png" width="70" %}
 ```
 
-### Features not yet ready
-To mention features that will be ready soon or have been temporarily disabled, use the CSS class `soon`. The content will be faded
+### tagtog features not yet ready
+
+To mention tagtog features that will be ready soon or have been temporarily disabled, use the CSS class `soon`. The content will be faded
 
 ```html
 <div class="soon">
@@ -122,5 +123,3 @@ To mention features that will be ready soon or have been temporarily disabled, u
 ### Emojis
 
 Use https://gist.github.com/rxaviers/7360908 , e.g. `:bookmark_tabs:` :bookmark_tabs:
-
-

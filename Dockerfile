@@ -18,4 +18,6 @@ COPY . /my/
 
 # ---
 
-ENTRYPOINT bundle exec jekyll serve
+EXPOSE 4000
+
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--incremental"]

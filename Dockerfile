@@ -8,10 +8,13 @@ RUN apk add git
 
 # ---
 
-COPY . /my/
+RUN mkdir /my/
 WORKDIR /my/
 
+COPY Gemfile* *.gemspec /my/
 RUN bundle install
+
+COPY . /my/
 
 # ---
 

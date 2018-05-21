@@ -5,7 +5,7 @@ The latest stable documentation is hosted at [docs.tagtog.net](https://docs.tagt
 
 # Issues
 
-Please report any issues here or contact us at [[info@tagtog.net]]
+Please report any issues here or contact us at [info@tagtog.net](mailto:info@tagtog.net)
 
 # Do you want to contribute?
 

@@ -7,17 +7,18 @@ The latest stable documentation is hosted at [docs.tagtog.net](https://docs.tagt
 
 Please report any issues here or contact us at [info@tagtog.net](mailto:info@tagtog.net)
 
+
 # Do you want to contribute?
 
-## Getting started
-
-### Clone the repo
+## Clone the repo
 
 ```shell
 git clone https://github.com/tagtog/tagtog-doc.git
 cd tagtog-doc
+
 ```
-### Run the documentation locally
+
+## Run the documentation locally
 
 You need a docker installation. Then simply:
 

@@ -1,25 +1,34 @@
-Repo hosting the official documentation for [tagtog](https://www.tagtog.net). 
+Repo containing the official documentation for [🍃tagtog](https://www.tagtog.net).
 
-Take a look at [docs.tagtog.net](https://docs.tagtog.net/).
+The latest stable documentation is hosted at [docs.tagtog.net](https://docs.tagtog.net/).
+
 
 # Issues
-Please report any issues here or contact us at <info@tagtog.net>
-# Do you want to contribute?
-## Getting started
 
-### Clone the repo
+Please report any issues here or contact us at [info@tagtog.net](mailto:info@tagtog.net)
+
+
+# Do you want to contribute?
+
+## Clone the repo
+
 ```shell
 git clone https://github.com/tagtog/tagtog-doc.git
 cd tagtog-doc
+
 ```
-### Run the documentation locally
-1. Install [Ruby](https://www.ruby-lang.org/)
-2. Install http://bundler.io/ `gem install bundle`
-3. Install [Jekyll](https://jekyllrb.com/) `gem install jekyll`
-4. `cd tagtog-doc`
-5. Run jekyll locally `bundle exec jekyll serve`
+
+## Run the documentation locally
+
+You need a **docker** installation. Then simply:
+
+```shell
+./build_n_run.sh
+```
+
 
 ## Add new pages
+
 1. Create a markdown `.md` file and add the [frontmatter](https://jekyllrb.com/docs/frontmatter/).
     ```html
     ---
@@ -30,7 +39,7 @@ cd tagtog-doc
     ---
     ```
     Choose an `id` and a `title`. Change the flag `sidebar_link` appropriately if you want a link to appear in the sidebar.
-  
+
 2. If the item is to appear in the side bar, add it to the `_config.yml` var `sidebar_toc`.
 3. Follow the style guide below.
 
@@ -102,8 +111,9 @@ Template `inline-image.html`:
 {% include inline-image.html name="image-inline.png" width="70" %}
 ```
 
-### Features not yet ready
-To mention features that will be ready soon or have been temporarily disabled, use the CSS class `soon`. The content will be faded
+### tagtog features not yet ready
+
+To mention tagtog features that will be ready soon or have been temporarily disabled, use the CSS class `soon`. The content will be faded
 
 ```html
 <div class="soon">
@@ -122,5 +132,3 @@ To mention features that will be ready soon or have been temporarily disabled, u
 ### Emojis
 
 Use https://gist.github.com/rxaviers/7360908 , e.g. `:bookmark_tabs:` :bookmark_tabs:
-
-

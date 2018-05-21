@@ -20,4 +20,4 @@ COPY . /my/
 
 EXPOSE 4000
 
-ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--incremental"]
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--incremental", "--host", "0.0.0.0"]

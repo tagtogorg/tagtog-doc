@@ -9,7 +9,7 @@ import argparse
 import getpass
 try:
     import requests
-except:
+except Exception:
     print("ERROR - You need to install requests: pip install requests")
     sys.exit(-1)
 

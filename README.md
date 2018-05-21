@@ -20,7 +20,7 @@ cd tagtog-doc
 
 ## Run the documentation locally
 
-You need a docker installation. Then simply:
+You need a **docker** installation. Then simply:
 
 ```shell
 ./build_n_run.sh

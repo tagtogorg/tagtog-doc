@@ -1,25 +1,33 @@
-Repo hosting the official documentation for [tagtog](https://www.tagtog.net).
+Repo containing the official documentation for [🍃tagtog](https://www.tagtog.net).
 
-Take a look at [docs.tagtog.net](https://docs.tagtog.net/).
+The latest stable documentation is hosted at [docs.tagtog.net](https://docs.tagtog.net/).
+
 
 # Issues
-Please report any issues here or contact us at <info@tagtog.net>
+
+Please report any issues here or contact us at [[info@tagtog.net]]
+
 # Do you want to contribute?
+
 ## Getting started
 
 ### Clone the repo
+
 ```shell
 git clone https://github.com/tagtog/tagtog-doc.git
 cd tagtog-doc
 ```
 ### Run the documentation locally
-1. Install [Ruby](https://www.ruby-lang.org/)
-2. Install http://bundler.io/ `gem install bundle`
-3. Install [Jekyll](https://jekyllrb.com/) `gem install jekyll`
-4. `cd tagtog-doc`
-5. Run jekyll locally `bundle exec jekyll serve`
+
+You need a docker installation. Then simply:
+
+```shell
+./build_n_run.sh
+```
+
 
 ## Add new pages
+
 1. Create a markdown `.md` file and add the [frontmatter](https://jekyllrb.com/docs/frontmatter/).
     ```html
     ---

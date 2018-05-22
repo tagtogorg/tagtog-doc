@@ -12,6 +12,13 @@ RUN apk add git
 
 # ---
 
+# Install python dependencies for python script
+
+RUN apk add python3
+RUN pip3 install requests
+
+# ---
+
 # Install pages and derived dependencies
 
 RUN mkdir /my/
@@ -21,13 +28,6 @@ COPY Gemfile* *.gemspec /my/
 RUN bundle install
 
 COPY . /my/
-
-# ---
-
-# Install python dependencies for python script
-
-RUN apk add python3
-RUN pip3 install requests
 
 # ---
 

@@ -244,7 +244,7 @@ A project is a collection of documents and rules to annotate documents manually 
         </tr>
         <tr>
           <td>Format</td>
-          <td>Format to be sent to the End Point. Currently you can select: <code>ann.json</code> (<a href="/ann.doc.html#ann-json">docs</a>), <code>docJSON</code> (used internally for some users) and <code>PubAnnotation</code>(<a href="http://www.pubannotation.org/docs/annotation-format/">docs</a>)</td>
+          <td>Format to be sent to the End Point. Currently you can select: <code>ann.json</code> (<a href="/anndoc.html#ann-json">docs</a>), <code>docJSON</code> (used internally for some users) and <code>PubAnnotation</code>(<a href="http://www.pubannotation.org/docs/annotation-format/">docs</a>)</td>
         </tr>
         <tr>
           <td>Only GUI trigger</td>

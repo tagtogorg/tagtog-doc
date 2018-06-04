@@ -112,6 +112,8 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 <div class="one-third-col">
   {% include message.html message='Imported documents are visible in the <a href="/documentpool.html">document pool</a>'%}
 </div>
+
+
 <div class="two-third-col">
 
   <br/>
@@ -128,6 +130,8 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
 ```
 </div>
+
+
 <div id="tab-2-plain-text" class="tab-content" markdown="1">
 ```python
 import requests

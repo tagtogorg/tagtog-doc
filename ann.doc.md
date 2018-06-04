@@ -1,13 +1,13 @@
 ---
 layout: page
-title: ann.doc format
+title: anndoc format
 sidebar_link: true
 version: 2.0
 id: anndoc
 ---
 
 <div class="two-third-col">
-  <p><code>ann.doc</code> is a standoff format for document annotations consisting of two files:</p>
+  <p><code>anndoc</code> is a standoff format for document annotations consisting of two files:</p>
   <table style="width:100%;">
     <tr>
       <th>File</th>
@@ -227,7 +227,7 @@ id: anndoc
 
 <div class="two-third-col">
 <h3><code>plain.html</code></h3>
-<p>This part of the <code>ann.doc</code> format covers only the content, not the annotations. It's written in <a href="https://www.w3.org/TR/html-polyglot/" title="Polyglot Markup: A robust profile of the HTML5 vocabulary">polyglot markup</a> (XML-compatible HTML5). There are no special semantics other that every text element (paragraph, header, ...) has a unique id. These ids are used as a reference by the annotations file.</p>
+<p>This part of the <code>anndoc</code> format covers only the content, not the annotations. It's written in <a href="https://www.w3.org/TR/html-polyglot/" title="Polyglot Markup: A robust profile of the HTML5 vocabulary">polyglot markup</a> (XML-compatible HTML5). There are no special semantics other that every text element (paragraph, header, ...) has a unique id. These ids are used as a reference by the annotations file.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message="Every time you import a file or text into tagtog, the input content is <strong>converted</strong> to this format." %}

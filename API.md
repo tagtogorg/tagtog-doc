@@ -1056,11 +1056,11 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </tr>
   <tr>
     <td><code>ann.json</code></td>
-    <td>Annotations part of the <a href="/ann.doc.html#ann-json">anndoc format documentation</a>.</td>
+    <td>Annotations part of the <a href="/anndoc.html#ann-json">anndoc format documentation</a>.</td>
   </tr>
   <tr>
     <td><code>html</code> <code>xml</code></td>
-    <td>Content part of the <a href="/ann.doc.html#plain-html">anndoc format documentation</a>.</td>
+    <td>Content part of the <a href="/anndoc.html#plain-html">anndoc format documentation</a>.</td>
   </tr>
   <tr>
     <td><code>text</code></td>

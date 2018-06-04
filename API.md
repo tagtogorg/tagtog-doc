@@ -16,7 +16,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
   <p>Thanks for choosing the <strong>Documents API</strong> to build NLP solutions into your app or website. Getting started with a new API can be challenging, so we have created a step-by-step guide that walks you through how to make your first API calls and more.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message="You will need an <strong>account at tagtog</strong>. Sign up at tagtog.net if you are using the cloud version or check with your admin if you are using an on-premises version." %}
+  {% include message.html message='You will need an <strong>account at tagtog</strong>. <a href="https://www.tagtog.net/#signup">Sign up at tagtog.net</a> if you are using the cloud version or check with your admin if you are using an on-premises version.' %}
 </div>
 
 

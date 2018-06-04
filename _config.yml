@@ -25,6 +25,7 @@ sidebar_toc:
   - name: AI
     pages:
       - ml
+      - train-your-own-models
   - name: Concept Search
     pages:
       - search

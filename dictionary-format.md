@@ -43,6 +43,3 @@ id: dictionaries
   {% include message.html message="The ids in a dictionary cannot contain spaces and must match the regular expression: <code>^[a-zA-Z0-9_\-:\.\@]+$ </code>" %}
   {% include message.html message="<strong>Note</strong>: the names must NOT be tokenized." %}
 </div>
-
-
-

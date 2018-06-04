@@ -11,12 +11,13 @@ api_pwd: yourPassword
 api_project: yourProjectName
 api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector function for the clinical effectiveness of monoclonal antibodies, is triggered by the engagement of the antibody Fc domain with the Fcγ receptors expressed by innate immune cells such as natural killer (NK) cells and macrophages.
 ---
+
 <div class="two-third-col">
   <br/>
   <p>Thanks for choosing the <strong>Documents API</strong> to build NLP solutions into your app or website. Getting started with a new API can be challenging, so we have created a step-by-step guide that walks you through how to make your first API calls and more.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message="You will need an <strong>account at tagtog</strong>. Sign up at tagtog.net if you are using the cloud version or check with your admin if you are using an on-premises version." %}
+  {% include message.html message='You will need an <strong>account at tagtog</strong>. <a href="https://www.tagtog.net/#signup">Sign up at tagtog.net</a> if you are using the cloud version or check with your admin if you are using an on-premises version.' %}
 </div>
 
 
@@ -48,7 +49,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 <div class="two-third-col">
   <h2>Import and annotate text</h2>
   <p>One of the most common scenarios using tagtog is to annotate text automatically. The API is the perfect way to automate this task.</p>
-  
+
 
   <h3>Plain text <code>POST</code></h3>
   <p>Annotates automatically plain text.</p>
@@ -94,7 +95,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
@@ -111,8 +112,10 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 <div class="one-third-col">
   {% include message.html message='Imported documents are visible in the <a href="/documentpool.html">document pool</a>'%}
 </div>
+
+
 <div class="two-third-col">
-  
+
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -127,6 +130,8 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
 ```
 </div>
+
+
 <div id="tab-2-plain-text" class="tab-content" markdown="1">
 ```python
 import requests
@@ -145,8 +150,8 @@ print(response.text)
 ```javascript
 fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json', {
     method: 'POST',
-    headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}'), 
-              'Accept': 'application/json', 
+    headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}'),
+              'Accept': 'application/json',
               'Content-Type': 'application/json',
              },
     body: JSON.stringify({'text':'{{ page.api_plain_text }}'})
@@ -241,7 +246,7 @@ PUBMED IDS
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
@@ -292,8 +297,8 @@ print(response.text)
 ```javascript
 fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUsername&idType=PMID&ids=23596191,29438695&output=ann.json', {
   method: 'POST',
-  headers:  { 'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'), 
-              'Accept': 'application/json', 
+  headers:  { 'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'),
+              'Accept': 'application/json',
               'Content-Type': 'application/json',
             },
 }).then(response => response.json()).then(json => {
@@ -392,7 +397,7 @@ URLS
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
@@ -513,7 +518,7 @@ FILES
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
@@ -528,7 +533,7 @@ FILES
   </table>
 </div>
 <div class="one-third-col">
-  
+
 </div>
 <div class="two-third-col">
   <br/>
@@ -579,7 +584,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <p>Response <code>ann.json</code></p>
 <div markdown="1">
 ```json
-{ 
+{
   "anncomplete":false,
   "sources":[],
   "entities":[
@@ -679,7 +684,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   {% include message.html message='Use the search features to retrieve the progress of the annotation tasks.' %}
 </div>
 <div class="two-third-col">
-  
+
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -756,7 +761,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
     "previous": "Number: paginated search's previous page; -1 if current page == 0",
     "next": "Number: paginated search's current page; -1 if current page is the last page",
   }
-  "docs": 
+  "docs":
   [
     {
       "id": "String: full tagtogID -- Use this to download the document",
@@ -829,14 +834,14 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
           <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
     </tr>
   </table>
-  
+
 </div>
 <div class="one-third-col">
   {% include message.html message="If while manual annotating you create <strong>pre-annotations</strong>, they will also appear in the output" %}
@@ -1042,11 +1047,11 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   "items": //list of documents changed
   [
     { "origid":"text",
-      "names":["text.txt"], 
-      "tagtogID":"aOM6EFIvULWc6J.7MAYQB3V2sF84-text", 
+      "names":["text.txt"],
+      "tagtogID":"aOM6EFIvULWc6J.7MAYQB3V2sF84-text",
       "result":"created"}
   ],
-  "warnings":[[]]
+  "warnings":[]
 }
 ```
 <p>You can use this parameter, for example, if you need the API to return you the id of each document imported.</p>
@@ -1056,11 +1061,11 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </tr>
   <tr>
     <td><code>ann.json</code></td>
-    <td>Annotations part of the <a href="/ann.doc.html#ann-json">anndoc format documentation</a>.</td>
+    <td>Annotations part of the <a href="/anndoc.html#ann-json">anndoc format documentation</a>.</td>
   </tr>
   <tr>
     <td><code>html</code> <code>xml</code></td>
-    <td>Content part of the <a href="/ann.doc.html#plain-html">anndoc format documentation</a>.</td>
+    <td>Content part of the <a href="/anndoc.html#plain-html">anndoc format documentation</a>.</td>
   </tr>
   <tr>
     <td><code>text</code></td>
@@ -1145,7 +1150,7 @@ optional arguments:
 </div>
 <div class="two-third-col">
   <h4>Search</h4>
-  <p>It uses the API to search documents in your project. Parameters can be consulted <a href="#search-documents-in-a-project-get">here</a> or using <code>tagtog.py search --help</code>. You can learn how to build search queries <a href="/search-queries.html">here</a></p> 
+  <p>It uses the API to search documents in your project. Parameters can be consulted <a href="#search-documents-in-a-project-get">here</a> or using <code>tagtog.py search --help</code>. You can learn how to build search queries <a href="/search-queries.html">here</a></p>
   <p>The example below retrieves all the documents from your project.</p>
   <div markdown="1">
 ```shell
@@ -1160,7 +1165,7 @@ python3 tagtog.py search '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p
   <h4>Upload</h4>
   <p>It uses the API to upload documents to your project.</p>
   <h5>Upload PMIDs</h5>
-  <p>Parameters can be consulted <a href="#pubmed-abstracts-post-get">here</a> or using <code>tagtog.py upload --help</code>.</p> 
+  <p>Parameters can be consulted <a href="#pubmed-abstracts-post-get">here</a> or using <code>tagtog.py upload --help</code>.</p>
   <p>The example below upload the abstract from two PMIDs to your project. Remember to indicate which is the <a href="#idtype-parameter">type of id</a> (<code>--idType</code> or <code>-i</code>) for the document.</p>
   <div markdown="1">
 ```shell
@@ -1169,7 +1174,7 @@ python3 tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page
   </div>
 
   <h5>Upload files</h5>
-  <p>Parameters can be consulted using <code>tagtog.py upload --help</code>. You must include the parameter <code>--extension</code> or <code>-e</code> to indicate the extension of the files to upload (e.g. <code>txt</code>, <code>pdf</code>, etc.). These are the  <a href="/ioformats.html#input-formats">input files supported</a></p> 
+  <p>Parameters can be consulted using <code>tagtog.py upload --help</code>. You must include the parameter <code>--extension</code> or <code>-e</code> to indicate the extension of the files to upload (e.g. <code>txt</code>, <code>pdf</code>, etc.). These are the  <a href="/ioformats.html#input-formats">input files supported</a></p>
   <p>The example below upload the PDF documents of a folder, to your project.</p>
   <div markdown="1">
 ```shell
@@ -1185,7 +1190,7 @@ python3 tagtog.py upload ./myfile.txt -u {{ page.api_username }} -w {{ page.api_
   </div>
 </div>
 <div class="one-third-col">
- 
+
 </div>
 <div class="two-third-col">
   <h4>Download</h4>

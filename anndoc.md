@@ -1,13 +1,13 @@
 ---
 layout: page
-title: ann.doc format
+title: anndoc format
 sidebar_link: true
 version: 2.0
 id: anndoc
 ---
 
 <div class="two-third-col">
-  <p><code>ann.doc</code> is a standoff format for document annotations consisting of two files:</p>
+  <p><code>anndoc</code> is a standoff format for document annotations consisting of two files:</p>
   <table style="width:100%;">
     <tr>
       <th>File</th>
@@ -15,11 +15,11 @@ id: anndoc
     </tr>
     <tr>
       <td><code>ann.json</code></td>
-      <td>Annotations standoff part of the format.</td>
+      <td>Annotations-only, part of the format.</td>
     </tr>
     <tr>
       <td><code>plain.html</code></td>
-      <td>Content part of the format.</td>
+      <td>Content-only, part of the format.</td>
     </tr>
   </table>
 
@@ -165,7 +165,7 @@ id: anndoc
     ],
 
     // Map object with Document Labels
-    "metas": { 
+    "metas": {
         "m_<uniq>": {
             "value": boolean/number/string,
             "confidence": { //Confidence prototype
@@ -196,7 +196,7 @@ id: anndoc
             },
 
             //Map object with Document Labels
-            "normalizations": { 
+            "normalizations": {
                 "n_<uniq>": {
                     "source": Source,
                     "recName": string,
@@ -207,9 +207,9 @@ id: anndoc
     ],
 
     //Array of relations annotated in the document
-    "relations": [ 
+    "relations": [
         {
-            "classId": "r_<uniq>", 
+            "classId": "r_<uniq>",
             "type": string, //in standards={linked, part-of, anaphora} or user-defined
             "directed": boolean, //true if A->B or B<-A, false if A<->B
             "entities": [string, string], //entities related hashed
@@ -227,7 +227,7 @@ id: anndoc
 
 <div class="two-third-col">
 <h3><code>plain.html</code></h3>
-<p>This part of the <code>ann.doc</code> format covers only the content, not the annotations. It's written in <a href="https://www.w3.org/TR/html-polyglot/" title="Polyglot Markup: A robust profile of the HTML5 vocabulary">polyglot markup</a> (XML-compatible HTML5). There are no special semantics other that every text element (paragraph, header, ...) has a unique id. These ids are used as a reference by the annotations file.</p>
+<p>This part of the <code>anndoc</code> format covers only the content, not the annotations. It's written in <a href="https://www.w3.org/TR/html-polyglot/" title="Polyglot Markup: A robust profile of the HTML5 vocabulary">polyglot markup</a> (XML-compatible HTML5). There are no special semantics other that every text element (paragraph, header, ...) has a unique id. These ids are used as a reference by the annotations file.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message="Every time you import a file or text into tagtog, the input content is <strong>converted</strong> to this format." %}
@@ -474,6 +474,3 @@ id: anndoc
 <div class="one-third-col">
 
 </div>
-
-
-

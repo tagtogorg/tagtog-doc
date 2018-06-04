@@ -94,7 +94,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
@@ -241,7 +241,7 @@ PUBMED IDS
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
@@ -392,7 +392,7 @@ URLS
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
@@ -513,7 +513,7 @@ FILES
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
@@ -829,7 +829,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>members</code></td>
+      <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
       <td>john</td>
       <td><p>Project member you want to use</p>

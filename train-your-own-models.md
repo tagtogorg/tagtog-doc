@@ -42,11 +42,11 @@ api_project: yourProjectName
   <p class="numbered-item"><span class="number-2">2</span><a href="API.html#output-parameter">Download</a> back the document/s' content in <a href="anndoc.html#plain-html">plain.html</a> format. Have your model read the html's text content and generate the annotations in <a href="anndoc.html#ann-json">ann.json</a>.</p>
 
   <p class="numbered-item"><span class="number-3">3</span><a href="API.html#files-post">Upload to tagtog in a same API request</a> both the plain.html + ann.json (i.e., 2 files) of the document. The requirement is that both files, except for the final extension, must have the same name. In that way, the tagtog system understands that both files represent the same document. Moreover, you can  send multiple annotated documents at the same time. This means you always upload an even number of files.</p>
+</div>
 
-  <br>
-  <p></p>
 
-  <div class="three-third-col">
+
+<div class="two-third-col">
     <br/>
     <div id="tabs-container">
       <ul class="tabs-menu">
@@ -58,19 +58,52 @@ api_project: yourProjectName
   ```python
   import requests
 
-  tagtogAPIUrl = "{{ page.api_document_url }}"
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
-  #you can append more files to the list in case you want to upload multiple files
-  files = [('file', open('files/text.txt', 'rb'))]
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'html'}
+  files = [('file', open('text.txt', 'rb'))]
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+
+  # The plain.html (the request's response is in string form). You will have to parse the html's text
+  plain_html = response.text
+  # Annotate the html with my model. We suppose we generate a json in string format too. We could write down to a file if desired
+  ann_json = my_model_annotate(plain_html)
+  # ann_json = '{"annotatable":{"parts":["s1p1","s1p2"]},"anncomplete":false,"sources":[],"metas":{},"entities":[{"classId":"e_1","part":"s1p1","offsets":[{"start":12,"text":"first sentence of the first paragrap"}],"confidence":{"state":"pre-added","who":["user:{{ page.api_username }}"],"prob":1},"fields":{},"normalizations":{}}],"relations":[]}'
+
+  # Submit both the plain.html + ann.json in the same request. The important thing: they must have the same name, except for the file extensions
+  files = [('file', ('text.plain.html', plain_html)), ('file', ('text.ann.json', ann_json))]
+  params['format'] = 'anndoc'
+  params['output'] = 'null'
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+
   print(response.text)
-  ```
-  <!-- <p style="float:right">{% include github-link.html target="snippets/api_python_annotate_files.py" %}</p> -->
+  ```    
   </div>
 </div>
+</div>
+</div>
 
+<div class="one-third-col">
+  <p>Response example:</p>
+  <div markdown="1">
+  ```json
+  {
+    "ok": 1,
+    "errors": 0,
+    "items": [{
+      "origid": "text",
+      "names": ["text.ann.json", "text.plain.html"],
+      "rawInputSizeInBytes": 1107,
+      "tagtogID": "aZ10o06tnabIXN1wwdw.V3I23fs4-text",
+      "result": "updated",
+      "parsedTextSizeInBytes": 128
+    }],
+    "warnings": []
+  }
+  ```
+  </div>
+</div>
 
 
 <div class="two-third-col">

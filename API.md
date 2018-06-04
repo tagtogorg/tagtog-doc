@@ -1046,7 +1046,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       "tagtogID":"aOM6EFIvULWc6J.7MAYQB3V2sF84-text",
       "result":"created"}
   ],
-  "warnings":[[]]
+  "warnings":[]
 }
 ```
 <p>You can use this parameter, for example, if you need the API to return you the id of each document imported.</p>

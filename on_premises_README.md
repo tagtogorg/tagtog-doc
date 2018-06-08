@@ -39,14 +39,14 @@ Your system must have installed:
 
 ## First-time Install
 
-* You will receive, from your person contact at tagtog, a single-line script to do a first time installation.
-* Execute it in a folder where you will run from now on all tagtog-related commands, for example to download files, etc.
+* You will receive, from your person contact at tagtog, a single-line script to do a first time installation. This script will contain all the information regarding your one-server-only **license** .
+* Execute it in a folder where you will run from now on all tagtog-related commands.
 * A helper bash script is installed in this folder. This script assumes an UNIX environment and was tested only on **Linux and macOS**. It should work on Windows with Cygwin too. The script is not mandatory to run tagtog, but it is highly recommended.
 
 
 ## Run
 
-* Choose one folder/volume where all your tagtog data will be stored. Let's call this folder `$TAGTOG_HOME` (you can indeed assign it to a global variable, such as: `export TAGTOG_HOME="$PWD/tagtog_home"`). **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`)
+* Choose one full-path folder/volume where all your tagtog data will be stored. For description purposes, let's call this folder `$TAGTOG_HOME` (you can indeed assign it to a global variable, such as: `export TAGTOG_HOME="$PWD/tagtog_home"`). **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`).
 
 * Run the application:
 

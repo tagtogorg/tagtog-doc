@@ -37,7 +37,8 @@ sidebar_toc:
       - dictionaries
   - name: On Premises
     pages:
-      - readme
+      - on_premises_readme
+      - updates
 
 author:
   name:           'tagtog Sp. z o.o.'

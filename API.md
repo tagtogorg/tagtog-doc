@@ -5,6 +5,7 @@ title: API docs
 sidebar_link: true
 id: api
 
+api_endpoint: /-api/documents/v1
 api_document_url: https://www.tagtog.net/-api/documents/v1
 api_username: yourUsername
 api_pwd: yourPassword
@@ -26,14 +27,10 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     <tr>
       <td><strong>Version</strong></td>
       <td><code>{{ page.version }}</code></td>
-    </tr>
+    </tr>    
     <tr>
       <td><strong>Endpoint</strong></td>
-      <td>Documents</td>
-    </tr>
-    <tr>
-      <td><strong>URL</strong></td>
-      <td><a href="{{ page.api_document_url }}">{{ page.api_document_url }}</a></td>
+      <td><a href="{{ page.api_endpoint }}">{{ page.api_endpoint }}</a></td>
     </tr>
   </table>
 </div>

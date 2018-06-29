@@ -21,5 +21,6 @@ Here is the versioned list of all the new features, fixes, and documentation imp
 ### More!
 
 <ul class="updates">
-  <li class="doc">This new page of release notes was created 🤩</li>  
+  <li class="new">API call to get a JSON map of the annotations legend, <i>anntasks ids --> names</i>. For a sample call, check your project's <kbd>Downloads</kbd> page.</li>
+  <li class="doc">This new page of release notes was created 🤩</li>
 </ul>

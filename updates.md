@@ -21,5 +21,5 @@ Here is the versioned list of all the new features, fixes, and documentation imp
 ### More!
 
 <ul class="updates">
-  <li class="doc">This new page was created 🤩</li>  
+  <li class="doc">This new page of release notes was created 🤩</li>  
 </ul>

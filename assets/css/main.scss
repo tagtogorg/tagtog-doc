@@ -7,33 +7,41 @@ $sidebar-bg-color: #ED912D;
 
 ul.updates {
   .new::before {
-    content: "🍃NEW ";
+    content: "🍃NEW";
     background-color: rgb(171, 240, 84);
     border-radius: 8px;
+    padding-right: 8px;
+    margin-right: 4px;
     font-weight: bold;
     font-family: Lucida Console, Courier, monospace;
   }
 
   .fix::before {
-    content: "🖖FIX ";
+    content: "🖖FIX";
     background-color: rgb(242, 228, 105);
     border-radius: 8px;
+    padding-right: 8px;
+    margin-right: 4px;
     font-weight: bold;
     font-family: Lucida Console, Courier, monospace;
   }
 
   .doc::before {
-    content: "📝DOC ";
+    content: "📝DOC";
     background-color: rgb(167, 204, 237);
     border-radius: 8px;
+    padding-right: 8px;
+    margin-right: 4px;
     font-weight: bold;
     font-family: Lucida Console, Courier, monospace;
   }
 
   .del::before {
-    content: "🚨DEL ";
+    content: "🚨DEL";
     background-color: rgb(247, 98, 51);
     border-radius: 8px;
+    padding-right: 8px;
+    margin-right: 4px;
     font-weight: bold;
     font-family: Lucida Console, Courier, monospace;
   }

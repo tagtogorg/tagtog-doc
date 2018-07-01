@@ -37,7 +37,8 @@ sidebar_toc:
       - dictionaries
   - name: On Premises
     pages:
-      - readme
+      - on_premises_readme
+      - updates
 
 author:
   name:           'tagtog Sp. z o.o.'
@@ -54,7 +55,7 @@ plugins:
   - jemoji
 
 # Custom vars
-version: 3.2018-W22.13
+version: 3.2018-W26.0-RC1
 sidebar_home_link:  true
 search_page:   false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog

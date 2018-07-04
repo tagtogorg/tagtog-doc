@@ -12,9 +12,10 @@ id: document_pool
     <p>The different formats accepted are described here: <a href="/ioformats.html#input-formats">Input formats</a></p>
     <h3>Remove a document</h3>
     <p>You can remove a document on the web editor view or in the pool view by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
+    <p>To <strong>remove documents in batch</strong>, you can use the <a title="Search - web app" href="/search.html#remove-documents-in-batch">search bar</a> or the <a title="API - Delete" href="/API.html#delete-documents-delete">API for batch removal</a>.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='<strong>What is a document?</strong>&nbsp;Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: <a href="https://github.com/tagtog/tagtog-doc/wiki/Input-File-Formats">input formats</a>'%}
+  {% include message.html message='<strong>What is a document?</strong>&nbsp;Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: <a title="Input formats" href="https://github.com/tagtog/tagtog-doc/wiki/Input-File-Formats">input formats</a>'%}
   {% include image.html name="editor-upload-box.png" caption="Upload box where you can select how to import text" %}
 </div>
 

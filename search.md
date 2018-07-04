@@ -56,6 +56,12 @@ id: search
 <div class="one-third-col">
   {% include message.html message='Check <a href="/API.html#idtype-parameter">here</a> the available ID types.' %}
 </div>
+<div class="two-third-col">
+  <h3>Remove documents in batch</h3>
+  <p>To <strong>remove documents in batch</strong>, you can use a search query that retrieves the documents you want to remove. In the web app, click on the button with the caption <i>Delete matching documents</i> to remove these documents. You can also use the <a title="API - Delete" href="/API.html#delete-documents-delete">API for batch removal</a>.</p>
+</div>
+<div class="one-third-col">
+</div>
 
 <div class="two-third-col">
   <h2>API</h2>

@@ -15,6 +15,7 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 <ul class="updates">  
   <li class="new">Support for <b>proxies on-premises</b> 🕵️‍♀️</li>
+  <li class="fix">Fixed an interface bug affecting <b>Internet Explorer</b>, that blocked importing new documents</li>
 </ul>
 
 ---

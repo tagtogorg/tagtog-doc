@@ -12,7 +12,7 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 ---
 
 ## Latest
-_2018_08_23_
+2018-08-23
 
 <ul class="updates">  
   <li class="fix">Fixed the problem that users could not edit <a title="Annotation type" href="/webeditor.html#annotation-types">Entity Labels</a></li>

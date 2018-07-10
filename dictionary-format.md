@@ -7,7 +7,7 @@ id: dictionaries
 ---
 
 <div class="two-third-col">
-  <p>Dictionaries are used to <a href="/webeditor.html#type-of-annotations">normalize entities</a>. This is the format of dictionary files used at tagtog.</p>
+  <p>Dictionaries are used to <a href="/webeditor.html#annotation-types">normalize entities</a>. This is the format of dictionary files used at tagtog.</p>
   <p>The dictionary file to upload must be a <code>.tsv</code> file (tab-separated values) (or a compressed <code>.zip</code> or <code>.tar.gz</code> containing a single <code>.tsv</code>). To upload dictionary files visit <i>Settings > Dictionaries</i>.</p>
   <p>The dictionary format should follow this pattern:</p>
 

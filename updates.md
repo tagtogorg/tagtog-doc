@@ -11,6 +11,14 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## Latest 
+
+<ul class="updates">  
+  <li class="fix">Fixed the problem where users could not edit <a title="Type of annotationa" href="/webeditor.html#type-of-annotations"></a>Entity Labels</li>
+</ul>
+
+---
+
 ## 3.2018-W28.0 🥅
 
 <ul class="updates">  

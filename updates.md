@@ -14,7 +14,8 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 ## Latest
 
 <ul class="updates">  
-  <li class="fix">Fixed the problem that users could not edit <a title="Annotation type" href="/webeditor.html#type-of-annotations"></a>Entity Labels</li>
+  <li class="fix">Fixed the problem that users could not edit <a title="Annotation type" href="/webeditor.html#type-of-annotations">Entity Labels</a></li>
+   <li class="new">The modal menu to set <a title="Type of annotationa" href="/webeditor.html#type-of-annotations">Entity Labels</a> is now scrollable and supports a long list of labels.</li>
 </ul>
 
 ---

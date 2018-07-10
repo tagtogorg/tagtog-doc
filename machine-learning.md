@@ -26,7 +26,7 @@ id: ml
 
 <div class="two-third-col">
   <h2>How does it work?</h2>
-  <p>In tagtog, training data means annotations in any of <a title="Text annotation types supported by tagtog" href="/webeditor.html#type-of-annotations">supported types</a>. You annotate, you train :pencil2: tagtog is implemented using <strong>semi-supervised learning algorithms</strong> that reduce the volume of training data required. One of the strongest points is the ability of models to <strong>learn continuously and adaptively</strong> to incrementally take into account different scenarios but still being able to re-use and retain useful knowledge and skills during time.</p>
+  <p>In tagtog, training data means annotations in any of <a title="Text annotation types supported by tagtog" href="/webeditor.html#annotation-types">supported types</a>. You annotate, you train :pencil2: tagtog is implemented using <strong>semi-supervised learning algorithms</strong> that reduce the volume of training data required. One of the strongest points is the ability of models to <strong>learn continuously and adaptively</strong> to incrementally take into account different scenarios but still being able to re-use and retain useful knowledge and skills during time.</p>
 
   {% include image.html name="diagram_ml_small.svg" caption="Training flow" %}
 

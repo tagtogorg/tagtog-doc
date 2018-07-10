@@ -27,7 +27,7 @@ id: webeditor
 
 <div class="page-section">
   <div class="two-third-col">
-    <h2>Type of annotations</h2>
+    <h2>Annotation types</h2>
     <p>You can annotate at text span level or at document level. Let's take a look to the type of annotations you can create using tagtog:</p>
     <table style="width:100%">
       <tr>
@@ -58,7 +58,7 @@ id: webeditor
         <td><p>Label (<code>boolean</code>, <code>string</code>, <code>enum</code>) assigned to a document or text. One or more labels can be assigned to a document. These annotations help in <strong>text or intent classification</strong>.</p>
         <p>For example, if you are classifying emails in order to dispatch them to different departments, you can create a document label (enum) and classify emails as, for example, <code>sales</code>, <code>technical support</code> or <code>legal</code>. You can use the labeled data to train a text classifier model and classify emails automatically.</p></td>
       </tr>
-    </table> 
+    </table>
   </div>
   <div class="one-third-col">
     {% include message.html message="Text annotation in tagtog is <strong>flexible</strong>, tagtog supports the annotation of any text span: parts of words, words, sentences, etc. On the top of that you can create annotations overlapping text spans, or load pre-annotated data with these annotations." %}
@@ -94,7 +94,7 @@ id: webeditor
         <td class="centered"><kbd>d</kbd></td>
         <td>Delete annotation (only available when the annotation menu is visible)</td>
       </tr>
-    </table> 
+    </table>
   </div>
   <div class="one-third-col">
   </div>
@@ -106,7 +106,7 @@ id: webeditor
     <p>The editor is mainly divided into: <strong>Document area</strong>, <strong>Toolbar</strong> and <strong>Sidebar</strong>.</p>
   </div>
   <div class="one-third-col">
-      
+
   </div>
   <div class="page-subsection">
     <div class="two-third-col">
@@ -262,7 +262,7 @@ id: webeditor
           <td>Replace your annotations with the version displayed in the document area.</td>
         </tr>
       </table>  
-      <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p> 
+      <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p>
     </div>
     <div class="one-third-col">
       {% include image.html name="editor-copy-annotations.PNG" width="300" %}
@@ -363,7 +363,7 @@ id: webeditor
         <tr>
           <td><code>No group</code></td>
           <td>Entities are not grouped. They will appear one by one, in the same order they appear in text. This is very handy if you need to review each single annotation. <span class="soon">Soon we will enable hotkeys so you can navigate this menu fast and easily</span>.</td>
-        </tr> 
+        </tr>
       </table>
     </div>
     <div class="one-third-col">

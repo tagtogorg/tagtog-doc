@@ -5,9 +5,19 @@ sidebar_link: true
 id: updates
 ---
 
-Here is the versioned list of all the new features, fixes, and other changes. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog On-Premises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience. Note that the versioning system (in particular the [minor version](https://semver.org)), tells you the time period when the update happened.
+Here is the versioned list of all the new features, fixes, and other changes. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog On-Premises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
 
 Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
+
+---
+
+## 3.2018-W28.2 🕵️‍♀️
+2018-07-10
+
+<ul class="updates">  
+  <li class="fix">Fixed the problem that users could not edit <a title="Annotation type" href="/webeditor.html#annotation-types">Entity Labels</a></li>
+  <li class="new">The modal menu to set <a title="Annotation type" href="/webeditor.html#annotation-types">Entity Labels</a> is now scrollable and supports a long list of labels</li>
+</ul>
 
 ---
 

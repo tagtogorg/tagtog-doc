@@ -9,14 +9,21 @@ Here is the versioned list of all the new features, fixes, and other changes. [t
 
 Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
 
+## Latest
+
+<ul class="updates">  
+  <li class="new"><a title="Annotation types" href="/webeditor.html#annotation-types">Relations</a> are now supported between entities from different paragraphs or sections.</li>
+</ul>
+
+
 ---
 
 ## 3.2018-W28.2 🕵️‍♀️
 2018-07-10
 
 <ul class="updates">  
-  <li class="fix">Fixed the problem that users could not edit <a title="Annotation type" href="/webeditor.html#annotation-types">Entity Labels</a></li>
-  <li class="new">The modal menu to set <a title="Annotation type" href="/webeditor.html#annotation-types">Entity Labels</a> is now scrollable and supports a long list of labels</li>
+  <li class="fix">Fixed the problem that users could not edit <a title="Annotation types" href="/webeditor.html#annotation-types">Entity Labels</a></li>
+  <li class="new">The modal menu to set <a title="Annotation types" href="/webeditor.html#annotation-types">Entity Labels</a> is now scrollable and supports a long list of labels</li>
 </ul>
 
 ---

@@ -34,4 +34,4 @@ COPY . /my/
 EXPOSE 4000
 
 # "--incremental" can be faster, but is too conversative with the cache
-ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--incremental"]

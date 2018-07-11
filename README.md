@@ -23,7 +23,7 @@ cd tagtog-doc
 You need a **docker** installation. Then simply:
 
 ```shell
-./build.sh && ./run.sh
+./dev.sh
 ```
 
 

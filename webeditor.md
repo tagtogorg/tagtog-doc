@@ -51,7 +51,8 @@ id: webeditor
         <td>Relation</td>
         <td><p>Relation <strong>between two named entities</strong>. Each relation belong to one specific relation type (e.g. BRCA2 <code>gene</code> is located <code>is_located</code> on the chromosome 13 <code>location</code>).</p>
         <p>Currently tagtog supports bidirectional relationships (A relates to B, and B relates to A) to connect two entities. If you want to connect more than two entities you need to create more than one relation.</p>
-        <p>In order to set or see relations, remember you need first to define at least one Relation Type in <i>Settings > Relations</i>. Otherwise the option to See or Add relations in the menu will be disabled.</p></td>
+        <p>In order to set or see relations, remember you need first to define at least one Relation Type in <i>Settings > Relations</i>. Otherwise the option to See or Add relations in the menu will be disabled.</p>
+        <p>Relations are supported between entities from different paragraphs or sections.</p></td>
       </tr>
       <tr>
         <td>Document label</td>

@@ -11,6 +11,15 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## 3.2018-W28.3-SNAPSHOT 🇧🇪
+_???_
+
+<ul class="updates">  
+  <li class="fix">The uploading of documents has been fixed so that special characters such as "#" are accepted in the filenames</li>  
+</ul>
+
+---
+
 ## 3.2018-W28.2 🕵️‍♀️
 2018-07-10
 

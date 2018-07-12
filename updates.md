@@ -9,26 +9,20 @@ Here is the versioned list of all the new features, fixes, and other changes. [t
 
 Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
 
-## Latest
-
-<ul class="updates">  
-  <li class="new"><a title="Annotation types" href="/webeditor.html#annotation-types">Relations</a> are now supported between entities from different paragraphs or sections.</li>
-</ul>
-
-
 ---
 
 ## 3.2018-W28.3-SNAPSHOT 🇧🇪
 _???_
 
-<ul class="updates">  
+<ul class="updates">
+  <li class="new"><a title="Annotation types" href="/webeditor.html#annotation-types">Relations</a> are now supported between entities from different paragraphs or sections 🔛!</li>
   <li class="fix">The uploading of documents has been fixed so that special characters such as "#" are accepted in the filenames</li>  
 </ul>
 
 ---
 
 ## 3.2018-W28.2 🕵️‍♀️
-2018-07-10
+_2018-07-10_
 
 <ul class="updates">  
   <li class="fix">Fixed the problem that users could not edit <a title="Annotation types" href="/webeditor.html#annotation-types">Entity Labels</a></li>

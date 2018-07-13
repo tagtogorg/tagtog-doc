@@ -16,7 +16,9 @@ _???_
 
 <ul class="updates">
   <li class="new"><a title="Annotation types" href="/webeditor.html#annotation-types">Relations</a> are now supported between entities from different paragraphs or sections 🔛!</li>
-  <li class="fix">The uploading of documents has been fixed so that special characters such as "#" are accepted in the filenames</li>  
+  <li class="fix">The uploading of documents has been fixed so that special characters such as "#" are accepted in the filenames</li>
+  <li class="fix">Fixed memory leak that happened when annotating with dictionaries with some specially-charactered files, often PDFs</li>
+  <li class="new">Support for on-premises license updates</li>
 </ul>
 
 ---

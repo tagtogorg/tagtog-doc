@@ -11,12 +11,25 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## 3.2018-W28.3 🇧🇪
+_2018-07-13_
+
+<ul class="updates">
+  <li class="new"><a title="Annotation types" href="/webeditor.html#annotation-types">Relations</a> are now supported between entities from different paragraphs or sections 🔛!</li>
+  <li class="fix">The uploading of documents has been fixed so that special characters such as "#" are accepted in the filenames</li>
+  <li class="fix">Fixed memory leak that happened when annotating with dictionaries with some specially-charactered files, often PDFs</li>
+  <li class="fix">Fixed bug that caused not using re-confirmed documents for ML training</li>
+  <li class="new">Support for on-premises license updates</li>
+</ul>
+
+---
+
 ## 3.2018-W28.2 🕵️‍♀️
-2018-07-10
+_2018-07-10_
 
 <ul class="updates">  
-  <li class="fix">Fixed the problem that users could not edit <a title="Annotation type" href="/webeditor.html#annotation-types">Entity Labels</a></li>
-  <li class="new">The modal menu to set <a title="Annotation type" href="/webeditor.html#annotation-types">Entity Labels</a> is now scrollable and supports a long list of labels</li>
+  <li class="fix">Fixed the problem that users could not edit <a title="Annotation types" href="/webeditor.html#annotation-types">Entity Labels</a></li>
+  <li class="new">The modal menu to set <a title="Annotation types" href="/webeditor.html#annotation-types">Entity Labels</a> is now scrollable and supports a long list of labels</li>
 </ul>
 
 ---

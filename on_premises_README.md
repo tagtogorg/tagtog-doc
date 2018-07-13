@@ -69,8 +69,48 @@ By default, tagtog uses a SSL self-signed certificate. To use your own SSL certi
 * `tagtog_SSL_CERTIFICATE.pem` (you can use a symlink)
 
 
----
-
-## How and where the data is stored
+### How and where the data is stored
 
 All tagtog data is stored in the folder: `${TAGTOG_HOME}/persistent_data/`. We recommend that you have periodic backups to avoid data losses. There are other folders in `$TAGTOG_HOME`, which nature, however, is temporary; you can nonetheless back up that too.
+
+### Proxy
+
+The application supports http proxies and automatically recognizes your host variables `$http_proxy` and `$https_proxy` (either written in both all lower or all upper case).
+
+
+
+
+## Update
+
+You can manually check for [new tagtog updates on this link](http://docs.tagtog.net/updates.html). Then:
+
+```shell
+./tagtog_on_premises update
+./tagtog_on_premises restart latest $TAGTOG_HOME
+```
+
+
+## Troubleshooting
+
+Upon any question or issue, always feel free to write a description of the problem on our [GitHub issues page](https://github.com/tagtog/tagtog-doc/issues), or shoot us directly an email: [info@tagtog.net](mailto:info@tagtog.net).
+
+You can also check the following possible solutions.
+
+### Problems with docker container `tagtog_taskmanager_1` or document uploading:
+
+Try:
+
+1. Removing all queued documents for parsing: `rm "$TAGTOG_HOME/tmp/to_process/*"`
+2. Restarting the application: `./tagtog_on_premises restart latest $TAGTOG_HOME`
+
+
+### Problems in an update
+
+Try:
+
+
+```shell
+echo "0" > LATEST_VERSION
+./tagtog_on_premises update
+./tagtog_on_premises restart latest $TAGTOG_HOME
+```

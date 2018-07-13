@@ -11,8 +11,8 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
-## 3.2018-W28.3-SNAPSHOT 🇧🇪
-_???_
+## 3.2018-W28.3 🇧🇪
+_2018-07-13_
 
 <ul class="updates">
   <li class="new"><a title="Annotation types" href="/webeditor.html#annotation-types">Relations</a> are now supported between entities from different paragraphs or sections 🔛!</li>

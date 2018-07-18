@@ -11,6 +11,17 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## 3.2018-W29.0 🇫🇷
+_2018-07-18_
+
+<ul class="updates">
+  <li class="new">The maximum upload size on the cloud, was augmented from 2MB up to 5MB 📈</li>
+  <li class="fix">Some improvements in the management of on-premises licenses</li>
+  <li class="doc">Simplified pricing information</li>
+</ul>
+
+---
+
 ## 3.2018-W28.3 🇧🇪
 _2018-07-13_
 

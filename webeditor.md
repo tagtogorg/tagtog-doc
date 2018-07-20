@@ -147,7 +147,7 @@ id: webeditor
     </div>
     <div class="two-third-col">
       <h5>Pre-annotations</h5>
-      <p>Automatic annotations created upon the creation or removal of other <strong>equal annotation</strong> (same entity type and same text). These type of annotations increase annotator's <strong>efficiency</strong> as potential candidates for new/to-remove annotations are automatically identified.</p>
+      <p>Automatic annotations created upon the manual creation or removal of other <strong>equal annotation</strong> (same entity type and same text). These type of annotations increase annotator's <strong>efficiency</strong> as potential candidates for new/to-remove annotations are automatically identified.</p>
       <table style="width:100%">
         <tr>
           <th>Pre-annotation type</th>
@@ -164,9 +164,11 @@ id: webeditor
           {% include image.html name="editor-pre-deselection.PNG" width="250" %}</td>
         </tr>
       </table>
+      <p>You can choose whether pre-annotations are <strong>case sensitive</strong> or not. As other properties from pre-annotations, this setting can be change both from the editor and/or at project level: <i>Settings > Annotations</i>.</p>
     </div>
     <div class="one-third-col">
       {% include message.html message="From the editor you can choose whether the pre-selections or pre-deselections are activated or deactivated. You can also change the <strong>default</strong> of these settings at project level in <i>Settings > Annotations</i>." %}
+      {% include message.html message="You can turn on/off <strong>case sensitivity</strong> for pre-annotations" %}
     </div>
     <div class="two-third-col">
       <h5>Annotation Menu</h5>
@@ -270,8 +272,8 @@ id: webeditor
     </div>
     <div class="two-third-col">
       <h4>Pre-annotations</h4>
-      <p>Here you can select whether pre-selections or pre-deselections are activated or deactivated.</p>
-      <p>Each time you load a new document, the default settings from <i>Settings > Annotations</i> will apply. The changes in this menu won't change these default values and only will affect the current document. There are two options: pre-selections and pre-deselections. You can find more information about pre-annotations <a href="#pre-annotations">here</a>.
+      <p>Here you can select whether pre-selections or pre-deselections are activated or deactivated. You can also turn on/off case sensitivity.</p>
+      <p>Each time you load a new document, the default settings from <i>Settings > Annotations</i> will apply. The changes in this menu won't change these default values and only will affect the current document. There are two types of pre-annotations: pre-selections and pre-deselections. You can find more information about pre-annotations <a href="#pre-annotations">here</a>.
     </p>
     </div>
     <div class="one-third-col">

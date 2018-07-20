@@ -267,7 +267,7 @@ A project is a collection of documents and rules to annotate documents manually 
       <h4>Annotations</h4>
       <h5>Pre-annotations</h5>
       <p>These are the annotations that are created automatically while you are manually annotating a document. For example, if you annotate the gene: <code>BRA2</code>. All the mentions of <code>BRA2</code> in this text will be automatically annotated (<a href="/webeditor.html#pre-annotations">more information on pre-annotations</a>).</p>
-      <p>In this panel you can decide which are the <strong>default settings</strong> for pre-annotations: pre-selections and pre-deselections. You can always change these settings on the web editor for specific documents.</p>
+      <p>In this panel you can decide which are the <strong>default settings</strong> for pre-annotations: pre-selections, pre-deselections and their case sensitivity. You can always change these settings on the web editor for specific documents.</p>
     </div>
     <div class="one-third-col">
       <div class="message">

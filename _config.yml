@@ -7,12 +7,15 @@ title:            tagtog
 tagline:          'A text annotation tool to train AI'
 description:      'Official documentation for <a href="https://tagtog.net">tagtog</a>'
 app_url:          https://www.tagtog.net
-url:              https://docs.tagtog.net
+url:              http://docs.tagtog.net
 baseurl:
 sidebar_toc:
   - name: Tutorials
     pages:
       - quick_tutorials
+  - name: What's new
+    pages:
+      - updates
   - name: Web Application
     pages:
       - projects
@@ -38,7 +41,7 @@ sidebar_toc:
   - name: On Premises
     pages:
       - on_premises_readme
-      - updates
+
 
 author:
   name:           'tagtog Sp. z o.o.'

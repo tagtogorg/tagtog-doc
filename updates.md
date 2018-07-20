@@ -9,6 +9,12 @@ Here is the versioned list of all the new features, fixes, and other changes. [t
 
 Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
 
+## 3.2018-W29.1-SNAPSHOT 🇫🇷
+
+<ul class="updates">
+  <li class="doc">Improved reporting of parsing errors in API uploads</li>
+</ul>
+
 ---
 
 ## 3.2018-W29.0 🇫🇷

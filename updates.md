@@ -14,6 +14,7 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 <ul class="updates">
   <li class="new">Now you can choose whether <a title="tagtog - pre-annotations" href="/webeditor.html#pre-annotations">pre-annotations</a> (i.e. the automatic annotations that are created while manually annotating) are <strong>case sensitive or not</strong>.</li>
   <li class="doc">Improved reporting of parsing errors in API uploads</li>
+  <li class="doc">Until further notice, ML is now deactivated by default -- <a href="/projects.html#machine-learning">You can activate it in Settings</a></li>
 </ul>
 
 ---

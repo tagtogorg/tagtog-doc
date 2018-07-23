@@ -17,6 +17,7 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
   <li class="new"><a href="/machine-learning.html">Machine Learning</a> is now deactivated by default for new projects -- <a title="Settings - Machine Learning" href="/projects.html#machine-learning">You can activate it in Settings</a></li>
   <li class="doc">Limited the amount of entity types, depending on the plan: cloud start (3), cloud medium (10), cloud large (25), on-premises annotator (25), on-premises annotator+ML (50)</li>
   <li class="doc">Add documentation links to Settings</li>
+  <li class="fix">Correct URLs for Project Settings sections</li>
 </ul>
 
 ---

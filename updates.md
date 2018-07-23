@@ -14,8 +14,10 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 <ul class="updates">
   <li class="new">Now you can choose whether <a title="tagtog - pre-annotations" href="/webeditor.html#pre-annotations">pre-annotations</a> (i.e. the automatic annotations that are created while manually annotating) are <strong>case sensitive or not</strong>.</li>
   <li class="doc">Improved reporting of parsing errors in API uploads</li>
-  <li class="doc">Until further notice, ML is now deactivated by default -- <a href="/projects.html#machine-learning">You can activate it in Settings</a></li>
-  <li class="doc">Limited the amount of entity types, depending on the plan: cloud start (3), cloud medium (10), cloud large (25), on-premises annotator (25), on-premises annotator+ML (50)</a></li>a
+  <li class="new"><a href="/machine-learning.html">Machine Learning</a> is now deactivated by default for new projects -- <a title="Settings - Machine Learning" href="/projects.html#machine-learning">You can activate it in Settings</a></li>
+  <li class="doc">Limited the amount of entity types, depending on the plan: cloud start (3), cloud medium (10), cloud large (25), on-premises annotator (25), on-premises annotator+ML (50)</li>
+  <li class="doc">Add documentation links to Settings</li>
+  <li class="fix">Correct URLs for Project Settings sections</li>
 </ul>
 
 ---

@@ -104,10 +104,3 @@ api_project: yourProjectName
   ```
   </div>
 </div>
-
-
-<div class="two-third-col">
-  <h2>Other formats?</h2>
-
-  <p>We are currently experimenting with other formats to simplify the whole process. <a href="https://twitter.com/tagtog_net">Stay tuned :smirk::bird:</a>.</p>
-</div>

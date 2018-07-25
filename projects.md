@@ -230,8 +230,41 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Webhooks</h4>
-      <p>You can define webhooks to notify an external system after a specific action in tagtog or API. These actions are: upload a new document and save a document.</p>
-        
+      <p>The webhooks are useful to integrate tagtog within your system. You can define webhooks to notify automatically an external system after a specific event in tagtog or API.</p> 
+      <p>These events are:</p>
+      <table style="width:100%">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+          <th>Source</th>
+        </tr>
+        <tr>
+          <td>Import new document</td>
+          <td>A notification is sent when the user upload a document.</td>
+          <td><code>GUI</code> and <code>API</code></td>
+        </tr>
+        <tr>
+          <td>Save document</td>
+          <td>A notification is sent when the user save a document.</td>
+          <td><code>GUI</code> and <code>API</code> (<a href="/train-your-own-models.html#how-to-upload-annotated-documents">update annotations via API</a>)</td>
+        </tr>
+      </table>
+      <p>When any of those events is triggered, we'll send a <strong>HTTP POST payload</strong> to the webhook's configured End Point URL.</p>
+      <p>We also send information in the delivery <strong>HTTP headers</strong> for you to better process the event:</p>
+      <table style="width:100%">
+        <tr>
+          <th>Header</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>X-tagtog-onPushSave-source</code></td>
+          <td>Source of the event. Possible values: <code>GUI</code>, <code>API</code></td>
+        </tr>
+        <tr>
+          <td><code>X-tagtog-onPushSave-status</code></td>
+          <td>Type of event. Possible values: <code>created</code>, <code>updated</code></td>
+        </tr>
+      </table>
       <p>This is the required information to configure a webhook:</p>
       <table style="width:100%">
         <tr>
@@ -244,7 +277,12 @@ A project is a collection of documents and rules to annotate documents manually 
         </tr>
         <tr>
           <td>Format</td>
-          <td>Format to be sent to the End Point. Currently you can select: <code>ann.json</code> (<a href="/anndoc.html#ann-json">docs</a>), <code>docJSON</code> (used internally for some users) and <code>PubAnnotation</code>(<a href="http://www.pubannotation.org/docs/annotation-format/">docs</a>)</td>
+          <td>Format of the payload to be sent to the End Point. Currently you can select: 
+            <ul>
+              <li><code>ann.json</code>(<a href="/anndoc.html#ann-json">docs</a>). <code>application/json</code></li>
+              <li><code>tagtogID</code> (ID of the document related to the event). <code>text/plain</code></li>
+            </ul>
+          </td>
         </tr>
         <tr>
           <td>Only GUI trigger</td>

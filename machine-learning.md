@@ -40,30 +40,35 @@ id: ml
 <div class="two-third-col">
   <br/> 
   <p>To train a ML model follow the next steps: </p>
-  
-  <p class="numbered-item"><span class="number-1">1</span><a title="tagtog docs - create a project" href="/projects.html#creating-a-project">Create a project</a>, define one or more <a title="tagtog docs - entity types" href="/projects.html#entities">entity types</a> and import a document (if you have pre-annotated documents you can import them too).</p> 
+
+  <p class="numbered-item"><span class="number-1">1</span><a title="tagtog docs - create a project" href="/projects.html#creating-a-project">Create a project</a> and activate Machine Learning (<i>Settings > Annotations</i>).</p> 
   <br>
 </div>
 <div class="one-third-col">
   {% include message.html message="Currently automatic annotations are only available for Name Entity Recognition." %}
 </div>
+
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span><strong>Annotate the text with the entities you want to extract automatically</strong>. When you have finished annotating, use the <strong>Confirm</strong> button to tell tagtog these annotations are ready to be used as training data. When you click this button, in the background, the custom model is being trained and deployed automatically using all the confirmed annotations in your project. The process is <strong>very fast</strong> and you can immediately annotate other documents automatically using this model.</p>
+  <p class="numbered-item"><span class="number-2">2</span><strong>Define one or more <a title="tagtog docs - entity types" href="/projects.html#entities">entity types</a></strong>.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message='<strong>Machine learning is not active by default</strong>. You can activate it at <i>Settings > Annotations</i>. Please notice that this only will activate the automatic annotations provided by ML. Automatic annotations provided by dictionaries are independent and always active.' %}
+</div>
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-3">3</span>Import a document (if you have pre-annotated documents you can import them too) and <strong>annotate the text with the entities you want to extract automatically</strong>. When you have finished annotating, use the <strong>Confirm</strong> button to tell tagtog these annotations are ready to be used as training data. When you click this button, in the background, the custom model is being trained and deployed automatically using all the confirmed annotations in your project. The process is <strong>very fast</strong> and you can immediately annotate other documents automatically using this model.</p>
   {% include image.html name="annotate_date.gif" caption="Example of document where dates are being annotated"%}
 </div>
 <div class="one-third-col">
-  {% include message.html message='<strong>Machine learning is active by default</strong>. You can deactivate it at <i>Settings > Annotations</i>. Please notice that this only will deactivate the automatic annotations provided by ML. Automatic annotations provided by dictionaries are independent and always active.' %}
- 
  {% include message.html message="Machine learning only trains with the <strong>master</strong> version of your documents." %}
 </div>  
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Use the model</strong>. When you import new documents using the interface or the <a title="tagtog - API documentation" href="/API.html">API</a>, they are automatically annotated by the custom ML model.</p>
+  <p class="numbered-item"><span class="number-4">4</span><strong>Use the model</strong>. When you import new documents using the interface or the <a title="tagtog - API documentation" href="/API.html">API</a>, they are automatically annotated by the custom ML model.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='To facilitate automation, models are also accessible as a highly-reliable <strong><a title="tagtog - API documentation" href="/API.html">API</a></strong>.' %}
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-4">4</span><strong>Continuous learning</strong>. Were any automatic annotations wrong? was important information not annotated? something new to teach? No problem. Just remove/edit the wrong annotations and add those that are missing. Click on the Confirm button. Again all the confirmed documents are used to retrain the model with your new findings.</p>
+  <p class="numbered-item"><span class="number-5">5</span><strong>Continuous learning</strong>. Were any automatic annotations wrong? was important information not annotated? something new to teach? No problem. Just remove/edit the wrong annotations and add those that are missing. Click on the Confirm button. Again all the confirmed documents are used to retrain the model with your new findings.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message="<strong>While a model is being retrained, the previous version of the model is fully available to process requests</strong>. In this way we guarantee your model is always accessible. Once the new version of the model has been trained and deployed, it replaces the previous version." %}

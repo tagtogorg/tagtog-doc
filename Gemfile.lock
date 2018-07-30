@@ -54,6 +54,8 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
+    jekyll-toc (0.6.0)
+      nokogiri (~> 1.7)
     jekyll-watch (2.0.0)
       listen (~> 3.0)
     jemoji (0.8.1)
@@ -102,6 +104,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.12)
   jekyll-theme-hydeout!
+  jekyll-toc
   jemoji
 
 BUNDLED WITH

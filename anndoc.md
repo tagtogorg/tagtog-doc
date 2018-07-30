@@ -4,6 +4,7 @@ title: anndoc format
 sidebar_link: true
 version: 2.0
 id: anndoc
+toc: true
 ---
 
 <div class="two-third-col">

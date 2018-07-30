@@ -3,6 +3,7 @@ layout: page
 title: Annotation editor
 sidebar_link: true
 id: webeditor
+toc: true
 ---
 
 <div class="page-section">

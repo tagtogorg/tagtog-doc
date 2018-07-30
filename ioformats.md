@@ -3,7 +3,9 @@ layout: page
 title: Input / Output formats
 sidebar_link: true
 id: formats
+toc: true
 ---
+
 <div class="page-section">
   <h2>Input formats</h2>
   <div class="two-third-col">

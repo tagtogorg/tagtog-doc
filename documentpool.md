@@ -3,6 +3,7 @@ layout: page
 title: Document pool
 sidebar_link: true
 id: document_pool
+toc: true
 ---
 
 <div class="two-third-col">

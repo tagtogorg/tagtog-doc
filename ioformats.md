@@ -138,7 +138,7 @@ toc: true
         <td><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></td>
       </tr>
       <tr>
-        <td><code>HTML</code>, <code>XML</code></td>
+        <td><code>html</code>, <code>xml</code></td>
         <td>No annotations provided within this format, only content.</td>
       </tr>
       <tr>

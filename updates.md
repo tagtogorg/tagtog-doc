@@ -17,6 +17,7 @@ _???_
 <ul class="updates">
   <li class="new">Deletable Settings: entities, dictionaries, and relationships! Thank you all for your feedback on this one ❤️</li>
   <li class="new">Admin panel On-Premises to manage the system's users</li>
+  <li class="fix">Fixed parsing of PubMed documents (that moved to a new data scheme format as of 2018-06-01)</li>
 </ul>
 
 ---

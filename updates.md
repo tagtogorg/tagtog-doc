@@ -9,6 +9,8 @@ Here is the versioned list of all the new features, fixes, and other changes. [t
 
 Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
 
+---
+
 ## 3.2018-W??? ⛱
 _???_
 
@@ -16,6 +18,8 @@ _???_
   <li class="new">Deletable Settings: entities, dictionaries, and relationships! Thank you all for your feedback on this one ❤️</li>
   <li class="new">Admin panel On-Premises to manage the system's users</li>
 </ul>
+
+---
 
 ## 3.2018-W30.1 📑🤖
 _2018-07-26_

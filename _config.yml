@@ -10,34 +10,37 @@ app_url:          https://www.tagtog.net
 url:              http://docs.tagtog.net
 baseurl:
 sidebar_toc:
-  - name: Tutorials
-    pages:
-      - quick_tutorials
   - name: What's new
     pages:
       - updates
+
+  - name: Tutorials
+    pages:
+      - quick_tutorials
+      - ml
+      - train-your-own-models
+
   - name: Web Application
     pages:
       - projects
       - document_pool
       - webeditor
       - collaboration
+
   - name: API
     pages:
       - api
-  - name: AI
-    pages:
-      - ml
-      - train-your-own-models
   - name: Concept Search
     pages:
       - search
       - search_queries
+
   - name: Formats
     pages:
       - formats
       - anndoc
       - dictionaries
+
   - name: On Premises
     pages:
       - on_premises_readme

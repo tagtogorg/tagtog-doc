@@ -45,17 +45,17 @@ def parse_arguments(argv=[]):
     # -----------------------------------------------------------------------------------------------------------------
 
     def add_common_arguments(parser, default_output):
-        parser.add_argument("--domain", default=DEFAULT_DOMAIN, help="tagtog domain, e.g. http://localhost:80/. You can set the default with the environment variable `TAGTOG_DOMAIN`")
+        parser.add_argument("--domain", "-d", default=DEFAULT_DOMAIN, help="tagtog domain, e.g. http://localhost:80/. You can set the default with the environment variable `TAGTOG_DOMAIN`")
         parser.add_argument("--entrypoint", default="-api/documents/v1")
 
         parser.add_argument("--user", "-u", required=True, help="tagtog username making the request")
         parser.add_argument('--password', "-w", default=None, help="User's password -- if not given, the password is prompted")
-        parser.add_argument("--owner", help="Project owner in tagtog -- defaults to the user")
+        parser.add_argument("--owner", "-o", help="Project owner in tagtog -- defaults to the user")
         parser.add_argument("--project", "-p", required=True, help="Project name in tagtog to operate on")
         parser.add_argument("--member", "-m", required=False, help="(Optional) Project member name to operate documents on")
         parser.add_argument("--verify_ssl", type=str2bool, default=True, help="(Optional) Choose to verify or not the ssl certificate of the endpoint domain when making http requests; true by default")
 
-        parser.add_argument("--output", default=default_output, help="Output format of tagtog's response")
+        parser.add_argument("--output", "-t", default=default_output, help="Output format of tagtog's response")
 
         return parser
 

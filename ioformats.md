@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Input / Output formats
+title: Inputs & Outputs
 sidebar_link: true
 id: formats
 toc: true

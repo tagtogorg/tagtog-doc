@@ -11,12 +11,13 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
-## 3.2018-W??? ⛱
-_???_
+## 3.2018-W31.1 ⛱
+_2018-08-05_
 
 <ul class="updates">
   <li class="new">Deletable Settings: entities, dictionaries, and relationships! Thank you all for your feedback on this one ❤️</li>
   <li class="new">Admin panel On-Premises to manage the system's users</li>
+  <li class="new">New output format! <a href="/EntitiesTsv">EntitiesTsv</a>, closely resembling Stanford NER tsv format🎉</li>
   <li class="fix">Fixed parsing of PubMed documents (that moved to a new data scheme format as of 2018-06-01)</li>
 </ul>
 

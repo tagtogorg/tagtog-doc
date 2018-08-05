@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Input / Output formats
+title: Inputs & Outputs
 sidebar_link: true
 id: formats
+toc: true
 ---
+
 <div class="page-section">
   <h2>Input formats</h2>
   <div class="two-third-col">
@@ -92,7 +94,7 @@ id: formats
 
   </div>
 
-  
+
 </div>
 <div class="page-section">
   <h2>Annotation input formats</h2>
@@ -110,10 +112,10 @@ id: formats
     </table>
   </div>
   <div class="one-third-col">
-    
+
   </div>
 </div>
-  
+
 <div class="page-section">
   <h2>Output formats</h2>
   <br/>
@@ -126,6 +128,18 @@ id: formats
       <tr>
         <td><code>ann.json</code></td>
         <td>Only annotations. <a title="tagtog - ann doc" href="/anndoc.html">Official documentation</a></td>
+      </tr>      
+      <tr>
+        <td><code>html</code>, <code>xml</code></td>
+        <td>No annotations provided within this format, only content.</td>
+      </tr>
+      <tr>
+        <td><code>txt</code></td>
+        <td>Plain text. No annotations provided within this format, only content.</td>
+      </tr>
+      <tr>
+        <td><code>entitiestsv</code></td>
+        <td><a href="/EntitiesTsv">EntitiesTsv documentation</a></td>
       </tr>
       <tr>
         <td><code>docJSON</code></td>
@@ -133,20 +147,12 @@ id: formats
       </tr>
       <tr>
         <td><code>pubannotation</code></td>
-        <td><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></td>
-      </tr>
-      <tr>
-        <td><code>HTML</code>, <code>XML</code></td>
-        <td>No annotations provided within this format, only content.</td>
-      </tr>
-      <tr>
-        <td><code>txt</code></td>
-        <td>Plain text. No annotations provided within this format, only content.</td>
+        <td><span class="soon"><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></span> Coming soon</td>
       </tr>
     </table>
   </div>
   <div class="one-third-col">
-  
+
   </div>
   <div class="two-third-col">
     <h2>Other formats?</h2>

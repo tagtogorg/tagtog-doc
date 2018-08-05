@@ -3,6 +3,7 @@ layout: page
 title: Machine Learning
 sidebar_link: true
 id: ml
+toc: true
 ---
 
 <div class="two-third-col">

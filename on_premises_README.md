@@ -3,6 +3,7 @@ layout: page
 title: Installation
 sidebar_link: true
 id: on_premises_readme
+toc: true
 ---
 
 Copyright © tagtog Sp. z o.o.

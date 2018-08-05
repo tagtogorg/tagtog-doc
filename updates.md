@@ -9,6 +9,20 @@ Here is the versioned list of all the new features, fixes, and other changes. [t
 
 Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
 
+---
+
+## 3.2018-W31.1 ⛱
+_2018-08-05_
+
+<ul class="updates">
+  <li class="new">Deletable Settings: entities, dictionaries, and relationships! Thank you all for your feedback on this one ❤️</li>
+  <li class="new">Admin panel On-Premises to manage the system's users</li>
+  <li class="new">New output format! <a href="/EntitiesTsv">EntitiesTsv</a>, closely resembling Stanford NER tsv format🎉</li>
+  <li class="fix">Fixed parsing of PubMed documents (that moved to a new data scheme format as of 2018-06-01)</li>
+</ul>
+
+---
+
 ## 3.2018-W30.1 📑🤖
 _2018-07-26_
 

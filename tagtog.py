@@ -55,7 +55,7 @@ def parse_arguments(argv=[]):
         parser.add_argument("--member", "-m", required=False, help="(Optional) Project member name to operate documents on")
         parser.add_argument("--verify_ssl", type=str2bool, default=True, help="(Optional) Choose to verify or not the ssl certificate of the endpoint domain when making http requests; true by default")
 
-        parser.add_argument("--output", "-t", default=default_output, help="Output type of tagtog's response")
+        parser.add_argument("--output", "-t", default=default_output, help="Output format of tagtog's response")
 
         return parser
 
@@ -66,6 +66,8 @@ def parse_arguments(argv=[]):
     upload_parser.set_defaults(func=print_upload)
 
     upload_parser.add_argument("paths", nargs="+", help="paths of files or folders containing (recursively) the files to upload or otherwise the ids in the external repository (see idType) of documents to upload")
+
+    upload_parser.add_argument("--format", "--input", default=None, help="Input format for tagtog's request. If not given, this is guessed by the tagtog server")
     upload_parser.add_argument("--extension", "-e", default="json", help="extension of files to upload when recursively reading files from a folder, e.g. json or txt")
     upload_parser.add_argument("--idType", "-i", choices=["PMID", "PMCID"], help="(Optional) id type of external repositories to use for document upload. See tagtog API")
 
@@ -75,7 +77,7 @@ def parse_arguments(argv=[]):
     search_parser = add_common_arguments(search_parser, default_output="search")
     search_parser.set_defaults(func=print_search)
 
-    search_parser.add_argument("search", nargs="+", help="search query")
+    search_parser.add_argument("search", nargs="+", help="search query (a same string used on the GUI)")
 
     # -----------------------------------------------------------------------------------------------------------------
 
@@ -83,7 +85,7 @@ def parse_arguments(argv=[]):
     downld_parser = add_common_arguments(downld_parser, default_output="ann.json")
     downld_parser.set_defaults(func=print_download)
 
-    downld_parser.add_argument("search", nargs="+", help="search query")
+    downld_parser.add_argument("search", nargs="+", help="search query (a same string used on the GUI)")
     downld_parser.add_argument("--output_folder", default=".", help="(Optional; defaults to '.') folder path where to store the result files to")
 
     # -----------------------------------------------------------------------------------------------------------------
@@ -121,6 +123,10 @@ def parse_arguments(argv=[]):
             args.req_params["idType"] = args.idType
             args.req_params["ids"] = ",".join(args.paths)
 
+        if args.format:
+            args.req_params["format"] = args.format
+
+    # -----------------------------------------------------------------------------------------------------------------
 
     if args.action in ["search", "download"]:
         args.search = " ".join(args.search)

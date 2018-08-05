@@ -3,6 +3,7 @@ layout: page
 title: Multi-user annotation
 sidebar_link: true
 id: collaboration
+toc: true
 ---
 <div class="two-third-col">
   <p>tagtog is a multi-user tool. Collaborate with other users to annotate faster and improve the quality of your annotations.</p>

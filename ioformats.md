@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Input / Output formats
+title: Inputs & Outputs
 sidebar_link: true
 id: formats
 toc: true
@@ -94,7 +94,7 @@ toc: true
 
   </div>
 
-  
+
 </div>
 <div class="page-section">
   <h2>Annotation input formats</h2>
@@ -112,10 +112,10 @@ toc: true
     </table>
   </div>
   <div class="one-third-col">
-    
+
   </div>
 </div>
-  
+
 <div class="page-section">
   <h2>Output formats</h2>
   <br/>
@@ -128,15 +128,7 @@ toc: true
       <tr>
         <td><code>ann.json</code></td>
         <td>Only annotations. <a title="tagtog - ann doc" href="/anndoc.html">Official documentation</a></td>
-      </tr>
-      <tr>
-        <td><code>docJSON</code></td>
-        <td>Designed for some specific users. Annotations and text content. Documentation not available.</td>
-      </tr>
-      <tr>
-        <td><code>pubannotation</code></td>
-        <td><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></td>
-      </tr>
+      </tr>      
       <tr>
         <td><code>html</code>, <code>xml</code></td>
         <td>No annotations provided within this format, only content.</td>
@@ -145,10 +137,22 @@ toc: true
         <td><code>txt</code></td>
         <td>Plain text. No annotations provided within this format, only content.</td>
       </tr>
+      <tr>
+        <td><code>entitiestsv</code></td>
+        <td><a href="/EntitiesTsv">EntitiesTsv documentation</a></td>
+      </tr>
+      <tr>
+        <td><code>docJSON</code></td>
+        <td>Designed for some specific users. Annotations and text content. Documentation not available.</td>
+      </tr>
+      <tr>
+        <td><code>pubannotation</code></td>
+        <td><span class="soon"><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></span> Coming soon</td>
+      </tr>
     </table>
   </div>
   <div class="one-third-col">
-  
+
   </div>
   <div class="two-third-col">
     <h2>Other formats?</h2>

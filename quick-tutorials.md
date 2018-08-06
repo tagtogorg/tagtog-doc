@@ -5,6 +5,8 @@ sidebar_link: true
 id: quick_tutorials
 ---
 
+Know what you can do with tagtog with the following tutorials. Moreover, we publish other tips on our [🗞 Medium blog](https://medium.com/@tagtog).
+
 <div class="two-third-col">
   <h2><a title="tagtog at Medium - Train and deploy a custom ML model to recognize dates in text in 5 minutes" href="https://medium.com/@tagtog/train-and-deploy-a-custom-ml-model-to-recognize-dates-in-text-in-5-minutes-a17d604be5f9">Train and deploy a custom ML model to recognize dates in text in 5 minutes</a></h2>
   <p>Learn how to create and use a <strong>custom ML model from scratch just by using some text annotations</strong>. We are going to show you how to build a model that extracts dates in text. All will take 5 minutes of your time.</p>
@@ -28,5 +30,3 @@ id: quick_tutorials
 <div class="one-third-col">
   {% include image.html name="pokemon.png" %}
 </div>
-
-

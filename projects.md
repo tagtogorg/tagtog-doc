@@ -6,7 +6,6 @@ id: projects
 toc: true
 ---
 
-
 A project is a collection of documents and rules to annotate documents manually or automatically.
 
 

@@ -157,7 +157,7 @@ toc: true
   <div class="two-third-col">
     <h2>Other formats?</h2>
 
-    <p>We are currently experimenting with other formats to simplify the whole process. <a href="https://twitter.com/tagtog_net">Stay tuned :smirk::bird:</a>.</p>
+    <p markdown="1">We are currently experimenting with other formats to ease your work. [Stay tuned :smirk::bird:](https://twitter.com/tagtog_net).</p>
   </div>
 
 </div>

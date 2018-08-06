@@ -11,6 +11,27 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## 3.2018-W31.2 🏝
+_2018-08-06_
+
+<ul class="updates">
+  <li class="fix">Fixed bug that could cause to delete dictionary normalizations</li>
+  <li class="new">Much simplified color selection while defining new entities! New entities now get a semi-randomized distinct color 🌈</li>
+  <li class="doc">Improved error reporting on internal server errors</li>
+  <li class="new del"><span class="new">The webhook output <code>tagtogID</code>'s payload was changed from a simple string (<code>text/plain</code>) containing a <i>tagtogID</i>, to a simple JSON object(<code>application/json</code>) containing the distinctive three:</span></li>
+  <div markdown="1">
+  ```json
+  {
+    "owner": "...",
+    "project": "...",
+    "tagtogID": "..."
+  }
+  ```
+  </div>
+</ul>
+
+---
+
 ## 3.2018-W31.1 ⛱
 _2018-08-05_
 

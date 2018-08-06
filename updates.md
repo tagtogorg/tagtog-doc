@@ -18,7 +18,7 @@ _2018-08-06_
   <li class="fix">Fixed bug that could cause to delete dictionary normalizations</li>
   <li class="new">Much simplified color selection while defining new entities! New entities now get a semi-randomized distinct color 🌈</li>
   <li class="doc">Improved error reporting on internal server errors</li>
-  <li class="new del"><span class="new">The webhook output <code>tagtogID</code>'s payload was changed from a simple string (<code>text/plain</code>) containing a <i>tagtogID</i>, to a simple JSON object(<code>application/json</code>) containing the distinctive three:</span></li>
+  <li class="new del"><span class="new">The <a title="tagtog - webhooks" href="/projects.html#webhooks">webhook</a> output <code>tagtogID</code>'s payload was changed from a simple string (<code>text/plain</code>) containing a <i>tagtogID</i>, to a simple JSON object(<code>application/json</code>) containing the distinctive three:</span></li>
   <div markdown="1">
   ```json
   {

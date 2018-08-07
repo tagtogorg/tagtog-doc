@@ -6,7 +6,6 @@ id: projects
 toc: true
 ---
 
-
 A project is a collection of documents and rules to annotate documents manually or automatically.
 
 
@@ -15,7 +14,7 @@ A project is a collection of documents and rules to annotate documents manually 
     <p>Once you have signed up and you have a user account, you are ready to create a new project.</p>
     <p class="numbered-item"><span class="number-1">1</span>Choose a <strong>name</strong> for your project</p><br>
     <p class="numbered-item"><span class="number-2">2</span>Choose <strong>one or more already trained machine learning models</strong> (we call them 'machines'). Machines are split into categories (e.g. Biomedical). Each model extract specific information from text.</p>
-    
+
   </div>
   <div class="one-third-col">
     {% include image.html name="define-new-proj.PNG" caption="Defining a new project"%}
@@ -27,7 +26,7 @@ A project is a collection of documents and rules to annotate documents manually 
     <p>If you selected some machines when you created your project, you probably want to start importing text to tagtog. Otherwise, you need to configure the project's settings either to annotate manually or automatically.</p>
   </div>
   <div class="one-third-col">
-    
+
   </div>
 
   <div class="page-subsection">
@@ -86,7 +85,7 @@ A project is a collection of documents and rules to annotate documents manually 
       <p>You must add one or more entity types. Each entity is defined by a <code>name</code>, <code>description</code> (optional) and <code>color</code>. For example in the project in the picture above we want to extract vehicle information and for that we have created entity types to annotate vehicle parts (<code>vehiclePart</code>), vehicle types, (<code>vehicleType</code>) and vehicle model (<code>vehicleModel</code>). In order to easily identify the entities in the text, we will assign to each entity type a color.</p>
     </div>
     <div class="one-third-col">
-      
+
     </div>
   </div>
   <div class="page-subsection">
@@ -223,7 +222,7 @@ A project is a collection of documents and rules to annotate documents manually 
     </div>
     <div class="one-third-col">
       <div class="message">
-        <strong>Tip</strong>: an entity itself contains information as entity type, text, etc. Entity labels are useful to add additional attributes to entities. 
+        <strong>Tip</strong>: an entity itself contains information as entity type, text, etc. Entity labels are useful to add additional attributes to entities.
       </div>
     </div>
   </div>
@@ -231,7 +230,7 @@ A project is a collection of documents and rules to annotate documents manually 
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Webhooks</h4>
-      <p>The webhooks are useful to integrate tagtog within your system. You can define webhooks to notify automatically an external system after a specific event in tagtog or API.</p> 
+      <p>The webhooks are useful to integrate tagtog within your system. You can define webhooks to notify automatically an external system after a specific event in tagtog or API.</p>
       <p>These events are:</p>
       <table style="width:100%">
         <tr>
@@ -278,10 +277,10 @@ A project is a collection of documents and rules to annotate documents manually 
         </tr>
         <tr>
           <td>Format</td>
-          <td>Format of the payload to be sent to the End Point. Currently you can select: 
+          <td>Format of the payload to be sent to the End Point. Currently you can select:
             <ul>
-              <li><code>ann.json</code>(<a href="/anndoc.html#ann-json">docs</a>). <code>application/json</code></li>
-              <li><code>tagtogID</code> (ID of the document related to the event). <code>text/plain</code></li>
+              <li><code>ann.json</code> (<a href="/anndoc.html#ann-json">docs</a>). <code>application/json</code></li>
+              <li><code>tagtogID</code> (simple json object like: <code>{"owner": "...", "project": "...", "tagtogID": "...document id related to the event..."}</code>). <code>application/json</code></li>
             </ul>
           </td>
         </tr>
@@ -320,7 +319,7 @@ A project is a collection of documents and rules to annotate documents manually 
       <p>If you don't want to use machine learning, deactivate this option.</p>
     </div>
     <div class="one-third-col">
-      <div class="message">Automatic annotations with <strong>dictionaries</strong> will work with machine learning either activated or deactivated</div> 
+      <div class="message">Automatic annotations with <strong>dictionaries</strong> will work with machine learning either activated or deactivated</div>
     </div>
   </div>
   <div class="page-subsection">

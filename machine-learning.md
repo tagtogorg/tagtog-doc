@@ -3,9 +3,7 @@ layout: page
 title: Machine Learning
 sidebar_link: true
 id: ml
-toc: true
 ---
-
 <div class="two-third-col">
   <br>
   <p><strong>Two of the main barriers to Machine Learning are deployment and scaling</strong>. Deploying manually models requires time and engineering resources. Scaling the usage of these models requires a powerful infrastructure, the effort to maintain it and cost control. With tagtog, this complexity is transparent to users. <strong>We take care of the training mechanisms, the deployment and the handling of usage spikes</strong>. You only focus on problem solving using the web editor to indicate what you want to recognize in text. This will be the training data tagtog learns from. All without writing any code, empowering experts in any field to train and use machine learning models.</p>

@@ -8,6 +8,8 @@ api_document_url: https://www.tagtog.net/-api/documents/v1
 api_username: yourUsername
 api_pwd: yourPassword
 api_project: yourProjectName
+
+notoc: true
 ---
 
 <div class="two-third-col">

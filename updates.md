@@ -3,6 +3,7 @@ layout: page
 title: Updates
 sidebar_link: true
 id: updates
+notoc: true
 ---
 
 Here is the versioned list of all the new features and changes. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog On-Premises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.

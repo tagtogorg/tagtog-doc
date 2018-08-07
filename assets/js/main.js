@@ -20,4 +20,8 @@ $(document).ready(function() {
       window.location.hash = hash;
     }, 300);
   }
+
+  $('#toc ').toc({
+    selector: 'h2,h3,h4,h5',
+  });
 });

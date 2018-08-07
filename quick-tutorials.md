@@ -3,6 +3,7 @@ layout: page
 title: Quick tutorials
 sidebar_link: true
 id: quick_tutorials
+notoc: true
 ---
 
 Know what you can do with tagtog with the following tutorials. Moreover, we publish other tips on our [🗞 Medium blog](https://medium.com/@tagtog).

@@ -3,13 +3,10 @@ layout: page
 title: Projects
 sidebar_link: true
 id: projects
-toc: true
 ---
 
-A project is a collection of documents and rules to annotate documents manually or automatically.
-
-
   <div class="two-third-col">
+    <p>A project is a collection of documents and rules to annotate documents manually or automatically.</p>
     <h3>Creating a project</h3>
     <p>Once you have signed up and you have a user account, you are ready to create a new project.</p>
     <p class="numbered-item"><span class="number-1">1</span>Choose a <strong>name</strong> for your project</p><br>
@@ -317,6 +314,7 @@ A project is a collection of documents and rules to annotate documents manually 
       <p>Each time you press the button <code>Confirm</code> in the annotation editor, in the background, <strong>a machine learning model is being trained with all the project documents confirmed</strong>. Next time you upload a new document, this model can predict new annotations based on this model. You can remove or add new annotations to continue training the model and get more accurate results.</p>
       <p>If activated, machine learning will start annotating automatically from the first document confirmed. <strong>No deployments or complex configurations are required</strong>, just by annotating you can train a use a machine learning model.</p>
       <p>If you don't want to use machine learning, deactivate this option.</p>
+      <p>More information on how <a title="tagtog - machine learning" href="/machine-learning.html">Machine Learning</a> works in tagtog.</p>
     </div>
     <div class="one-third-col">
       <div class="message">Automatic annotations with <strong>dictionaries</strong> will work with machine learning either activated or deactivated</div>

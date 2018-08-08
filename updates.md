@@ -17,6 +17,7 @@ _2018-XX-XX_
 
 <ul class="updates">
   <li class="fix">Fixed bug that created issues with annotations when the character <code><</code> was in the imported text. Thank you for spotting this ❤️!</li>
+  <li class="fix">Fixed bug that made not possible to open documents in IE.</li>
   
 </ul>
 

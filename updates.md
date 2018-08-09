@@ -12,13 +12,12 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
-## Latest
-_2018-XX-XX_
+## 3.2018-W31.3 🎂
+_2018-08-09_
 
 <ul class="updates">
   <li class="fix">Fixed bug that created issues with annotations when the character <code><</code> was in the imported text. Thank you for spotting this ❤️!</li>
-  <li class="fix">Fixed bug that made not possible to open documents in IE.</li>
-  
+  <li class="fix">Fixed bug that made not possible to open documents in IE.</li>  
 </ul>
 
 ---

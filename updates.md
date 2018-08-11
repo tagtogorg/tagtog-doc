@@ -12,6 +12,13 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## 3.2018-W31.4 ☀️
+_2018-08-12_
+
+<ul class="updates">
+  <li class="fix" markdown="1">Fixed small bug that impeded opening documents if there was a documents navigation error</li>
+</ul>
+
 ## 3.2018-W31.3 🎂
 _2018-08-09_
 

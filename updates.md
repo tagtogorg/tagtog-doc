@@ -12,13 +12,21 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## 3.2018-W34.4 🤔
+_2018-08-23_
+
+<ul class="updates">
+  <li class="fix">Fixed bug that could impede the communication between docker containers on-premises when using an http proxy</li>
+</ul>
+
+---
+
 ## 3.2018-W34.2 🐳
 _2018-08-22_
 
 <ul class="updates">
-  <li class="fix">Fixed bug that could impede the communication between the docker containers on-premises</li>
+  <li class="fix">Fixed bug that could impede the communication between docker containers on-premises</li>
 </ul>
-
 
 ---
 

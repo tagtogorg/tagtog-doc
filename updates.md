@@ -12,6 +12,15 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## ???
+_???_
+
+<ul class="updates">
+  <li class="del">The project deletion action has been moved to the corresponding project's settings (instead of on the projects list)</li>
+</ul>
+
+---
+
 ## 3.2018-W34.4 🤔
 _2018-08-23_
 

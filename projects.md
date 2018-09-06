@@ -341,7 +341,8 @@ id: projects
   <div class="page-subsection">
     <div class="two-third-col">
       <h3>Remove a project</h3>
-      <p>To remove a project go to the list of projects (you can go easily by clicking in the tagtog logo on the top left). Click on the <code>Delete</code> button in the project card.</p>
+      <p>To remove a project, go to its Settings --> Admin. Click on the <code>Delete Project</code> button.</p>
+      {% include image.html name="DeleteProjectBtn.png" caption="Delete the project" %}
     </div>
     <div class="one-third-col">
       <div class="message">

@@ -16,8 +16,9 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 _???_
 
 <ul class="updates">
+  <li class="new">Exporting & Importing of project settings. Now you can curate your entity types, document labels, etc. in one project, export that information into a JSON settings file, and then use this file on a new project to start with the same annotation types. No more manual labor! :)</li>
   <li class="del">The project deletion action has been moved to the corresponding project's settings (instead of on the projects list)</li>
-  <li class="fix">Fix bug that allowed annotations across paragraphs, but didn't indicate them visually, thus creating confusion to users.</li>
+  <li class="fix">Fixed bug that allowed annotations across paragraphs, but didn't indicate them visually, thus creating confusion to users.</li>
 </ul>
 
 ---

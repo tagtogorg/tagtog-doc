@@ -17,7 +17,7 @@ _???_
 
 <ul class="updates">
   <li class="del">The project deletion action has been moved to the corresponding project's settings (instead of on the projects list)</li>
-  <li class="fix">Fix bug that allowed annotations across paragraphs, but didn't indicate them visually, thus creating confusion to users. </li>
+  <li class="fix">Fix bug that allowed annotations across paragraphs, but didn't indicate them visually, thus creating confusion to users.</li>
 </ul>
 
 ---

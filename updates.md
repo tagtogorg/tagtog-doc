@@ -12,8 +12,8 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
-## ???
-_???_
+## 3.2018-W36.6 🔥
+_2018-09-07_
 
 <ul class="updates">
   <li class="new">Exporting & Importing of project settings. Now you can curate your entity types, document labels, etc. in one project, export that information into a JSON settings file, and then use this file on a new project to start with the same annotation types. No more manual labor! :)</li>

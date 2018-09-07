@@ -20,7 +20,7 @@ The tagtog system runs as a mixture of **Docker** containers. This **works on Li
 Your system must have installed:
 
 1. [Docker](https://www.docker.com)
-  * The recommended version is >= 18.03  
+  * The recommended version is >= 18.03
   * To ensure that your docker installation works correctly and that you have the necessary rights to install and run docker images, run: `docker info`. Please ensure that you don't get an error like _permission denied_, and rather as expected see the details of your docker installation.
 
 2. [Docker Compose](https://docs.docker.com/compose/)
@@ -36,6 +36,12 @@ Your system must have installed:
   * Installed in practically all systems by default
 
 
+### Machine Requirements
+
+Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the following minimum requirements:
+
+* **8 GB RAM**
+* **50 GB of disk space**
 
 
 ## First-time Install

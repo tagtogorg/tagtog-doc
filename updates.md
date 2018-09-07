@@ -12,6 +12,17 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## 3.2018-W36.6 🔥
+_2018-09-07_
+
+<ul class="updates">
+  <li class="new">Exporting & Importing of project settings. Now you can curate your entity types, document labels, etc. in one project, export that information into a JSON settings file, and then use this file on a new project to start with the same annotation types. No more manual labor! :)</li>
+  <li class="del">The project deletion action has been moved to the corresponding project's settings (instead of on the projects list)</li>
+  <li class="fix">Fixed bug that allowed annotations across paragraphs, but didn't indicate them visually, thus creating confusion to users.</li>
+</ul>
+
+---
+
 ## 3.2018-W34.4 🤔
 _2018-08-23_
 
@@ -53,7 +64,7 @@ _2018-08-09_
 
 <ul class="updates">
   <li class="fix">Fixed bug that created issues with annotations when the character <code><</code> was in the imported text. Thank you for spotting this ❤️!</li>
-  <li class="fix">Fixed bug that made not possible to open documents on IE.</li>  
+  <li class="fix">Fixed bug that made not possible to open documents on IE.</li>
 </ul>
 
 ---
@@ -99,11 +110,11 @@ _2018-07-26_
   <li class="new">Now you can choose whether <a title="tagtog - pre-annotations" href="/webeditor.html#pre-annotations">pre-annotations</a> (i.e. the automatic annotations that are created while manually annotating) are <strong>case sensitive or not</strong></li>
   <li class="doc">Improved reporting of parsing errors in API uploads</li>
   <li class="new"><a href="/machine-learning.html">Machine Learning</a> is now deactivated by default for new projects -- <a title="Settings - Machine Learning" href="/projects.html#machine-learning">You can activate it in Settings</a></li>
-  <li class="fix">Correct URLs for Project Settings sections</li>  
+  <li class="fix">Correct URLs for Project Settings sections</li>
   <li class="doc">Limited the amount of entity types, depending on the plan: cloud start (3), cloud medium (10), cloud large (25), on-premises annotator (25), on-premises annotator+ML (50)</li>
   <li class="doc">Add documentation links to Settings</li>
   <li class="doc">Extend documentation about <a title="tagtog - Webhooks" href="/projects.html#webhooks">Webhooks</a></li>
-  <li class="doc">Add <a href="/ioformats.html#annotation-input-formats" title="tagtog - input output formats - input annotations">input format</a> to better understand how to import annotated documents</li>  
+  <li class="doc">Add <a href="/ioformats.html#annotation-input-formats" title="tagtog - input output formats - input annotations">input format</a> to better understand how to import annotated documents</li>
 </ul>
 
 ---
@@ -135,7 +146,7 @@ _2018-07-13_
 ## 3.2018-W28.2 🕵️‍♀️
 _2018-07-10_
 
-<ul class="updates">  
+<ul class="updates">
   <li class="fix">Fixed the problem that users could not edit <a title="Annotation types" href="/webeditor.html#annotation-types">Entity Labels</a></li>
   <li class="new">The modal menu to set <a title="Annotation types" href="/webeditor.html#annotation-types">Entity Labels</a> is now scrollable and supports a long list of labels</li>
 </ul>
@@ -144,7 +155,7 @@ _2018-07-10_
 
 ## 3.2018-W28.0 🥅
 
-<ul class="updates">  
+<ul class="updates">
   <li class="new">Support for <b>proxies on-premises</b> 🕵️‍♀️</li>
   <li class="fix">Fixed an interface bug affecting <b>Internet Explorer</b>, that blocked importing new documents</li>
 </ul>
@@ -164,7 +175,7 @@ _2018-07-10_
 
 ### More!
 
-<ul class="updates">  
+<ul class="updates">
   <li class="new">API call to get a JSON map of the annotations legend, <i>anntasks ids → names</i>. For a sample call, check your project's <kbd>Downloads</kbd> page.</li>
   <li class="fix">Fixed a bug that prevented the training of ML models for entities that had associated dictionaries (specifically created through the interface).</li>
   <li class="doc">This new page of release notes was created 🤩</li>

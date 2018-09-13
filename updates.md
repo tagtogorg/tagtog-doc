@@ -16,7 +16,8 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 _2018-09-13_
 
 <ul class="updates">
-  <li class="new">Definition of project folders!</li>  
+  <li class="new">Definition of project folders!</li>
+  <li class="new">New layout which fits better the screen</li>
 </ul>
 
 ---

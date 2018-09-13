@@ -12,6 +12,15 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## 3.2018-W37.0 🗂
+_2018-09-13_
+
+<ul class="updates">
+  <li class="new">Definition of project folders!</li>  
+</ul>
+
+---
+
 ## 3.2018-W36.6 🔥
 _2018-09-07_
 

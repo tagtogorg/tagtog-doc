@@ -12,12 +12,24 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 ---
 
+## 3.2018-W37.2 📂
+_2018-09-14_
+
+<ul class="updates">
+  <li class="new">Removal of projects folders too :)</li>
+  <li class="fix">Several fixes wrt. to project folders</li>
+  <li class="new">Now you can use any unicode letter character in annotation names ❤️, <i>Sí señor! 谢谢！natürlich! बहुत बढ़िया! 素晴らしい！</i></li>
+</ul>
+
+
+---
+
 ## 3.2018-W37.0 🗂
 _2018-09-13_
 
 <ul class="updates">
   <li class="new">Definition of project folders!</li>
-  <li class="new">New layout which fits better the screen</li>
+  <li class="new">New layout, which fits the screen better</li>
 </ul>
 
 ---

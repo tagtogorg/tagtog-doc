@@ -10,6 +10,8 @@ Here is the versioned list of all the new features and changes. [tagtog Cloud](h
 
 Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
 
+Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
+
 ---
 
 ## 3.2018-W37.2 📂

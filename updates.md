@@ -14,6 +14,16 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2018-W38.0 📂
+_2018-09-14_
+
+<ul class="updates">
+  <li class="new">Importing of project settings now works for project folders too 👌</li>
+  <li class="new">Some improvements here and there</li>  
+</ul>
+
+---
+
 ## 3.2018-W37.2 📂
 _2018-09-14_
 
@@ -22,7 +32,6 @@ _2018-09-14_
   <li class="fix">Several fixes wrt. to project folders</li>
   <li class="new">Now you can use any unicode letter character in annotation names ❤️, <i>Sí señor! 谢谢！natürlich! बहुत बढ़िया! 素晴らしい！</i></li>
 </ul>
-
 
 ---
 

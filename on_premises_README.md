@@ -99,7 +99,9 @@ You can manually check for [new tagtog updates on this link](http://docs.tagtog.
 
 ## Troubleshooting
 
-Upon any question or issue, shoot us directly an email: [info@tagtog.net](mailto:info@tagtog.net).
+Upon a problem, try one of the following solutions first.
+
+If your issue or question is not resolved yet, shoot us directly an email: [support@tagtog.net](mailto:support@tagtog.net). We are also happy to open a slack chat team with you for faster communication.
 
 Please provide detailed information of the problem and **send us always the container logs**: `docker logs tagtog_webapp_1` && `docker logs tagtog_taskmanager_1`.
 

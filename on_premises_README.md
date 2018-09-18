@@ -99,9 +99,13 @@ You can manually check for [new tagtog updates on this link](http://docs.tagtog.
 
 ## Troubleshooting
 
-Upon any question or issue, always feel free to write a description of the problem on our [GitHub issues page](https://github.com/tagtog/tagtog-doc/issues), or shoot us directly an email: [info@tagtog.net](mailto:info@tagtog.net).
+Upon any question or issue, shoot us directly an email: [info@tagtog.net](mailto:info@tagtog.net).
 
-You can also check the following possible solutions.
+Please provide detailed information of the problem and **send us always the container logs**: `docker logs tagtog_webapp_1` && `docker logs tagtog_taskmanager_1`.
+
+
+
+Alternatively, first try one of the following solutions.
 
 ### Problems with docker container `tagtog_taskmanager_1` or document uploading:
 

@@ -14,8 +14,17 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2018-W38.0 📂
-_2018-09-14_
+## 3.2018-W38.1 🐵
+_2018-09-18_
+
+<ul class="updates">
+  <li class="fix">Bug fixes</li>  
+</ul>
+
+---
+
+## 3.2018-W38.0 🍃
+_2018-09-17_
 
 <ul class="updates">
   <li class="new">Importing of project settings now works for project folders too 👌</li>

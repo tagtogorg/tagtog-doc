@@ -99,9 +99,15 @@ You can manually check for [new tagtog updates on this link](http://docs.tagtog.
 
 ## Troubleshooting
 
-Upon any question or issue, always feel free to write a description of the problem on our [GitHub issues page](https://github.com/tagtog/tagtog-doc/issues), or shoot us directly an email: [info@tagtog.net](mailto:info@tagtog.net).
+Upon a problem, try one of the following solutions first.
 
-You can also check the following possible solutions.
+If your issue or question is not resolved yet, shoot us directly an email: [support@tagtog.net](mailto:support@tagtog.net). We are also happy to open a slack chat team with you for faster communication.
+
+Please provide detailed information of the problem and **send us always the container logs**: `docker logs tagtog_webapp_1` && `docker logs tagtog_taskmanager_1`.
+
+
+
+Alternatively, first try one of the following solutions.
 
 ### Problems with docker container `tagtog_taskmanager_1` or document uploading:
 
@@ -120,4 +126,14 @@ Try:
 echo "0" > LATEST_VERSION
 ./tagtog_on_premises update
 ./tagtog_on_premises restart latest $TAGTOG_HOME
+```
+
+
+### Wrong entity offsets on the display
+
+On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script:
+
+```shell
+# PLEASE BACKUP YOUR DATA FIRST
+`./tagtog_on_premises fix_documents latest $TAGTOG_HOME`
 ```

@@ -127,3 +127,13 @@ echo "0" > LATEST_VERSION
 ./tagtog_on_premises update
 ./tagtog_on_premises restart latest $TAGTOG_HOME
 ```
+
+
+### Wrong entity offsets on the display
+
+On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script:
+
+```shell
+# PLEASE BACKUP YOUR DATA FIRST
+`./tagtog_on_premises fix_documents latest $TAGTOG_HOME`
+```

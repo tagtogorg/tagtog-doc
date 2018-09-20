@@ -14,6 +14,16 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2018-W38.2 🦍
+_2018-09-20_
+
+<ul class="updates">
+  <li class="new">Supported PDFs that contain only images (no text)</li>  
+  <li class="fix">Fixed not being able to open documents following a search</li>  
+</ul>
+
+---
+
 ## 3.2018-W38.1 🐵
 _2018-09-18_
 

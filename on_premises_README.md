@@ -26,7 +26,7 @@ Your system must have installed:
 2. [Docker Compose](https://docs.docker.com/compose/)
   * The recommended version is >= 1.18
 
-3. **IMPORTANT**. The running docker host must have the `vm.max_map_count` setting variable to be at least greater than _262144_. You can check the value by running: `sysctl vm.max_map_count`. If it is too low, set the value by running: `sudo sysctl -q -w vm.max_map_count=262144`.
+3. **IMPORTANT**. The running docker host must have the `vm.max_map_count` setting variable to be at least greater than _262144_. You can check the value by running: `sysctl vm.max_map_count`. If it is too low, **set the value by running**: `sudo sysctl -q -w vm.max_map_count=262144`.
 
 4. [Bash Shell](https://www.gnu.org/software/bash/)
   * Installed in practically all systems by default.

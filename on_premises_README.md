@@ -26,7 +26,7 @@ Your system must have installed:
 2. [Docker Compose](https://docs.docker.com/compose/)
   * The recommended version is >= 1.18
 
-3. The running docker host must have the `vm.max_map_count` setting variable to be at least greater than _262144_. You can check the value by running: `sysctl vm.max_map_count`. If it is too low, set the value by running: `sudo sysctl -q -w vm.max_map_count=262144`.
+3. **IMPORTANT**. The running docker host must have the `vm.max_map_count` setting variable to be at least greater than _262144_. You can check the value by running: `sysctl vm.max_map_count`. If it is too low, **set the value by running**: `sudo sysctl -q -w vm.max_map_count=262144`.
 
 4. [Bash Shell](https://www.gnu.org/software/bash/)
   * Installed in practically all systems by default.
@@ -46,8 +46,8 @@ Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the foll
 
 ## First-time Install
 
-* You will receive, from your person contact at tagtog, a single-line script to do a first time installation. This script will contain all the information regarding your one-server-only **license** .
-* Execute it in a folder where you will run from now on all tagtog-related commands.
+* You will receive a single-line script. This script contains all the information regarding your one-server-only **license**.
+* Execute the script in some folder where you will run from now on all tagtog-related commands.
 * A helper bash script is installed in this folder. This script assumes an UNIX environment and was tested only on **Linux and macOS**. It should work on Windows with Cygwin too. The script is not mandatory to run tagtog, but it is highly recommended.
 
 
@@ -107,8 +107,6 @@ Please provide detailed information of the problem and **send us always the cont
 
 
 
-Alternatively, first try one of the following solutions.
-
 ### Problems with docker container `tagtog_taskmanager_1` or document uploading:
 
 Try:
@@ -137,3 +135,15 @@ On a few rare cases, the entity offsets from the underlying data model (ann.json
 # PLEASE BACKUP YOUR DATA FIRST
 `./tagtog_on_premises fix_documents latest $TAGTOG_HOME`
 ```
+
+
+### Lack of writing file access
+
+On some rare cases, the docker containers cannot hold writing access to the `$TAGTOG_HOME` folder and file hierarchy.
+
+In this case, figure out why that could be the case. Anything related to your user not having enough rights?
+
+Otherwise, a quick solution is:
+
+1. Grant all permissions to everybody: `chmod 777 -r $TAGTOG_HOME`
+2. Restart the application: `./tagtog_on_premises restart ...`

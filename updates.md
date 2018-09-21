@@ -14,11 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2018-W38.3-SNAPSHOT ❔
+## 3.2018-W38.4 🤩
 _2018-09-21_
 
 <ul class="updates">
-  <li class="new">Allowed <i>supercurators</i> (member role) to confirm the master annotations</li>  
+  <li class="new">Allowed <i>supercurators</i> (member role) to confirm the master annotations</li>
+  <li class="new">Allowed uploading multiple documents without text. The tagtogIDs are randomized</li>
+  <li class="new">Increased on-premises the maximum document upload size, from 50MB to 250MB</li>
+  <li class="fix">Improved the error reporting and resilience on document uploading</li>
 </ul>
 
 ---

@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? ?
-_???_
+## 3.2018-W38.3-SNAPSHOT ❔
+_2018-09-21_
 
 <ul class="updates">
   <li class="new">Allowed <i>supercurators</i> (member role) to confirm the master annotations</li>  

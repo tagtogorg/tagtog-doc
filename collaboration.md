@@ -6,7 +6,7 @@ id: collaboration
 ---
 <div class="two-third-col">
   <p>tagtog is a multi-user tool. Collaborate with other users to annotate faster and improve the quality of your annotations.</p>
-  <p>It supports different roles as annotator or admin. Each user can annotate their own copy of the text, facilitating the review process and measurement of inter-annotator agreement.</p>
+  <p>It supports different roles as annotator. Each user can annotate their own copy of the text, facilitating the review process and measurement of inter-annotator agreement.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message="Both, Cloud and On-premises versions allow multi-user annotation." %}
@@ -25,11 +25,11 @@ id: collaboration
     </tr>
     <tr>
       <td><code>supercurator</code></td>
-      <td>Users invited as collaborators to a project who only can see their annotations and <code>master</code>'s. They can edit <code>master</code>'s annotations and export these into their annotations.</td>
+      <td>Can see their annotations and <code>master</code>'s. They can edit <code>master</code>'s annotations, confirm them, or export these into their annotations.</td>
     </tr>
     <tr>
       <td><code class="soon">curator</code></td>
-      <td><span class="soon">Users invited as collaborators to a project who only can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations.</span> Coming soon.</td>
+      <td><span class="soon">Can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations.</span> Coming soon.</td>
     </tr>
     <tr>
       <td><code class="soon">reader</code></td>

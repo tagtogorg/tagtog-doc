@@ -12,6 +12,13 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+## Next 📎
+_2018_
+
+<ul class="updates">
+  <li class="new">Copy and share <strong>permalinks</strong> to individual annotations</li>
+</ul>
+
 ---
 
 ## 3.2018-W38.4 🤩
@@ -30,8 +37,8 @@ _2018-09-21_
 _2018-09-20_
 
 <ul class="updates">
-  <li class="new">Supported PDFs that contain only images (no text)</li>  
-  <li class="fix">Fixed not being able to open documents following a search</li>  
+  <li class="new">Supported PDFs that contain only images (no text)</li>
+  <li class="fix">Fixed not being able to open documents following a search</li>
 </ul>
 
 ---
@@ -40,7 +47,7 @@ _2018-09-20_
 _2018-09-18_
 
 <ul class="updates">
-  <li class="fix">Bug fixes</li>  
+  <li class="fix">Bug fixes</li>
 </ul>
 
 ---
@@ -50,7 +57,7 @@ _2018-09-17_
 
 <ul class="updates">
   <li class="new">Importing of project settings now works for project folders too 👌</li>
-  <li class="new">Some improvements here and there</li>  
+  <li class="new">Some improvements here and there</li>
 </ul>
 
 ---

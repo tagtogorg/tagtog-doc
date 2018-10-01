@@ -16,7 +16,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _2018_
 
 <ul class="updates">
-  <li class="new">Copy and share <strong>permalinks</strong> to individual annotations</li>
+  <li class="new">Copy and share <strong><a title="tagtog docs - Permalinks" href="/webeditor.html#permalinks">permalinks</a></strong> for individual annotations</li>
   <li class="doc">Update documentation about document folders: <a title="tagtog - folders" href="/documentpool.html#folders">Folders</a></li>
 </ul>
 

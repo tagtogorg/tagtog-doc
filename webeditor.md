@@ -187,6 +187,11 @@ toc: true
           <td>Delete annotation</td>
         </tr>
         <tr>
+          <td>Permalink</td>
+          <td class="centered">-</td>
+          <td>Show a dialog box with a permalink for the annotation.</td>
+        </tr>
+        <tr>
           <td>Add relation</td>
           <td class="centered"><kbd>r</kbd></td>
           <td><p>Start a relation if a Relation Type is defined for the Entity Type of this entity. Once the relation is initialized, you can see highlighted the annotations you can relate your entity to. Other annotations are faded to indicate that you cannot relate the entity to these.</p>
@@ -218,13 +223,20 @@ toc: true
     </div>
   </div>
   <div class="two-third-col">
-        <h5>Update dictionary from annotation editor</h5>
-        <p>If you are using dictionaries, these are <strong>automatically updated upon manual normalization</strong>. If you add a new normalization, this will either add a new entry to the dictionary or update an existing entry with a new term. By design, the dictionary won't be updated when a normalization is removed.</p>
-        <p>You can always download the most updated version of a dictionary at <i>Settings > Dictionaries</i>.</p>
-      </div>
-      <div class="one-third-col">
-        {% include message.html message="tagtog triggers automatically asynchronous calls to update dictionaries when a new normalization is added. You don't need to save the document to update a dictionary." %}
-      </div>
+    <h5>Update dictionary from annotation editor</h5>
+    <p>If you are using dictionaries, these are <strong>automatically updated upon manual normalization</strong>. If you add a new normalization, this will either add a new entry to the dictionary or update an existing entry with a new term. By design, the dictionary won't be updated when a normalization is removed.</p>
+    <p>You can always download the most updated version of a dictionary at <i>Settings > Dictionaries</i>.</p>
+  </div>
+  <div class="one-third-col">
+    {% include message.html message="tagtog triggers automatically asynchronous calls to update dictionaries when a new normalization is added. You don't need to save the document to update a dictionary." %}
+  </div>
+  <div class="two-third-col">
+    <h5>Permalinks</h5>
+    <p>You can create permalinks for annotated entities. Just click on the entity and click the <code>Permalink</code> entry in the annotation menu. You can copy and share it. When opened, the link points exactly to the annotation, the document editor will scroll to highlight the annotation properly.</p>
+  </div>
+  <div class="one-third-col">
+    {% include message.html message="A permalink looks like this example: <code>https://tagtog.net/demo/test/pool/a7Kiphm8zanJ9q-text?p=0&i=0&ann=s14v1|e_14|428,434</code>" %}
+  </div>
   <div class="page-subsection">
     <div class="two-third-col">
       <h3>Toolbar</h3>

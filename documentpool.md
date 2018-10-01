@@ -11,9 +11,9 @@ toc: true
   <h3>Folders</h3>
   <p>Use folders to organize your documents better. The <strong>root is the <code>pool</code> folder</strong>, which is created by default with each new project.</p>
   <h4>Create a new folder</h4>
-  <p>Click on the folder you want to be the parent of the new folder. Click on the folder action <code>Add new</code>, write the name of the new folder and press the key <code>Enter</code>.</p>
+  <p>Click on the folder you want to be the parent of the new folder. Click on the folder action <code>Add new</code>, write the name of the new folder and press the key <kbd>↵</kbd>.</p>
   <h4>Rename a folder</h4>
-  <p>Click on the folder you want to rename. Click on the folder action <code>Rename</code>, write the new name of the new folder and press <code>Enter</code>.</p>
+  <p>Click on the folder you want to rename. Click on the folder action <code>Rename</code>, write the new name of the new folder and press <kbd>↵</kbd>.</p>
   <h4>Remove a folder</h4>
   <p>Click on the folder you want to remove. Click on the folder action <code>Remove</code>. Please remember that all <strong>the documents stored in this folder will be also removed</strong>.</p>
 </div>

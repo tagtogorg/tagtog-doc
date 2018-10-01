@@ -219,7 +219,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Each user annotates only the <code>master</code> version of the assigned documents. Once a document is annotated, user marks the annotations as completed by clicking the Confirm button. <code>admin</code> can check the progress in the document pool.</p>
+  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Each user annotates only the <code>master</code> version of the assigned documents. Once a document is annotated, user marks the annotations as completed by clicking the Confirm button. <code>admin</code> can check the progress in the document list view.</p>
 </div>
 <div class="one-third-col">
 </div>

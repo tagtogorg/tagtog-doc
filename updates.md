@@ -17,6 +17,7 @@ _2018_
 
 <ul class="updates">
   <li class="new">Copy and share <strong>permalinks</strong> to individual annotations</li>
+  <li class="doc">Update documentation about document folders: <a title="tagtog - folders" href="/documentpool.html#folders">Folders</a></li>
 </ul>
 
 ---

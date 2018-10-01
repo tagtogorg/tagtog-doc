@@ -78,11 +78,11 @@ toc: true
       </tr>
       <tr>
         <td class="centered"><kbd>[</kbd></td>
-        <td>Previous document in the pool</td>
+        <td>Previous document in the folder</td>
       </tr>
       <tr>
         <td class="centered"><kbd>]</kbd></td>
-        <td>Next document in the pool</td>
+        <td>Next document in the folder</td>
       </tr>
       <tr>
         <td class="centered"><kbd>s</kbd></td>
@@ -265,7 +265,7 @@ toc: true
           <td>Copy to mine</td>
           <td>Replace your annotations with the version displayed in the document area.</td>
         </tr>
-      </table>  
+      </table>
       <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p>
     </div>
     <div class="one-third-col">
@@ -306,7 +306,7 @@ toc: true
       <p>Click on the button with the icon {% include inline-image.html name="editor-clean.PNG" width="20" %} to remove all the annotations in the current document. This won't remove the document. </p>
       <br/>
       <h4>Remove document</h4>
-      <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} to remove the document from the document pool.</p>
+      <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} to remove the document from the folder.</p>
     </div>
     <div class="one-third-col">
       {% include image.html name="editor-view.PNG" width="250"%}
@@ -314,7 +314,7 @@ toc: true
     <div class="two-third-col">
       <br/>
       <h4>Document navigator</h4>
-      <p>Each button with an arrow pointing to left and right. If you click on the button with the left arrow, the previous document in the pool will be loaded. If you click on the button with the right arrow, the next document in the pool will be loaded.</p>
+      <p>Each button with an arrow pointing to left and right. If you click on the button with the left arrow, the previous document in the folder will be loaded. If you click on the button with the right arrow, the next document in the folder will be loaded.</p>
     </div>
     <div class="one-third-col">
       <div class="message">

@@ -12,8 +12,8 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
-## Next 📎
-_2018_
+## 3.2018-W40.0 📎
+_2018-10-02_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Support for source code files! Whether you are a `python`, `java`, `js`, or [any other programming language freak](http://localhost:4000/ioformats.html#files), now you are able to annotate preformatted text :-)</span></li>

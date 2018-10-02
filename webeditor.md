@@ -78,11 +78,11 @@ toc: true
       </tr>
       <tr>
         <td class="centered"><kbd>[</kbd></td>
-        <td>Previous document in the pool</td>
+        <td>Previous document in the folder</td>
       </tr>
       <tr>
         <td class="centered"><kbd>]</kbd></td>
-        <td>Next document in the pool</td>
+        <td>Next document in the folder</td>
       </tr>
       <tr>
         <td class="centered"><kbd>s</kbd></td>
@@ -187,10 +187,15 @@ toc: true
           <td>Delete annotation</td>
         </tr>
         <tr>
+          <td>Permalink</td>
+          <td class="centered">-</td>
+          <td>Show a dialog box with a permalink for the annotation.</td>
+        </tr>
+        <tr>
           <td>Add relation</td>
           <td class="centered"><kbd>r</kbd></td>
           <td><p>Start a relation if a Relation Type is defined for the Entity Type of this entity. Once the relation is initialized, you can see highlighted the annotations you can relate your entity to. Other annotations are faded to indicate that you cannot relate the entity to these.</p>
-          <p>Click on one of the available entities to set the relation. From that moment, both entities will be connected. Both entities will display this icon on the top {% include inline-image.html name="relation-bidirectional-icon.png" width="20" %}.</p></td>
+          <p>Click on one of the available entities to set the relation. From that moment, both entities will be connected. Both entities will display this icon on the top {% include inline-image.html name="relation-bidirectional-icon.PNG" width="20" %}.</p></td>
         </tr>
         <tr>
           <td>See relations</td>
@@ -218,13 +223,20 @@ toc: true
     </div>
   </div>
   <div class="two-third-col">
-        <h5>Update dictionary from annotation editor</h5>
-        <p>If you are using dictionaries, these are <strong>automatically updated upon manual normalization</strong>. If you add a new normalization, this will either add a new entry to the dictionary or update an existing entry with a new term. By design, the dictionary won't be updated when a normalization is removed.</p>
-        <p>You can always download the most updated version of a dictionary at <i>Settings > Dictionaries</i>.</p>
-      </div>
-      <div class="one-third-col">
-        {% include message.html message="tagtog triggers automatically asynchronous calls to update dictionaries when a new normalization is added. You don't need to save the document to update a dictionary." %}
-      </div>
+    <h5>Update dictionary from annotation editor</h5>
+    <p>If you are using dictionaries, these are <strong>automatically updated upon manual normalization</strong>. If you add a new normalization, this will either add a new entry to the dictionary or update an existing entry with a new term. By design, the dictionary won't be updated when a normalization is removed.</p>
+    <p>You can always download the most updated version of a dictionary at <i>Settings > Dictionaries</i>.</p>
+  </div>
+  <div class="one-third-col">
+    {% include message.html message="tagtog triggers automatically asynchronous calls to update dictionaries when a new normalization is added. You don't need to save the document to update a dictionary." %}
+  </div>
+  <div class="two-third-col">
+    <h5>Permalinks</h5>
+    <p>You can create permalinks for annotated entities. Just click on the entity and click the <code>Permalink</code> entry in the annotation menu. You can copy and share it. When opened, the link points exactly to the annotation, the document editor will scroll to highlight the annotation properly.</p>
+  </div>
+  <div class="one-third-col">
+    {% include message.html message="A permalink looks like this example: <code>https://tagtog.net/demo/test/pool/a7Kiphm8zanJ9q-text?p=0&i=0&ann=s14v1|e_14|428,434</code>" %}
+  </div>
   <div class="page-subsection">
     <div class="two-third-col">
       <h3>Toolbar</h3>
@@ -265,7 +277,7 @@ toc: true
           <td>Copy to mine</td>
           <td>Replace your annotations with the version displayed in the document area.</td>
         </tr>
-      </table>  
+      </table>
       <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p>
     </div>
     <div class="one-third-col">
@@ -306,7 +318,7 @@ toc: true
       <p>Click on the button with the icon {% include inline-image.html name="editor-clean.PNG" width="20" %} to remove all the annotations in the current document. This won't remove the document. </p>
       <br/>
       <h4>Remove document</h4>
-      <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} to remove the document from the document pool.</p>
+      <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} to remove the document from the folder.</p>
     </div>
     <div class="one-third-col">
       {% include image.html name="editor-view.PNG" width="250"%}
@@ -314,7 +326,7 @@ toc: true
     <div class="two-third-col">
       <br/>
       <h4>Document navigator</h4>
-      <p>Each button with an arrow pointing to left and right. If you click on the button with the left arrow, the previous document in the pool will be loaded. If you click on the button with the right arrow, the next document in the pool will be loaded.</p>
+      <p>Each button with an arrow pointing to left and right. If you click on the button with the left arrow, the previous document in the folder will be loaded. If you click on the button with the right arrow, the next document in the folder will be loaded.</p>
     </div>
     <div class="one-third-col">
       <div class="message">

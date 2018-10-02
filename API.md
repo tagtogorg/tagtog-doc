@@ -31,7 +31,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     <tr>
       <td><strong>Version</strong></td>
       <td><code>{{ page.version }}</code></td>
-    </tr>    
+    </tr>
     <tr>
       <td><strong>Endpoint</strong></td>
       <td><a href="{{ page.api_endpoint }}">{{ page.api_endpoint }}</a></td>
@@ -106,7 +106,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -257,7 +257,7 @@ PUBMED IDS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -408,7 +408,7 @@ URLS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -529,7 +529,7 @@ FILES
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>You can choose between the folders <code>pool</code> and <code>test</code>. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -783,7 +783,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
 
 <div class="two-third-col">
   <h2>Get existing documents <code>GET</code></h2>
-  <p>You can use the API to export documents already imported. You need the Id of the document before you get it. If you don't have this Id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
+  <p>You can use the API to export documents. You need the Id of the document to get it. If you don't have this Id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
 </div>
 <div class="two-third-col">
   <p><strong>Parameters</strong></p>

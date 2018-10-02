@@ -12,6 +12,16 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+## 3.2018-W40.0 📎
+_2018-10-02_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Support for source code files! Whether you are a `python`, `java`, `js`, or [any other programming language freak](http://localhost:4000/ioformats.html#files), now you are able to annotate preformatted text :-)</span></li>
+  <li class="new"><span markdown="1">Copy and share **[permalinks](/webeditor.html#permalinks "tagtog docs - Permalinks")**</span></li>
+  <li class="doc">Update documentation about document folders: <a title="tagtog - folders" href="/documentpool.html#folders">Folders</a></li>
+  <li class="fix">The popup dialog to import documents is being closed when clicked outside</li>  
+</ul>
+
 ---
 
 ## 3.2018-W38.4 🤩
@@ -30,8 +40,8 @@ _2018-09-21_
 _2018-09-20_
 
 <ul class="updates">
-  <li class="new">Supported PDFs that contain only images (no text)</li>  
-  <li class="fix">Fixed not being able to open documents following a search</li>  
+  <li class="new">Supported PDFs that contain only images (no text)</li>
+  <li class="fix">Fixed not being able to open documents following a search</li>
 </ul>
 
 ---
@@ -40,7 +50,7 @@ _2018-09-20_
 _2018-09-18_
 
 <ul class="updates">
-  <li class="fix">Bug fixes</li>  
+  <li class="fix">Bug fixes</li>
 </ul>
 
 ---
@@ -50,7 +60,7 @@ _2018-09-17_
 
 <ul class="updates">
   <li class="new">Importing of project settings now works for project folders too 👌</li>
-  <li class="new">Some improvements here and there</li>  
+  <li class="new">Some improvements here and there</li>
 </ul>
 
 ---

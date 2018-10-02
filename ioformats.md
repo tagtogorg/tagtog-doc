@@ -19,6 +19,17 @@ toc: true
         <td>Text</td>
         <td>Plain text.</td>
       </tr>
+
+      <tr>
+        <td>File</td>
+        <td><a href="#files">See below</a></td>
+      </tr>
+
+      <tr>
+        <td>URL</td>
+        <td>Web address pointing to any website. e.g. <code>http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000245.v1.p1</code>. This is an experimental feature and you may find errors rendering the text depending on the HTML being analyzed.</td>
+      </tr>
+
       <tr>
         <td>PMID</td>
         <td><a href="https://www.ncbi.nlm.nih.gov/pubmed">PubMed</a> is a free online database of references on life sciences. Each record in the PubMed database is assigned a special number to identify it. This is the PMID. Any PMID is only a number, e.g. <code><a href="https://www.ncbi.nlm.nih.gov/pubmed/12781165">12781165</a></code>. It also accepts inputs as: <code>PMID12781165</code>. You can introduce a list of documents separated by comma and each of them will be uploaded. e.g. <code>25821226,12781165</code>. You can find this id at the bottom of the document at PubMed.</td>
@@ -26,10 +37,6 @@ toc: true
       <tr>
         <td>PMCID</td>
         <td><a href="https://www.ncbi.nlm.nih.gov/pmc/">PubMed Central®</a> (PMC) is a free archive of biomedical and life sciences journal literature at the U.S. National Institutes of Health's National Library of Medicine (NIH/NLM). Each record in the PubMed Central database is assigned a special number to identify it. This is the PMCID. Any PMCID is a number plus the <code>PMC</code> prefix, e.g. <code><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC165443/">PMC165443</a></code>. You can introduce a list of documents separated by comma and each of them will be uploaded. e.g. <code>PMC165443,PMC165213</code>. You can find this id usually at the top of the document at PubMed Central. This feature relies on the availability of the PubMed provider.</td>
-      </tr>
-      <tr>
-        <td>URL</td>
-        <td>Web address pointing to any website. e.g. <code>http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000245.v1.p1</code>. This is an experimental feature and you may find errors rendering the text depending on the HTML being analyzed.</td>
       </tr>
 
     </table>
@@ -47,22 +54,31 @@ toc: true
         <th>File extension</th>
         <th>Description</th>
       </tr>
+
+      <tr>
+        <td><code>txt</code></td>
+        <td>Any plain text file</td>
+      </tr>
+
+      <tr>
+        <td><code>pdf</code></td>
+        <td><span markdown="1">Two variants are possible: **NativePDF** (supported on Cloud-Large and On-Premises ML only) to annotate directly on top of the PDF, and **Simple** to annotate on a stripped out plain text representation of the PDF.</span></td>
+      </tr>
+
       <tr>
         <td><code>xml</code></td>
         <td><p><a href="http://jats.nlm.nih.gov/publishing/">NCBI Journal Publishing Tag Set</a> (versions JATS 1.0 and NLM 2.x and 3.0). This includes all <a href="http://www.plos.org/">PLOS journals</a> or <a href="http://f1000research.com/">F1000Research articles</a>.</p>
             <p><a href="http://www.biomedcentral.com/about/xml">BioMed Central format</a>. This includes all articles in <a href="http://www.biomedcentral.com/">BioMed Central</a>, <a href="http://www.chemistrycentral.com/">ChemistryCentral</a>, or <a href="http://www.springeropen.com/)">SpringerOpen</a>, among others.</p></td>
       </tr>
-      <tr>
-        <td><code>txt</code></td>
-        <td>Any plain text file (article sections are not recognized)</td>
-      </tr>
-      <tr>
-        <td><code>pdf</code></td>
-        <td>Sections are not recognized. Currently, the text content is just stripped out.</td>
-      </tr>
+
       <tr>
         <td><code>html</code></td>
         <td>Sections are not recognized. Currently, the text content is just stripped out.</td>
+      </tr>
+
+      <tr>
+        <td>source code files</td>
+        <td>Supported programming language extensions include: <code>.java, .scala, .js, .py, .python, .jsx, .c, .h, .mm, .M, .cpp, .sql, .cs, .css, .r, .vb, .php, .swift, .go, .m, .sass, .less, .rb, .sh, .ts, .tsx, .shell, .sh</code></td>
       </tr>
     </table>
   </div>
@@ -141,10 +157,7 @@ toc: true
         <td><code>entitiestsv</code></td>
         <td><a href="/EntitiesTsv">EntitiesTsv documentation</a></td>
       </tr>
-      <tr>
-        <td><code>docJSON</code></td>
-        <td>Designed for some specific users. Annotations and text content. Documentation not available.</td>
-      </tr>
+
       <tr>
         <td><code>pubannotation</code></td>
         <td><span class="soon"><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></span> Coming soon</td>

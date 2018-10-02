@@ -54,23 +54,28 @@ toc: true
         <th>File extension</th>
         <th>Description</th>
       </tr>
+
+      <tr>
+        <td><code>txt</code></td>
+        <td>Any plain text file</td>
+      </tr>
+
+      <tr>
+        <td><code>pdf</code></td>
+        <td><span markdown="1">Two variants are possible: **NativePDF** (supported on Cloud-Large and On-Premises ML only) to annotate directly on top of the PDF, and **Simple** to annotate on a stripped out plain text representation of the PDF.</span></td>
+      </tr>
+
       <tr>
         <td><code>xml</code></td>
         <td><p><a href="http://jats.nlm.nih.gov/publishing/">NCBI Journal Publishing Tag Set</a> (versions JATS 1.0 and NLM 2.x and 3.0). This includes all <a href="http://www.plos.org/">PLOS journals</a> or <a href="http://f1000research.com/">F1000Research articles</a>.</p>
             <p><a href="http://www.biomedcentral.com/about/xml">BioMed Central format</a>. This includes all articles in <a href="http://www.biomedcentral.com/">BioMed Central</a>, <a href="http://www.chemistrycentral.com/">ChemistryCentral</a>, or <a href="http://www.springeropen.com/)">SpringerOpen</a>, among others.</p></td>
       </tr>
-      <tr>
-        <td><code>txt</code></td>
-        <td>Any plain text file (article sections are not recognized)</td>
-      </tr>
-      <tr>
-        <td><code>pdf</code></td>
-        <td>Sections are not recognized. Currently, the text content is just stripped out.</td>
-      </tr>
+
       <tr>
         <td><code>html</code></td>
         <td>Sections are not recognized. Currently, the text content is just stripped out.</td>
       </tr>
+
       <tr>
         <td>source code files</td>
         <td>Supported programming language extensions include: <code>.java, .scala, .js, .py, .python, .jsx, .c, .h, .mm, .M, .cpp, .sql, .cs, .css, .r, .vb, .php, .swift, .go, .m, .sass, .less, .rb, .sh, .ts, .tsx, .shell, .sh</code></td>

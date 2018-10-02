@@ -16,8 +16,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _2018_
 
 <ul class="updates">
-  <li class="new">Support for source code files! Whether you are a <span markdown="1">`python`, `java`, `js`</span>, or any other programming language freak, now you are able to annotate preformatted text :-)</li>
-  <li class="new">Copy and share <span markdown="1">**[permalinks](/webeditor.html#permalinks "tagtog docs - Permalinks")**</span></li>
+  <li class="new"><span markdown="1">Support for source code files! Whether you are a `python`, `java`, `js`, or [any other programming language freak](http://localhost:4000/ioformats.html#files), now you are able to annotate preformatted text :-)</span></li>
+  <li class="new"><span markdown="1">Copy and share **[permalinks](/webeditor.html#permalinks "tagtog docs - Permalinks")**</span></li>
   <li class="doc">Update documentation about document folders: <a title="tagtog - folders" href="/documentpool.html#folders">Folders</a></li>
   <li class="fix">The popup dialog to import documents is being closed when clicked outside</li>  
 </ul>

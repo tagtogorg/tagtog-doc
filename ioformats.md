@@ -38,10 +38,6 @@ toc: true
         <td>PMCID</td>
         <td><a href="https://www.ncbi.nlm.nih.gov/pmc/">PubMed Central®</a> (PMC) is a free archive of biomedical and life sciences journal literature at the U.S. National Institutes of Health's National Library of Medicine (NIH/NLM). Each record in the PubMed Central database is assigned a special number to identify it. This is the PMCID. Any PMCID is a number plus the <code>PMC</code> prefix, e.g. <code><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC165443/">PMC165443</a></code>. You can introduce a list of documents separated by comma and each of them will be uploaded. e.g. <code>PMC165443,PMC165213</code>. You can find this id usually at the top of the document at PubMed Central. This feature relies on the availability of the PubMed provider.</td>
       </tr>
-      <tr>
-        <td>URL</td>
-        <td>Web address pointing to any website. e.g. <code>http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000245.v1.p1</code>. This is an experimental feature and you may find errors rendering the text depending on the HTML being analyzed.</td>
-      </tr>
 
     </table>
   </div>
@@ -74,6 +70,10 @@ toc: true
       <tr>
         <td><code>html</code></td>
         <td>Sections are not recognized. Currently, the text content is just stripped out.</td>
+      </tr>
+      <tr>
+        <td>source code files</td>
+        <td>Supported programming language extensions include: <code>.java, .scala, .js, .py, .python, .jsx, .c, .h, .mm, .M, .cpp, .sql, .cs, .css, .r, .vb, .php, .swift, .go, .m, .sass, .less, .rb, .sh, .ts, .tsx, .shell, .sh</code></td>
       </tr>
     </table>
   </div>

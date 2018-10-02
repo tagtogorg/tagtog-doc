@@ -19,6 +19,17 @@ toc: true
         <td>Text</td>
         <td>Plain text.</td>
       </tr>
+
+      <tr>
+        <td>File</td>
+        <td><a href="#files">See below</a></td>
+      </tr>
+
+      <tr>
+        <td>URL</td>
+        <td>Web address pointing to any website. e.g. <code>http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000245.v1.p1</code>. This is an experimental feature and you may find errors rendering the text depending on the HTML being analyzed.</td>
+      </tr>
+
       <tr>
         <td>PMID</td>
         <td><a href="https://www.ncbi.nlm.nih.gov/pubmed">PubMed</a> is a free online database of references on life sciences. Each record in the PubMed database is assigned a special number to identify it. This is the PMID. Any PMID is only a number, e.g. <code><a href="https://www.ncbi.nlm.nih.gov/pubmed/12781165">12781165</a></code>. It also accepts inputs as: <code>PMID12781165</code>. You can introduce a list of documents separated by comma and each of them will be uploaded. e.g. <code>25821226,12781165</code>. You can find this id at the bottom of the document at PubMed.</td>

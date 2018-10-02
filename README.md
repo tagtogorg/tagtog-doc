@@ -26,6 +26,11 @@ You need a **docker** installation. Then simply:
 ./dev.sh
 ```
 
+In case this doesn't work try:
+
+```shell
+bundle exec jekyll serve
+```
 
 ## Add new pages
 

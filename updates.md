@@ -16,10 +16,10 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _2018_
 
 <ul class="updates">
-  <li class="new">Copy and share <strong><a title="tagtog docs - Permalinks" href="/webeditor.html#permalinks">permalinks</a></strong> for individual annotations</li>
+  <li class="new">Support for source code files! Whether you are a <span markdown="1">`python`, `java`, `js`</span>, or any other programming language freak, now you are able to annotate preformatted text :-)</li>
+  <li class="new">Copy and share <span markdown="1">**[permalinks](/webeditor.html#permalinks "tagtog docs - Permalinks")**</span></li>
   <li class="doc">Update documentation about document folders: <a title="tagtog - folders" href="/documentpool.html#folders">Folders</a></li>
-  <li class="fix">The popup dialog to import documents is being closed when clicked outside</li>
-  <li class="fix">Long text lines with no spaces are broken to fit the editor</li>
+  <li class="fix">The popup dialog to import documents is being closed when clicked outside</li>  
 </ul>
 
 ---

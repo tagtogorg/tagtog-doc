@@ -157,10 +157,7 @@ toc: true
         <td><code>entitiestsv</code></td>
         <td><a href="/EntitiesTsv">EntitiesTsv documentation</a></td>
       </tr>
-      <tr>
-        <td><code>docJSON</code></td>
-        <td>Designed for some specific users. Annotations and text content. Documentation not available.</td>
-      </tr>
+
       <tr>
         <td><code>pubannotation</code></td>
         <td><span class="soon"><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></span> Coming soon</td>

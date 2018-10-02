@@ -12,6 +12,16 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+## 3.2018-W40.1 📎
+_2018-10-02_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Increased maximum number of entities for Cloud-Large plans, from 25 to 50</span></li>
+  <li class="fix"><span markdown="1">The same annotators (project members) can now be added to different projects, as was expected</span></li>
+</ul>
+
+---
+
 ## 3.2018-W40.0 📎
 _2018-10-02_
 

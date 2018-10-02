@@ -195,7 +195,7 @@ toc: true
           <td>Add relation</td>
           <td class="centered"><kbd>r</kbd></td>
           <td><p>Start a relation if a Relation Type is defined for the Entity Type of this entity. Once the relation is initialized, you can see highlighted the annotations you can relate your entity to. Other annotations are faded to indicate that you cannot relate the entity to these.</p>
-          <p>Click on one of the available entities to set the relation. From that moment, both entities will be connected. Both entities will display this icon on the top {% include inline-image.html name="relation-bidirectional-icon.png" width="20" %}.</p></td>
+          <p>Click on one of the available entities to set the relation. From that moment, both entities will be connected. Both entities will display this icon on the top {% include inline-image.html name="relation-bidirectional-icon.PNG" width="20" %}.</p></td>
         </tr>
         <tr>
           <td>See relations</td>

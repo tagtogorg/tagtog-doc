@@ -12,6 +12,11 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+## Next
+<ul>
+  <li class="fix"><span markdown="1">Long text lines without spaces are word breaking to fit the annotation editor.</span></li>
+</ul>
+
 ## 3.2018-W40.1 📎
 _2018-10-02_
 
@@ -29,7 +34,7 @@ _2018-10-02_
   <li class="new"><span markdown="1">Support for source code files! Whether you are a `python`, `java`, `js`, or [any other programming language freak](http://localhost:4000/ioformats.html#files), now you are able to annotate preformatted text :-)</span></li>
   <li class="new"><span markdown="1">Copy and share **[permalinks](/webeditor.html#permalinks "tagtog docs - Permalinks")**</span></li>
   <li class="doc">Update documentation about document folders: <a title="tagtog - folders" href="/documentpool.html#folders">Folders</a></li>
-  <li class="fix">The popup dialog to import documents is being closed when clicked outside</li>  
+  <li class="fix">The popup dialog to import documents is being closed when clicked outside</li>
 </ul>
 
 ---

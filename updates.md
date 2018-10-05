@@ -14,11 +14,11 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2018-W40.4 ✌️
+## 3.2018-W40.5 🔥
 _2018-10-05_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">Bug fix affecting the rendering of documents on-premises only</span></li>
+  <li class="fix"><span markdown="1">Re-Fixed **NativePDF** view; documents did not open on the Cloud</span></li>
 </ul>
 
 ---

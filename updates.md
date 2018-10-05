@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2018-W40.3 👩‍
+_2018-10-05_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Several fixes and improvements</span></li>
+</ul>
+
+---
+
 ## 3.2018-W40.2 👩‍🚒
 _2018-10-03_
 

@@ -14,10 +14,12 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 💋
-_???_
+## 3.2018-W40.9 💋
+_2018-10-05_
 
 <ul class="updates">
+  <li class="new"><span markdown="1">Increment max. number of entities OnPremises ML, from 50 to 500</span></li>
+  <li class="fix"><span markdown="1">Strengthen the stability of the system OnPremises upon possible parsing errors</span></li>
 </ul>
 
 ---

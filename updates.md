@@ -14,6 +14,16 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2018-W40.10 💹
+_2018-10-06_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">More fixes on the NativePDF viewer</span></li>
+  <li class="fix"><span markdown="1">Small fixes OnPremises</span></li>
+</ul>
+
+---
+
 ## 3.2018-W40.9 💋
 _2018-10-05_
 
@@ -67,7 +77,7 @@ _2018-10-02_
 _2018-10-02_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Support for source code files! Whether you are a `python`, `java`, `js`, or [any other programming language freak](http://localhost:4000/ioformats.html#files), now you are able to annotate preformatted text :-)</span></li>
+  <li class="new"><span markdown="1">Support for source code files! Whether you are a `python`, `java`, `js`, or [any other programming language freak](/ioformats.html#files), now you are able to annotate preformatted text :-)</span></li>
   <li class="new"><span markdown="1">Copy and share **[permalinks](/webeditor.html#permalinks "tagtog docs - Permalinks")**</span></li>
   <li class="doc">Update documentation about document folders: <a title="tagtog - folders" href="/documentpool.html#folders">Folders</a></li>
   <li class="fix">The popup dialog to import documents is being closed when clicked outside</li>

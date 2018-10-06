@@ -14,6 +14,16 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2018-W40.10 💹
+_2018-10-06_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">More fixes on the NativePDF viewer</span></li>
+  <li class="fix"><span markdown="1">Small fixes OnPremises</span></li>
+</ul>
+
+---
+
 ## 3.2018-W40.9 💋
 _2018-10-05_
 

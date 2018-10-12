@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 👣
-_???_
+## 3.2018-W41.0 👣
+_2018-10-12_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Minor improvements</span></li>

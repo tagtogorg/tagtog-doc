@@ -622,6 +622,96 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 </div>
 
 
+<div class="two-third-col">
+  <h2>Import annotated documents <code>POST</code></h2>
+  <p>If you have annotated documents you want to import you need to upload two files: the <code><a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></code> (representation of the text) and the <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code> (representation of the annotations). <strong>They must have the same name, except for the file extensions</strong>.</p>
+
+  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API.html#files-post" title="Import files to tagtog">Files API POST</a> </p>
+
+  <p><strong>Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>files</code></td>
+      <td>-</td>
+      <td>docidABCDEF.plain.html, docidABCDEF.ann.json</td>
+      <td>You need to upload in the same request both: the plain.html (text) and the ann.json (annotations) files.</td>
+    </tr>
+    <tr>
+      <td><code>project</code></td>
+      <td>-</td>
+      <td>{{ page.api_project }}</td>
+      <td>Name of the project</td>
+    </tr>
+    <tr>
+      <td><code>owner</code></td>
+      <td>Username sending the request</td>
+      <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
+      <td>Owner of the project you want to use</td>
+    </tr>
+    <tr>
+      <td><code>output</code></td>
+      <td><code>visualize</code></td>
+      <td><code>null</code></td>
+      <td>As you are not annotating this documents, output should be <code>null</code> if you upload annotated documents</td>
+    </tr>
+    <tr>
+      <td><code>format</code></td>
+      <td><code>anndoc</code></td>
+      <td><code>anndoc</code></td>
+      <td>Format of the annotated document. List of supported formats for annotated documents: <a title="tagtog - Annotation input formats" href="/ioformats.html#annotation-input-formats">Annotation input formats</a> </td>
+    </tr>
+  </table>
+</div>
+
+<div class="one-third-col">
+  {% include message.html message='You can send multiple annotated documents at the same time. This means you always upload an even number of files.' %}
+</div>
+
+
+<div class="two-third-col">
+
+
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-file">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to upload an annotated document (plain.html + ann.json) to tagtog.</p>
+  <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
+  ```python
+  import requests
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'anndoc'}
+
+  files = [('file', open('/annotated-docs/docidABCDEF.plain.html', 'rb')), ('file', open('/annotated-docs/docidABCDEF.ann.json', 'rb'))]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  ```
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response</p>
+<div markdown="1">
+```json
+{"ok":1,"errors":0,"items":[{"origid":"text","names":["docidABCDEF.ann.json","docidABCDEF.plain.html"],"rawInputSizeInBytes":1038,"tagtogID":"docidABCDEF","result":"created","parsedTextSizeInBytes":29}],"warnings":[]}
+```
+</div>
+</div>
+
+
+
 
 
 <div class="two-third-col">

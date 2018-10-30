@@ -237,12 +237,12 @@ id: projects
         </tr>
         <tr>
           <td>Import new document</td>
-          <td>A notification is sent when the user upload a document.</td>
+          <td>A notification is sent when the user uploads a document.</td>
           <td><code>GUI</code> and <code>API</code></td>
         </tr>
         <tr>
           <td>Save document</td>
-          <td>A notification is sent when the user save a document.</td>
+          <td>A notification is sent when the user saves a document.</td>
           <td><code>GUI</code> and <code>API</code> (<a href="/train-your-own-models.html#how-to-upload-annotated-documents">update annotations via API</a>)</td>
         </tr>
       </table>

@@ -25,6 +25,15 @@ toc: true
   {% include message.html message='Use <code>*</code> as search query to retrieve <strong>all</strong> documents in a project.' %}
 </div>
 
+<div class="two-third-col">
+  <h3>Search by document label</h3>
+  <p>Find documents tagged with specific label and value. </p>
+  <p>Boolean example: <code>label:isSevere:true</code></p>
+  <p>Enum example: <code>label:severity:high</code></p>
+</div>
+<div class="one-third-col">
+
+</div>
 
 <div class="two-third-col">
   <h3>Search by entity type</h3>
@@ -92,10 +101,10 @@ toc: true
 <div class="two-third-col">
   <h3>Proximity search</h3>
   <p>Finding words (string based search) within a specific distance away. Example: <code>"diabetes insulin"~10</code>, to search documents with the terms <code>diabetes</code> and <code>insulin</code> within 10 words of each other.</p>
-  
+
 </div>
 <div class="one-third-col">
-  
+
 </div>
 
 
@@ -108,7 +117,7 @@ toc: true
     <li><code>"type 1 diabetes" NOT insulin</code> search for documents that contain "type 1 diabetes" but not "insulin". This operator cannot be used with just one term.</li>
     <li><code>-entity:GGP</code> search for documents that don't contain mentions of genes, i.e. <code>GGP</code> entities.</li>
   </ul>
-  
+
 </div>
 <div class="one-third-col">
   {% include message.html message='Remember to use <strong>upper case</strong>: <code>AND</code>, <code>OR</code> and <code>NOT</code>.' %}
@@ -117,7 +126,7 @@ toc: true
 <div class="two-third-col">
   <h3>Escaping Special Characters</h3>
   <p>To escape these special characters use the <code>\</code> before the character. For example to search for <code>PD-L1</code> use the query: <code>PD\-L1</code>.</p>
-  
+
 </div>
 <div class="one-third-col">
   {% include message.html message="The current list of <br/><strong>special characters</strong> are <code>+</code> <code>-</code> <code>!</code> <code>&quot;</code> <code>&amp;&amp;</code> <code>&verbar;&verbar;</code> <code>(</code> <code>)</code> <code>{</code> <code>}</code> <code>[</code> <code>]</code> <code>&Hat;</code> <code>~</code> <code>*</code> <code>?</code> <code>:</code> <code>\</code>" %}
@@ -162,7 +171,7 @@ toc: true
       <td><code>published:2018</code> <code>published:2018-03-06</code> <code>published:[2013 to NOW]</code></td>
       <td>Retrieve all documents published in a specified time frame.</td>
     </tr>
-  </table> 
+  </table>
   <br/>
 </div>
 <div class="one-third-col">

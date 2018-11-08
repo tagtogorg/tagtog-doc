@@ -4,7 +4,7 @@ highlighter:      rouge
 
 # Setup
 title:            tagtog
-tagline:          'A text annotation tool to train AI'
+tagline:          'The text annotation tool to train AI'
 description:      'Official documentation for <a href="https://tagtog.net">tagtog</a>'
 app_url:          https://www.tagtog.net
 url:              http://docs.tagtog.net

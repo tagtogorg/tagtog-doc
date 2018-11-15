@@ -12,8 +12,8 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
-## 3.2018-W46.3-PAYMENT_GATEWAY ⛩
-_2018-11-15_
+## ??? ⛩
+_???_
 
 <ul class="updates">  
   <li class="new"><span markdown="1">[Native PDF 📃 ! Annotate actual PDFs; then use them to train your ML models as easily as if they were plain texts! 😲](http://tagtog.net#pdf-annotation)</span></li>

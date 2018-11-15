@@ -12,12 +12,14 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
-## ??? 👌🏿
+## ??? ⛩
 _???_
 
 <ul class="updates">
-  <li class="doc"><span markdown="1">Add documentation: <a title="tagtog - upload annotated documents" href="/API.html#import-annotated-documents-post">upload annotated documents via API</a></span></li>
-  <li class="doc"><span markdown="1">Add documentation: <a title="tagtog - search by document label" href="/search-queries.html#search-by-document-label">search by document label</a></span></li>
+  <li class="new"><span markdown="1">[Use the new automated payment gateway to manage your subscriptions!](http://tagtog.net/-pricing)</span></li>
+  <li class="fix"><span markdown="1">Stability improvements</span></li>
+  <li class="doc"><span markdown="1">Add documentation: [upload annotated documents via API](API.html#import-annotated-documents-post "tagtog - upload annotated documents")</span></li>
+  <li class="doc"><span markdown="1">Add documentation: [search by document label](search-queries.html#search-by-document-label "tagtog - search by document label")</span></li>
 </ul>
 
 ---

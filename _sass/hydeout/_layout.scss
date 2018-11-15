@@ -68,7 +68,7 @@
 
 
 body {
-  color: rgba(255,255,255,.75);
+  color: rgba(255, 255, 255, 0.75);
   background-color: $sidebar-bg-color;
   background-image: linear-gradient(
     to bottom,
@@ -78,7 +78,7 @@ body {
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 
@@ -266,7 +266,7 @@ body {
 }
 
 .page-link {
-  font-weight: lighter;
+  font-weight: 250;
 }
 
 .clean-table {

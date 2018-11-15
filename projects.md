@@ -330,7 +330,7 @@ id: projects
     </div>
     <div class="two-third-col">
     <h5>Invite other users to your project</h5>
-    To <strong>add a new member</strong> simply write the tagtog username in the text box and click on <code>Add Member</code>. Once added, they will receive an email notification.
+    <p>To <strong>add a new member</strong> simply write the tagtog username in the text box and click on <code>Add Member</code>. Once added, they will receive an email notification.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
@@ -340,11 +340,17 @@ id: projects
    </div>
   <div class="page-subsection">
     <div class="two-third-col">
-      <h3>Remove a project</h3>
-      <p>To remove a project, go to its Settings --> Admin. Click on the <code>Delete Project</code> button.</p>
-      {% include image.html name="DeleteProjectBtn.png" caption="Delete the project" %}
+      <h4>Admin</h4>
+      <h5>Remove a project</h5>
+      <p>To remove a project, go to its <i>Settings > Admin</i>. Click on the <code>Delete Project</code> button. Please notice that removing a project will remove all the documents within the project.</p>
+      <h5>Export settings</h5>
+      <p>Export the project's settings (entity types, relation types, entity labels, document labels, etc.) as a JSON file to reuse as a template on new projects.</p>
+      <h5>Import settings</h5>
+      <p>Import another project's settings. <strong>This will overwrite your current settings and remove all your project's documents</strong>. This should be applied solely on new projects.</p>
+
     </div>
     <div class="one-third-col">
+      {% include image.html name="DeleteProjectBtn.png" caption="Delete the project" %}
       <div class="message">
         You cannot remove projects for which you are not the <strong>admin</strong>.
       </div>

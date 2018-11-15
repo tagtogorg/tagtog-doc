@@ -15,7 +15,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ## ??? ⛩
 _???_
 
-<ul class="updates">
+<ul class="updates">  
+  <li class="new"><span markdown="1">[Native PDF 📃 ! Annotate actual PDFs; then use them to train your ML models as easily as if they were plain texts! 😲](http://tagtog.net#pdf-annotation)</span></li>
   <li class="new"><span markdown="1">[Use the new automated payment gateway to manage your subscriptions!](http://tagtog.net/-pricing)</span></li>
   <li class="fix"><span markdown="1">Stability improvements</span></li>
   <li class="doc"><span markdown="1">Add documentation: [upload annotated documents via API](API.html#import-annotated-documents-post "tagtog - upload annotated documents")</span></li>

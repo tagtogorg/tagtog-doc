@@ -319,6 +319,15 @@ id: projects
     <div class="one-third-col">
       <div class="message">Automatic annotations with <strong>dictionaries</strong> will work with machine learning either activated or deactivated</div>
     </div>
+    <div class="two-third-col">
+      <h5>PDF</h5>
+      <p>Check this option to annotate directly over the native PDF document. This web interface only works with PDF files. If this option is unchecked, only the plain text stripped from the PDF is annotatable.</p>
+      <p>Take into consideration that if the PDF file is imported with the option unchecked, only the plain text version will be available for annotation. If you import the file with this option checked, both versions will be available: the native PDF annotation and the plain text annotation when the option is unchecked.</p>
+      <p>Find more information of the PDF annotation tool <a title="tagtog - PDF annotation tool" href="/pdf-annotation-tool.html">here</a>.</p>
+    </div>
+    <div class="one-third-col">
+      <div class="message">This feature is only available in some plans. Check the <a title="tagtog - plans" href="https://tagtog.net/-plans">available features for each plan</a>.</div>
+    </div>
   </div>
   <div class="page-subsection">
     <div class="two-third-col">

@@ -62,7 +62,7 @@ plugins:
   - jemoji
 
 # Custom vars
-version: 3.2018-W46.5-PDF-SNAPSHOT
+version: 3.2018-W46.4-PAYMENT_GATEWAY
 sidebar_home_link:  true
 search_page:   false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog

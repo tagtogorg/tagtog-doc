@@ -16,7 +16,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _2018-11-19_
 
 <ul class="updates">
-  <li class="doc"><span markdown="1">Improve [tagtog.net](http://tagtog.net "The Text Annotation Tool")'s discoverability in search engines</li>
+  <li class="doc"><span markdown="1">Improve [tagtog.net](http://tagtog.net "The Text Annotation Tool")'s discoverability in search engines</span></li>
 </ul>
 
 

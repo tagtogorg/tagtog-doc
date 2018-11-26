@@ -12,8 +12,8 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
-## ??? 👊
-_???_
+## 3.2018-W48.0 👊
+_2018-11-26_
 
 <ul class="updates">
   <li class="doc"><span markdown="1">Speed enhancements</span></li>

@@ -12,6 +12,16 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+## 3.2018-W48.0 👊
+_2018-11-26_
+
+<ul class="updates">
+  <li class="doc"><span markdown="1">Speed enhancements</span></li>
+</ul>
+
+---
+
+
 ## 3.2018-W46.5 🕵️‍♀️
 _2018-11-19_
 
@@ -19,6 +29,7 @@ _2018-11-19_
   <li class="doc"><span markdown="1">Improve [tagtog.net](http://tagtog.net "The Text Annotation Tool")'s discoverability in search engines</span></li>
 </ul>
 
+---
 
 ## 3.2018-W46.4-PAYMENT_GATEWAY ⛩
 _2018-11-15_

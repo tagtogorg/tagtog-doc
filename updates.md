@@ -12,11 +12,22 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+---
+
+## ??? 🍃
+_???_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Milestone 1 - Major overhaul in architecture, for scalability => tagtog becomes even faster!</span></li>
+</ul>
+
+---
+
 ## 3.2018-W48.0 👊
 _2018-11-26_
 
 <ul class="updates">
-  <li class="doc"><span markdown="1">Speed enhancements</span></li>
+  <li class="new"><span markdown="1">Speed enhancements</span></li>
 </ul>
 
 ---

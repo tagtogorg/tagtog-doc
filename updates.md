@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🍃
-_???_
+## 3.2018-W49.0 🍃
+_2018-12-03_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Milestone 1 - Major overhaul in architecture, for scalability => tagtog becomes even faster!</span></li>

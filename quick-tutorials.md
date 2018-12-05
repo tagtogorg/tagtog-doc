@@ -32,8 +32,8 @@ Know what you can do with tagtog with the following tutorials. Moreover, we publ
 </div>
 
 <div class="two-third-col">
-  <h2><a title="tagtog at Medium - Use a text annotation tool to find information in text quicker" href="https://medium.com/@tagtog/use-a-text-annotation-tool-to-find-information-in-text-quickly-c404fc226ae5">How to build and use an ML model to identify Donald Trump's Tweets related to the environment</a></h2>
-  <p>Here we show you to easily train an ML model given a few text annotations. Later we use this model to analyze some of the tweets from Donald Trump and identify automatically those connected with the environment. Let's see what he thinks about it!</p>
+  <h2><a title="tagtog at Medium - Use a text annotation tool to find information in text quicker" href="https://medium.com/@tagtog/use-a-text-annotation-tool-to-find-information-in-text-quickly-c404fc226ae5">How to build and use an ML model to identify Donald Trump's Tweets related to the environment :earth_americas:</a></h2>
+  <p>Here we show you to easily train an ML model given a few text annotations. Later we use this model to analyze some of the <strong>tweets</strong> from Donald Trump and identify automatically those connected with the environment. Let's see what he thinks about it!</p>
 </div>
 <div class="one-third-col">
   {% include image.html name="trump.jpeg" %}

@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? ✌️
-_???_
+## 3.2018-W49.2 ✌️
+_2018-12-07_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Improve DB connectivity</span></li>

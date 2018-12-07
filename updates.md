@@ -27,7 +27,8 @@ _???_
 _2018-12-05_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Pre-annotate your documents with doc labels (classification) upon file upload! (Hint: check the "Advanced" menu on the [+ Content] submit form button)</span></li>
+  <li class="new"><span markdown="1">Pre-annotate your documents with doc labels (classification) upon file upload! (Hint: check the "Advanced" menu on the [+ Content] submit form button)</span>. <a title="tagtog - Upload files with predefined document labels" href="documentpool.html#upload-files-with-predefined-document-labels">Documentation</a></li>
+  <li class="new"><span markdown="1">Upload pre-annotated documents directly from the GUI by uploading the text file and the annotations file together</span>. <a title="tagtog - Upload pre-annotated files" href="documentpool.html#upload-pre-annotated-documents">Documentation</a></li>
 </ul>
 
 ---

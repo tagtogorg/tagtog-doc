@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2018-W49.3 🙆‍♂️
+_2018-12-11_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fix small bug that affected showing relationships of connected entities being in different parts</span></li>
+</ul>
+
+---
+
 ## 3.2018-W49.2 ✌️
 _2018-12-07_
 

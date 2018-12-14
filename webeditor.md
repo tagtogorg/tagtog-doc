@@ -205,7 +205,7 @@ toc: true
         <tr>
           <td>Change Type</td>
           <td class="centered">-</td>
-          <td>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up.</td>
+          <td>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up. This list is sorted alphabetically.</td>
         </tr>
         <tr>
           <td>Normalizations</td>

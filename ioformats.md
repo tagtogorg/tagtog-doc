@@ -77,6 +77,11 @@ toc: true
       </tr>
 
       <tr>
+        <td><code>csv</code> and <code>tsv</code></td>
+        <td><span markdown="1">[Go to documentation](CsvFileParsing)</span></td>
+      </tr>
+
+      <tr>
         <td>source code files</td>
         <td>Supported programming language extensions include: <code>.java, .scala, .js, .py, .python, .jsx, .c, .h, .mm, .M, .cpp, .sql, .cs, .css, .r, .vb, .php, .swift, .go, .m, .sass, .less, .rb, .sh, .ts, .tsx, .shell, .sh</code></td>
       </tr>
@@ -87,6 +92,7 @@ toc: true
       All input types can be imported through the <strong>user interface</strong> or the <strong>API</strong>.
     </div>
   </div>
+
 
   <div class="two-third-col">
     <h3>Bundle files</h3>

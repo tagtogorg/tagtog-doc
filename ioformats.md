@@ -129,7 +129,11 @@ toc: true
       </tr>
       <tr>
         <td><code>anndoc</code></td>
-        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload via API both a document's content (plain.html) and its annotations (ann.json). <a title="tagtog - How to upload annotated documents?" href="/train-your-own-models.html#how-to-upload-annotated-documents">Example</a></p></td>
+        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload the via API both, the <code>plain.html</code> and its annotations <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API.html#replace-annotations-of-existing-document-post">Example</a></p></td>
+      </tr>
+      <tr>
+        <td><code>default-plus-annjson</code></td>
+        <td><p>To upload via API both: text (TXT files, PDF, etc. Check the <a href="ioformats.html#input-formats">input formats</a>) and its annotations <code>ann.json</code>. <a title="tagtog - How to upload annotated documents?" href="API.html#import-annotated-documents-post">Example</a></p></td>
       </tr>
     </table>
   </div>
@@ -150,7 +154,7 @@ toc: true
       <tr>
         <td><code>ann.json</code></td>
         <td>Only annotations. <a title="tagtog - ann doc" href="/anndoc.html">Official documentation</a></td>
-      </tr>      
+      </tr>
       <tr>
         <td><code>html</code>, <code>xml</code></td>
         <td>No annotations provided within this format, only content.</td>

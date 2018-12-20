@@ -19,6 +19,7 @@ _???_
   <li class="new"><span markdown="1">**CSV** (and **TSV**) file parsing!!! 📊 [Check out the documentation](CsvFileParsing)</span></li>
   <li class="new"><span markdown="1">Entity types are now sorted alphabetically in the <a title="tagtog - Annotation menu" href="webeditor.html#annotation-menu">annotation menu</a>. If you have a big list of entities this menu is now scrollable! :barber:</span></li>
   <li class="fix"><span markdown="1">Issue fixed for On-Premises that could cause on some environments to wrongly report document upload errors, when the uploads were actually fine</span></li>
+  <li class="doc"><span markdown="1">Add examples to upload pre-annotated documents using the API. <a title="tagtog - Upload pre-annotated files" href="API.html#import-annotated-documents-post">Documentation</a></span></li>
 </ul>
 
 ---

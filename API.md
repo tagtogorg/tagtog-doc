@@ -34,7 +34,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     </tr>
     <tr>
       <td><strong>Endpoint</strong></td>
-      <td><a href="{{ page.api_endpoint }}">{{ page.api_endpoint }}</a></td>
+      <td>{{ page.api_endpoint }}</td>
     </tr>
   </table>
 </div>
@@ -624,9 +624,12 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 <div class="two-third-col">
   <h2>Import annotated documents <code>POST</code></h2>
-  <p>If you have annotated documents you want to import you need to upload two files: the <code><a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></code> (representation of the text) and the <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code> (representation of the annotations). <strong>They must have the same name, except for the file extensions</strong>.</p>
+  <p>If you have annotated documents you want to import, you need to upload two files:</p>
+  <p class="list-item"><span class="list-item-1"></span><strong>The text or document</strong>. This can be a regular file (e.g. txt, xml, pdf, <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a>, etc.), plain text, etc. Check the supported <a title="tagtog - input formats" href="ioformats.html#input-formats">input formats</a></p>
+  <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
+  <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc.pdf</code> and <code>mydoc.ann.json</code>.</p>
 
-  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API.html#files-post" title="Import files to tagtog">Files API POST</a> </p>
+  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
 
   <p><strong>Parameters</strong></p>
   <table style="width:100%;">
@@ -639,8 +642,8 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     <tr>
       <td><code>files</code></td>
       <td>-</td>
-      <td>docidABCDEF.plain.html, docidABCDEF.ann.json</td>
-      <td>You need to upload in the same request both: the plain.html (text) and the ann.json (annotations) files.</td>
+      <td>text.txt, text.ann.json</td>
+      <td>You need to upload in the same request both: the text (supported input format) and the ann.json (annotations) files.</td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -658,13 +661,106 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td><code>output</code></td>
       <td><code>visualize</code></td>
       <td><code>null</code></td>
-      <td>As you are not annotating this documents, output should be <code>null</code> if you upload annotated documents</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>format</code></td>
+      <td><code>anndoc</code></td>
+      <td><code>default-plus-annjson</code></td>
+      <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a></td>
+    </tr>
+  </table>
+</div>
+
+<div class="one-third-col">
+  {% include message.html message='You can send multiple annotated documents at the same time. This means you always upload an even number of files.' %}
+</div>
+
+<div class="two-third-col">
+
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-file">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. In this case we write the content of the ann.json file, but you could easily point to a existing ann.json file. Make sure the ann.json is well formated. The format used is <code>default-plus-annjson</code>.</p>
+  <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
+  ```python
+
+  import requests
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
+
+  files = {
+    'json': ('text.ann.json', '{"annotatable":{"parts":[]},"anncomplete":false,"sources":[],"metas":{"m_1":{"value":"optionA","confidence":{"state":"pre-added","who":["user:{{ page.api_username }}"],"prob":1}}},"entities":[],"relations":[]}', 'application/json'),
+    'file': ('text.txt', open('./text.txt', 'rb'), 'application/octet-stream')
+  }
+
+  response = requests.put(tagtogAPIUrl, params=params, auth=auth, files=files)
+  ```
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response</p>
+<div markdown="1">
+```json
+{"ok":1,"errors":0,"items":[{"origid":"text","names":["text.txt","text.ann.json"],"rawInputSizeInBytes":208,"tagtogID":"asFec0QPFqIFaySbl.j0caWPSS9m-text","result":"created","parsedTextSizeInBytes":15}],"warnings":[]}
+```
+</div>
+</div>
+
+
+<div class="two-third-col">
+  <h3>Replace annotations of existing document <code>POST</code></h3>
+  <p>You should use two files:</p>
+  <p class="list-item"><span class="list-item-1"></span><strong>The <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></strong>. You can obtain this file by <a title="Get files - tagtog API" href="API.html#get-existing-documents-get">downloading it from the API</a> using the output <code>html</code>.</p>
+  <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
+  <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc-3243hdsfk3.plain.html</code> and <code>mydoc-3243hdsfk3.ann.json</code>.</p>
+
+  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
+
+  <p><strong>Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>files</code></td>
+      <td>-</td>
+      <td>docidABCDEF.plain.html, docidABCDEF.ann.json</td>
+      <td>You need to upload in the same request both: the plain.html (content) and the ann.json (annotations) files.</td>
+    </tr>
+    <tr>
+      <td><code>project</code></td>
+      <td>-</td>
+      <td>{{ page.api_project }}</td>
+      <td>Name of the project</td>
+    </tr>
+    <tr>
+      <td><code>owner</code></td>
+      <td>Username sending the request</td>
+      <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
+      <td>Owner of the project you want to use</td>
+    </tr>
+    <tr>
+      <td><code>output</code></td>
+      <td><code>visualize</code></td>
+      <td><code>null</code></td>
+      <td></td>
     </tr>
     <tr>
       <td><code>format</code></td>
       <td><code>anndoc</code></td>
       <td><code>anndoc</code></td>
-      <td>Format of the annotated document. List of supported formats for annotated documents: <a title="tagtog - Annotation input formats" href="/ioformats.html#annotation-input-formats">Annotation input formats</a> </td>
+      <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a> </td>
     </tr>
   </table>
 </div>
@@ -674,15 +770,15 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 </div>
 
 
-<div class="two-third-col">
 
+<div class="two-third-col">
 
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-1-file">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to upload an annotated document (plain.html + ann.json) to tagtog.</p>
+  <p class="code-desc">This example shows how to replace the annotations of an existing document (plain.html + ann.json) to tagtog.</p>
   <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
   ```python
   import requests

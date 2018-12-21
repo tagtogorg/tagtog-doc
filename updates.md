@@ -21,6 +21,7 @@ _???_
   <li class="fix"><span markdown="1">Issue fixed for On-Premises that could cause on some environments to wrongly report document upload errors, when the uploads were actually fine</span></li>  
   <li class="doc"><span markdown="1">Add examples to upload pre-annotated documents using the API. [Documentation](API.html#import-annotated-documents-post "tagtog - Upload pre-annotated files")</span></li>
   <li class="new"><span markdown="1">Increased the capacity of our Cloud servers to provide you with a faster and more robust service 🥰</span></li>
+  <li class="fix"><span markdown="1">Fixed small error in the ML component that could cause training exceptions on empty sentences in the data</span></li>
 </ul>
 
 ---

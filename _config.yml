@@ -63,7 +63,7 @@ plugins:
   - jemoji
 
 # Custom vars
-version: 3.2018-W51.1-SNAPSHOT
+version: 3.2018-W51.2-SNAPSHOT
 sidebar_home_link:  true
 search_page:   false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog

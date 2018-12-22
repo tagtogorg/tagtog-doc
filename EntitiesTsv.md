@@ -14,7 +14,7 @@ Tabulated format to represent an annotated document's **entities**. The main cha
   * Annotated entity text is labeled as the corresponding entity type's name (e.g. _Person_ or _Location_).
 
 * Annotations other than entities are not represented in this format.
-* Overlapping entities are not supported either: when two overlapping entities are detected, the first one (as in the string start offset) is arbitrarily chosen over the other.
+* **Overlapping entities are not supported** either: when two overlapping entities are detected, the first one (as in the string start offset) is arbitrarily chosen over the other.
 
 
 The `EntitiesTsv` format closely resembles the `tsv` output by the Stanford NER tool as briefly shown [here](https://nlp.stanford.edu/software/crf-faq.shtml#j) and [here (see _outputFormat_)](https://nlp.stanford.edu/software/CRF-NER.shtml). The main differences are that in `EntitiesTsv`:
@@ -25,7 +25,9 @@ The `EntitiesTsv` format closely resembles the `tsv` output by the Stanford NER 
 
 This is to give freedom to the user to choose later any desired text tokenizer. If the user still wants to use Stanford's default tokenizer, [this is the corresponding java class](https://nlp.stanford.edu/nlp/javadoc/javanlp/edu/stanford/nlp/process/PTBTokenizer.html).
 
-The format is best explained with an **example** 🙂:
+## Example
+
+The format is best explained with an example 🙂:
 
 * From the annotated document (_input_):
 ![Sample document](assets/img/EntityTsv/my-sample-tagtog.png)

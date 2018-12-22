@@ -167,6 +167,10 @@ toc: true
         <td><code>entitiestsv</code></td>
         <td><a href="/EntitiesTsv">EntitiesTsv documentation</a></td>
       </tr>
+      <tr>
+        <td><code>entitiesonlyclassestsv</code></td>
+        <td><a href="/EntitiesOnlyClassesTsv">EntitiesOnlyClassesTsv documentation</a></td>
+      </tr>
 
       <tr>
         <td><code>pubannotation</code></td>

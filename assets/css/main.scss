@@ -6,6 +6,8 @@ $sidebar-bg-color: #ED912D;
 @import "hydeout";
 
 ul.updates {
+  list-style: none;
+  padding-left: 15px;
   .new::before {
     content: "🍃NEW";
     background-color: rgb(171, 240, 84);

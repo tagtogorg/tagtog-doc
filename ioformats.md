@@ -77,6 +77,11 @@ toc: true
       </tr>
 
       <tr>
+        <td><code>csv</code> and <code>tsv</code></td>
+        <td><span markdown="1">[Go to documentation](CsvFileParsing)</span></td>
+      </tr>
+
+      <tr>
         <td>source code files</td>
         <td>Supported programming language extensions include: <code>.java, .scala, .js, .py, .python, .jsx, .c, .h, .mm, .M, .cpp, .sql, .cs, .css, .r, .vb, .php, .swift, .go, .m, .sass, .less, .rb, .sh, .ts, .tsx, .shell, .sh</code></td>
       </tr>
@@ -87,6 +92,7 @@ toc: true
       All input types can be imported through the <strong>user interface</strong> or the <strong>API</strong>.
     </div>
   </div>
+
 
   <div class="two-third-col">
     <h3>Bundle files</h3>
@@ -123,7 +129,11 @@ toc: true
       </tr>
       <tr>
         <td><code>anndoc</code></td>
-        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload via API both a document's content (plain.html) and its annotations (ann.json). <a title="tagtog - How to upload annotated documents?" href="/train-your-own-models.html#how-to-upload-annotated-documents">Example</a></p></td>
+        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload the via API both, the <code>plain.html</code> and its annotations <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API.html#replace-annotations-of-existing-document-post">Example</a></p></td>
+      </tr>
+      <tr>
+        <td><code>default-plus-annjson</code></td>
+        <td><p>To upload via API both: text (TXT files, PDF, etc. Check the <a href="ioformats.html#input-formats">input formats</a>) and its annotations <code>ann.json</code>. <a title="tagtog - How to upload annotated documents?" href="API.html#import-annotated-documents-post">Example</a></p></td>
       </tr>
     </table>
   </div>
@@ -144,7 +154,7 @@ toc: true
       <tr>
         <td><code>ann.json</code></td>
         <td>Only annotations. <a title="tagtog - ann doc" href="/anndoc.html">Official documentation</a></td>
-      </tr>      
+      </tr>
       <tr>
         <td><code>html</code>, <code>xml</code></td>
         <td>No annotations provided within this format, only content.</td>
@@ -156,6 +166,10 @@ toc: true
       <tr>
         <td><code>entitiestsv</code></td>
         <td><a href="/EntitiesTsv">EntitiesTsv documentation</a></td>
+      </tr>
+      <tr>
+        <td><code>entitiesonlyclassestsv</code></td>
+        <td><a href="/EntitiesOnlyClassesTsv">EntitiesOnlyClassesTsv documentation</a></td>
       </tr>
 
       <tr>

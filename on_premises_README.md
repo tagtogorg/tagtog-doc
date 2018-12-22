@@ -40,8 +40,10 @@ Your system must have installed:
 
 Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the following minimum requirements:
 
-* **8 GB RAM**
+* **8 GB RAM** (On-Premises Annotator only) or **16GB RAM** (On-Premises Annotator _+ ML_)
 * **50 GB of disk space**
+
+
 
 
 ## First-time Install
@@ -107,7 +109,7 @@ Please provide detailed information of the problem and **send us always the cont
 
 
 
-### Problems with docker container `tagtog_taskmanager_1` or document uploading:
+### Issues with document uploading, or with the docker container `tagtog_taskmanager_1`:
 
 Try:
 
@@ -115,7 +117,7 @@ Try:
 2. Restarting the application: `./tagtog_on_premises restart latest $TAGTOG_HOME`
 
 
-### Problems in an update
+### Issues in an update
 
 Try:
 
@@ -132,8 +134,8 @@ echo "0" > LATEST_VERSION
 On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script:
 
 ```shell
-# PLEASE BACKUP YOUR DATA FIRST
-`./tagtog_on_premises fix_documents latest $TAGTOG_HOME`
+# PLEASE, BACKUP YOUR DATA FIRST
+./tagtog_on_premises fix_documents latest $TAGTOG_HOME
 ```
 
 
@@ -147,3 +149,34 @@ Otherwise, a quick solution is:
 
 1. Grant all permissions to everybody: `chmod 777 -r $TAGTOG_HOME`
 2. Restart the application: `./tagtog_on_premises restart ...`
+
+
+
+### tagtog docker images not found, on a new server installation
+
+Chances are that you must re-do a first-time installation on your new server/instance, like this:
+
+```shell
+./tagtog_on_premises first_installation LICENSE_NAME LICENSE_KEY
+```
+
+Do the above if you encounter something like this:
+
+```
+Creating network "tagtog_default" with the default driver
+Pulling cache (redis:4.0-alpine)...
+4.0-alpine: Pulling from library/redis
+4fe2ade4980c: Already exists
+fb758dc2e038: Pull complete
+989f7b0c858b: Pull complete
+d5318f13abaa: Pull complete
+3521559474dd: Pull complete
+add04b113886: Pull complete
+Pulling db (tagtog_db:3.2018-W21.0)...
+ERROR: The image for the service you're trying to recreate has been removed. If you continue, volume data could be lost. Consider backing up your data before continuing.
+
+Continue with the new image? [yN]y
+Pulling db (tagtog_db:3.2018-W21.0)...
+ERROR: pull access denied for tagtog_db, repository does not exist or may require 'docker login'
+.............................One process could not be started. Check the logs of 'tagtog_jobmanager_1'
+```

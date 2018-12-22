@@ -156,12 +156,14 @@ toc: true
         </tr>
         <tr>
           <td>Pre-selection</td>
-          <td>Equal entities that are annotated <strong>upon manual annotation</strong>. E.g. if you annotate <code>HER2</code> as Entity Type <code>Gene</code>, all occurrences of the string "HER2" will be annotated as Entity Type <code>Gene</code>. Pre-selections are visualized with a yellow border and the background color of the Entity Type. If you click on one of these pre-annotations, the pre-annotation will turn into a regular annotation.
-          {% include image.html name="editor-pre-selection2.PNG" width="250"%}</td>
+          <td><p>Equal entities that are annotated <strong>upon manual annotation</strong>. E.g. if you annotate <code>HER2</code> as Entity Type <code>Gene</code>, all occurrences of the string "HER2" will be annotated as Entity Type <code>Gene</code>. Pre-selections are visualized with a yellow border and the background color of the Entity Type. If you click on one of these pre-annotations, the pre-annotation will turn into a regular annotation.</p>
+          {% include image.html name="editor-pre-selection2.PNG" width="250"%}
+          <p>In addition, if you add/remove a normalization for this entity, this change will propagate to all pre-annotated occurrences.</p>
+          </td>
         </tr>
         <tr>
           <td>Pre-deselection</td>
-          <td>Equal entities that are removed <strong>upon manual removal</strong>, e.g. if you remove an existing annotation with the text "HER2" and Entity Type <code>Gene</code>, all annotations with the text "HER2" with the same Entity Type will be pre-deselected. Pre-deselections are visualized with a yellow border and white background color. If you click on one of these pre-deselections, the annotation will be removed.
+          <td><p>Equal entities that are removed <strong>upon manual removal</strong>, e.g. if you remove an existing annotation with the text "HER2" and Entity Type <code>Gene</code>, all annotations with the text "HER2" with the same Entity Type will be pre-deselected. Pre-deselections are visualized with a yellow border and white background color. If you click on one of these pre-deselections, the annotation will be removed.</p>
           {% include image.html name="editor-pre-deselection.PNG" width="250" %}</td>
         </tr>
       </table>
@@ -205,7 +207,7 @@ toc: true
         <tr>
           <td>Change Type</td>
           <td class="centered">-</td>
-          <td>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up.</td>
+          <td>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up. This list is sorted alphabetically.</td>
         </tr>
         <tr>
           <td>Normalizations</td>

@@ -24,4 +24,4 @@ The format is best explained with an example 🙂 (contrast with that of [Entiti
 
 ![Sample output](assets/img/EntityTsv/my-sample-overlapping-onlyclasses-output.png)
 
-<div style="width:30%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/TA5UdQTc3NVKg" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+<div class="vincentformat" style="width:30%;height:0;padding-bottom:20%;position:relative;"><iframe src="https://giphy.com/embed/TA5UdQTc3NVKg" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>

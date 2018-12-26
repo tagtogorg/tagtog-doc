@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 👑
-_???_
+## 3.2018-W52.0 👑
+_2018-12-26_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Clean front-page for **On-premises** version. Information regarding Plans has been removed.</span></li>

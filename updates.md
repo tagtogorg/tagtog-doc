@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🎆
+_???_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Removed an internal process. This saves ~1GB of memory on-premises :-)</span></li>  
+</ul>
+
+---
+
 ## 3.2018-W52.0 👑
 _2018-12-26_
 

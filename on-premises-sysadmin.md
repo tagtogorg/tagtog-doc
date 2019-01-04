@@ -20,8 +20,8 @@ toc: true
   <div class="two-third-col">
     <h2>How to access</h2>
     <p>Go to your root domain set for tagtog (you probably use directly the IP or a custom domain) and access <code>/-sysadmin</code> relative path. For example: <code>https://nlp.cia.com/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
-    <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the Subscription license name.</p>
-    <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the Subscription license key.</p>
+    <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the subscription license name</p>
+    <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the subscription license key</p>
 
     {% include image.html name="sysadmin-onpremises-users.png"  caption="Username, email address, and registration date." %}
   </div>

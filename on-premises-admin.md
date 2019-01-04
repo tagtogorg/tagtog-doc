@@ -18,7 +18,7 @@ toc: true
   </div>
   <div class="two-third-col">
     <h2>How to access</h2>
-    <p>Go to your root domain set for tagtog (you probably use directly the IP or a custom domain) and access <code>/-admin</code> relative path. For example: <code>https://nlp.cia.com/-admin</code>. You will be prompt with a basic authentication panel with username and password fields:</p>
+    <p>Go to your root domain set for tagtog (you probably use directly the IP or a custom domain) and access <code>/-admin</code> relative path. For example: <code>https://nlp.cia.com/-admin</code>. You will be prompedt with a basic authentication panel, to enter the fields:</p>
     <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>. Use the Subscription license name.</p>
     <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>. Use the Subscription license key.</p>
   </div>
@@ -32,9 +32,17 @@ toc: true
     <h3>User Management</h3>
     <p>The admin panel displays a list of the users registered in the instance. You can remove users that for example don't use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
     {% include image.html name="admin-premises-users.png"  caption="Username, email address and registration date." %}
+
+    <h3>Do not allow visitors to create accounts</h3>
+
+    <p markdown="1">For a tight control, sometimes you do not want to allow visitors to your tagtog installation to create accounts themselves. In such a case the admin is responsible to create the accounts for the users. To disable visitors to create accounts, you need to set the java dynamic property `application.canVisitorsCreateAccounts` to `false` in the global environment variable `TAGTOG_JAVA_OPTS`, such like:</p>
+
+    <p markdown="1">
+    ```
+    export TAGTOG_JAVA_OPTS="-Dapplication.canVisitorsCreateAccounts=false"; ./tagtog_on_premises restart latest $PWD/tagtog_home    
+    ```
+    </p>
   </div>
   <div class="one-third-col">
   </div>
 </div>
-
-

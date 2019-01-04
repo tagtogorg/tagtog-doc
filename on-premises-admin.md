@@ -40,11 +40,12 @@ toc: true
 
     {% include image.html name="admin-premises-users.png"  caption="Username, email address, and registration date." %}
 
+
     <h3>Do not allow visitors to create accounts</h3>
 
     <p markdown="1">For a tight control, sometimes you do not want to allow visitors to your tagtog installation creating accounts themselves. In such a case, the admin is responsible to create the accounts for all the users.</p>
 
-    <p markdown="1">To disable visitors to create accounts, you need to set the java dynamic property `application.canVisitorsCreateAccounts` to `false` in the global environment variable `TAGTOG_JAVA_OPTS`, such like:</p>
+    <p markdown="1">To disable visitors to create accounts, you need to set the java dynamic property `application.canVisitorsCreateAccounts` to `false` (the default is _true_) in the global environment variable `TAGTOG_JAVA_OPTS`, such like:</p>
 
     <p markdown="1">
     ```

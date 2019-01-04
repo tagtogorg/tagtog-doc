@@ -9,7 +9,7 @@ toc: true
 <div class="page-section">
   <div class="two-third-col">
     <h2>Introduction</h2>
-    <p>In on-premises instances, using the Admin page you can perform different management tasks at system level.</p>
+    <p>In On-Premises instances, using the <strong>Admin page</strong> you can perform different management tasks at the system level.</p>
   </div>
   <div class="one-third-col">
     <div class="message">

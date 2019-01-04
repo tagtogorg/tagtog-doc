@@ -16,24 +16,26 @@ toc: true
       This panel is only accessible in <strong>on-premises</strong> instances.
     </div>
   </div>
+
   <div class="two-third-col">
     <h2>How to access</h2>
     <p>Go to your root domain set for tagtog (you probably use directly the IP or a custom domain) and access <code>/-admin</code> relative path. For example: <code>https://nlp.cia.com/-admin</code>. You will be prompedt with a basic authentication panel, to enter the fields:</p>
-    <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>. Use the Subscription license name.</p>
-    <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>. Use the Subscription license key.</p>
+    <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the Subscription license name.</p>
+    <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the Subscription license key.</p>
   </div>
   <div class="one-third-col">
     <div class="message">
       <strong>License information</strong> is sent to you by email by the tagtog team when you first purchased the on-premises software.
     </div>
   </div>
+
   <div class="two-third-col">
     <h2>Features</h2>
 
     <h3>User Management</h3>
     <p>The admin panel displays a list of the users registered in the instance. You can:</p>
 
-    <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: ...</p>
+    <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: ...not implemented...</p>
     <p class="list-item" markdown="1"><span class="list-item-2"></span>**Remove old accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
 
     {% include image.html name="admin-premises-users.png"  caption="Username, email address, and registration date." %}

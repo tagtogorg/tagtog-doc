@@ -21,7 +21,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="new"><span markdown="1">Slightly faster API thanks to less internal DB connections</span></li>
   <li class="fix"><span markdown="1">Avoid double redirection upon login (first to "/", then to the user's page). This allows for custom-based authentications via reverse proxies (On-Premises)</span></li>
   <li class="new"><span markdown="1">Created API for project settings. As a first step, you can export your settings using the endpoint: `/-api/settings/v1/export?owner=???&project=???`</span></li>
-  <li class="new"><span markdown="1">Empower On-Premises system admins to [allow or disallow visitors to create accounts](http://docs.tagtog.net/on-premises-admin.html)</span></li>
+  <li class="new"><span markdown="1">Empower On-Premises system admins to [allow or disallow visitors to create accounts](on-premises-admin.html#do-not-allow-visitors-to-create-accounts)</span></li>
 </ul>
 
 ---
@@ -46,8 +46,8 @@ _2018-12-22_
   <li class="doc"><span markdown="1">Add examples to upload pre-annotated documents using the API. [Documentation](API.html#import-annotated-documents-post "tagtog - Upload pre-annotated files")</span></li>
   <li class="new"><span markdown="1">Increased the capacity of our Cloud servers to provide you with a faster and more robust service 🥰</span></li>
   <li class="fix"><span markdown="1">Fixed small error in the ML component that could cause training exceptions on empty sentences in the data</span></li>
-  <li class="fix"><span markdown="1">Fixed a bug in the [EntitiesTsv format](http://docs.tagtog.net/EntitiesTsv "Entities TSV format"), in which documents without entity annotations did not output any text</span></li>
-  <li class="new"><span markdown="1">New output format: [EntitiesOnlyClassesTsv format](http://docs.tagtog.net/EntitiesOnlyClassesTsv "EntitiesOnlyClassesTsv format") 🎅</span></li>
+  <li class="fix"><span markdown="1">Fixed a bug in the [EntitiesTsv format](EntitiesTsv "Entities TSV format"), in which documents without entity annotations did not output any text</span></li>
+  <li class="new"><span markdown="1">New output format: [EntitiesOnlyClassesTsv format](EntitiesOnlyClassesTsv "EntitiesOnlyClassesTsv format") 🎅</span></li>
 
 </ul>
 

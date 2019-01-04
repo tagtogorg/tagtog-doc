@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Admin on-premises
+title: SysAdmin On-Premises
 sidebar_link: true
-id: admin-premises
+id: sysadmin-premises
 toc: true
 ---
 
 <div class="page-section">
   <div class="two-third-col">
     <h2>Introduction</h2>
-    <p>In On-Premises instances, using the <strong>Admin page</strong> you can perform different management tasks at the system level.</p>
+    <p>In On-Premises instances, using the <strong>SysAdmin page</strong> you can perform different management tasks at the system level.</p>
   </div>
   <div class="one-third-col">
     <div class="message">
@@ -19,11 +19,11 @@ toc: true
 
   <div class="two-third-col">
     <h2>How to access</h2>
-    <p>Go to your root domain set for tagtog (you probably use directly the IP or a custom domain) and access <code>/-admin</code> relative path. For example: <code>https://nlp.cia.com/-admin</code>. You will be prompedt with a basic authentication panel, to enter the fields:</p>
+    <p>Go to your root domain set for tagtog (you probably use directly the IP or a custom domain) and access <code>/-sysadmin</code> relative path. For example: <code>https://nlp.cia.com/-sysadmin</code>. You will be prompedt with a basic authentication panel, to enter the fields:</p>
     <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the Subscription license name.</p>
     <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the Subscription license key.</p>
 
-    {% include image.html name="admin-premises-users.png"  caption="Username, email address, and registration date." %}
+    {% include image.html name="sysadmin-onpremises-users.png"  caption="Username, email address, and registration date." %}
   </div>
   <div class="one-third-col">
     <div class="message">

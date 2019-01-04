@@ -21,7 +21,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="new"><span markdown="1">Slightly faster API thanks to less internal DB connections</span></li>
   <li class="fix"><span markdown="1">Avoid double redirection upon login (first to "/", then to the user's page). This allows for custom-based authentications via reverse proxies (On-Premises)</span></li>
   <li class="new"><span markdown="1">Created API for project settings. As a first step, you can export your settings using the endpoint: `/-api/settings/v1/export?owner=???&project=???`</span></li>
-  <li class="new"><span markdown="1">Empower On-Premises system admins to [allow or disallow visitors to create accounts](on-premises-admin.html#do-not-allow-visitors-to-create-accounts)</span></li>
+  <li class="new"><span markdown="1">Empower On-Premises system admins to [allow or disallow visitors to create accounts](on-premises-sysadmin.html#do-not-allow-visitors-to-create-accounts)</span></li>
 </ul>
 
 ---
@@ -120,7 +120,7 @@ _2018-11-15_
   <li class="doc"><span markdown="1">Add documentation: [search by document label](search-queries.html#search-by-document-label "tagtog - search by document label")</span></li>
   <li class="doc">Extend admin section in project settings: <a title="tagtog - admin section" href="/projects.html#admin">admin section</a></li>
   <li class="doc"><a title="tagtog - PDF annotation tool" href="pdf-annotation-tool.html">PDF annotation tool</a></li>
-  <li class="doc"><a title="tagtog - Admin page for on-premises instances" href="on-premises-admin.html">Admin page for on-premises instances</a></li>
+  <li class="doc"><a title="tagtog - Admin page for on-premises instances" href="on-premises-sysadmin.html">Admin page for on-premises instances</a></li>
 </ul>
 
 ---

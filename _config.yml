@@ -45,7 +45,7 @@ sidebar_toc:
   - name: On Premises
     pages:
       - on_premises_readme
-      - admin-premises
+      - sysadmin-premises
 
 
 author:

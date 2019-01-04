@@ -29,13 +29,20 @@ toc: true
   </div>
   <div class="two-third-col">
     <h2>Features</h2>
+
     <h3>User Management</h3>
-    <p>The admin panel displays a list of the users registered in the instance. You can remove users that for example don't use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
-    {% include image.html name="admin-premises-users.png"  caption="Username, email address and registration date." %}
+    <p>The admin panel displays a list of the users registered in the instance. You can:</p>
+
+    <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: ...</p>
+    <p class="list-item" markdown="1"><span class="list-item-2"></span>**Remove old accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
+
+    {% include image.html name="admin-premises-users.png"  caption="Username, email address, and registration date." %}
 
     <h3>Do not allow visitors to create accounts</h3>
 
-    <p markdown="1">For a tight control, sometimes you do not want to allow visitors to your tagtog installation to create accounts themselves. In such a case the admin is responsible to create the accounts for the users. To disable visitors to create accounts, you need to set the java dynamic property `application.canVisitorsCreateAccounts` to `false` in the global environment variable `TAGTOG_JAVA_OPTS`, such like:</p>
+    <p markdown="1">For a tight control, sometimes you do not want to allow visitors to your tagtog installation creating accounts themselves. In such a case, the admin is responsible to create the accounts for all the users.</p>
+
+    <p markdown="1">To disable visitors to create accounts, you need to set the java dynamic property `application.canVisitorsCreateAccounts` to `false` in the global environment variable `TAGTOG_JAVA_OPTS`, such like:</p>
 
     <p markdown="1">
     ```

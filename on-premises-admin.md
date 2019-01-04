@@ -22,6 +22,8 @@ toc: true
     <p>Go to your root domain set for tagtog (you probably use directly the IP or a custom domain) and access <code>/-admin</code> relative path. For example: <code>https://nlp.cia.com/-admin</code>. You will be prompedt with a basic authentication panel, to enter the fields:</p>
     <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the Subscription license name.</p>
     <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the Subscription license key.</p>
+
+    {% include image.html name="admin-premises-users.png"  caption="Username, email address, and registration date." %}
   </div>
   <div class="one-third-col">
     <div class="message">
@@ -37,8 +39,7 @@ toc: true
 
     <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: ...not implemented...</p>
     <p class="list-item" markdown="1"><span class="list-item-2"></span>**Remove old accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
-
-    {% include image.html name="admin-premises-users.png"  caption="Username, email address, and registration date." %}
+    <p class="list-item" markdown="1"><span class="list-item-3"></span>**Revoke all auth tokens**: remove all existing token-based logins</p>
 
 
     <h3>Do not allow visitors to create accounts</h3>

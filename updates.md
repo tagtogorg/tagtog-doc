@@ -24,6 +24,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="doc"><span markdown="1">Renamed On-Premises admin page for: [SysAdmin On-Premises](on-premises-sysadmin.html)</span></li>
   <li class="new"><span markdown="1">Empowered On-Premises system admins to [allow or disallow visitors to create accounts](on-premises-sysadmin.html#do-not-allow-visitors-to-create-accounts)</span></li>
   <li class="new"><span markdown="1">New security-concerning action for On-Premises sysadmins to [revoke all existing auth tokens](on-premises-sysadmin.html#user-management)</span></li>
+  <li class="doc"><span markdown="1">On-Premises: abort the start if the `vm.max_map_count` value is too low. [See the requirements](on_premises_README.html#requirements).</span></li>
 
 </ul>
 

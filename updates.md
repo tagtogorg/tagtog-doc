@@ -14,7 +14,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🎇
+## 3.2019-W01.1 🎇
 <ul class="updates">
   <li class="new"><span markdown="1">Configuration fix</span></li>
 </ul>

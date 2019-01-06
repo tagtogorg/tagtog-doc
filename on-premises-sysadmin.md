@@ -37,9 +37,9 @@ toc: true
     <h3>User Management</h3>
     <p>The admin panel displays a list of the users registered in the instance. You can:</p>
 
-    <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: ...not implemented...</p>
+    <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: generate a registration link to share with others or to use oneself</p>
     <p class="list-item" markdown="1"><span class="list-item-2"></span>**Remove old accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
-    <p class="list-item" markdown="1"><span class="list-item-3"></span>**Revoke all auth tokens**: remove all existing token-based logins</p>
+    <p class="list-item" markdown="1"><span class="list-item-3"></span>**Revoke all auth tokens**: remove all existing token-based logins and registration links</p>
 
 
     <h3>Do not allow visitors to create accounts</h3>

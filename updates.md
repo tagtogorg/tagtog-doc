@@ -14,6 +14,13 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W01.1 🎇
+<ul class="updates">
+  <li class="new"><span markdown="1">Configuration fix</span></li>
+</ul>
+
+---
+
 ## 3.2019-W01.0 🎆
 
 <ul class="updates">
@@ -26,7 +33,6 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="new"><span markdown="1">New security-concerning action for On-Premises sysadmins to [revoke all existing auth tokens](on-premises-sysadmin.html#user-management)</span></li>
   <li class="doc"><span markdown="1">On-Premises: abort the start if the `vm.max_map_count` value is too low. [See the requirements](on_premises_README.html#requirements).</span></li>
   <li class="fix"><span markdown="1">Fixed bug On-Premises SysAdmin page wherein some users could not be deleted</span></li>
-
 </ul>
 
 ---

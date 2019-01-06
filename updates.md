@@ -14,6 +14,23 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W01.0 🎆
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Removed an internal process. This saves ~1GB of memory on-premises :-)</span></li>
+  <li class="new"><span markdown="1">Slightly faster API thanks to less internal DB connections</span></li>
+  <li class="fix"><span markdown="1">Avoid double redirection upon login (first to "/", then to the user's page). This allows for custom-based authentications via reverse proxies (On-Premises)</span></li>
+  <li class="new"><span markdown="1">Created API for project settings. As a first step, you can export your settings using the endpoint: `/-api/settings/v1/export?owner=???&project=???`</span></li>
+  <li class="doc"><span markdown="1">Renamed On-Premises admin page for: [SysAdmin On-Premises](on-premises-sysadmin.html)</span></li>
+  <li class="new"><span markdown="1">Empowered On-Premises system admins to [allow or disallow visitors to create accounts](on-premises-sysadmin.html#do-not-allow-visitors-to-create-accounts)</span></li>
+  <li class="new"><span markdown="1">New security-concerning action for On-Premises sysadmins to [revoke all existing auth tokens](on-premises-sysadmin.html#user-management)</span></li>
+  <li class="doc"><span markdown="1">On-Premises: abort the start if the `vm.max_map_count` value is too low. [See the requirements](on_premises_README.html#requirements).</span></li>
+  <li class="fix"><span markdown="1">Fixed bug On-Premises SysAdmin page wherein some users could not be deleted</span></li>
+
+</ul>
+
+---
+
 ## 3.2018-W52.0 👑
 _2018-12-26_
 
@@ -34,8 +51,8 @@ _2018-12-22_
   <li class="doc"><span markdown="1">Add examples to upload pre-annotated documents using the API. [Documentation](API.html#import-annotated-documents-post "tagtog - Upload pre-annotated files")</span></li>
   <li class="new"><span markdown="1">Increased the capacity of our Cloud servers to provide you with a faster and more robust service 🥰</span></li>
   <li class="fix"><span markdown="1">Fixed small error in the ML component that could cause training exceptions on empty sentences in the data</span></li>
-  <li class="fix"><span markdown="1">Fixed a bug in the [EntitiesTsv format](http://docs.tagtog.net/EntitiesTsv "Entities TSV format"), in which documents without entity annotations did not output any text</span></li>
-  <li class="new"><span markdown="1">New output format: [EntitiesOnlyClassesTsv format](http://docs.tagtog.net/EntitiesOnlyClassesTsv "EntitiesOnlyClassesTsv format") 🎅</span></li>
+  <li class="fix"><span markdown="1">Fixed a bug in the [EntitiesTsv format](EntitiesTsv "Entities TSV format"), in which documents without entity annotations did not output any text</span></li>
+  <li class="new"><span markdown="1">New output format: [EntitiesOnlyClassesTsv format](EntitiesOnlyClassesTsv "EntitiesOnlyClassesTsv format") 🎅</span></li>
 
 </ul>
 
@@ -108,7 +125,7 @@ _2018-11-15_
   <li class="doc"><span markdown="1">Add documentation: [search by document label](search-queries.html#search-by-document-label "tagtog - search by document label")</span></li>
   <li class="doc">Extend admin section in project settings: <a title="tagtog - admin section" href="/projects.html#admin">admin section</a></li>
   <li class="doc"><a title="tagtog - PDF annotation tool" href="pdf-annotation-tool.html">PDF annotation tool</a></li>
-  <li class="doc"><a title="tagtog - Admin page for on-premises instances" href="on-premises-admin.html">Admin page for on-premises instances</a></li>
+  <li class="doc"><a title="tagtog - Admin page for on-premises instances" href="on-premises-sysadmin.html">Admin page for on-premises instances</a></li>
 </ul>
 
 ---

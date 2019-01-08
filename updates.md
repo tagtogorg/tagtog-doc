@@ -14,10 +14,13 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ???
+## ??? 🥚
+
 <ul class="updates">
   <li class="new"><span markdown="1">Number of total pages is visible in the PDF editor</span></li>
 </ul>
+
+---
 
 ## 3.2019-W01.2 🎇
 _2019-01-07_
@@ -29,6 +32,7 @@ _2019-01-07_
 
 ## 3.2019-W01.0 🎆
 _2019-01-06_
+
 <ul class="updates">
   <li class="new"><span markdown="1">Removed an internal process. This saves ~1GB of memory on-premises :-)</span></li>
   <li class="new"><span markdown="1">Slightly faster API thanks to less internal DB connections</span></li>

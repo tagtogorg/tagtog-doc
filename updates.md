@@ -18,7 +18,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _???_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Faster documents API thanks to the removal of internal connections and delayed indexing</span></li>  
+  <li class="new"><span markdown="1">Faster documents API thanks to the removal of internal connections and delayed document indexing</span></li>  
+  <li class="new"><span markdown="1">On-Premises: Faster initialization</span></li>  
 </ul>
 
 ---

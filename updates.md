@@ -18,7 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _???_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Faster API documents processing thanks to the removal of some internal DB connections</span></li>
+  <li class="new"><span markdown="1">Faster documents API thanks to the removal of internal connections and delayed indexing</span></li>  
 </ul>
 
 ---

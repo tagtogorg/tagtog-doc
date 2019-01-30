@@ -14,6 +14,17 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W05.0 🏎
+_2019-01-30_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">**Up to 3x faster documents API** thanks to the removal of internal connections and delayed document indexing</span></li>  
+  <li class="fix"><span markdown="1">Fixed wrong reports of documents not successfully uploaded (whereas they were actually successful)</span></li>  
+  <li class="new"><span markdown="1">On-Premises: Faster initialization</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W02.2 🥚
 _2019-01-11_
 

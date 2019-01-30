@@ -15,7 +15,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ---
 
 ## ??? 🏎
-_???_
+_2019-01-30_
 
 <ul class="updates">
   <li class="new"><span markdown="1">**Up to 3x faster documents API** thanks to the removal of internal connections and delayed document indexing</span></li>  

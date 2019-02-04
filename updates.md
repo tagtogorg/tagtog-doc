@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W06.0 🥶
+_2019-02-04_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Some aesthetical improvements</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W05.0 🏎
 _2019-01-30_
 

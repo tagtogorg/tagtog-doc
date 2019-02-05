@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W06.2 🧧
+_2019-02-05_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">[Full international unicode support for dictionaries! 🎉🎊🧧](https://twitter.com/tagtog_net/status/1092877445009756160)</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W06.1 🥶
 _2019-02-04_
 
@@ -59,7 +68,7 @@ _2019-01-06_
   <li class="new"><span markdown="1">Removed an internal process. This saves ~1GB of memory on-premises :-)</span></li>
   <li class="new"><span markdown="1">Slightly faster API thanks to less internal DB connections</span></li>
   <li class="fix"><span markdown="1">Avoid double redirection upon login (first to "/", then to the user's page). This allows for custom-based authentications via reverse proxies (On-Premises)</span></li>
-  <li class="new"><span markdown="1">Created API for project settings. As a first step, you can export your settings using the endpoint: `/-api/settings/v1/export?owner=???&project=???`</span></li>
+  <li class="new"><span markdown="1">Created API for project settings. As a first step, you can export your settings using the endpoint: `/-api/settings/v1/export?owner=...&project=...`</span></li>
   <li class="doc"><span markdown="1">Renamed On-Premises admin page for: [SysAdmin On-Premises](on-premises-sysadmin.html)</span></li>
   <li class="new"><span markdown="1">Empowered On-Premises system admins to [allow or disallow visitors to create accounts](on-premises-sysadmin.html#do-not-allow-visitors-to-create-accounts)</span></li>
   <li class="new"><span markdown="1">New security-concerning action for On-Premises sysadmins to [revoke all existing auth tokens](on-premises-sysadmin.html#user-management)</span></li>

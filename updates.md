@@ -14,6 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🧧
+
+<ul class="updates">
+  <li class="new"><span markdown="1">[Full international unicode support for dictionaries! 🎉🎊🧧](https://twitter.com/tagtog_net/status/1092877445009756160)</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W06.1 🥶
 _2019-02-04_
 

@@ -14,6 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🇬🇧
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Improved reporting on errors when saving annotations through the GUI and API</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W06.2 🧧
 _2019-02-05_
 

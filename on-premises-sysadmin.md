@@ -38,21 +38,23 @@ toc: true
     <p>The admin panel displays a list of the users registered in the instance. You can:</p>
 
     <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: generate a registration link to share with others or to use oneself</p>
-    <p class="list-item" markdown="1"><span class="list-item-2"></span>**Remove old accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
-    <p class="list-item" markdown="1"><span class="list-item-3"></span>**Revoke all auth tokens**: remove all existing token-based logins and registration links</p>
+    <p class="list-item" markdown="1"><span class="list-item-2"></span>**Edit accounts**: edit the users' accounts main information, namely, username, email, and password. 📝</p>
+    <p class="list-item" markdown="1"><span class="list-item-3"></span>**Remove old accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
+    <p class="list-item" markdown="1"><span class="list-item-4"></span>**Revoke all auth tokens**: remove all existing token-based logins and registration links</p>
 
+    <h3>Tighter authorization</h3>
 
-    <h3>Do not allow visitors to create accounts</h3>
+      <h4>Do not allow visitors to create accounts</h4>
 
-    <p markdown="1">For a tight control, sometimes you do not want to allow visitors to your tagtog installation creating accounts themselves. In such a case, the admin is responsible to create the accounts for all the users.</p>
+      <p markdown="1">For a tight control, sometimes you do not want to allow visitors to your tagtog installation creating accounts themselves. In such a case, the admin is responsible to create the accounts for all the users.</p>
 
-    <p markdown="1">To disable visitors to create accounts, you need to set the java dynamic property `application.canVisitorsCreateAccounts` to `false` (the default is _true_) in the global environment variable `TAGTOG_JAVA_OPTS`, such like:</p>
+      <p markdown="1">To disable visitors to create accounts, you need to set the java dynamic property `application.canVisitorsCreateAccounts` to `false` (the default is _true_) in the global environment variable `TAGTOG_JAVA_OPTS`, such like:</p>
 
-    <p markdown="1">
-    ```
-    export TAGTOG_JAVA_OPTS="-Dapplication.canVisitorsCreateAccounts=false"; ./tagtog_on_premises restart latest $PWD/tagtog_home    
-    ```
-    </p>
+      <p markdown="1">
+      ```
+      export TAGTOG_JAVA_OPTS="-Dapplication.canVisitorsCreateAccounts=false"; ./tagtog_on_premises restart latest $PWD/tagtog_home    
+      ```
+      </p>
   </div>
   <div class="one-third-col">
   </div>

@@ -18,6 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Improved reporting on errors when saving annotations through the GUI and API</span></li>  
+  <li class="new"><span markdown="1">Allow sysadmins (On-Premises) to edit the system's users</span></li>  
 </ul>
 
 ---

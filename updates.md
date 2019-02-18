@@ -12,6 +12,14 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+## ??? 🇳🇱
+_???_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Allow annotation' names to have a minimum of 2 characters (instead of previously a minimum of 3 characters)</span></li>
+  <li class="new"><span markdown="1">Allow project folders' names to be a minimum of 1 character (instead of previously at least 2 characters)</span></li>  
+</ul>
+
 ---
 
 ## 3.2019-W07.0 🇬🇧

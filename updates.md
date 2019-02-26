@@ -26,7 +26,6 @@ _2019-02-26_
   <li class="new"><span markdown="1">PDF page navigator floats when you scroll down the document facilitating page switching</span></li>
   <li class="new"><span markdown="1">Now you can show/hide the side bar while annotating. Gain extra space for a better reading experience!</span></li>
   <li class="new"><span markdown="1">The editor is now more responsive and it adapts better to different window/screen sizes</span></li>
-
 </ul>
 
 ---

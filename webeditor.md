@@ -13,7 +13,7 @@ toc: true
     <p>The annotation editor is used to <strong>manually annotate text</strong> or/and <strong>train a machine learning model to automatically annotate text</strong>. By enabling automatic annotations you can build <a href="/#what-can-you-achieve">awesome stuff</a> you didn't think of at first.</p>
     <p>This web editor includes features as automatic annotations, <a href="https://medium.com/@tagtog/overlapping-text-annotations-19d7ac5b247a" title="Medium - Overlapping text annotations, gain flexibility">overlapping text annotations</a> or support for full-text articles, that reduce significantly the time required to annotate text.</p>
 
-    {% include image.html name="editor-mainview-described.PNG" caption="tagtog annotation editor with text span annotations and document labels. The editor is mainly divided into: Document area, Toolbar and Sidebar. "%}
+    {% include image.html name="editor-mainview-described.jpg" caption="tagtog annotation editor with text span annotations, entity labels, normalizations and document labels. The editor is mainly divided into: Document area, Folders, Toolbar and Sidebar. "%}
   </div>
   <div class="one-third-col">
     {% include image.html name="robot.ann.svg" width=300 %}
@@ -335,12 +335,20 @@ toc: true
         There are hotkeys available: <kbd>[</kbd> for previous document, <kbd>]</kbd> for next document.
       </div>
     </div>
+    <div class="two-third-col">
+      <br/>
+      <h4>Page navigator</h4>
+      <p>If the document is paginated, the toolbar has a controller to navigate across the pages. For example, in PDF documents. <a title="PDF annotation tool" href="pdf-annotation-tool.html#document-navigation">More information</a>.</p>
+    </div>
+    <div class="one-third-col">
+    </div>
   </div>
   <div class="page-subsection">
     <div class="two-third-col">
       <br/>
       <h2>Sidebar</h2>
-      <p>The sidebar appearance changes depending on how you configured your project. It will only display those actionable items for those entity types used in the project.</p>
+      <p>The sidebar <strong>appearance changes depending on how you configured your project</strong>. It will only display those actionable items for those entity types, document labels or relations used in the project.</p>
+      <p>You can <strong>show/hide</strong> the sidebar by clicking on the arrow (V-shaped mark) {% include inline-image.html name="chevron.png" width="20" %} near the top of the sidebar.</p>
       <p>These are the components you can find in the sidebar:</p>
     </div>
     <div class="one-third-col">
@@ -408,6 +416,15 @@ toc: true
         If you click in a relation, the document area <strong>scroll to highlight the entities related</strong> in the text.
       </div>
       {% include image.html name="editor-relation-tally.PNG" width="230" %}
+    </div>
+  </div>
+  <div class="page-subsection">
+    <div class="two-third-col">
+      <br/>
+      <h2>Folders</h2>
+      <p>Folders can be accessed from the document pool or the web editor. You can find the folders panel of the left side of the editor. <a title="Folders - tagtog.net" href="documentpool.html#folders">More information about folders</a>.</p>
+    </div>
+    <div class="one-third-col">
     </div>
   </div>
 </div>

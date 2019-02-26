@@ -75,7 +75,7 @@ id: projects
         <strong>Accessibility tip</strong>: use colors that are easy to distinguish. Keep in mind color blind users.
       </div>
       <div class="message">
-        The name for an Entity type should contain only letters, numbers, or underscores, and must start with a letter. Minimum length: 3 characters. Maximum length: 24 characters.
+        The name for an Entity type should contain only letters, numbers, or underscores, and must start with a letter. Minimum length: 2 characters. Maximum length: 24 characters.
       </div>
     </div>
     <div class="two-third-col">
@@ -186,8 +186,8 @@ id: projects
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Entity labels</h4>
-      <p>Labels used to add attributes to existing entities. You can add one or more entity labels to a specific entity.</p>
-      <p>To create a new Entity Label, click on the button <code>New Document Label</code>. Then, write a <code>name</code> for the label (required), <code>type</code> (required) and <code>description</code> (optional).</p>
+      <p>Labels used to add attributes to existing entities. It is usual some attributes make sense only to some entity types (e.g. gender for person, not for city), you can assign an entity label to one specific entity type or all entity types.</p>
+      <p>To create a new Entity Label, click on the button <code>New Document Label</code>. Then, write a <code>name</code> for the label (required), <code>type</code> (required), <code>entity type</code> you want to assign the label to (required), and a <code>description</code> (optional).</p>
       <p>You can create different types of Entity Labels:</p>
       <table style="width:100%">
         <tr>
@@ -213,8 +213,9 @@ id: projects
       {% include message.html message="The name for an Entity Label should contain only letters, numbers, or underscores, and must start with a letter. Minimum length: 3 characters. Maximum length: 24 characters." %}
     </div>
     <div class="two-third-col">
-      {% include image.html name="settings-entitylabel.PNG" caption="Setting an entity label with the <code>enum</code> type"%}
-      <p>Once saved, you can start using them on the web editor.</p>
+      {% include image.html name="settings-entitylabel.PNG" caption="Setting two entity labels. The first with the <code>enum</code> type can be only set for entities with the type <code>VehiclePart</code>. The second with the <code>string</code> type can be set for all entity types. "%}
+      <p><strong>By default, the new entity labels will be assigned to all entity types</strong>. Otherwise, you can choose or filter an entity type from the list of entity types.</p>
+      <p>Once saved, you can start using them on the web editor. When you add a label to an entity, <strong>remember that only those labels related to the entity type of the entity will show</strong>.</p>
       <p>Soon you will be able to generate entity labels automatically within tagtog.</p>
     </div>
     <div class="one-third-col">

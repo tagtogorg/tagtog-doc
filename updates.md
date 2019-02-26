@@ -12,9 +12,7 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
-## 3.2019-W09.2 🐡
-_2019-02-26_
-_2019-02-26_
+## ??? 🐡
 
 <ul class="updates">
   <li class="new"><span markdown="1">You can now assign entity labels to a specific entity type or to all entity types! i.e. you can assign attributes only to those entities that are suitable.</span></li>

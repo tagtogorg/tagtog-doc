@@ -312,18 +312,18 @@ toc: true
     </div>
     <div class="two-third-col">
       <h4>View / output mode</h4>
-      <p>Here you can select which way you want to display or export the annotated document.</p>
+      <p>Here you can select which way you want to display or <strong>export</strong> the annotated document.</p>
       <p>Annotated documents can be exported in various formats: <a href="/ioformats.html#output-formats">output formats</a></p>
       <p><code>tagtog Web Editor</code> refers to the visualization of the annotated document in the annotation editor.</p>
       <br/>
-      <h4>Clear annotations</h4>
-      <p>Click on the button with the icon {% include inline-image.html name="editor-clean.PNG" width="20" %} to remove all the annotations in the current document. This won't remove the document. </p>
+      <h4>Remove annotations</h4>
+      <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} and select the option <code>Remove annotations</code>to delete all the annotations in the current document. This won't remove the document.</p>
       <br/>
       <h4>Remove document</h4>
-      <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} to remove the document from the folder.</p>
+      <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} and select the option <code>Remove document</code>to remove the document from the folder.</p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-view.PNG" width="250"%}
+      {% include image.html name="editor-view.png" width="250"%}
     </div>
     <div class="two-third-col">
       <br/>

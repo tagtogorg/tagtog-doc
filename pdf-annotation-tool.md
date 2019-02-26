@@ -37,7 +37,7 @@ toc: true
   </div>
   <div class="two-third-col">
     <h3>Document navigation</h3>
-    <p>You can navigate by clicking on the arrows on the top left corner of the document view. {% include inline-image.html name="pdf-navigation.png" width="100" %} If you want to go to a specific page, just write the page number in the page text box and press enter <kbd>↵</kbd>.</p>
+    <p>You can navigate by clicking on the arrows on the toolbar. {% include inline-image.html name="pdf-navigation.png" width="100" %} If you want to go to a specific page, just write the page number in the page text box and press enter <kbd>↵</kbd>. The page navigation will float when you scroll down a document to allow you change the page at any moment.</p>
   </div>
   <div class="one-third-col">
 

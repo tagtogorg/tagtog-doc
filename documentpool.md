@@ -8,6 +8,7 @@ toc: true
 
 <div class="two-third-col">
   <p>Your <strong>documents are stored in folders</strong>. Folders are paginated and you can move to the next or previous page using the navigation menu.</p>
+  <p>Folder list is expanded by default.</p>
   <h3>Folders</h3>
   <p>Use folders to organize your documents better. The <strong>root is the <code>pool</code> folder</strong>, which is created by default with each new project.</p>
   <h4>Create a new folder</h4>

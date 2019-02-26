@@ -16,8 +16,17 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _???_
 
 <ul class="updates">
+  <li class="new"><span markdown="1">You can now assign entity labels to a specific entity type or to all entity types! i.e. you can assign attributes only to those entities that are suitable.</span></li>
   <li class="new"><span markdown="1">Allow annotation' names to have a minimum of 2 characters (instead of previously a minimum of 3 characters)</span></li>
-  <li class="new"><span markdown="1">Allow project folders' names to be a minimum of 1 character (instead of previously at least 2 characters)</span></li>  
+  <li class="new"><span markdown="1">Allow project folders' names to be a minimum of 1 character (instead of previously at least 2 characters)</span></li>
+  <li class="fix"><span markdown="1">Now entity labels cannot be edited when the document is confirmed</span></li>
+  <li class="new"><span markdown="1">Folders are expanded (not collapsed) by default</span></li>
+  <li class="new"><span markdown="1">Modal box with entity labels now closes when you click outside it</span></li>
+  <li class="new"><span markdown="1">Beautified drop-down lists in Settings</span></li>
+  <li class="new"><span markdown="1">PDF page navigator floats when you scroll down the document facilitating page switching</span></li>
+  <li class="new"><span markdown="1">Now you can show/hide the side bar while annotating. Gain extra space for a better reading experience!</span></li>
+  <li class="new"><span markdown="1">The editor is now more responsive and it adapts better to different window/screen sizes</span></li>
+
 </ul>
 
 ---
@@ -26,8 +35,8 @@ _???_
 _2019-02-17_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">Improved reporting on errors when saving annotations through the GUI and API</span></li>  
-  <li class="new"><span markdown="1">Allow sysadmins (On-Premises) to edit the system's users</span></li>  
+  <li class="fix"><span markdown="1">Improved reporting on errors when saving annotations through the GUI and API</span></li>
+  <li class="new"><span markdown="1">Allow sysadmins (On-Premises) to edit the system's users</span></li>
 </ul>
 
 ---
@@ -36,7 +45,7 @@ _2019-02-17_
 _2019-02-05_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">[Full international unicode support for dictionaries! 🎉🎊🧧](https://twitter.com/tagtog_net/status/1092877445009756160)</span></li>  
+  <li class="new"><span markdown="1">[Full international unicode support for dictionaries! 🎉🎊🧧](https://twitter.com/tagtog_net/status/1092877445009756160)</span></li>
 </ul>
 
 ---
@@ -45,7 +54,7 @@ _2019-02-05_
 _2019-02-04_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Some aesthetical improvements</span></li>  
+  <li class="new"><span markdown="1">Some aesthetical improvements</span></li>
 </ul>
 
 ---
@@ -54,9 +63,9 @@ _2019-02-04_
 _2019-01-30_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">**Up to 3x faster documents API** thanks to the removal of internal connections and delayed document indexing</span></li>  
-  <li class="fix"><span markdown="1">Fixed wrong reports of documents not successfully uploaded (whereas they were actually successful)</span></li>  
-  <li class="new"><span markdown="1">On-Premises: Faster initialization</span></li>  
+  <li class="new"><span markdown="1">**Up to 3x faster documents API** thanks to the removal of internal connections and delayed document indexing</span></li>
+  <li class="fix"><span markdown="1">Fixed wrong reports of documents not successfully uploaded (whereas they were actually successful)</span></li>
+  <li class="new"><span markdown="1">On-Premises: Faster initialization</span></li>
 </ul>
 
 ---
@@ -112,7 +121,7 @@ _2018-12-22_
 <ul class="updates">
   <li class="new"><span markdown="1">**CSV** (and **TSV**) file parsing!!! 📊 [Check out the documentation](CsvFileParsing)</span></li>
   <li class="new"><span markdown="1">Entity types are now sorted alphabetically in the <a title="tagtog - Annotation menu" href="webeditor.html#annotation-menu">annotation menu</a>. If you have a big list of entities this menu is now scrollable! :barber:</span></li>
-  <li class="fix"><span markdown="1">Issue fixed On-Premises that could cause on some environments to wrongly report document upload errors</span></li>  
+  <li class="fix"><span markdown="1">Issue fixed On-Premises that could cause on some environments to wrongly report document upload errors</span></li>
   <li class="doc"><span markdown="1">Add examples to upload pre-annotated documents using the API. [Documentation](API.html#import-annotated-documents-post "tagtog - Upload pre-annotated files")</span></li>
   <li class="new"><span markdown="1">Increased the capacity of our Cloud servers to provide you with a faster and more robust service 🥰</span></li>
   <li class="fix"><span markdown="1">Fixed small error in the ML component that could cause training exceptions on empty sentences in the data</span></li>

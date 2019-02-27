@@ -12,7 +12,8 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
-## 3.2019-W09.3 🐡
+## 3.2019-W09.4 🐡
+_2019-02-27_
 _2019-02-26_
 
 <ul class="updates">

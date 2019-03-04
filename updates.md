@@ -12,9 +12,18 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+## ??? 🥨
+_???_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed button to remove documents on the document editor.</span></li>
+  <li class="fix"><span markdown="1">Fixed bug affecting Safari in which some button elements did not appear in Settings.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W09.4 🐡
 _2019-02-27_
-_2019-02-26_
 
 <ul class="updates">
   <li class="new"><span markdown="1">You can now assign entity labels to a specific entity type or to all entity types! i.e. you can assign attributes only to those entities that are suitable.</span></li>

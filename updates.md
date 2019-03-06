@@ -12,6 +12,16 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+## ??????
+???
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed problem that prompted an error to some users when saving/confirming a document. The underlying issue was operating with documents that had document labels set when these labels were previously removed from the project settings.</span></li>
+  <li class="new"><span markdown="1"><a title="Pre-annotations - tagtog.net" href="webeditor.html#pre-annotations">Pre-annotations</a> now work with entity labels. When you create pre-selections, these inherit the entity labels coming from the main entity.</span></li>
+  <li class="new"><span markdown="1">When you change the type of an entity, only common entity labels are preserved.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W10.0 🥨
 _2019-03-04_
 

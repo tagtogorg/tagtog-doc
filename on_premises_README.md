@@ -165,7 +165,7 @@ Do the above if you encounter something like this:
 
 ```
 Creating network "tagtog_default" with the default driver
-Pulling cache (redis:4.0-alpine)...
+Pulling cache (redis:4.0.13-alpine)...
 4.0-alpine: Pulling from library/redis
 4fe2ade4980c: Already exists
 fb758dc2e038: Pull complete

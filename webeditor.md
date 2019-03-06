@@ -158,7 +158,7 @@ toc: true
           <td>Pre-selection</td>
           <td><p>Equal entities that are annotated <strong>upon manual annotation</strong>. E.g. if you annotate <code>HER2</code> as Entity Type <code>Gene</code>, all occurrences of the string "HER2" will be annotated as Entity Type <code>Gene</code>. Pre-selections are visualized with a yellow border and the background color of the Entity Type. If you click on one of these pre-annotations, the pre-annotation will turn into a regular annotation.</p>
           {% include image.html name="editor-pre-selection2.PNG" width="250"%}
-          <p>In addition, if you add/remove a normalization for this entity, this change will propagate to all pre-annotated occurrences.</p>
+          <p>In addition, if you add/remove a normalization or entity label for this entity, this change will propagate to all pre-annotated occurrences.</p>
           </td>
         </tr>
         <tr>
@@ -207,7 +207,8 @@ toc: true
         <tr>
           <td>Change Type</td>
           <td class="centered">-</td>
-          <td>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up. This list is sorted alphabetically.</td>
+          <td><p>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up. This list is sorted alphabetically.</p>
+          <p>A change of entity type can affect the properties of the entity. Normalizations will be removed and only common entity labels will be preserved.</p></td>
         </tr>
         <tr>
           <td>Normalizations</td>

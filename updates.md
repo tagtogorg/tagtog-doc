@@ -14,6 +14,17 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 💫
+_???_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows)</span></li>
+  <li class="new"><span markdown="1">Option to add multiple admins to your project!</span></li>  
+  <li class="fix"><span markdown="1">Upon upload errors, the full error message is now shown.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W10.1 🚺
 _2019-03-06_
 

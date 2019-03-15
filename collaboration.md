@@ -100,6 +100,11 @@ id: collaboration
 <div class="two-third-col">
   <h2>Annotation flows</h2>
   <p>There are different ways you can organize your annotation tasks. These are the most common:</p>
+</div>
+
+
+
+<div class="two-third-col">
   <br/>
   <h4>Each annotator annotates each document</h4>
   <p>This flow is ideal for those projects requiring high-quality annotations and complex annotation tasks (specific skills required, divergent interpretations, etc.).</p>

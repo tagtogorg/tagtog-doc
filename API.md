@@ -106,12 +106,12 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document to. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
     </tr>
   </table>
 </div>
 <div class="one-third-col">
-  {% include message.html message='Imported documents are visible in the <a href="/documentpool.html">document pool</a>'%}
+  {% include message.html message='Imported documents are visible in the <a href="/documents.html">document pool</a>'%}
 </div>
 
 
@@ -257,7 +257,7 @@ PUBMED IDS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document to. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -408,7 +408,7 @@ URLS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document to. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -529,7 +529,7 @@ FILES
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document to. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -880,7 +880,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <li><a href="#tab-3-search">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">This example searches across your document pool to find documents that have at least one entity normalized to the gene <a href="https://www.uniprot.org/uniprot/P02649">P02649</a>.</p>
+    <p class="code-desc">This example searches across all your folders to find documents that have at least one entity normalized to the gene <a href="https://www.uniprot.org/uniprot/P02649">P02649</a>.</p>
 <div id="tab-1-search" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649'

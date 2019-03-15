@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Document pool
+title: Documents
 sidebar_link: true
-id: document_pool
+id: project_documents
 toc: true
 ---
 

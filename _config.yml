@@ -23,7 +23,7 @@ sidebar_toc:
   - name: Web Application
     pages:
       - projects
-      - document_pool
+      - project_documents
       - webeditor
       - collaboration
       - pdfann

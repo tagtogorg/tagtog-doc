@@ -106,7 +106,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -257,7 +257,7 @@ PUBMED IDS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -408,7 +408,7 @@ URLS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -529,7 +529,7 @@ FILES
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documentpool.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -812,7 +812,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 <div class="two-third-col">
   <h2>Search documents in a project <code>GET</code></h2>
-  <p>You can <a href="/search.html">search</a> using the documents API. Search across your pool folder and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
+  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
   <p>Learn how to <strong>build search queries</strong> <a href="/search-queries.html">here</a>.</p>
   <p><strong>Parameters</strong></p>
   <table style="width:100%;">
@@ -825,7 +825,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     <tr>
       <td><code>search</code></td>
       <td>-</td>
-      <td>entity:GGP:P02649</td>
+      <td>entity:GGP:P02649 or folder:pool</td>
       <td><strong>Search query</strong>. Learn how to build queries <a href="/search-queries.html">here</a>.</td>
     </tr>
     <tr>

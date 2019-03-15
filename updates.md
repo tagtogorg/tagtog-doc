@@ -21,6 +21,8 @@ _???_
   <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows)</span></li>
   <li class="new"><span markdown="1">Option to add multiple admins to your project!</span></li>  
   <li class="fix"><span markdown="1">Upon upload errors, the full error message is now shown.</span></li>
+  <li class="fix"><span markdown="1">Annotations are now properly uploaded via the API to the (optionally) chosen `member`.</span></li>
+  <li class="fix"><span markdown="1">Fixed read & writing rights of member annotations via the API.</span></li>
 </ul>
 
 ---

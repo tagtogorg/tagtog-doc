@@ -23,6 +23,7 @@ _???_
   <li class="fix"><span markdown="1">Upon upload errors, the full error message is now shown.</span></li>
   <li class="fix"><span markdown="1">Annotations are now properly uploaded via the API to the (optionally) chosen `member`.</span></li>
   <li class="fix"><span markdown="1">Fixed read & writing rights of member annotations via the API.</span></li>
+  <li class="new"><span markdown="1">Expanded [search API to search by folder](search-queries.html#search-by-folder).</span></li>
 </ul>
 
 ---

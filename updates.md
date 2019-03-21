@@ -18,12 +18,13 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _???_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows)</span></li>
-  <li class="new"><span markdown="1">Option to add multiple admins to your project!</span></li>  
+  <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows) 🔝💨</span></li>
+  <li class="new"><span markdown="1">The [API search results](API.html#search-documents-in-a-project-get) now return which members completed their annotations; new field: [_members_anncomplete_](API.html#search-response-format)</span></li>  
+  <li class="new"><span markdown="1">Expanded search API to [**search by folder**](search-queries.html#search-by-folder) 🔎🗂.</span></li>    
+  <li class="new"><span markdown="1">Option to **add multiple admins to your project**! 😎</span></li>  
   <li class="fix"><span markdown="1">Upon upload errors, the full error message is now shown.</span></li>
   <li class="fix"><span markdown="1">Annotations are now properly uploaded via the API to the (optionally) chosen `member`.</span></li>
   <li class="fix"><span markdown="1">Fixed read & writing rights of member annotations via the API.</span></li>
-  <li class="new"><span markdown="1">Expanded [search API to search by folder](search-queries.html#search-by-folder).</span></li>
 </ul>
 
 ---

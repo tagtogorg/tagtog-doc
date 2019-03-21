@@ -930,7 +930,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
         "id": "aMHKzF_lIoNrdh9pAx298njgIezy-text",
         "header": "Certain genes make you more likely to develop Alzheimer's disease. Genes control the function of every cell in your body. Some genes determine basic characterist",
         "anncomplete": false,
-        "member_anncompletes": ["someMemberUsername"],
+        "members_anncomplete": ["someMemberUsername"],
         "updated": "2018-03-03T20:59:56.467Z"
       }
     ]
@@ -960,6 +960,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       "id": "String: full tagtogID -- Use this to download the document",
       "header": "String: title if the document has a natural title or otherwise an excerpt of the text's start",
       "anncomplete": "Boolean: status for the document's annotation completion",
+      "members_anncomplete": ["String Array: usernames of members who completed (confirmed) their annotations"]
       "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2017-02-23T08:31:40.874Z",
     },
     //next documents in the array of results...

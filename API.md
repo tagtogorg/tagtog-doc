@@ -920,13 +920,19 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
 <div markdown="1">
 ```json
 {
-  "version":"0.1.0",
-  "search":"entity:GGP:P02649",
-  "totalFound":1,
-  "pages":{"current":0,"previous":-1,"next":-1},
+  "version": "0.1.0",
+  "search": "entity:GGP:P02649",
+  "totalFound": 1,
+  "pages": {"current": 0, "previous": -1, "next": -1},
   "docs":
     [
-      {"id":"aMHKzF_lIoNrdh9pAx298njgIezy-text", "header":"Certain genes make you more likely to develop Alzheimer's disease. Genes control the function of every cell in your body. Some genes determine basic characterist", "anncomplete":false, "updated":"2018-03-03T20:59:56.467Z"}
+      {
+        "id": "aMHKzF_lIoNrdh9pAx298njgIezy-text",
+        "header": "Certain genes make you more likely to develop Alzheimer's disease. Genes control the function of every cell in your body. Some genes determine basic characterist",
+        "anncomplete": false,
+        "member_anncompletes": ["someMemberUsername"],
+        "updated": "2018-03-03T20:59:56.467Z"
+      }
     ]
 }
 ```

@@ -18,7 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _???_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows) 🔝💨</span></li>
+  <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows) 👷‍♀️🕵🏿‍♂️‍👩🏻‍⚖️‍👨🏼‍🔬👩🏽‍🏫</span></li>
   <li class="new"><span markdown="1">The [API search results](API.html#search-documents-in-a-project-get) now return which members completed their annotations; new field: [_members_anncomplete_](API.html#search-response-format)</span></li>  
   <li class="new"><span markdown="1">Expanded search API to [**search by folder**](search-queries.html#search-by-folder) 🔎🗂.</span></li>    
   <li class="new"><span markdown="1">Option to **add multiple admins to your project**! 😎</span></li>  

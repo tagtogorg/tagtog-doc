@@ -37,12 +37,24 @@ toc: true
   </div>
   <div class="two-third-col">
     <h3>Document navigation</h3>
-    <p>You can navigate by clicking on the arrows on the toolbar. {% include inline-image.html name="pdf-navigation.png" width="100" %} If you want to go to a specific page, just write the page number in the page text box and press enter <kbd>↵</kbd>. The page navigation will float when you scroll down a document to allow you change the page at any moment.</p>
+    <p>You can navigate by just <strong>scrolling</strong> with your mouse or clicking on the arrows on the toolbar. {% include inline-image.html name="pdf-navigation.png" width="100" %} If you want to go to a specific page, just write the page number in the page text box and press enter <kbd>↵</kbd>. The page navigation will float when you scroll down a document to allow you change the page at any moment.</p>
   </div>
   <div class="one-third-col">
 
   </div>
 </div>
+
+
+<div class="page-section">
+  <div class="two-third-col">
+    <h2>Annotations</h2>
+    <p>tagtog uses two different measures to locate annotations done over native PDFs. Both are contained in each annotation:</p>
+    <p class="list-item"><span class="list-item-1"></span><strong>Text offsets</strong>. Each annotation is located using the start offset of its text in reference to the beginning of the page containing the annotation. In order to do that, we transform each page of the PDF into text and save the result in the <code><a title="tagtog - ann.doc - plain.html format" href="anndoc.html#plain-html">plain.html format</a></code>. We use this file as a reference to calculate the offset of the annotations. You can <a title="tagtog - web editor - view output mode" href="webeditor.html#view-output-mode">download and use this file</a> to share a common interface with tagtog. Offsets take into account the reading order of elements such as tables or columns.</p>
+    <p class="list-item"><span class="list-item-2"></span><strong>Coordinates</strong>. Each annotation is located using the coordinates of the bounding box containing the annotation. Currently, each annotation uses a pair of coordinates (X, Y) corresponding to the top-left of the first character of the annotation and the bottom-right of the last character of the annotation. In order to facilitate translation, <strong>coordinates are expressed in Points(pt)</strong>. 1pt is equal to exactly 1/72th of an inch.</p>
+  </div>
+  <div class="one-third-col"></div>
+</div>
+
 
 <div class="page-section">
   <div class="two-third-col">

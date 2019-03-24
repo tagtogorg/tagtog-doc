@@ -1,14 +1,15 @@
 ---
 layout: page
-title: Document pool
+title: Documents
 sidebar_link: true
-id: document_pool
+id: project_documents
 toc: true
 ---
 
 <div class="two-third-col">
   <p>Your <strong>documents are stored in folders</strong>. Folders are paginated and you can move to the next or previous page using the navigation menu.</p>
-  <p>Folder list is expanded by default.</p>
+  <p>The folder tree is expanded by default.</p>
+
   <h3>Folders</h3>
   <p>Use folders to organize your documents better. The <strong>root is the <code>pool</code> folder</strong>, which is created by default with each new project.</p>
   <h4>Create a new folder</h4>
@@ -74,5 +75,3 @@ toc: true
   {% include message.html message="If you are training a model within tagtog, only those documents marked as confirmed are used as <strong>training data</strong> for your machine learning model."%}
   {% include message.html message='Using the API, you can also <a href="/API.html#search-documents-in-a-project-get">retrieve which documents are complete</a>.' %}
 </div>
-
-

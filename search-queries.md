@@ -69,6 +69,23 @@ toc: true
 <div class="one-third-col">
 </div>
 
+
+<div class="two-third-col">
+  <h3>Search by folder</h3>
+  <p>You have three possibilities to search by folder:</p>
+  <ol>
+    <li><strong>Search by folder index (<code>folder:INDEX</code>)</strong>: the folders' indexes (integer numbers) are written in the <a title="Project settings JSON" href="projects.html#export-settings">project settings JSON</a>. Take note of the folder's index you want to search for, and then search like <code>folder:INDEX</code>. For example, to search for the <code>pool</code> documents (special folder, always created), search like: <code>folder:0</code>.</li>
+
+    <li><strong>Search by folder path (<code>folder:PATH</code>)</strong>: for example, if the structure of your desired folder is <em>pool &gt; level1 &gt; A</em>, compose the folder path as in Unix: <code>folder:pool/level1/A</code>. Note that any leading or trailing <code>/</code>'s are discouraged, although accepted and ignored.</li>
+
+    <li><strong>Search by folder name (<code>folder:NAME</code>)</strong>: following the previous example, you could simply search by <code>folder:A</code>. In case you have different folders with the same name, the folder closest to the root level (the pool), that is, the folder less deep in the folder tree, will be found. For instance, if you had the folders <em>pool/level1/A</em> and <em>pool/level1/level2/A</em>, the former folder will be found. Caveat: in case you have different folders with the same name at the same level of the folder tree, one will be arbitrarily chosen and returned.</li>
+  </ol>
+</div>
+<div class="one-third-col">
+  {% include message.html message='<div><p>Searching by folder name is the easiest method. However, if you have different folders with the same name, you should search by folder index or folder path.</p><p>Searching by folder index is the most "robust" method for the indices do not change upon folder renamings.</p></div>' %}
+</div>
+
+
 <div class="two-third-col">
   <h3>Search confirmed documents</h3>
   <p>You can search which documents are confirmed with query: <code>anncomplete:true</code>.</p>
@@ -83,6 +100,7 @@ toc: true
   <h3>Wildcard search</h3>
   <p>To perform a single character wildcard search use <code>?</code>. Example: <code>entity:gene:P?2649</code>.</p>
   <p>To perform a multiple character wildcard search use <code>*</code>. Example: <code>"Kepler-2*"</code>, <code>"Kepler-4*c"</code>.</p>
+  <p>Tip: find all documents by just searching for <code>*</code>.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -176,9 +194,3 @@ toc: true
 </div>
 <div class="one-third-col">
 </div>
-
-
-
-
-
-

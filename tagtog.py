@@ -270,6 +270,4 @@ def print_download(args):
 
 if __name__ == "__main__":
     args = parse_arguments(sys.argv[1:])
-    print("Domain:", args.domain)
-    print()
     args.func(args)

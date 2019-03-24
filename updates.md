@@ -14,12 +14,30 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W12.0 💫
+_2019-03-24_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows) 👷‍♀️🕵🏿‍♂️‍👩🏻‍⚖️‍👨🏼‍🔬👩🏽‍🏫</span></li>
+  <li class="new"><span markdown="1">The [API search results](API.html#search-documents-in-a-project-get) now return which members completed their annotations; new field: [_members_anncomplete_](API.html#search-response-format)</span></li>
+  <li class="new"><span markdown="1">Expanded search API to [**search by folder**](search-queries.html#search-by-folder) 🔎🗂.</span></li>
+  <li class="new"><span markdown="1">Option to **add multiple admins to your project**! 😎</span></li>
+  <li class="fix"><span markdown="1">Upon upload errors, the full error message is now shown.</span></li>
+  <li class="fix"><span markdown="1">Annotations are now properly uploaded via the API to the (optionally) chosen `member`.</span></li>
+  <li class="fix"><span markdown="1">Fixed read & writing rights of member annotations via the API.</span></li>
+  <li class="new"><span markdown="1">PDF annotation tool: vertical scrolling is now possible. Just scroll to go to next/previous pages :snowboarder:</span></li>
+  <li class="new"><span markdown="1">PDF annotation tool: new coordinates system based on points used for annotations</span></li>
+  <li class="fix"><span markdown="1">PDF annotation tool: Highlight relations from the side bar is now possible</span></li>
+</ul>
+
+---
+
 ## 3.2019-W10.1 🚺
 _2019-03-06_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Fixed problem that prompted an error to some users when saving/confirming a document. The underlying issue was operating with documents that had document labels set when these labels were previously removed from the project settings.</span></li>
-  <li class="new"><span markdown="1"><a title="Pre-annotations - tagtog.net" href="webeditor.html#pre-annotations">Pre-annotations</a> now work with entity labels. When you create pre-selections, these inherit the entity labels coming from the main entity.</span></li>  
+  <li class="new"><span markdown="1"><a title="Pre-annotations - tagtog.net" href="webeditor.html#pre-annotations">Pre-annotations</a> now work with entity labels. When you create pre-selections, these inherit the entity labels coming from the main entity.</span></li>
   <li class="new"><span markdown="1">When you change the type of an entity, only common entity labels are preserved.</span></li>
   <li class="fix"><span markdown="1">Fixed a rare error On-Premises that caused the cache sometimes to fail.</span></li>
   <li class="new"><span markdown="1">IMPROVEMENT Forced indexing of documents upon document searching.</span></li>
@@ -178,8 +196,8 @@ _2018-12-07_
 _2018-12-05_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Pre-annotate your documents with doc labels (classification) upon file upload! (Hint: check the "Advanced" menu on the [+ Content] submit form button)</span>. <a title="tagtog - Upload files with predefined document labels" href="documentpool.html#upload-files-with-predefined-document-labels">Documentation</a></li>
-  <li class="new"><span markdown="1">Upload pre-annotated documents directly from the GUI by uploading the text file and the annotations file together</span>. <a title="tagtog - Upload pre-annotated files" href="documentpool.html#upload-pre-annotated-documents">Documentation</a></li>
+  <li class="new"><span markdown="1">Pre-annotate your documents with doc labels (classification) upon file upload! (Hint: check the "Advanced" menu on the [+ Content] submit form button)</span>. <a title="tagtog - Upload files with predefined document labels" href="documents.html#upload-files-with-predefined-document-labels">Documentation</a></li>
+  <li class="new"><span markdown="1">Upload pre-annotated documents directly from the GUI by uploading the text file and the annotations file together</span>. <a title="tagtog - Upload pre-annotated files" href="documents.html#upload-pre-annotated-documents">Documentation</a></li>
 </ul>
 
 ---
@@ -302,7 +320,7 @@ _2018-10-02_
 <ul class="updates">
   <li class="new"><span markdown="1">Support for source code files! Whether you are a `python`, `java`, `js`, or [any other programming language freak](/ioformats.html#files), now you are able to annotate preformatted text :-)</span></li>
   <li class="new"><span markdown="1">Copy and share **[permalinks](/webeditor.html#permalinks "tagtog docs - Permalinks")**</span></li>
-  <li class="doc">Update documentation about document folders: <a title="tagtog - folders" href="/documentpool.html#folders">Folders</a></li>
+  <li class="doc">Update documentation about document folders: <a title="tagtog - folders" href="/documents.html#folders">Folders</a></li>
   <li class="fix">The popup dialog to import documents is being closed when clicked outside</li>
 </ul>
 

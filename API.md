@@ -106,12 +106,12 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
     </tr>
   </table>
 </div>
 <div class="one-third-col">
-  {% include message.html message='Imported documents are visible in the <a href="/documentpool.html">document pool</a>'%}
+  {% include message.html message='Imported documents are visible in the <a href="/documents.html">document pool</a>'%}
 </div>
 
 
@@ -257,7 +257,7 @@ PUBMED IDS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -408,7 +408,7 @@ URLS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -529,7 +529,7 @@ FILES
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document. <a href="/documentpool.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
     </tr>
   </table>
 </div>
@@ -812,7 +812,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 <div class="two-third-col">
   <h2>Search documents in a project <code>GET</code></h2>
-  <p>You can <a href="/search.html">search</a> using the documents API. Search across your pool folder and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
+  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
   <p>Learn how to <strong>build search queries</strong> <a href="/search-queries.html">here</a>.</p>
   <p><strong>Parameters</strong></p>
   <table style="width:100%;">
@@ -825,7 +825,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     <tr>
       <td><code>search</code></td>
       <td>-</td>
-      <td>entity:GGP:P02649</td>
+      <td>entity:GGP:P02649 or folder:pool</td>
       <td><strong>Search query</strong>. Learn how to build queries <a href="/search-queries.html">here</a>.</td>
     </tr>
     <tr>
@@ -880,7 +880,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <li><a href="#tab-3-search">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">This example searches across your document pool to find documents that have at least one entity normalized to the gene <a href="https://www.uniprot.org/uniprot/P02649">P02649</a>.</p>
+    <p class="code-desc">This example searches across all your folders to find documents that have at least one entity normalized to the gene <a href="https://www.uniprot.org/uniprot/P02649">P02649</a>.</p>
 <div id="tab-1-search" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649'
@@ -920,13 +920,19 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
 <div markdown="1">
 ```json
 {
-  "version":"0.1.0",
-  "search":"entity:GGP:P02649",
-  "totalFound":1,
-  "pages":{"current":0,"previous":-1,"next":-1},
+  "version": "0.1.0",
+  "search": "entity:GGP:P02649",
+  "totalFound": 1,
+  "pages": {"current": 0, "previous": -1, "next": -1},
   "docs":
     [
-      {"id":"aMHKzF_lIoNrdh9pAx298njgIezy-text", "header":"Certain genes make you more likely to develop Alzheimer's disease. Genes control the function of every cell in your body. Some genes determine basic characterist", "anncomplete":false, "updated":"2018-03-03T20:59:56.467Z"}
+      {
+        "id": "aMHKzF_lIoNrdh9pAx298njgIezy-text",
+        "header": "Certain genes make you more likely to develop Alzheimer's disease. Genes control the function of every cell in your body. Some genes determine basic characterist",
+        "anncomplete": false,
+        "members_anncomplete": ["someMemberUsername"],
+        "updated": "2018-03-03T20:59:56.467Z"
+      }
     ]
 }
 ```
@@ -954,6 +960,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       "id": "String: full tagtogID -- Use this to download the document",
       "header": "String: title if the document has a natural title or otherwise an excerpt of the text's start",
       "anncomplete": "Boolean: status for the document's annotation completion",
+      "members_anncomplete": ["String Array: usernames of members who completed (confirmed) their annotations"]
       "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2017-02-23T08:31:40.874Z",
     },
     //next documents in the array of results...

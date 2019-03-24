@@ -423,7 +423,7 @@ toc: true
     <div class="two-third-col">
       <br/>
       <h2>Folders</h2>
-      <p>Folders can be accessed from the document pool or the web editor. You can find the folders panel of the left side of the editor. <a title="Folders - tagtog.net" href="documentpool.html#folders">More information about folders</a>.</p>
+      <p>Folders can be accessed from the document pool or the web editor. You can find the folders panel of the left side of the editor. <a title="Folders - tagtog.net" href="documents.html#folders">More information about folders</a>.</p>
     </div>
     <div class="one-third-col">
     </div>

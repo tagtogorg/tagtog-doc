@@ -25,7 +25,7 @@ _2019-03-24_
   <li class="fix"><span markdown="1">Upon upload errors, the full error message is now shown.</span></li>
   <li class="fix"><span markdown="1">Annotations are now properly uploaded via the API to the (optionally) chosen `member`.</span></li>
   <li class="fix"><span markdown="1">Fixed read & writing rights of member annotations via the API.</span></li>
-  <li class="new"><span markdown="1">PDF annotation tool: vertical scrolling is now possible. Just scroll to go to next/previous pages :snowboarder:</span></li>
+  <li class="new"><span markdown="1">**PDF annotation tool**: vertical scrolling is now possible. Just scroll to go to next/previous pages :snowboarder:</span></li>
   <li class="new"><span markdown="1">PDF annotation tool: new coordinates system based on points used for annotations</span></li>
   <li class="fix"><span markdown="1">PDF annotation tool: Highlight relations from the side bar is now possible</span></li>
 </ul>

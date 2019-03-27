@@ -106,7 +106,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
   </table>
 </div>
@@ -257,7 +257,7 @@ PUBMED IDS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
   </table>
 </div>
@@ -408,7 +408,7 @@ URLS
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
   </table>
 </div>
@@ -529,7 +529,7 @@ FILES
       <td><code>folder</code></td>
       <td><code>pool</code></td>
       <td><code>pool</code></td>
-      <td>Folder to store the document to. <a href="/documents.html">More information</a></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
   </table>
 </div>

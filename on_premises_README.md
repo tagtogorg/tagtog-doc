@@ -41,8 +41,8 @@ Your system must have installed:
 Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the following minimum requirements:
 
 * Memory:
-  * On-Premises Annotator only: **8 GB RAM** (e.g. `t3.large`)
-  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5.large`), yet recommended is **32GB RAM** (e.g. `r5.xlarge`)
+  * On-Premises Annotator only: **8GB RAM** (e.g. `t3.large`); recommended **16GB RAM** (e.g. `t3.xlarge`)
+  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5.large`); recommended **32GB RAM** (e.g. `r5.xlarge`)
 * Disk: **50 GB of disk space**
 
 

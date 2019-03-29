@@ -19,6 +19,7 @@ _???_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New support for API: upload to folder by simple folder name or folder index</span></li>
+  <li class="new"><span markdown="1">Now [the search results also return the documents' folders](API.html#search-response-format)</span></li>
 </ul>
 
 ---

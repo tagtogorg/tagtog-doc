@@ -20,6 +20,7 @@ _???_
 <ul class="updates">
   <li class="new"><span markdown="1">New support for API: upload to folder by simple folder name or folder index</span></li>
   <li class="new"><span markdown="1">Now [the search results also return the documents' folders](API.html#search-response-format)</span></li>
+  <li class="new"><span markdown="1">Members now by default start with the master's annotations, if they didn't write their annotations yet. The previous default was to start from empty annotations. This allows members to also make use of the ML/dictionary annotations 👯‍♀️</span></li>
 </ul>
 
 ---

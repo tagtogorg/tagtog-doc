@@ -14,6 +14,18 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W13.0 😉
+_2019-03-31_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">New support for API: upload to folder by simple folder name or folder index</span></li>
+  <li class="new"><span markdown="1">Now [the search results also return the documents' folders](API.html#search-response-format)</span></li>
+  <li class="new"><span markdown="1">Members now by default start with the master's annotations, if they didn't write their annotations yet. The previous default was to start from empty annotations. This allows members to also make use of the ML/dictionary annotations 👯‍♀️</span></li>
+  <li class="fix"><span markdown="1">Minor bugfixes</span></li>
+</ul>
+
+---
+
 ## 3.2019-W12.0 💫
 _2019-03-24_
 
@@ -25,7 +37,7 @@ _2019-03-24_
   <li class="fix"><span markdown="1">Upon upload errors, the full error message is now shown.</span></li>
   <li class="fix"><span markdown="1">Annotations are now properly uploaded via the API to the (optionally) chosen `member`.</span></li>
   <li class="fix"><span markdown="1">Fixed read & writing rights of member annotations via the API.</span></li>
-  <li class="new"><span markdown="1">PDF annotation tool: vertical scrolling is now possible. Just scroll to go to next/previous pages :snowboarder:</span></li>
+  <li class="new"><span markdown="1">**PDF annotation tool**: vertical scrolling is now possible. Just scroll to go to next/previous pages :snowboarder:</span></li>
   <li class="new"><span markdown="1">PDF annotation tool: new coordinates system based on points used for annotations</span></li>
   <li class="fix"><span markdown="1">PDF annotation tool: Highlight relations from the side bar is now possible</span></li>
 </ul>

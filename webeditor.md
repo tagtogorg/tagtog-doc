@@ -85,6 +85,14 @@ toc: true
         <td>Next document in the folder</td>
       </tr>
       <tr>
+        <td class="centered"><kbd>q</kbd></td>
+        <td>Previous page (only available in paginated documents as PDFs)</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>w</kbd></td>
+        <td>Next page (only available in paginated documents as PDFs)</td>
+      </tr>
+      <tr>
         <td class="centered"><kbd>s</kbd></td>
         <td>Save document</td>
       </tr>

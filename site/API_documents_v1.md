@@ -33,7 +33,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     </tr>
     <tr>
       <td><strong>Endpoint</strong></td>
-      <td>{{ page.api_endpoint }}</td>
+      <td><code>{{ page.api_endpoint }}</code></td>
     </tr>
   </table>
 </div>

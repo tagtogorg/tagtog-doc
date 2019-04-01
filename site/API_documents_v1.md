@@ -53,7 +53,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 
   <h3>Plain text <code>POST</code></h3>
   <p>Annotates automatically plain text.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -198,7 +198,7 @@ PUBMED IDS
 <div class="two-third-col">
   <h3>PubMed Abstracts <code>POST</code> <code>GET</code></h3>
   <p>Import one or more PubMed abstracts and annotate them.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -355,7 +355,7 @@ URLS
 <div class="two-third-col">
   <h3>URL <code>POST</code> <code>GET</code></h3>
   <p>Import the text content of a URL and annotate it.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -476,7 +476,7 @@ FILES
 <div class="two-third-col">
   <h3>Files <code>POST</code></h3>
   <p>Import a file and annotate it.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -630,7 +630,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
   <p>You can use the same API method you use to upload a single file to annotate: <a href="/API_documents_v1.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
 
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -723,7 +723,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
   <p>You can use the same API method you use to upload a single file to annotate: <a href="/API_documents_v1.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
 
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -813,7 +813,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <h2>Search documents in a project <code>GET</code></h2>
   <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
   <p>Learn how to <strong>build search queries</strong> <a href="/search-queries.html">here</a>.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -980,7 +980,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
   <p>You can use the API to export documents. You need the Id of the document to get it. If you don't have this Id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
 </div>
 <div class="two-third-col">
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -1121,7 +1121,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <p>This request returns the number of documents deleted.</p>
 </div>
 <div class="two-third-col">
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>

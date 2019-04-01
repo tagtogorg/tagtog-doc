@@ -53,10 +53,10 @@ None
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-plain-text">cURL</a></li>    
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
   </ul>
   <div class="tab">
-<div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
+<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u yourUsername:yourPassword {{ page.api_document_url }}/my-projects
 ```

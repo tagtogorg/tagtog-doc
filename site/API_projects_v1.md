@@ -49,25 +49,23 @@ Return the list of projects that the (authenticated) user is a member of. This i
 None
 
 
-#### HOLA
+**Coding examples**
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-plain-text">cURL</a></li>
-    <li><a href="#tab-2-plain-text">Python</a></li>
-    <li><a href="#tab-3-plain-text">JavaScript</a></li>
+    <li class="current"><a href="#tab-1-plain-text">cURL</a></li>    
   </ul>
   <div class="tab">
-  <p class="code-desc">The example below imports plain text and retrieve the automatic annotations in <code>ann.json</code> format.</p>
 <div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
+curl -u yourUsername:yourPassword {{ page.api_document_url }}/my-projects
 ```
 </div>
-
+  </div>
+</div>
 
 </div>
 
 <div class="one-third-col">
   {% include image.html name="API_projects/GET-my-projects.png" caption="example, GET list of my projects"%}
-</div>
+</div>  

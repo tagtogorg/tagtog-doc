@@ -24,7 +24,7 @@ RUN pip3 install requests
 RUN mkdir /my/
 WORKDIR /my/
 
-COPY jekyll/* /my/
+COPY Gemfile* *.gemspec /my/
 RUN bundle install
 
 COPY . /my/

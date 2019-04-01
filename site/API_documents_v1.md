@@ -1,11 +1,10 @@
 ---
+id: api_documents_v1
+title: API documents
 layout: page
 version: 1.0
-title: API docs
 sidebar_link: true
-id: api
 toc: true
-
 
 api_endpoint: /-api/documents/v1
 api_document_url: https://www.tagtog.net/-api/documents/v1

@@ -30,7 +30,7 @@ sidebar_toc:
 
   - name: API
     pages:
-      - api
+      - api_documents_v1
   - name: Concept Search
     pages:
       - search
@@ -64,8 +64,8 @@ plugins:
 
 # Custom vars
 version: 3.2019-W13.0
-sidebar_home_link:  true
-search_page:   false
+sidebar_home_link: true
+search_page: false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path
@@ -78,3 +78,5 @@ defaults:
     path: "assets/img"
   values:
     image: true
+
+source: site

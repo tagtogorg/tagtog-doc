@@ -28,10 +28,25 @@ api_project: yourProjectName
 
 Return the list of projects that the (authenticated) user is a member of. This includes the projects created by the user, and the projects as an invitee.
 
-* Endpoint: `{{ page.api_endpoint }}/my-projects`
-* Method: `GET`
-* Input parameters: None
-* Output: JSON
+<table style="width:100%;white-space:nowrap;">
+  <tr>
+    <td><strong>Endpoint</strong></td>
+    <td><code>{{ page.api_endpoint }}/my-projects</code></td>
+  </tr>
+  <tr>
+    <td><strong>Method</strong></td>
+    <td><code>GET</code></td>
+  </tr>
+  <tr>
+    <td><strong>Input parameters</strong></td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><strong>Output</strong></td>
+    <td>JSON</td>
+  </tr>
+</table>
+
 
 </div>
 

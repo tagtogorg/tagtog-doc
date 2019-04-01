@@ -16,11 +16,11 @@ notoc: true
   <br>
   <p>You can combine the tagtog interface along with the API to <strong>train your own models</strong> in an <strong>Active Learning (AL)</strong> fashion. The workflow is simple:</p>
 
-  <p class="numbered-item"><span class="number-1">1</span><strong>Train a seed version</strong> of your in-house model (e.g. using <a href="http://scikit-learn.org/stable/">scikit-learn</a>). Have this model annotate new documents and upload them to tagtog through the <a href="/API.html">API</a>.</p>
+  <p class="numbered-item"><span class="number-1">1</span><strong>Train a seed version</strong> of your in-house model (e.g. using <a href="http://scikit-learn.org/stable/">scikit-learn</a>). Have this model annotate new documents and upload them to tagtog through the <a href="/API_documents_v1.html">API</a>.</p>
 
   <p class="numbered-item"><span class="number-2">2</span>Review <a href="collaboration.html">within your team</a> the newly annotated & uploaded documents using the tagtog interface. The human reviewers, typically subject-matter experts (SMEs) (i.e. domain experts), will go through the predicted annotations, and <strong>accept, reject, or change the annotations</strong> as they see fit. Likely, you will want your team to review documents selected in an AL fashion.</p>  
 
-  <p class="numbered-item"><span class="number-3">3</span>Download the reviewed documents again using the <a href="/API.html">API</a>, and use them to <strong>re-train</strong> your model.</p>
+  <p class="numbered-item"><span class="number-3">3</span>Download the reviewed documents again using the <a href="/API_documents_v1.html">API</a>, and use them to <strong>re-train</strong> your model.</p>
 </div>
 
 
@@ -41,9 +41,9 @@ notoc: true
 
   <p class="numbered-item"><span class="number-1">1</span>Upload your document/s using <a href="ioformats.html">any supported format</a>.</p>
 
-  <p class="numbered-item"><span class="number-2">2</span><a href="API.html#output-parameter">Download</a> back the document/s' content in <a href="anndoc.html#plain-html">plain.html</a> format. Have your model read the html's text content and generate the annotations in <a href="anndoc.html#ann-json">ann.json</a>.</p>
+  <p class="numbered-item"><span class="number-2">2</span><a href="API_documents_v1.html#output-parameter">Download</a> back the document/s' content in <a href="anndoc.html#plain-html">plain.html</a> format. Have your model read the html's text content and generate the annotations in <a href="anndoc.html#ann-json">ann.json</a>.</p>
 
-  <p class="numbered-item"><span class="number-3">3</span><a href="API.html#files-post">Upload to tagtog in a same API request</a> both the plain.html + ann.json (i.e., 2 files) of the document. The requirement is that both files, except for the final extension, must have the same name. In that way, the tagtog system understands that both files represent the same document. Moreover, you can  send multiple annotated documents at the same time. This means you always upload an even number of files.</p>
+  <p class="numbered-item"><span class="number-3">3</span><a href="API_documents_v1.html#files-post">Upload to tagtog in a same API request</a> both the plain.html + ann.json (i.e., 2 files) of the document. The requirement is that both files, except for the final extension, must have the same name. In that way, the tagtog system understands that both files represent the same document. Moreover, you can  send multiple annotated documents at the same time. This means you always upload an even number of files.</p>
 </div>
 
 

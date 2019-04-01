@@ -25,7 +25,7 @@ __doc__ = \
 
     Version: {}
     Author: {}
-    API documentation: http://docs.tagtog.net/API.html
+    API documentation: http://docs.tagtog.net/API_documents_v1.html
     """.format(__version__, __author__)
 
 # ---------------------------------------------------------------------------------------------------------------------

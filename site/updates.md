@@ -19,7 +19,7 @@ _2019-03-31_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New support for API: upload to folder by simple folder name or folder index</span></li>
-  <li class="new"><span markdown="1">Now [the search results also return the documents' folders](API.html#search-response-format)</span></li>
+  <li class="new"><span markdown="1">Now [the search results also return the documents' folders](API_documents_v1.html#search-response-format)</span></li>
   <li class="new"><span markdown="1">Members now by default start with the master's annotations, if they didn't write their annotations yet. The previous default was to start from empty annotations. This allows members to also make use of the ML/dictionary annotations 👯‍♀️</span></li>
   <li class="fix"><span markdown="1">Minor bugfixes</span></li>
 </ul>
@@ -31,7 +31,7 @@ _2019-03-24_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows) 👷‍♀️🕵🏿‍♂️‍👩🏻‍⚖️‍👨🏼‍🔬👩🏽‍🏫</span></li>
-  <li class="new"><span markdown="1">The [API search results](API.html#search-documents-in-a-project-get) now return which members completed their annotations; new field: [_members_anncomplete_](API.html#search-response-format)</span></li>
+  <li class="new"><span markdown="1">The [API search results](API_documents_v1.html#search-documents-in-a-project-get) now return which members completed their annotations; new field: [_members_anncomplete_](API_documents_v1.html#search-response-format)</span></li>
   <li class="new"><span markdown="1">Expanded search API to [**search by folder**](search-queries.html#search-by-folder) 🔎🗂.</span></li>
   <li class="new"><span markdown="1">Option to **add multiple admins to your project**! 😎</span></li>
   <li class="fix"><span markdown="1">Upon upload errors, the full error message is now shown.</span></li>
@@ -176,7 +176,7 @@ _2018-12-22_
   <li class="new"><span markdown="1">**CSV** (and **TSV**) file parsing!!! 📊 [Check out the documentation](CsvFileParsing)</span></li>
   <li class="new"><span markdown="1">Entity types are now sorted alphabetically in the <a title="tagtog - Annotation menu" href="webeditor.html#annotation-menu">annotation menu</a>. If you have a big list of entities this menu is now scrollable! :barber:</span></li>
   <li class="fix"><span markdown="1">Issue fixed On-Premises that could cause on some environments to wrongly report document upload errors</span></li>
-  <li class="doc"><span markdown="1">Add examples to upload pre-annotated documents using the API. [Documentation](API.html#import-annotated-documents-post "tagtog - Upload pre-annotated files")</span></li>
+  <li class="doc"><span markdown="1">Add examples to upload pre-annotated documents using the API. [Documentation](API_documents_v1.html#import-annotated-documents-post "tagtog - Upload pre-annotated files")</span></li>
   <li class="new"><span markdown="1">Increased the capacity of our Cloud servers to provide you with a faster and more robust service 🥰</span></li>
   <li class="fix"><span markdown="1">Fixed small error in the ML component that could cause training exceptions on empty sentences in the data</span></li>
   <li class="fix"><span markdown="1">Fixed a bug in the [EntitiesTsv format](EntitiesTsv "Entities TSV format"), in which documents without entity annotations did not output any text</span></li>
@@ -249,7 +249,7 @@ _2018-11-15_
   <li class="new"><span markdown="1">[Native PDF 📃 ! Annotate actual PDFs; then use them to train your ML models as easily as if they were plain texts! 😲](http://tagtog.net#pdf-annotation)</span></li>
   <li class="new"><span markdown="1">[Use the new automated payment gateway to manage your subscriptions!](http://tagtog.net/-pricing)</span></li>
   <li class="fix"><span markdown="1">Stability improvements</span></li>
-  <li class="doc"><span markdown="1">Add documentation: [upload annotated documents via API](API.html#import-annotated-documents-post "tagtog - upload annotated documents")</span></li>
+  <li class="doc"><span markdown="1">Add documentation: [upload annotated documents via API](API_documents_v1.html#import-annotated-documents-post "tagtog - upload annotated documents")</span></li>
   <li class="doc"><span markdown="1">Add documentation: [search by document label](search-queries.html#search-by-document-label "tagtog - search by document label")</span></li>
   <li class="doc">Extend admin section in project settings: <a title="tagtog - admin section" href="/projects.html#admin">admin section</a></li>
   <li class="doc"><a title="tagtog - PDF annotation tool" href="pdf-annotation-tool.html">PDF annotation tool</a></li>

@@ -210,7 +210,7 @@ PUBMED IDS
       <td><code>idType</code></td>
       <td><code>tagtogID</code></td>
       <td><code>PMID</code></td>
-      <td>Type of Id. <a href="/API.html#idtype-parameter">List of idTypes</a></td>
+      <td>Type of Id. <a href="/API_documents_v1.html#idtype-parameter">List of idTypes</a></td>
     </tr>
     <tr>
       <td><code>ids</code></td>
@@ -628,7 +628,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
   <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc.pdf</code> and <code>mydoc.ann.json</code>.</p>
 
-  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
+  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API_documents_v1.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
 
   <p><strong>Parameters</strong></p>
   <table style="width:100%;">
@@ -717,11 +717,11 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 <div class="two-third-col">
   <h3>Replace annotations of existing document <code>POST</code></h3>
   <p>You should use two files:</p>
-  <p class="list-item"><span class="list-item-1"></span><strong>The <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></strong>. You can obtain this file by <a title="Get files - tagtog API" href="API.html#get-existing-documents-get">downloading it from the API</a> using the output <code>html</code>.</p>
+  <p class="list-item"><span class="list-item-1"></span><strong>The <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></strong>. You can obtain this file by <a title="Get files - tagtog API" href="API_documents_v1.html#get-existing-documents-get">downloading it from the API</a> using the output <code>html</code>.</p>
   <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
   <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc-3243hdsfk3.plain.html</code> and <code>mydoc-3243hdsfk3.ann.json</code>.</p>
 
-  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
+  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API_documents_v1.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
 
   <p><strong>Parameters</strong></p>
   <table style="width:100%;">
@@ -998,7 +998,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       <td><code>idType</code></td>
       <td><code>tagtogID</code></td>
       <td><code>tagtogID</code></td>
-      <td>Type of Id. <a href="/API.html#idtype-parameter">List of idTypes</a></td>
+      <td>Type of Id. <a href="/API_documents_v1.html#idtype-parameter">List of idTypes</a></td>
     </tr>
     <tr>
       <td><code>ids</code></td>
@@ -1327,7 +1327,7 @@ usage: tagtog [-h] {upload,search,download} ...
 
 tagtog official script to Upload & Search & Download documents. Version: 0.1.2
 Author: tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks) API
-documentation: http://docs.tagtog.net/API.html
+documentation: http://docs.tagtog.net/API_documents_v1.html
 
 positional arguments:
   {upload,search,download}

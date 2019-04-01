@@ -55,18 +55,18 @@ toc: true
   {% include image.html name="docIdsearch.png" caption=""%}
 </div>
 <div class="one-third-col">
-  {% include message.html message='Check <a href="/API.html#idtype-parameter">here</a> the available ID types.' %}
+  {% include message.html message='Check <a href="/API_documents_v1.html#idtype-parameter">here</a> the available ID types.' %}
 </div>
 <div class="two-third-col">
   <h3>Remove documents in batch</h3>
-  <p>To <strong>remove documents in batch</strong>, you can use a search query that retrieves the documents you want to remove. In the web app, click on the button with the caption <i>Delete matching documents</i> to remove these documents. You can also use the <a title="API - Delete" href="/API.html#delete-documents-delete">API for batch removal</a>.</p>
+  <p>To <strong>remove documents in batch</strong>, you can use a search query that retrieves the documents you want to remove. In the web app, click on the button with the caption <i>Delete matching documents</i> to remove these documents. You can also use the <a title="API - Delete" href="/API_documents_v1.html#delete-documents-delete">API for batch removal</a>.</p>
 </div>
 <div class="one-third-col">
 </div>
 
 <div class="two-third-col">
   <h2>API</h2>
-  <p>You can also search using the API. You can use it <a href="/#index-your-data">directly as your search interface</a> or simply augment your existing engine. Discover everything you can in the <a href="/API.html#search-documents-in-a-project-get">documentation</a>.</p>
+  <p>You can also search using the API. You can use it <a href="/#index-your-data">directly as your search interface</a> or simply augment your existing engine. Discover everything you can in the <a href="/API_documents_v1.html#search-documents-in-a-project-get">documentation</a>.</p>
 </div>
 <div class="one-third-col">
 </div>

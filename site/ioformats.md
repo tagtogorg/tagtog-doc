@@ -129,11 +129,11 @@ toc: true
       </tr>
       <tr>
         <td><code>anndoc</code></td>
-        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload the via API both, the <code>plain.html</code> and its annotations <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API.html#replace-annotations-of-existing-document-post">Example</a></p></td>
+        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload the via API both, the <code>plain.html</code> and its annotations <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#replace-annotations-of-existing-document-post">Example</a></p></td>
       </tr>
       <tr>
         <td><code>default-plus-annjson</code></td>
-        <td><p>To upload via API both: text (TXT files, PDF, etc. Check the <a href="ioformats.html#input-formats">input formats</a>) and its annotations <code>ann.json</code>. <a title="tagtog - How to upload annotated documents?" href="API.html#import-annotated-documents-post">Example</a></p></td>
+        <td><p>To upload via API both: text (TXT files, PDF, etc. Check the <a href="ioformats.html#input-formats">input formats</a>) and its annotations <code>ann.json</code>. <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#import-annotated-documents-post">Example</a></p></td>
       </tr>
     </table>
   </div>

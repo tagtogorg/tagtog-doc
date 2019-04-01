@@ -1,5 +1,6 @@
 # Dependencies
 markdown:         kramdown
+toc_levels:       1,2
 highlighter:      rouge
 
 # Setup
@@ -62,6 +63,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-toc
   - jemoji
 
 # Custom vars

@@ -4,6 +4,7 @@ title: API projects
 sidebar_link: true
 layout: page
 toc: true
+toc_levels: 1,2
 
 version: 1.0
 api_endpoint: /-api/projects/v1
@@ -36,16 +37,33 @@ Return the list of projects that the (authenticated) user is a member of. This i
   <tr>
     <td><strong>Method</strong></td>
     <td><code>GET</code></td>
-  </tr>
-  <tr>
-    <td><strong>Input parameters</strong></td>
-    <td>None</td>
-  </tr>
+  </tr>  
   <tr>
     <td><strong>Output</strong></td>
     <td>JSON</td>
   </tr>
 </table>
+
+**Input Parameters**
+
+None
+
+
+#### HOLA
+
+<div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-plain-text">cURL</a></li>
+    <li><a href="#tab-2-plain-text">Python</a></li>
+    <li><a href="#tab-3-plain-text">JavaScript</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">The example below imports plain text and retrieve the automatic annotations in <code>ann.json</code> format.</p>
+<div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
+```
+</div>
 
 
 </div>

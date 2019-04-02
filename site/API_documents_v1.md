@@ -931,7 +931,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
         "updated": "2018-03-03T20:59:56.467Z",
         "anncomplete": false,
         "members_anncomplete": ["someMemberUsername"],
-        "folder": "pool/mySubFolder"        
+        "folder": "pool/mySubFolder"
       }
     ]
 }
@@ -1117,6 +1117,8 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 <div class="two-third-col">
   <h2>Delete documents <code>DELETE</code></h2>
+
+  <h3>Delete documents by search</h3>
   <p>You can delete documents in your project using the API. Fine-tune the <code>search</code> parameter to delete only those documents returned by the <a href="/search-queries.html">search query</a>.</p>
   <p>This request returns the number of documents deleted.</p>
 </div>
@@ -1204,6 +1206,77 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 4 //number of documents deleted
 ```
 </div>
+</div>
+
+<div class="two-third-col">
+
+
+  <h3>Delete document by id</h3>
+
+  <p>Delete a single document given its tagtog document id.</p>
+  <p>This request returns the number of documents deleted (1 if the document was successfully deleted, 0 otherwise).</p>
+
+  <div>
+    <p><strong>Input Parameters</strong></p>
+    <table style="width:100%;">
+      <tr>
+        <th>Name</th>
+        <th>Default</th>
+        <th>Example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><code>idType</code></td>
+        <td>-</td>
+        <td><code>tagtogID</code> (mandatory)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><code>ids</code></td>
+        <td>-</td>
+        <td>aEVD52vVm.s2zdTmzK_ACNqH7Z1u-text</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><code>project</code></td>
+        <td>-</td>
+        <td>{{ page.api_project }}</td>
+        <td>Name of the project</td>
+      </tr>
+      <tr>
+        <td><code>owner</code></td>
+        <td>Username sending the request</td>
+        <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
+        <td>Owner of the project you want to use</td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <br/>
+    <div id="tabs-container">
+      <ul class="tabs-menu">
+        <li class="current"><a href="#tab-1-del">cURL</a></li>
+      </ul>
+      <div class="tab">
+        <p class="code-desc">This example deletes a document given by its (tagtog) document id.</p>
+<div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&idType=tagtogID&ids=yourDocumentTagtogID'
+```
+</div>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+    <hr/>
+      <hr/>
+        <hr/>
+          <hr/>
+            <hr/>
+
 </div>
 
 

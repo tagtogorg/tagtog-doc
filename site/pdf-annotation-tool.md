@@ -38,9 +38,16 @@ toc: true
   <div class="two-third-col">
     <h3>Document navigation</h3>
     <p>You can navigate by just <strong>scrolling</strong> with your mouse or clicking on the arrows on the toolbar. {% include inline-image.html name="pdf-navigation.png" width="100" %} If you want to go to a specific page, just write the page number in the page text box and press enter <kbd>↵</kbd>. The page navigation will float when you scroll down a document to allow you change the page at any moment.</p>
+    <h3>Zoom</h3>
+    <p>Zoom in or out the document {% include inline-image.html name="pdf-zoom.png" width="70" %}. The scale changes in 1.25x.</p>
+    <h3>Pan</h3>
+    <p>Sometimes known as <strong>hand tool</strong>. You just click in an area where there is no text, this cursor appears {% include inline-image.html name="grab-cursor.jpg" width="30" %}. <strong>Drag</strong> the document horizontally or/and vertically.</p>
   </div>
-  <div class="one-third-col">
 
+  <div class="one-third-col">
+    <div class="message">
+      When you navigate across pages, the page number in the URL changes. You can use this URL to go directly to a particular page.
+    </div>
   </div>
 </div>
 

@@ -41,7 +41,7 @@ toc: true
     <h3>Zoom</h3>
     <p>Zoom in or out the document {% include inline-image.html name="pdf-zoom.png" width="70" %}. The scale changes in 1.25x.</p>
     <h3>Pan</h3>
-    <p>Sometimes known as <strong>hand tool</strong>. You just click in an area where there is no text, this cursor appears {% include inline-image.html name="grab-cursor.jpg" width="30" %}. <strong>Drag</strong> the document horizontally or/and vertically.</p>
+    <p>Also known as the <strong>hand tool</strong>. You just click in an area where there is no text, this cursor shows up {% include inline-image.html name="grab-cursor.jpg" width="30" %}. <strong>Drag</strong> the document horizontally or/and vertically and release the mouse button to stop panning.</p>
   </div>
 
   <div class="one-third-col">

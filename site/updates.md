@@ -22,6 +22,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="new"><span markdown="1">PDF annotation tool: document URL is updated while scrolling. You can use this link to point directly to a particular page.</span></li>
   <li class="new"><span markdown="1">The annotation menu now shows up on the left side of the pointer. This has been done for better accessibility and to avoid the menu to overlap the side bar when the horizontal scroll bar is visible.</span></li>
   <li class="fix"><span markdown="1">Fixed exception on the parsing of project JSON settings.</span></li>
+  <li class="new"><span markdown="1">Gave the option for On-Premises installations to auto-save the document annotations while on the GUI.</span></li>
 </ul>
 
 ---

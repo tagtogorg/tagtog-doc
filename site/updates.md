@@ -24,6 +24,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="fix"><span markdown="1">Fixed exception on the parsing of project JSON settings.</span></li>
 </ul>
 
+---
+
 ## 3.2019-W13.0 😉
 _2019-03-31_
 

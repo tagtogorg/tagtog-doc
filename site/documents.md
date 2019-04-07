@@ -37,7 +37,7 @@ toc: true
   <p>If you have document labels defined in your project, you can pre-annotate these labels for the document you want to upload. This is very handy if you have metadata (e.g. time stamp, type of document, industry, severity, etc.) available you want to have <strong>readily available for your annotators or your ML model</strong>.</p>
   <p>For example, let's say your model use <a title="tagtog - project - webhooks" href="projects.html#webhooks">Webhooks</a> to generate predictions once a document is uploaded. If the user has pre-annotated this document before, your model has valuable information to generate these predictions based on the pre-annotations. Language can significantly vary between departments, contexts, industries, time, etc., so you have an opportunity here to pick this info and generate better predictions accordingly.</p>
   <p>This option in the user interface is only available when you upload <strong>files</strong>. Expand the <i>Advanced</i> menu and set the document labels.</p>
-  <p>Using the <a title="tagtog - API" href="/API.html">API</a> you can automatically pre-annotate documents uploading together the document/text and the <code><a href="anndoc.html#ann-json">ann.json</a></code> file with the annotations.</p>
+  <p>Using the <a title="tagtog - API" href="/API_documents_v1.html">API</a> you can automatically pre-annotate documents uploading together the document/text and the <code><a href="anndoc.html#ann-json">ann.json</a></code> file with the annotations.</p>
 </div>
 <div class="one-third-col">
   {% include image.html name="preann-doclabels.png" caption="Predefining document labels before uploading the file" %}
@@ -52,7 +52,7 @@ toc: true
 
   <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
   <p><strong>Please remember to name both files the same, except for the extension</strong>. For example: <code>mydoc.pdf</code> and <code>mydoc.ann.json</code>. You can upload multiple pre-annotated documents at the same time. For example, 5 text files and 5 annotation files.</p>
-  <p>Please check the <a title="tagtog - API" href="/API.html">API</a> for more options as replacing existing annotations.</p>
+  <p>Please check the <a title="tagtog - API" href="/API_documents_v1.html">API</a> for more options as replacing existing annotations.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='You can upload multiple pre-annotated documents at the same time. For example, 5 text files and 5 annotation files.'%}
@@ -60,7 +60,7 @@ toc: true
 <div class="two-third-col">
   <h3>Remove a document</h3>
     <p>You can remove a document on the web editor view or in the document list view by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
-    <p>To <strong>remove documents in batch</strong>, you can use the <a title="Search - web app" href="/search.html#remove-documents-in-batch">search bar</a> or the <a title="API - Delete" href="/API.html#delete-documents-delete">API for batch removal</a>.</p>
+    <p>To <strong>remove documents in batch</strong>, you can use the <a title="Search - web app" href="/search.html#remove-documents-in-batch">search bar</a> or the <a title="API - Delete" href="/API_documents_v1.html#delete-documents-delete">API for batch removal</a>.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -73,5 +73,5 @@ toc: true
 
 <div class="one-third-col">
   {% include message.html message="If you are training a model within tagtog, only those documents marked as confirmed are used as <strong>training data</strong> for your machine learning model."%}
-  {% include message.html message='Using the API, you can also <a href="/API.html#search-documents-in-a-project-get">retrieve which documents are complete</a>.' %}
+  {% include message.html message='Using the API, you can also <a href="/API_documents_v1.html#search-documents-in-a-project-get">retrieve which documents are complete</a>.' %}
 </div>

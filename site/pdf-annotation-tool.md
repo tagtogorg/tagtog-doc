@@ -38,9 +38,16 @@ toc: true
   <div class="two-third-col">
     <h3>Document navigation</h3>
     <p>You can navigate by just <strong>scrolling</strong> with your mouse or clicking on the arrows on the toolbar. {% include inline-image.html name="pdf-navigation.png" width="100" %} If you want to go to a specific page, just write the page number in the page text box and press enter <kbd>↵</kbd>. The page navigation will float when you scroll down a document to allow you change the page at any moment.</p>
+    <h3>Zoom</h3>
+    <p>Zoom in or out the document {% include inline-image.html name="pdf-zoom.png" width="70" %}. The scale changes in 1.25x.</p>
+    <h3>Pan</h3>
+    <p>Also known as the <strong>hand tool</strong>. You just click in an area where there is no text, this cursor shows up {% include inline-image.html name="grab-cursor.jpg" width="30" %}. <strong>Drag</strong> the document horizontally or/and vertically and release the mouse button to stop panning.</p>
   </div>
-  <div class="one-third-col">
 
+  <div class="one-third-col">
+    <div class="message">
+      When you navigate across pages, the page number in the URL changes. You can use this URL to go directly to a particular page.
+    </div>
   </div>
 </div>
 
@@ -76,9 +83,9 @@ toc: true
   <div class="two-third-col">
     <h2>Training your model to process PDF files</h2>
     <p class="numbered-item"><span class="number-1">1</span><strong>Annotate using the PDF annotation tool</strong>. Import a PDF and annotate it using the native layout.</p>
-    <p class="numbered-item"><span class="number-2">2</span><strong>Download the plain text and annotations</strong>. Use the <a title="tagtog - API - Get existing documents" href="API.html#get-existing-documents-get">API</a> or <a title="tagtog - web editor - view output mode" href="webeditor.html#view-output-mode">user interface</a> to download both: the <code><a title="tagtog - ann.json format" href="anndoc.html#ann-json">ann.json</a></code> with the annotations and the <code><a title="tagtog - plain.html format" href="anndoc.html#plain-html">plain.html</a></code> with the plain text. The offsets from the annotations refer to the plain text.</p>
+    <p class="numbered-item"><span class="number-2">2</span><strong>Download the plain text and annotations</strong>. Use the <a title="tagtog - API - Get existing documents" href="API_documents_v1.html#get-existing-documents-get">API</a> or <a title="tagtog - web editor - view output mode" href="webeditor.html#view-output-mode">user interface</a> to download both: the <code><a title="tagtog - ann.json format" href="anndoc.html#ann-json">ann.json</a></code> with the annotations and the <code><a title="tagtog - plain.html format" href="anndoc.html#plain-html">plain.html</a></code> with the plain text. The offsets from the annotations refer to the plain text.</p>
     <p class="numbered-item"><span class="number-3">3</span><strong>Train your model</strong>. Use the annotations and the plain text to train your model.</p>
-    <p class="numbered-item"><span class="number-4">4</span><strong>Import new PDFs with the annotations from your model</strong>. Import the PDFs to tagtog and download the plain texts using the API or user interface, use this easy to digest text as an input for your model. Now <a title="tagtog - API - Import annotated documents" href="API.html#import-annotated-documents-post">push the resulting annotations</a> to tagtog. <a title="tagtog - Train your own models" href="train-your-own-models.html">More information</a>.
+    <p class="numbered-item"><span class="number-4">4</span><strong>Import new PDFs with the annotations from your model</strong>. Import the PDFs to tagtog and download the plain texts using the API or user interface, use this easy to digest text as an input for your model. Now <a title="tagtog - API - Import annotated documents" href="API_documents_v1.html#import-annotated-documents-post">push the resulting annotations</a> to tagtog. <a title="tagtog - Train your own models" href="train-your-own-models.html">More information</a>.
     You can automate this process using <a title="tagtog - project - webhooks" href="projects.html#webhooks">Webhooks</a>, so each time a PDF is imported, you get automatically the plain.html file, the annotations are generated right away and pushed to tagtog. </p>
     <p class="numbered-item"><span class="number-5">5</span><strong>Continuosly train your model</strong>. Annotators review the annotations from your model over the native PDF layout and correct them. You can use the new <code>ann.json</code> files to update your model and increase the accuracy of your predictions over time.</p>
 

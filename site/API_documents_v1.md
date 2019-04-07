@@ -1,11 +1,10 @@
 ---
+id: api_documents_v1
+title: API documents
 layout: page
 version: 1.0
-title: API docs
 sidebar_link: true
-id: api
 toc: true
-
 
 api_endpoint: /-api/documents/v1
 api_document_url: https://www.tagtog.net/-api/documents/v1
@@ -34,7 +33,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     </tr>
     <tr>
       <td><strong>Endpoint</strong></td>
-      <td>{{ page.api_endpoint }}</td>
+      <td><code>{{ page.api_endpoint }}</code></td>
     </tr>
   </table>
 </div>
@@ -54,7 +53,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 
   <h3>Plain text <code>POST</code></h3>
   <p>Annotates automatically plain text.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -199,7 +198,7 @@ PUBMED IDS
 <div class="two-third-col">
   <h3>PubMed Abstracts <code>POST</code> <code>GET</code></h3>
   <p>Import one or more PubMed abstracts and annotate them.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -211,7 +210,7 @@ PUBMED IDS
       <td><code>idType</code></td>
       <td><code>tagtogID</code></td>
       <td><code>PMID</code></td>
-      <td>Type of Id. <a href="/API.html#idtype-parameter">List of idTypes</a></td>
+      <td>Type of Id. <a href="/API_documents_v1.html#idtype-parameter">List of idTypes</a></td>
     </tr>
     <tr>
       <td><code>ids</code></td>
@@ -356,7 +355,7 @@ URLS
 <div class="two-third-col">
   <h3>URL <code>POST</code> <code>GET</code></h3>
   <p>Import the text content of a URL and annotate it.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -477,7 +476,7 @@ FILES
 <div class="two-third-col">
   <h3>Files <code>POST</code></h3>
   <p>Import a file and annotate it.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -629,9 +628,9 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
   <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc.pdf</code> and <code>mydoc.ann.json</code>.</p>
 
-  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
+  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API_documents_v1.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
 
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -718,13 +717,13 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 <div class="two-third-col">
   <h3>Replace annotations of existing document <code>POST</code></h3>
   <p>You should use two files:</p>
-  <p class="list-item"><span class="list-item-1"></span><strong>The <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></strong>. You can obtain this file by <a title="Get files - tagtog API" href="API.html#get-existing-documents-get">downloading it from the API</a> using the output <code>html</code>.</p>
+  <p class="list-item"><span class="list-item-1"></span><strong>The <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></strong>. You can obtain this file by <a title="Get files - tagtog API" href="API_documents_v1.html#get-existing-documents-get">downloading it from the API</a> using the output <code>html</code>.</p>
   <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
   <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc-3243hdsfk3.plain.html</code> and <code>mydoc-3243hdsfk3.ann.json</code>.</p>
 
-  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
+  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API_documents_v1.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
 
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -814,7 +813,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <h2>Search documents in a project <code>GET</code></h2>
   <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
   <p>Learn how to <strong>build search queries</strong> <a href="/search-queries.html">here</a>.</p>
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -932,7 +931,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
         "updated": "2018-03-03T20:59:56.467Z",
         "anncomplete": false,
         "members_anncomplete": ["someMemberUsername"],
-        "folder": "pool/mySubFolder"        
+        "folder": "pool/mySubFolder"
       }
     ]
 }
@@ -981,7 +980,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
   <p>You can use the API to export documents. You need the Id of the document to get it. If you don't have this Id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
 </div>
 <div class="two-third-col">
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -999,7 +998,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       <td><code>idType</code></td>
       <td><code>tagtogID</code></td>
       <td><code>tagtogID</code></td>
-      <td>Type of Id. <a href="/API.html#idtype-parameter">List of idTypes</a></td>
+      <td>Type of Id. <a href="/API_documents_v1.html#idtype-parameter">List of idTypes</a></td>
     </tr>
     <tr>
       <td><code>ids</code></td>
@@ -1118,11 +1117,13 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 <div class="two-third-col">
   <h2>Delete documents <code>DELETE</code></h2>
+
+  <h3>Delete documents by search</h3>
   <p>You can delete documents in your project using the API. Fine-tune the <code>search</code> parameter to delete only those documents returned by the <a href="/search-queries.html">search query</a>.</p>
   <p>This request returns the number of documents deleted.</p>
 </div>
 <div class="two-third-col">
-  <p><strong>Parameters</strong></p>
+  <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
       <th>Name</th>
@@ -1205,6 +1206,77 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 4 //number of documents deleted
 ```
 </div>
+</div>
+
+<div class="two-third-col">
+
+
+  <h3>Delete document by id</h3>
+
+  <p>Delete a single document given its tagtog document id.</p>
+  <p>This request returns the number of documents deleted (1 if the document was successfully deleted, 0 otherwise).</p>
+
+  <div>
+    <p><strong>Input Parameters</strong></p>
+    <table style="width:100%;">
+      <tr>
+        <th>Name</th>
+        <th>Default</th>
+        <th>Example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><code>idType</code></td>
+        <td>-</td>
+        <td><code>tagtogID</code> (mandatory)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><code>ids</code></td>
+        <td>-</td>
+        <td>aEVD52vVm.s2zdTmzK_ACNqH7Z1u-text</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><code>project</code></td>
+        <td>-</td>
+        <td>{{ page.api_project }}</td>
+        <td>Name of the project</td>
+      </tr>
+      <tr>
+        <td><code>owner</code></td>
+        <td>Username sending the request</td>
+        <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
+        <td>Owner of the project you want to use</td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <br/>
+    <div id="tabs-container">
+      <ul class="tabs-menu">
+        <li class="current"><a href="#tab-1-del">cURL</a></li>
+      </ul>
+      <div class="tab">
+        <p class="code-desc">This example deletes a document given by its (tagtog) document id.</p>
+<div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&idType=tagtogID&ids=yourDocumentTagtogID'
+```
+</div>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+    <hr/>
+      <hr/>
+        <hr/>
+          <hr/>
+            <hr/>
+
 </div>
 
 
@@ -1328,7 +1400,7 @@ usage: tagtog [-h] {upload,search,download} ...
 
 tagtog official script to Upload & Search & Download documents. Version: 0.1.2
 Author: tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks) API
-documentation: http://docs.tagtog.net/API.html
+documentation: http://docs.tagtog.net/API_documents_v1.html
 
 positional arguments:
   {upload,search,download}

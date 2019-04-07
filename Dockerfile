@@ -14,8 +14,8 @@ RUN apk add git
 
 # Install python dependencies for python script
 
-RUN apk add python3
-RUN pip3 install requests
+RUN apk add python3 && \
+    pip3 install requests
 
 # ---
 

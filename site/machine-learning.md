@@ -17,7 +17,7 @@ id: ml
   <p>One of the advantages using tagtog is the possibility of annotating text automatically using machine learning (ML) :bookmark_tabs: Why is this important? Automatic annotations are just insights on the top of the text. You can leverage intelligence in different scenarios:</p>
   <p class="list-item"><span class="list-item-1"></span>tagtog annotates text automatically using custom or pre-trained ML models. This means you can <strong>automate</strong> processes to find relevant insights automatically. E.g. analyze customer feedback on real time.</p>
   <p class="list-item"><span class="list-item-2"></span>Automatic annotations can <strong>boost annotator performance</strong>. Documents are pre-annotated by ML models and annotators only need to correct wrong predictions. tagtog learns from feedback and provide with more accurate results with each iteration.</p>
-  <p class="list-item"><span class="list-item-3"></span><strong>Index your data</strong>. Use automatic annotations to augment your data and improve discoverability (e.g. augment records with mutation mentions using standard names, easier to find). You can either import the results into your own system or use the <a href="/API.html#search-documents-in-a-project-get" title="Search API">Search API</a> to find suitable records across the data imported.</p>
+  <p class="list-item"><span class="list-item-3"></span><strong>Index your data</strong>. Use automatic annotations to augment your data and improve discoverability (e.g. augment records with mutation mentions using standard names, easier to find). You can either import the results into your own system or use the <a href="/API_documents_v1.html#search-documents-in-a-project-get" title="Search API">Search API</a> to find suitable records across the data imported.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='tagtog with machine learning capabilities is offered on the tagtog <strong>Cloud or On-premises</strong> (<a title="tagtog plans" href="https://www.tagtog.net/-pricing">plans</a>). You can install it within your infrastructure or any public cloud (AWS, Google, Azure, etc.).' %}
@@ -61,10 +61,10 @@ id: ml
  {% include message.html message="Machine learning only trains with the <strong>master</strong> version of your documents." %}
 </div>  
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-4">4</span><strong>Use the model</strong>. When you import new documents using the interface or the <a title="tagtog - API documentation" href="/API.html">API</a>, they are automatically annotated by the custom ML model.</p>
+  <p class="numbered-item"><span class="number-4">4</span><strong>Use the model</strong>. When you import new documents using the interface or the <a title="tagtog - API documentation" href="/API_documents_v1.html">API</a>, they are automatically annotated by the custom ML model.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='To facilitate automation, models are also accessible as a highly-reliable <strong><a title="tagtog - API documentation" href="/API.html">API</a></strong>.' %}
+  {% include message.html message='To facilitate automation, models are also accessible as a highly-reliable <strong><a title="tagtog - API documentation" href="/API_documents_v1.html">API</a></strong>.' %}
 </div>
 <div class="two-third-col">
   <p class="numbered-item"><span class="number-5">5</span><strong>Continuous learning</strong>. Were any automatic annotations wrong? was important information not annotated? something new to teach? No problem. Just remove/edit the wrong annotations and add those that are missing. Click on the Confirm button. Again all the confirmed documents are used to retrain the model with your new findings.</p>

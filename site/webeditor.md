@@ -75,34 +75,57 @@ toc: true
       <tr>
         <th>Hotkey</th>
         <th>Description</th>
+        <th>Availability</th>
       </tr>
       <tr>
         <td class="centered"><kbd>[</kbd></td>
         <td>Previous document in the folder</td>
+        <td>Any document</td>
       </tr>
       <tr>
         <td class="centered"><kbd>]</kbd></td>
         <td>Next document in the folder</td>
-      </tr>
-      <tr>
-        <td class="centered"><kbd>q</kbd></td>
-        <td>Previous page (only available in paginated documents as PDFs)</td>
-      </tr>
-      <tr>
-        <td class="centered"><kbd>w</kbd></td>
-        <td>Next page (only available in paginated documents as PDFs)</td>
+        <td>Any document</td>
       </tr>
       <tr>
         <td class="centered"><kbd>s</kbd></td>
         <td>Save document</td>
+        <td>Any document</td>
       </tr>
       <tr>
         <td class="centered"><kbd>r</kbd></td>
         <td>Start a new relation (only available when the annotation menu is visible)</td>
+        <td>Any document</td>
       </tr>
       <tr>
         <td class="centered"><kbd>d</kbd></td>
         <td>Delete annotation (only available when the annotation menu is visible)</td>
+        <td>Any document</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>q</kbd></td>
+        <td>Previous page</td>
+        <td>Only for paginated documents as PDFs</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>w</kbd></td>
+        <td>Next page</td>
+        <td>Only for paginated documents as PDFs</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>z</kbd></td>
+        <td>Zoom in</td>
+        <td>Only for paginated documents as PDFs</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>x</kbd></td>
+        <td>Zoom out</td>
+        <td>Only for paginated documents as PDFs</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>ctrl+f</kbd><kbd>command+f</kbd></td>
+        <td>Search in the text of a document</td>
+        <td>Only for paginated documents as PDFs</td>
       </tr>
     </table>
   </div>

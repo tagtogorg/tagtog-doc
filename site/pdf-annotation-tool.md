@@ -22,6 +22,16 @@ toc: true
 
 <div class="page-section">
   <div class="two-third-col">
+    <h2>How to activate this feature?</h2>
+    <p><strong>By default this feature is turned off</strong>. You can change this setting differently for each project. To activate this feature follow <a title="tagtog - Activate PDF native tool" href="projects.html#pdf">these instructions</a>.</p>
+  </div>
+  <div class="one-third-col">
+    <div class="message">The PDF annotation tool is only available in some plans. Check the <a title="tagtog - plans" href="https://tagtog.net/-pricing">available features for each plan</a>.</div>
+  </div>
+</div>
+
+<div class="page-section">
+  <div class="two-third-col">
     <h2>How does it look?</h2>
 
     <p>It is the same web interface as in tagtog, but annotating directly over the native PDF :book:</p>
@@ -42,11 +52,27 @@ toc: true
     <p>Zoom in or out the document {% include inline-image.html name="pdf-zoom.png" width="70" %}. The scale changes in 1.25x.</p>
     <h3>Pan</h3>
     <p>Also known as the <strong>hand tool</strong>. You just click in an area where there is no text, this cursor shows up {% include inline-image.html name="grab-cursor.jpg" width="30" %}. <strong>Drag</strong> the document horizontally or/and vertically and release the mouse button to stop panning.</p>
+
   </div>
 
   <div class="one-third-col">
     <div class="message">
       When you navigate across pages, the page number in the URL changes. You can use this URL to go directly to a particular page.
+    </div>
+  </div>
+</div>
+
+<div class="page-section">
+  <div class="two-third-col">
+    <h2>Search</h2>
+    <p>In paginated documents as PDF, you can find text across a particular document. Use the keyboard hotkeys <kbd>ctrl+f</kbd> or <kbd>command+f</kbd> to trigger the <strong>text search</strong> functionality.</p>
+    <p>Once you start typing, the search functionality is triggered and the <strong>results are updated in real time and highlighted in the screen</strong>, e.g.: {% include inline-image.html name="search-result.png" width="350" %}. In the text search panel you can navigate across the results by clicking the up and down arrows. Results are displayed in order of appearance. When you navigate to one particular search result, it is being highlighted, e.g.: {% include inline-image.html name="search-result-highlight.png" width="350" %}.</p>
+    <p>To clear the results, just close the text search panel.</p>
+  </div>
+  <div class="one-third-col">
+    {% include image.html name="search-in-text.png" caption="Text search panel. You can navigate across the results. The number of results is displayed inside the text box" %}
+    <div class="message">
+      The text search functionality is <strong>only available when visualizing paginated documents (e.g. PDF) and only accessible by hotkeys</strong>. For plain text you can use the browser built-in functionality by also using <kbd>ctrl+f</kbd> or <kbd>command+f</kbd>.
     </div>
   </div>
 </div>
@@ -91,16 +117,6 @@ toc: true
 
   </div>
   <div class="one-third-col">
-  </div>
-</div>
-
-<div class="page-section">
-  <div class="two-third-col">
-    <h2>How to activate this feature?</h2>
-    <p><strong>By default this feature is turned off</strong>. You can change this setting differently for each project. To activate this feature follow <a title="tagtog - Activate PDF native tool" href="projects.html#pdf">these instructions</a>.</p>
-  </div>
-  <div class="one-third-col">
-    <div class="message">The PDF annotation tool is only available in some plans. Check the <a title="tagtog - plans" href="https://tagtog.net/-pricing">available features for each plan</a>.</div>
   </div>
 </div>
 

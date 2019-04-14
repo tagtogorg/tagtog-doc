@@ -14,6 +14,12 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🔍
+_???_
+<ul class="updates">
+  <li class="new"><span markdown="1">PDF annotation tool: new functionality to **search text** in a document and navigate across the results in the annotation editor. [Docs](pdf-annotation-tool.html#search)</span></li>
+</ul>
+
 ## ??? 👨‍🔬
 _???_
 

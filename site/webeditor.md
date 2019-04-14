@@ -389,6 +389,7 @@ toc: true
       <br/>
       <h4>Document labels</h4>
       <p>If you have any document label configured at <i>Settings > Document Labels</i> they will appear in this section in the side bar. Here the user can define the value of a document label for the current document. Once a change is made, you can save the document as usual.</p>
+      <p>The list of document labels is <strong>sorted alphabetically</strong>.</p>
       <p>Clicking on the icon {% include inline-image.html name="editor-clean.PNG" width="20" %} you reset the label to the default value <code>?</code></p>
     </div>
     <div class="one-third-col">
@@ -419,8 +420,12 @@ toc: true
           <td>Group annotations by text. It is very common that in the same text, the same entity is repeated multiple times. Sometimes it is better to understand that only two unique entities have been identified in this text, e.g. gene <code>BRCA2</code> and gene <code>HER2</code> instead of getting the total number of annotations, included repeated ones.</td>
         </tr>
         <tr>
+          <td><code>Entity label</code></td>
+          <td>Group annotations by entity label. Check which annotations have been labeled and which not. Check the list of annotations labeled with a particular entity label.</td>
+        </tr>
+        <tr>
           <td><code>No group</code></td>
-          <td>Entities are not grouped. They will appear one by one, in the same order they appear in text. This is very handy if you need to review each single annotation. <span class="soon">Soon we will enable hotkeys so you can navigate this menu fast and easily</span>.</td>
+          <td>Entities are not grouped. They will appear one by one, in the same order they appear in the text. This is very handy if you need to review each single annotation. <span class="soon">Soon we will enable hotkeys so you can navigate this menu fast and easily</span>.</td>
         </tr>
       </table>
     </div>

@@ -12,10 +12,11 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+---
 
+## 3.2019-W15.0 🔍
+_2019-04-14_
 
-## ??? 🔍
-_???_
 <ul class="updates">
   <li class="new"><span markdown="1">PDF annotation tool: new functionality to **search text** in a document and navigate across the results in the annotation editor. [Docs](pdf-annotation-tool.html#search)</span></li>
   <li class="new"><span markdown="1">Document labels in the editor are now sorted alphabetically</span></li>

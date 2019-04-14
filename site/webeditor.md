@@ -75,34 +75,57 @@ toc: true
       <tr>
         <th>Hotkey</th>
         <th>Description</th>
+        <th>Availability</th>
       </tr>
       <tr>
         <td class="centered"><kbd>[</kbd></td>
         <td>Previous document in the folder</td>
+        <td>Any document</td>
       </tr>
       <tr>
         <td class="centered"><kbd>]</kbd></td>
         <td>Next document in the folder</td>
-      </tr>
-      <tr>
-        <td class="centered"><kbd>q</kbd></td>
-        <td>Previous page (only available in paginated documents as PDFs)</td>
-      </tr>
-      <tr>
-        <td class="centered"><kbd>w</kbd></td>
-        <td>Next page (only available in paginated documents as PDFs)</td>
+        <td>Any document</td>
       </tr>
       <tr>
         <td class="centered"><kbd>s</kbd></td>
         <td>Save document</td>
+        <td>Any document</td>
       </tr>
       <tr>
         <td class="centered"><kbd>r</kbd></td>
         <td>Start a new relation (only available when the annotation menu is visible)</td>
+        <td>Any document</td>
       </tr>
       <tr>
         <td class="centered"><kbd>d</kbd></td>
         <td>Delete annotation (only available when the annotation menu is visible)</td>
+        <td>Any document</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>q</kbd></td>
+        <td>Previous page</td>
+        <td>Only for paginated documents as PDFs</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>w</kbd></td>
+        <td>Next page</td>
+        <td>Only for paginated documents as PDFs</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>z</kbd></td>
+        <td>Zoom in</td>
+        <td>Only for paginated documents as PDFs</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>x</kbd></td>
+        <td>Zoom out</td>
+        <td>Only for paginated documents as PDFs</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>ctrl+f</kbd><kbd>command+f</kbd></td>
+        <td>Search in the text of a document</td>
+        <td>Only for paginated documents as PDFs</td>
       </tr>
     </table>
   </div>
@@ -366,6 +389,7 @@ toc: true
       <br/>
       <h4>Document labels</h4>
       <p>If you have any document label configured at <i>Settings > Document Labels</i> they will appear in this section in the side bar. Here the user can define the value of a document label for the current document. Once a change is made, you can save the document as usual.</p>
+      <p>The list of document labels is <strong>sorted alphabetically</strong>.</p>
       <p>Clicking on the icon {% include inline-image.html name="editor-clean.PNG" width="20" %} you reset the label to the default value <code>?</code></p>
     </div>
     <div class="one-third-col">
@@ -396,8 +420,12 @@ toc: true
           <td>Group annotations by text. It is very common that in the same text, the same entity is repeated multiple times. Sometimes it is better to understand that only two unique entities have been identified in this text, e.g. gene <code>BRCA2</code> and gene <code>HER2</code> instead of getting the total number of annotations, included repeated ones.</td>
         </tr>
         <tr>
+          <td><code>Entity label</code></td>
+          <td>Group annotations by entity label. Check which annotations have been labeled and which not. Check the list of annotations labeled with a particular entity label.</td>
+        </tr>
+        <tr>
           <td><code>No group</code></td>
-          <td>Entities are not grouped. They will appear one by one, in the same order they appear in text. This is very handy if you need to review each single annotation. <span class="soon">Soon we will enable hotkeys so you can navigate this menu fast and easily</span>.</td>
+          <td>Entities are not grouped. They will appear one by one, in the same order they appear in the text. This is very handy if you need to review each single annotation. <span class="soon">Soon we will enable hotkeys so you can navigate this menu fast and easily</span>.</td>
         </tr>
       </table>
     </div>

@@ -1,6 +1,6 @@
 ---
 id: api_projects_v1
-title: APIsettings
+title: API settings
 sidebar_link: true
 layout: page
 toc: true
@@ -135,6 +135,62 @@ The given path must exist. The last element of the path (in the example: "new") 
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/rename{{ page.mandatory_query_parameters_full }}' -d '{"path": "pool/new", "newFolderName": "newRenamed" }'
+```
+</div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="two-third-col" markdown="1">
+
+### Remove folder
+
+<table style="width:100%;white-space:nowrap;">
+  <tr>
+    <td><strong>Endpoint</strong></td>
+    <td><code>{{ page.api_endpoint }}/remove{{ page.mandatory_query_parameters }}</code></td>
+  </tr>
+  <tr>
+    <td><strong>Method</strong></td>
+    <td><code>POST</code></td>
+  </tr>  
+  <tr>
+    <td><strong>Output</strong></td>
+    <td>JSON; fields: 1) <code>mapNewIds</code> (always empty), and <code>newSettings</code> (the new project's JSON settings)</td>
+  </tr>
+</table>
+
+**Input Parameters**
+
+(example)
+
+```shell
+{
+  "path": "pool/newRenamed"  
+}
+```
+
+The given path must exist. You can "delete multiple levels" at the same time. That is, if the folder path (in the example) `pool/newRenamed/otherLevel` existed, while deleting `newRenamed`, the folder `otherLevel` would also be deleted.
+
+**⚠️ CAUTION**: **all documents within the (possibly-multiple) deleted folders are also deleted!** Make sure you do not delete valuable documents. At the moment there is no API to "move" documents between folders. However, the same can be implemented by 1) downloading, 2) removing, 3) reuploading to a different folder.
+
+
+**Coding examples**
+
+<div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+  </ul>
+  <div class="tab">
+<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/remove{{ page.mandatory_query_parameters_full }}' -d '{"path": "pool/newRenamed" }'
 ```
 </div>
   </div>

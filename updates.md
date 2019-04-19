@@ -14,13 +14,20 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ???
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Filter the entities in the sidebar by entity type, entity label or entity text. [Docs](webeditor.html#filter-entities)</span></li>
+  <li class="new"><span markdown="1">tagtog remembers the option you selected to group entities. In your next session, document, this option will be set as default.</span></li>
+</ul>
+
 ## 3.2019-W15.0 🔍
 _2019-04-14_
 
 <ul class="updates">
   <li class="new"><span markdown="1">PDF annotation tool: new functionality to **search text** in a document and navigate across the results in the annotation editor. [Docs](pdf-annotation-tool.html#search)</span></li>
   <li class="new"><span markdown="1">Document labels in the editor are now sorted alphabetically</span></li>
-  <li class="fix"><span markdown="1">Group your entities by entity label in the sidebar</span></li>
+  <li class="new"><span markdown="1">Group your entities by entity label in the sidebar</span></li>
   <li class="fix"><span markdown="1">Scroll bars for annotation menu and entity labels menu only shown when required</span></li>
   <li class="new"><span markdown="1">PDF annotation tool: new functionality to **zoom** in and out. Hotkeys also provided.</span></li>
   <li class="new"><span markdown="1">PDF annotation tool: new functionality **pan** left-right and top-bottom. Move quickly.</span></li>
@@ -28,7 +35,7 @@ _2019-04-14_
   <li class="new"><span markdown="1">The annotation menu now shows up on the left side of the pointer. This has been done for better accessibility and to avoid the menu to overlap the side bar when the horizontal scroll bar is visible.</span></li>
   <li class="fix"><span markdown="1">Fixed exception on the parsing of project JSON settings.</span></li>
   <li class="new"><span markdown="1">Gave the option for On-Premises installations to auto-save the document annotations while on the GUI.</span></li>
-  <li class="new"><span markdown="1">**IAA (Inter-Annotator Agreement) !!!*** First steps 🗣.</span></li>  
+  <li class="new"><span markdown="1">**IAA (Inter-Annotator Agreement) !!!*** First steps 🗣.</span></li>
 </ul>
 
 ---

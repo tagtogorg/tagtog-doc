@@ -452,7 +452,7 @@ toc: true
     </div>
     <div class="two-third-col">
       <h5>Filter entities</h5>
-      <p>You can display those entities that meet certain requirements.</p>
+      <p>You can display entities that meet certain requirements.</p>
       <table style="width:100%">
         <tr>
           <th>Filter by</th>
@@ -465,7 +465,7 @@ toc: true
         </tr>
         <tr>
           <td><code>Entity label</code></td>
-          <td><p>Select one or more entity labels to display those entities with all those labels.</p></td>
+          <td><p>Select one or more entity labels to display entities with all those labels.</p></td>
         </tr>
         <tr>
           <td><code>Entity text</code></td>
@@ -476,6 +476,9 @@ toc: true
     <div class="one-third-col">
       <div class="message">
         To <strong>remove a filter</strong>, just click on the cross on the right side of the filter.
+      </div>
+      <div class="message">
+        You can <strong>combine groups and filters</strong> to gain flexibility.
       </div>
     </div>
     <div class="two-third-col">

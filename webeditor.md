@@ -460,16 +460,16 @@ toc: true
         </tr>
         <tr>
           <td><code>Entity type</code></td>
-          <td><p>Select one or more entity types to display entities that belong to one of those entity types.</p>
+          <td><p>Select one or more entity types to display entities that belong to one of those entity types.</p><p>This filter only shows up when there are two or more entity types defined in the project.</p>
           </td>
         </tr>
         <tr>
           <td><code>Entity label</code></td>
-          <td><p>Select one or more entity labels to display entities with all those labels.</p></td>
+          <td><p>Select one or more entity labels to display entities with all those labels. <p>This filter only shows up when there is at least one entity label defined in the project.</p></p></td>
         </tr>
         <tr>
           <td><code>Entity text</code></td>
-          <td><p>Display entities which text includes the search query.</p></td>
+          <td><p>Display entities which text includes the search query.</p> <p>This filter only shows up when there is at least one entity type defined in the project.</p></td>
         </tr>
       </table>
     </div>

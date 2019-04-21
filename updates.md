@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 📂
+## 3.2019-W16.0 📂
+_2019-04-21_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Filter the entities in the sidebar by entity type, entity label or entity text. [Docs](webeditor.html#filter-entities)</span></li>

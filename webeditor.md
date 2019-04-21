@@ -379,8 +379,8 @@ toc: true
     <div class="two-third-col">
       <br/>
       <h2>Sidebar</h2>
-      <p>The sidebar <strong>appearance changes depending on how you configured your project</strong>. It will only display those actionable items for those entity types, document labels or relations used in the project.</p>
-      <p>You can <strong>show/hide</strong> the sidebar by clicking on the arrow (V-shaped mark) {% include inline-image.html name="chevron.png" width="20" %} near the top of the sidebar.</p>
+      <p>The sidebar <strong>appearance changes depending on how you configured your project</strong>. It will only display those actionable items for those entity types, entity labels, document labels or relations used in the project.</p>
+      <p>You can <strong>show/hide</strong> the sidebar by clicking on the arrow {% include inline-image.html name="chevron.png" width="20" %} near the top of the sidebar.</p>
       <p>These are the components you can find in the sidebar:</p>
     </div>
     <div class="one-third-col">
@@ -403,7 +403,15 @@ toc: true
       <br/>
       {% include image.html name="editor-tally-icons.png" width="600" caption="Entities are classified under Entity types. For each type some statistics are displayed: number of entities, manual annotated entities, automatic annotated entities, normalized entities" %}
       <br/>
-      <p>To digest the status of the annotated entities as fast as possible and reduce the noise of repeated annotations, you can <strong>group entities</strong> by:</p>
+      <p>To digest the status of the annotated entities as fast as possible and reduce the noise, you can:</p>
+      <p class="list-item"><span class="list-item-1"></span><strong>Group</strong> entities</p>
+      <p class="list-item"><span class="list-item-2"></span><strong>Filter</strong> entities</p>
+    </div>
+    <div class="one-third-col">
+    </div>
+    <div class="two-third-col">
+      <h5>Group entities</h5>
+      <p>Classify entities in different groups.</p>
       <table style="width:100%">
         <tr>
           <th>Group by</th>
@@ -431,7 +439,7 @@ toc: true
     </div>
     <div class="one-third-col">
       <div class="message">
-        <strong>What is a unique entity?</strong> A group of entity with the same Entity Type and text.
+        <strong>tagtog remembers your last grouping choice</strong>. If you select a specific way of grouping entities. The next time you open a new document or login to tagtog, the same grouping option will be selected by default.
       </div>
     </div>
     <div class="two-third-col">
@@ -440,6 +448,37 @@ toc: true
     <div class="one-third-col">
       <div class="message">
         All menus in the entity tally are <strong>collapsible</strong>, if you click in an annotation, the document area <strong>scroll to highlight the annotation</strong> in the text.
+      </div>
+    </div>
+    <div class="two-third-col">
+      <h5>Filter entities</h5>
+      <p>You can display entities that meet certain requirements.</p>
+      <table style="width:100%">
+        <tr>
+          <th>Filter by</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>Entity type</code></td>
+          <td><p>Select one or more entity types to display entities that belong to one of those entity types.</p><p>This filter only shows up when there are two or more entity types defined in the project.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>Entity label</code></td>
+          <td><p>Select one or more entity labels to display entities with all those labels. <p>This filter only shows up when there is at least one entity label defined in the project.</p></p></td>
+        </tr>
+        <tr>
+          <td><code>Entity text</code></td>
+          <td><p>Display entities which text includes the search query.</p> <p>This filter only shows up when there is at least one entity type defined in the project.</p></td>
+        </tr>
+      </table>
+    </div>
+    <div class="one-third-col">
+      <div class="message">
+        To <strong>remove a filter</strong>, just click on the cross on the right side of the filter.
+      </div>
+      <div class="message">
+        You can <strong>combine groups and filters</strong> to gain flexibility.
       </div>
     </div>
     <div class="two-third-col">

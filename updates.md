@@ -18,8 +18,11 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="new"><span markdown="1">Filter the entities in the sidebar by entity type, entity label or entity text. [Docs](webeditor.html#filter-entities)</span></li>
-  <li class="new"><span markdown="1">tagtog remembers the option you selected to group entities. In your next session, document, this option will be set as default.</span></li>
+  <li class="new"><span markdown="1">tagtog remembers the option you selected to group entities (on the document editor).</span></li>
+  <li class="new"><span markdown="1">New [API for folders management (add, rename, remove)](API_settings_v1.html#folders-management).</span></li>
 </ul>
+
+---
 
 ## 3.2019-W15.0 🔍
 _2019-04-14_

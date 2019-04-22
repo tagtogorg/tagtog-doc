@@ -66,12 +66,54 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
   </div>
 </div>
 
----
 </div> <!-- Closes main section: two-third-cold div -->
 
 <div class="one-third-col">
   {% include image.html name="API_settings/GET_export_settings_example.png" caption="example output, export JSON project settings" %}
 </div>
+
+
+
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
+
+### Import Settings
+
+<table style="width:100%;white-space:nowrap;">
+  <tr>
+    <td><strong>Endpoint</strong></td>
+    <td><code>{{ page.api_endpoint }}/import{{ page.mandatory_query_parameters }}</code></td>
+  </tr>
+  <tr>
+    <td><strong>Method</strong></td>
+    <td><code>POST</code></td>
+  </tr>  
+  <tr>
+    <td><strong>Output</strong></td>
+    <td>JSON; fields: 1) <code>mapNewIds</code> and 2) <code>newSettings</code> (the new imported project's JSON settings)</td>
+  </tr>
+</table>
+
+**Input Parameters**
+
+JSON project settings, in the same format as returned by [exporting the settings](#export-settings).
+
+**Coding examples**
+
+<div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+  </ul>
+  <div class="tab">
+<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/import{{ page.mandatory_query_parameters_full }}' -d @$HOME/Downloads/tagtog_yourUsername_yourProjectName.json
+```
+</div>
+  </div>
+</div>
+
+</div> <!-- Closes main section: two-third-cold div -->
+
 
 
 

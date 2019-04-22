@@ -1152,7 +1152,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </table>
 </div>
 <div class="one-third-col">
-  {% include message.html message='<code>search&equals;*</code> finds all and therefore the <code>DELETE</code> call deletes all documents.' %}
+  {% include message.html message='<code>search=&ast;</code> finds all and therefore the <code>DELETE</code> call deletes all documents.' %}
 </div>
 
 <div class="two-third-col">
@@ -1476,5 +1476,5 @@ python3 tagtog.py download '*' -u {{ page.api_username }} -w {{ page.api_pwd }} 
   </div>
 </div>
 <div class="one-third-col">
- {% include message.html message='The search query <code>*</code> finds all documents in a project.' %}
+ {% include message.html message='The search query <code>&ast;</code> finds all documents in a project.' %}
 </div>

@@ -94,20 +94,44 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend
 
 Two variants:
 
-1. **(Full) path** (example):
-```shell
-{
-  "path": "pool/new"
-}
-```
+1. **(Full) path**:
+<table style="width:100%;">
+  <tr>
+    <th>Name</th>
+    <th>Default</th>
+    <th>Example</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>path</code></td>
+    <td>-</td>
+    <td><code>pool/new</code></td>
+    <td>Full path of the new folder</td>
+  </tr>  
+</table>
+
 
 2. **Parent path & new folder name** (example):
-```shell
-{
-  "parentPath": "pool",
-  "newFolderName": "new"
-}
-```
+<table style="width:100%;">
+  <tr>
+    <th>Name</th>
+    <th>Default</th>
+    <th>Example</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>parentPath</code></td>
+    <td>-</td>
+    <td><code>pool</code></td>
+    <td>Full path up to the parent (included) of the new folder</td>
+  </tr>  
+  <tr>
+    <td><code>newFolderName</code></td>
+    <td>-</td>
+    <td><code>new</code></td>
+    <td>New folder name to be added to the parent path</td>
+  </tr>
+</table>
 
 In both cases, **the parent path must have been already defined**. In other words, in Unix jargon, `mkdir` is permitted, but not `mkdir -p`.
 
@@ -156,15 +180,26 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 </table>
 
 **Input Parameters**
-
-(example)
-
-```shell
-{
-  "path": "pool/new"
-  "newFolderName": "newRenamed"
-}
-```
+<table style="width:100%;">
+  <tr>
+    <th>Name</th>
+    <th>Default</th>
+    <th>Example</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>path</code></td>
+    <td>-</td>
+    <td><code>pool/new</code></td>
+    <td>Full path of the existing folder to be renamed</td>
+  </tr>  
+  <tr>
+    <td><code>newFolderName</code></td>
+    <td>-</td>
+    <td><code>newRenamed</code></td>
+    <td>New folder name</td>
+  </tr>
+</table>
 
 The given path must exist. The last element of the path (in the example: "new") is renamed to "newRenamed"
 
@@ -211,14 +246,20 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 </table>
 
 **Input Parameters**
-
-(example)
-
-```shell
-{
-  "path": "pool/newRenamed"  
-}
-```
+<table style="width:100%;">
+  <tr>
+    <th>Name</th>
+    <th>Default</th>
+    <th>Example</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>path</code></td>
+    <td>-</td>
+    <td><code>pool/newRenamed</code></td>
+    <td>Full path of the folder to be deleted</td>
+  </tr>  
+</table>
 
 The given path must exist. You can "delete multiple levels" at the same time. That is, if the folder path (in the example) `pool/newRenamed/otherLevel` existed, while deleting `newRenamed`, the folder `otherLevel` would also be deleted.
 

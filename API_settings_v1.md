@@ -1,5 +1,5 @@
 ---
-id: api_projects_v1
+id: api_settings_v1
 title: API settings
 sidebar_link: true
 layout: page

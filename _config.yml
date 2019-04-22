@@ -33,6 +33,7 @@ sidebar_toc:
     pages:
       - api_documents_v1
       - api_projects_v1
+      - api_settings_v1
 
   - name: Concept Search
     pages:

@@ -147,7 +147,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 
 
 
-<div class="two-third-col" markdown="1">
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
 ### Remove folder
 
@@ -196,4 +196,4 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
   </div>
 </div>
 
-</div>
+</div> <!-- Closes main section: two-third-cold div -->

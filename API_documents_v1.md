@@ -1390,6 +1390,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 <div class="one-third-col">
 
 </div>
+
 <div class="two-third-col">
   <h2>API Clients</h2>
   <h3>Python tagtog script</h3>

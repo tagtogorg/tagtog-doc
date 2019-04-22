@@ -26,7 +26,50 @@ api_project: yourProjectName
 </div>
 
 
-<div class="two-third-col" markdown="1">
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
+
+## Annotations Legend
+
+GET a JSON map of annotation tasks ids to names (e.g. `{"e_1": "Person"}`).
+
+<table style="width:100%;white-space:nowrap;">
+  <tr>
+    <td><strong>Endpoint</strong></td>
+    <td><code>{{ page.api_endpoint }}/annotationsLegend{{ page.mandatory_query_parameters }}</code></td>
+  </tr>
+  <tr>
+    <td><strong>Method</strong></td>
+    <td><code>GET</code></td>
+  </tr>  
+  <tr>
+    <td><strong>Output</strong></td>
+    <td>JSON</td>
+  </tr>
+</table>
+
+**Input Parameters**
+
+None
+
+**Coding examples**
+
+<div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+  </ul>
+  <div class="tab">
+<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend{{ page.mandatory_query_parameters_full }}'
+```
+</div>
+  </div>
+</div>
+
+</div> <!-- Closes main section: two-third-cold div -->
+
+
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
 ## Folders management
 
@@ -35,7 +78,7 @@ api_project: yourProjectName
 <table style="width:100%;white-space:nowrap;">
   <tr>
     <td><strong>Endpoint</strong></td>
-    <td><code>{{ page.api_endpoint }}/add{{ page.mandatory_query_parameters }}</code></td>
+    <td><code>{{ page.api_endpoint }}/folders/add{{ page.mandatory_query_parameters }}</code></td>
   </tr>
   <tr>
     <td><strong>Method</strong></td>
@@ -78,13 +121,14 @@ In both cases, **the parent path must have been already defined**. In other word
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/add{{ page.mandatory_query_parameters_full }}' -d '{"path": "pool/new"}'
+curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/folders/add{{ page.mandatory_query_parameters_full }}' -d '{"path": "pool/new"}'
 ```
 </div>
   </div>
 </div>
 
-</div>
+</div> <!-- Closes main section: two-third-cold div -->
+
 
 <div class="one-third-col">
   {% include image.html name="API_settings/POST_add_folder_example.png" caption="example output, add folder to project"%}
@@ -99,7 +143,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 <table style="width:100%;white-space:nowrap;">
   <tr>
     <td><strong>Endpoint</strong></td>
-    <td><code>{{ page.api_endpoint }}/rename{{ page.mandatory_query_parameters }}</code></td>
+    <td><code>{{ page.api_endpoint }}/folders/rename{{ page.mandatory_query_parameters }}</code></td>
   </tr>
   <tr>
     <td><strong>Method</strong></td>
@@ -134,7 +178,7 @@ The given path must exist. The last element of the path (in the example: "new") 
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/rename{{ page.mandatory_query_parameters_full }}' -d '{"path": "pool/new", "newFolderName": "newRenamed" }'
+curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/folders/rename{{ page.mandatory_query_parameters_full }}' -d '{"path": "pool/new", "newFolderName": "newRenamed" }'
 ```
 </div>
   </div>
@@ -154,7 +198,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 <table style="width:100%;white-space:nowrap;">
   <tr>
     <td><strong>Endpoint</strong></td>
-    <td><code>{{ page.api_endpoint }}/remove{{ page.mandatory_query_parameters }}</code></td>
+    <td><code>{{ page.api_endpoint }}/folders/remove{{ page.mandatory_query_parameters }}</code></td>
   </tr>
   <tr>
     <td><strong>Method</strong></td>
@@ -190,7 +234,7 @@ The given path must exist. You can "delete multiple levels" at the same time. Th
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/remove{{ page.mandatory_query_parameters_full }}' -d '{"path": "pool/newRenamed" }'
+curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/folders/remove{{ page.mandatory_query_parameters_full }}' -d '{"path": "pool/newRenamed" }'
 ```
 </div>
   </div>

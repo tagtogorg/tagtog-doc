@@ -14,6 +14,7 @@ api_document_url: https://www.tagtog.net/-api/settings/v1
 api_username: yourUsername
 api_pwd: yourPassword
 api_project: yourProjectName
+api_folder_new: myNewFolder
 ---
 
 <div class="two-third-col">
@@ -21,7 +22,11 @@ api_project: yourProjectName
     <tr>
       <td><strong>Version</strong></td>
       <td><code>{{ page.version }}</code></td>
-    </tr>    
+    </tr>
+    <tr>
+      <td><strong>Endpoint</strong></td>
+      <td><code>{{ page.api_endpoint }}</code></td>
+    </tr>
   </table>
 </div>
 
@@ -40,7 +45,7 @@ api_project: yourProjectName
   <tr>
     <td><strong>Method</strong></td>
     <td><code>GET</code></td>
-  </tr>  
+  </tr>
   <tr>
     <td><strong>Output</strong></td>
     <td>JSON</td>
@@ -51,14 +56,17 @@ api_project: yourProjectName
 
 None
 
+</div>
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
+
 **Coding examples**
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+    <li class="current"><a href="#tab-1-export-settings">cURL</a></li>
   </ul>
   <div class="tab">
-<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
+<div id="tab-1-export-settings" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.mandatory_query_parameters_full }}'
 ```
@@ -69,7 +77,43 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
 </div> <!-- Closes main section: two-third-cold div -->
 
 <div class="one-third-col">
-  {% include image.html name="API_settings/GET_export_settings_example.png" caption="example output, export JSON project settings" %}
+  <p>Response example <code>json</code>, export settings</p>
+  <div markdown="1">
+```json
+{
+  "version": "1.3",
+  "domain": "other",
+  "language": "English",
+  "usePreSelections": true,
+  "usePreDeselections": false,
+  "usePreCaseSentive": false,
+  "useMachineLearning": true,
+  "nativePDF": false,
+  "autoSave": false,
+  "confirmLayer": false,
+  "taskDistributionNumber": 0,
+  "taskDistributionOwner": true,
+  "folders": {
+    "pool": {
+      "name": "pool",
+      "index": 0,
+      "children": {}
+    }
+  },
+  "metas": {},
+  "entities": {
+    "e_1": { "id": "e_1", "name": "risk", "oldnames": [], "description": "Risk assessment", "color": "#28c72d", "fields": {}, "normalizations": {} } },
+  "fields": {},
+  "relations": {},
+  "name": "myProject",
+  "role": "admin",
+  "username": "user1",
+  "membersWithoutMe": [],
+  "ownername": "user1",
+  "webhooks": {}
+}
+```
+  </div>
 </div>
 
 
@@ -86,7 +130,7 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
   <tr>
     <td><strong>Method</strong></td>
     <td><code>POST</code></td>
-  </tr>  
+  </tr>
   <tr>
     <td><strong>Output</strong></td>
     <td>JSON; fields: 1) <code>mapNewIds</code> and 2) <code>newSettings</code> (the new imported project's JSON settings)</td>
@@ -101,7 +145,7 @@ JSON project settings, in the same format as returned by [exporting the settings
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>
   </ul>
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
@@ -132,7 +176,7 @@ GET a JSON map of annotation tasks ids to names (e.g. `{"e_1": "Person"}`).
   <tr>
     <td><strong>Method</strong></td>
     <td><code>GET</code></td>
-  </tr>  
+  </tr>
   <tr>
     <td><strong>Output</strong></td>
     <td>JSON</td>
@@ -147,7 +191,7 @@ None
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>
   </ul>
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
@@ -177,7 +221,7 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend
   <tr>
     <td><strong>Method</strong></td>
     <td><code>POST</code></td>
-  </tr>  
+  </tr>
   <tr>
     <td><strong>Output</strong></td>
     <td>JSON; fields: 1) <code>mapNewIds</code> (always empty), and <code>newSettings</code> (the new project's JSON settings)</td>
@@ -201,7 +245,7 @@ Two variants:
     <td>-</td>
     <td><code>pool/new</code></td>
     <td>Full path of the new folder</td>
-  </tr>  
+  </tr>
 </table>
 
 
@@ -218,7 +262,7 @@ Two variants:
     <td>-</td>
     <td><code>pool</code></td>
     <td>Full path up to the parent (included) of the new folder</td>
-  </tr>  
+  </tr>
   <tr>
     <td><code>newFolderName</code></td>
     <td>-</td>
@@ -229,18 +273,36 @@ Two variants:
 
 In both cases, **the parent path must have been already defined**. In other words, in Unix jargon, `mkdir` is permitted, but not `mkdir -p`.
 
+</div>
+
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
 **Coding examples**
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+    <li class="current"><a href="#tab-1-add-folder">cURL</a></li>
+    <li><a href="#tab-2-add-folder">Python</a></li>
   </ul>
   <div class="tab">
-<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
+<div id="tab-1-add-folder" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/folders/add{{ page.mandatory_query_parameters_full }}' -d '{"path": "pool/new"}'
 ```
+</div>
+<div id="tab-2-add-folder" class="tab-content" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}/folders/add"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}'}
+payload = {'parentPath': 'pool', 'newFolderName': '{{ page.api_folder_new}}'}
+response = requests.post(tagtogAPIUrl, auth=auth, params=params, json=payload)
+print(response.text)
+```
+<p style="float:right">{% include github-link.html target="snippets/api_python_add_folder.py" %}</p>
 </div>
   </div>
 </div>
@@ -249,7 +311,47 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 
 
 <div class="one-third-col">
-  {% include image.html name="API_settings/POST_add_folder_example.png" caption="example output, add folder to project"%}
+  <p>Response example <code>json</code>, add folder to project</p>
+  <div markdown="1">
+```json
+{
+  "newSettings": {
+    "version": "1.3",
+    "domain": "other",
+    "language": "English",
+    "usePreSelections": true,
+    "usePreDeselections": false,
+    "usePreCaseSentive": false,
+    "useMachineLearning": true,
+    "nativePDF": false,
+    "autoSave": false,
+    "confirmLayer": false,
+    "taskDistributionNumber": 0,
+    "taskDistributionOwner": true,
+    "folders": {
+      "pool": {
+        "name": "pool",
+        "index": 0,
+        "children": {
+          "mynewfolder": {
+            "name": "mynewfolder",
+            "index": 12,
+            "children": {}
+          }
+        }
+      }
+    },
+    "metas": {},
+    "entities": { "e_1": { "id": "e_1", "name": "risk", "oldnames": [], "description": "Risk assessment", "color": "#28c72d", "fields": {}, "normalizations": {} }},
+    "fields": {},
+    "relations": {},
+    "name": "myProject",
+    "webhooks": {}
+  },
+  "mapNewIds": {}
+}
+```
+  </div>
 </div>
 
 
@@ -266,7 +368,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
   <tr>
     <td><strong>Method</strong></td>
     <td><code>POST</code></td>
-  </tr>  
+  </tr>
   <tr>
     <td><strong>Output</strong></td>
     <td>JSON; fields: 1) <code>mapNewIds</code> (always empty), and <code>newSettings</code> (the new project's JSON settings)</td>
@@ -286,7 +388,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
     <td>-</td>
     <td><code>pool/new</code></td>
     <td>Full path of the existing folder to be renamed</td>
-  </tr>  
+  </tr>
   <tr>
     <td><code>newFolderName</code></td>
     <td>-</td>
@@ -302,7 +404,7 @@ The given path must exist. The last element of the path (in the example: "new") 
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>
   </ul>
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
@@ -332,7 +434,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
   <tr>
     <td><strong>Method</strong></td>
     <td><code>POST</code></td>
-  </tr>  
+  </tr>
   <tr>
     <td><strong>Output</strong></td>
     <td>JSON; fields: 1) <code>mapNewIds</code> (always empty), and <code>newSettings</code> (the new project's JSON settings)</td>
@@ -352,7 +454,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
     <td>-</td>
     <td><code>pool/newRenamed</code></td>
     <td>Full path of the folder to be deleted</td>
-  </tr>  
+  </tr>
 </table>
 
 The given path must exist. You can "delete multiple levels" at the same time. That is, if the folder path (in the example) `pool/newRenamed/otherLevel` existed, while deleting `newRenamed`, the folder `otherLevel` would also be deleted.
@@ -364,7 +466,7 @@ The given path must exist. You can "delete multiple levels" at the same time. Th
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>
   </ul>
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">

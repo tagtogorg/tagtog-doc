@@ -32,6 +32,7 @@ sidebar_toc:
   - name: API
     pages:
       - api_documents_v1
+      - api_settings_v1
       - api_projects_v1
 
   - name: Concept Search
@@ -67,7 +68,7 @@ plugins:
   - jemoji
 
 # Custom vars
-version: 3.2019-W16.0
+version: 3.2019-W17.0
 sidebar_home_link: true
 search_page: false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog

@@ -914,8 +914,9 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       </div>
     </div>
   </div>
+
 <div class="one-third-col">
-  <p><code>Search response</code></p>
+  <p><code>search</code> response</p>
 <div markdown="1">
 ```json
 {
@@ -937,7 +938,24 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
 }
 ```
 </div>
+
+<hr/>
+
+<p><code>csv</code> response</p>
+<div markdown="1">
+```csv
+docid,anncomplete
+abPz9JKO2jdP9XKbn4Beuh3rk3Y4-text,false
+aPvgZql3RogPu90jVkoV7rZODU8u-text,false
+ap_FCtCdahae2jMD_opHUD9f7lM8-text,true
+aMHKzF_lIoNrdh9pAx298njgIezy-text,false
+```
 </div>
+</div>
+
+
+
+
 
 <div class="two-third-col">
   <h3>Search response format</h3>
@@ -1152,7 +1170,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </table>
 </div>
 <div class="one-third-col">
-  {% include message.html message='<code>search&equals;*</code> finds all and therefore the <code>DELETE</code> call deletes all documents.' %}
+  {% include message.html message='<code>search=&ast;</code> finds all and therefore the <code>DELETE</code> call deletes all documents.' %}
 </div>
 
 <div class="two-third-col">
@@ -1390,6 +1408,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 <div class="one-third-col">
 
 </div>
+
 <div class="two-third-col">
   <h2>API Clients</h2>
   <h3>Python tagtog script</h3>
@@ -1475,5 +1494,5 @@ python3 tagtog.py download '*' -u {{ page.api_username }} -w {{ page.api_pwd }} 
   </div>
 </div>
 <div class="one-third-col">
- {% include message.html message='The search query <code>*</code> finds all documents in a project.' %}
+ {% include message.html message='The search query <code>&ast;</code> finds all documents in a project.' %}
 </div>

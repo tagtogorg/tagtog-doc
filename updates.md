@@ -19,6 +19,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 <ul class="updates">
   <li class="new"><span markdown="1">New API to [import the project JSON settings](API_settings_v1.html#import-settings).</span></li>
   <li class="doc"><span markdown="1">Improved documentation for the [API of settings](API_settings_v1.html).</span></li>
+  <li class="fix"><span markdown="1">Fixed some possibly weird-looking characters as a result of [ligatures](https://en.wikipedia.org/wiki/Typographic_ligature) (e.g. "ﬁ"(size=1) vs. "fi"(size=2)) in PDFs. Important: **the change is not backwards compatible**. That is, you have to reupload the document/s to get the right new characters.</span></li>
+  <li class="fix"><span markdown="1">Improved paginated search. Before it was giving too many results at once.</span></li>
   <li class="new"><span markdown="1">IAA (inter-annotator agreement) now splits annotation tasks into categories (e.g. document labels, entity types, entity labels, etc.)</span></li>
   <li class="new"><span markdown="1">Overall improvement in the style of the IAA section.</span></li>
 </ul>

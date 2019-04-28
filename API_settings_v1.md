@@ -230,7 +230,9 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend
 
 **Input Parameters**
 
-Two variants:
+
+
+Two variants in JSON format:
 
 1. **(Full) path**:
 <table style="width:100%;">

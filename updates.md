@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🎧
+## 3.2019-W17.0 🎧
+_2019-04-28_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New API to [import the project JSON settings](API_settings_v1.html#import-settings).</span></li>

@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2019-W17.1 🎩
-_2019-04-28_
+## ??? 🎩
+_???_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Fixed error on removing documents by search.</span></li>

@@ -14,6 +14,18 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W17.1 🎩
+_2019-04-29_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed error on removing documents by search.</span></li>
+  <li class="fix"><span markdown="1">Fixed error of skipping documents when searching documents via API.</span></li>
+  <li class="new"><span markdown="1">Slightly faster removal of many documents at once.</span></li>
+  <li class="new"><span markdown="1">Improved internal logging on client errors (e.g. BadRequests's). This is useful for On-Premises solutions.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W17.0 🎧
 _2019-04-28_
 

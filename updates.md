@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 👯‍♀️
+_???_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed non-breaking error of repeatedly adding _nav=false_ to the URL query string when removing documents manually.</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W17.1 🎩
 _2019-04-29_
 

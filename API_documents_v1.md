@@ -119,6 +119,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       </td>
     </tr>
   </table>
+
 </div>
 <div class="one-third-col">
   {% include message.html message='Imported documents are visible in the <a href="/documents.html">document pool</a>'%}

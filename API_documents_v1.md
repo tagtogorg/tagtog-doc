@@ -86,6 +86,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
+
   <p><strong>Optional Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -106,6 +107,16 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>pool</code></td>
       <td><code>pool</code></td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
+    </tr>
+    <tr>
+      <td><code>distributeToMembers</code></td>
+      <td><code>-</code></td>
+      <td><code>John,Laura</code></td>
+      <td>
+        <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
+      </td>
     </tr>
   </table>
 </div>

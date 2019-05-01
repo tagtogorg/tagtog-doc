@@ -105,6 +105,14 @@ toc: true
 <div class="one-third-col">
 </div>
 
+<div class="two-third-col">
+  <h3>filter:TODO</h3>
+  <p>The special search <code>filter:TODO</code> lists the documents that the logged user still has to annotate or review, if any. See <a href="projects.html#task-distribution">Task Distribution</a> and <a href="collaboration.html#annotation-flows-task-distribution">Annotation Flows</a>.</p>
+  <p>Note that you cannot search the TODO list for other users; the filter is only available for the currently logged in user.</p>
+</div>
+<div class="one-third-col">
+</div>
+
 
 <div class="two-third-col">
   <h3>Fuzzy search</h3>

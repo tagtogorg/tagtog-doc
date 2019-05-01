@@ -356,7 +356,7 @@ id: projects
    <h5>Task Distribution</h5>
    <p>You can distribute documents to annotate automatically among your members. <a href="collaboration.html#annotation-flows-task-distribution">More info on annotation workflows here</a>.</p>
    <p>By default documents are not distributed, and therefore members annotate directly on the <a href="collaboration.html#annotation-versions"><code>master</code> version</a>. Once the task distribution is activated (number of annotators per document is 1 or more), members annotate on their own independent version.</p>
-   <p>When task distribution is activated, project members see by default (in Documents) the special search view <code>filter:TODO</code>. This view lists the documents that the annotator still has to annotate or review, if any.</p>
+   <p>When task distribution is activated, project members see by default (in Documents) the special search view <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a>. This view lists the documents that the annotator still has to annotate or review, if any.</p>
    </div>
    <div class="one-third-col">
      {% include image.html name="settings-task-distribution.png" %}

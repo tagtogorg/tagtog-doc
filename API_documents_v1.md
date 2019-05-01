@@ -860,7 +860,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td><code>search</code></td>
       <td><p>You can choose between <code>search</code> or <code>csv</code></p>
           <p><code>search</code> (<a href="#search-response-format">search response</a>): use it to perform search queries.</p>
-          <p><code>csv</code>: it ignores the query parameter and retrieve the id of each document and the status of each document (true if annotations are completed, false if not)</p>
+          <p><code>csv</code>: it ignores the query parameter and retrieves for each document its id and status (true if annotations are completed/confirmed, false if not)</p>
       </td>
     </tr>
   </table>

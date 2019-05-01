@@ -22,7 +22,7 @@ toc: true
   <p>Retrieve documents containing a specific string. Example: <code>insulin</code></p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='Use <code>*</code> as search query to retrieve <strong>all</strong> documents in a project.' %}
+  {% include message.html message='Use <code>&ast;</code> as search query to retrieve <strong>all</strong> documents in a project.' %}
 </div>
 
 <div class="two-third-col">
@@ -42,8 +42,8 @@ toc: true
   <br/>
   <p>Only by using the entity type id, you can also perform more advanced queries as:</p>
   <ul>
-    <li><code>count</code> e.g. <code>count_e_1:[2 TO *]</code>): retrieve documents with at least 2 annotations of the type <code>e_1</code>.</li>
-    <li><code>norms_count_uniq</code> e.g. <code>norms_count_uniq_e_1:[2 TO *]</code> retrieve documents with at least 2 annotations of the type <code>e_1</code> that are normalized to different unique names (e.g Rezulin and Romozin - same diabetic drug sold under different commercial names - would be normalized to troglitazone, so it would count 1 unique entity normalized, not 2).</li>
+    <li><code>count</code> e.g. <code>count_e_1:[2 TO &ast;]</code>): retrieve documents with at least 2 annotations of the type <code>e_1</code>.</li>
+    <li><code>norms_count_uniq</code> e.g. <code>norms_count_uniq_e_1:[2 TO &ast;]</code> retrieve documents with at least 2 annotations of the type <code>e_1</code> that are normalized to different unique names (e.g Rezulin and Romozin - same diabetic drug sold under different commercial names - would be normalized to troglitazone, so it would count 1 unique entity normalized, not 2).</li>
   </ul>
 </div>
 <div class="one-third-col">
@@ -99,8 +99,8 @@ toc: true
 <div class="two-third-col">
   <h3>Wildcard search</h3>
   <p>To perform a single character wildcard search use <code>?</code>. Example: <code>entity:gene:P?2649</code>.</p>
-  <p>To perform a multiple character wildcard search use <code>*</code>. Example: <code>"Kepler-2*"</code>, <code>"Kepler-4*c"</code>.</p>
-  <p>Tip: find all documents by just searching for <code>*</code>.</p>
+  <p>To perform a multiple character wildcard search use <code>&ast;</code>. Example: <code>"Kepler-2*"</code>, <code>"Kepler-4*c"</code>.</p>
+  <p>Tip: find all documents by just searching for <code>&ast;</code>.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -147,7 +147,7 @@ toc: true
 
 </div>
 <div class="one-third-col">
-  {% include message.html message="The current list of <br/><strong>special characters</strong> are <code>+</code> <code>-</code> <code>!</code> <code>&quot;</code> <code>&amp;&amp;</code> <code>&verbar;&verbar;</code> <code>(</code> <code>)</code> <code>{</code> <code>}</code> <code>[</code> <code>]</code> <code>&Hat;</code> <code>~</code> <code>*</code> <code>?</code> <code>:</code> <code>\</code>" %}
+  {% include message.html message="The current list of <br/><strong>special characters</strong> are <code>+</code> <code>-</code> <code>!</code> <code>&quot;</code> <code>&amp;&amp;</code> <code>&verbar;&verbar;</code> <code>(</code> <code>)</code> <code>{</code> <code>}</code> <code>[</code> <code>]</code> <code>&Hat;</code> <code>~</code> <code>&ast;</code> <code>?</code> <code>:</code> <code>\</code>" %}
 </div>
 
 <div class="two-third-col">

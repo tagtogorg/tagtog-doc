@@ -118,7 +118,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <h2>Annotation flows</h2>
+  <h2>Annotation flows &amp; Task Distribution</h2>
   <p>There are different ways you can organize your annotation tasks. These are the most common:</p>
 </div>
 

@@ -22,7 +22,7 @@ toc: true
 
       <tr>
         <td>File</td>
-        <td><a href="#files">See below</a></td>
+        <td><a href="#files">See below for the supported formats</a></td>
       </tr>
 
       <tr>
@@ -85,6 +85,11 @@ toc: true
         <td>source code files</td>
         <td>Supported programming language extensions include: <code>.java, .scala, .js, .py, .python, .jsx, .c, .h, .mm, .M, .cpp, .sql, .cs, .css, .r, .vb, .php, .swift, .go, .m, .sass, .less, .rb, .sh, .ts, .tsx, .shell, .sh</code></td>
       </tr>
+
+      <tr>
+        <td>Annotation input formats</td>
+        <td><a href="#annotation-input-formats">See below</a></td>
+      </tr>      
     </table>
   </div>
   <div class="one-third-col">

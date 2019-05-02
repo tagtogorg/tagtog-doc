@@ -93,9 +93,29 @@ id: collaboration
 </div>
 <div class="one-third-col">
 </div>
+<div class="two-third-col">
+  <h2>Quality Management</h2>
+  <p>Here you will learn how to <strong>track the quality</strong> of your project in real time.</p>
+  <h3>Inter-Annotator Agreement</h3>
+  <p>The <a title="Wikipedia - Inter-rater_reliability" href="https://en.wikipedia.org/wiki/Inter-rater_reliability">Inter-Annotator Agreement (IAA)</a> gauges the quality of your annotation project, exactly the degree of agreement or consensus among your annotators. If all your annotators make the same annotations independently, it means your guidelines are clear and your annotations are most likely correct. <strong>The higher the IAA, the higher the quality</strong>.</p>
+  <p>In tagtog, each annotator can annotate the same piece of text separately. <strong>The percentage agreement is only measured when 2 or more annotators annotate the same text</strong>. These metrics are calculated <strong>automatically</strong> in tagtog for you. You can <a title="tagtog - Project's members" href="projects.html#members">add members to your project</a> at <i>Settings > Members</i></p>
+  <p>To go to the IAA results, open your project and click on the <strong>IAA</strong> section. Results are split into annotation types (entity types, entity labels, document labels, normalizations and relations). Each annotation type is divided into annotation tasks (e.g. Entity types: Entity type 1, Entity type 2; Document labels: document label 1, document label 2, etc.). <strong>For each annotation task, results are displayed as a matrix</strong>. You can observe that only half of the matrix contains results to avoid repetition. <strong>Each cell represents the agreement pair for two annotators</strong>, being 100% the maximum level of agreement and 0% the minimum.</p>
+  <p>The agreement percentage near the title of each annotation task represents the average agreement for this annotation task.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message="If your project has activated <a href='#annotation-flows' title='tagtog - Automatic Task Distribution'>Automatic Task Distribution</a>, tagtog will distribute some annotators with the same documents and calculate right away the IAA. Otherwise, if you want tagtog to produce IAA metrics, you can organize your annotators to annotate the same subsample of documents." %}
+</div>
 
-
-
+<div class="two-third-col">
+  <h4>What can I do if IAA is low?</h4>
+  <p>There may be several reasons why your annotators do not agree on the annotation tasks. It is important to mitigate this risk as soon as possible by identifying the causes.  If you find such an scenario we recommend you to review the following:</p>
+  <p class="list-item"><span class="list-item-2"></span>If you have a large group of annotators not agreeing on a specific annotation task, it means your guidelines for this task are not clear enough. Provide representatives examples for different scenarios and remove ambiguity.</p>
+  <p class="list-item"><span class="list-item-2"></span>Annotation tasks are too broadly defined or ambiguous. The less specific your annotation tasks, the more room for different interpretation, and eventually disagreement.</p>
+  <p class="list-item"><span class="list-item-1"></span>Measurement involving ambiguous concepts are generally improved with multiple trained annotators.</p>
+  <p class="list-item"><span class="list-item-3"></span>Train your annotators.</p>
+</div>
+<div class="one-third-col">
+</div>
 
 <div class="two-third-col">
   <h2>Annotation flows</h2>

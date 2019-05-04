@@ -331,7 +331,6 @@ id: projects
     </div>
   </div>
 
-
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Members</h4>
@@ -340,7 +339,6 @@ id: projects
     <div class="one-third-col">
       {% include image.html name="settings-members.png" %}
     </div>
-
     <div class="two-third-col">
     <h5>Invite other users to your project</h5>
     <p>To <strong>add a new member</strong> simply write the tagtog username in the text box, choose the role, and click on <code>Add Member</code>. Once added, they will receive an email notification.</p>

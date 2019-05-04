@@ -21,6 +21,7 @@ _???_
   <li class="fix"><span markdown="1">Fixed non-breaking error of repeatedly adding _nav=false_ to the URL query string when removing documents manually.</span></li>
   <li class="fix"><span markdown="1">Fixed error of having to upload a PDF twice after activating _Native PDF_ to make it actually work.</span></li>
   <li class="fix"><span markdown="1">Fixed errors on changing the number of members and task distribution settings that sometimes caused inconsistent states.</span></li>
+  <li class="doc"><span markdown="1">IAA documentation added: [IAA docs](collaboration.html#inter-annotator-agreement)</span></li>
 </ul>
 
 ---

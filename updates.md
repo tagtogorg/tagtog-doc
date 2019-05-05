@@ -18,6 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _2019-05-05_
 
 <ul class="updates">
+  <li class="fix"><span markdown="1">New parameter [`distributeToMembers` (API documents) to fine-tune the distribution of tasks](http://docs.tagtog.net/API_documents_v1.html#import-and-annotate-text).</span></li>  
   <li class="fix"><span markdown="1">Fixed non-breaking error of repeatedly adding _nav=false_ to the URL query string when removing documents manually.</span></li>
   <li class="fix"><span markdown="1">Fixed error of having to upload a PDF twice after activating _Native PDF_ to make it actually work.</span></li>
   <li class="fix"><span markdown="1">Fixed errors on changing the number of members and task distribution settings that sometimes caused inconsistent states.</span></li>

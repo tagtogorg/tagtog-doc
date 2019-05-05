@@ -330,24 +330,51 @@ id: projects
       <div class="message">This feature is only available in some plans. Check the <a title="tagtog - plans" href="https://tagtog.net/-plans">available features for each plan</a>.</div>
     </div>
   </div>
+
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Members</h4>
-      <p>In this panel you can invite other users to your project, so they can collaborate in the annotation tasks. For more info about roles and collaborative annotation, go <a href="/collaboration.html">here</a>.</p>
+      <p>In this panel you can invite and organize other users in your project, so they can collaborate in the annotation tasks. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="settings-members.PNG" %}
+      {% include image.html name="settings-members.png" %}
     </div>
     <div class="two-third-col">
     <h5>Invite other users to your project</h5>
-    <p>To <strong>add a new member</strong> simply write the tagtog username in the text box and click on <code>Add Member</code>. Once added, they will receive an email notification.</p>
+    <p>To <strong>add a new member</strong> simply write the tagtog username in the text box, choose the role, and click on <code>Add Member</code>. Once added, they will receive an email notification.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
         You can invite only users who have already an account at tagtog (either on your on-premises instance or on the cloud version)
       </div>
     </div>
+    <div class="two-third-col">
+      <h5>Task distribution</h5>
+      <p>With this setting you can <strong>automatically distribute the project's documents among your annotators</strong>. For example, if you choose 1 annotator, every uploaded document will be randomly assigned to one project's member to annotate. Otherwise, for example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 project's members; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
+      <p>This overlapping is recommended to increase the overall quality of your annotation project. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a></p>
+      <p>In this section you can decide whether the project's owner (the person who created the project) should be assigned documents to annotate or not.</p>
+    </div>
+    <div class="one-third-col">
+      <div class="message">
+        Only new documents are distributed automatically. If you want to distribute existing documents, you should reimport them.
+      </div>
+      <div class="message">
+        The number of annotators per document is limited to the number of annotators in a project.
+      </div>
+    </div>
    </div>
+
+   <div class="two-third-col">
+   <h5>Task Distribution</h5>
+   <p>You can distribute documents to annotate automatically among your members. <a href="collaboration.html#annotation-flows-task-distribution">More info on annotation workflows here</a>.</p>
+   <p>By default documents are not distributed, and therefore members annotate directly on the <a href="collaboration.html#annotation-versions"><code>master</code> version</a>. Once the task distribution is activated (number of annotators per document is 1 or more), members annotate on their own independent version.</p>
+   <p>When task distribution is activated, project members see by default (in Documents) the special search view <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a>. This view lists the documents that the annotator still has to annotate or review, if any.</p>
+   </div>
+   <div class="one-third-col">
+     {% include image.html name="settings-task-distribution.png" %}
+   </div>
+
+
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Admin</h4>

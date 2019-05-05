@@ -86,6 +86,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
+
   <p><strong>Optional Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -107,7 +108,18 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>pool</code></td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
+    <tr>
+      <td><code>distributeToMembers</code></td>
+      <td><code>-</code></td>
+      <td><code>John,Laura</code></td>
+      <td>
+        <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
+      </td>
+    </tr>
   </table>
+
 </div>
 <div class="one-third-col">
   {% include message.html message='Imported documents are visible in the <a href="/documents.html">document pool</a>'%}
@@ -237,6 +249,7 @@ PUBMED IDS
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
+
   <p><strong>Optional Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -258,7 +271,18 @@ PUBMED IDS
       <td><code>pool</code></td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
+    <tr>
+      <td><code>distributeToMembers</code></td>
+      <td><code>-</code></td>
+      <td><code>John,Laura</code></td>
+      <td>
+        <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
+      </td>
+    </tr>
   </table>
+
 </div>
 <div class="one-third-col">
   <div class="message">
@@ -388,6 +412,7 @@ URLS
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
+
   <p><strong>Optional Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -409,7 +434,18 @@ URLS
       <td><code>pool</code></td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
+    <tr>
+      <td><code>distributeToMembers</code></td>
+      <td><code>-</code></td>
+      <td><code>John,Laura</code></td>
+      <td>
+        <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
+      </td>
+    </tr>
   </table>
+
 </div>
 <div class="one-third-col">
   {% include message.html message="<strong>Problems with URL encoding?</strong> encode URLs online <a href='https://meyerweb.com/eric/tools/dencoder/' title='MeyerWeb - URL Decoder/Encoder'>here</a>" %}
@@ -509,6 +545,7 @@ FILES
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
+
   <p><strong>Optional Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -530,7 +567,18 @@ FILES
       <td><code>pool</code></td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
+    <tr>
+      <td><code>distributeToMembers</code></td>
+      <td><code>-</code></td>
+      <td><code>John,Laura</code></td>
+      <td>
+        <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
+      </td>
+    </tr>
   </table>
+
 </div>
 <div class="one-third-col">
 
@@ -622,7 +670,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 
 <div class="two-third-col">
-  <h2>Import annotated documents <code>POST</code></h2>
+  <h3>Import annotated documents <code>POST</code></h3>
   <p>If you have annotated documents you want to import, you need to upload two files:</p>
   <p class="list-item"><span class="list-item-1"></span><strong>The text or document</strong>. This can be a regular file (e.g. txt, xml, pdf, <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a>, etc.), plain text, etc. Check the supported <a title="tagtog - input formats" href="ioformats.html#input-formats">input formats</a></p>
   <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
@@ -669,6 +717,40 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a></td>
     </tr>
   </table>
+
+  <p><strong>Optional Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>member</code></td>
+      <td><code>master</code> aka project official annotations</td>
+      <td>john</td>
+      <td><p>Project member you want to use</p>
+          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
+    </tr>
+    <tr>
+      <td><code>folder</code></td>
+      <td><code>pool</code></td>
+      <td><code>pool</code></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
+    </tr>
+    <tr>
+      <td><code>distributeToMembers</code></td>
+      <td><code>-</code></td>
+      <td><code>John,Laura</code></td>
+      <td>
+        <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
+      </td>
+    </tr>
+  </table>
+
 </div>
 
 <div class="one-third-col">
@@ -762,6 +844,40 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a> </td>
     </tr>
   </table>
+
+  <p><strong>Optional Parameters</strong></p>
+  <table style="width:100%;">
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>member</code></td>
+      <td><code>master</code> aka project official annotations</td>
+      <td>john</td>
+      <td><p>Project member you want to use</p>
+          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
+    </tr>
+    <tr>
+      <td><code>folder</code></td>
+      <td><code>pool</code></td>
+      <td><code>pool</code></td>
+      <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
+    </tr>
+    <tr>
+      <td><code>distributeToMembers</code></td>
+      <td><code>-</code></td>
+      <td><code>John,Laura</code></td>
+      <td>
+        <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
+      </td>
+    </tr>
+  </table>
+
 </div>
 
 <div class="one-third-col">
@@ -860,7 +976,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td><code>search</code></td>
       <td><p>You can choose between <code>search</code> or <code>csv</code></p>
           <p><code>search</code> (<a href="#search-response-format">search response</a>): use it to perform search queries.</p>
-          <p><code>csv</code>: it ignores the query parameter and retrieve the id of each document and the status of each document (true if annotations are completed, false if not)</p>
+          <p><code>csv</code>: it ignores the query parameter and retrieves for each document its id and status (true if annotations are completed/confirmed, false if not)</p>
       </td>
     </tr>
   </table>

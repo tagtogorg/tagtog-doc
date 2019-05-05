@@ -14,6 +14,18 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W18.0 👷‍♂️
+_2019-05-05_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed non-breaking error of repeatedly adding _nav=false_ to the URL query string when removing documents manually.</span></li>
+  <li class="fix"><span markdown="1">Fixed error of having to upload a PDF twice after activating _Native PDF_ to make it actually work.</span></li>
+  <li class="fix"><span markdown="1">Fixed errors on changing the number of members and task distribution settings that sometimes caused inconsistent states.</span></li>
+  <li class="doc"><span markdown="1">IAA documentation added: [IAA docs](collaboration.html#inter-annotator-agreement)</span></li>
+</ul>
+
+---
+
 ## 3.2019-W17.1 🎩
 _2019-04-29_
 
@@ -86,7 +98,7 @@ _2019-03-31_
 _2019-03-24_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows) 👷‍♀️🕵🏿‍♂️‍👩🏻‍⚖️‍👨🏼‍🔬👩🏽‍🏫</span></li>
+  <li class="new"><span markdown="1">Automatic [**Distribution of Tasks!**](collaboration.html#annotation-flows-task-distribution) 👷‍♀️🕵🏿‍♂️‍👩🏻‍⚖️‍👨🏼‍🔬👩🏽‍🏫</span></li>
   <li class="new"><span markdown="1">The [API search results](API_documents_v1.html#search-documents-in-a-project-get) now return which members completed their annotations; new field: [_members_anncomplete_](API_documents_v1.html#search-response-format)</span></li>
   <li class="new"><span markdown="1">Expanded search API to [**search by folder**](search-queries.html#search-by-folder) 🔎🗂.</span></li>
   <li class="new"><span markdown="1">Option to **add multiple admins to your project**! 😎</span></li>

@@ -335,7 +335,7 @@ toc: true
     </div>
     <div class="two-third-col">
       <h4>Confirm a document</h4>
-      <p>Usually users confirm the document once the <strong>annotations has been reviewed</strong>. This is used to indicate that this document can be used as training data for AI, or simply that all annotations has been reviewed by a human. There are different <a href="/collaboration.html#annotation-flows">annotation flows</a> you can use for your project.</p>
+      <p>Usually users confirm the document once the <strong>annotations has been reviewed</strong>. This is used to indicate that this document can be used as training data for AI, or simply that all annotations has been reviewed by a human. There are different <a href="/collaboration.html#annotation-flows-task-distribution">annotation flows</a> you can use for your project.</p>
       <p>To confirm a document click on the button with the icon {% include inline-image.html name="editor-confirm-button.PNG" width="80" %}</p>
       <p>Once you have confirmed a document, many actions are disabled. You can undo the Confirm action by clicking again the button. It is a toggle button.</p>
     </div>

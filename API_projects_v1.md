@@ -32,7 +32,7 @@ Return the list of projects that the (authenticated) user is a member of. This i
 <table style="width:100%;white-space:nowrap;">
   <tr>
     <td><strong>Endpoint</strong></td>
-    <td><code>{{ page.api_endpoint }}/my-projects</code></td>
+    <td><code>{{ page.api_endpoint }}/my_projects</code></td>
   </tr>
   <tr>
     <td><strong>Method</strong></td>
@@ -58,7 +58,7 @@ None
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u yourUsername:yourPassword {{ page.api_document_url }}/my-projects
+curl -u yourUsername:yourPassword {{ page.api_document_url }}/my_projects
 ```
 </div>
   </div>

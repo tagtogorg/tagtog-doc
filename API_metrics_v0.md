@@ -37,6 +37,10 @@ api_folder_new: myNewFolder
 
 ## Project Stats
 
+### Annotation Stats
+
+Stats for the (master) annotations, such as the count for a document label's specific value, number of _anncomplete_ (confirmed) documents, top normalizations for an entity type, etc.
+
 <table style="width:100%;white-space:nowrap;">
   <tr>
     <td><strong>Endpoint</strong></td>
@@ -83,7 +87,7 @@ Defined as URL query parameters.
   <div class="tab">
 <div id="tab-1-export-settings" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u 'yourUsername:yourPassword' 'localhost:9000/-api/metrics/v0/search_stats?project=yourProjectName&owner=yourUsername&search=*'
+curl -u 'yourUsername:yourPassword' '{{ page.api_document_url }}/search_stats?project=yourProjectName&owner=yourUsername&search=*'
 ```
 </div>
   </div>
@@ -188,6 +192,99 @@ curl -u 'yourUsername:yourPassword' 'localhost:9000/-api/metrics/v0/search_stats
     ]
   },
   "numDocuments": 4104
+}
+```
+  </div>
+</div>
+
+
+
+
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
+
+## IAA
+
+### Get individual IAA for a pair of members
+
+<table style="width:100%;white-space:nowrap;">
+  <tr>
+    <td><strong>Endpoint</strong></td>
+    <td><code>{{ page.api_endpoint }}/iaa{{ page.mandatory_query_parameters }}</code></td>
+  </tr>
+  <tr>
+    <td><strong>Method</strong></td>
+    <td><code>GET</code></td>
+  </tr>
+  <tr>
+    <td><strong>Output</strong></td>
+    <td>JSON</td>
+  </tr>
+</table>
+
+**Input Parameters**
+
+Defined as URL query parameters.
+
+<table style="width:100%;">
+  <tr>
+    <th>Name</th>
+    <th>Default</th>
+    <th>Example</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>member1</code></td>
+    <td>-</td>
+    <td><em>yourUsername</em></td>
+    <td>Username of the first member of the members pair to get the IAA for.</td>
+  </tr>
+  <tr>
+    <td><code>member2</code></td>
+    <td>-</td>
+    <td><em>Laura</em></td>
+    <td>Username of the second member of the members pair to get the IAA for.</td>
+  </tr>
+  <tr>
+    <td><code>anntaskId</code></td>
+    <td>-</td>
+    <td><em>e_21</em></td>
+    <td>The id (<em>anntaskId</em>) of one of <a href="API_settings_v1.html#annotations-legend">your annotation types in the project</a></td>
+  </tr>
+  <tr>
+    <td><code>metric</code></td>
+    <td>-</td>
+    <td><code>exact_v1</code></td>
+    <td>The name of the metric you want, typically <code>exact_v1</code> (this is the same metric used in the <a href="collaboration.html#iaa-inter-annotator-agreement">default IAA visualizations</a>). Possible values: <code>{exact_v1, overlapping_v1, documentlevel_v1}</code></td>
+  </tr>
+</table>
+
+</div>
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
+
+**Coding examples**
+
+<div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-export-settings">cURL</a></li>
+  </ul>
+  <div class="tab">
+<div id="tab-1-export-settings" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u 'yourUsername:yourPassword' '{{ page.api_document_url }}/iaa?project=yourProjectName&owner=yourUsername&member1=yourUsername&member2=Laura&anntaskId=e_21&metric=exact_v1'
+```
+</div>
+  </div>
+</div>
+
+</div> <!-- Closes main section: two-third-cold div -->
+
+<div class="one-third-col">
+  <p>Response example <code>json</code>, IAA for a pair of members</p>
+  <div markdown="1">
+```json
+{
+  "f1": 0.8333333333333333,
+  "overNumDocs": 2
 }
 ```
   </div>

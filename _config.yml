@@ -34,6 +34,7 @@ sidebar_toc:
       - api_documents_v1
       - api_settings_v1
       - api_projects_v1
+      - api_metrics_v0
 
   - name: Concept Search
     pages:

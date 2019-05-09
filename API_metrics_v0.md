@@ -100,98 +100,94 @@ curl -u 'yourUsername:yourPassword' '{{ page.api_document_url }}/search_stats?pr
   <div markdown="1">
 ```json
 {
-  "anncomplete": {
-    "numTrue": 4,
-    "values": [
-      {
-        "count": 4,
-        "percentage": 0.1,
-        "value": "true"
-      },
-      {
-        "count": 4100,
-        "percentage": 99.9,
-        "value": "false"
-      }
-    ]
-  },
-  "e_21": {
-    "name": "Component",
-    "numDocuments": 9,
-    "numDocumentsMissing": 4095,
-    "percentage": 83.33,
-    "topNormalizations": [
-      {
-        "dictionaryId": "n_23",
-        "dictionaryName": "ComponentDictionary",
-        "entityId": "Brakes",
-        "numDocuments": 4
-      },
-      {
-        "dictionaryId": "n_23",
-        "dictionaryName": "ComponentDictionary",
-        "entityId": "Window",
-        "numDocuments": 4
-      },
-      {
-        "dictionaryId": "n_23",
-        "dictionaryName": "ComponentDictionary",
-        "entityId": "Trunk",
-        "numDocuments": 1
-      }
-    ],
-    "totalCount": 10
-  },
-  "e_22": {
-    "name": "Status",
-    "numDocuments": 2,
-    "numDocumentsMissing": 4102,
-    "percentage": 16.67,
-    "topNormalizations": [],
-    "totalCount": 2
-  },
-  "m_24": {
-    "name": "isRelevant",
-    "numDocuments": 7,
-    "numDocumentsMissing": 4097,
-    "type": "boolean",
-    "values": [
-      {
-        "count": 2,
-        "percentage": 28.57,
-        "value": "false"
-      },
-      {
-        "count": 5,
-        "percentage": 71.43,
-        "value": "true"
-      }
-    ]
-  },
-  "m_25": {
-    "name": "OverallRisk",
-    "numDocuments": 6,
-    "numDocumentsMissing": 4098,
-    "type": "enum",
-    "values": [
-      {
-        "count": 1,
-        "percentage": 16.67,
-        "value": "low"
-      },
-      {
-        "count": 3,
-        "percentage": 50,
-        "value": "medium"
-      },
-      {
-        "count": 2,
-        "percentage": 33.33,
-        "value": "high"
-      }
-    ]
-  },
-  "numDocuments": 4104
+    "allDocumentLabelsTotalCount": 7,
+    "allEntitiesTotalCount": 12,
+    "e_21": {
+        "name": "Component",
+        "numDocuments": 6,
+        "numDocumentsMissing": 4095,
+        "percentage": 75,
+        "topNormalizations": [
+            {
+                "dictionaryId": "n_23",
+                "dictionaryName": "ComponentDictionary",
+                "entityId": "Window",
+                "numDocuments": 3
+            },
+            {
+                "dictionaryId": "n_23",
+                "dictionaryName": "ComponentDictionary",
+                "entityId": "Brakes",
+                "numDocuments": 2
+            },
+            {
+                "dictionaryId": "n_23",
+                "dictionaryName": "ComponentDictionary",
+                "entityId": "Trunk",
+                "numDocuments": 1
+            }
+        ],
+        "totalCount": 9
+    },
+    "e_22": {
+        "name": "Status",
+        "numDocuments": 2,
+        "numDocumentsMissing": 4099,
+        "percentage": 25,
+        "topNormalizations": [],
+        "totalCount": 3
+    },
+    "m_24": {
+        "name": "isRelevant",
+        "numDocuments": 4,
+        "numDocumentsMissing": 4097,
+        "type": "boolean",
+        "values": [
+            {
+                "count": 2,
+                "percentage": 50,
+                "value": "true"
+            },
+            {
+                "count": 2,
+                "percentage": 50,
+                "value": "false"
+            }
+        ]
+    },
+    "m_25": {
+        "name": "OverallRisk",
+        "numDocuments": 3,
+        "numDocumentsMissing": 4098,
+        "type": "enum",
+        "values": [
+            {
+                "count": 1,
+                "percentage": 33.33,
+                "value": "high"
+            },
+            {
+                "count": 2,
+                "percentage": 66.67,
+                "value": "medium"
+            },
+            {
+                "count": 0,
+                "percentage": 0,
+                "value": "low"
+            }
+        ]
+    },
+    "m_28": {
+        "name": "Comment",
+        "numDocuments": 0,
+        "numDocumentsMissing": 4101,
+        "topValues": [],
+        "type": "string"
+    },
+    "numAnnotatedDocuments": 14,
+    "numConfirmedDocuments": 5,
+    "numDocuments": 4101
 }
 ```
   </div>

@@ -18,7 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="new"><span markdown="1"><strong>New [API Metrics](API_metrics_v0.html)</strong> to gather important stats of your project and annotations!!! 💃🕺</span></li>
-  <li class="new"><span markdown="1"><strong>New Metrics section</strong>. Track the progress of your project and the health of your data. [Documentation](metrics.html).</span></li>
+  <li class="new"><span markdown="1"><strong>New Metrics section</strong>. Track the progress of your project and the quality of your data. [Documentation](metrics.html).</span></li>
 </ul>
 
 ---

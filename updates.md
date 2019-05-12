@@ -14,16 +14,26 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W19.0 ☝️
+_2019-05-12_
+
+<ul class="updates">
+  <li class="new"><span markdown="1"><strong>New [API Metrics](API_metrics_v0.html)</strong> to gather important stats of your project and annotations!!! 💃🕺</span></li>
+  <li class="new"><span markdown="1"><strong>New Metrics section</strong>. Track the progress of your project and the quality of your data. [Documentation](metrics.html).</span></li>
+</ul>
+
+---
+
 ## 3.2019-W18.0 👷‍♂️
 _2019-05-05_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">New parameter [`distributeToMembers` (API documents) to fine-tune the distribution of tasks](http://docs.tagtog.net/API_documents_v1.html#import-and-annotate-text).</span></li>  
+  <li class="new"><span markdown="1">New parameter [`distributeToMembers` (API documents) to fine-tune the distribution of tasks](http://docs.tagtog.net/API_documents_v1.html#import-and-annotate-text).</span></li>
   <li class="fix"><span markdown="1">Fixed non-breaking error of repeatedly adding _nav=false_ to the URL query string when removing documents manually.</span></li>
   <li class="fix"><span markdown="1">Fixed error of having to upload a PDF twice after activating _Native PDF_ to make it actually work.</span></li>
   <li class="fix"><span markdown="1">Fixed errors on changing the number of members and task distribution settings that sometimes caused inconsistent states.</span></li>
   <li class="fix"><span markdown="1">Downloads of PubMeds and PMCs updated and fixed.</span></li>
-  <li class="doc"><span markdown="1">IAA documentation added: [IAA docs](collaboration.html#inter-annotator-agreement)</span></li>
+  <li class="doc"><span markdown="1">IAA documentation added: [IAA docs](collaboration.html#iaa-inter-annotator-agreement)</span></li>
 </ul>
 
 ---

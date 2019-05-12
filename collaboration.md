@@ -230,7 +230,7 @@ id: collaboration
 
   {% include message.html message="Note that having a high IAA doesn’t strictly mean that the annotations are correct. It just means that the annotators are following the guidelines with a similar understanding." %}
 
-  {% include message.html message="All the metrics measure the IAA in <strong>F1</strong>." %}
+  {% include message.html message="All the metrics measure the IAA in <a href='https://en.wikipedia.org/wiki/F1_score' title='Wikipedia - F1 Score'>F1</a>." %}
 
   {% include message.html message="Note that for a large amount of documents the IAA results might be cached." %}
 </div>

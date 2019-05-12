@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? ☝️
+## 3.2019-W19.0 ☝️
+_2019-05-12_
 
 <ul class="updates">
   <li class="new"><span markdown="1"><strong>New [API Metrics](API_metrics_v0.html)</strong> to gather important stats of your project and annotations!!! 💃🕺</span></li>

@@ -49,7 +49,7 @@ Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the foll
 
 ## First-time Install
 
-* You will receive a single-line script. This script contains all the information regarding your one-server-only **license**.
+* You will receive a single-line script. This script contains all the information regarding your one-server-only subscription **license**.
 * Execute the script in some folder where you will run from now on all tagtog-related commands.
 * A helper bash script is installed in this folder. This script assumes an UNIX environment and was tested only on **Linux and macOS**. It should work on Windows with Cygwin too. The script is not mandatory to run tagtog, but it is highly recommended.
 
@@ -63,10 +63,10 @@ Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the foll
 ```shell
 ./tagtog_on_premises restart latest $TAGTOG_HOME
 
-# See more options in the tagtog_on_premises script
+# See more parameters in the tagtog_on_premises script
 ```
 
-* Point your browser now to: `https://<tagtog_running_ip>:<tagtog_https_port>`.
+* Point your browser now to: `https://<tagtog_running_ip>:<tagtog_https_port>` (defaults to 443).
 
 
 ### HTTPS & SSL
@@ -104,10 +104,27 @@ You can manually check for [new tagtog updates on this link](http://docs.tagtog.
 
 Upon a problem, try one of the following solutions first.
 
-If your issue or question is not resolved yet, shoot us directly an email: [support@tagtog.net](mailto:support@tagtog.net). We are also happy to open a slack chat team with you for faster communication.
+If your issue or question is not resolved yet, shoot us an email: [support@tagtog.net](mailto:support@tagtog.net). We are also happy to open a slack chat team with you for faster communication.
 
 Please provide detailed information of the problem and **send us always the container logs**: `docker logs tagtog_webapp_1` && `docker logs tagtog_taskmanager_1`.
 
+
+### Conflicts with ports (_0.0.0.0:80: bind: address already in use_ ...)
+
+By default, tagtog runs and exposes http on the port 80, and https on the port 443. You can change these in two ways:
+
+1. Set the special environmental variables:
+
+```shell
+export TAGTOG_HTTP_PORT=9080 # For example
+export TAGTOG_HTTPS_PORT=9443 # For example
+```
+
+2. Pass the ports parameters into the tagtog running script:
+
+```shell
+./tagtog_on_premises restart latest $TAGTOG_HOME 9080 9443
+```
 
 
 ### Issues with document uploading, or with the docker container `tagtog_taskmanager_1`:

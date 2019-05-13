@@ -14,12 +14,22 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🐳
+_???_
+
+<ul class="updates">  
+  <li class="fix"><span markdown="1">(On-Premises) Stopped unnecessarily exposing docker service ports that might conflict with the host's.</span></li>
+  <li class="doc"><span markdown="1">(On-Premises) Improved documentation for how to change the http &amp; https ports.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W19.1 ☝️
 _2019-05-13_
 
 <ul class="updates">
-  <li class="new"><span markdown="1"><strong>New [API Metrics](API_metrics_v0.html)</strong> to gather important stats of your project and annotations!!! 💃🕺</span></li>
-  <li class="new"><span markdown="1"><strong>New Metrics section</strong>. Track the progress of your project and the quality of your data. [Documentation](metrics.html).</span></li>
+  <li class="new"><span markdown="1">**New [API Metrics](API_metrics_v0.html)** to gather important stats of your project and annotations!!! 💃🕺</span></li>
+  <li class="new"><span markdown="1">**New Metrics section**. Track the progress of your project and the quality of your data. [Documentation](metrics.html).</span></li>
 </ul>
 
 ---

@@ -20,6 +20,7 @@ _???_
 <ul class="updates">  
   <li class="fix"><span markdown="1">(On-Premises) Stopped unnecessarily exposing docker service ports that might conflict with the host's.</span></li>
   <li class="doc"><span markdown="1">(On-Premises) Improved documentation for how to change the http &amp; https ports.</span></li>
+  <li class="fix"><span markdown="1">Improved memory management for the parsing of PDF documents.</span></li>
 </ul>
 
 ---

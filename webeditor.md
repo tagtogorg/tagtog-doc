@@ -123,9 +123,14 @@ toc: true
         <td>Only for paginated documents as PDFs</td>
       </tr>
       <tr>
-        <td class="centered"><kbd>ctrl+f</kbd><kbd>command+f</kbd></td>
+        <td class="centered"><kbd>ctrl+f</kbd> or <kbd>command+f</kbd></td>
         <td>Search in the text of a document</td>
         <td>Only for paginated documents as PDFs</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>ctrl</kbd> or <kbd>command</kbd></td>
+        <td>Annotate the whole paragraph. Hold the key and click on the paragraph to annotate it. </td>
+        <td>Supported by all formats except for paginated documents.</td>
       </tr>
     </table>
   </div>
@@ -156,10 +161,11 @@ toc: true
     <div class="two-third-col">
       <h5>Create new text annotations</h5>
       <p>A new text annotation is created by <strong>highlighting text with the mouse</strong>. Position the cursor at the beginning of the text you want to highlight. Press and hold your primary mouse button (commonly the left-button). While holding the mouse button, drag the cursor to the end of the text and let go of the mouse button. Once completed, all the text from the beginning to the end should be highlighted using the same Entity Type used in the previous text annotation. Currently the only way to change the entity type used for new annotations is by first changing the entity type of existing annotation.</p>
-      <p>Tips & tricks:</p>
+      <p><strong>Tips & tricks</strong>:</p>
       <ul>
         <li>If you <strong>double-click</strong>, you annotate the word clicked.</li>
-        <li>If you try to annotate a word that starts or ends in <i>space</i>, the space won't be annotated.</li>
+        <li>If you try to annotate a word that starts or ends in <i>space</i>, the <strong>space</strong> won't be annotated.</li>
+        <li>Press and hold the <kbd>ctrl</kbd> or <kbd>command</kbd> key to <strong>annotate a whole paragraph</strong>. Simply hold the key and click on the paragraph to annotate it.</li>
       </ul>
     </div>
     <div class="one-third-col">

@@ -17,10 +17,13 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ## ??? 🐳
 _???_
 
-<ul class="updates">  
+<ul class="updates">
   <li class="fix"><span markdown="1">(On-Premises) Stopped unnecessarily exposing docker service ports that might conflict with the host's.</span></li>
   <li class="doc"><span markdown="1">(On-Premises) Improved documentation for how to change the http &amp; https ports.</span></li>
   <li class="fix"><span markdown="1">Improved memory management for the parsing of PDF documents.</span></li>
+  <li class="new"><span markdown="1">Now you can annotate a whole paragraph if you press and hold the key <kbd>ctrl</kbd> or <kbd>command</kbd>, and click on the paragraph. [Documentation](webeditor.html#create-new-text-annotations).</span></li>
+  <li class="new"><span markdown="1">In the metrics section, you can now see the versions of the annotations used to calculate the metrics.</span></li>
+  <li class="doc"><span markdown="1">Improved documentation for metrics. [Documentation](metrics.html).</span></li>
 </ul>
 
 ---

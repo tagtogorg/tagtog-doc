@@ -14,12 +14,26 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W20.0 🐳
+_2019-05-16_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">(On-Premises) Stopped unnecessarily exposing docker service ports that might conflict with the host's.</span></li>
+  <li class="doc"><span markdown="1">(On-Premises) Improved documentation for how to change the http &amp; https ports.</span></li>
+  <li class="fix"><span markdown="1">Improved memory management for the parsing of PDF documents.</span></li>
+  <li class="new"><span markdown="1">Now you can annotate a whole paragraph if you press and hold the key <kbd>ctrl</kbd> or <kbd>command</kbd>, and click on the paragraph. [Documentation](webeditor.html#create-new-text-annotations).</span></li>
+  <li class="new"><span markdown="1">In the metrics section, you can now see the versions of the annotations used to calculate the metrics.</span></li>
+  <li class="doc"><span markdown="1">Improved documentation for metrics. [Documentation](metrics.html).</span></li>
+</ul>
+
+---
+
 ## 3.2019-W19.1 ☝️
 _2019-05-13_
 
 <ul class="updates">
-  <li class="new"><span markdown="1"><strong>New [API Metrics](API_metrics_v0.html)</strong> to gather important stats of your project and annotations!!! 💃🕺</span></li>
-  <li class="new"><span markdown="1"><strong>New Metrics section</strong>. Track the progress of your project and the quality of your data. [Documentation](metrics.html).</span></li>
+  <li class="new"><span markdown="1">**New [API Metrics](API_metrics_v0.html)** to gather important stats of your project and annotations!!! 💃🕺</span></li>
+  <li class="new"><span markdown="1">**New Metrics section**. Track the progress of your project and the quality of your data. [Documentation](metrics.html).</span></li>
 </ul>
 
 ---

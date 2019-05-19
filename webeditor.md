@@ -169,7 +169,7 @@ toc: true
       </ul>
     </div>
     <div class="one-third-col">
-      {% include message.html message="The maximum length of a text annotation is <code>180</code> characters." %}
+      {% include image.html name="annotate.paragraph.gif" caption="Annotating paragraphs with one click" %}
     </div>
     <div class="two-third-col">
       <h5>Overlapping text annotations</h5>

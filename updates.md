@@ -14,11 +14,21 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W21.0 🙋‍♂️
+_2019-05-25_
+
+<ul>
+  <li class="fix"><span markdown="1">PDF: Pan functionality is deactivated on the output format views.</span></li>
+  <li class="fix"><span markdown="1">Improved internal memory management at document upload.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W20.1 💄
 _2019-05-19_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">Overall improvements and fixes.</span></li>  
+  <li class="fix"><span markdown="1">Overall improvements and fixes.</span></li>
 </ul>
 
 ---

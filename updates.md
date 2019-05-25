@@ -14,7 +14,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ???
+## ??? 🙋‍♂️
 
 <ul>
   <li class="fix"><span markdown="1">PDF: Pan functionality is deactivated on the output format views.</span></li>

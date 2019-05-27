@@ -714,7 +714,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td><code>format</code></td>
       <td><code>anndoc</code></td>
       <td><code>default-plus-annjson</code></td>
-      <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a></td>
+      <td>Format of the pre-annotated document. Remember that <code>anndoc</code> format requires the content as <code>plain.html</code>. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a></td>
     </tr>
   </table>
 

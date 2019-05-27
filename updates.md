@@ -20,6 +20,7 @@ _2019-05-25_
 <ul class="updates">
   <li class="fix"><span markdown="1">PDF: Pan functionality is deactivated on the output format views.</span></li>
   <li class="fix"><span markdown="1">Improved internal memory management at document upload.</span></li>
+  <li class="new"><span markdown="1">You can add descriptions to your new projects</span></li>
 </ul>
 
 ---

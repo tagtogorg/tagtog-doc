@@ -10,12 +10,8 @@ id: projects
     <h3>Creating a project</h3>
     <p>Once you have signed up and you have a user account, you are ready to create a new project.</p>
     <p class="numbered-item"><span class="number-1">1</span>Choose a <strong>name</strong> for your project</p><br>
-    <p class="numbered-item"><span class="number-2">2</span>Choose <strong>one or more already trained machine learning models</strong> (we call them 'machines'). Machines are split into categories (e.g. Biomedical). Each model extract specific information from text.</p>
+    <p class="numbered-item"><span class="number-2">2</span>Choose a <strong>description</strong> for your project. Remember each project has a guidelines section where you can go into detail about the characteristics of your project.</p>
 
-  </div>
-  <div class="one-third-col">
-    {% include image.html name="define-new-proj.PNG" caption="Defining a new project"%}
-    {% include message.html message="If you want to <strong>customize</strong> your own machine, simply don't select any pre-trained model. Train later your own machine learning model from scratch." %}
   </div>
 
   <div class="two-third-col">

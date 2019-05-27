@@ -361,7 +361,7 @@ toc: true
       <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} and select the option <code>Remove document</code>to remove the document from the folder.</p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-view.png" width="250"%}
+      {% include image.html name="editor-view.PNG" width="250"%}
     </div>
     <div class="two-third-col">
       <br/>

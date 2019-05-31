@@ -248,6 +248,11 @@ toc: true
           <p>A change of entity type can affect the properties of the entity. Normalizations will be removed and only common entity labels will be preserved.</p></td>
         </tr>
         <tr>
+          <td>Copy text</td>
+          <td class="centered">-</td>
+          <td>Copy the text of the annotation to the clipboard.</td>
+        </tr>
+        <tr>
           <td>Normalizations</td>
           <td class="centered"><kbd>↵</kbd></td>
           <td><p>Each <a href="/projects.html#dictionaries">dictionary</a> created for the entity type will appear as an input box. If the box is not empty, the entity is normalized to that value.</p>

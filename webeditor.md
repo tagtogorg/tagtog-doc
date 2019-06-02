@@ -248,10 +248,16 @@ toc: true
           <p>A change of entity type can affect the properties of the entity. Normalizations will be removed and only common entity labels will be preserved.</p></td>
         </tr>
         <tr>
+          <td>Copy text</td>
+          <td class="centered">-</td>
+          <td>Copy the text of the annotation to the clipboard.</td>
+        </tr>
+        <tr>
           <td>Normalizations</td>
           <td class="centered"><kbd>↵</kbd></td>
           <td><p>Each <a href="/projects.html#dictionaries">dictionary</a> created for the entity type will appear as an input box. If the box is not empty, the entity is normalized to that value.</p>
-          <p>If you type at least 3 characters, a list of recommended dictionary entries will appear. To select a normalization simply choose an entry and press the <kbd>↵</kbd> key or click the ↵ icon.</p></td>
+          <p>If you type at least 3 characters, a list of recommended dictionary entries will appear. To select a normalization simply choose an entry. Otherwise you can type a new value. Each time you type or you select a value, the normalization is stored in the data model.</p>
+          <p>Press the <kbd>+</kbd> button to add the value in the input box as a new entry for the dictionary. Instead of clicking the button, while you type a value, you can simple click the <kbd>↵</kbd>. If the entry is correctly added to the dictionary, a checkmark will show up during 1 second.</p></td>
         </tr>
       </table>
     </div>
@@ -264,7 +270,7 @@ toc: true
   </div>
   <div class="two-third-col">
     <h5>Update dictionary from annotation editor</h5>
-    <p>If you are using dictionaries, these are <strong>automatically updated upon manual normalization</strong>. If you add a new normalization, this will either add a new entry to the dictionary or update an existing entry with a new term. By design, the dictionary won't be updated when a normalization is removed.</p>
+    <p>If you are using dictionaries, you can <strong>updated them upon manual normalization</strong>. If you add a new normalization and you click on the <kbd>+</kbd> button, this will either add a new entry to the dictionary or update an existing entry with a new term. By design, the dictionary won't be updated when a normalization is removed.</p>
     <p>You can always download the most updated version of a dictionary at <i>Settings > Dictionaries</i>.</p>
   </div>
   <div class="one-third-col">

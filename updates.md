@@ -14,6 +14,18 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W22.- 📋
+_2019-06-02_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now normalizations are added to data model immediately once the user type any value in the normalization box in the annotation menu. In order to add new entries to dictionaries, you should click on the <kbd>+</kbd> button near the normalization box. [More information](webeditor.html#update-dictionary-from-annotation-editor)</span></li>
+  <li class="fix"><span markdown="1">For some PDFs, it was not possible to annotate some pages of the files. This was caused due to the usage of some system fonts when there were not embedded fonts in the PDF file. Now it is possible to annotate those pages.</span></li>
+  <li class="new"><span markdown="1">Inter-Annotation Agreement matrix is now fully filled making it symmetric and easier to read.</span></li>
+  <li class="new"><span markdown="1">You can now copy the text of the annotations from the annotation contextual menu.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W21.2 🙋‍♂️
 _2019-05-25_
 

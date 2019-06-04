@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🦜
+_???_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed error handling on possible race conditions when uploading many documents at once.</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W23.0 📋
 _2019-06-04_
 

@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2019-W22.- 📋
-_2019-06-02_
+## ??? 📋
+_???_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now normalizations are added to data model immediately once the user type any value in the normalization box in the annotation menu. In order to add new entries to dictionaries, you should click on the <kbd>+</kbd> button near the normalization box. [More information](webeditor.html#update-dictionary-from-annotation-editor)</span></li>

@@ -18,7 +18,9 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _???_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">Fixed error handling on possible race conditions when uploading many documents at once.</span></li>  
+  <li class="new"><span markdown="1">You can now download the document's originally-submitted file via API; use [`output=orig`](API_documents_v1.html#output-parameter).</span></li>
+  <li class="fix"><span markdown="1">Fixed error handling on possible race conditions when uploading many documents at once.</span></li>
+  <li class="fix"><span markdown="1">Much improved ML stability when many instances are run in parallel.</span></li>
 </ul>
 
 ---

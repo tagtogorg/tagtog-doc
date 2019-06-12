@@ -1464,12 +1464,16 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
     <td>Annotations part of the <a href="/anndoc.html#ann-json">anndoc format documentation</a>.</td>
   </tr>
   <tr>
-    <td><code>html</code> <code>xml</code></td>
+    <td><code>html</code>, <code>xml</code>, <code>plain.html</code></td>
     <td>Content part of the <a href="/anndoc.html#plain-html">anndoc format documentation</a>.</td>
   </tr>
   <tr>
     <td><code>text</code></td>
     <td>Document content in plain text.</td>
+  </tr>
+  <tr>
+    <td><code>orig</code>, <code>original</code></td>
+    <td>The originally submitted file.</td>
   </tr>
   <tr>
     <td><code>csv</code></td>

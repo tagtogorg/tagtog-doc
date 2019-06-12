@@ -1474,11 +1474,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
   <tr>
     <td><code>csv</code></td>
     <td>List of the project's documents and their master (official) annotation status. Currently it works only with parameter <code>search=&ast;</code></td>
-  </tr>
-  <tr>
-    <td><code>docjson</code></td>
-    <td>Format used internally by some users</td>
-  </tr>
+  </tr>  
 </table>
 
 </div>

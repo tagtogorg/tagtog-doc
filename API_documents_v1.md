@@ -114,7 +114,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>John,Laura</code></td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -277,7 +277,7 @@ PUBMED IDS
       <td><code>John,Laura</code></td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -440,7 +440,7 @@ URLS
       <td><code>John,Laura</code></td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -573,7 +573,7 @@ FILES
       <td><code>John,Laura</code></td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -745,7 +745,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td><code>John,Laura</code></td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -872,7 +872,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td><code>John,Laura</code></td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>*</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -1475,7 +1475,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
   </tr>
   <tr>
     <td><code>csv</code></td>
-    <td>List of the project's documents and their master (official) annotation status. Currently it works only with parameter <code>search=*</code></td>
+    <td>List of the project's documents and their master (official) annotation status. Currently it works only with parameter <code>search=&ast;</code></td>
   </tr>
   <tr>
     <td><code>docjson</code></td>

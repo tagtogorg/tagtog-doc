@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🦜
-_???_
+## 3.2019-W24.0 🦜
+_2019-06-16_
 
 <ul class="updates">
   <li class="new"><span markdown="1">You can now download the document's originally-submitted file via API; use [`output=orig`](API_documents_v1.html#output-parameter).</span></li>

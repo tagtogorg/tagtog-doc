@@ -19,7 +19,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 <ul class="updates">
   <li class="new"><span>(On-Premises) White-labeling tagtog is now possible. White labeling lets you customize the way tagtog looks so that it matches your organization's branding. Please contact with us at <a href="mailto:info@tagtog.net">info@tagtog.net</a> if you are interested.</span></li>
   <li class="new"><span markdown="1">Supercurator role is able now to export the project settings.</span></li>
-  <li class="new"><span markdown="1">[tagtog.ai](tagtog.ai) 😉🤖.</span></li>
+  <li class="new"><span markdown="1">[tagtog.ai](http://tagtog.ai) 😉🤖</span></li>
+  <li class="doc"><span markdown="1">(On-Premises) [Added troubleshooting to fix the ml service consuming too much CPU](on_premises_README.html#ml0-tagtog-service-taking-100-of-cpu)</span></li>  
 </ul>
 
 ---

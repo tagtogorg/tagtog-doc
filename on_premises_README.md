@@ -79,7 +79,7 @@ By default, tagtog uses a SSL self-signed certificate. To use your own SSL certi
 * `tagtog_SSL_CERTIFICATE.pem` (you can use a symlink)
 
 
-### How and where the data is stored
+### Backups: How and where the data is stored
 
 All tagtog data is stored in the folder: `${TAGTOG_HOME}/persistent_data/`. We recommend that you have periodic backups to avoid data losses. There are other folders in `$TAGTOG_HOME`, which nature, however, is temporary; you can nonetheless back up that too.
 
@@ -168,6 +168,20 @@ Otherwise, a quick solution is:
 1. Grant all permissions to everybody: `chmod 777 -r $TAGTOG_HOME`
 2. Restart the application: `./tagtog_on_premises restart ...`
 
+
+
+### ml0 tagtog service taking 100% of CPU
+
+Currently, in some cases On-Premises ML can consume too much CPU. You can verify that it's indeed the ml service (`ml0`) the one overloading the CPU by checking `docker stats`, and looking for the `tagtog_ml0_1` container.
+
+We are working on a stable fix. For now, you can quickly liberate the resources by restarting the `ml0` service only (not the entire tagtog app):
+
+```shell
+# export TAGTOG_HOME=...
+docker-compose -f docker-compose.override.yaml --project-name tagtog restart ml0
+```
+
+**Note**: you can add this to a crontab file to run this every 24 or 12 hours, for example. In this case, you might need to rater write an absolute path to: `docker-compose.override.yaml`.
 
 
 ### tagtog docker images not found, on a new server installation

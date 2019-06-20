@@ -87,7 +87,7 @@ notoc: true
 <div class="one-third-col">
   <div class="message">
     <p>
-      <strong>NOTE:</strong> It is possible to pass an empty array of documents <code>partID</code>'s to the annotatable property of the ann.json format.
+      <strong>NOTE:</strong> It is possible to pass an empty array of documents <code>partID</code>'s to the annotatable property of the ann.json format (tagtog will properly set the field upon upload). In other words, you can write in the ann.json: <code>"annotatable":{"parts":[]}</code>.
     </p>
   </div>
 </div>

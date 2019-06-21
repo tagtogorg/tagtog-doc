@@ -21,7 +21,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="new"><span markdown="1">Supercurator role is able now to export the project settings.</span></li>
   <li class="new"><span markdown="1">[tagtog.ai](http://tagtog.ai) 😉🤖</span></li>
   <li class="doc"><span markdown="1">(On-Premises) [Added troubleshooting to fix the ml service consuming too much CPU](on_premises_README.html#ml0-tagtog-service-taking-100-of-cpu)</span></li>  
-  <li class="new"><span markdown="1">(On-Premises) Smaller memory footprint (a docker component image was reduced in 200MB)</span></li>  
+  <li class="new"><span markdown="1">(On-Premises) Smaller memory footprint (a docker component image was reduced in 200MB, a ~20%)</span></li>  
 </ul>
 
 ---

@@ -14,8 +14,20 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W25.0 🇪🇸
+_2019-06-23_
+
+<ul class="updates">
+  <li class="new"><span>(On-Premises) White-labeling tagtog is now possible. White labeling lets you customize the way tagtog looks so that it matches your organization's branding. Please contact with us at <a href="mailto:info@tagtog.net">info@tagtog.net</a> if you are interested.</span></li>
+  <li class="new"><span markdown="1">Supercurator role is able now to export the project settings.</span></li>
+  <li class="new"><span markdown="1">[tagtog.ai](http://tagtog.ai) 😉🤖</span></li>
+  <li class="doc"><span markdown="1">(On-Premises) [Added troubleshooting to fix the ml service consuming too much CPU](on_premises_README.html#ml0-tagtog-service-taking-100-of-cpu)</span></li>  
+  <li class="new"><span markdown="1">(On-Premises) Smaller memory footprint (a docker component image was reduced in 200MB, a ~20%)</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W24.1 🦜
-_2019-06-16_
 _2019-06-16_
 
 <ul class="updates">

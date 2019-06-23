@@ -46,8 +46,6 @@ notoc: true
   <p class="numbered-item"><span class="number-3">3</span><a href="API_documents_v1.html#files-post">Upload to tagtog in a same API request</a> both the plain.html + ann.json (i.e., 2 files) of the document. The requirement is that both files, except for the final extension, must have the same name. In that way, the tagtog system understands that both files represent the same document. Moreover, you can  send multiple annotated documents at the same time. This means you always upload an even number of files.</p>
 </div>
 
-
-
 <div class="two-third-col">
     <br/>
     <div id="tabs-container">
@@ -84,6 +82,14 @@ notoc: true
   </div>
 </div>
 </div>
+</div>
+
+<div class="one-third-col">
+  <div class="message">
+    <p>
+      <strong>NOTE:</strong> It is possible to pass an empty array of documents <code>partID</code>'s to the annotatable property of the ann.json format (tagtog will properly set the field upon upload). In other words, you can write in the ann.json: <code>"annotatable":{"parts":[]}</code>.
+    </p>
+  </div>
 </div>
 
 <div class="one-third-col">

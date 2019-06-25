@@ -100,17 +100,12 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
       "children": {}
     }
   },
+  "webhooks": {},
   "metas": {},
   "entities": {
     "e_1": { "id": "e_1", "name": "risk", "oldnames": [], "description": "Risk assessment", "color": "#28c72d", "fields": {}, "normalizations": {} } },
   "fields": {},
-  "relations": {},
-  "name": "myProject",
-  "role": "admin",
-  "username": "user1",
-  "membersWithoutMe": [],
-  "ownername": "user1",
-  "webhooks": {}
+  "relations": {}
 }
 ```
   </div>

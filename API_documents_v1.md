@@ -777,7 +777,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     'file': ('text.txt', open('./text.txt', 'rb'), 'application/octet-stream')
   }
 
-  response = requests.put(tagtogAPIUrl, params=params, auth=auth, files=files)
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
   </div>
 </div>
@@ -1478,7 +1478,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
   <tr>
     <td><code>csv</code></td>
     <td>List of the project's documents and their master (official) annotation status. Currently it works only with parameter <code>search=&ast;</code></td>
-  </tr>  
+  </tr>
 </table>
 
 </div>

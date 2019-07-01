@@ -103,7 +103,8 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
   "webhooks": {},
   "metas": {},
   "entities": {
-    "e_1": { "id": "e_1", "name": "risk", "oldnames": [], "description": "Risk assessment", "color": "#28c72d", "fields": {}, "normalizations": {} } },
+    "e_1": { "id": "e_1", "name": "risk", "oldnames": [], "description": "Risk assessment", "color": "#28c72d", "fields": {}, "normalizations": {} }
+  },
   "fields": {},
   "relations": {}
 }

@@ -1267,7 +1267,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td><code>search</code></td>
       <td>-</td>
       <td>entity:GGP</td>
-      <td>Search query to list the documents to remove. Learn how to build queries <a href=".">here</a></td>
+      <td>Search query to list the documents to remove. Learn how to build queries <a href="/search-queries.html">here</a></td>
     </tr>
     <tr>
       <td><code>project</code></td>

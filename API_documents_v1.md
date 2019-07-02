@@ -773,8 +773,8 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
 
   files = {
-    'files': ('text.ann.json', '{"annotatable":{"parts":[]},"anncomplete":false,"sources":[],"metas":{"m_1":{"value":"optionA","confidence":{"state":"pre-added","who":["user:{{ page.api_username }}"],"prob":1}}},"entities":[],"relations":[]}'),
-    'files': ('text.txt', open('./text.txt'))
+    'ann': ('text.ann.json', '{"annotatable":{"parts":[]},"anncomplete":false,"sources":[],"metas":{"m_1":{"value":"optionA","confidence":{"state":"pre-added","who":["user:{{ page.api_username }}"],"prob":1}}},"entities":[],"relations":[]}'),
+    'plain': ('text.txt', open('./text.txt'))
   }
 
   response = requests.put(tagtogAPIUrl, params=params, auth=auth, files=files)

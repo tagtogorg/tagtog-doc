@@ -17,7 +17,10 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 __
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">(PDF Viewer) Eliminate race conditions for Pan functionality.</span></li>
+  <li class="new"><span markdown="1">First rollout of **Public Projects** 🤫.</span></li>
+  <li class="new"><span markdown="1">See your active projects first: your list of projects is now sorted by your last access to them!.</span></li>
+  <li class="fix"><span markdown="1">No longer can members or users without rights to change some settings, apparently see that they could indeed change them... (which only led to errors).</span></li>
+  <li class="fix"><span markdown="1">(PDF Viewer) Eliminate race conditions for Pan functionality.</span></li>  
 </ul>
 
 ---

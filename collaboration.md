@@ -29,11 +29,11 @@ id: collaboration
     </tr>
     <tr>
       <td><code class="soon">curator</code></td>
-      <td><span class="soon">Can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations.</span> Coming soon.</td>
+      <td><span class="soon">Can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations.</span></td>
     </tr>
     <tr>
-      <td><code class="soon">reader</code></td>
-      <td><span class="soon">Users invited as collaborators to a project. They cannot edit any annotations. They can only read <code>master</code>'s annotations.</span> Coming soon.</td>
+      <td><code>reader</code></td>
+      <td><span>They cannot edit any annotations nor change anything in the project. They can only read <code>master</code>'s annotations.</span></td>
     </tr>
   </table>
   <h5>Admin role</h5>

@@ -13,13 +13,14 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
 ---
+
 ## ??? 👾
-__
 
 <ul class="updates">
-  <li class="new"><span markdown="1">First rollout of **Public Projects** 🤫.</span></li>
+  <li class="new"><span markdown="1">First rollout of **Public Projects** ⛱.</span></li>
+  <li class="new"><span markdown="1">New role: [`reader`](collaboration.html#roles) 👓.</span></li>
   <li class="new"><span markdown="1">See your active projects first: your list of projects is now sorted by your last access to them!.</span></li>
-  <li class="fix"><span markdown="1">No longer can members or users without rights to change some settings, apparently see that they could indeed change them... (which only led to errors).</span></li>
+  <li class="fix"><span markdown="1">No longer can users without enough authorization see action buttons that do require authorization (for example in settings).</span></li>
   <li class="fix"><span markdown="1">(PDF Viewer) Eliminate race conditions for Pan functionality.</span></li>  
 </ul>
 

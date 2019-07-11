@@ -431,7 +431,7 @@ tagtogAPIUrl = "{{ page.api_document_url }}"
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
 params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
 #you can append more files to the list in case you want to upload multiple files
-files = [('file', open('files/text.txt', 'rb'))]
+files = [('file', open('files/text.txt'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 print(response.text)
 ```
@@ -773,11 +773,11 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
 
   files = {
-    'json': ('text.ann.json', '{"annotatable":{"parts":[]},"anncomplete":false,"sources":[],"metas":{"m_1":{"value":"optionA","confidence":{"state":"pre-added","who":["user:{{ page.api_username }}"],"prob":1}}},"entities":[],"relations":[]}', 'application/json'),
-    'file': ('text.txt', open('./text.txt', 'rb'), 'application/octet-stream')
+    'ann': ('text.ann.json', '{"annotatable":{"parts":[]},"anncomplete":false,"sources":[],"metas":{"m_1":{"value":"optionA","confidence":{"state":"pre-added","who":["user:{{ page.api_username }}"],"prob":1}}},"entities":[],"relations":[]}'),
+    'plain': ('text.txt', open('./text.txt'))
   }
 
-  response = requests.put(tagtogAPIUrl, params=params, auth=auth, files=files)
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
   </div>
 </div>
@@ -901,7 +901,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
   params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'anndoc'}
 
-  files = [('file', open('/annotated-docs/docidABCDEF.plain.html', 'rb')), ('file', open('/annotated-docs/docidABCDEF.ann.json', 'rb'))]
+  files = [('file', open('/annotated-docs/docidABCDEF.plain.html')), ('file', open('/annotated-docs/docidABCDEF.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
@@ -1267,7 +1267,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <td><code>search</code></td>
       <td>-</td>
       <td>entity:GGP</td>
-      <td>Search query to list the documents to remove. Learn how to build queries <a href=".">here</a></td>
+      <td>Search query to list the documents to remove. Learn how to build queries <a href="/search-queries.html">here</a></td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -1478,7 +1478,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
   <tr>
     <td><code>csv</code></td>
     <td>List of the project's documents and their master (official) annotation status. Currently it works only with parameter <code>search=&ast;</code></td>
-  </tr>  
+  </tr>
 </table>
 
 </div>

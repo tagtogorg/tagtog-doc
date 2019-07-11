@@ -14,6 +14,20 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W28.0 👾
+_2019-07-11_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">First rollout of **Public Projects** ⛱.</span></li>
+  <li class="new"><span markdown="1">New role: [`reader`](collaboration.html#roles) 👓.</span></li>
+  <li class="new"><span markdown="1">Created an independent page to see the [status of tagtog's services](http://status.tagtog.net)</span></li>  
+  <li class="new"><span markdown="1">See your active projects first: your list of projects is now sorted by your last access to them!.</span></li>
+  <li class="fix"><span markdown="1">No longer can users without enough authorization see action buttons that do require authorization (for example in settings).</span></li>
+  <li class="fix"><span markdown="1">(PDF Viewer) Eliminate race conditions for Pan functionality.</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W25.0 🇪🇸
 _2019-06-23_
 
@@ -21,8 +35,8 @@ _2019-06-23_
   <li class="new"><span>(On-Premises) White-labeling tagtog is now possible. White labeling lets you customize the way tagtog looks so that it matches your organization's branding. Please contact with us at <a href="mailto:info@tagtog.net">info@tagtog.net</a> if you are interested.</span></li>
   <li class="new"><span markdown="1">Supercurator role is able now to export the project settings.</span></li>
   <li class="new"><span markdown="1">[tagtog.ai](http://tagtog.ai) 😉🤖</span></li>
-  <li class="doc"><span markdown="1">(On-Premises) [Added troubleshooting to fix the ml service consuming too much CPU](on_premises_README.html#ml0-tagtog-service-taking-100-of-cpu)</span></li>  
-  <li class="new"><span markdown="1">(On-Premises) Smaller memory footprint (a docker component image was reduced in 200MB, a ~20%)</span></li>  
+  <li class="doc"><span markdown="1">(On-Premises) [Added troubleshooting to fix the ml service consuming too much CPU](on_premises_README.html#ml0-tagtog-service-taking-100-of-cpu)</span></li>
+  <li class="new"><span markdown="1">(On-Premises) Smaller memory footprint (a docker component image was reduced in 200MB, a ~20%)</span></li>
 </ul>
 
 ---

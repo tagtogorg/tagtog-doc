@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 👾
+## 3.2019-W28.0 👾
+_2019-07-11_
 
 <ul class="updates">
   <li class="new"><span markdown="1">First rollout of **Public Projects** ⛱.</span></li>

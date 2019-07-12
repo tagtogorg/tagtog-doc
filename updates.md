@@ -13,11 +13,17 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
 ---
-## ??? 👾
-__
+
+## 3.2019-W28.0 👾
+_2019-07-11_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">(PDF Viewer) Eliminate race conditions for Pan functionality.</span></li>
+  <li class="new"><span markdown="1">First rollout of **Public Projects** ⛱.</span></li>
+  <li class="new"><span markdown="1">New role: [`reader`](collaboration.html#roles) 👓.</span></li>
+  <li class="new"><span markdown="1">Created an independent page to see the [status of tagtog's services](http://status.tagtog.net)</span></li>  
+  <li class="new"><span markdown="1">See your active projects first: your list of projects is now sorted by your last access to them!.</span></li>
+  <li class="fix"><span markdown="1">No longer can users without enough authorization see action buttons that do require authorization (for example in settings).</span></li>
+  <li class="fix"><span markdown="1">(PDF Viewer) Eliminate race conditions for Pan functionality.</span></li>  
 </ul>
 
 ---

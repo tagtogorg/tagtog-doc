@@ -21,10 +21,6 @@ from keras.preprocessing.sequence import pad_sequences
 
 from keras.models import model_from_json
 
-#
-#
-#
-
 def sentence_processing(texts):
 
     #limit the number of words in each email

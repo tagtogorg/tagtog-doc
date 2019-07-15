@@ -333,7 +333,7 @@ id: projects
       <p>In this panel you can invite and organize other users in your project, so they can collaborate in the annotation tasks. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="settings-members.png" %}
+      {% include image.html name="settings-members.PNG" %}
     </div>
     <div class="two-third-col">
     <h5>Invite other users to your project</h5>

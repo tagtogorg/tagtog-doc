@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 👙
+_???_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now `.log` files are also parsed in **verbatim** mode (like other programming languages, such as .py for python or .js for JavaScript).</span></li>
+</ul>
+
+---
+
 ## 3.2019-W28.0 👾
 _2019-07-11_
 

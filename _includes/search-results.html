@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 </head>
 <div class="search-engine-box">
     <form action="/search-engine.html" method="get">
@@ -13,10 +13,6 @@
 <ul id="search-results"></ul>
 
 <script>
-    {% for doc in site.pages %}
-        var currentContent = jQuery({{ doc.content | strip_html | strip | strip_newline | escape |  jsonify }}).text();
-        currentContent.replace(/["']/g, "");
-    {% endfor %}
     window.pages = {
         {% for doc in site.pages %}
             {% unless doc.title == "api-html" %}
@@ -24,7 +20,7 @@
                     "title": "{{ doc.title | xml_escape }}",
                     "content": currentContent,
                     "url": "{{ site.url | append: doc.url | xml_escape }}",
-                    "path": "{{ doc.url | xml_escape }}"
+                    "content": {{ item.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
                 }
                 {% unless forloop.last %},{% endunless %}
             {% endunless %}
@@ -34,4 +30,3 @@
 
 <script src="/assets/js/lunr.min.js"></script>
 <script src="/assets/js/search.js"></script>
-<script src="/assets/js/dynamic-search.js"> </script>    

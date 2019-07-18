@@ -310,7 +310,7 @@ _2019-01-11_
 _2019-01-07_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Configuration fix</span></li>
+  <li class="fix"><span markdown="1">Configuration fix</span></li>
 </ul>
 
 ---

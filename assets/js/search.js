@@ -1,5 +1,6 @@
 (function() {
-    function displaySearchResults(results, store) {
+
+    function displaySearchResults(results, store, searchTerm) {
       var searchResults = document.getElementById('search-results');
   
       if (results.length) {
@@ -7,13 +8,16 @@
   
         for (var i = 0; i < results.length; i++) {  // Iterate over the results
           var item = store[results[i].ref];
-          appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-          appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+          var content = formatContentString(item.content, searchTerm);
+          appendString += "<li>";
+          appendString +=   "<a class='result' href='" + item.url + "?q=" + searchTerm + "'><h3>" + item.title + "</h3></a>";
+          appendString +=   "<div class='snippet'>" + content + "</div>";
+          appendString += "</li>"
         }
   
-        searchResults.innerHTML = appendString;
+        return appendString;
       } else {
-        searchResults.innerHTML = '<li>No results found</li>';
+        return '<li>No results found</li>';
       }
     }
   
@@ -28,6 +32,28 @@
           return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
         }
       }
+    }
+
+    function formatContentString(str, searchTerm){
+      var termIdx = str.toLowerCase().indexOf(searchTerm.toLowerCase());
+        if (termIdx >= 0) {
+            var startIdx = Math.max(0, termIdx - 140);
+            var endIdx = Math.min(str.length, termIdx + searchTerm.length + 140);
+            var trimmedContent = (startIdx === 0) ? "" : "&hellip;";
+            trimmedContent += str.substring(startIdx, endIdx);
+            trimmedContent += (endIdx >= str.length) ? "" : "&hellip;"
+
+            var highlightedContent = trimmedContent.replace(new RegExp(searchTerm, "ig"), function matcher(match) {
+                return "<strong>" + match + "</strong>";
+            });
+
+            return highlightedContent;
+        }
+        else {
+            var emptyTrimmedString = str.substr(0, 280);
+            emptyTrimmedString += (str.length < 280) ? "" : "&hellip;";
+            return emptyTrimmedString;
+        }
     }
   
     var searchTerm = getQueryVariable('query');
@@ -45,12 +71,12 @@
       for (var key in window.store) { // Add the data to lunr)
         idx.add({
           'id': key,
-          'title': window.store[key].title,
-          'content': window.store[key].content
+          'title': window.pages[key].title,
+          'content': window.pages[key].content
         });
   
         var results = idx.search(searchTerm); // Get lunr to perform a search
-        displaySearchResults(results, window.store); // We'll write this in the next section
+        document.querySelector("#search-results").innerHTML = displaySearchResults(results, window.store, searchTerm);
       }
     }
   })();

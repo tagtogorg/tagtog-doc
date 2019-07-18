@@ -11,13 +11,19 @@
 <ul id="search-results"></ul>
 
 <script>
-    window.store = {
+    {% for doc in site.pages %}
+        var emptyString = "";
+        var currentContent = emptyString.toString({{ doc.content | strip_html | strip | strip_newline | escape |  jsonify }})
+        currentContent.replace(/["']/g, "");
+    {% endfor %}
+    window.pages = {
         {% for doc in site.pages %}
-            {% unless doc.title == "anndoc format" or doc.title contains "Inputs" or doc.title contains "Machine Learning" or doc.title contains "PDF " or doc.title contains "Quick " or doc.title contains "Search queries" or doc.title contains "Updates"%}
+            {% unless doc.title == "api-html" %}
                 "{{ doc.url | slugify }}": {
                     "title": "{{ doc.title | xml_escape }}",
-                    "content": {{ doc.content | strip_html | strip_newlines | jsonify }},
-                    "url": "{{ doc.url | xml_escape }}"
+                    "content": currentContent,
+                    "url": "{{ site.url | append: doc.url | xml_escape }}",
+                    "path": "{{ doc.url | xml_escape }}"
                 }
                 {% unless forloop.last %},{% endunless %}
             {% endunless %}

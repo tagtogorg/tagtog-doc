@@ -1,5 +1,7 @@
-<meta charset="utf-8"> 
-
+<head>
+    <meta charset="utf-8"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
 <div class="search-engine-box">
     <form action="/search-engine.html" method="get">
       <label for="search-box">Search</label>
@@ -12,8 +14,7 @@
 
 <script>
     {% for doc in site.pages %}
-        var emptyString = "";
-        var currentContent = emptyString.toString({{ doc.content | strip_html | strip | strip_newline | escape |  jsonify }})
+        var currentContent = jQuery({{ doc.content | strip_html | strip | strip_newline | escape |  jsonify }}).text();
         currentContent.replace(/["']/g, "");
     {% endfor %}
     window.pages = {

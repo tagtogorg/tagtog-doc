@@ -22,6 +22,7 @@ _???_
   <li class="new"><span markdown="1">Complimentary, [new `verbatim-plus-annjson` **format**](http://localhost:4000/ioformats.html#annotation-input-formats) to have any file parsed as verbatim together with its annotation ann.json file.</span></li>
   <li class="new"><span markdown="1">Now `.log` files are also parsed by default in `verbatim` mode (like other programming languages, such as .py for python or .js for JavaScript).</span></li>
   <li class="fix"><span markdown="1">Fixed the parsing of `anndoc` documents that might contain the period `.` character in its file name (besides the file extension).</span></li>
+  <li class="fix"><span markdown="1">Return the proper original _content_ file in case it was sent from the beginning with an ann.json annotation file.</span></li>
 </ul>
 
 ---

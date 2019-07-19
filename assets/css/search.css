@@ -1,0 +1,19 @@
+.search-input{
+    border: 1px solid #e5e5e5;
+    border-radius: 200px;
+    height: 30px;
+    width: 30%;
+    /* background: rgba(0,0,0,0.17) url(/assets/img/search-button.png) no-repeat; */
+}
+
+.search-results{
+    margin-top: 20px;
+}
+
+.search-results li{
+    border-bottom: 1px solid #808080;
+}
+
+.search-results li:first-child {
+    border-top: 1px solid #808080;
+}

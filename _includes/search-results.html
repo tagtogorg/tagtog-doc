@@ -1,32 +1,19 @@
-<head>
-    <meta charset="utf-8"> 
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
-</head>
-<div class="search-engine-box">
-    <form action="/search-engine.html" method="get">
-      <label for="search-box">Search</label>
-      <input type="text" id="search_box" name="query" onkeypress="searchResults('search_box')">
-      <input type="submit" value="search">
-    </form>
-  </div>
+{{ content }}
 
-<ul id="search-results"></ul>
+<form onsubmit="">
+  <input type="input" id="search-engine-form" class="search-input" placeholder="{{ site.pages.[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" autofocus>
+</form>
+
+{% include lunr-search.html %}
+
 
 <script>
-    window.pages = {
-        {% for doc in site.pages %}
-            {% unless doc.title == "api-html" %}
-                "{{ doc.url | slugify }}": {
-                    "title": "{{ doc.title | xml_escape }}",
-                    "content": currentContent,
-                    "url": "{{ site.url | append: doc.url | xml_escape }}",
-                    "content": {{ item.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
-                }
-                {% unless forloop.last %},{% endunless %}
-            {% endunless %}
-        {% endfor %}
-    };
-</script>
+        $(document).ready(function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            $("input#search-engine-form").val(urlParams.get("query"));
+            $("input#search-engine-form").keyup();
+        });
+    </script>
+    
 
-<script src="/assets/js/lunr.min.js"></script>
-<script src="/assets/js/search.js"></script>
+<div id="results"></div>

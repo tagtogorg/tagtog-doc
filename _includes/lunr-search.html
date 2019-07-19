@@ -1,0 +1,80 @@
+<script src="{{ '/assets/js/lunr.min.js'  }}"></script>
+<script src="{{ '/assets/js/lunr.stemmer.support.min.js'  }}"></script>
+<script src="{{ '/assets/js/search-data.json' }}"></script>
+<script src="{{ '/assets/css/search.css' }}"></script>
+<script>
+
+
+  function formatContentString(str, searchTerm){
+    var termIdx = str.toLowerCase().indexOf(searchTerm.toLowerCase());
+      if (termIdx >= 0) {
+          var startIdx = Math.max(0, termIdx - 140);
+          var endIdx = Math.min(str.length, termIdx + searchTerm.length + 140);
+          var trimmedContent = (startIdx === 0) ? "" : "&hellip;";
+          trimmedContent += str.substring(startIdx, endIdx);
+          trimmedContent += (endIdx >= str.length) ? "" : "&hellip;"
+
+          var highlightedContent = trimmedContent.replace(new RegExp(searchTerm, "ig"), function matcher(match) {
+              return "<strong>" + match + "</strong>";
+          });
+
+          return highlightedContent;
+      }
+      else {
+          var emptyTrimmedString = str.substr(0, 280);
+          emptyTrimmedString += (str.length < 280) ? "" : "&hellip;";
+          return emptyTrimmedString;
+      }
+  }
+
+    var idx = lunr(function () {
+      this.field('title', { boost: 10 }) //added a boost to the title
+      this.field('excerpt')
+      this.field('url')
+      this.ref('id')
+      this.pipeline.remove(lunr.trimmer)
+      // add documents to index
+      for (var item in store) {
+        this.add({
+          title: store[item].title,
+          excerpt: store[item].excerpt,
+          url: store[item].url,
+          id: item
+        })
+      }
+    });
+
+    $(document).ready(function () {
+
+      $('input#search-engine-form').on('keyup', function () {
+        var resultdiv = $('#results');
+        var query = $(this).val().toLowerCase();
+        var result =
+         idx.query(function (q) {
+            query.split(lunr.tokenizer.separator).forEach(function (term) {
+              q.term(term, { boost: 100 })
+              if (query.lastIndexOf(" ") != query.length - 1) {
+                q.term(term, { usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+              }
+              if (term != "") {
+                q.term(term, { usePipeline: false, editDistance: 1, boost: 1 })
+              }
+            })
+          });
+        resultdiv.empty();
+        resultdiv.prepend('<p class="results__found">' + result.length + ' {{ site.data.text[site.locale].results_found | default: "Result(s) found" }}</p>');
+        resultdiv.append('<div id="search-results">')
+        resultdiv.append('<ul class="search-results">')
+        for (var item in result) {
+          var ref = result[item].ref;
+          var content = formatContentString(store[ref].excerpt, query);
+          var searchitem = "<li>";
+          searchitem +=   "<a href='" + store[ref].url + "?q=" + query + "'><h3>" + store[ref].title + "</h3></a>";
+          searchitem +=   "<p>" + content.replace(/\s*\{.*?\}\}\s*/g, "...").split(" ").splice(0, 20).join(" ") + "</p>";
+          searchitem +=   "</li>"
+          resultdiv.append(searchitem);
+        }
+        resultdiv.append('</ul>')
+      });
+    });
+</script>

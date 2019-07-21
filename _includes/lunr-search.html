@@ -1,7 +1,7 @@
-<script src="{{ '/assets/js/lunr.min.js'  }}"></script>
-<script src="{{ '/assets/js/lunr.stemmer.support.min.js'  }}"></script>
-<script src="{{ '/assets/js/search-data.json' }}"></script>
-<script src="{{ '/assets/css/search.css' }}"></script>
+<script src="{{ site.baseurl }}/assets/js/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/lunr.stemmer.support.min.js"></script>
+<script src='{{ site.baseurl }}/assets/js/search-data.json'></script>
+<script src='{{ site.baseurl }}/assets/css/search.css'></script>
 <script>
 
 
@@ -28,7 +28,7 @@
   }
 
     var idx = lunr(function () {
-      this.field('title', { boost: 10 }) //added a boost to the title
+      this.field('title', { boost: 20 }) //added a boost to the title
       this.field('excerpt')
       this.field('url')
       this.ref('id')

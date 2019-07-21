@@ -710,8 +710,8 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>format</code></td>
-      <td><code>anndoc</code></td>
       <td><code>default-plus-annjson</code></td>
+      <td><code>anndoc</code></td>
       <td>Format of the pre-annotated document. Remember that <code>anndoc</code> format requires the content as <code>plain.html</code>. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a></td>
     </tr>
   </table>

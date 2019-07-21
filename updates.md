@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 👙
-_???_
+## 3.2019-W29.1 👙
+_2019-07-21_
 
 <ul class="updates">
   <li class="new"><span markdown="1">[New `verbatim` **format**](ioformats.html#distinguish-format-by-given-format-parameter) to send and have ANY file parsed as verbatim (pre-formatted). This allows you to preserve any indentation or extra spacing 🥳.</span></li>

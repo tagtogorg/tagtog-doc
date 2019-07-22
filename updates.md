@@ -14,6 +14,17 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🧚‍♀️
+_???_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Public projects should but couldn't invite any number of members; now fixed.</span></li>  
+  <li class="fix"><span markdown="1">Public projects should but couldn't search any number of documents; now fixed.</span></li>  
+  <li class="doc"><span markdown="1">Created API example for how to use `verbatim` o `verbatim-plus-annjson` new formats.</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W29.1 👙
 _2019-07-21_
 

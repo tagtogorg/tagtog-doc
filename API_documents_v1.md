@@ -75,7 +75,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -94,7 +94,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <th>Default</th>
       <th>Example</th>
       <th>Description</th>
-    </tr>
+    </tr>    
     <tr>
       <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
@@ -107,6 +107,12 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>pool</code></td>
       <td><code>pool</code></td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
+    </tr>
+    <tr>
+      <td><code>format</code></td>
+      <td>-</td>
+      <td><code>verbatim</code></td>
+      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>

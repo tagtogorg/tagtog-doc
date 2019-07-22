@@ -210,8 +210,9 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 <div class="two-third-col">
   <h4>Examples: send plain text as verbatim</h4>
+  <p>This is when you need to work on the exactly the same formatting as your input text...</p>
   <br/>
-  <br/>
+
   <div id="tabs-container">
     <ul class="tabs-menu">      
       <li class="current"><a href="#tab-plain-text-verbatim-python">Python</a></li>
@@ -225,9 +226,8 @@ import requests
 tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
 auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
-params = {"project": "yourProjectName", "owner": "yourUsername", "output": "null"}
+params = {"project": "yourProjectName", "owner": "yourUsername", "format": "verbatim", "output": "null"}
 payload = {
-    "format": "verbatim",
     "text": "The film stars Leonardo DiCaprio, Brad Pitt and Margot Robbie"
 }
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, data=payload)

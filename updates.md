@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🧚‍♀️
-_???_
+## 3.2019-W29.2 🧚‍♀️
+_2019-07-22_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Public projects should but couldn't invite any number of members; now fixed.</span></li>  

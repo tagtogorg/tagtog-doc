@@ -133,7 +133,8 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 
 
 <div class="two-third-col">
-
+  <h4>Examples: send plain text</h4>
+  <br/>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -184,6 +185,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       </div>
     </div>
   </div>
+
 <div class="one-third-col">
   <p>Response <code>ann.json</code></p>
 <div markdown="1">
@@ -199,6 +201,60 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     "metas":{},
     "relations":[],
     "annotatable":{"parts":["s1h1","s1p1"]}
+}
+```
+</div>
+</div>
+
+
+
+<div class="two-third-col">
+  <h4>Examples: send plain text as verbatim</h4>
+  <br/>
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">      
+      <li class="current"><a href="#tab-plain-text-verbatim-python">Python</a></li>
+    </ul>
+    <div class="tab">
+      <p class="code-desc">This example imports plain text in verbatim format (pre-formatted) and returns the result of the operation (<code>null</code> output).</p>
+<div id="tab-plain-text-verbatim-python" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+params = {"project": "yourProjectName", "owner": "yourUsername", "output": "null"}
+payload = {
+    "format": "verbatim",
+    "text": "The film stars Leonardo DiCaprio, Brad Pitt and Margot Robbie"
+}
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, data=payload)
+print(response.text)
+```
+</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="one-third-col">
+  <p>Response <code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "text.txt",
+    "names": ["text.txt"],
+    "rawInputSizeInBytes": 61,
+    "tagtogID": "aumzCn3f5E9zDs4yihXZAipZjLx0-text.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 61
+  }],
+  "warnings": []
 }
 ```
 </div>

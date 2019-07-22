@@ -110,7 +110,7 @@ toc: true
 
       <tr>
         <td><code>verbatim</code></td>
-        <td>ANY file that will be parsed as already pre-formatted. No transformation is done at all to the given content. This is ideal, for instance, for files that contain arbitrary indentation or white spaces.</td>
+        <td>ANY file that will be parsed as already pre-formatted. No transformation is done at all to the given content. This is ideal, for instance, for files that contain arbitrary indentation or white spaces. <a href="API_documents_v1.html#examples-send-plain-text-as-verbatim">Example</a>.</td>
       </tr>
 
       <tr>
@@ -163,15 +163,15 @@ toc: true
       </tr>
       <tr>
         <td><code>anndoc</code></td>
-        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload the via API both, the <code>plain.html</code> and its annotations <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#replace-annotations-of-existing-document-post">Example</a></p></td>
+        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload the via API both, the <code>plain.html</code> and its annotations <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#replace-annotations-of-existing-document-post">Example</a>.</p></td>
       </tr>
       <tr>
         <td><code>default-plus-annjson</code></td>
-        <td><p>To upload via API both: text (TXT files, PDF, etc. Check the <a href="ioformats.html#input-formats">input formats</a>) and its annotations <code>ann.json</code>. <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#import-annotated-documents-post">Example</a></p></td>
+        <td><p>To upload via API both: text (TXT files, PDF, etc. Check the <a href="ioformats.html#input-formats">input formats</a>) and its annotations <code>ann.json</code>. <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#import-annotated-documents-post">Example</a>.</p></td>
       </tr>
       <tr>
         <td><code>verbatim-plus-annjson</code></td>
-        <td><p>Analogous to <em>default-plus-annjson</em>, and complimentary to the <code>verbatim</code> format, use this format to parse any given file as <em>verbatim</em> accompanied with its annotation file (with ann.json extension).</p></td>
+        <td><p>Analogous to <em>default-plus-annjson</em>, and complimentary to the <code>verbatim</code> format, use this format to parse any given file as <em>verbatim</em> accompanied with its annotation file (with ann.json extension). <a href="API_documents_v1.html#examples-import-pre-annotated-verbatim-text">Example</a>.</p></td>
       </tr>
     </table>
   </div>

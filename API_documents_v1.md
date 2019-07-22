@@ -460,6 +460,12 @@ FILES
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
+      <td><code>format</code></td>
+      <td>-</td>
+      <td><code>verbatim</code></td>
+      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
+    </tr>
+    <tr>
       <td><code>distributeToMembers</code></td>
       <td><code>-</code></td>
       <td><code>John,Laura</code></td>

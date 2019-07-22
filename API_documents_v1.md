@@ -824,13 +824,14 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 </div>
 
 <div class="two-third-col">
+  <h4>Examples: import pre-annotated text</h4>
 
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-1-file">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. In this case we write the content of the ann.json file, but you could easily point to a existing ann.json file. Make sure the ann.json is well formated. The format used is <code>default-plus-annjson</code>.</p>
+  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code>. In this case, we write the content of the ann.json file, but you could easily point to a existing ann.json file. Make sure the ann.json is well formated.</p>
   <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
   ```python
 
@@ -860,6 +861,52 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 ```
 </div>
 </div>
+
+
+<div class="two-third-col">
+  <h4>Examples: import pre-annotated verbatim text</h4>
+
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to send pre-formatted text along with its annotations. The format used is <code>verbatim-plus-annjson</code>. In this case, the input files are given from the command line. Samples of the files' contents are commented inline.</p>
+  <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
+  ```python
+  import requests
+  import sys
+
+  plain_path = sys.argv[1]
+  annjson_path = sys.argv[2]
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+  auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "verbatim-plus-annjson", "output": "null"}
+
+  files = [
+      ("plain", open(plain_path)),  # Example text: The film stars Leonardo DiCaprio, Brad Pitt and Margot Robbie
+      ("ann.json", open(annjson_path))  # Example ann.json: {"annotatable":{"parts":["s1v1"]},"anncomplete":false,"sources":[],"metas":{},"entities":[{"classId":"e_29","part":"s1v1","offsets":[{"start":15,"text":"Leonardo DiCaprio"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}},{"classId":"e_29","part":"s1v1","offsets":[{"start":34,"text":"Brad Pitt"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}},{"classId":"e_29","part":"s1v1","offsets":[{"start":48,"text":"Margot Robbie"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}}],"relations":[]}
+  ]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  print(response.text)
+  ```
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response</p>
+<div markdown="1">
+```json
+{"ok":1,"errors":0,"items":[{"origid":"text.txt","names":["text.ann.json","text.txt"],"rawInputSizeInBytes":774,"tagtogID":"aumzCn3f5E9zDs4yihXZAipZjLx0-text.txt","result":"created","parsedTextSizeInBytes":62}],"warnings":[]}
+```
+</div>
+</div>
+
 
 
 <div class="two-third-col">

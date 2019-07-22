@@ -20,7 +20,7 @@ _???_
 <ul class="updates">
   <li class="fix"><span markdown="1">Public projects should but couldn't invite any number of members; now fixed.</span></li>  
   <li class="fix"><span markdown="1">Public projects should but couldn't search any number of documents; now fixed.</span></li>  
-  <li class="doc"><span markdown="1">Created API example for how to use `verbatim` o `verbatim-plus-annjson` new formats.</span></li>  
+  <li class="doc"><span markdown="1">Created API example for how to use [`verbatim`](API_documents_v1.html#examples-send-plain-text-as-verbatim) o [`verbatim-plus-annjson`](API_documents_v1.html#examples-import-pre-annotated-verbatim-text) new formats.</span></li>  
 </ul>
 
 ---

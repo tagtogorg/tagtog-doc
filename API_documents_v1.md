@@ -236,7 +236,7 @@ URLS
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -370,7 +370,7 @@ FILES
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -542,7 +542,7 @@ PUBMED IDS
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -704,7 +704,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -831,7 +831,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -955,7 +955,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -1152,7 +1152,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -1283,7 +1283,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -1383,7 +1383,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       </tr>
       <tr>
         <td><code>owner</code></td>
-        <td>Username sending the request</td>
+        <td>-</td>
         <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
         <td>Owner of the project you want to use</td>
       </tr>

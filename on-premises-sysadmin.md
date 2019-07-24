@@ -99,6 +99,27 @@ Defined as JSON parameters:
 </table>
 
 
+
+
+**Coding examples**
+
+<div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab_api_request_auth_token_curl">cURL</a></li>
+  </ul>
+  <div class="tab">
+<div id="tab_api_request_auth_token_curl" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u LICENSE_NAME:LICENSE_KEY -X POST -H "Content-Type: application/json" '{{ page.api_document_url }}/-sysadmin/request-auth-token'
+```
+</div>
+  </div>
+</div>
+
+
+
+
+
 </div>  <!-- Closes markdown div -->
 
 

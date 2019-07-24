@@ -110,7 +110,9 @@ Defined as JSON parameters:
   <div class="tab">
 <div id="tab_api_request_auth_token_curl" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u LICENSE_NAME:LICENSE_KEY -X POST -H "Content-Type: application/json" '{{ page.api_document_url }}/-sysadmin/request-auth-token'
+curl -u LICENSE_NAME:LICENSE_KEY -X POST -H "Content-Type: application/json" '{{ page.api_document_url }}/-sysadmin/request-auth-token' \
+-d '{"toUsername": "yourUsername", "useOnce": true, "expirationHours": 48}'
+# Example output: bbfd-33878148-6062-4934-a507-af4962753c8f
 ```
 </div>
   </div>
@@ -118,13 +120,16 @@ curl -u LICENSE_NAME:LICENSE_KEY -X POST -H "Content-Type: application/json" '{{
 
 
 
+#### How to use an auth token
 
 
+<br/><br/>
+.
 </div>  <!-- Closes markdown div -->
 
 
 
-    <br/>
+    <br/><hr/><br/>
     <h3>Tighter authorization</h3>
 
     <p markdown="1">Sometimes you might want to have a tighter control about what the users and visitors of your system are allowed to do. You can configure the following authorization controls using java dynamic properties. Specifically, you must properly set the environment variable `TAGTOG_JAVA_OPTS` with the desired configuration values as described for each point below.</p>

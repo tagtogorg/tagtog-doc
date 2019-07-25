@@ -106,6 +106,7 @@ request_auth_token_endpoint: /-sysadmin/request-auth-token
 <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab_api_request_auth_token_curl">cURL</a></li>
+    <li><a href="#tab_api_request_auth_token_httpie">HTTPie</a></li>
   </ul>
   <div class="tab">
 <div id="tab_api_request_auth_token_curl" class="tab-content" style="display: block" markdown="1">
@@ -115,6 +116,14 @@ curl -u LICENSE_NAME:LICENSE_KEY -X POST -H "Content-Type: application/json" '{{
 # Example output: bbfd-33878148-6062-4934-a507-af4962753c8f
 ```
 </div>
+
+<div id="tab_api_request_auth_token_httpie" class="tab-content" markdown="1">
+```shell
+http --verify no --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{{ page.request_auth_token_endpoint }}' toUsername=yourUsername useOnce:=false
+# Example output: 6f0d-90c2386a-8a33-4ad1-bd19-d4d35ad06f96
+```
+</div>
+
   </div>
 </div>
 
@@ -123,7 +132,7 @@ curl -u LICENSE_NAME:LICENSE_KEY -X POST -H "Content-Type: application/json" '{{
 
   <div class="two-third-col">    
     <h4>How to use an auth token</h4>
-      <p>Once you have an auth <code>token</code>, use it in a simple GET request to login with the associated-granted user. To the request also add a <code>redirectTo</code> (<a href="https://meyerweb.com/eric/tools/dencoder/">url-encoded</a>) parameter to indicate where to redirect to.</p>
+      <p>Once you have an auth <code>token</code>, use it in a simple GET request to login with the associated-granted user. To the request also add a <code>redirectTo</code> (<a href="https://meyerweb.com/eric/tools/dencoder/">url-encoded</a>) parameter to indicate where to redirect to. You must add these parameters to the <code>/</code> (root endpoint) of your tagtog's installation domain.</p>
       <p>Example: <code>{{ page.tagtog_domain }}/?redirectTo=https%3A%2F%2Fwww.tagtog.net%2F-datasets&token=bbfd-33878148-6062-4934-a507-af4962753c8f</code></p>
   </div> <!-- Closes main section: two-third-cold div -->
 

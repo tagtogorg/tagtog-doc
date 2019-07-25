@@ -19,6 +19,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) created new official [API and method to use SSO auth tokens](on-premises-sysadmin.html#single-sign-on-sso)</span></li>
   <li class="del"><span markdown="1">(OnPremises) the old login tokens and API have been deprecated. The old login tokens still work but it's recommended to use the new auth tokens.</span></li>
+  <li class="fix"><span markdown="1">Fixed that upon some conditions, but wrongly, some users could not be invited to projects.</span></li>
 </ul>
 
 ---

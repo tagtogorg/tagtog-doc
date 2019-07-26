@@ -22,6 +22,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="fix"><span markdown="1">Fixed that upon some conditions, but wrongly, some users could not be invited to projects.</span></li>
   <li class="new"><span markdown="1">The document index is now visible from the document editor. You now know how much work is left.</span></li>
   <li class="new"><span markdown="1">Long entity type names are now visible in the annotation menu.</span></li>
+  <li class="fix"><span markdown="1">Improved UI of verbatim documents: lines are now wrapped (and therefore no horizontal scrolling is necessary).</span></li>
 </ul>
 
 ---

@@ -291,6 +291,11 @@ id: projects
       </table>
     </div>
     <div class="one-third-col">
+      <div class="message">
+        Webhooks can be used to <strong>train your own machine learning models</strong>. You can learn how in this <a href="https://medium.com/@tagtog/how-to-train-your-ai-models-with-tagtog-5a2beaa12eb">tutorial</a>.
+      </div>
+    </div>
+    <div class="one-third-col">
       {% include image.html name="settings-webhook.PNG" %}
     </div>
   </div>

@@ -373,6 +373,7 @@ toc: true
       <br/>
       <h4>Document navigator</h4>
       <p>Each button with an arrow pointing to left and right. If you click on the button with the left arrow, the previous document in the folder will be loaded. If you click on the button with the right arrow, the next document in the folder will be loaded.</p>
+      <p>Under the document navigator, you can find the document index. This will give you an idea of where you are and how much work is left.</p>
     </div>
     <div class="one-third-col">
       <div class="message">

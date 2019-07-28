@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 👃
+## 3.2019-W30.0 👃
+_2019-07-28_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) created new official [API and method to use SSO auth tokens](on-premises-sysadmin.html#single-sign-on-sso)</span></li>

@@ -25,6 +25,14 @@ Know what you can do with tagtog with the following tutorials. Moreover, we publ
 </div>
 
 <div class="two-third-col">
+  <h2><a title="tagtog at Medium - Train your AI models with tagtog" href="https://medium.com/@tagtog/how-to-train-your-ai-models-with-tagtog-5a2beaa12eb">Learn how you can use webhooks to train a model</a></h2>
+  <p><strong>Webhooks</strong> can be used to notify your AI model when you have labelled new data in tagtog, so it can be <strong>retrained and improve its performance</strong></p>
+</div>
+<div class="one-third-col">
+  {% include image.html name="webhooks_tutorial.png" %}
+</div>
+
+<div class="two-third-col">
   <h2><a title="tagtog at Medium - Overlapping text annotations" href="https://medium.com/@tagtog/overlapping-text-annotations-19d7ac5b247a">Learn how overlapping text annotations can help you train a model more efficiently</a></h2>
   <p><strong>Overlapping annotations</strong> increase the flexibility and allow you to make the most out of your data. Learn how to use them and in which scenarios.</p>
 </div>

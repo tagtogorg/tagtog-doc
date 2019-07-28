@@ -8,7 +8,7 @@ title:            tagtog
 tagline:          'The Text Annotation Tool to Train AI'
 description:      'Official documentation for <a href="https://tagtog.net">tagtog</a>'
 app_url:          https://www.tagtog.net
-url:              http://docs.tagtog.net
+url:              https://docs.tagtog.net
 baseurl:
 sidebar_toc:
   - name: What's new

@@ -218,43 +218,51 @@ toc: true
         <tr>
           <th>Action</th>
           <th>Hotkey</th>
+          <th>Available in read-only mode</th>
           <th>Description</th>
         </tr>
         <tr>
           <td>Delete</td>
           <td class="centered"><kbd>d</kbd></td>
+          <td>No</td>
           <td>Delete annotation</td>
         </tr>
         <tr>
           <td>Permalink</td>
           <td class="centered">-</td>
+          <td>Yes</td>
           <td>Show a dialog box with a permalink for the annotation.</td>
         </tr>
         <tr>
           <td>Add relation</td>
           <td class="centered"><kbd>r</kbd></td>
+          <td>No</td>
           <td><p>Start a relation if a Relation Type is defined for the Entity Type of this entity. Once the relation is initialized, you can see highlighted the annotations you can relate your entity to. Other annotations are faded to indicate that you cannot relate the entity to these.</p>
           <p>Click on one of the available entities to set the relation. From that moment, both entities will be connected. Both entities will display this icon on the top {% include inline-image.html name="relation-bidirectional-icon.PNG" width="20" %}.</p></td>
         </tr>
         <tr>
           <td>See relations</td>
           <td class="centered">-</td>
+          <td>No</td>
           <td>See the relations this entity is part of.</td>
         </tr>
         <tr>
           <td>Change Type</td>
           <td class="centered">-</td>
+          <td>No</td>
           <td><p>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up. This list is sorted alphabetically.</p>
           <p>A change of entity type can affect the properties of the entity. Normalizations will be removed and only common entity labels will be preserved.</p></td>
         </tr>
         <tr>
           <td>Copy text</td>
           <td class="centered">-</td>
+          <td>Yes</td>
           <td>Copy the text of the annotation to the clipboard.</td>
         </tr>
         <tr>
           <td>Normalizations</td>
           <td class="centered"><kbd>↵</kbd></td>
+          <td>Yes, read-only</td>
           <td><p>Each <a href="/projects.html#dictionaries">dictionary</a> created for the entity type will appear as an input box. If the box is not empty, the entity is normalized to that value.</p>
           <p>If you type at least 3 characters, a list of recommended dictionary entries will appear. To select a normalization simply choose an entry. Otherwise you can type a new value. Each time you type or you select a value, the normalization is stored in the data model.</p>
           <p>Press the <kbd>+</kbd> button to add the value in the input box as a new entry for the dictionary. Instead of clicking the button, while you type a value, you can simple click the <kbd>↵</kbd>. If the entry is correctly added to the dictionary, a checkmark will show up during 1 second.</p></td>

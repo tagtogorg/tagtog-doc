@@ -6,6 +6,7 @@ import glob
 import fnmatch
 from itertools import islice, chain
 import argparse
+from argparse import RawTextHelpFormatter
 import getpass
 try:
     import requests
@@ -17,15 +18,18 @@ assert sys.version_info.major == 3, "This script requires Python 3"
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-__author__ = "tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks)"
-__version__ = "0.1.2"
+__author__ = "tagtog.net (@tagtog_net)"
+__version__ = "0.2.0"
 __doc__ = \
     """
-    tagtog official script to Upload & Search & Download documents.
+    tagtog official script to Upload & Search & Download & Delete documents.
 
     Version: {}
     Author: {}
+
+    Website: https://www.tagtog.net
     API documentation: https://docs.tagtog.net/API_documents_v1.html
+    Contact: Juan Miguel Cejuela (@juanmirocks)
     """.format(__version__, __author__)
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -36,7 +40,7 @@ DEFAULT_DOMAIN = os.environ.get('TAGTOG_DOMAIN') or "https://www.tagtog.net/"
 
 
 def parse_arguments(argv=[]):
-    parser = argparse.ArgumentParser(prog="tagtog", description=__doc__)
+    parser = argparse.ArgumentParser(prog="tagtog", description=__doc__, formatter_class=RawTextHelpFormatter)
     subparsers = parser.add_subparsers(dest="action")
 
     def str2bool(x):
@@ -90,6 +94,14 @@ def parse_arguments(argv=[]):
 
     # -----------------------------------------------------------------------------------------------------------------
 
+    search_parser = subparsers.add_parser("delete", help='Delete documents that match a search query, e.g. `docid:aZ8wXRHvqyw7tjBQW8NXMTPQ0S.C-test.md` (to delete a specific doc)')
+    search_parser = add_common_arguments(search_parser, default_output="null")  # Stub output
+    search_parser.set_defaults(func=print_delete)
+
+    search_parser.add_argument("search", nargs="+", help="search query (a same string used on the GUI)")
+
+    # -----------------------------------------------------------------------------------------------------------------
+
     args = parser.parse_args(argv)
 
     if args.action is None:
@@ -128,7 +140,7 @@ def parse_arguments(argv=[]):
 
     # -----------------------------------------------------------------------------------------------------------------
 
-    if args.action in ["search", "download"]:
+    if args.action in ["search", "download", "delete"]:
         args.search = " ".join(args.search)
         args.req_params["search"] = args.search
 
@@ -223,6 +235,27 @@ def search(args):
 
     if response.ok:
         return (response.json(), response)
+    else:
+        return (None, response)
+
+
+# -----------------------------------------------------------------------------------------------------------------
+
+
+def print_delete(args):
+    (txt, response) = delete(args)
+
+    if txt:
+        print(txt)
+    else:
+        print("ERROR;", response.status_code, response.reason)
+
+
+def delete(args):
+    response = requests.delete(args.req_url, params=args.req_params, auth=args.req_auth, verify=args.verify_ssl)
+
+    if response.ok:
+        return (response.text, response)
     else:
         return (None, response)
 

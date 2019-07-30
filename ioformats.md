@@ -48,7 +48,12 @@ toc: true
   </div>
   <div class="two-third-col">
     <h3>Files</h3>
-    <p>You can import files to tagtog. These are the formats supported:</p>
+    <p>You can import files to tagtog. Following are the supported formats.</p>
+
+    <h4>Default-distinguish format by file extension</h4>
+
+    <p>The format is automatically recognized by the file extension; no other parameter is needed.</p>
+
     <table style="width:100%">
       <tr>
         <th>File extension</th>
@@ -83,7 +88,7 @@ toc: true
 
       <tr>
         <td>source code files</td>
-        <td>Supported programming language extensions include: <code>.java, .scala, .js, .py, .python, .jsx, .c, .h, .mm, .M, .cpp, .sql, .cs, .css, .r, .vb, .php, .swift, .go, .m, .sass, .less, .rb, .sh, .ts, .tsx, .shell, .sh</code></td>
+        <td>Supported programming language extensions include: <code>.java, .scala, .js, .py, .python, .jsx, .c, .h, .mm, .M, .cpp, .sql, .cs, .css, .r, .vb, .php, .swift, .go, .m, .sass, .less, .rb, .sh, .ts, .tsx, .shell, .sh, .log</code></td>
       </tr>
 
       <tr>
@@ -91,6 +96,30 @@ toc: true
         <td><a href="#annotation-input-formats">See below</a></td>
       </tr>      
     </table>
+
+
+    <h4>Distinguish format by given <code>format</code> parameter</h4>
+
+    <p>Currently only available via API, use the <a href="API_documents_v1.html#import-annotated-documents-post"><code>format</code> parameter</a> to "force" the format.</p>
+
+    <table style="width:100%">
+      <tr>
+        <th>Format</th>
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td><code>verbatim</code></td>
+        <td>ANY file that will be parsed as already pre-formatted. No transformation is done at all to the given content. This is ideal, for instance, for files that contain arbitrary indentation or white spaces. <a href="API_documents_v1.html#examples-send-plain-text-as-verbatim">Example</a>.</td>
+      </tr>
+
+      <tr>
+        <td>Annotation input formats</td>
+        <td><a href="#annotation-input-formats">See below</a></td>
+      </tr>      
+    </table>
+
+
   </div>
   <div class="one-third-col">
     <div class="message">
@@ -134,11 +163,15 @@ toc: true
       </tr>
       <tr>
         <td><code>anndoc</code></td>
-        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload the via API both, the <code>plain.html</code> and its annotations <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#replace-annotations-of-existing-document-post">Example</a></p></td>
+        <td><p>Use the <a href="anndoc.html">anndoc format</a> to upload the via API both, the <code>plain.html</code> and its annotations <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#replace-annotations-of-existing-document-post">Example</a>.</p></td>
       </tr>
       <tr>
         <td><code>default-plus-annjson</code></td>
-        <td><p>To upload via API both: text (TXT files, PDF, etc. Check the <a href="ioformats.html#input-formats">input formats</a>) and its annotations <code>ann.json</code>. <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#import-annotated-documents-post">Example</a></p></td>
+        <td><p>To upload via API both: text (TXT files, PDF, etc. Check the <a href="ioformats.html#input-formats">input formats</a>) and its annotations <code>ann.json</code>. <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#import-annotated-documents-post">Example</a>.</p></td>
+      </tr>
+      <tr>
+        <td><code>verbatim-plus-annjson</code></td>
+        <td><p>Analogous to <em>default-plus-annjson</em>, and complimentary to the <code>verbatim</code> format, use this format to parse any given file as <em>verbatim</em> accompanied with its annotation file (with ann.json extension). <a href="API_documents_v1.html#examples-import-pre-annotated-verbatim-text">Example</a>.</p></td>
       </tr>
     </table>
   </div>

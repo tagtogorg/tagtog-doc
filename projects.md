@@ -291,6 +291,11 @@ id: projects
       </table>
     </div>
     <div class="one-third-col">
+      <div class="message">
+        Webhooks can be used to <strong>train your own machine learning models</strong>. You can learn how in this <a href="https://medium.com/@tagtog/how-to-train-your-ai-models-with-tagtog-5a2beaa12eb">tutorial</a>.
+      </div>
+    </div>
+    <div class="one-third-col">
       {% include image.html name="settings-webhook.PNG" %}
     </div>
   </div>
@@ -333,7 +338,7 @@ id: projects
       <p>In this panel you can invite and organize other users in your project, so they can collaborate in the annotation tasks. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="settings-members.png" %}
+      {% include image.html name="settings-members.PNG" %}
     </div>
     <div class="two-third-col">
     <h5>Invite other users to your project</h5>
@@ -349,6 +354,8 @@ id: projects
       <p>With this setting you can <strong>automatically distribute the project's documents among your annotators</strong>. For example, if you choose 1 annotator, every uploaded document will be randomly assigned to one project's member to annotate. Otherwise, for example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 project's members; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
       <p>This overlapping is recommended to increase the overall quality of your annotation project. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a></p>
       <p>In this section you can decide whether the project's owner (the person who created the project) should be assigned documents to annotate or not.</p>
+       <p>By default documents are not distributed, and therefore members annotate directly on the <a href="collaboration.html#annotation-versions"><code>master</code> version</a>. Once the task distribution is activated (number of annotators per document is 1 or more), members annotate on their own independent version.</p>
+      <p>When task distribution is activated, project members see by default (in Documents) the special search view <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a>. This view lists the documents that the annotator still has to annotate or review, if any.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
@@ -357,19 +364,9 @@ id: projects
       <div class="message">
         The number of annotators per document is limited to the number of annotators in a project.
       </div>
+      {% include image.html name="settings-task-distribution.png" %}
     </div>
    </div>
-
-   <div class="two-third-col">
-   <h5>Task Distribution</h5>
-   <p>You can distribute documents to annotate automatically among your members. <a href="collaboration.html#annotation-flows-task-distribution">More info on annotation workflows here</a>.</p>
-   <p>By default documents are not distributed, and therefore members annotate directly on the <a href="collaboration.html#annotation-versions"><code>master</code> version</a>. Once the task distribution is activated (number of annotators per document is 1 or more), members annotate on their own independent version.</p>
-   <p>When task distribution is activated, project members see by default (in Documents) the special search view <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a>. This view lists the documents that the annotator still has to annotate or review, if any.</p>
-   </div>
-   <div class="one-third-col">
-     {% include image.html name="settings-task-distribution.png" %}
-   </div>
-
 
   <div class="page-subsection">
     <div class="two-third-col">

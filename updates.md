@@ -14,6 +14,53 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🐃
+
+<ul class="updates">
+  <li class="new"><span markdown="1">[The **IAA** is now also calculated for all members against the **master** / official annotations](collaboration.html#iaa-inter-annotator-agreement)!</span></li>
+</ul>
+
+---
+
+## 3.2019-W30.0 👃
+_2019-07-28_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) created new official [API and method to use SSO auth tokens](on-premises-sysadmin.html#single-sign-on-sso)</span></li>
+  <li class="del"><span markdown="1">(OnPremises) the old login tokens and API have been deprecated. The old login tokens still work but it's recommended to use the new auth tokens.</span></li>
+  <li class="fix"><span markdown="1">Fixed that upon some conditions, but wrongly, some users could not be invited to projects.</span></li>
+  <li class="new"><span markdown="1">The document index is now visible from the document editor. You now know how much work is left.</span></li>
+  <li class="new"><span markdown="1">Long entity type names are now visible in the annotation menu.</span></li>
+  <li class="fix"><span markdown="1">Improved UI of verbatim documents: lines are now wrapped (and therefore no horizontal scrolling is necessary).</span></li>
+  <li class="new"><span markdown="1">Be able to change a (project) member's role flexibly, without, as before, having to delete and to re-add the member again.</span></li>
+</ul>
+
+---
+
+## 3.2019-W29.2 🧚‍♀️
+_2019-07-22_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Public projects should but couldn't invite any number of members; now fixed.</span></li>  
+  <li class="fix"><span markdown="1">Public projects should but couldn't search any number of documents; now fixed.</span></li>  
+  <li class="doc"><span markdown="1">Created API example for how to use [`verbatim`](API_documents_v1.html#examples-send-plain-text-as-verbatim) o [`verbatim-plus-annjson`](API_documents_v1.html#examples-import-pre-annotated-verbatim-text) new formats.</span></li>  
+</ul>
+
+---
+
+## 3.2019-W29.1 👙
+_2019-07-21_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">[New `verbatim` **format**](ioformats.html#distinguish-format-by-given-format-parameter) to send and have ANY file parsed as verbatim (pre-formatted). This allows you to preserve any indentation or extra spacing 🥳.</span></li>
+  <li class="new"><span markdown="1">Complimentary, [new `verbatim-plus-annjson` **format**](ioformats.html#annotation-input-formats) to have any file parsed as verbatim together with its annotation ann.json file.</span></li>
+  <li class="new"><span markdown="1">Now `.log` files are also parsed by default in `verbatim` mode (like other programming languages, such as .py for python or .js for JavaScript).</span></li>
+  <li class="fix"><span markdown="1">Fixed the parsing of `anndoc` documents that might contain the period `.` character in its file name (besides the file extension).</span></li>
+  <li class="fix"><span markdown="1">Return the proper original _content_ file in case it was sent from the beginning with an ann.json annotation file.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W28.0 👾
 _2019-07-11_
 
@@ -112,7 +159,7 @@ _2019-05-13_
 _2019-05-05_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">New parameter [`distributeToMembers` (API documents) to fine-tune the distribution of tasks](http://docs.tagtog.net/API_documents_v1.html#import-and-annotate-text).</span></li>
+  <li class="new"><span markdown="1">New parameter [`distributeToMembers` (API documents) to fine-tune the distribution of tasks](https://docs.tagtog.net/API_documents_v1.html#import-and-annotate-text).</span></li>
   <li class="fix"><span markdown="1">Fixed non-breaking error of repeatedly adding _nav=false_ to the URL query string when removing documents manually.</span></li>
   <li class="fix"><span markdown="1">Fixed error of having to upload a PDF twice after activating _Native PDF_ to make it actually work.</span></li>
   <li class="fix"><span markdown="1">Fixed errors on changing the number of members and task distribution settings that sometimes caused inconsistent states.</span></li>
@@ -301,7 +348,7 @@ _2019-01-11_
 _2019-01-07_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Configuration fix</span></li>
+  <li class="fix"><span markdown="1">Configuration fix</span></li>
 </ul>
 
 ---

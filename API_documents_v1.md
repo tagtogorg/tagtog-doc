@@ -75,7 +75,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -94,7 +94,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <th>Default</th>
       <th>Example</th>
       <th>Description</th>
-    </tr>
+    </tr>    
     <tr>
       <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
@@ -107,6 +107,12 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>pool</code></td>
       <td><code>pool</code></td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
+    </tr>
+    <tr>
+      <td><code>format</code></td>
+      <td>-</td>
+      <td><code>verbatim</code></td>
+      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
@@ -127,7 +133,8 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
 
 
 <div class="two-third-col">
-
+  <h4>Examples: send plain text</h4>
+  <br/>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -178,6 +185,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       </div>
     </div>
   </div>
+
 <div class="one-third-col">
   <p>Response <code>ann.json</code></p>
 <div markdown="1">
@@ -193,6 +201,60 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     "metas":{},
     "relations":[],
     "annotatable":{"parts":["s1h1","s1p1"]}
+}
+```
+</div>
+</div>
+
+
+
+<div class="two-third-col">
+  <h4>Examples: send plain text as verbatim</h4>
+  <p>This is when you need to work on the exactly the same formatting as your input text...</p>
+  <br/>
+
+  <div id="tabs-container">
+    <ul class="tabs-menu">      
+      <li class="current"><a href="#tab-plain-text-verbatim-python">Python</a></li>
+    </ul>
+    <div class="tab">
+      <p class="code-desc">This example imports plain text in verbatim format (pre-formatted) and returns the result of the operation (<code>null</code> output).</p>
+<div id="tab-plain-text-verbatim-python" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+params = {"project": "yourProjectName", "owner": "yourUsername", "format": "verbatim", "output": "null"}
+payload = {
+    "text": "The film stars Leonardo DiCaprio, Brad Pitt and Margot Robbie"
+}
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, data=payload)
+print(response.text)
+```
+</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="one-third-col">
+  <p>Response <code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "text.txt",
+    "names": ["text.txt"],
+    "rawInputSizeInBytes": 61,
+    "tagtogID": "aumzCn3f5E9zDs4yihXZAipZjLx0-text.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 61
+  }],
+  "warnings": []
 }
 ```
 </div>
@@ -230,7 +292,7 @@ URLS
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -364,7 +426,7 @@ FILES
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -396,6 +458,12 @@ FILES
       <td><code>pool</code></td>
       <td><code>pool</code></td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
+    </tr>
+    <tr>
+      <td><code>format</code></td>
+      <td>-</td>
+      <td><code>verbatim</code></td>
+      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
@@ -536,7 +604,7 @@ PUBMED IDS
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -698,7 +766,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -710,8 +778,8 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>format</code></td>
-      <td><code>anndoc</code></td>
       <td><code>default-plus-annjson</code></td>
+      <td><code>anndoc</code></td>
       <td>Format of the pre-annotated document. Remember that <code>anndoc</code> format requires the content as <code>plain.html</code>. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a></td>
     </tr>
   </table>
@@ -756,13 +824,14 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 </div>
 
 <div class="two-third-col">
+  <h4>Examples: import pre-annotated text</h4>
 
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-1-file">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. In this case we write the content of the ann.json file, but you could easily point to a existing ann.json file. Make sure the ann.json is well formated. The format used is <code>default-plus-annjson</code>.</p>
+  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code>. In this case, we write the content of the ann.json file, but you could easily point to a existing ann.json file. Make sure the ann.json is well formated.</p>
   <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
   ```python
 
@@ -792,6 +861,52 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 ```
 </div>
 </div>
+
+
+<div class="two-third-col">
+  <h4>Examples: import pre-annotated verbatim text</h4>
+
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to send pre-formatted text along with its annotations. The format used is <code>verbatim-plus-annjson</code>. In this case, the input files are given from the command line. Samples of the files' contents are commented inline.</p>
+  <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
+  ```python
+  import requests
+  import sys
+
+  plain_path = sys.argv[1]
+  annjson_path = sys.argv[2]
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+  auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "verbatim-plus-annjson", "output": "null"}
+
+  files = [
+      ("plain", open(plain_path)),  # Example text: The film stars Leonardo DiCaprio, Brad Pitt and Margot Robbie
+      ("ann.json", open(annjson_path))  # Example ann.json: {"annotatable":{"parts":["s1v1"]},"anncomplete":false,"sources":[],"metas":{},"entities":[{"classId":"e_29","part":"s1v1","offsets":[{"start":15,"text":"Leonardo DiCaprio"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}},{"classId":"e_29","part":"s1v1","offsets":[{"start":34,"text":"Brad Pitt"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}},{"classId":"e_29","part":"s1v1","offsets":[{"start":48,"text":"Margot Robbie"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}}],"relations":[]}
+  ]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  print(response.text)
+  ```
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response</p>
+<div markdown="1">
+```json
+{"ok":1,"errors":0,"items":[{"origid":"text.txt","names":["text.ann.json","text.txt"],"rawInputSizeInBytes":774,"tagtogID":"aumzCn3f5E9zDs4yihXZAipZjLx0-text.txt","result":"created","parsedTextSizeInBytes":62}],"warnings":[]}
+```
+</div>
+</div>
+
 
 
 <div class="two-third-col">
@@ -825,7 +940,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -949,7 +1064,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -1146,7 +1261,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -1277,7 +1392,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>Username sending the request</td>
+      <td>-</td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -1377,7 +1492,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       </tr>
       <tr>
         <td><code>owner</code></td>
-        <td>Username sending the request</td>
+        <td>-</td>
         <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
         <td>Owner of the project you want to use</td>
       </tr>
@@ -1533,7 +1648,7 @@ usage: tagtog [-h] {upload,search,download} ...
 
 tagtog official script to Upload & Search & Download documents. Version: 0.1.2
 Author: tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks) API
-documentation: http://docs.tagtog.net/API_documents_v1.html
+documentation: https://docs.tagtog.net/API_documents_v1.html
 
 positional arguments:
   {upload,search,download}

@@ -18,13 +18,6 @@ model_path="model.h5"
 
 #This is where your tagtog username and password would go
 auth = requests.auth.HTTPBasicAuth(username="uxio", password="12345678")
-corpus = [
-    "Hi, just wanted to say that you are a worthless piece of shit",
-    "Hello John! Please txt ur favorite footballer and sign up in www.vivafootball.com to get a discount in your next purchase!",
-    "who are you?",
-    "Hi, send a sms to the number +44 888 888 888 to get free ringtones",
-    "Thanks for your subscription to Ringtone UK your mobile will be charged £5/month Please confirm by replying YES or NO. If you reply NO you will not be charged"
-]
 
 ################################################################################
 #   FUNCTION NAME: tagtog_webhook
@@ -75,8 +68,9 @@ def tagtog_webhook():
     (model,acc) = train(text, label, model,tokenizer)
     acc = 1.0
     #Now pass the model new unseen data and let it make a prediction
+    corpus = collect_unlabeled_sample()
     #Make a prediction and upload it to tagtog
-    predict_and_upload(corpus,model,tokenizer,acc,project_name,owner)
+    predict_and_upload(,model,tokenizer,acc,project_name,owner)
 
     return tagtogID
 
@@ -147,8 +141,14 @@ def train(text,label, model,tokenizer):
     return(model,acc)
 
 def collect_unlabeled_sample():
-    output = next(corpus)
-    return output
+    corpus = [
+        "Hi, just wanted to say that you are a worthless piece of shit",
+        "Hello John! Please txt ur favorite footballer and sign up in www.vivafootball.com to get a discount in your next purchase!",
+        "who are you?",
+        "Hi, send a sms to the number +44 888 888 888 to get free ringtones",
+        "Thanks for your subscription to Ringtone UK your mobile will be charged £5/month Please confirm by replying YES or NO. If you reply NO you will not be charged"
+    ]
+    return corpus
 
 
 def predict(text,model,tokenizer):

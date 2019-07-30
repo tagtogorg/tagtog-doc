@@ -1,7 +1,7 @@
-<script src="{{ site.baseurl }}/assets/js/lunr.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/lunr.stemmer.support.min.js"></script>
-<script src='{{ site.baseurl }}/assets/js/search-data.json'></script>
-<script src='{{ site.baseurl }}/assets/css/search.css'></script>
+<script src="/assets/js/lunr.min.js"></script>
+<script src="/assets/js/lunr.stemmer.support.min.js"></script>
+<script src='/assets/js/search-data.json'></script>
+<script src='/assets/css/search.css'></script>
 <script>
 
 
@@ -70,7 +70,7 @@
           var content = formatContentString(store[ref].excerpt, query);
           var searchitem = "<li>";
           searchitem +=   "<a href='" + store[ref].url + "?q=" + query + "'><h3>" + store[ref].title + "</h3></a>";
-          searchitem +=   "<p>" + content.replace(/\s*\{.*?\}\}\s*/g, "...").split(" ").splice(0, 20).join(" ") + "</p>";
+          searchitem +=   "<p>" + content.replace(/\s*\{.*?\}\}\s*/g, "...").split(" ").splice(0, 280).join(" ") + "</p>";
           searchitem +=   "</li>"
           resultdiv.append(searchitem);
         }

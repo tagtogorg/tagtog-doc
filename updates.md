@@ -18,6 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="new"><span markdown="1">[The **IAA** is now also calculated for all members against the **master** / official annotations](collaboration.html#iaa-inter-annotator-agreement)!</span></li>
+  <li class="new"><span markdown="1">Two new functionalities for the annotation menu in read-only mode (e.g. for the users with reader role or in public projects): Copy text and Permalink. Check the [available functionalities for the menu in read-only mode](webeditor.html#annotation-menu).</span></li>
   <li class="new"><span markdown="1">Added functionality to [**DELETE** documents with the official tagtog python script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py)</span></li>
 </ul>
 
@@ -42,9 +43,9 @@ _2019-07-28_
 _2019-07-22_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">Public projects should but couldn't invite any number of members; now fixed.</span></li>  
-  <li class="fix"><span markdown="1">Public projects should but couldn't search any number of documents; now fixed.</span></li>  
-  <li class="doc"><span markdown="1">Created API example for how to use [`verbatim`](API_documents_v1.html#examples-send-plain-text-as-verbatim) o [`verbatim-plus-annjson`](API_documents_v1.html#examples-import-pre-annotated-verbatim-text) new formats.</span></li>  
+  <li class="fix"><span markdown="1">Public projects should but couldn't invite any number of members; now fixed.</span></li>
+  <li class="fix"><span markdown="1">Public projects should but couldn't search any number of documents; now fixed.</span></li>
+  <li class="doc"><span markdown="1">Created API example for how to use [`verbatim`](API_documents_v1.html#examples-send-plain-text-as-verbatim) o [`verbatim-plus-annjson`](API_documents_v1.html#examples-import-pre-annotated-verbatim-text) new formats.</span></li>
 </ul>
 
 ---
@@ -68,10 +69,10 @@ _2019-07-11_
 <ul class="updates">
   <li class="new"><span markdown="1">First rollout of **Public Projects** ⛱.</span></li>
   <li class="new"><span markdown="1">New role: [`reader`](collaboration.html#roles) 👓.</span></li>
-  <li class="new"><span markdown="1">Created an independent page to see the [status of tagtog's services](http://status.tagtog.net)</span></li>  
+  <li class="new"><span markdown="1">Created an independent page to see the [status of tagtog's services](http://status.tagtog.net)</span></li>
   <li class="new"><span markdown="1">See your active projects first: your list of projects is now sorted by your last access to them!.</span></li>
   <li class="fix"><span markdown="1">No longer can users without enough authorization see action buttons that do require authorization (for example in settings).</span></li>
-  <li class="fix"><span markdown="1">(PDF Viewer) Eliminate race conditions for Pan functionality.</span></li>  
+  <li class="fix"><span markdown="1">(PDF Viewer) Eliminate race conditions for Pan functionality.</span></li>
 </ul>
 
 ---

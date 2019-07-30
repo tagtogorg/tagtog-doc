@@ -1,7 +1,7 @@
 <script src="/assets/js/lunr.min.js"></script>
 <script src="/assets/js/lunr.stemmer.support.min.js"></script>
 <script src='/assets/js/search-data.json'></script>
-<script src='/assets/css/search.css'></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/search.css">
 <script>
 
 
@@ -62,19 +62,20 @@
             })
           });
         resultdiv.empty();
-        resultdiv.prepend('<p class="results__found">' + result.length + ' {{ site.data.text[site.locale].results_found | default: "Result(s) found" }}</p>');
-        resultdiv.append('<div id="search-results">')
-        resultdiv.append('<ul class="search-results">')
+        resultdiv.prepend('<p class="results_found">' + result.length + ' {{ site.data.text[site.locale].results_found | default: "Result(s) found" }}</p>');
+        var ObjUl = $('<ul></ul>');
+        ObjUl.addClass("search-results");
         for (var item in result) {
           var ref = result[item].ref;
           var content = formatContentString(store[ref].excerpt, query);
           var searchitem = "<li>";
-          searchitem +=   "<a href='" + store[ref].url + "?q=" + query + "'><h3>" + store[ref].title + "</h3></a>";
+          searchitem +=   "<a href='" + store[ref].url + "?q=" + query + "'><h4>" + store[ref].title + "</h4></a>";
           searchitem +=   "<p>" + content.replace(/\s*\{.*?\}\}\s*/g, "...").split(" ").splice(0, 280).join(" ") + "</p>";
           searchitem +=   "</li>"
-          resultdiv.append(searchitem);
+          ObjUl.append(searchitem);
         }
-        //resultdiv.append('</ul>')
+
+        resultdiv.append(ObjUl);
       });
     });
 </script>

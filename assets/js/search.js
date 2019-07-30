@@ -1,11 +1,9 @@
 (function() {
 
     function displaySearchResults(results, store, searchTerm) {
-      var searchResults = document.getElementById('search-results');
-  
       if (results.length) {
         var appendString = '';
-  
+
         for (var i = 0; i < results.length; i++) {  // Iterate over the results
           var item = store[results[i].ref];
           var content = formatContentString(item.content, searchTerm);
@@ -14,20 +12,20 @@
           appendString +=   "<div class='snippet'>" + content + "</div>";
           appendString += "</li>"
         }
-  
+
         return appendString;
       } else {
         return '<li>No results found</li>';
       }
     }
-  
+
     function getQueryVariable(variable) {
       var query = window.location.search.substring(1);
       var vars = query.split('&');
-  
+
       for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split('=');
-  
+
         if (pair[0] === variable) {
           return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
         }
@@ -55,9 +53,9 @@
             return emptyTrimmedString;
         }
     }
-  
+
     var searchTerm = getQueryVariable('query');
-  
+
     if (searchTerm) {
       //document.getElementById('search-box').setAttribute("value", searchTerm);
 
@@ -74,10 +72,10 @@
           'title': window.pages[key].title,
           'content': window.pages[key].content
         });
-  
+
         var results = idx.search(searchTerm); // Get lunr to perform a search
-        document.querySelector("#search-results").innerHTML = displaySearchResults(results, window.store, searchTerm);
+
+        document.querySelector(".search-results").innerHTML = displaySearchResults(results, window.store, searchTerm);
       }
     }
   })();
-  

@@ -559,6 +559,37 @@ body {
   margin: 0 0.25em;
 }
 
+#sidebar-search-engine-form {
+  border-radius: 10px;
+  padding: 5px;
+  font-size: inherit;
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+}
+
+#sidebar-search-engine-form::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #b9b9b9;
+}
+#sidebar-search-engine-form::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #b9b9b9;
+  opacity:  1;
+}
+#sidebar-search-engine-form::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #b9b9b9;
+  opacity:  1;
+}
+#sidebar-search-engine-form::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #b9b9b9;
+}
+#sidebar-search-engine-form::-ms-input-placeholder { /* Microsoft Edge */
+  color:    #b9b9b9;
+}
+
+#sidebar-search-engine-form::placeholder { /* Most modern browsers support this now. */
+  color:    #b9b9b9;
+}
+
 
 /* -----------------------------------------------------------
   Sticky sidebar

@@ -8,12 +8,13 @@
 
 
 <script>
-        $(document).ready(function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            $("input#search-engine-form").val(urlParams.get("query"));
-            $("input#search-engine-form").keyup();
-        });
+  $(document).ready(function () {
+
+    const urlParams = new URLSearchParams(window.location.search);
+    $("input#search-engine-form").val(urlParams.get("query"));
+    $("input#search-engine-form").keyup();
+  });
 </script>
-    
+
 
 <div id="results"></div>

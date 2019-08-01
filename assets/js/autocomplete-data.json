@@ -5,9 +5,8 @@ sitemap: false
 
 var storeAutocomplete = [
     {%- for doc in site.pages -%}
-        {% unless doc.title == null %}
-                {{ doc.title | jsonify }}
+        {% if doc.title contains '(old link)' or doc.title == null%}{% continue %}{% endif %}
+            {{ doc.title | jsonify }}
             {%- unless forloop.last and l -%}, {%- endunless -%}
-        {% endunless %}
   {%- endfor -%}
 ]

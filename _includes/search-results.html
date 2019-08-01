@@ -1,7 +1,11 @@
+<script src='/assets/js/autocomplete.js'></script>
+<script src='/assets/js/autocomplete-data.json'></script>
 {{ content }}
 
 <form onsubmit="">
-  <input type="input" id="search-engine-form" class="search-input" placeholder="{{ site.pages.[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" autofocus>
+  <div class="autocomplete" style="width:30%;">
+    <input type="input" id="search-engine-form" class="search-input" placeholder="{{ site.pages.[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" autofocus>
+  </div>
 </form>
 
 {% include lunr-search.html %}
@@ -18,3 +22,7 @@
 
 
 <div id="results"></div>
+
+<script>
+  autocomplete(document.getElementById("search-engine-form"), storeAutocomplete);
+</script>

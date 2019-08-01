@@ -5,10 +5,11 @@ sitemap: false
 
 var store = [
     {%- for doc in site.pages -%}
+    {% unless doc.title == null or doc.title == 'API documents (old link)' %}
       {
         "title": {{ doc.title | jsonify }},
         "excerpt":
-          {{ doc.content | 
+          {{ doc.content  |
             replace:"</p>", " " | 
             replace:"</h1>", " " | 
             replace:"</h2>", " " |
@@ -17,5 +18,6 @@ var store = [
           strip_html | strip_newlines | smartify | jsonify }},
         "url": {{ doc.url | absolute_url | jsonify }}
       } {%- unless forloop.last and l -%}, {%- endunless -%}
+      {% endunless %}
   {%- endfor -%}
 ]

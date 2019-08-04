@@ -20,6 +20,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="new"><span markdown="1">[The **IAA** is now also calculated for all members against the **master** / official annotations](collaboration.html#iaa-inter-annotator-agreement)!</span></li>
   <li class="new"><span markdown="1">Two new functionalities for the annotation menu in read-only mode (e.g. for the users with reader role or in public projects): Copy text and Permalink. Check the [available functionalities for the menu in read-only mode](webeditor.html#annotation-menu).</span></li>
   <li class="new"><span markdown="1">Added functionality to [**DELETE** documents with the official tagtog python script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py)</span></li>
+  <li class="new"><span markdown="1">Now **showing the IAA of every document** on the document!</span></li>
 </ul>
 
 ---

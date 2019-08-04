@@ -1648,7 +1648,7 @@ usage: tagtog [-h] {upload,search,download} ...
 
 tagtog official script to Upload & Search & Download documents. Version: 0.1.2
 Author: tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks) API
-documentation: http://docs.tagtog.net/API_documents_v1.html
+documentation: https://docs.tagtog.net/API_documents_v1.html
 
 positional arguments:
   {upload,search,download}

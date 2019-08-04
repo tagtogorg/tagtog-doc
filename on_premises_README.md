@@ -92,7 +92,7 @@ The application supports http proxies and automatically recognizes your host var
 
 ## Update
 
-You can manually check for [new tagtog updates on this link](http://docs.tagtog.net/updates.html). Then:
+You can manually check for [new tagtog updates on this link](https://docs.tagtog.net/updates.html). Then:
 
 ```shell
 ./tagtog_on_premises update

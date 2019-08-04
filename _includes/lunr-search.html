@@ -67,10 +67,19 @@
         ObjUl.addClass("search-results");
         for (var item in result) {
           var ref = result[item].ref;
+          var title = store[ref].title;
+          var url = store[ref].url;
+          if(store[ref].section){
+            var parsedTitle = title.split("\n");
+            title = parsedTitle[0];
+            var parsedUrl = title.replace(/ /g,"-").replace(/,/g,"");
+            url += "#" + parsedUrl.substr(1).toLowerCase();
+          }
+
           var content = formatContentString(store[ref].excerpt, query);
           var searchitem = "<li>";
-          searchitem +=   "<a href='" + store[ref].url + "?q=" + query + "'><h4>" + store[ref].title + "</h4></a>";
-          searchitem +=   "<p>" + content.replace(/\s*\{.*?\}\}\s*/g, "...").split(" ").splice(0, 280).join(" ") + "</p>";
+          searchitem +=   "<a href='" + url + "'><h4>" + title + "</h4></a>";
+          searchitem +=   "<p>" + content.replace(/\s*\{\{\%.*?\%\}\}\s*/g, "...").replace(/ *\{\%[^)]*\%\} */g, "").split(" ").splice(0, 280).join(" ") + "</p>";
           searchitem +=   "</li>"
           ObjUl.append(searchitem);
         }

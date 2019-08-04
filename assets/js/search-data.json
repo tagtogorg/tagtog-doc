@@ -4,19 +4,50 @@ sitemap: false
 ---
 
 var store = [
-    {%- for doc in site.pages -%}
-    {% if doc.title contains '(old link)' or doc.title == null or doc.title == 'null'%}{% continue %}{% endif %}
-      {
-        "title": {{ doc.title | jsonify }},
-        "excerpt":
-          {{ doc.content  |
-            replace:"</p>", " " | 
-            replace:"</h1>", " " | 
-            replace:"</h2>", " " |
-            replace:"###", " " |
-            replace:"##", " " |
-          strip_html | strip_newlines | smartify | jsonify }},
-        "url": {{ doc.url | absolute_url | jsonify }}
-      } {%- unless forloop.last and l -%}, {%- endunless -%}
+  {%- for doc in site.pages -%}
+    {% if doc.title contains '(old link)' or doc.title == null or doc.title == 'null' or doc.title contains '404'%}{% continue %}{% endif %}
+    {%- assign head = doc.content | strip_html | smartify  | split: "###" -%}
+          {% for member in head %}
+            {% if forloop.first == true %} 
+            {"title": {{doc.title | jsonify}},
+              "section": false,
+            {% else %}
+            {% assign title = member | split: "\n\n\n" %}
+            {% assign check1 = title[0] | split: "\n\n" %}
+            {% assign check2 = check1[0] | split: "\n" %}
+            
+            {"title": {{check2[0] | jsonify }},
+              "section": true,
+            {% endif %}
+            "excerpt" : {{member | replace:"</p>", " " | 
+              replace:"</h1>", " " | 
+              replace:"</h2>", " " |
+              replace:"###", " " |
+              replace:"##", " " |
+            strip_html | strip_newlines | smartify | jsonify }},
+            "url": {{ doc.url | absolute_url | jsonify }}
+          }
+        {%- unless forloop.last and l -%}, {%- endunless -%}
+        {% endfor %}
   {%- endfor -%}
 ]
+
+/*
+var store2 = [
+  {%- for doc in site.pages -%}
+  {% if doc.title contains 'metrics'%}
+    {%- assign head = doc.content | strip_html | smartify  | split: "###" -%}
+          {% for member in head %}
+            {% if forloop.first == true %} 
+              { {{doc.title | jsonify}}: {{member | strip_newlines | jsonify}} }
+            {% else %}
+            {% assign title = member | split: "\n" %}
+            {
+              {{member | slice: 10 | strip_newlines | jsonify }}:{{member | strip_newlines | jsonify}}
+            }
+            {% endif %}
+            {%- unless forloop.last and l -%}, {%- endunless -%}
+        {% endfor %}
+      {% endif %}
+  {%- endfor -%}
+]*/

@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🐃
+## 3.2019-W31.0 🐃
+_2019-08-04_
 
 <ul class="updates">
   <li class="new"><span markdown="1">[The **IAA** is now also calculated for all members against the **master** / official annotations](collaboration.html#iaa-inter-annotator-agreement)!</span></li>

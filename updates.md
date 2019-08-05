@@ -14,6 +14,16 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🐻
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed errors on newly uploaded documents with annotations</span></li>
+  <li class="new"><span markdown="1">Made constraints on annotation names and folders more flexible 😄</span></li>
+  <li class="fix"><span markdown="1">Now upon pressing `Enter` while changing the settings the default is to _Submit_ the change, not to _Delete_ the item.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W31.0 🐃
 _2019-08-04_
 

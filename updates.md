@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🐻
+## 3.2019-W30.1 🐻
+_2019-08-05_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Fixed errors on newly uploaded documents with annotations</span></li>

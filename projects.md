@@ -37,7 +37,7 @@ id: projects
     </div>
     <div class="one-third-col">
       <div class="message">
-        You can enrich the guidelines using the <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">markdown syntax</a>
+        You can enrich the guidelines using the <a href="https://commonmark.org/help/">markdown syntax</a>
       </div>
     </div>
   </div>

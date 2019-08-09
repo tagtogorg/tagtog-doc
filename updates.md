@@ -14,12 +14,12 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🦹‍♀️
-__
+## ??? 🧐
 
 <ul class="updates">
   <li class="new"><span markdown="1">Entity type descriptions are now shown in the editor, annotation menu. Just hover on the entity type name or color.</span></li>
   <li class="new"><span markdown="1">Wider description inputs for the annotation tasks in the settings of your project.</span></li>
+  <li class="fix"><span markdown="1">Metrics graphics were not shown due to a small JS error. Now fixed.</span></li>
 </ul>
 
 ---

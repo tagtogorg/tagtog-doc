@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🧐
+## 3.2019-W32.0 🧐
+_2019-08-11_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Entity type descriptions are now shown in the editor, annotation menu. Just hover on the entity type name or color.</span></li>

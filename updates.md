@@ -14,28 +14,6 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2019-W32.0 🧐
-_2019-08-11_
-
-<ul class="updates">
-  <li class="new"><span markdown="1">Entity type descriptions are now shown in the editor, annotation menu. Just hover on the entity type name or color.</span></li>
-  <li class="new"><span markdown="1">Wider description inputs for the annotation tasks in the settings of your project.</span></li>
-  <li class="fix"><span markdown="1">Metrics graphics were not shown due to a small JS error. Now fixed.</span></li>
-</ul>
-
----
-
-## 3.2019-W30.1 🐻
-_2019-08-05_
-
-<ul class="updates">
-  <li class="fix"><span markdown="1">Fixed errors on newly uploaded documents with annotations</span></li>
-  <li class="new"><span markdown="1">Made constraints on annotation names and folders more flexible 😄</span></li>
-  <li class="fix"><span markdown="1">Now upon pressing `Enter` while changing the settings the default is to _Submit_ the change, not to _Delete_ the item.</span></li>
-</ul>
-
----
-
 ## 3.2019-W31.0 🐃
 _2019-08-04_
 

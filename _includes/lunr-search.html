@@ -73,7 +73,7 @@
             var parsedTitle = title.split("\n");
             title = parsedTitle[0];
             var parsedUrl = title.replace(/ /g,"-").replace(/,/g,"");
-            url += "#" + parsedUrl.substr(1).toLowerCase();
+            url += "#" + parsedUrl.toLowerCase();
           }
 
           var content = formatContentString(store[ref].excerpt, query);

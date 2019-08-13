@@ -20,8 +20,16 @@ const getParsedHeadings = function(str) {
 var storeAutocomplete = [
     {%- for doc in site.pages -%}
         {% if doc.title contains '(old link)' or doc.title == null%}{% continue %}{% endif %}
-            {{ doc.title | jsonify }}
+        {%- assign head = doc.content | smartify  | split: "<h2>" -%}
+            {% for member in head %}
+                {% if forloop.first == true %} 
+                    {{doc.title | strip_html | jsonify}}
+                {% else %}
+                    {% assign title = member | split: "</h2>"  %}
+                    {{title[0] | jsonify }}
+                {% endif %}
             {%- unless forloop.last and l -%}, {%- endunless -%}
+        {%- endfor -%}
   {%- endfor -%}
 ]
 

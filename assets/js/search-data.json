@@ -6,20 +6,17 @@ sitemap: false
 var store = [
   {%- for doc in site.pages -%}
     {% if doc.title contains '(old link)' or doc.title == null or doc.title == 'null' or doc.title contains '404'%}{% continue %}{% endif %}
-    {%- assign head = doc.content | strip_html | smartify  | split: "###" -%}
+    {%- assign head = doc.content | smartify  | split: "<h2>" -%}
           {% for member in head %}
             {% if forloop.first == true %} 
-            {"title": {{doc.title | jsonify}},
+            {"title": {{doc.title | strip_html | jsonify}},
               "section": false,
             {% else %}
-            {% assign title = member | split: "\n\n\n" %}
-            {% assign check1 = title[0] | split: "\n\n" %}
-            {% assign check2 = check1[0] | split: "\n" %}
-            
-            {"title": {{check2[0] | jsonify }},
-              "section": true,
-            {% endif %}
-            "excerpt" : {{member | replace:"</p>", " " | 
+              {% assign title = member | split: "</h2>"  %}
+              {"title": {{title[0] | jsonify }},
+                "section": true,
+              {% endif %}
+            "excerpt" : {{member | strip_html | replace:"</p>", " " | 
               replace:"</h1>", " " | 
               replace:"</h2>", " " |
               replace:"###", " " |

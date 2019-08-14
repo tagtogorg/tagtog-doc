@@ -88,7 +88,7 @@ toc: true
 
       <tr>
         <td>source code files</td>
-        <td>Supported programming language extensions include: <code>.java, .scala, .js, .py, .python, .jsx, .c, .h, .mm, .M, .cpp, .sql, .cs, .css, .r, .vb, .php, .swift, .go, .m, .sass, .less, .rb, .sh, .ts, .tsx, .shell, .sh, .log</code></td>
+        <td>Supported programming language extensions include: <code>.c, .coffee, .cpp, .cs, .css, .diff, .go, .h, .java, .js, .jsx, .less, .log, .m, .matlab, .mm, .patch, .php, .pl, .py, .python, .r, .rb, .sass, .scala, .sh, .shell, .sql, .swift, .ts, .tsx, .vb</code></td>
       </tr>
 
       <tr>

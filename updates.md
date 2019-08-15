@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🧚‍
+__
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now [verbatim format](ioformats.html) supports annotation across paragraphs</span></li>
+</ul>
+
+---
+
 ## 3.2019-W32.0 🧐
 _2019-08-11_
 

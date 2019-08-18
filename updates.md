@@ -14,8 +14,6 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-<<<<<<< HEAD
-=======
 ## ??? 🧚‍
 __
 
@@ -47,7 +45,6 @@ _2019-08-05_
 
 ---
 
->>>>>>> 7bb2e395d0114f3412db68a26b4a1822ffdf24c8
 ## 3.2019-W31.0 🐃
 _2019-08-04_
 

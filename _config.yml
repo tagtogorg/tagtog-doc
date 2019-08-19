@@ -10,6 +10,7 @@ description:      'Official documentation for <a href="https://tagtog.net">tagto
 app_url:          https://www.tagtog.net
 url:              https://docs.tagtog.net
 baseurl:
+baseurl: 
 sidebar_toc:
   - name: What's new
     pages:

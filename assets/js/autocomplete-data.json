@@ -1,0 +1,48 @@
+---
+layout: null
+sitemap: false
+---
+
+const replaceRegex = function(regex){
+	return function(str){
+		return str.match(regex);
+	}
+}
+
+const headingRegex = /\n(#+\s*)(.*)/g;
+
+const getHeadings = replaceRegex(headingRegex);
+
+const getParsedHeadings = function(str) {
+    return getHeadings(str);
+}
+
+var storeAutocomplete = [
+    {%- for doc in site.pages -%}
+        {% if doc.title contains '(old link)' or doc.title == null%}{% continue %}{% endif %}
+        {%- assign head = doc.content | smartify  | split: "<h2>" -%}
+            {% for member in head %}
+                {% if forloop.first == true %} 
+                    {{doc.title | strip_html | jsonify}}
+                {% else %}
+                    {% assign title = member | split: "</h2>"  %}
+                    {{title[0] | jsonify }}
+                {% endif %}
+            {%- unless forloop.last and l -%}, {%- endunless -%}
+        {%- endfor -%}
+  {%- endfor -%}
+]
+
+var storeRandom = [
+    {%- for doc in site.pages -%}
+        {% if doc.title contains '(old link)' or doc.title == null%}{% continue %}{% endif %}
+            {{ doc.content| jsonify }}
+            {%- unless forloop.last and l -%}, {%- endunless -%}
+  {%- endfor -%}
+]
+
+var storeRegex = []
+
+/*for(int i = 0; i < storeRandom.length; i++){
+    storeRegex.push(storeRandom[i])
+}*/

@@ -19,6 +19,7 @@ __
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now [verbatim format](ioformats.html) supports annotation across paragraphs</span></li>
+  <li class="fix"><span markdown="1">Now, document labels and entity labels cannot be edited when the document is confirmed or in read-only mode</span></li>
 </ul>
 
 ---

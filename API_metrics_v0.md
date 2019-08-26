@@ -35,7 +35,7 @@ api_folder_new: myNewFolder
 
 <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
-## Project Stats
+## Project Stats  
 
 ### Annotation Stats
 

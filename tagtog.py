@@ -234,7 +234,7 @@ def search(args):
     response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=args.verify_ssl)
 
     if response.ok:
-        return (response.json(), response)
+        return (response.text, response)
     else:
         return (None, response)
 

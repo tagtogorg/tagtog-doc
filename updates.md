@@ -21,6 +21,7 @@ __
   <li class="new"><span markdown="1">Now [verbatim format](ioformats.html) supports annotation across paragraphs</span></li>
   <li class="fix"><span markdown="1">Now, document labels and entity labels cannot be edited when the document is confirmed or in read-only mode</span></li>
   <li class="new"><span markdown="1">Now project admins can see which members have confirmed a document without leaving the document editor, by just having a look at the member displayed when clicking the members dropdown menu</span></li>
+  <li class="new"><span markdown="1">You can now invite others people to join your project by their email!</span></li>
 </ul>
 
 ---

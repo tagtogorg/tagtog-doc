@@ -282,7 +282,7 @@ URLS
       <td><code>url</code></td>
       <td><code>-</code></td>
       <td class="break-all"><a href="https://en.wikipedia.org/wiki/Autonomous_cruise_control_system">https://en.wikipedia.org/wiki/Autonomous_cruise_control_system</a></td>
-      <td>URL no annotate</td>
+      <td>URL to annotate</td>
     </tr>
     <tr>
       <td><code>project</code></td>

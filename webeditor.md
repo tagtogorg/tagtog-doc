@@ -309,6 +309,7 @@ toc: true
       <h4>Annotations from other users</h4>
       <p>Click on the user list to show all the project members. Click on the one you are interested, the version of the annotations for that user will be displayed on the document area.</p>
       <p>Depending on your permissions you are able to edit or not the different versions of the annotations. A locker icon {% include inline-image.html name="editor-member-locker.PNG" width="15" %} indicates that your permissions on that version are read-only.</p>
+      <p>If you are a project admin, you will be able to see which of the members have already confirmed the document in the member list</p>
       <p><a href="/collaboration.html">More information on multi-user annotation</a></p>
     </div>
     <div class="one-third-col">

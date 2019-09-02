@@ -4,13 +4,17 @@
   <header>
     <div class="site-title">
       <a href="{{ site.app_url }}/">
-        <img class="logo" src="/assets/img/circle_2leafstext.png" title="Go to web app at tagtog.net" alt="Go to web app at tagtog.net">
+        <img class="logo" src="{{ site.baseurl }}/assets/img/circle_2leafstext.png" title="Go to web app at tagtog.net" alt="Go to web app at tagtog.net">
       </a>
-
+    </div>
+    <div class="sidebar-search-engine-box">
+      <form action="{{site.baseurl}}/search-results.html" method="get">
+        <input id="sidebar-search-engine-form" class="sidebar-search-input" name="query" placeholder="Search...">
+      </form>
     </div>
   </header>
   {% include sidebar-nav-links.html %}
 
-  {% include sidebar-icon-links.html %} 
+  {% include sidebar-icon-links.html %}
   {% include copyright.html %}
 </div>

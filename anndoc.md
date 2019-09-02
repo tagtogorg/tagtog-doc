@@ -225,7 +225,6 @@ toc: true
 <div class="one-third-col">
 </div>
 
-
 <div class="two-third-col">
 <h3><code>plain.html</code></h3>
 <p>This part of the <code>anndoc</code> format covers only the content, not the annotations. It's written in <a href="https://www.w3.org/TR/html-polyglot/" title="Polyglot Markup: A robust profile of the HTML5 vocabulary">polyglot markup</a> (XML-compatible HTML5). There are no special semantics other that every text element (paragraph, header, ...) has a unique id. These ids are used as a reference by the annotations file.</p>

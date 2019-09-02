@@ -1,0 +1,76 @@
+.search-input{
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  height: 30px;
+  font-size: inherit;
+  color: inherit;
+  padding: 20px 10px;
+  /* background: rgba(0,0,0,0.17) url(/assets/img/search-button.png) no-repeat; */
+}
+
+.search-results{
+  margin: 20px 0 40px 0;
+  list-style: none;
+}
+
+.search-results h4 {
+  color: inherit;
+}
+
+.search-results li{
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.search-results li:last-child {
+  border-bottom: none;
+}
+
+.results_found {
+  margin-top: 10px;
+  font-size: medium;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 98%;
+  left: 0;
+  right: 0;
+
+}
+.autocomplete-items > div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  border-top: none;
+}
+
+.autocomplete-items > div:nth-child(1) {
+  border-top: 1px solid #d4d4d4;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+}
+.autocomplete-items > div:nth-last-child(1) {
+  border-bottom: 1px solid #d4d4d4;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}

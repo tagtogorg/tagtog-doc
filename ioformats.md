@@ -66,14 +66,13 @@ toc: true
       </tr>
 
       <tr>
-        <td><code>pdf</code></td>
-        <td><span markdown="1">Two variants are possible: **NativePDF** (supported on Cloud-Large and On-Premises ML only) to annotate directly on top of the PDF, and **Simple** to annotate on a stripped out plain text representation of the PDF.</span></td>
+        <td><code>md</code> (Markdown)</td>
+        <td><span markdown="1">Any markdown file, supporting a subset of the CommonMark spec. [Go to documentation](MarkdownFileParsing).</span></td>
       </tr>
 
       <tr>
-        <td><code>xml</code></td>
-        <td><p><a href="http://jats.nlm.nih.gov/publishing/">NCBI Journal Publishing Tag Set</a> (versions JATS 1.0 and NLM 2.x and 3.0). This includes all <a href="http://www.plos.org/">PLOS journals</a> or <a href="http://f1000research.com/">F1000Research articles</a>.</p>
-            <p><a href="http://www.biomedcentral.com/about/xml">BioMed Central format</a>. This includes all articles in <a href="http://www.biomedcentral.com/">BioMed Central</a>, <a href="http://www.chemistrycentral.com/">ChemistryCentral</a>, or <a href="http://www.springeropen.com/)">SpringerOpen</a>, among others.</p></td>
+        <td><code>pdf</code></td>
+        <td><span markdown="1">Two variants are possible: **NativePDF** (supported on Cloud-Large and On-Premises ML only) to annotate directly on top of the PDF, and **Simple** to annotate on a stripped out plain text representation of the PDF.</span></td>
       </tr>
 
       <tr>
@@ -83,12 +82,18 @@ toc: true
 
       <tr>
         <td><code>csv</code> and <code>tsv</code></td>
-        <td><span markdown="1">[Go to documentation](CsvFileParsing)</span></td>
+        <td><span markdown="1">[Go to documentation](CsvFileParsing).</span></td>
       </tr>
 
       <tr>
         <td>source code files</td>
         <td>Supported programming language extensions include: <code>.c, .coffee, .cpp, .cs, .css, .diff, .go, .h, .java, .js, .jsx, .less, .log, .m, .matlab, .mm, .patch, .php, .pl, .py, .python, .r, .rb, .sass, .scala, .sh, .shell, .sql, .swift, .ts, .tsx, .vb</code></td>
+      </tr>
+
+      <tr>
+        <td><code>xml</code></td>
+        <td><p><a href="http://jats.nlm.nih.gov/publishing/">NCBI Journal Publishing Tag Set</a> (versions JATS 1.0 and NLM 2.x and 3.0). This includes all <a href="http://www.plos.org/">PLOS journals</a> or <a href="http://f1000research.com/">F1000Research articles</a>.</p>
+            <p><a href="http://www.biomedcentral.com/about/xml">BioMed Central format</a>. This includes all articles in <a href="http://www.biomedcentral.com/">BioMed Central</a>, <a href="http://www.chemistrycentral.com/">ChemistryCentral</a>, or <a href="http://www.springeropen.com/)">SpringerOpen</a>, among others.</p></td>
       </tr>
 
       <tr>

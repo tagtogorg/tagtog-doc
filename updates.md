@@ -14,6 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 〽
+
+<ul class="updates">
+  <li class="new"><span markdown="1">**Support for [markdown files](MarkdownFileParsing)!**</span></li>
+</ul>
+
+---
+
 ## 3.2019-W35.1 🦏
 _2019-08-27_
 

@@ -35,4 +35,4 @@ Only-text actual content is supported; in particular:
 
 ## Example
 
-Here is a [markdown reference file](???) file to know [how it's parsed and visualized in tagtog](???).
+Here is a [markdown reference file](https://www.tagtog.net/tagtog/sample/pool/aqwpeyj_yOishcnevE.c3JBaI6s0-test_spec.md) file to know [how it's parsed and visualized in tagtog](https://www.tagtog.net/tagtog/sample/pool/amyZOgLzTcfL9.aO1AXOsT1zsieS-test_spec.md).

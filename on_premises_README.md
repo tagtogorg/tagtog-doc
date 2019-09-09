@@ -100,6 +100,15 @@ You can manually check for [new tagtog updates on this link](https://docs.tagtog
 ```
 
 
+## Change License
+
+Might you have required a license change (e.g. to prolong your current installation or to increment the number of seats), you should also have received the new license details. With these, change the license of your system as follows:
+
+```shell
+./tagtog_on_premises change_license NEW_LICENSE_NAME NEW_LICENSE_KEY
+```
+
+
 ## Troubleshooting
 
 Upon a problem, try one of the following solutions first.

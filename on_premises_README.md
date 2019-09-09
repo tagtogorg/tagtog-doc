@@ -87,6 +87,8 @@ All tagtog data is stored in the folder: `${TAGTOG_HOME}/persistent_data/`. We r
 
 The application supports http proxies and automatically recognizes your host variables `$http_proxy` and `$https_proxy` (either written in both all lower or all upper case).
 
+**Important**: the port number must be explicitly written, regardless of whether the port is the default 80 for http or 443 for https. That is, always write something like: `export HTTP_PROXY=IP:PORT`.
+
 
 
 

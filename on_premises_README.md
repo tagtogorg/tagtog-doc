@@ -207,14 +207,7 @@ Do the above if you encounter something like this:
 
 ```
 Creating network "tagtog_default" with the default driver
-Pulling cache (redis:4.0.13-alpine)...
-4.0-alpine: Pulling from library/redis
-4fe2ade4980c: Already exists
-fb758dc2e038: Pull complete
-989f7b0c858b: Pull complete
-d5318f13abaa: Pull complete
-3521559474dd: Pull complete
-add04b113886: Pull complete
+...
 Pulling db (tagtog_db:3.2018-W21.0)...
 ERROR: The image for the service you're trying to recreate has been removed. If you continue, volume data could be lost. Consider backing up your data before continuing.
 
@@ -222,4 +215,15 @@ Continue with the new image? [yN]y
 Pulling db (tagtog_db:3.2018-W21.0)...
 ERROR: pull access denied for tagtog_db, repository does not exist or may require 'docker login'
 .............................One process could not be started. Check the logs of 'tagtog_jobmanager_1'
+```
+
+
+### The TAGTOG variables are not available when running as sudo
+
+You NEED NOT to run tagtog as the root user. Actually, we recommend against this.
+
+If for any reason, however, you do want to run as sudo, you might also need to expose your user environment variables to the root user with the `-E` parameter, as follows:
+
+```shell
+sudo -E ./tagtog_on_premises restart ...
 ```

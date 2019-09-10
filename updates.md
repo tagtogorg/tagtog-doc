@@ -18,7 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 _2019-09-08_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">**Support for [markdown files](MarkdownFileParsing)!**</span></li>
+  <li class="new"><span markdown="1">**Support for [markdown files](MarkdownFileParsing)**, images included! 🌅</span></li>
 </ul>
 
 ---

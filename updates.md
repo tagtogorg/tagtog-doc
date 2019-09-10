@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ???
+__
+
+<ul class="updates">
+  <li class="doc"><span markdown="1">Added more information to the Members section in the project settings to let you know all the ways you can manage the people in your project.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W36.0 〽
 _2019-09-08_
 

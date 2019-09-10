@@ -18,7 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 __
 
 <ul class="updates">
-  <li class="doc"><span markdown="1">Added more information to the Members section in the project settings to let you know all the ways you can manage the people in your project.</span></li>
+  <li class="doc"><span markdown="1">Added more information to the Members section in the project settings to let you know all the ways you can manage your project's team.</span></li>
 </ul>
 
 ---
@@ -48,7 +48,7 @@ _2019-08-26_
   <li class="new"><span markdown="1">Now [verbatim format](ioformats.html) supports annotation across paragraphs</span></li>
   <li class="fix"><span markdown="1">Now, document labels and entity labels cannot be edited when the document is confirmed or in read-only mode</span></li>
   <li class="new"><span markdown="1">Now project admins can see which members have confirmed a document without leaving the document editor, by just having a look at the member displayed when clicking the members dropdown menu</span></li>
-  <li class="new"><span markdown="1">You can now invite others people to join your project by their email!</span></li>
+  <li class="new"><span markdown="1">You can now invite other people to join your project by their email!</span></li>
   <li class="new"><span markdown="1">You can now search through the documentation!</span></li>
 </ul>
 

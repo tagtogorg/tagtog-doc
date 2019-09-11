@@ -27,7 +27,7 @@ __
 _2019-09-08_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">**Support for [markdown files](MarkdownFileParsing)**, images included! 🌅</span></li>
+  <li class="new"><span markdown="1">**Support for [markdown files](MarkdownFileParsing)**, images included 🌅, lists and nested lists •, code blocks 📝, and more!</span></li>
 </ul>
 
 ---

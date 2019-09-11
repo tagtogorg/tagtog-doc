@@ -192,7 +192,7 @@ We are working on a stable fix. For now, you can quickly liberate the resources 
 docker-compose -f docker-compose.override.yaml --project-name tagtog restart ml0
 ```
 
-**Note**: you can add this to a crontab file to run this every 24 or 12 hours, for example. In this case, you might need to rater write an absolute path to: `docker-compose.override.yaml`.
+**Note**: you can add this to a crontab file to run this every 24 or 12 hours, for example. In this case, better write an absolute path to: `docker-compose.override.yaml`.
 
 
 ### tagtog docker images not found, on a new server installation

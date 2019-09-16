@@ -218,7 +218,6 @@ def gen_filespath_generator(path, extension):
             return (subpath for subpath in glob.iglob(path + "/**/*." + extension, recursive=True) if os.path.isfile(subpath))
         else:
             return (os.path.join(root, filename) for root, dirnames, filenames in os.walk(path) for filename in fnmatch.filter(filenames, "*." + extension))
-
     else:
         print("warning, cannot read:", path)
         return []  # resilient

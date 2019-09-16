@@ -19,7 +19,7 @@ assert sys.version_info.major == 3, "This script requires Python 3"
 # ---------------------------------------------------------------------------------------------------------------------
 
 __author__ = "tagtog.net (@tagtog_net)"
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __doc__ = \
     """
     tagtog official script to Upload & Search & Download & Delete documents.
@@ -72,8 +72,8 @@ def parse_arguments(argv=[]):
 
     upload_parser.add_argument("--folder", default=None, help="Folder in tagtog (by index, path, or name) to upload to")
     upload_parser.add_argument("--format", "--input", default=None, help="Input format for tagtog's request. If not given, this is guessed by the tagtog server")
-    upload_parser.add_argument("--extension", "-e", default="json", help="extension of files to upload when recursively reading files from a folder, e.g. json or txt")
     upload_parser.add_argument("--batch_size", type=int, default=10, help="Number of documents to upload to tagtog at once in batches. The number must be even if you are uploading annotated documents")
+    upload_parser.add_argument("--extension", "-e", default="", help="Extension of files to upload when recursively reading files from a folder, e.g. .json or .txt. Leave it as the default, i.e. the empty string, to upload all files")
     upload_parser.add_argument("--idType", "-i", choices=["PMID", "PMCID"], help="(Optional) id type of external repositories to use for document upload. See tagtog API")
 
     # -----------------------------------------------------------------------------------------------------------------
@@ -128,8 +128,6 @@ def parse_arguments(argv=[]):
     # -----------------------------------------------------------------------------------------------------------------
 
     if args.action in ["upload"]:
-        if args.extension.startswith("."):
-            args.extension = args.extension[1:]
 
         if args.folder:
             args.req_params["folder"] = args.folder
@@ -216,9 +214,9 @@ def gen_filespath_generator(path, extension):
         return [path]
     elif os.path.isdir(path):
         if sys.version_info.minor >= 5:  # >= Python 3.5
-            return (subpath for subpath in glob.iglob(path + "/**/*." + extension, recursive=True) if os.path.isfile(subpath))
+            return (subpath for subpath in glob.iglob(path + "/**/*" + extension, recursive=True) if os.path.isfile(subpath))
         else:
-            return (os.path.join(root, filename) for root, dirnames, filenames in os.walk(path) for filename in fnmatch.filter(filenames, "*." + extension))
+            return (os.path.join(root, filename) for root, dirnames, filenames in os.walk(path) for filename in fnmatch.filter(filenames, "*" + extension))
     else:
         print("warning, cannot read:", path)
         return []  # resilient

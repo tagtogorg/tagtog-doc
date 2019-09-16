@@ -169,6 +169,7 @@ def print_upload(args):
         batch_index += 1
         batch = islice(filepath_iterator, batch_size)
         first = next(batch, None)
+
         if first is None:
             print("\nFinished; num uploaded files:", num_uploaded_files)
             return

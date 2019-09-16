@@ -16,7 +16,6 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ## 3.2019-W37.0 🏗
 _2019-09-16_
-__
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can filter by <a title="Entity labels in tagtog" href="projects.html#entity-labels">entity label</a> value. Spot easily those entities labeled with an specific entity label and value. <a title="tagtog - Filter by entity label value" href="webeditor.html#filter-entities">Documentation</a>.</span></li>

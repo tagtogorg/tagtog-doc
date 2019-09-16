@@ -74,6 +74,7 @@ def parse_arguments(argv=[]):
     upload_parser.add_argument("--folder", default=None, help="Folder in tagtog (by index, path, or name) to upload to")
     upload_parser.add_argument("--format", "--input", default=None, help="Input format for tagtog's request. If not given, this is guessed by the tagtog server")
     upload_parser.add_argument("--extension", "-e", default="json", help="extension of files to upload when recursively reading files from a folder, e.g. json or txt")
+    upload_parser.add_argument("--batch_size", type=int, default=10, help="Number of documents to upload to tagtog at once in batches. The number must be even if you are uploading annotated documents")
     upload_parser.add_argument("--idType", "-i", choices=["PMID", "PMCID"], help="(Optional) id type of external repositories to use for document upload. See tagtog API")
 
     # -----------------------------------------------------------------------------------------------------------------
@@ -158,7 +159,7 @@ def parse_arguments(argv=[]):
 def print_upload(args):
     filepath_iterator = gen_filepaths_generator(args.paths, args.extension)
 
-    batch_size = 10 if args.output == "null" else 1
+    batch_size = args.batch_size if args.output == "null" else 1
     MAX_NUM_CONSECUTIVE_ERRORS = 3
 
     num_uploaded_files = 0

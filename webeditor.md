@@ -487,13 +487,18 @@ toc: true
           </td>
         </tr>
         <tr>
-          <td><code>Entity label</code></td>
-          <td><p>Select one or more entity labels to display entities with all those labels. <p>This filter only shows up when there is at least one entity label defined in the project.</p></p></td>
-        </tr>
-        <tr>
           <td><code>Entity text</code></td>
           <td><p>Display entities which text includes the search query.</p> <p>This filter only shows up when there is at least one entity type defined in the project.</p></td>
         </tr>
+        <tr>
+          <td><code>Entity label</code></td>
+          <td><p>Select one or more entity labels to display only entities with all those labels.</p> <p>This filter only shows up when there is at least one entity label defined in the project.</p></td>
+        </tr>
+        <tr>
+          <td><code>Entity label value</code></td>
+          <td><p>Type the value of an entity label to only display those entities with at least one entity label with that value. As there can be a large number of entities, the match is exact.</p><p>As you type, a list of recommended values appears in a drop down menu. This list is generated using fuzzy search against the possible values of those entity labels with type <code>enum</code>.</p><p>This filter only shows up when there is at least one entity label defined in the project.</p></td>
+        </tr>
+
       </table>
     </div>
     <div class="one-third-col">

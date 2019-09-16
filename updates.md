@@ -14,11 +14,24 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W37.0 🏗
+_2019-09-16_
+__
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can filter by <a title="Entity labels in tagtog" href="projects.html#entity-labels">entity label</a> value. Spot easily those entities labeled with an specific entity label and value. <a title="tagtog - Filter by entity label value" href="webeditor.html#filter-entities">Documentation</a>.</span></li>
+  <li class="new"><span markdown="1">Titles in images are also now supported in the anndoc format, and in particular [parsed in markdown files](MarkdownFileParsing).</span></li>  
+  <li class="new"><span markdown="1">Cached on the Document Editor the toggling of hiding/showing the right panel (sidebar), for your convenience.</span></li>
+  <li class="doc"><span markdown="1">Added more information to the Members section in the project settings to let you know all the ways you can manage your project's team.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W36.0 〽
 _2019-09-08_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">**Support for [markdown files](MarkdownFileParsing)!**</span></li>
+  <li class="new"><span markdown="1">**Support for [markdown files](MarkdownFileParsing)**, images included 🌅, lists and nested lists •, code blocks 📝, and more!</span></li>
 </ul>
 
 ---
@@ -39,7 +52,7 @@ _2019-08-26_
   <li class="new"><span markdown="1">Now [verbatim format](ioformats.html) supports annotation across paragraphs</span></li>
   <li class="fix"><span markdown="1">Now, document labels and entity labels cannot be edited when the document is confirmed or in read-only mode</span></li>
   <li class="new"><span markdown="1">Now project admins can see which members have confirmed a document without leaving the document editor, by just having a look at the member displayed when clicking the members dropdown menu</span></li>
-  <li class="new"><span markdown="1">You can now invite others people to join your project by their email!</span></li>
+  <li class="new"><span markdown="1">You can now invite other people to join your project by their email!</span></li>
   <li class="new"><span markdown="1">You can now search through the documentation!</span></li>
 </ul>
 

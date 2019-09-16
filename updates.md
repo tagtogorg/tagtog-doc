@@ -14,6 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? ⛲️
+
+<ul class="updates">
+  <li class="new"><span markdown="1">New functionalities in the [official tagtog python script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py): upload to given folder, define the upload batch size, and (optionally) upload absolutely all files recurisvely regardless of file extension.</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W37.0 🏗
 _2019-09-16_
 

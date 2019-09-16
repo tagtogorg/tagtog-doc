@@ -29,7 +29,6 @@ __doc__ = \
 
     Website: https://www.tagtog.net
     API documentation: https://docs.tagtog.net/API_documents_v1.html
-    Contact: Juan Miguel Cejuela (@juanmirocks)
     """.format(__version__, __author__)
 
 # ---------------------------------------------------------------------------------------------------------------------

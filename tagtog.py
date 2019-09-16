@@ -71,6 +71,7 @@ def parse_arguments(argv=[]):
 
     upload_parser.add_argument("paths", nargs="+", help="paths of files or folders containing (recursively) the files to upload or otherwise the ids in the external repository (see idType) of documents to upload")
 
+    upload_parser.add_argument("--folder", default=None, help="Folder in tagtog (by index, path, or name) to upload to")
     upload_parser.add_argument("--format", "--input", default=None, help="Input format for tagtog's request. If not given, this is guessed by the tagtog server")
     upload_parser.add_argument("--extension", "-e", default="json", help="extension of files to upload when recursively reading files from a folder, e.g. json or txt")
     upload_parser.add_argument("--idType", "-i", choices=["PMID", "PMCID"], help="(Optional) id type of external repositories to use for document upload. See tagtog API")
@@ -130,13 +131,18 @@ def parse_arguments(argv=[]):
         if args.extension.startswith("."):
             args.extension = args.extension[1:]
 
+        if args.folder:
+            args.req_params["folder"] = args.folder
+
+        if args.format:
+            args.req_params["format"] = args.format
+
         if args.idType:
             args.func = print_ids_upload
             args.req_params["idType"] = args.idType
             args.req_params["ids"] = ",".join(args.paths)
 
-        if args.format:
-            args.req_params["format"] = args.format
+
 
     # -----------------------------------------------------------------------------------------------------------------
 

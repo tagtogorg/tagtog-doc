@@ -208,16 +208,16 @@ toc: true
       </tr>
       <tr>
         <td><code>entitiestsv</code></td>
-        <td><a href="/EntitiesTsv">EntitiesTsv documentation</a></td>
+        <td><a href="/EntitiesTsv">EntitiesTsv documentation</a> (annotation format, with both plain content and annotations)</td>
       </tr>
       <tr>
         <td><code>entitiesonlyclassestsv</code></td>
-        <td><a href="/EntitiesOnlyClassesTsv">EntitiesOnlyClassesTsv documentation</a></td>
+        <td><a href="/EntitiesOnlyClassesTsv">EntitiesOnlyClassesTsv documentation</a> (annotation format, with both <em>partial</em> plain content and annotations)</td>
       </tr>
 
       <tr>
         <td><code>pubannotation</code></td>
-        <td><span class="soon"><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></span> Coming soon</td>
+        <td><span class="soon"><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></span> (annotation format, with both plain content and annotations) Coming soon</td>
       </tr>
     </table>
   </div>

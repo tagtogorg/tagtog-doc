@@ -26,11 +26,13 @@ Only-text actual content is supported; in particular:
 
 ## Not Supported
 
-* Inline content and styles are not supported; in particular: `**bold**`, `_emphatic_`, `code`, `~~scratched~~`, `![images](url)`, `[links](url)`.
-* Other special style-only elements are not supported either; in particular: horizontal lines (`<hr/>` or `---`) or line breaks (`<br/>`).
-* Block quotes are not supported at the moment but are coming soon.
+The following elements are not interpreted, but parsed as is and escaped. For example, `_em_` is visualized on tagtog literally as `_em_` (and not as _em_).
+
+* Inline content and styles; in particular: `**bold**`, `_emphatic_`, `code`, `~~scratched~~`, `![images](url)`, `[links](url)`.
+* Other special style-only elements; in particular: horizontal lines (`<hr/>` or `---`) or line breaks (`<br/>`).
+* HTML-only elements. In particular, [HTML entities](https://spec.commonmark.org/0.29/#entity-and-numeric-character-references) are not escaped either, neither in code spans or code blocks, nor in the rest of content types (e.g. paragraphs).
+* Block quotes; coming soon.
 * Tables are not supported at the moment.
-* HTML-only elements are not supported.
 
 
 ## Example

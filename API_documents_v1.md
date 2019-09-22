@@ -94,7 +94,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <th>Default</th>
       <th>Example</th>
       <th>Description</th>
-    </tr>    
+    </tr>
     <tr>
       <td><code>member</code></td>
       <td><code>master</code> aka project official annotations</td>
@@ -214,7 +214,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <br/>
 
   <div id="tabs-container">
-    <ul class="tabs-menu">      
+    <ul class="tabs-menu">
       <li class="current"><a href="#tab-plain-text-verbatim-python">Python</a></li>
     </ul>
     <div class="tab">
@@ -1224,7 +1224,10 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
 
 <div class="two-third-col">
   <h2>Get existing documents <code>GET</code></h2>
-  <p>You can use the API to export documents. You need the Id of the document to get it. If you don't have this Id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
+  <p>You can use the API to export documents. You need the id of the document to get it. If you don't have this id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
+
+  <p><span markdown="1">Note: if you select as `output` an [annotation format](ioformats.html#output-formats) (e.g. `ann.json`), you will always get an annotation output for a `member`. This works as follows: a) if the specified `member` did annotate the document, its annotations are returned normally. b) If, however, the specified `member` did not annotate the document, by default the `master` annotations are returned. c) Otherwise, if the `master` version was not annotated either, default empty annotations are returned (which of course follow the format of the specified `output`). When a default annotations version is returned (either case b) master's, or case c) empty annotations), this is properly indicated in the request response with an [HTTP Warning Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning).</span></p>
+
 </div>
 <div class="two-third-col">
   <p><strong>Input Parameters</strong></p>

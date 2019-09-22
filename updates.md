@@ -14,9 +14,19 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W38.0 ⛲️
+_2019-09-22_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Thanks now to the new search parameter `members_anncomplete:*|memberUsername`, you can now search how many documents' annotations were confirmed by a given user, and/or search how many documents were at least confirmed by one user!</span></li>
+  <li class="new"><span markdown="1">New functionalities in the [official tagtog python script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py): upload to given folder, define the upload batch size, and (optionally) upload absolutely all files recursively regardless of file extension.</span></li>
+  <li class="new"><span markdown="1">Now, when a _default_ annotations version is returned for a member's annotations file, a new HTTP Warning Header is added to the request response to indicate the case. [See documentation](API_documents_v1.html#get-existing-documents-get).</span></li>
+</ul>
+
+---
+
 ## 3.2019-W37.0 🏗
 _2019-09-16_
-__
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can filter by <a title="Entity labels in tagtog" href="projects.html#entity-labels">entity label</a> value. Spot easily those entities labeled with an specific entity label and value. <a title="tagtog - Filter by entity label value" href="webeditor.html#filter-entities">Documentation</a>.</span></li>

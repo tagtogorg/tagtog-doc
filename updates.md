@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? ⛲️
+## 3.2019-W38.0 ⛲️
+_2019-09-22_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Thanks now to the new search parameter `members_anncomplete:*|memberUsername`, you can now search how many documents' annotations were confirmed by a given user, and/or search how many documents were at least confirmed by one user!</span></li>

@@ -14,6 +14,17 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W39.0 🥨
+_2019-09-29_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Empty project folders now list links to the other folders for easier navigation.</span></li>
+  <li class="fix"><span markdown="1">(BIG ONE) Fixed an old bug caused when html entities were written in the input files literally (for instance, `&lt;` instead of just `<`). The bug appeared if annotations were made in text parts that contained such html entities. This resulted in wrongly formatted ann.jsons and in weird-looking annotations on the interface. An extra [python script](https://github.com/tagtog/gists/blob/master/fix_html_entities.py) was created to fix the ann.jsons locally.</span></li>
+  <li class="doc"><span markdown="1">Documented [how the IAA is calculated](IAA-calculation-methods).</span></li>
+</ul>
+
+---
+
 ## 3.2019-W38.0 ⛲️
 _2019-09-22_
 

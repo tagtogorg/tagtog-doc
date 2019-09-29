@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🥨
+## 3.2019-W39.0 🥨
+_2019-09-29_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Empty project folders now list links to the other folders for easier navigation.</span></li>

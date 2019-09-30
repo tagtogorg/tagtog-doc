@@ -14,6 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🍺
+
+<ul class="updates">
+  <li class="new"><span markdown="1">[Updated the CSV &amp; TSV parsers](CsvFileParsing) to allow a variable number of columns.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W39.0 🥨
 _2019-09-29_
 

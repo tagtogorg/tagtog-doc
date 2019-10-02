@@ -97,8 +97,8 @@ toc: true
 
 <div class="two-third-col">
   <h3>Search which documents an user has confirmed</h3>
-  <p>You can retrieve the document a given user has confirmed with the query <code>members_anncomplete:username</code></p>
-  <p>You can also retrieve all the documents which have been confirmed by any user with the query <code>members_anncomplete:*</code></p>
+  <p>You can retrieve the documents a given user has confirmed with the query: <code>members_anncomplete:username</code></p>
+  <p>You can also retrieve all the documents that have been confirmed by <em>any</em> user with the query: <code>members_anncomplete:*</code></p>
 </div>
 
 

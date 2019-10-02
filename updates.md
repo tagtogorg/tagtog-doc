@@ -14,6 +14,16 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W40.0 🍺
+_2019-10-02_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">[Updated the CSV &amp; TSV parsers](CsvFileParsing) to allow a variable number of columns.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Fixed the [registration link generation for sysadmins](on-premises-sysadmin.html#user-management).</span></li>
+</ul>
+
+---
+
 ## 3.2019-W39.0 🥨
 _2019-09-29_
 
@@ -29,7 +39,7 @@ _2019-09-29_
 _2019-09-22_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Thanks now to the new search parameter `members_anncomplete:*|memberUsername`, you can now search how many documents' annotations were confirmed by a given user, and/or search how many documents were at least confirmed by one user!</span></li>
+  <li class="new"><span markdown="1">Thanks now to the [new search parameter `members_anncomplete:*|memberUsername`](search-queries.html#search-which-documents-an-user-has-confirmed), you can now search how many documents' annotations were confirmed by a given user, and/or search how many documents were at least confirmed by one user!</span></li>
   <li class="new"><span markdown="1">New functionalities in the [official tagtog python script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py): upload to given folder, define the upload batch size, and (optionally) upload absolutely all files recursively regardless of file extension.</span></li>
   <li class="new"><span markdown="1">Now, when a _default_ annotations version is returned for a member's annotations file, a new HTTP Warning Header is added to the request response to indicate the case. [See documentation](API_documents_v1.html#get-existing-documents-get).</span></li>
 </ul>

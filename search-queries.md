@@ -95,6 +95,12 @@ toc: true
   {% include message.html message="Here, a <strong>confirmed document</strong> means a document with the master version of the annotations confirmed." %}
 </div>
 
+<div class="two-third-col">
+  <h3>Search which documents an user has confirmed</h3>
+  <p>You can retrieve the documents a given user has confirmed with the query: <code>members_anncomplete:username</code></p>
+  <p>You can also retrieve all the documents that have been confirmed by <em>any</em> user with the query: <code>members_anncomplete:*</code></p>
+</div>
+
 
 <div class="two-third-col">
   <h3>Wildcard search</h3>

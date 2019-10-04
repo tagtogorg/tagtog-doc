@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🍻
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed wrongly showing _0_ as number of documents for many open datasets.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Fixed wrong redirection in some instances when deleting single documents on the GUI.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W40.0 🍺
 _2019-10-02_
 

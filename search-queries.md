@@ -97,8 +97,8 @@ toc: true
 
 <div class="two-third-col">
   <h3>Search which documents a user has confirmed</h3>
-  <p>You can retrieve the documents a given members has confirmed with the query: <code>members_anncomplete:username</code></p>
-  <p>You can also retrieve all the documents that have been confirmed by <em>any</em> member with the query: <code>members_anncomplete:*</code></p>
+  <p>You can retrieve the documents a given member has confirmed with the query: <code>members_anncomplete:username</code></p>
+  <p>You can also retrieve all the documents that have been confirmed by <em>at least one</em> member with the query: <code>members_anncomplete:*</code></p>
 </div>
 <div class="one-third-col">
   {% include message.html message='Find out on this tutorial <a href="https://medium.com/@tagtog/how-to-rank-review-your-annotators-4a814c941ac3?source=friends_link&sk=c354f53823defdaf2844271185fd28e3" title="Medium post: How to rank &amp; review your annotators">how to rank &amp; review your annotators with the <code>members_anncomplete</code> query</a>.' %}

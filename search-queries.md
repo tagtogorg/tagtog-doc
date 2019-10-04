@@ -97,11 +97,14 @@ toc: true
 
 <div class="two-third-col">
   <h3>Search which documents a user has confirmed</h3>
-  <p>You can retrieve the documents a given user has confirmed with the query: <code>members_anncomplete:username</code></p>
-  <p>You can also retrieve all the documents that have been confirmed by <em>any</em> user with the query: <code>members_anncomplete:*</code></p>
+  <p>You can retrieve the documents a given members has confirmed with the query: <code>members_anncomplete:username</code></p>
+  <p>You can also retrieve all the documents that have been confirmed by <em>any</em> member with the query: <code>members_anncomplete:*</code></p>
 </div>
 <div class="one-third-col">
   {% include message.html message='Find out on this tutorial <a href="https://medium.com/@tagtog/how-to-rank-review-your-annotators-4a814c941ac3?source=friends_link&sk=c354f53823defdaf2844271185fd28e3" title="Medium post: How to rank &amp; review your annotators">how to rank &amp; review your annotators with the <code>members_anncomplete</code> query</a>.' %}
+</div>
+<div class="one-third-col">
+  {% include message.html message='Note that <code>members_anncomplete</code> searches in members versions only. If you rather want to search for a confirmed document in any <em>version</em> (i.e. any member or master), you need to search for: <code>members_anncomplete:* OR anncomplete:true</code>' %}
 </div>
 
 

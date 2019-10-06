@@ -1225,9 +1225,6 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
 <div class="two-third-col">
   <h2>Get existing documents <code>GET</code></h2>
   <p>You can use the API to export documents. You need the id of the document to get it. If you don't have this id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
-
-  <p><span markdown="1">Note: if you select as `output` an [annotation format](ioformats.html#output-formats) (e.g. `ann.json`), you will always get an annotation output for a `member`. This works as follows: a) if the specified `member` did annotate the document, its annotations are returned normally. b) If, however, the specified `member` did not annotate the document, by default the `master` annotations are returned. c) Otherwise, if the `master` version was not annotated either, default empty annotations are returned (which of course follow the format of the specified `output`). When a default annotations version is returned (either case b) master's, or case c) empty annotations), this is properly indicated in the request response with an [HTTP Warning Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning).</span></p>
-
 </div>
 <div class="two-third-col">
   <p><strong>Input Parameters</strong></p>
@@ -1290,6 +1287,8 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
 </div>
 <div class="one-third-col">
   {% include message.html message="If while manual annotating you create <strong>pre-annotations</strong>, they will also appear in the output" %}
+  {% include message.html message="<span markdown='1'>**Note**: if you select as `output` an [annotation format](ioformats.html#output-formats) (e.g. `ann.json`), you will always get an annotation output for a `member`. This works as follows: a) if the specified `member` did annotate the document, its annotations are returned normally. b) If, however, the specified `member` did not annotate the document, by default the `master` annotations are returned. c) Otherwise, if the `master` version was not annotated either, default empty annotations are returned (which of course follow the format of the specified `output`). When a default annotations version is returned (either case b) master's, or case c) empty annotations), this is properly indicated in the request response with an [HTTP Warning Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning).</span>" %}
+
 </div>
 
 <div class="two-third-col">

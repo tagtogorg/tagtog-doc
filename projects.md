@@ -10,9 +10,16 @@ id: projects
     <h3>Creating a project</h3>
     <p>Once you have signed up and you have a user account, you are ready to create a new project.</p>
     <p class="numbered-item"><span class="number-1">1</span>Choose a <strong>name</strong> for your project</p><br>
-    <p class="numbered-item"><span class="number-2">2</span>Choose a <strong>description</strong> for your project. Remember each project has a guidelines section where you can go into detail about the characteristics of your project.</p>
-
   </div>
+  <div class="two-third-col">
+    <p class="numbered-item"><span class="number-2">2</span>Choose a <strong>description</strong> for your project. Remember each project has a guidelines section where you can go into detail about the characteristics of your project.</p>
+  </div>
+  <div class="one-third-col">
+    <div class="message">
+      The <strong>Maximum length</strong> of a project description is 500 characters.
+    </div>
+  </div>
+
 
   <div class="two-third-col">
     <h3>Project settings</h3>
@@ -371,12 +378,15 @@ id: projects
   <div class="page-subsection">
     <div class="two-third-col">
       <h4>Admin</h4>
-      <h5>Remove a project</h5>
-      <p>To remove a project, go to its <i>Settings > Admin</i>. Click on the <code>Delete Project</code> button. Please notice that removing a project will remove all the documents within the project.</p>
+      <p>Only users with the role <code>admin</code> can see/edit these project settings.</p>
       <h5>Export settings</h5>
       <p>Export the project's settings (entity types, relation types, entity labels, document labels, etc.) as a JSON file to reuse as a template on new projects.</p>
       <h5>Import settings</h5>
       <p>Import another project's settings. <strong>This will overwrite your current settings and remove all your project's documents</strong>. This should be applied solely on new projects.</p>
+      <h5>Edit Project Description</h5>
+      <p>You can change the description of your project at any moment. Just type the new description and click on Save.</p>
+      <h5>Remove a project</h5>
+      <p>To remove a project, go to its <i>Settings > Admin</i>. Click on the <code>Delete Project</code> button. Please notice that removing a project will remove all the documents within the project.</p>
 
     </div>
     <div class="one-third-col">

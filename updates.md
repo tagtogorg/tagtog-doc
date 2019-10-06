@@ -14,6 +14,18 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W40.1 🍻
+_2019-10-06_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can edit your project description 📝🌈</span></li>
+  <li class="new"><span markdown="1">💁‍♂️Now when the master annotations are shown as default for an user, this is properly indicated with a warning (both on the GUI and [API](http://localhost:4000/API_documents_v1.html#get-existing-documents-get))</span></li>
+  <li class="fix"><span markdown="1">Fixed wrongly showing _0_ as number of documents for many open datasets.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Fixed wrong redirection in some instances when deleting single documents on the GUI.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W40.0 🍺
 _2019-10-02_
 
@@ -51,7 +63,7 @@ _2019-09-16_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can filter by <a title="Entity labels in tagtog" href="projects.html#entity-labels">entity label</a> value. Spot easily those entities labeled with an specific entity label and value. <a title="tagtog - Filter by entity label value" href="webeditor.html#filter-entities">Documentation</a>.</span></li>
-  <li class="new"><span markdown="1">Titles in images are also now supported in the anndoc format, and in particular [parsed in markdown files](MarkdownFileParsing).</span></li>  
+  <li class="new"><span markdown="1">Titles in images are also now supported in the anndoc format, and in particular [parsed in markdown files](MarkdownFileParsing).</span></li>
   <li class="new"><span markdown="1">Cached on the Document Editor the toggling of hiding/showing the right panel (sidebar), for your convenience.</span></li>
   <li class="doc"><span markdown="1">Added more information to the Members section in the project settings to let you know all the ways you can manage your project's team.</span></li>
 </ul>

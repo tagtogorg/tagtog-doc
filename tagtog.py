@@ -8,6 +8,8 @@ from itertools import islice, chain
 import argparse
 from argparse import RawTextHelpFormatter
 import getpass
+import json
+
 try:
     import requests
 except Exception:
@@ -275,13 +277,13 @@ def print_download(args):
     while next_page != -1:
         args.req_params["output"] = "search"
         args.req_params["page"] = next_page
-        (json, response) = search(args)
-
-        if json:
-            next_page = json["pages"]["next"]
+        (raw, response) = search(args)
+        json_dict = json.loads(raw)
+        if json_dict:
+            next_page = json_dict["pages"]["next"]
             args.req_params["output"] = download_output
 
-            for doc in json["docs"]:
+            for doc in json_dict["docs"]:
                 args.req_params["ids"] = doc["id"]
                 response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=args.verify_ssl)
                 del args.req_params["ids"]

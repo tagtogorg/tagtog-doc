@@ -8,6 +8,8 @@ from itertools import islice, chain
 import argparse
 from argparse import RawTextHelpFormatter
 import getpass
+import json
+
 try:
     import requests
 except Exception:
@@ -226,10 +228,10 @@ def gen_filespath_generator(path, extension):
 
 
 def print_search(args):
-    (json, response) = search(args)
+    (json_string, response) = search(args)
 
-    if json:
-        print(json)
+    if json_string:
+        print(json_string)
     else:
         print("ERROR;", response.status_code, response.reason)
 
@@ -238,7 +240,7 @@ def search(args):
     response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=args.verify_ssl)
 
     if response.ok:
-        return (response.text, response)
+        return (response.text, response)  # NOTE: return as json string. Dont' want to return as .json(), as otherwise in print_search we would have to do a double conversion
     else:
         return (None, response)
 
@@ -275,13 +277,15 @@ def print_download(args):
     while next_page != -1:
         args.req_params["output"] = "search"
         args.req_params["page"] = next_page
-        (json, response) = search(args)
+        (json_string, response) = search(args)
 
-        if json:
-            next_page = json["pages"]["next"]
+        if json_string:
+            json_dict = json.loads(json_string)
+
+            next_page = json_dict["pages"]["next"]
             args.req_params["output"] = download_output
 
-            for doc in json["docs"]:
+            for doc in json_dict["docs"]:
                 args.req_params["ids"] = doc["id"]
                 response = requests.get(args.req_url, params=args.req_params, auth=args.req_auth, verify=args.verify_ssl)
                 del args.req_params["ids"]

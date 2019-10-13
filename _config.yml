@@ -10,7 +10,7 @@ description:      'Official documentation for <a href="https://tagtog.net">tagto
 app_url:          https://www.tagtog.net
 url:              https://docs.tagtog.net
 baseurl:
-baseurl: 
+baseurl:
 sidebar_toc:
   - name: What's new
     pages:
@@ -35,7 +35,7 @@ sidebar_toc:
     pages:
       - api_documents_v1
       - api_settings_v1
-      - api_projects_v1
+      - api-projects-v1
       - api_metrics_v0
 
   - name: Concept Search
@@ -71,7 +71,7 @@ plugins:
   - jemoji
 
 # Custom vars
-version: 3.2019-W40.1
+version: 3.2019-W41.0
 sidebar_home_link: true
 search_page: false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog

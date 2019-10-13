@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🕵️‍♂️
+## 3.2019-W41.0 🕵️‍♂️
+_2019-10-13_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Search your projects and public projects 🔎 (also [new API to "search-my-projects"](API-projects-v1#search-my-projects))</span></li>  

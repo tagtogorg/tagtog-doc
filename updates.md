@@ -14,6 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🔗
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Reestablished the old links to the corpora: [LocText](https://www.tagtog.net/jmcejuela/LocText/-settings), [IDP4+](https://www.tagtog.net/jmcejuela/IDP4plus/-settings), [FlyBase](https://www.tagtog.net/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus/-settings), and [V300](https://www.tagtog.net/helencook/V300/-settings)</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W41.0 🕵️‍♂️
 _2019-10-13_
 

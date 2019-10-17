@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🇸🇬
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now the special `filter:TODO` view of documents (to be annotated), are sorted just like folders. This makes it easier to reason about the order of work-in-progress "TODO" documents.</span></li>  
+  <li class="fix"><span markdown="1">(Cloud & OnPremises) slightly faster document navigation and up to 6x less memory footprint, after reviewing some internal caching.</span></li>  
+</ul>
+
+---
+
 ## 3.2019-W42.0 🔗
 _2019-10-14_
 

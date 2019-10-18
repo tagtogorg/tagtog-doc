@@ -17,7 +17,9 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ## ??? 🇸🇬
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Now the special `filter:TODO` view of documents (to be annotated), are sorted just like folders. This makes it easier to reason about the order of work-in-progress "TODO" documents.</span></li>  
+  <li class="new"><span markdown="1">Now the `filter:TODO` view of documents, is sorted just like folders. This makes it easier to reason about the order of wip "TODO" documents.</span></li>
+  <li class="new"><span markdown="1">Now `supercurator`s have also the active button to copy their annotations to `master`'s.</span></li>
+  <li class="fix"><span markdown="1">Fixed sometimes wrong showing the status of the confirmation checkmark when annotations where copied from one version to another.</span></li>
   <li class="fix"><span markdown="1">(Cloud & OnPremises) slightly faster document navigation and up to 6x less memory footprint, after reviewing some internal caching.</span></li>  
 </ul>
 

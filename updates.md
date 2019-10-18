@@ -17,6 +17,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ## ??? 🇸🇬
 
 <ul class="updates">
+  <li class="new"><span markdown="1">Work now better in teams... with [**Automatic Merging of Member Annotations (TODO JORGE WRITE LINK)**](TODO JORGE WRITE LINK)! </span></li>
   <li class="new"><span markdown="1">Now the `filter:TODO` view of documents, is sorted just like folders. This makes it easier to reason about the order of wip "TODO" documents.</span></li>
   <li class="new"><span markdown="1">Now `supercurator`s have also the active button to copy their annotations to `master`'s.</span></li>
   <li class="fix"><span markdown="1">Fixed sometimes wrong showing the status of the confirmation checkmark when annotations where copied from one version to another.</span></li>

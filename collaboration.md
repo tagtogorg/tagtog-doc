@@ -44,7 +44,7 @@ id: collaboration
     </tr>
     <tr>
       <td>Master annotations</td>
-      <td>Replace master annotations using the annotations from other project member.</td>
+      <td>Replace master annotations using the annotations from other project member or via adjudication.</td>
     </tr>
     <tr>
       <td>Guidelines</td>
@@ -80,7 +80,7 @@ id: collaboration
     </tr>
     <tr>
       <td>Project</td>
-      <td>Delete project</td>
+      <td>Delete project or change its details</td>
     </tr>
   </table>
 </div>
@@ -128,7 +128,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Each user annotates only the <code>master</code> version of the assigned documents. Once a document is annotated, the user marks the annotations as completed by clicking the Confirm button. <code>admin</code>'s can check the progress in the document list view.</p>
+  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Each user annotates only the <code>master</code> version of the assigned documents. Once a document is annotated, the user marks the annotations as completed by clicking the <i>Confirm</i> button. <code>admin</code>'s can check the progress in the document list view.</p>
 </div>
 
 
@@ -160,16 +160,16 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations for the documents assigned. Once completed, the user mark her/his version as completed by clicking on the Confirm button.</p>
+  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations for the documents assigned. Once completed, the user mark her/his version as completed by clicking on the <i>Confirm</i> button.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='You can always assign a document to more than one user. Check out <a href="#documents-are-automatically-distributed-multiple-annotators-per">this annotation flow</a> for details.' %}
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. Admins review the annotated documents and if ready, import the user's annotations to the <code>master</code> version (final version). If the annotations were not Confirmed yet, admins should click on the Confirm button in the <code>master</code> version to indicate that the review is completed.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. Admins <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">check which documents are ready</a> for review. Admins import the user's annotations to the <code>master</code> version (final version), review and make the required changes. If the annotations were not Confirmed yet, admins should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed and the document is ready for production.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='If the Review step was not required, users could annotate directly on the <code>master</code> version. When ready, users should mark the annotations of each document as completed by clicking on the Confirm button.' %}
+  {% include message.html message='If the Review step was not required, users could annotate directly on the <code>master</code> version. When ready, users should mark the annotations of each document as completed by clicking on the <i>Confirm</i> button.' %}
 </div>
 
 
@@ -203,7 +203,7 @@ id: collaboration
   <p class="numbered-item"><span class="number-4">4</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select <strong>2 annotators or more per document</strong>. Additionally, choose whether the project's owner should be assigned documents to annotate or not.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='From the repeated documents ammong annotators, the IAA can be computed. Note that even when only <a href="#documents-are-automatically-distributed-one-annotator-per-docume">one annotator is assigned per document</a>, a small sample of documents is randomly chosen by tagtog to always be able to compute the IAA.' %}
+  {% include message.html message='From the repeated documents among annotators, the IAA can be computed. Note that even when only <a href="#documents-are-automatically-distributed-one-annotator-per-docume">one annotator is assigned per document</a>, a small sample of documents is randomly chosen by tagtog to always be able to compute the IAA.' %}
 </div>
 
 <div class="two-third-col">
@@ -211,7 +211,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. Admins review the annotated documents and if ready, import the user' annotations to the <code>master</code> version (final version). If the annotations were not Confirmed yet, admins should click on the Confirm button in the <code>master</code> version to indicate that the review is completed.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Adjudication</strong>. Admins <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">check which documents are ready for adjudication</a>. For each document, admins merge the users' annotations (<a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">automatic adjudication</a>) to the <code>master</code> version (final version). Admins review the merged annotations and if these were not Confirmed yet, admins should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed.</p>
 </div>
 
 
@@ -252,4 +252,20 @@ id: collaboration
 </div>
 <div class="one-third-col">
   {% include message.html message="You can create a separate project with the same setup as your production project and <strong>perform tests</strong>. If you bring someone aboard, you can have them annotate the test documents already annotated by the team and check the level of agreement. To train your team, you can add new documents and check the team agreement." %}
+</div>
+<div class="two-third-col">
+  <h3>Adjudication</h3>
+  <p> When different users annotate the same documents, as a result, there are multiple annotation versions. <strong>Adjudication is the process to resolve inconsistencies among these versions before promoting a version to master</strong>. tagtog supports automatic adjudication. </p>
+  <h4>Automatic adjudication based on IAA</h4>
+  <p>Do you need first more information about what IAA (inter-annotator agreement) is. Read here: <a title="tagtog - inter-annotator agreement" href="collaboration.html#iaa-inter-annotator-agreement">inter-annotator agreement</a> ? </p>
+  <p>It follows a merging strategy based on <strong>choosing the available-best user for each annotation task</strong>, i.e. choosing the annotations from the user with the highest IAA for an specific annotation task (regarding the <a title="tagtog - IAA calculation methods" href="IAA-calculation-methods">exact_v1 metric</a>; for all documents).</p>
+  {% include image.html caption="In this example SME A has the highest IAA for task A and SME B for task B. The result are the annotations for task A by SME A plus the annotations from task B by SME B" name="automatic_adjudication.png" %}
+  <p>In the background, tagtog creates an IAA ranking of all annotators for each specific task. In that ordered ranking,
+  the chosen annotator is the first one, which has annotations made for the document to merge.</p>
+  <p>Also, a ranking of the best overall annotators as an average of all IAAs is calculated. If there are no best overall annotators, this means there is no IAA at all calculated for the project. If the IAA is not calculated for a specific IAA, its best annotator is defaulted to the available-best overall annotator.</p>
+  <p>Currently this adjudication process is only available in the user interface (no through API), in the toolbar of the annotation editor (<a title="tagtog - manage annotation versions" href="webeditor.html#manage-annotation-versions">Manage annotation versions</a>{% include inline-image.html name="editor-toolbar-import-ann.PNG" width="28" %}). </p>
+  <p>If you want to know more about the adjudication process and when it makes sense to use an automatic process, take a look to this blog post: <a title="Jorge Campos at Medium - The adjudication process in collaborative annotation" href="https://medium.com/@jorgecp/the-adjudication-process-in-collaborative-annotation-61623c46b700?source=friends_link&sk=41adf0909b87899133ac3ef87fa88ccf">The adjudication process in collaborative annotation</a></p>
+</div>
+<div class="one-third-col">
+
 </div>

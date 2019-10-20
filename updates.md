@@ -14,11 +14,25 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W42.1 🇸🇬
+_2019-10-20_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Work now better in teams... with [**Automatic Adjudication**](collaboration.html#adjudication)! If users annotate the same documents, now you can merge their annotations into a sigle version automatically. tagtog uses the IAA metrics for each annotation task to compute which annotation to choose in each case.</span></li>
+  <li class="new"><span markdown="1">Now the `filter:TODO` view of documents, is sorted just like folders. This makes it easier to reason about the order of wip "TODO" documents.</span></li>
+  <li class="new"><span markdown="1">Now `supercurator`s have also the active button to copy their annotations to `master`'s.</span></li>
+  <li class="fix"><span markdown="1">Fixed sometimes wrong showing the status of the confirmation checkmark when annotations where copied from one version to another.</span></li>
+  <li class="fix"><span markdown="1">(Cloud & OnPremises) slightly faster document navigation and up to 6x less memory footprint, after reviewing some internal caching.</span></li>
+  <li class="doc"><span markdown="1">The descriptions of the different annotation flows are now updated: [Annotation flows & Task Distribution](collaboration.html#annotation-flows-task-distribution).</span></li>
+</ul>
+
+---
+
 ## 3.2019-W42.0 🔗
 _2019-10-14_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">Reestablished the old links to the corpora: [LocText](https://www.tagtog.net/jmcejuela/LocText/-settings), [IDP4+](https://www.tagtog.net/jmcejuela/IDP4plus/-settings), [FlyBase](https://www.tagtog.net/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus/-settings), and [V300](https://www.tagtog.net/helencook/V300/-settings)</span></li>  
+  <li class="fix"><span markdown="1">Reestablished the old links to the corpora: [LocText](https://www.tagtog.net/jmcejuela/LocText/-settings), [IDP4+](https://www.tagtog.net/jmcejuela/IDP4plus/-settings), [FlyBase](https://www.tagtog.net/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus/-settings), and [V300](https://www.tagtog.net/helencook/V300/-settings)</span></li>
 </ul>
 
 ---
@@ -27,7 +41,7 @@ _2019-10-14_
 _2019-10-13_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Search your projects and public projects 🔎 (also [new API to "search-my-projects"](API-projects-v1#search-my-projects))</span></li>  
+  <li class="new"><span markdown="1">Search your projects and public projects 🔎 (also [new API to "search-my-projects"](API-projects-v1#search-my-projects))</span></li>
 </ul>
 
 ---

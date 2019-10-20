@@ -317,8 +317,8 @@ toc: true
       {% include image.html name="editor-members.PNG" width="150"%}
     </div>
     <div class="two-third-col">
-      <h4>Import annotations from other versions</h4>
-      <p>You might want to start from the annotations of other user or replace the <code>master</code> version with your annotations. For such cases, you can use the import option {% include inline-image.html name="editor-toolbar-import-ann.PNG" width="28" %} in the toolbar.</p>
+      <h4>Manage annotation versions</h4>
+      <p>You might want to start from the annotations of other user or replace the <code>master</code> version with the annotations of a specific user. If different users have annotated the same documents, tagtog also supports an <strong>automatic adjudication process</strong> to compose the final version of the annotations based on the agreement among users. For such cases, you can use the options available {% include inline-image.html name="editor-toolbar-import-ann.PNG" width="28" %} in the toolbar.</p>
       <p>If you click on that option, a list of actions shows up:</p>
       <table style="width:100%">
         <tr>
@@ -332,6 +332,10 @@ toc: true
         <tr>
           <td>Copy to mine</td>
           <td>Replace your annotations with the version displayed in the document area.</td>
+        </tr>
+        <tr>
+          <td>Merge Annotations</td>
+          <td>Automatic adjudication process that merges all the member's annotations into <code>master</code>. This adjudication is based on the <a title="tagtog - inter-annotator agreement" href="collaboration.html#iaa-inter-annotator-agreement">inter-annotator agreement</a> (IAA) and it is explained in detail here: <a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">Automatic adjudication based on IAA</a>.</td>
         </tr>
       </table>
       <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p>

@@ -87,3 +87,11 @@ Know what you can do with tagtog with the following tutorials. Moreover, we publ
 <div class="one-third-col">
   {% include image.html name="iaa-matrix.png" %}
 </div>
+
+<div class="two-third-col">
+  <h2><a title="Jorge Campos at Medium - The adjudication process in collaborative annotation" href="https://medium.com/@jorgecp/the-adjudication-process-in-collaborative-annotation-61623c46b700?source=friends_link&sk=41adf0909b87899133ac3ef87fa88ccf">The adjudication process in collaborative annotation</a></h2>
+  <p>If multiple SMEs work on the same data, as a result, there are multiple annotation versions. We define adjudication as the process to resolve inconsistencies among these versions before a version is promoted to the gold standard. This process is manual, semi-automatic or automatic. Learn the differences and when to use each of them.</p>
+</div>
+<div class="one-third-col">
+  {% include image.html name="automatic_adjudication.png" %}
+</div>

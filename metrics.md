@@ -54,7 +54,7 @@ id: metrics
   <div class="two-third-col">
     <h3>Document labels</h3>
     <p>The following charts are available:</p>
-    <p class="list-item"><span class="list-item-1"></span><strong>Document labels distribution across documents</strong>. Number of documents with an specific document label set.</p>
+    <p class="list-item"><span class="list-item-1"></span><strong>Document labels distribution across documents</strong>. Number of documents with a specific document label set.</p>
     <p class="list-item"><span class="list-item-2"></span><strong>A chart per document label</strong>. For the `boolean` or `enum` types, this chart represents the distribution of possible values across the documents of your project. For the `string` type, due to its non-finite nature, this chart represents the top values across the documents of your project.</p>
     <p>A misrepresentation of a document label or any of their possible values might impact the health of your data. Pay special attention to the representation of the values from your labels, it can lead to bias or incorrect predictions.</p>
   </div>

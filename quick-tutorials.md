@@ -81,6 +81,16 @@ Know what you can do with tagtog with the following tutorials. Moreover, we publ
 </div>
 
 <div class="two-third-col">
+  <h2><a title="tagtog at Medium - Automatic adjudication based on the inter-annotator agreement" href="https://medium.com/@tagtog/automatic-adjudication-based-on-the-inter-annotator-agreement-a62f49be7bcf">Automatic adjudication based on the inter-annotator agreement</a></h2>
+  <p>When multiple annotators produce annotations for the same data,  tagtog chooses the annotations from the available-best annotator for each annotation task. Check out step by step how to setup this process.</p>
+</div>
+<div class="one-third-col">
+  {% include image.html name="automatic_adjudication_2.jpg" %}
+</div>
+
+
+
+<div class="two-third-col">
   <h2><a title="tagtog at Medium - Poor Inter-Annotator Agreement: what to do?" href="https://medium.com/@tagtog/poor-inter-annotator-agreement-what-to-do-6980e90ce7ee">Poor Inter-Annotator Agreement: what to do?</a></h2>
   <p>There may be several reasons why your annotators do not agree on the annotation tasks. It is important to mitigate these risks as soon as possible by identifying the causes. Discover how to prevent a low Inter-Annotator Agreement.</p>
 </div>
@@ -90,8 +100,9 @@ Know what you can do with tagtog with the following tutorials. Moreover, we publ
 
 <div class="two-third-col">
   <h2><a title="Jorge Campos at Medium - The adjudication process in collaborative annotation" href="https://medium.com/@jorgecp/the-adjudication-process-in-collaborative-annotation-61623c46b700?source=friends_link&sk=41adf0909b87899133ac3ef87fa88ccf">The adjudication process in collaborative annotation</a></h2>
-  <p>If multiple SMEs work on the same data, as a result, there are multiple annotation versions. We define adjudication as the process to resolve inconsistencies among these versions before a version is promoted to the gold standard. This process is manual, semi-automatic or automatic. Learn the differences and when to use each of them.</p>
+  <p>If multiple annotators work on the same data, as a result, there are multiple annotation versions. We define adjudication as the process to resolve inconsistencies among these versions before a version is promoted to the gold standard. This process is manual, semi-automatic or automatic. Learn the differences and when to use each of them.</p>
 </div>
 <div class="one-third-col">
   {% include image.html name="automatic_adjudication.png" %}
 </div>
+

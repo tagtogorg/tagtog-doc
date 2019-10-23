@@ -20,6 +20,7 @@ __
 <ul class="updates">
   <li class="doc"><span markdown="1">New tutorial: [The adjudication process in collaborative annotation](quick-tutorials.html#the-adjudication-process-in-collaborative-annotation).</span></li>
   <li class="doc"><span markdown="1">New tutorial: [Automatic adjudication based on the IAA](quick-tutorials.html#the-adjudication-process-in-collaborative-annotation).</span></li>
+  <li class="new"><span markdown="1">In read-only mode (as for example with public projects or reader role), access to entity labels and the option to see relationships are now available directly from the annotation menu.</span></li>
 </ul>
 
 ---

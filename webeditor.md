@@ -229,6 +229,12 @@ toc: true
           <td>Delete annotation</td>
         </tr>
         <tr>
+          <td>Labels</td>
+          <td class="centered">-</td>
+          <td>Yes, read-only</td>
+          <td>Go to the entity labels menu</td>
+        </tr>
+        <tr>
           <td>Permalink</td>
           <td class="centered">-</td>
           <td>Yes</td>
@@ -244,7 +250,7 @@ toc: true
         <tr>
           <td>See relations</td>
           <td class="centered">-</td>
-          <td>No</td>
+          <td>Yes</td>
           <td>See the relations this entity is part of.</td>
         </tr>
         <tr>

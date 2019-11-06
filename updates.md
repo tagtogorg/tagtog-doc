@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🙇‍♂️
+## 3.2019-W45.0 🙇‍♂️
+_2019-11-06_
 
 <ul class="updates">
   <li class="doc"><span markdown="1">New tutorial: [The adjudication process in collaborative annotation](quick-tutorials.html#the-adjudication-process-in-collaborative-annotation).</span></li>

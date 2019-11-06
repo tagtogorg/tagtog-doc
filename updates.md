@@ -16,7 +16,10 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ## ??? 🙇‍♂️
 
-<ul class="updates">  
+<ul class="updates">
+  <li class="doc"><span markdown="1">New tutorial: [The adjudication process in collaborative annotation](quick-tutorials.html#the-adjudication-process-in-collaborative-annotation).</span></li>
+  <li class="doc"><span markdown="1">New tutorial: [Automatic adjudication based on the IAA](quick-tutorials.html#the-adjudication-process-in-collaborative-annotation).</span></li>
+  <li class="new"><span markdown="1">In read-only mode (as for example with public projects or reader role), access to entity labels and the option to see relationships are now available directly from the annotation menu.</span></li>
   <li class="fix"><span markdown="1">Minor improvements and fixes.</span></li>
 </ul>
 
@@ -102,7 +105,7 @@ _2019-09-22_
 _2019-09-16_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Now you can filter by <a title="Entity labels in tagtog" href="projects.html#entity-labels">entity label</a> value. Spot easily those entities labeled with an specific entity label and value. <a title="tagtog - Filter by entity label value" href="webeditor.html#filter-entities">Documentation</a>.</span></li>
+  <li class="new"><span markdown="1">Now you can filter by <a title="Entity labels in tagtog" href="projects.html#entity-labels">entity label</a> value. Spot easily those entities labeled with a specific entity label and value. <a title="tagtog - Filter by entity label value" href="webeditor.html#filter-entities">Documentation</a>.</span></li>
   <li class="new"><span markdown="1">Titles in images are also now supported in the anndoc format, and in particular [parsed in markdown files](MarkdownFileParsing).</span></li>
   <li class="new"><span markdown="1">Cached on the Document Editor the toggling of hiding/showing the right panel (sidebar), for your convenience.</span></li>
   <li class="doc"><span markdown="1">Added more information to the Members section in the project settings to let you know all the ways you can manage your project's team.</span></li>

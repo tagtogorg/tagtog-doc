@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🤐
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Download all your documents and even fine-tuned searches, as zip files!<span></li>
+  <li class="new"><span markdown="1">Much faster download of `plain.html` files via the API. Note, the MIME type for these files was changed from `application/xml` to `text/html`.<span></li>
+</ul>
+
+---
+
 ## 3.2019-W45.1 🙇‍♂️
 _2019-11-06_
 

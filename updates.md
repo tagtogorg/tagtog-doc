@@ -19,6 +19,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 <ul class="updates">
   <li class="new"><span markdown="1">**[Download all your documents and even fine-tuned searches, as zip files](projects#downloads)!**</span></li>
   <li class="new"><span markdown="1">Much faster download of `plain.html` files via the API. Note, the MIME type for these files was changed from `application/xml` to `text/html`.</span></li>
+  <li class="new"><span markdown="1">Faster download of `ann.json` files via the API. We will improve the speed some more in next updates.</span></li>
 </ul>
 
 ---

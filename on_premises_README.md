@@ -41,22 +41,69 @@ Your system must have installed:
 Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the following minimum requirements:
 
 * Memory:
-  * On-Premises Annotator only: **8GB RAM** (e.g. `t3.large`); recommended **16GB RAM** (e.g. `t3.xlarge`)
-  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5.large`); recommended **32GB RAM** (e.g. `r5.xlarge`)
-* Disk: **50 GB of disk space**
+  * On-Premises Annotator only: **8GB RAM** (e.g. `t3.large` on AWS, or `D2s_v3` on Azure); recommended **16GB RAM** (e.g. `t3.xlarge` on AWS, or `D4s_v3` on Azure)
+  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5.xlarge` on AWS, or `E4s_v3` on Azure)
+* Disk: **50+ GB of disk space**
 
+
+### Example setup on AWS
+
+_Starting tagtog with an AWS template is currently not available. It will be soon!_
+
+Start an EC2 instance with Linux, for example `Amazon Linux 2 AMI` x86, with type `t3a.large`.
+
+After that, `ssh` into the newly created machine and run in bash:
+
+```shell
+sudo yum install -y docker
+sudo usermod -aG docker $USER
+sudo service docker start
+/usr/bin/docker --version
+
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+/usr/local/bin/docker-compose --version
+
+sudo sysctl -q -w vm.max_map_count=262144
+
+exit # Note, exit for the next session to pick up that the user is indeed in the docker group and can run docker commands
+```
+
+
+### Example setup on Azure
+
+_Starting tagtog with an Azure template or Azure Web App is currently not available. It will be soon!_
+
+Start a VM with Linux, for example `Ubuntu Server 18.04 LTS` with size `D2s_v3`.
+
+After that, `ssh` into the newly created machine and run in bash:
+
+```shell
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install docker-compose # it installs docker as a dependency too
+sudo usermod -aG docker $USER
+
+sudo sysctl -q -w vm.max_map_count=262144
+
+exit # Note, exit for the next session to pick up that the user is indeed in the docker group and can run docker commands
+```
 
 
 ## First-time Install
 
-* You will receive a single-line script. This script contains all the information regarding your one-server-only subscription **license**.
+* **You will receive a single-line script**. This script contains all the information regarding your one-server-only subscription **license**.
 * Execute the script in some folder where you will run from now on all tagtog-related commands.
 * A helper bash script is installed in this folder. This script assumes an UNIX environment and was tested only on **Linux and macOS**. It should work on Windows with Cygwin too. The script is not mandatory to run tagtog, but it is highly recommended.
 
 
 ## Run
 
-* Choose one full-path folder/volume where all your tagtog data will be stored. For description purposes, let's call this folder `$TAGTOG_HOME` (you can indeed assign it to a global variable, such as: `export TAGTOG_HOME="$PWD/tagtog_home"`). **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`).
+* Choose one full-path folder/volume where all your tagtog data will be stored, and assign it to a global variable for convenience. For description purposes, let's call this folder `$TAGTOG_HOME`. **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`).
+
+```shell
+export TAGTOG_HOME="$PWD/tagtog_data"`
+```
 
 * Run the application:
 

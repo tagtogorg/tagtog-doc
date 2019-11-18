@@ -17,6 +17,7 @@ toc: true
 <div class="one-third-col">
   {% include message.html message='To build more advanced queries you can base on the <a href="http://lucene.apache.org/core/3_1_0/queryparsersyntax.html ">Query Parser Syntax from Lucene</a>' %}
 </div>
+
 <div class="two-third-col">
   <h3>Search by string</h3>
   <p>Retrieve documents containing a specific string. Example: <code>insulin</code></p>
@@ -26,13 +27,24 @@ toc: true
 </div>
 
 <div class="two-third-col">
+  <h3>Search by filename</h3>
+  <p>Retrieve all files matching some filename, possibly with a wildcard.</p>
+  <p>Example, search all your pdf files: <code>filename:&ast;.pdf</code></p>
+  <p>Example, search a specific file with spaces: <code>filename:"My filename has some spaces.md"</code></p>
+</div>
+<div class="one-third-col">
+  <p>
+  {% include inline-image.html name="filename_search_with_special_characters.png" %}
+  Search filenames with spaces, special characters, and even emojis, just because you can! Example: <code>filename:"Grammatikübersicht abc ! 🧡' ㊔.pdf"</code></p>  
+</div>
+
+<div class="two-third-col">
   <h3>Search by document label</h3>
   <p>Find documents tagged with specific label and value. </p>
   <p>Boolean example: <code>label:isSevere:true</code></p>
   <p>Enum example: <code>label:severity:high</code></p>
 </div>
 <div class="one-third-col">
-
 </div>
 
 <div class="two-third-col">
@@ -63,8 +75,8 @@ toc: true
 <div class="two-third-col">
   <h3>Search by date</h3>
   <p>Retrieve all documents imported or updated in a given time frame.</p>
-  <p><code>created</code>: documents imported in a given time frame. Examples: <code>created:2018</code>, <code>created:2018-03</code>, <code>created:2018-03-06</code>, <code>created:[2013 to NOW]</code>, <code>created:[2016-12 TO 2017-02]</code>, <code>created:[NOW-1DAY TO NOW]</code> - documents imported since the previous day.</p>
-  <p><code>updated</code>: documents updated in a given time frame. Examples: <code>updated:2018</code>, <code>updated:2018-03</code>, <code>updated:2018-03-06</code>, <code>updated:[2013 to NOW]</code>, <code>updated:[2016-12 TO 2017-02]</code>, <code>updated:[NOW-1DAY TO NOW]</code> - documents updated since the previous day.</p>
+  <p><code>created</code>: documents imported in a given time frame. Examples: <code>created:2018</code>, <code>created:2018-03</code>, <code>created:2018-03-06</code>, <code>created:[2013 TO NOW]</code>, <code>created:[2016-12 TO 2017-02]</code>, <code>created:[NOW-1DAY TO NOW]</code> - documents imported since the previous day.</p>
+  <p><code>updated</code>: documents updated in a given time frame. Examples: <code>updated:2018</code>, <code>updated:2018-03</code>, <code>updated:2018-03-06</code>, <code>updated:[2013 TO NOW]</code>, <code>updated:[2016-12 TO 2017-02]</code>, <code>updated:[NOW-1DAY TO NOW]</code> - documents updated since the previous day.</p>
 </div>
 <div class="one-third-col">
 </div>

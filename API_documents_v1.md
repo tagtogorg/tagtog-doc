@@ -124,6 +124,12 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
+    <tr>
+      <td><code>filename</code></td>
+      <td>text.txt</td>
+      <td>myPlainTextFile.txt</td>
+      <td>Force the document's filename with this argument, otherwise the default is used. Note that the filename must end with the extension <code>.txt</code>. Otherwise, this is appended to your given name.</td>
+    </tr>
   </table>
 
 </div>

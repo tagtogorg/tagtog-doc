@@ -14,6 +14,17 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? ㊔
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Preserve, show, and be able to [search for a document's original exact filename!](search-queries.html#search-by-filename) Emojis included 😉</span></li>
+  <li class="new"><span markdown="1">API Documents: [new parameter `filename` to set the filename of a plain text](API_documents_v1.html#plain-text-post).</span></li>  
+  <li class="fix"><span markdown="1">Fixed [searching by date ranges](search-queries#search-by-date).</span></li>
+  <li class="fix"><span markdown="1">Fixed sending a dummy `:` header in some document responses.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W46.0 🤐
 _2019-11-14_
 

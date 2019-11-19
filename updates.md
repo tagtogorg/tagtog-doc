@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? ㊔
+## 3.2019-W47.0 ㊔
+_2019-11-19_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Preserve, show, and be able to [search for a document's original exact filename!](search-queries.html#search-by-filename) Emojis included 😉</span></li>

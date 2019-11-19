@@ -21,6 +21,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="new"><span markdown="1">API Documents: [new parameter `filename` to set the filename of a plain text](API_documents_v1.html#plain-text-post).</span></li>  
   <li class="fix"><span markdown="1">Fixed [searching by date ranges](search-queries#search-by-date).</span></li>
   <li class="fix"><span markdown="1">Fixed sending a dummy `:` header in some document responses.</span></li>
+  <li class="fix"><span markdown="1">Fixed wrong uploads of URLs, which happened only in some few cases.</span></li>
 </ul>
 
 ---

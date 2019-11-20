@@ -1257,7 +1257,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
       <td><code>ids</code></td>
       <td>-</td>
       <td class="break-all">aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text</td>
-      <td>Comma-separated list of ids, all the same type. The response is limited to the last id imported. </td>
+      <td>The id of the document you want to download. Note, the parameter is called "ids" for historical reasons. In the future, we might also allow to download multiple files at once.</td>
     </tr>
     <tr>
       <td><code>project</code></td>

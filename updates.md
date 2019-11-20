@@ -14,6 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🦾
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Natively-annotated PDFs can now also be seen in public projects!</span></li>
+</ul>
+
+---
+
 ## 3.2019-W47.0 ㊔
 _2019-11-19_
 

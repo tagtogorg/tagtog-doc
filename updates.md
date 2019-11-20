@@ -18,6 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="new"><span markdown="1">Natively-annotated PDFs can now also be seen in public projects!</span></li>
+  <li class="new"><span markdown="1">Now you can make your [convert your public project into public](projects.html#change-privacy-settings) and the other way around.</span></li>
 </ul>
 
 ---
@@ -27,7 +28,7 @@ _2019-11-19_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Preserve, show, and be able to [search for a document's original exact filename!](search-queries.html#search-by-filename) Emojis included 😉</span></li>
-  <li class="new"><span markdown="1">API Documents: [new parameter `filename` to set the filename of a plain text](API_documents_v1.html#plain-text-post).</span></li>  
+  <li class="new"><span markdown="1">API Documents: [new parameter `filename` to set the filename of a plain text](API_documents_v1.html#plain-text-post).</span></li>
   <li class="fix"><span markdown="1">Fixed [searching by date ranges](search-queries#search-by-date).</span></li>
   <li class="fix"><span markdown="1">Fixed sending a dummy `:` header in some document responses.</span></li>
   <li class="fix"><span markdown="1">Fixed wrong uploads of URLs, which happened only in some few cases.</span></li>

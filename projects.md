@@ -385,6 +385,8 @@ id: projects
     <p>Import another project's settings. <strong>This will overwrite your current settings and remove all your project's documents</strong>. This should be applied solely on new projects.</p>
     <h5>Edit Project Description</h5>
     <p>You can change the description of your project at any moment. Just type the new description and click on Save.</p>
+    <h5>Change Privacy Settings</h5>
+    <p>Switch your <a title="tagtog - Public projects" href="projects.html#public-projects">public project</a> to <a title="tagtog - Private projects" href="projects.html#private-projects">private project</a> or the other way around.</p>
     <h5>Remove a project</h5>
     <p>To remove a project, go to its <i>Settings > Admin</i>. Click on the <code>Delete Project</code> button. Please notice that removing a project will remove all the documents within the project.</p>
 
@@ -413,4 +415,25 @@ Other download actions are also available, including a reference to [download do
 </div>
 <div class="one-third-col">
 {% include image.html name="projects/download-as-zip.png" caption="Download all project documents or a searched subset as Zip" %}
+</div>
+
+<div class="two-third-col" >
+  <h3>Privacy</h3>
+  <p>Projects in tagtog are either public or private. You can change your private project to public or your public project to private in the <a href="projects.html#admin" title="tagtog - Admin settings">Admin Settings</a> of your project.</p>
+  <h4>Public projects</h4>
+  <p>Public projects {% include inline-image.html name="globe.png" width="20" %} are <strong>open projects</strong>. Share your data with the entire world (Cloud) or across your organization (on-Premises). Give to your dataset <strong>transparency and visibility</strong>. It is also a good opportunity to attract other people to collaborate with you to build or maintain open datasets. In public projects: </p>
+  <p class="list-item"><span class="list-item-1"></span>Anyone can see its documents and annotations (read-only).</p>
+  <p class="list-item"><span class="list-item-2"></span>Only registered users can download documents or annotations using the UI or the <a href="API_documents_v1.html" title="tagtog - API docs">API</a>.</p>
+  <p class="list-item"><span class="list-item-3"></span>Only the project members can make changes.</p>
+  <h4>Private projects</h4>
+  <p>In private projects {% include inline-image.html name="lock.png" width="20" %}, documents and annotations are kept private:</p>
+  <p class="list-item"><span class="list-item-1"></span>Each private project is only visible to its members.</p>
+  <p class="list-item"><span class="list-item-2"></span>Only project members can make changes.</p>
+
+
+</div>
+<div class="one-third-col">
+  {% include message.html message="For <strong>on-Premises</strong> installations, only those users with accounts in the tagtog instance can see or download documents or annotations from public projects. Only the members of the project can perform changes." %}
+
+  {% include message.html message='The default <strong>license</strong> for public projects is <a title="Creative Commons - Creative Commons: Attribution 4.0 International (CC BY 4.0)" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons: Attribution 4.0 International (CC BY 4.0)</a>. You can always change it directly in the guidelines of your project.' %}
 </div>

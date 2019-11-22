@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🦾
+## 3.2019-W47.1 🦾
+_2019-11-22_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can [make your project public](projects.html#change-privacy-settings), and the other way around (i.e. make it private).</span></li>

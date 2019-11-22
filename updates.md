@@ -17,7 +17,6 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ## ??? 🦾
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Natively-annotated PDFs can now also be seen in public projects!</span></li>
   <li class="new"><span markdown="1">Now you can [make your project public](projects.html#change-privacy-settings), and the other way around (i.e. make it private).</span></li>
 </ul>
 

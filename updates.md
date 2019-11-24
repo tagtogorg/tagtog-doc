@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2019-W47.2 🤫
+_2019-11-24_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Minor improvements.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W47.1 🦾
 _2019-11-22_
 

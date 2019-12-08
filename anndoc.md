@@ -111,8 +111,8 @@ toc: true
     <tr>
       <td><code>normalizations</code></td>
       <td><p>Map object with the normalizations attached to an entity (also known as fields).</p>
-          <p>The <code>source</code> object defines the dictionary used (<code>name</code>) and the <code>id</code> the entity is normalized to.</p>
-          <p><code>recname</code> is the first or most recommended name of the normalized entity.</p>
+          <p>The <code>source</code> object defines the dictionary used (<code>name</code>) and the <code>id</code> (canonical name) the entity is normalized to.</p>
+          <p><code>recName</code> is the first or most recommended name of the normalized entity. <emphasis>Currently, this property might be empty</emphasis> and it is marked for possible deprecation.</p>
           <p><code>confidence</code> each normalization has a <code>confidence</code> object attached to represent the probability of this annotation.</p>
       </td>
     </tr>
@@ -137,7 +137,7 @@ toc: true
     <tr>
       <td><code>source</code></td>
       <td><p><code>name</code> source's name. E.g. Wikipedia</p>
-          <p><code>id</code> unique id within source. E.g. Barack_Obama</p>
+          <p><code>id</code> The canonical name. Unique id within source. E.g. Barack_Obama</p>
           <p><code>url</code> url of id. E.g. <a href="https://en.wikipedia.org/wiki/Barack_Obama">https://en.wikipedia.org/wiki/Barack_Obama</a></p>
       </td>
     </tr>
@@ -196,11 +196,11 @@ toc: true
                 }, ...
             },
 
-            //Map object with Document Labels
+            //Map object with Normalizations
             "normalizations": {
                 "n_<uniq>": {
                     "source": Source,
-                    "recName": string,
+                    "recName": string, //currently, this property might be empty
                     "confidence": Confidence
                 }, ...
             }

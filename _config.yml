@@ -4,7 +4,7 @@ toc_levels:       1,2
 highlighter:      rouge
 
 # Setup
-title:            tagtog
+title:            "tagtog"
 tagline:          'The Text Annotation Tool to Train AI'
 description:      'Official documentation for <a href="https://tagtog.net">tagtog</a>'
 app_url:          https://www.tagtog.net
@@ -71,7 +71,7 @@ plugins:
   - jemoji
 
 # Custom vars
-version: 3.2019-W49.0
+version: 3.2019-W49.1
 sidebar_home_link: true
 search_page: false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog

@@ -1155,7 +1155,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
 <div markdown="1">
 ```json
 {
-  "version": "0.1.0",
+  "version": "0.5.0",
   "search": "entity:GGP:P02649",
   "totalFound": 1,
   "pages": {"current": 0, "previous": -1, "next": -1},
@@ -1163,6 +1163,7 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
     [
       {
         "id": "aMHKzF_lIoNrdh9pAx298njgIezy-text",
+        "filename": "text.txt",
         "header": "Certain genes make you more likely to develop Alzheimer's disease. Genes control the function of every cell in your body. Some genes determine basic characterist",
         "updated": "2018-03-03T20:59:56.467Z",
         "anncomplete": false,
@@ -1198,7 +1199,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
 <div markdown="1">
 ```javascript
 {
-  "version": "String: this format's version, e.g. 0.3.0",
+  "version": "String: this format's version, e.g. 0.5.0",
   "search": "String: user search query",
   "totalFound": "Number: total number of documents that match the search query",
   "pages": {
@@ -1211,6 +1212,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
   [
     {
       "id": "String: full tagtogID -- Use this to download the document",
+      "filename": "String: filename of originally uploaded file",
       "header": "String: title if the document has a natural title or otherwise an excerpt of the text's start",
       "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2017-02-23T08:31:40.874Z",
       "anncomplete": "Boolean: status for the document's annotation completion",

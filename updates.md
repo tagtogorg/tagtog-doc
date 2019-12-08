@@ -12,6 +12,13 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+## 3.2019-W49.1 🧚‍♀️
+_2019-12-08_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">[The search API now returns the (original) `filename`](API_documents_v1.html#search-response-format).</span></li>
+</ul>
+
 ---
 
 ## 3.2019-W49.0 🤫

@@ -112,7 +112,7 @@ toc: true
       <td><code>normalizations</code></td>
       <td><p>Map object with the normalizations attached to an entity (also known as fields).</p>
           <p>The <code>source</code> object defines the dictionary used (<code>name</code>) and the <code>id</code> (canonical name) the entity is normalized to.</p>
-          <p><code>recname</code> is the first or most recommended name of the normalized entity. <strong>Currently, this property is always empty</strong>.</p>
+          <p><code>recName</code> is the first or most recommended name of the normalized entity. <emphasis>Currently, this property might be empty</emphasis> and it is marked for possible deprecation.</p>
           <p><code>confidence</code> each normalization has a <code>confidence</code> object attached to represent the probability of this annotation.</p>
       </td>
     </tr>
@@ -200,7 +200,7 @@ toc: true
             "normalizations": {
                 "n_<uniq>": {
                     "source": Source,
-                    "recName": string, //currently, this property is always empty
+                    "recName": string, //currently, this property might be empty
                     "confidence": Confidence
                 }, ...
             }

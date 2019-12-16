@@ -10,7 +10,7 @@ id: ml
 </div>
 <div class="one-third-col">
   {% include image.html name="robot.drone.svg" width=500 %}
-  
+
 </div>
 
 <div class="two-third-col">
@@ -20,7 +20,7 @@ id: ml
   <p class="list-item"><span class="list-item-3"></span><strong>Index your data</strong>. Use automatic annotations to augment your data and improve discoverability (e.g. augment records with mutation mentions using standard names, easier to find). You can either import the results into your own system or use the <a href="/API_documents_v1.html#search-documents-in-a-project-get" title="Search API">Search API</a> to find suitable records across the data imported.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='tagtog with machine learning capabilities is offered on the tagtog <strong>Cloud or On-premises</strong> (<a title="tagtog plans" href="https://www.tagtog.net/-pricing">plans</a>). You can install it within your infrastructure or any public cloud (AWS, Google, Azure, etc.).' %}
+  {% include message.html message='tagtog with machine learning capabilities is offered on the tagtog <strong>Cloud or On-premises</strong> (<a title="tagtog plans" href="https://www.tagtog.net/-plans">plans</a>). You can install it within your infrastructure or any public cloud (AWS, Google, Azure, etc.).' %}
 </div>
 
 <div class="two-third-col">
@@ -31,16 +31,16 @@ id: ml
 
   <br/>
 
-  
+
 </div>
 <div class="one-third-col">
   {% include message.html message='<strong>What is semi-supervised learning?</strong> Traditional models use only labeled data to train. Labeled instances however are often difficult or expensive to obtain, as they require experienced human annotators. Meanwhile, unlabeled data may be easy to collect but harder to use for training.  Semi-supervised learning uses large amount of unlabeled data, together with the labeled data, to build better models. In practice, semi-supervised learning requires less human effort and gives higher accuracy. <a title="Semi-Supervised Learning Literature Survey. Xiaojin Zhu, Computer Sciences TR 1530, University of Wisconsin – Madison." href="http://pages.cs.wisc.edu/~jerryzhu/pub/ssl_survey.pdf">More information</a>' %}
 </div>
 <div class="two-third-col">
-  <br/> 
+  <br/>
   <p>To train a ML model follow the next steps: </p>
 
-  <p class="numbered-item"><span class="number-1">1</span><a title="tagtog docs - create a project" href="/projects.html#creating-a-project">Create a project</a> and activate Machine Learning (<i>Settings > Annotations</i>).</p> 
+  <p class="numbered-item"><span class="number-1">1</span><a title="tagtog docs - create a project" href="/projects.html#creating-a-project">Create a project</a> and activate Machine Learning (<i>Settings > Annotations</i>).</p>
   <br>
 </div>
 <div class="one-third-col">
@@ -77,8 +77,8 @@ id: ml
   <p>Follow this <strong><a title="tagtog at Medium - Train and deploy a custom ML model to recognize dates in text in 5 minutes" href="https://medium.com/@tagtog/train-and-deploy-a-custom-ml-model-to-recognize-dates-in-text-in-5-minutes-a17d604be5f9">hands-on quick tutorial</a></strong> to understand how easily you can train custom models.</p>
 </div>
 <div class="one-third-col">
-  
-</div> 
+
+</div>
 
 <div class="two-third-col">
   <h2>Continuous learning</h2>
@@ -101,5 +101,3 @@ id: ml
 <div class="one-third-col">
 
 </div>
-
-

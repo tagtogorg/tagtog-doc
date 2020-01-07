@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🍪
+## 3.2020-W02.0 🍪
+_2020-01-07_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Fix cookies alert, which sometimes did not disappear after accepting them.</span></li>

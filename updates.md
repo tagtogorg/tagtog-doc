@@ -12,6 +12,16 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+---
+
+## ??? 🍪
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fix cookies alert, which sometimes did not disappear after accepting them.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W49.1 🧚‍♀️
 _2019-12-08_
 

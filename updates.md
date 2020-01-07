@@ -12,6 +12,17 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+---
+
+## 3.2020-W02.0 🍪
+_2020-01-07_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fix cookies alert, which sometimes did not disappear after accepting them.</span></li>
+</ul>
+
+---
+
 ## 3.2019-W49.1 🧚‍♀️
 _2019-12-08_
 
@@ -664,7 +675,7 @@ _2018-11-15_
 
 <ul class="updates">
   <li class="new"><span markdown="1">[Native PDF 📃 ! Annotate actual PDFs; then use them to train your ML models as easily as if they were plain texts! 😲](http://tagtog.net#pdf-annotation)</span></li>
-  <li class="new"><span markdown="1">[Use the new automated payment gateway to manage your subscriptions!](http://tagtog.net/-pricing)</span></li>
+  <li class="new"><span markdown="1">[Use the new automated payment gateway to manage your subscriptions!](https://tagtog.net/-plans)</span></li>
   <li class="fix"><span markdown="1">Stability improvements</span></li>
   <li class="doc"><span markdown="1">Add documentation: [upload annotated documents via API](API_documents_v1.html#import-annotated-documents-post "tagtog - upload annotated documents")</span></li>
   <li class="doc"><span markdown="1">Add documentation: [search by document label](search-queries.html#search-by-document-label "tagtog - search by document label")</span></li>

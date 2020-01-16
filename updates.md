@@ -13,6 +13,14 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
 ---
+## ???
+__
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Folders are now sorted alphabetically.</span></li>
+</ul>
+
+---
 
 ## 3.2020-W02.0 🍪
 _2020-01-07_

@@ -9,7 +9,7 @@ toc: true
 Tabulated format to represent an annotated document's **entities**. The format is a close derivative of the [EntitiesTsv](EntitiesTsv)'s, with two single but important differences:
 
 * The (non-labeled) **"outside" text is NOT written**
-* ALL labeled entities are written --> (because of this) **overlapping entities are supported**
+* ALL labeled entities are written. Because of this, **overlapping entities are supported**
 
 The document text's sections (parts) are still separated by new line.
 

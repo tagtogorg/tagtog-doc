@@ -11,7 +11,7 @@ toc: true
   <p>The folder tree is expanded by default.</p>
 
   <h3>Folders</h3>
-  <p>Use folders to organize your documents better. The <strong>root is the <code>pool</code> folder</strong>, which is created by default with each new project.</p>
+  <p>Use folders to organize your documents better. The <strong>root is the <code>pool</code> folder</strong>, which is created by default with each new project. Folders are sorted <strong>alphabetically</strong>.</p>
   <h4>Create a new folder</h4>
   <p>Click on the folder you want to be the parent of the new folder. Click on the folder action <code>Add new</code>, write the name of the new folder and press the key <kbd>↵</kbd>.</p>
   <h4>Rename a folder</h4>

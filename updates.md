@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🗂
+## 3.2020-W04.0 🗂
+_2020-01-21_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Folders are now sorted alphabetically.</span></li>

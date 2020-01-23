@@ -231,7 +231,8 @@ id: projects
 <div class="page-subsection">
   <div class="two-third-col">
     <h4>Webhooks</h4>
-    <p>The webhooks are useful to integrate tagtog within your system. You can define webhooks to notify automatically an external system after a specific event in tagtog or API.</p>
+    <p>The webhooks are useful to integrate tagtog within your system. Only users with the role <code>admin</code> can see/edit these project settings.</p>
+    <p>You can define webhooks to notify automatically an external system after a specific event in tagtog or API.</p>
     <p>These events are:</p>
     <table style="width:100%">
       <tr>
@@ -342,7 +343,8 @@ id: projects
 <div class="page-subsection">
   <div class="two-third-col">
     <h4>Members</h4>
-    <p>In this panel you can invite and organize other users in your project, so they can collaborate in the annotation tasks. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
+    <p>In this panel, project admins can invite and organize other users in your project, so they can collaborate in the annotation tasks. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
+    <p>Only users with the role <code>admin</code> can see/edit these project settings.</p>
   </div>
   <div class="one-third-col">
     {% include image.html name="settings-members.PNG" %}
@@ -374,6 +376,25 @@ id: projects
     {% include image.html name="settings-task-distribution.png" %}
   </div>
  </div>
+
+ <div class="page-subsection">
+  <div class="two-third-col">
+    <h4>Requirements</h4>
+    <p>Here you can set data requirements for your annotation tasks. These are enforced by tagtog to ensure your annotations comply with your data quality policies.</p>
+    <p>Only users with the role <code>admin</code> can see/edit these project settings.</p>
+    <p>There are different types of requirements available:</p>
+    <h5>Required labels on document upload</h5>
+    <p>You can <a title="Upload files with predefined document lables" href="documents.html#upload-files-with-predefined-document-labels">upload files with predefined document labels</a>. By default, no document label is selected. You can select one or more document labels if you want to ensure that always a file is uploaded, these labels are defined.</p>
+
+  </div>
+  <div class="one-third-col">
+    <div class="message">
+      This is a new section. Soon we will add more requirement types to help you manage quality. Stay tuned!
+    </div>
+  </div>
+</div>
+
+
 
 <div class="page-subsection">
   <div class="two-third-col">

@@ -15,7 +15,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ---
 
 ## ??? 👮‍♀️
-_2020-01-21_
+__
 
 <ul class="updates">
   <li class="new"><span markdown="1">Define the [data requirements](projects.html#requirements) you want to enforce in your project. For example, tagtog can make sure users fill the document labels defined in your project. Soon we will add more requirements to ensure, for example, that annotators normalize their entities or that each document has at least one entity of an specific entity type. </span></li>

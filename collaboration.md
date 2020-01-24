@@ -33,7 +33,7 @@ id: collaboration
     </tr>
     <tr>
       <td><code>reader</code></td>
-      <td><span>They cannot edit any annotations nor change anything in the project. They can only read <code>master</code>'s annotations.</span></td>
+      <td><span>They can only read <code>master</code>'s annotations.</span> In addition, they can upload files.</td>
     </tr>
   </table>
   <h5>Admin role</h5>
@@ -81,6 +81,10 @@ id: collaboration
     <tr>
       <td>Project</td>
       <td>Delete project or change its details</td>
+    </tr>
+    <tr>
+      <td>Requirements</td>
+      <td>Add or remove data requirements</td>
     </tr>
   </table>
 </div>

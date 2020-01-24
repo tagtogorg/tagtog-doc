@@ -14,6 +14,18 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W04.1 👮‍♀️
+_2020-01-24_
+__
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Define the [data requirements](projects.html#requirements) you want to enforce in your project. For example, tagtog can make sure users fill the document labels defined in your project. Soon we will add more requirements to ensure, for example, that annotators normalize their entities or that each document has at least one entity of an specific entity type. Stay tuned!</span></li>
+  <li class="new"><span markdown="1">[Reader role](collaboration.html#roles) can now upload files</span></li>
+  <li class="new"><span markdown="1">The [advanced section in the submit panel](documents.html#upload-text) is now automatically expanded/collapsed depending on your last choice.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W04.0 🗂
 _2020-01-21_
 

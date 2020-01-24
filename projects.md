@@ -383,8 +383,8 @@ id: projects
     <p>Here you can set data requirements for your annotation tasks. These are enforced by tagtog to ensure your annotations comply with your data quality policies.</p>
     <p>Only users with the role <code>admin</code> can see/edit these project settings.</p>
     <p>There are different types of requirements available:</p>
-    <h5>Required labels on document upload</h5>
-    <p>You can <a title="Upload files with predefined document lables" href="documents.html#upload-files-with-predefined-document-labels">upload files with predefined document labels</a>. By default, no document label is selected. You can select one or more document labels if you want to ensure that always a file is uploaded, these labels are defined.</p>
+    <h5>Required labels on file upload</h5>
+    <p>You can <a title="Upload files with predefined document lables" href="documents.html#upload-files-with-predefined-document-labels">upload files with predefined document labels</a>. By default, no document label is selected. You can select one or more document labels if you want to ensure that always a file is uploaded using the GUI, these labels are defined.</p>
 
   </div>
   <div class="one-third-col">

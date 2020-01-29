@@ -19,6 +19,7 @@ __
 
 <ul class="updates">
   <li class="fix"><span markdown="1">A user couldn't see a pre-annotated document when text and annotations were not aligned (for example: annotations or relations pointing to non-existing text parts). Currently those annotations or relations are not displayed, but the document is accessible.</span></li>
+  <li class="fix"><span markdown="1">Entity filter - entity label value. Solve the problem that blocked the list of recommended values for entity labels to appear when user typed.</span></li>
 </ul>
 
 ---

@@ -94,7 +94,7 @@ toc: true
   </ol>
 </div>
 <div class="one-third-col">
-  {% include message.html message='<div><p>Searching by folder name is the easiest method. However, if you have different folders with the same name, you should search by folder index or folder path.</p><p>Searching by folder index is the most "robust" method for the indices do not change upon folder renamings.</p></div>' %}
+  {% include message.html message='<div><p>Searching by folder name is the easiest method. However, if you have different folders with the same name, you should search by folder index or folder path.</p><p>Searching by folder index is the most "robust" method for the indices do not change upon folder renamings.</p><p>Note that "pool" is always the root folder.</p></div>' %}
 </div>
 
 

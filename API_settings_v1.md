@@ -129,7 +129,7 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
   </tr>
   <tr>
     <td><strong>Output</strong></td>
-    <td>JSON; fields: 1) <code>mapNewIds</code> and 2) <code>newSettings</code> (the new imported project's JSON settings)</td>
+    <td>JSON; fields: <code>mapNewIds</code>, <code>newSettings</code> (the new imported project's JSON settings)</td>
   </tr>
 </table>
 
@@ -205,7 +205,10 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend
 <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
 ---
+
 ## Folders management
+
+For all folder operations, please note that `pool` must always be the root folder. [More information](search-queries.html#search-by-folder).
 
 ### Add folder
 
@@ -220,7 +223,7 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend
   </tr>
   <tr>
     <td><strong>Output</strong></td>
-    <td>JSON; fields: 1) <code>mapNewIds</code> (always empty), and <code>newSettings</code> (the new project's JSON settings)</td>
+    <td>JSON; fields: <code>mapNewIds</code> (always empty), <code>newSettings</code> (the new project's JSON settings)</td>
   </tr>
 </table>
 
@@ -369,7 +372,7 @@ print(response.text)
   </tr>
   <tr>
     <td><strong>Output</strong></td>
-    <td>JSON; fields: 1) <code>mapNewIds</code> (always empty), and <code>newSettings</code> (the new project's JSON settings)</td>
+    <td>JSON; fields: <code>mapNewIds</code> (always empty), <code>newSettings</code> (the new project's JSON settings)</td>
   </tr>
 </table>
 
@@ -435,7 +438,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
   </tr>
   <tr>
     <td><strong>Output</strong></td>
-    <td>JSON; fields: 1) <code>mapNewIds</code> (always empty), and <code>newSettings</code> (the new project's JSON settings)</td>
+    <td>JSON; fields: <code>mapNewIds</code> (always empty), <code>newSettings</code> (the new project's JSON settings)</td>
   </tr>
 </table>
 

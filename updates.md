@@ -14,8 +14,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-##  💆‍♀️
-__
+## ??? 💆‍♂️
 
 <ul class="updates">
   <li class="fix"><span markdown="1">A user couldn't see a pre-annotated document when text and annotations were not aligned (for example: annotations or relations pointing to non-existing text parts). Currently those annotations or relations are not displayed, but the document is accessible.</span></li>

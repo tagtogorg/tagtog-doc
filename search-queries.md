@@ -35,7 +35,7 @@ toc: true
 <div class="one-third-col">
   <p>
   {% include inline-image.html name="filename_search_with_special_characters.png" %}
-  Search filenames with spaces, special characters, and even emojis, just because you can! Example: <code>filename:"Grammatikübersicht abc ! 🧡' ㊔.pdf"</code></p>  
+  Search filenames with spaces, special characters, and even emojis, just because you can! Example: <code>filename:"Grammatikübersicht abc ! 🧡' ㊔.pdf"</code></p>
 </div>
 
 <div class="two-third-col">
@@ -43,6 +43,8 @@ toc: true
   <p>Find documents tagged with specific label and value. </p>
   <p>Boolean example: <code>label:isSevere:true</code></p>
   <p>Enum example: <code>label:severity:high</code></p>
+  <p>String example: <code>label:name:Lois</code></p>
+  <p>Range example: <code>label:number_issues:[10 TO 20]</code></p>
 </div>
 <div class="one-third-col">
 </div>
@@ -94,7 +96,7 @@ toc: true
   </ol>
 </div>
 <div class="one-third-col">
-  {% include message.html message='<div><p>Searching by folder name is the easiest method. However, if you have different folders with the same name, you should search by folder index or folder path.</p><p>Searching by folder index is the most "robust" method for the indices do not change upon folder renamings.</p></div>' %}
+  {% include message.html message='<div><p>Searching by folder name is the easiest method. However, if you have different folders with the same name, you should search by folder index or folder path.</p><p>Searching by folder index is the most "robust" method for the indices do not change upon folder renamings.</p><p>Note that "pool" is always the root folder.</p></div>' %}
 </div>
 
 

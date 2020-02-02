@@ -14,9 +14,20 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W05.0 💆‍♂️
+_2020-02-02_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">A user couldn't see a pre-annotated document when text and annotations were not aligned (for example: annotations or relations pointing to non-existing text parts). Currently those annotations or relations are not displayed, but the document is accessible.</span></li>
+  <li class="fix"><span markdown="1">Entity filter - entity label value. Solve the problem that blocked the list of recommended values for entity labels to appear when user typed.</span></li>
+  <li class="fix"><span markdown="1">Bug fixed, which previously allowed via API to wrongly create new folders that did not fall under the root `pool` folder. This is now prohibited and enforced upon API requests.</span></li>
+  <li class="new"><span markdown="1">Improve visualization of long entity label values on the sidebar</span></li>
+</ul>
+
+---
+
 ## 3.2020-W04.1 👮‍♀️
 _2020-01-24_
-__
 
 <ul class="updates">
   <li class="new"><span markdown="1">Define the [data requirements](projects.html#requirements) you want to enforce in your project. For example, tagtog can make sure users fill the document labels defined in your project. Soon we will add more requirements to ensure, for example, that annotators normalize their entities or that each document has at least one entity of an specific entity type. Stay tuned!</span></li>

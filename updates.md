@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 😳
+## 3.2020-W06.0 😳
+_2020-02-09_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New functionality in the ann menu to search for your entity types!</span></li>

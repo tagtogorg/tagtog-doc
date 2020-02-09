@@ -33,7 +33,7 @@ id: collaboration
     </tr>
     <tr>
       <td><code>reader</code></td>
-      <td><span>They can only read <code>master</code>'s annotations.</span> In addition, they can upload files.</td>
+      <td><span>They can only read <code>master</code>'s annotations.</span></td>
     </tr>
   </table>
   <h5>Admin role</h5>

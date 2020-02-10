@@ -15,7 +15,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 😳
+## 3.2020-W06.1 😳
+_2020-02-10_
 
 <ul class="updates">
   <li class="new"><span markdown="1">We know many of us use a large list of entity types. Now you can search by entity type name and description directly from the [annotation menu](webeditor.html#annotation-menu). Results are navigable by keyboard and we are working to extend this feature to other editor components!</span></li>

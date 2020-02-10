@@ -15,24 +15,11 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ???
-_2020-02-02_
+## ??? 😳
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">A user couldn't see a pre-annotated document when text and annotations were not aligned (for example: annotations or relations pointing to non-existing text parts). Currently those annotations or relations are not displayed, but the document is accessible.</span></li>
-  <li class="fix"><span markdown="1">Entity filter - entity label value. Solve the problem that blocked the list of recommended values for entity labels to appear when user typed.</span></li>
-  <li class="fix"><span markdown="1">Bug fixed, which previously allowed via API to wrongly create new folders that did not fall under the root `pool` folder. This is now prohibited and enforced upon API requests.</span></li>
-  <li class="new"><span markdown="1">Improve visualization of long entity label values on the sidebar.</span></li>
-</ul>
-
----
-
-## 3.2020-W06.0 😳
-_2020-02-09_
-
-<ul class="updates">
-  <li class="new"><span markdown="1">New functionality in the ann menu to search for your entity types!</span></li>
-  <li class="new"><span markdown="1">Changed. [Reader role](collaboration.html#roles) can no longer upload files. Initiated work to allow for finer user authorization control.</span></li>  
+  <li class="new"><span markdown="1">We know many of us use a large list of entity types. Now you can search by entity type name and description directly from the [annotation menu](webeditor.html#annotation-menu). Results are navigable by keyboard and we are working to extend this feature to other editor components!</span></li>
+  <li class="new"><span markdown="1">Changed. [Reader role](collaboration.html#roles) can no longer upload files. Initiated work to allow for finer user authorization control.</span></li>
 </ul>
 
 ---

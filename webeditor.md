@@ -257,7 +257,8 @@ toc: true
           <td>Change Type</td>
           <td class="centered">-</td>
           <td>No</td>
-          <td><p>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types will show up. This list is sorted alphabetically.</p>
+          <td><p>Change the Entity Type of entity. If you hover the mouse on this menu item, the list of possible Entity Types and their descriptions will show up. This list is sorted alphabetically. The first item is always selected by default and you can change to this entity type by clicking or pressing <kbd>↵</kbd>.</p>
+          <p>You can filter the entity types by name or description. Just type in the searchbox and the entity types with matching description or name will be listed. The list is navigable by keyboard. Move with <kbd>↑</kbd> <kbd>↓</kbd> and select with <kbd>↵</kbd>.</p>
           <p>A change of entity type can affect the properties of the entity. Normalizations will be removed and only common entity labels will be preserved.</p></td>
         </tr>
         <tr>

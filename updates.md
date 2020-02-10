@@ -12,14 +12,15 @@ Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_ri
 
 Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
 
+
 ---
 
-## 3.2020-W06.0 😳
-_2020-02-09_
+## 3.2020-W06.1 😳
+_2020-02-10_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">New functionality in the ann menu to search for your entity types!</span></li>
-  <li class="new"><span markdown="1">Changed. [Reader role](collaboration.html#roles) can no longer upload files. Initiated work to allow for finer user authorization control.</span></li>  
+  <li class="new"><span markdown="1">We know many of us use a large list of entity types. Now you can search by entity type name and description directly from the [annotation menu](webeditor.html#annotation-menu). Results are navigable by keyboard and we are working to extend this feature to other editor components!</span></li>
+  <li class="new"><span markdown="1">Changed. [Reader role](collaboration.html#roles) can no longer upload files. Initiated work to allow for finer user authorization control.</span></li>
 </ul>
 
 ---

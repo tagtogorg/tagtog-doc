@@ -27,6 +27,16 @@ _2020-02-02_
 
 ---
 
+## 3.2020-W06.0 😳
+_2020-02-09_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">New functionality in the ann menu to search for your entity types!</span></li>
+  <li class="new"><span markdown="1">Changed. [Reader role](collaboration.html#roles) can no longer upload files. Initiated work to allow for finer user authorization control.</span></li>  
+</ul>
+
+---
+
 ## 3.2020-W05.0 💆‍♂️
 _2020-02-02_
 

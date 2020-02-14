@@ -71,7 +71,7 @@ plugins:
   - jemoji
 
 # Custom vars
-version: 3.2020-W06.1
+version: 3.2020-W06.2
 sidebar_home_link: true
 search_page: false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog

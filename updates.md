@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 📜
+## 3.2020-W07.2 📜
+_2020-02-19_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Updated expired SSL certificate for OnPremises.</span></li>

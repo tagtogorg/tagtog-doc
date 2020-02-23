@@ -14,7 +14,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🇫🇷
+## ??? 📓
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Improved reporting of parsing errors on bad requests. We will continue our efforts to catch errors early and explain them nicely.</span></li>

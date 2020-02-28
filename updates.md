@@ -20,6 +20,7 @@ __
 <ul class="updates">
   <li class="new"><span markdown="1">Minimal zoom level for PDF is now 0.5 (50%). The initial value remains at 1 (100%), but now you can reduce it. This specially helps navigating across OCRed documents.</span></li>
   <li class="fix"><span markdown="1">Add a scroll bar to the list of project members, in the document view, for a big number of users.</span></li>
+  <li class="new"><span markdown="1">(ONPREMISES) Upgraded redis service to version: `redis:4.0.14-alpine`.</span></li>
 </ul>
 
 ---

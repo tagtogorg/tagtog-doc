@@ -14,6 +14,20 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W09.0 🔎
+_2020-03-01_
+__
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Minimal zoom level for PDF is now 0.5 (50%). The initial value remains at 1 (100%), but now you can reduce it. This specially helps navigating across OCRed documents.</span></li>
+  <li class="new"><span markdown="1">Increased the maximum description size for enum labels, from 500 characters to 5000.</span></li>  
+  <li class="new"><span markdown="1">(ONPREMISES) Upgraded redis service to version: `redis:4.0.14-alpine`.</span></li>
+  <li class="new"><span markdown="1">The project description was written before unescaped in html meta tags. This is now fixed.</span></li>
+  <li class="fix"><span markdown="1">Added a scroll bar to the list of project members, in the document view, useful for a big number of users.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W08.1 📓
 _2020-02-25_
 

@@ -14,8 +14,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2020-W09.1 🔎
-_2020-03-03_
+## ??? 🔎
 
 <ul class="updates">
   <li class="new"><span markdown="1">Minimal zoom level for PDF is now 0.5 (50%). The initial value remains at 1 (100%), but now you can reduce it. This specially helps navigating across OCRed documents.</span></li>

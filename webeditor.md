@@ -103,6 +103,11 @@ toc: true
         <td>Any document</td>
       </tr>
       <tr>
+        <td class="centered"><kbd>ctrl+c</kbd> or <kbd>command+c</kbd></td>
+        <td>Copy annotation text (only available when the annotation menu is visible)</td>
+        <td>Any document</td>
+      </tr>
+      <tr>
         <td class="centered"><kbd>q</kbd></td>
         <td>Previous page</td>
         <td>Only for paginated documents as PDFs</td>
@@ -263,7 +268,7 @@ toc: true
         </tr>
         <tr>
           <td>Copy text</td>
-          <td class="centered">-</td>
+          <td class="centered"><kbd>ctrl+c</kbd> or <kbd>command+c</kbd></td>
           <td>Yes</td>
           <td>Copy the text of the annotation to the clipboard.</td>
         </tr>

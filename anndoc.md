@@ -2,7 +2,7 @@
 layout: page
 title: anndoc format
 sidebar_link: true
-version: 2.0
+version: 3.6
 id: anndoc
 toc: true
 ---

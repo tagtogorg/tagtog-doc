@@ -47,7 +47,7 @@ toc: true
     </tr>
     <tr>
       <td class="centered"><code>e_</code></td>
-      <td>Entity type (a.k.a Entity class)</td>
+      <td>Entity type (a.k.a. Entity class)</td>
     </tr>
     <tr>
       <td class="centered"><code>r_</code></td>

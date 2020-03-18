@@ -2,7 +2,7 @@
 layout: page
 title: anndoc format
 sidebar_link: true
-version: 2.0
+version: 3.6
 id: anndoc
 toc: true
 ---
@@ -47,7 +47,7 @@ toc: true
     </tr>
     <tr>
       <td class="centered"><code>e_</code></td>
-      <td>Entity type (a.k.a Entity class)</td>
+      <td>Entity type (a.k.a. Entity Class)</td>
     </tr>
     <tr>
       <td class="centered"><code>r_</code></td>

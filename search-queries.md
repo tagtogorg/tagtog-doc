@@ -12,7 +12,7 @@ toc: true
 ---
 
 <div class="two-third-col">
-  <p>Here you can learn how to build your search queries.</p>
+  <p>Here you learn how to build your search queries.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='To build more advanced queries you can base on the <a href="http://lucene.apache.org/core/3_1_0/queryparsersyntax.html ">Query Parser Syntax from Lucene</a>' %}
@@ -179,53 +179,8 @@ toc: true
 <div class="two-third-col">
   <h3>Escaping Special Characters</h3>
   <p>To escape these special characters use the <code>\</code> before the character. For example to search for <code>PD-L1</code> use the query: <code>PD\-L1</code>.</p>
-
 </div>
+
 <div class="one-third-col">
   {% include message.html message="The current list of <br/><strong>special characters</strong> are <code>+</code> <code>-</code> <code>!</code> <code>&quot;</code> <code>&amp;&amp;</code> <code>&verbar;&verbar;</code> <code>(</code> <code>)</code> <code>{</code> <code>}</code> <code>[</code> <code>]</code> <code>&Hat;</code> <code>~</code> <code>&ast;</code> <code>?</code> <code>:</code> <code>\</code>" %}
-</div>
-
-<div class="two-third-col">
-  <h3>Experimental search query fields</h3>
-  <p>These are currently valid for scientific articles.</p>
-  <table style="width:100%">
-    <tr>
-      <th>Field</th>
-      <th>Example</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>language</code></td>
-      <td><code>language:fre</code></td>
-      <td>Retrieve all documents written in the language specified</td>
-    </tr>
-    <tr>
-      <td><code>orgs</code></td>
-      <td><code>orgs:university of Finland</code></td>
-      <td>Retrieve all documents, which were written by authors with affiliations related to the term specified</td>
-    </tr>
-    <tr>
-      <td><code>authors_full</code></td>
-      <td><code>authors_full:mueller</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>authors_key</code></td>
-      <td><code>authors_key:"t goldberg"</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>publication</code></td>
-      <td><code>publication:nature</code></td>
-      <td>Retrieve all documents, which were written by the specified journal</td>
-    </tr>
-    <tr>
-      <td><code>published</code></td>
-      <td><code>published:2018</code> <code>published:2018-03-06</code> <code>published:[2013 to NOW]</code></td>
-      <td>Retrieve all documents published in a specified time frame.</td>
-    </tr>
-  </table>
-  <br/>
-</div>
-<div class="one-third-col">
 </div>

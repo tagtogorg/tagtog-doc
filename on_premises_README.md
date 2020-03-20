@@ -162,7 +162,7 @@ Might you have required a license change (e.g. to prolong your current installat
 
 Upon a problem, try one of the following solutions first.
 
-If your issue or question is not resolved yet, shoot us an email: [support@tagtog.net](mailto:support@tagtog.net). We are also happy to open a slack chat team with you for faster communication.
+If your issue or question is not resolved yet, shoot us an email at: [support@tagtog.net](mailto:support@tagtog.net). If you are subscribed to the OnPremises ENTERPRISE plan, you also have access to an exclusive and private Slack or Microsoft Teams channel to quickly chat with us.
 
 Please provide detailed information of the problem and **send us always the container logs**: `docker logs tagtog_webapp_1` && `docker logs tagtog_taskmanager_1`.
 

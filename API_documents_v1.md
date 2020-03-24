@@ -391,14 +391,6 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
       </div>
     </div>
   </div>
-<div class="one-third-col">
-  <p>Response <code>weburl</code></p>
-<div markdown="1">
-```shell
-http://localhost:9000/gontras/vproject/pool/aXusqkMqtSLvmBDzeVkhNtV2LKUW-Autonomous_cruise_control_system.html
-```
-</div>
-</div>
 
 
 

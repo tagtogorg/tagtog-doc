@@ -11,7 +11,7 @@ from keras.models import load_model
 app = Flask(__name__)
 
 #Endpoint for the tagtog documents API
-tagtog_docs_api_url = "http://localhost:9000/-api/documents/v1"
+tagtog_docs_api_url = "https://localhost:9443/-api/documents/v1"
 
 #Name of the path where your model is saved
 model_path="model.h5"
@@ -21,11 +21,11 @@ auth = requests.auth.HTTPBasicAuth(username="uxio", password="12345678")
 
 ################################################################################
 #   FUNCTION NAME: tagtog_webhook
-#   INPUT: 
+#   INPUT:
 #   OUTPUT:
 #       · tagtogID - Id of the document that has been changed
 #   DESCRIPTION:
-#       ·This is the method that will be executed when the webhook notifies 
+#       ·This is the method that will be executed when the webhook notifies
 #        an action to your system, it retrains your model with the new data
 #        the user has provided
 ################################################################################
@@ -44,10 +44,10 @@ def tagtog_webhook():
     params = {"owner": owner, "project": project_name, "ids": tagtogID}
     #Set up the output -- Check tagtog documentation for further info about the different possible formats
     params["output"] = "ann.json"
-    
+
     #Send the get request
     annjson = (requests.get(tagtog_docs_api_url, params=params, auth=auth)).json()
-    
+
     if not annjson["anncomplete"]:
         print("The annotations were changed, but they are not confirmed: {}".format(tagtogID))
         return ""
@@ -92,12 +92,12 @@ def predict_and_upload(text,model,tokenizer,probability, project_name,owner):
     response = requests.post(tagtog_docs_api_url, params=params, auth=auth, files=files)
 
     print(response.text)
- 
+
     return response
 
 ################################################################################
 #   FUNCTION NAME: parse_label
-#   INPUT: 
+#   INPUT:
 #       · annjson - The annjson you want to get the label from
 #   OUTPUT:
 #       · label - The label of the annjson

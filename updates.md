@@ -14,8 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2020-W10.3 🏠
-_2020-03-25_
+## 3.2020-W10.4 🏠
+_2020-03-26_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Use the hotkey <kbd>ctrl+c</kbd> or <kbd>command+c</kbd> to copy text from an annotation: [hotkeys map](webeditor.html#hotkeys-map)</span></li>

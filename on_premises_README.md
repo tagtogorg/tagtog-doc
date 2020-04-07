@@ -155,6 +155,7 @@ Might you have required a license change (e.g. to prolong your current installat
 
 ```shell
 ./tagtog_on_premises change_license NEW_LICENSE_NAME NEW_LICENSE_KEY
+# Afterwards, restart tagtog as usual: ./tagtog_on_premises restart latest $TAGTOG_HOME
 ```
 
 

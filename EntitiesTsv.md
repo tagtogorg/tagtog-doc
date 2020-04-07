@@ -14,7 +14,7 @@ Tabulated format to represent an annotated document's **entities**. The main cha
   * Annotated entity text is labeled as the corresponding entity type's name (e.g. _Person_ or _Location_).
 
 * Annotations other than entities are not represented in this format.
-* **Overlapping entities are not supported** either: when two overlapping entities are detected, the first one (as in the string start offset) is arbitrarily chosen over the other.
+* **Overlapping entities are not supported**: when two overlapping entities are detected, the first one (as in the string start offset) is arbitrarily chosen over the other. If you work with overlapping entities, you could use the similar format [EntitiesOnlyClassesTsv](https://docs.tagtog.net/EntitiesOnlyClassesTsv), or the full-featured format [anndoc](https://docs.tagtog.net/anndoc.html).
 
 
 The `EntitiesTsv` format closely resembles the `tsv` output by the Stanford NER tool as briefly shown [here](https://nlp.stanford.edu/software/crf-faq.shtml#j) and [here (see _outputFormat_)](https://nlp.stanford.edu/software/CRF-NER.shtml). The main differences are that in `EntitiesTsv`:

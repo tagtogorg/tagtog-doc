@@ -128,7 +128,13 @@ By default, tagtog uses a SSL self-signed certificate. To use your own SSL certi
 
 ### Backups: How and where the data is stored
 
-All tagtog data is stored in the folder: `${TAGTOG_HOME}/persistent_data/`. We recommend that you have periodic backups to avoid data losses. There are other folders in `$TAGTOG_HOME`, which nature, however, is temporary; you can nonetheless back up that too.
+All tagtog data is stored in the folder: `${TAGTOG_HOME}`. In particular, the subfolder `${TAGTOG_HOME}/persistent_data/` contains the actually persisted data (other subfolders exist, but you can ignore these details).
+
+We recommend that you have periodic backups of this folder to avoid data losses. To do a backup, manually or programmatically, follow these steps:
+
+1. Stop a perhaps running tagtog (typically: `./tagtog_on_premises stop latest $TAGTOG_HOME`)
+2. Copy the entire `$TAGTOG_HOME` folder (example: `cp -r $TAGTOG_HOME SOME_BACKUP_FOLDER`)
+3. Restart tagtog: (typically: `./tagtog_on_premises restart latest $TAGTOG_HOME`)
 
 ### Proxy
 

@@ -14,8 +14,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2020-W15.1 🩹
-_2020-04-16_
+## ??? 🩹
 
 <ul class="updates">
   <li class="fix"><span markdown="1">An informative error is now shown on too big dictionary file uploads. _Tip: you might upload your dictionary as a compressed file (.zip or .tar.gz)_.</span></li>

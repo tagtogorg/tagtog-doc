@@ -18,6 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="new"><span markdown="1">Native PDF: page breaks are now clearly indicated.</span></li>
+  <li class="new"><span markdown="1">Back link to the document view added to each view mode for quicker navigation.</span></li>
 </ul>
 
 ---

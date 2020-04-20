@@ -14,6 +14,17 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W16.0 👨‍🦯
+_2020-04-20_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(Cloud) You can now upload up to 10MB document files (the previous limit was 8MB).</span></li>
+  <li class="new"><span markdown="1">Native PDF: page breaks are now clearly indicated.</span></li>
+  <li class="new"><span markdown="1">Back link to the document view added to each view mode for quicker navigation.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W15.2 🩹
 _2020-04-17_
 

@@ -97,6 +97,13 @@ exit # Note, exit for the next session to pick up that the user is indeed in the
 * A helper bash script is installed in this folder. This script assumes an UNIX environment and was tested only on **Linux and macOS**. It should work on Windows with Cygwin too. The script is not mandatory to run tagtog, but it is highly recommended.
 
 
+### Offline installation, updating, and running
+
+**tagtog does not require an external internet connection**. This allows you to have tagtog running on your private local network with absolute safety.
+
+An internet connection is only needed for installing and (optionally) [updating your tagtog version](updates). If you also need to install/update tagtog "offline", you can do so by temporally (during the process) exclusively whitelisting the domain `*.tagtog.net`.
+
+
 ## Run
 
 * Choose one full-path folder/volume where all your tagtog data will be stored, and assign it to a global variable for convenience. For description purposes, let's call this folder `$TAGTOG_HOME`. **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`).
@@ -160,6 +167,7 @@ You can manually check for [new tagtog updates on this link](https://docs.tagtog
 Might you have required a license change (e.g. to prolong your current installation or to increment the number of seats), you should also have received the new license details. With these, change the license of your system as follows:
 
 ```shell
+# It's recommended to stop the running service first: ./tagtog_on_premises stop latest $TAGTOG_HOME
 ./tagtog_on_premises change_license NEW_LICENSE_NAME NEW_LICENSE_KEY
 # Afterwards, restart tagtog as usual: ./tagtog_on_premises restart latest $TAGTOG_HOME
 ```

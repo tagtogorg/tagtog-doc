@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W17.0 🐳
+_2020-04-22_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) We now distribute the `tagtog_cache` image from our `*.tagtog.net` servers directly, thus not having to rely anymore on hub.docker.com.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W16.0 👨‍🦯
 _2020-04-20_
 

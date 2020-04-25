@@ -14,6 +14,16 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W17.1 ❤️
+_2020-04-25_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can start a trial for the paid Cloud plans on your own ✌️.</span></li>
+  <li class="new"><span markdown="1">(Cloud) increase or decrease the number of users in your subscription, monthly, with total flexibility.</span></li>  
+</ul>
+
+---
+
 ## 3.2020-W17.0 🐳
 _2020-04-22_
 

@@ -170,7 +170,7 @@ id: collaboration
   {% include message.html message='You can always assign a document to more than one user. Check out <a href="#documents-are-automatically-distributed-multiple-annotators-per">this annotation flow</a> for details.' %}
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. Admins <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">check which documents are ready</a> for review. Admins import the user's annotations to the <code>master</code> version (final version), review and make the required changes. If the annotations were not Confirmed yet, admins should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed and the document is ready for production.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. Admins check which documents are ready for review (via GUI in the document list or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">via search query</a>). Admins import the user's annotations to the <code>master</code> version (final version), review and make the required changes. If the annotations were not Confirmed yet, admins should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed and the document is ready for production.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='If the Review step was not required, users could annotate directly on the <code>master</code> version. When ready, users should mark the annotations of each document as completed by clicking on the <i>Confirm</i> button.' %}
@@ -215,7 +215,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Adjudication</strong>. Admins <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">check which documents are ready for adjudication</a>. For each document, admins merge the users' annotations (<a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">automatic adjudication</a>) to the <code>master</code> version (final version). Admins review the merged annotations and if these were not Confirmed yet, admins should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Adjudication</strong>. Admins check which documents are ready for review (via GUI in the document list or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">via search query</a>). For a document, admins merge the users' annotations (<a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">automatic adjudication</a>) to the <code>master</code> version (ground truth). Admins review the merged annotations and if these were not Confirmed yet, admins should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed.</p>
 </div>
 
 

@@ -58,15 +58,27 @@ toc: true
   {% include message.html message='Check <a href="/API_documents_v1.html#idtype-parameter">here</a> the available ID types.' %}
 </div>
 <div class="two-third-col">
-  <h3>Remove documents in batch</h3>
+  <h3>Batch operations</h3>
+</div>
+<div class="one-third-col">
+</div>
+<div class="two-third-col">
+  <h4>Remove documents</h4>
   <p>To <strong>remove documents in batch</strong>, you can use a search query that retrieves the documents you want to remove. In the web app, click on the button with the caption <i>Delete matching documents</i> to remove these documents. You can also use the <a title="API - Delete" href="/API_documents_v1.html#delete-documents-delete">API for batch removal</a>.</p>
 </div>
 <div class="one-third-col">
 </div>
 
 <div class="two-third-col">
+  <h4>Download as Zip</h4>
+  <p>Download the subset of documents (and their annotations) that match the search query, in <a title="tagtog - anndoc format" href="https://docs.tagtog.net/anndoc.html">anndoc format</a> format).</p>
+</div>
+<div class="one-third-col">
+</div>
+
+<div class="two-third-col">
   <h2>API</h2>
-  <p>You can also search using the API. You can use it <a href="/#index-your-data">directly as your search interface</a> or simply augment your existing engine. Discover everything you can in the <a href="/API_documents_v1.html#search-documents-in-a-project-get">documentation</a>.</p>
+  <p>You can also search using the API. You can use it <a href="/#index-your-data">directly as your search interface</a> or simply augment your existing engine. Discover everything you can in the <a href="/API_documents_v1.html#search-documents-in-a-project-get">API documentation</a>.</p>
 </div>
 <div class="one-third-col">
 </div>

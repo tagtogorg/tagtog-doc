@@ -10,6 +10,9 @@ toc: true
   <p>Your <strong>documents are stored in folders</strong>. Folders are paginated and you can move to the next or previous page using the navigation menu.</p>
   <p>The folder tree is expanded by default.</p>
 
+  <h3>Document List View</h3>
+  <p>In tagtog, documents are listed based on a <a title="tagtog - search queries" href="search-queries.html">search query</a>. For example, listing the documents of a folder or listing all the documents that contain a specific entity. You can use these lists for <a title="tagtog - batch operations" href="search.html#batch-operations">batch processing</a>, for example, to remove or download documents matching a search.</p>
+
   <h3>Folders</h3>
   <p>Use folders to organize your documents better. The <strong>root is the <code>pool</code> folder</strong>, which is created by default with each new project. Folders are sorted <strong>alphabetically</strong>.</p>
   <h4>Create a new folder</h4>
@@ -66,9 +69,9 @@ toc: true
 </div>
 <div class="two-third-col">
   <h3>Manually confirmed documents</h3>
-  <p>In the document list view, each document has a check mark, when green, it means the document is confirmed.</p>
-  <p>Manually confirmed documents are those with <strong>all annotations complete</strong>. Depending on the project, it can also mean that the annotations have been reviewed by a human, and they can be used as training data.</p>
-  <p>Confirm documents is helpful to keep the progress of the annotation tasks.</p>
+  <p>In the document list view, each document has a check mark, when it is green, it means the document is confirmed.</p>
+  <p>Manually confirmed documents are those with the <strong><code>master</code> version confirmed</strong>. Depending on the project, it can also mean that the annotations have been reviewed by a human, and they can be used as ground truth.</p>
+  <p>To confirm documents is helpful to keep the progress of the annotation tasks. If <a href="projects.html#task-distribution" title="task distribution">task distribution</a> is active, a number will appear together with the confirm check mark. This number indicates the number of users that have confirmed their version of the annotations. When you hover with your mouse, the list of users who confirmed their version will show up.</p>
 </div>
 
 <div class="one-third-col">

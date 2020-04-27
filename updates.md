@@ -21,7 +21,9 @@ _2020-04-25_
   <li class="new"><span markdown="1">New free unlimited plan for public data 💚 <a title="tagtog - public projects" href="/projects.html#public-projects">Learn more</a>.</span></li>
   <li class="new"><span markdown="1">Now you can start a trial for the paid Cloud plans on your own ✌️.</span></li>
   <li class="new"><span markdown="1">(Cloud) increase or decrease the number of users in your subscription, monthly, with total flexibility.</span></li>
-  <li class="new">Now, you can see from the list of documents how many users have confirmed their version of the annotations. <a title="tagtog - manually confirmed documents" href="documents.html#manually-confirmed-documents">More information</a>.</li>
+  <li class="new"><span markdown="1">Now, you can see from the list of documents how many users have confirmed their version of the annotations. [More information](documents.html#manually-confirmed-documents "tagtog - manually confirmed documents").</span></li>
+  <li class="new"><span markdown="1">(Security) Now all our cookies are sent with the [(`Set-Cookie`) `HttpOnly`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) directive, which forbids JavaScript from accessing those cookies.</span></li>
+  <li class="new"><span markdown="1">(Security) Now all our cookies are sent with the [(`Set-Cookie`) `Secure`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) directive, which ensures that cookies are sent only on **https**.</span></li>
 </ul>
 
 ---

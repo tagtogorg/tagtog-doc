@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🧑‍🎨
+## 3.2020-W17.2 🧑‍🎨
+_2020-04-28_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Fix in the responsive design. For some screen resolutions the document list or document view appeared after the folder list.</span></li>

@@ -20,7 +20,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="new"><span markdown="1">(Security) **Add support for SSL protocol TLSv1.3**. The supported SSL protocol versions are now: TLSv1.2 & TLSv1.3.</span></li>
   <li class="del"><span markdown="1">(Security) Drop support for SSL protocols TLSv1 and TLSv1.1.</span></li>
   <li class="new"><span markdown="1">(Security) Serve now all resources via https, including assets such as images.</span></li>
-  <li class="new"><span markdown="1">(OnPremises) Now all requests to http are successfully redirected to https (before some paths were not redirected).</span></li>
+  <li class="new"><span markdown="1">(OnPremises) Now all requests to http are successfully redirected to https (before some paths were not redirected and ended in error).</span></li>
   <li class="fix"><span markdown="1">Document import within the document view was not refreshing the document list.</span></li>
 </ul>
 

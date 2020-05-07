@@ -18,6 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Document import within the document view was not refreshing the document list.</span></li>
+  <li class="fix"><span markdown="1">File name in the upload panel was overflowing the panel when the file name is too long.</span></li>
 </ul>
 
 ---

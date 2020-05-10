@@ -14,6 +14,22 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W19.0 🐡
+_2020-05-10_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(Security) With several improvements in our TSL/SSL (https) configuration, [tagtog.net is proud to receive an **A+** rating from SSL Labs (Qualys)](https://www.ssllabs.com/ssltest/analyze.html?d=tagtog.net).</span></li>  
+  <li class="new"><span markdown="1">(Security) **Add support for [TSL/SSL](https://wiki.openssl.org/index.php/SSL_and_TLS_Protocols) protocol TLSv1.3**. The supported SSL protocol versions are now: TLSv1.2 & TLSv1.3.</span></li>
+  <li class="del"><span markdown="1">(Security) Drop support for SSL protocols TLSv1 and TLSv1.1.</span></li>
+  <li class="new"><span markdown="1">(Security) Serve now all resources via https, including assets such as images.</span></li>
+  <li class="new"><span markdown="1">(OnPremises) Now all requests to http are successfully redirected to https (before some paths were not redirected and ended in error).</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Fixed a bug that impeded running OnPremises on a first installation.</span></li>
+  <li class="fix"><span markdown="1">Document import within the document view was not refreshing the document list.</span></li>
+  <li class="fix"><span markdown="1">The filename in the upload panel was overflowing the panel when the filename was too long.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W17.2 🧑‍🎨
 _2020-04-28_
 
@@ -31,7 +47,7 @@ _2020-04-25_
   <li class="new"><span markdown="1">Now you can start a trial for the paid Cloud plans on your own ✌️.</span></li>
   <li class="new"><span markdown="1">(Cloud) increase or decrease the number of users in your subscription, monthly, with total flexibility.</span></li>
   <li class="new"><span markdown="1">Now, you can see from the list of documents how many users have confirmed their version of the annotations. [More information](documents.html#manually-confirmed-documents "tagtog - manually confirmed documents").</span></li>
-  <li class="new"><span markdown="1">(Security) Now all our cookies are sent with the [(`Set-Cookie`) `HttpOnly`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) directive, which forbids JavaScript from accessing those cookies.</span></li>
+  v
   <li class="new"><span markdown="1">(Security) Now all our cookies are sent with the [(`Set-Cookie`) `Secure`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) directive, which ensures that cookies are sent only on **https**.</span></li>
 </ul>
 

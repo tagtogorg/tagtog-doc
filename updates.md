@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🐡
+## 3.2020-W19.2 🐡
+_2020-05-11_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(Security) With several improvements in our TSL/SSL (https) configuration, [tagtog.net is proud to receive an **A+** rating from SSL Labs (Qualys)](https://www.ssllabs.com/ssltest/analyze.html?d=tagtog.net).</span></li>  

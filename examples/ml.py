@@ -11,7 +11,7 @@ from keras.models import load_model
 app = Flask(__name__)
 
 #Endpoint for the tagtog documents API
-tagtog_docs_api_url = "https://localhost:9443/-api/documents/v1"
+tagtog_docs_api_url = "https://localhost/-api/documents/v1"
 
 #Name of the path where your model is saved
 model_path="model.h5"

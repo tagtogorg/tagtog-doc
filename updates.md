@@ -14,6 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? ☕️
+
+<ul class="updates">  
+  <li class="fix"><span markdown="1">Improved error reporting when uploading too many files at once.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W19.2 🐡
 _2020-05-11_
 

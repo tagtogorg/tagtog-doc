@@ -243,7 +243,7 @@ id: collaboration
 
 <div class="two-third-col">
   <h4>What can I do if IAA is low?</h4>
-  <p>There may be several reasons why your annotators do not agree on the annotation tasks. It is important to mitigate these risks as soon as possible by identifying the causes.  If you find such an scenario we recommend you to review the following:</p>
+  <p>There may be several reasons why your annotators do not agree on the annotation tasks. It is important to mitigate these risks as soon as possible by identifying the causes. If you find such an scenario we recommend you to review the following:</p>
   <p class="list-item"><span class="list-item-1"></span><strong>Guidelines are key</strong>. If you have a large group of annotators not agreeing on a specific annotation task, it means your guidelines for this task are not clear enough. Try to provide representative examples for different scenarios, discuss boundary cases and remove ambiguity. Remember you can attach pictures or screenshots to the guidelines.</p>
   <p class="list-item"><span class="list-item-2"></span><strong>Be specific</strong>. If annotation tasks are too broadly defined or ambiguous, there is room for different interpretations, and eventually disagreement. On the other hand, <strong>very rich and granular tasks can be difficult</strong> for annotators to annotate accurately. <strong>Depending on the scope of your project, find the best trade-off between high specific annotations and affordable annotations</strong>.</p>
 </div>

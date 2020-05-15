@@ -21,6 +21,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="new"><span markdown="1">(Security) Drop the use of any external CDN, thus serving all our resources on our own.</span></li>
   <li class="new"><span markdown="1">(Security) Thouroughly analyzed & strengthened our protection against user-inputted XSS attacks.</span></li>
   <li class="new"><span markdown="1">Support the latest [CommonMark](https://commonmark.org) spec (version [0.29](https://spec.commonmark.org/0.29/)), for our Project Guidelines markdown editor.</span></li>
+  <li class="doc"><span markdown="1">Extended clarifications for [IAA: calculation methods](IAA-calculation-methods).</span></li>
   <li class="fix"><span markdown="1">Improved error reporting when uploading too many files at once.</span></li>
 </ul>
 

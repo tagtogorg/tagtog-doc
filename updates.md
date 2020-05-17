@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? ☕️
+## 3.2020-W20.0 ☕️
+_2020-05-17_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(Security) Define a tight Content-Security-Policy for all our pages.</span></li>

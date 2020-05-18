@@ -14,6 +14,14 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 🦜
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Dictionary entity extraction now also works in long sentences (up to 300 tokens).</span></li>
+</ul>
+
+---
+
 ## 3.2020-W20.0 ☕️
 _2020-05-17_
 

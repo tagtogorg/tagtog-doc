@@ -14,11 +14,21 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W21.0 🦜
+_2020-05-18_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Dictionary entity extraction now also works in long sentences (up to 300 tokens).</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Force-bumped the index0 service version due to a bug introduced in 3.2020-W17.1.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W20.0 ☕️
 _2020-05-17_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">(Security) Define a tight Content-Security-Policy for all our pages.</span></li>
+  <li class="new"><span markdown="1">(Security) Define a tight Content-Security-Policy (CSP) for all our pages.</span></li>
   <li class="new"><span markdown="1">(Security) Drop the use of any external CDN, thus serving all our resources on our own.</span></li>
   <li class="new"><span markdown="1">(Security) Thouroughly analyzed & strengthened our protection against user-inputted XSS attacks.</span></li>
   <li class="new"><span markdown="1">Support the latest [CommonMark](https://commonmark.org) spec (version [0.29](https://spec.commonmark.org/0.29/)), for our Project Guidelines markdown editor.</span></li>

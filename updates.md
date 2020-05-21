@@ -14,10 +14,20 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🧏‍♂️
+## ??? 📇
+
+<ul class="updates">  
+  <li class="new"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>  
+</ul>
+
+---
+
+## 3.2020-W21.1 👀
+_2020-05-21_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>
+  <li class="fix"><span markdown="1">Identified & fixed a vector for XSS.</span></li>
+  <li class="new"><span markdown="1">Slightly faster page loading (specially on slow internet connections).</span></li>
 </ul>
 
 ---
@@ -27,7 +37,7 @@ _2020-05-18_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Dictionary entity extraction now also works in long sentences (up to 300 tokens).</span></li>
-  <li class="fix"><span markdown="1">(OnPremises) Force-bumped the index0 service version due to a bug introduced in 3.2020-W17.1.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Force-bumped the index0 service version due to a bug (false duplicates) introduced in 3.2020-W17.1.</span></li>
 </ul>
 
 ---

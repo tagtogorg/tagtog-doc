@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 👀
+## 3.2020-W21.1 👀
+_2020-05-21_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Identified & fixed a vector for XSS.</span></li>

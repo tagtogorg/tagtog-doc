@@ -28,7 +28,7 @@ _2020-05-18_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Dictionary entity extraction now also works in long sentences (up to 300 tokens).</span></li>
-  <li class="fix"><span markdown="1">(OnPremises) Force-bumped the index0 service version due to a bug introduced in 3.2020-W17.1.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Force-bumped the index0 service version due to a bug (false duplicates) introduced in 3.2020-W17.1.</span></li>
 </ul>
 
 ---

@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 👀
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Identified & fixed a vector for XSS.</span></li>
+  <li class="new"><span markdown="1">Slightly faster page loading (specially on slow internet connections).</span></li>
+</ul>
+
+---
+
 ## 3.2020-W21.0 🦜
 _2020-05-18_
 

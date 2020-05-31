@@ -19,6 +19,7 @@ _2020-05-30_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Fixed the feedback button.</span></li>
+  <li class="new"><span markdown="1">Replacing browser native dialog system with a dialog system customized for tagtog.</span></li>
 </ul>
 
 ---
@@ -28,7 +29,7 @@ _2020-05-21_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Identified & fixed a vector for XSS.</span></li>
-  <li class="new"><span markdown="1">Slightly faster page loading (specially on slow internet connections).</span></li>
+
 </ul>
 
 ---
@@ -61,7 +62,7 @@ _2020-05-17_
 _2020-05-11_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">(Security) With several improvements in our TSL/SSL (https) configuration, [tagtog.net is proud to receive an **A+** rating from SSL Labs (Qualys)](https://www.ssllabs.com/ssltest/analyze.html?d=tagtog.net).</span></li>  
+  <li class="new"><span markdown="1">(Security) With several improvements in our TSL/SSL (https) configuration, [tagtog.net is proud to receive an **A+** rating from SSL Labs (Qualys)](https://www.ssllabs.com/ssltest/analyze.html?d=tagtog.net).</span></li>
   <li class="new"><span markdown="1">(Security) **Add support for [TSL/SSL](https://wiki.openssl.org/index.php/SSL_and_TLS_Protocols) protocol TLSv1.3**. The supported SSL protocol versions are now: TLSv1.2 & TLSv1.3.</span></li>
   <li class="del"><span markdown="1">(Security) Drop support for SSL protocols TLSv1 and TLSv1.1.</span></li>
   <li class="new"><span markdown="1">(Security) Serve now all resources via https, including assets such as images.</span></li>

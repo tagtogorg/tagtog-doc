@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🍴
+## 3.2020-W23.0 🍴
+_2020-06-01_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Minor fixes & improvements.</span></li>

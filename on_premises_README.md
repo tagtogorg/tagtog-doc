@@ -42,7 +42,7 @@ Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the foll
 
 * Memory:
   * On-Premises Annotator only: **8GB RAM** (e.g. `t3.large` on AWS, or `D2s_v3` on Azure); recommended **16GB RAM** (e.g. `t3.xlarge` on AWS, or `D4s_v3` on Azure)
-  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5.xlarge` on AWS, or `E4s_v3` on Azure)
+  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5a.xlarge` on AWS, or `E4s_v3` on Azure)
 * Disk: **50+ GB of disk space**
 
 

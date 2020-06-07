@@ -17,7 +17,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 <ul class="updates">
   <li class="fix"><span markdown="1">Permalink modal dialog is working again</span></li>
   <li class="new"><span markdown="1">Automatic detection of text directionality.</span</li>
-  <li class="new"><span markdown="1">Full support for RTL writing systems in the document editor, guidelines editor and submit dialog.</span></li>
+  <li class="new"><span markdown="1">Full support for RTL (Right-to-left) writing systems in the document editor, guidelines editor and submit dialog.</span></li>
 </ul>
 
 ---

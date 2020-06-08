@@ -14,7 +14,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2020-W24.0 👣
+## 3.2020-W24.1 👣
 _2020-06-08_
 
 <ul class="updates">

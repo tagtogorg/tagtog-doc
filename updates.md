@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W25.0 👀
+_2020-06-16_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Some users were experiencing issues when removing members from their projects. This issue is now resolved.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W24.2 👣
 _2020-06-08_
 

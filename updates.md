@@ -14,10 +14,41 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 📇
+## 3.2020-W25.0 👀
+_2020-06-16_
 
-<ul class="updates">  
-  <li class="new"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>  
+<ul class="updates">
+  <li class="fix"><span markdown="1">Some users were experiencing issues when removing members from their projects. This issue is now resolved.</span></li>
+</ul>
+
+---
+
+## 3.2020-W24.2 👣
+_2020-06-08_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Permalink modal dialog is working again</span></li>
+  <li class="new"><span markdown="1">Automatic detection of text directionality.</span></li>
+  <li class="new"><span markdown="1">Full support for RTL (Right-to-left) writing systems in the document editor, guidelines editor and submit dialog.</span></li>
+</ul>
+
+---
+
+## 3.2020-W23.0 🍴
+_2020-06-01_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Minor fixes & improvements.</span></li>
+</ul>
+
+---
+
+## 3.2020-W22.0 🥄
+_2020-05-30_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed the feedback button.</span></li>
+  <li class="new"><span markdown="1">Replacing browser native dialog system with a dialog system customized for tagtog.</span></li>
 </ul>
 
 ---
@@ -27,7 +58,7 @@ _2020-05-21_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Identified & fixed a vector for XSS.</span></li>
-  <li class="new"><span markdown="1">Slightly faster page loading (specially on slow internet connections).</span></li>
+
 </ul>
 
 ---
@@ -60,7 +91,7 @@ _2020-05-17_
 _2020-05-11_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">(Security) With several improvements in our TSL/SSL (https) configuration, [tagtog.net is proud to receive an **A+** rating from SSL Labs (Qualys)](https://www.ssllabs.com/ssltest/analyze.html?d=tagtog.net).</span></li>  
+  <li class="new"><span markdown="1">(Security) With several improvements in our TSL/SSL (https) configuration, [tagtog.net is proud to receive an **A+** rating from SSL Labs (Qualys)](https://www.ssllabs.com/ssltest/analyze.html?d=tagtog.net).</span></li>
   <li class="new"><span markdown="1">(Security) **Add support for [TSL/SSL](https://wiki.openssl.org/index.php/SSL_and_TLS_Protocols) protocol TLSv1.3**. The supported SSL protocol versions are now: TLSv1.2 & TLSv1.3.</span></li>
   <li class="del"><span markdown="1">(Security) Drop support for SSL protocols TLSv1 and TLSv1.1.</span></li>
   <li class="new"><span markdown="1">(Security) Serve now all resources via https, including assets such as images.</span></li>

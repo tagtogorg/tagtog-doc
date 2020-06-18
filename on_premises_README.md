@@ -32,7 +32,8 @@ Your system must have installed:
   * Installed in practically all systems by default.
   * Clarification: any other Unix shell should work too, including for Windows the Unix-like environment Cygwin. However, only the Bash shell is officially supported.
 
-5. [cURL](https://en.wikipedia.org/wiki/CURL)
+5. [cURL](https://curl.haxx.se)
+  * The recommended version is >= [7.61.0](https://curl.haxx.se/changes.html#7_61_0)
   * Installed in practically all systems by default
 
 

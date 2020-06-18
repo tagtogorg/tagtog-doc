@@ -299,3 +299,18 @@ If for any reason, however, you do want to run as sudo, you might also need to e
 ```shell
 sudo -E ./tagtog_on_premises restart ...
 ```
+
+
+### "SSL certificate problem..." when `curl`'ling
+
+If you get something like the following, you likely need to [upgrade your curl version (see above for the recommended version)](#requirements).
+
+```
+curl: (60) SSL certificate problem: certificate has expired
+More details here: https://curl.haxx.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
+An error happened:
+```

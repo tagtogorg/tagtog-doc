@@ -33,7 +33,7 @@ Your system must have installed:
   * Clarification: any other Unix shell should work too, including for Windows the Unix-like environment Cygwin. However, only the Bash shell is officially supported.
 
 5. [cURL](https://curl.haxx.se)
-  * The recommended version is >= [7.61.0](https://curl.haxx.se/changes.html#7_61_0)
+  * The recommended version is >= [7.62.0](https://curl.haxx.se/changes.html#7_62_0)
   * Installed in practically all systems by default
 
 
@@ -303,7 +303,7 @@ sudo -E ./tagtog_on_premises restart ...
 
 ### "SSL certificate problem..." when `curl`'ling
 
-If you get something like the following, you likely need to [upgrade your curl version (see above for the recommended version)](#requirements).
+If you get something like the following, you likely need to [upgrade your curl version (see above for the recommended version)](#requirements) and/or your OpenSSL version.
 
 ```
 curl: (60) SSL certificate problem: certificate has expired

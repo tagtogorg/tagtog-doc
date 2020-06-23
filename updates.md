@@ -18,6 +18,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>
+  <li class="fix"><span markdown="1">Return the content type `text/plain` on all API client errors, instead like before sometimes sending an html page.</span></li>
 </ul>
 
 ---

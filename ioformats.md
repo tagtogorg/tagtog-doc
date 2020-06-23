@@ -199,7 +199,7 @@ toc: true
         <td>Only annotations. <a title="tagtog - ann doc" href="/anndoc.html">Official documentation</a></td>
       </tr>
       <tr>
-        <td><code>html</code>, <code>xml</code></td>
+        <td><code>plain.html</code>, <code>html</code>, <code>xml</code></td>
         <td>No annotations provided within this format, only content.</td>
       </tr>
       <tr>

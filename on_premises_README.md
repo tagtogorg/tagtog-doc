@@ -24,7 +24,7 @@ Your system must have installed:
   * To ensure that your docker installation works correctly and that you have the necessary rights to install and run docker images, run: `docker info`. Please ensure that you don't get an error like _permission denied_, and rather as expected see the details of your docker installation.
 
 2. [Docker Compose](https://docs.docker.com/compose/)
-  * The recommended version is >= 1.18
+  * The recommended version is >= [1.18.0](https://docs.docker.com/compose/release-notes/#1180)
 
 3. **IMPORTANT**. The running docker host must have the `vm.max_map_count` setting variable to be at least greater than _262144_. You can check the value by running: `sysctl vm.max_map_count`. If it is too low, **set the value by running**: `sudo sysctl -q -w vm.max_map_count=262144`.
 

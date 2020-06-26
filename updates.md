@@ -14,7 +14,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ???
+## ??? 👀
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Some users were experiencing issues when removing members from their projects. This issue is now resolved.</span></li>

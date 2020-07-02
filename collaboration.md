@@ -14,6 +14,7 @@ id: collaboration
 
 <div class="two-third-col">
 <h2>Roles</h2>
+  <p>By default, tagtog comes with a set of predefined roles:</p>
   <table style="width:100%">
     <tr>
       <th>Role</th>
@@ -36,64 +37,278 @@ id: collaboration
       <td><span>They can only read <code>master</code>'s annotations.</span></td>
     </tr>
   </table>
-  <h5>Admin role</h5>
-  <table style="width:100%">
-    <tr>
-      <th>Component</th>
-      <th>Privileges</th>
-    </tr>
-    <tr>
-      <td>Master annotations</td>
-      <td>Replace master annotations using the annotations from other project member or via adjudication.</td>
-    </tr>
-    <tr>
-      <td>Guidelines</td>
-      <td>Edit project guidelines.</td>
-    </tr>
-    <tr>
-      <td>Entities</td>
-      <td>Edit or create entity types.</td>
-    </tr>
-    <tr>
-      <td>Document labels</td>
-      <td>Edit or create document labels</td>
-    </tr>
-    <tr>
-      <td>Entity labels</td>
-      <td>Edit or create entity labels</td>
-    </tr>
-    <tr>
-      <td>Dictionaries</td>
-      <td>Edit or create dictionaries</td>
-    </tr>
-    <tr>
-      <td>Annotatables</td>
-      <td>Edit options under the Annotatables settings</td>
-    </tr>
-    <tr>
-      <td>Annotations</td>
-      <td>Edit options under the Annotations settings</td>
-    </tr>
-    <tr>
-      <td>Members</td>
-      <td>Add or remove members to the project</td>
-    </tr>
-    <tr>
-      <td>Project</td>
-      <td>Delete project or change its details</td>
-    </tr>
-    <tr>
-      <td>Requirements</td>
-      <td>Add or remove data requirements</td>
-    </tr>
-  </table>
+
+  <p></p>
+
+
+  <h2>Permissions</h2>
+    <p>You can find below the permissions available in tagtog. Each role has a set of permissions associated.</p>
+    <table style="width:100%">
+      <tr>
+        <th>Realm</th>
+        <th>Component</th>
+        <th>Permission</th>
+        <th>Description</th>
+        <th>Reader</th>
+        <th>Supercurator</th>
+        <th>Admin</th>
+      </tr>
+      <tr>
+        <td rowspan="16">settings</td>
+        <td rowspan="2">Guidelines</td>
+        <td><code>canReadGuidelinesConf</code></td>
+        <td><span>Read access for Settings - Guidelines</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditGuidelinesConf</code></td>
+        <td><span>Write access for Settings - Guidelines</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Annotation Tasks</td>
+        <td><code>canReadAnnTasksConf</code></td>
+        <td><span>Read access for all annotation tasks, namely: Document Labels, Entities, Dictionaries, Entity Labels, and Relations</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditAnnTasksConf</code></td>
+        <td><span>Write access for all annotation tasks, namely: Document Labels, Entities, Dictionaries, Entity Labels, and Relations</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Requirements</td>
+        <td><code>canReadRequirementsConf</code></td>
+        <td><span>Read access for Settings - Requirements</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditRequirementsConf</code></td>
+        <td><span>Write access for Settings - Requirements</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Annotatables</td>
+        <td><code>canReadAnnotatablesConf</code></td>
+        <td><span>Read access for Settings - Annotatables</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditAnnotatablesConf</code></td>
+        <td><span>Write access for Settings - Annotatables</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Annotation</td>
+        <td><code>canReadAnnotationsConf</code></td>
+        <td><span>Read access for Settings - Annotations</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditAnnotationsConf</code></td>
+        <td><span>Write access for Settings - Annotations</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Webhooks</td>
+        <td><code>canReadWebhooksConf</code></td>
+        <td><span>Read access for Settings - Webhooks</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditWebhooksConf</code></td>
+        <td><span>Write access for Settings - Webhooks</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Members</td>
+        <td><code>canReadMembersConf</code></td>
+        <td><span>Read access for Settings - Members</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditMembersConf</code></td>
+        <td><span>Write access for Settings - Members</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Admin</td>
+        <td><code>canReadAdminConf</code></td>
+        <td><span>Read access for Settings - Admin</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditAdminConf</code></td>
+        <td><span>Write access for Settings - Admin</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="7">documents</td>
+        <td rowspan="2">master version</td>
+        <td><code>canReadMaster</code></td>
+        <td><span>Read access to the master version of the annotations</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditMaster</code></td>
+        <td><span>Write access for the master version of the annotations (ground truth)</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td>Own version</td>
+        <td><code>canEditSelf</code></td>
+        <td><span>Write access to the own version of the annotations</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Others' versions</td>
+        <td><code>canReadOthers</code></td>
+        <td><span>Read access to every project member's versions of the annotations</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditOthers</code></td>
+        <td><span>Write access to every project member's versions of the annotations</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+      </tr>
+      <tr>
+        <td rowspan="2">content</td>
+        <td><code>canCreate</code></td>
+        <td><span>Rights to import documents to the project</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canDelete</code></td>
+        <td><span>Rights to remove documents from the project</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="3">folders</td>
+        <td rowspan="3"></td>
+        <td><code>canCreate</code></td>
+        <td><span>Rights to create folders</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canUpdate</code></td>
+        <td><span>Rights to rename existing folders</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canDelete</code></td>
+        <td><span>Rights to delete existing folders</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td rowspan="3">dictionaries</td>
+        <td rowspan="3"></td>
+        <td><code>canRead</code></td>
+        <td><span>Read access to the dictionaries</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canCreateItems</code></td>
+        <td><span>Rights to add items to the dictionaries</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canDeleteItems</code></td>
+        <td><span>Rights to delete items from dictionaries</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td>metrics</td>
+        <td></td>
+        <td><code>canRead</code></td>
+        <td><span>Read access to the metrics of the project (metrics tab) or the metrics for annotation tasks in a document (e.g. IAA)</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td>API</td>
+        <td></td>
+        <td><code>canUse</code></td>
+        <td><span>Users with this permission can use the API. Users with this permission can see the output formats in the UI</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+    </table>
+
 </div>
 <div class="one-third-col">
 </div>
 
 <div class="two-third-col">
+  <h3>Create custom roles</h3>
+  <p>Depending on your <a href="https://www.tagtog.net/-plans" title="tagtog - plans">plan</a>, you can create custom roles where you define their permissions. Read <a title="tagtpg - sysadmin panel - roles and permissions" href="on-premises-sysadmin.html#roles-and-permissions">how to manage roles and to create custom roles</a>.</p>
+</div>
+
+<div class="one-third-col">
+</div>
+
+<div class="two-third-col">
   <h2>Annotation versions</h2>
-  <p><strong>Each user has an independent version of the annotations for each single document</strong>. For instance, UserA could have 20 entities; UserB could have 5 different entities on the same exact document. <strong>In addition, each document has a <code>master</code> version</strong> which is usually treated as the final/official version.</p>
+  <p><strong>Each user has an independent version of the annotations for each single document</strong>. For instance, UserA could have 20 entities; UserB could have 5 different entities on the same exact document. <strong>In addition, each document has a <code>master</code> version</strong> which is usually treated as the final/official version (ground truth).</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -175,8 +390,6 @@ id: collaboration
 <div class="one-third-col">
   {% include message.html message='If the Review step was not required, users could annotate directly on the <code>master</code> version. When ready, users should mark the annotations of each document as completed by clicking on the <i>Confirm</i> button.' %}
 </div>
-
-
 
 
 

@@ -13,7 +13,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-<h2>Roles</h2>
+  <h2>Roles</h2>
   <p>By default, tagtog comes with a set of predefined roles:</p>
   <table style="width:100%">
     <tr>
@@ -38,9 +38,21 @@ id: collaboration
     </tr>
   </table>
 
-  <p></p>
+</div>
+<div class="one-third-col">
+</div>
+
+<div class="two-third-col">
+  <h3>Create custom roles</h3>
+  <p>Depending on your <a href="https://www.tagtog.net/-plans" title="tagtog - plans">plan</a>, you can create custom roles and define their permissions. Read <a title="tagtpg - sysadmin panel - roles and permissions" href="on-premises-sysadmin.html#roles-and-permissions">how to manage and create custom roles</a>.</p>
+</div>
+
+<div class="one-third-col">
+</div>
 
 
+
+<div class="two-third-col">
   <h2>Permissions</h2>
     <p>You can find below the permissions available in tagtog. Each role has a set of permissions associated.</p>
     <table style="width:100%">
@@ -298,13 +310,7 @@ id: collaboration
 <div class="one-third-col">
 </div>
 
-<div class="two-third-col">
-  <h3>Create custom roles</h3>
-  <p>Depending on your <a href="https://www.tagtog.net/-plans" title="tagtog - plans">plan</a>, you can create custom roles where you define their permissions. Read <a title="tagtpg - sysadmin panel - roles and permissions" href="on-premises-sysadmin.html#roles-and-permissions">how to manage roles and to create custom roles</a>.</p>
-</div>
 
-<div class="one-third-col">
-</div>
 
 <div class="two-third-col">
   <h2>Annotation versions</h2>
@@ -322,8 +328,8 @@ id: collaboration
 
 <div class="two-third-col">
   <br/>
-  <h4>Annotators annotate directly on the <code>master</code> version. No review.</h4>
-  <p>This is the simplest flow and there is no review step. Make this choice if you are working alone, or if you trust your annotators' annotations or if time is a constraint. <strong>This is the project's default</strong>.</p>
+  <h4>Annotators annotate directly on the <code>master</code> version (ground truth). No review.</h4>
+  <p>This is the simplest flow and there is no review step. Make this choice if you are working alone, or if you trust your annotators' annotations or if time is a constraint. <strong>This is the project's default</strong>. Here, for simplicity, we explain the flow using the default roles.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -333,13 +339,13 @@ id: collaboration
   <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> to add members to your project.</p>
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here the admin writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
+  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here, the <code>admin</code> writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='You can create the guidelines at <i>Settings &#8594; Guidelines</i>' %}
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Admins and supercurators can import the documents to be annotated by the group. Any project member can see these documents.</p>
+  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. <code>Admins</code> and <code>supercurators</code> can import the documents to be annotated by the group. Any project member can see these documents.</p>
 </div>
 
 <div class="two-third-col">
@@ -364,18 +370,17 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here the admin writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
+  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here, the <code>admin</code> writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Admins and supercurators can import the documents to be annotated by the group. Any project member can see these documents.</p>
-</div>
-
-<div class="two-third-col">
-  <p class="numbered-item"><span class="number-4">4</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select <strong>1 annotator per document</strong>. Additionally, choose whether the project's owner should be assigned documents to annotate or not.</p>
+  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select who you want to distribute documents to and select <strong>1 annotator per document</strong>.
 </div>
 <div class="one-third-col">
-  {% include message.html message="The <em>project's owner</em> is the user who created the project. This is always an <code>admin</code>." %}
+</div>
+
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-4">4</span><strong>Import text</strong>. <code>Admins</code> and <code>supercurators</code> can import the documents to be annotated by the group. Any project member can see these documents, but each annotator will see a TODO list with the documents assigned and not confirmed yet.</p>
 </div>
 
 <div class="two-third-col">
@@ -385,7 +390,7 @@ id: collaboration
   {% include message.html message='You can always assign a document to more than one user. Check out <a href="#documents-are-automatically-distributed-multiple-annotators-per">this annotation flow</a> for details.' %}
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. Admins check which documents are ready for review (via GUI in the document list or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">via search query</a>). Admins import the user's annotations to the <code>master</code> version (final version), review and make the required changes. If the annotations were not Confirmed yet, admins should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed and the document is ready for production.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. <code>Admins</code> check which documents are ready for review (via GUI in the document list or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">by using a search query</a>). <code>Admins</code> move the user's annotations to the <code>master</code> version (ground truth), review and make the required changes. <code>admins</code> should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed and the document is ready for production.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='If the Review step was not required, users could annotate directly on the <code>master</code> version. When ready, users should mark the annotations of each document as completed by clicking on the <i>Confirm</i> button.' %}
@@ -409,18 +414,19 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here the admin writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
+  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here, the <code>admin</code> writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. Admins and supercurators can import the documents to be annotated by the group. Any project member can see these documents.</p>
-</div>
-
-<div class="two-third-col">
-  <p class="numbered-item"><span class="number-4">4</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select <strong>2 annotators or more per document</strong>. Additionally, choose whether the project's owner should be assigned documents to annotate or not.</p>
+  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select who you want to distribute documents to and select <strong>2 annotators or more per document</strong>.
 </div>
 <div class="one-third-col">
   {% include message.html message='From the repeated documents among annotators, the IAA can be computed. Note that even when only <a href="#documents-are-automatically-distributed-one-annotator-per-docume">one annotator is assigned per document</a>, a small sample of documents is randomly chosen by tagtog to always be able to compute the IAA.' %}
+</div>
+
+
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-4">4</span><strong>Import text</strong>. <code>Admins</code> and <code>supercurators</code> can import the documents to be annotated by the group. Any project member can see these documents, but each annotator will see a TODO list with the documents assigned and not confirmed yet.</p>
 </div>
 
 <div class="two-third-col">
@@ -428,7 +434,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Adjudication</strong>. Admins check which documents are ready for review (via GUI in the document list or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">via search query</a>). For a document, admins merge the users' annotations (<a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">automatic adjudication</a>) to the <code>master</code> version (ground truth). Admins review the merged annotations and if these were not Confirmed yet, admins should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Adjudication</strong>. <code>Admins</code> check which documents are ready for review (via GUI in the document list or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">via search query</a>). For a document, <code>admins</code> merge the users' annotations (<a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">automatic adjudication</a>) to the <code>master</code> version (ground truth). <code>Admins</code> review the merged annotations and should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed.</p>
 </div>
 
 

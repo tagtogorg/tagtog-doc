@@ -47,14 +47,12 @@ request_auth_token_endpoint: /-sysadmin/request-auth-token
     <h3>Roles and permissions</h3>
     <p>In the admin panel you can find a permission matrix where you can check/modify the permissions of existing roles or to create custom roles. After, these roles can be assigned to users at project level.</p>
     <p>All the <strong>permissions are explained here</strong>: <a title="tagtog - Multi-user annotation - permissions" href="collaboration.html#permissions">Multi-user annotation - permissions</a></p>
-    <p>By default there are three roles in the system: <code>admin</code>, <code>supercurator</code> and <code>reader</code>. The permissions for these default roles cannot be modified. You can only remove these roles. If you want to modify their permissions, you should remove the role, and create a new role with the same name.</p>
+    <p>By default there are three roles in the system: <code>admin</code>, <code>supercurator</code> and <code>reader</code>. The permissions for these default roles cannot be modified. Admin role cannot be removed (the creator of a project, the owner, will always have this role assigned). The roles supercurator and reader can be removed. If you want to modify their permissions, you should remove the role, and create a new role with the same name.</p>
     <p>To create a new role simply click on <i>Add new role</i>. To change a permission, you should click on the corresponding checkbox. If you hover on the permission name or on a role name, a description of the permission or the role will show up.</p>
     <p>For each role, you can perform three actions:</p>
     <p class="list-item"><span class="list-item-1"></span>{% include inline-image.html name="edit_pencil.png" width="28" %}<strong>Edit its name/description</strong></p>
     <p class="list-item"><span class="list-item-2"></span>{% include inline-image.html name="editor-doc-remove.PNG" width="23" %}<strong>Remove it</strong>. If you remove a role, you should indicate which is the role that will be assigned to all the users once their original role is removed.</p>
     <p class="list-item"><span class="list-item-3"></span><strong>Change its permissions</strong></p>
-
-
 
     {% include image.html name="role_matrix.png"  width="650" caption="Permission matrix. In this example, in addition to the default roles, there is a new role myNewRole" %}
   </div>
@@ -66,7 +64,7 @@ request_auth_token_endpoint: /-sysadmin/request-auth-token
       <strong>Any change is reflected immediately</strong> across all the projects in the system.
     </div>
     <div class="message">
-      When a role is removed, all the users under this role are assigned to another role (chosen by the sys admin).
+      When a role is removed, all the users under this role are assigned to another role (chosen by the sysadmin).
     </div>
   </div>
 

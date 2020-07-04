@@ -18,6 +18,10 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>
+  <li class="new"><span markdown="1">Error messages on the website now look much better 💄.</span></li>
+  <li class="fix"><span markdown="1">Document labels are now also cleared out when deleting all the annotations for the current document.</span></li>
+  <li class="fix"><span markdown="1">Pressing "s" (for "save") on the document editor gets now only triggered if the are changes in the document editor.</span></li>
+  <li class="fix"><span markdown="1">Users (typically readers) who press "s" (for "save") on the document editor, but cannot actually save/edit the requested annotation version, do not longer receive an error. Now, no action happens as expected.</span></li>  
   <li class="fix"><span markdown="1">Return the content type `text/plain` on all API client errors, instead like before sometimes sending an html page.</span></li>
 </ul>
 

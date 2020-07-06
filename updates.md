@@ -23,6 +23,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="fix"><span markdown="1">Pressing "s" (for "save") on the document editor gets now only triggered if the are changes in the document editor.</span></li>
   <li class="fix"><span markdown="1">Users (typically readers) who press "s" (for "save") on the document editor, but cannot actually save/edit the requested annotation version, do not longer receive an error. Now, no action happens as expected.</span></li>  
   <li class="fix"><span markdown="1">Return the content type `text/plain` on all API client errors, instead like before sometimes sending an html page.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) fixed the sometimes nonsensical dates in the logs.</span></li>
 </ul>
 
 ---

@@ -24,7 +24,7 @@ Your system must have installed:
   * To ensure that your docker installation works correctly and that you have the necessary rights to install and run docker images, run: `docker info`. Please ensure that you don't get an error like _permission denied_, and rather as expected see the details of your docker installation.
 
 2. [Docker Compose](https://docs.docker.com/compose/)
-  * The recommended version is >= 1.18
+  * The recommended version is >= [1.18.0](https://docs.docker.com/compose/release-notes/#1180)
 
 3. **IMPORTANT**. The running docker host must have the `vm.max_map_count` setting variable to be at least greater than _262144_. You can check the value by running: `sysctl vm.max_map_count`. If it is too low, **set the value by running**: `sudo sysctl -q -w vm.max_map_count=262144`.
 
@@ -32,7 +32,8 @@ Your system must have installed:
   * Installed in practically all systems by default.
   * Clarification: any other Unix shell should work too, including for Windows the Unix-like environment Cygwin. However, only the Bash shell is officially supported.
 
-5. [cURL](https://en.wikipedia.org/wiki/CURL)
+5. [cURL](https://curl.haxx.se)
+  * The recommended version is >= [7.62.0](https://curl.haxx.se/changes.html#7_62_0)
   * Installed in practically all systems by default
 
 
@@ -41,8 +42,8 @@ Your system must have installed:
 Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the following minimum requirements:
 
 * Memory:
-  * On-Premises Annotator only: **8GB RAM** (e.g. `t3.large` on AWS, or `D2s_v3` on Azure); recommended **16GB RAM** (e.g. `t3.xlarge` on AWS, or `D4s_v3` on Azure)
-  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5.xlarge` on AWS, or `E4s_v3` on Azure)
+  * On-Premises Annotator only: **8GB RAM** (e.g. `t3a.large` on AWS, or `D2s_v3` on Azure); recommended **16GB RAM** (e.g. `t3a.xlarge` on AWS, or `D4s_v3` on Azure)
+  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5a.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5a.xlarge` on AWS, or `E4s_v3` on Azure)
 * Disk: **50+ GB of disk space**
 
 
@@ -254,7 +255,7 @@ We are working on a stable fix. For now, you can quickly liberate the resources 
 docker-compose -f docker-compose.override.yaml --project-name tagtog restart ml0
 ```
 
-**Note**: you can add this to a crontab file to run this periodically. In this case, better write an absolute path to: `docker-compose.override.yaml`.
+**Note**: you can add this to a crontab file to run this periodically (say every 12 or 24 hours). In this case, better write an absolute path to: `docker-compose.override.yaml`.
 
 Example:
 
@@ -297,4 +298,19 @@ If for any reason, however, you do want to run as sudo, you might also need to e
 
 ```shell
 sudo -E ./tagtog_on_premises restart ...
+```
+
+
+### "SSL certificate problem..." when `curl`'ling
+
+If you get something like the following, you likely need to [upgrade your curl version (see above for the recommended version)](#requirements) and/or your OpenSSL version.
+
+```
+curl: (60) SSL certificate problem: certificate has expired
+More details here: https://curl.haxx.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
+An error happened:
 ```

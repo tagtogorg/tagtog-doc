@@ -17,6 +17,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ## ??? 📇
 
 <ul class="updates">
+  <li class="new"><span markdown="1">New progress metrics available in the <a title="tagtog - metrics" href="metrics.html">metrics</a> panel. Find out how many documents are production ready, under review or still in progress. Check the progress of each annotator.</span></li>
+  <li class="new"><span markdown="1">Shortcuts for search queries available in the metrics panel. Now it is easier to translate metrics into a list of matching documents. For example, show me all the documents that have set a specific document label or entity. It is also easier to learn to to use <a href="search-queries.html" title="tagtog - search queries">search queries</a>.</span></li>
   <li class="new"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>
   <li class="new"><span markdown="1">Error messages on the website now look much better 💄.</span></li>
   <li class="fix"><span markdown="1">Document labels are now also cleared out when deleting all the annotations for the current document.</span></li>
@@ -30,8 +32,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## 3.2020-W25.0 👀
-_2020-06-16_
+## 3.2020-W25.3 👀
+_2020-06-26_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Some users were experiencing issues when removing members from their projects. This issue is now resolved.</span></li>

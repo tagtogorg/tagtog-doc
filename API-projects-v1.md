@@ -66,7 +66,7 @@ Search and return the list of projects that the (authenticated) user is a member
         //array of project members. The project owner is always returned (with role admin)
         {
           "username": "String: members username invited to this project",
-          "role": "String: member's role; string value in {reader, supercurator, admin}"
+          "role": "String: member's role; string value"
         },
         //... next members if any
       ]
@@ -103,7 +103,7 @@ None
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>
   </ul>
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">

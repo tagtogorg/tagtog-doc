@@ -17,6 +17,11 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ## ??? 📇
 
 <ul class="updates">
+  <li class="new"><span markdown="1">TODO write about new API for creating, updating, deleting members</span></li>
+  <li class="new"><span markdown="1">TODO write about new API for updateTaskDistribution</span></li>
+  <li class="new"><span markdown="1">TODO tell about new setting to specifically choose which project members get documents distributed to.</span></li>
+  <li class="new"><span markdown="1">TODO new roles: reviewer & curator.</span></li>
+  <li class="new"><span markdown="1">TODO new permissions matrix.</span></li>
   <li class="new"><span markdown="1">New progress metrics available in the <a title="tagtog - metrics" href="metrics.html">metrics</a> panel. Find out how many documents are production ready, under review or still in progress. Check the progress of each annotator.</span></li>
   <li class="new"><span markdown="1">Shortcuts for search queries available in the metrics panel. Now it is easier to translate metrics into a list of matching documents. For example, show me all the documents that have set a specific document label or entity. It is also easier to learn to to use <a href="search-queries.html" title="tagtog - search queries">search queries</a>.</span></li>
   <li class="new"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>

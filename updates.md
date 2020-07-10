@@ -29,7 +29,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="fix"><span markdown="1">Document labels are now also cleared out when deleting all the annotations for the current document.</span></li>
   <li class="fix"><span markdown="1">Going to any page that requires login, now properly redirects to the login page, and (if the login is successful) redirects back to the original page.</span></li>
   <li class="fix"><span markdown="1">Pressing "s" (for "save") on the document editor gets now only triggered if the are changes in the document editor.</span></li>
-  <li class="fix"><span markdown="1">Users (typically readers) who press "s" (for "save") on the document editor, but cannot actually save/edit the requested annotation version, do not longer receive an error. Now, no action happens as expected.</span></li>  
+  <li class="fix"><span markdown="1">Users (typically readers) who press "s" (for "save") on the document editor, but cannot actually save/edit the requested annotation version, do not longer receive an error. Now, no action happens as expected.</span></li>
+  <li class="fix"><span markdown="1">Fixed the feedback button.</span></li>
   <li class="fix"><span markdown="1">Return the content type `text/plain` on all API client errors, instead like before sometimes sending an html page.</span></li>
   <li class="fix"><span markdown="1">(OnPremises) fixed the sometimes nonsensical dates in the logs.</span></li>
   <li class="fix"><span markdown="1">(OnPremises) stopped running unnecessary re-trainings of the ML, which caused some performance issues.</span></li>

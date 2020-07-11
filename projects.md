@@ -379,7 +379,7 @@ id: projects
     <div class="message">
       Using the <strong>API</strong> and the parameter <code>distributeToMembers</code>, you can decide who exactly you want to distribute a specific document to. <a title="tagtog - API documents - Import" href="API_documents_v1.html#import-and-annotate-text">More information</a>.
     </div>
-    {% include image.html name="settings-task-distribution.png" %}
+    {% include image.html name="settings-task-distribution-members.png" %}
   </div>
  </div>
 

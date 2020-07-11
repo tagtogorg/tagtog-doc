@@ -160,6 +160,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
 ---
+
 ## Annotations Legend
 
 GET a JSON map of annotation tasks ids to names (e.g. `{"e_1": "Person"}`).
@@ -414,9 +415,6 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 </div>
 
 </div>
-
-
-
 
 
 

@@ -14,7 +14,7 @@ id: collaboration
 
 <div class="two-third-col">
   <h2>Roles</h2>
-  <p>By default, tagtog comes with a set of predefined roles:</p>
+  <p>By default, tagtog comes with a set of predefined roles. Below you can find a general description of the roles. In the <a title="tagtog - permissions" href="collaboration.html#permissions">permissions</a> section you will find a detailed list of the permissions for these roles.</p>
   <table style="width:100%">
     <tr>
       <th>Role</th>
@@ -22,19 +22,23 @@ id: collaboration
     </tr>
     <tr>
       <td><code>admin</code></td>
-      <td><span markdown="1">Can read all user's annotations, but cannot edit them. They can edit `master`'s and their own annotations. Moreover, they can [edit the project's settings](#admin-role).</span></td>
+      <td><span markdown="1">Can read all user's annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit all project's settings. All permissions are active for this role. By default, the user that creates a project becomes its admin. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
+    </tr>
+    <tr>
+      <td><code>reviewer</code></td>
+      <td><span markdown="1">Can read all user's annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit some settings, see the project metrics and use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
     <tr>
       <td><code>supercurator</code></td>
-      <td>They can edit <code>master</code>'s and their own annotations.</td>
+      <td>Can edit <code>master</code>'s and their own annotations. They can read the settings of the project, see the project metrics and use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</td>
     </tr>
     <tr>
-      <td><code class="soon">curator</code></td>
-      <td><span class="soon">Can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations.</span></td>
+      <td><code>curator</code></td>
+      <td><span>Can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations. They cannot see the metrics of the project or use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
     <tr>
       <td><code>reader</code></td>
-      <td><span>They can only read <code>master</code>'s annotations.</span></td>
+      <td><span>Can only read <code>master</code>'s annotations. They can see the metrics of the project. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
   </table>
 
@@ -55,14 +59,16 @@ id: collaboration
 <div class="two-third-col">
   <h2>Permissions</h2>
     <p>You can find below the permissions available in tagtog. Each role has a set of permissions associated.</p>
-    <table style="width:100%">
+    <table style="width:150%">
       <tr>
         <th>Realm</th>
         <th>Component</th>
         <th>Permission</th>
         <th>Description</th>
         <th>Reader</th>
+        <th>Curator</th>
         <th>Supercurator</th>
+        <th>Reviewer</th>
         <th>Admin</th>
       </tr>
       <tr>
@@ -73,12 +79,16 @@ id: collaboration
         <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>canEditGuidelinesConf</code></td>
         <td><span>Write access for Settings - Guidelines</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
@@ -88,12 +98,16 @@ id: collaboration
         <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>canEditAnnTasksConf</code></td>
         <td><span>Write access for all annotation tasks, namely: Document Labels, Entities, Dictionaries, Entity Labels, and Relations</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
@@ -103,12 +117,16 @@ id: collaboration
         <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>canEditRequirementsConf</code></td>
         <td><span>Write access for Settings - Requirements</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
@@ -118,12 +136,16 @@ id: collaboration
         <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>canEditAnnotatablesConf</code></td>
         <td><span>Write access for Settings - Annotatables</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
@@ -133,12 +155,16 @@ id: collaboration
         <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>canEditAnnotationsConf</code></td>
         <td><span>Write access for Settings - Annotations</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
@@ -147,6 +173,8 @@ id: collaboration
         <td><span>Read access for Settings - Webhooks</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
@@ -154,6 +182,8 @@ id: collaboration
         <td><span>Write access for Settings - Webhooks</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
@@ -162,11 +192,15 @@ id: collaboration
         <td><span>Read access for Settings - Members</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>canEditMembersConf</code></td>
         <td><span>Write access for Settings - Members</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
         <td class="centered">✅</td>
@@ -177,11 +211,15 @@ id: collaboration
         <td><span>Read access for Settings - Admin</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>canEditAdminConf</code></td>
         <td><span>Write access for Settings - Admin</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
         <td class="centered">✅</td>
@@ -194,11 +232,15 @@ id: collaboration
         <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>canEditMaster</code></td>
         <td><span>Write access for the master version of the annotations (ground truth)</span></td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
@@ -209,6 +251,8 @@ id: collaboration
         <td class="centered">❌</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td rowspan="2">Others' versions</td>
@@ -216,6 +260,8 @@ id: collaboration
         <td><span>Read access to every project member's versions of the annotations</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
@@ -224,12 +270,16 @@ id: collaboration
         <td class="centered">❌</td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td rowspan="2">content</td>
         <td><code>canCreate</code></td>
         <td><span>Rights to import documents to the project</span></td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
@@ -237,6 +287,8 @@ id: collaboration
         <td><code>canDelete</code></td>
         <td><span>Rights to remove documents from the project</span></td>
         <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
@@ -248,12 +300,16 @@ id: collaboration
         <td class="centered">❌</td>
         <td class="centered">❌</td>
         <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>canUpdate</code></td>
         <td><span>Rights to rename existing folders</span></td>
         <td class="centered">❌</td>
         <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
@@ -262,27 +318,17 @@ id: collaboration
         <td class="centered">❌</td>
         <td class="centered">❌</td>
         <td class="centered">✅</td>
-      </tr>
-      <tr>
-        <td rowspan="3">dictionaries</td>
-        <td rowspan="3"></td>
-        <td><code>canRead</code></td>
-        <td><span>Read access to the dictionaries</span></td>
-        <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
       <tr>
+        <td>dictionaries</td>
+        <td></td>
         <td><code>canCreateItems</code></td>
-        <td><span>Rights to add items to the dictionaries</span></td>
+        <td><span>Rights to add items to the dictionaries using the editor</span></td>
+        <td class="centered">❌</td>
         <td class="centered">❌</td>
         <td class="centered">✅</td>
-        <td class="centered">✅</td>
-      </tr>
-      <tr>
-        <td><code>canDeleteItems</code></td>
-        <td><span>Rights to delete items from dictionaries</span></td>
-        <td class="centered">❌</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
@@ -292,6 +338,8 @@ id: collaboration
         <td><code>canRead</code></td>
         <td><span>Read access to the metrics of the project (metrics tab) or the metrics for annotation tasks in a document (e.g. IAA)</span></td>
         <td class="centered">✅</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
@@ -300,6 +348,8 @@ id: collaboration
         <td></td>
         <td><code>canUse</code></td>
         <td><span>Users with this permission can use the API. Users with this permission can see the output formats in the UI</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
@@ -374,7 +424,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select who you want to distribute documents to and select <strong>1 annotator per document</strong>.
+  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select who you want to distribute documents to and select <strong>1 annotator per document</strong>.</p>
 </div>
 <div class="one-third-col">
 </div>

@@ -134,32 +134,39 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
   <div markdown="1">
 ```json
 {
-  "version": "1.3",
-  "domain": "other",
-  "language": "English",
-  "usePreSelections": true,
-  "usePreDeselections": false,
-  "usePreCaseSentive": false,
-  "useMachineLearning": true,
-  "nativePDF": false,
-  "autoSave": false,
-  "confirmLayer": false,
-  "taskDistributionNumber": 0,
-  "taskDistributionOwner": true,
-  "folders": {
-    "pool": {
-      "name": "pool",
-      "index": 0,
-      "children": {}
+  "version" : "1.6",
+  "domain" : "other",
+  "language" : "English",
+  "usePreSelections" : true,
+  "usePreDeselections" : false,
+  "usePreCaseSentive" : false,
+  "useMachineLearning" : false,
+  "nativePDF" : false,
+  "autoSave" : false,
+  "confirmLayer" : false,
+  "taskDistributionNumber" : 0,
+  "taskDistributionMembers" : [ ],
+  "folders" : {
+    "pool" : {
+      "name" : "pool",
+      "index" : 0,
+      "children" : { }
     }
   },
-  "webhooks": {},
-  "metas": {},
-  "entities": {
-    "e_1": { "id": "e_1", "name": "risk", "oldnames": [], "description": "Risk assessment", "color": "#28c72d", "fields": {}, "normalizations": {} }
+  "requirements" : { },
+  "webhooks" : { },
+  "metas" : {
+    "m_2" : {
+      "id" : "m_2",
+      "name" : "Type",
+      "oldnames" : [ ],
+      "description" : "A,B,C",
+      "type" : "enum"
+    }
   },
-  "fields": {},
-  "relations": {}
+  "fields" : { },
+  "relations" : { },
+  "entities" : { }
 }
 ```
   </div>

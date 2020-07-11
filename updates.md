@@ -17,6 +17,11 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 ## ??? 📇
 
 <ul class="updates">
+  <li class="new"><span markdown="1">TODO write about new API for creating, updating, deleting members</span></li>
+  <li class="new"><span markdown="1">TODO write about new API for updateTaskDistribution</span></li>
+  <li class="new"><span markdown="1">TODO tell about new setting to specifically choose which project members get documents distributed to.</span></li>
+  <li class="new"><span markdown="1">TODO new roles: reviewer & curator.</span></li>
+  <li class="new"><span markdown="1">TODO new permissions matrix.</span></li>
   <li class="new"><span markdown="1">New progress metrics available in the <a title="tagtog - metrics" href="metrics.html">metrics</a> panel. Find out how many documents are production ready, under review or still in progress. Check the progress of each annotator.</span></li>
   <li class="new"><span markdown="1">Shortcuts for search queries available in the metrics panel. Now it is easier to translate metrics into a list of matching documents. For example, show me all the documents that have set a specific document label or entity. It is also easier to learn to to use <a href="search-queries.html" title="tagtog - search queries">search queries</a>.</span></li>
   <li class="new"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>
@@ -24,7 +29,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
   <li class="fix"><span markdown="1">Document labels are now also cleared out when deleting all the annotations for the current document.</span></li>
   <li class="fix"><span markdown="1">Going to any page that requires login, now properly redirects to the login page, and (if the login is successful) redirects back to the original page.</span></li>
   <li class="fix"><span markdown="1">Pressing "s" (for "save") on the document editor gets now only triggered if the are changes in the document editor.</span></li>
-  <li class="fix"><span markdown="1">Users (typically readers) who press "s" (for "save") on the document editor, but cannot actually save/edit the requested annotation version, do not longer receive an error. Now, no action happens as expected.</span></li>  
+  <li class="fix"><span markdown="1">Users (typically readers) who press "s" (for "save") on the document editor, but cannot actually save/edit the requested annotation version, do not longer receive an error. Now, no action happens as expected.</span></li>
+  <li class="fix"><span markdown="1">Fixed the feedback button.</span></li>
   <li class="fix"><span markdown="1">Return the content type `text/plain` on all API client errors, instead like before sometimes sending an html page.</span></li>
   <li class="fix"><span markdown="1">(OnPremises) fixed the sometimes nonsensical dates in the logs.</span></li>
   <li class="fix"><span markdown="1">(OnPremises) stopped running unnecessary re-trainings of the ML, which caused some performance issues.</span></li>

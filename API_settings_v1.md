@@ -219,6 +219,35 @@ Body: None
 
 Successful status code: `205` (Reset Content; no payload)
 
+---
+
+### Update task distribution
+
+Update the configuration of task distribution of your project.
+
+* Method: `PUT`
+* Endpoint: `{{ page.api_endpoint }}/task-distribution{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: JSON (application/JSON)
+
+| Type | Name                      | Default | Example                             | Description                                  |
+| ---- | ------------------------- | ------- | ----------------------------------- | -------------------------------------------- |
+| Body | `taskDistributionNumber`  |         | 2                                   | [See docs](projects.html#task-distribution). |
+| Body | `taskDistributionMembers` |         | `["yourUsername", "John", "Laura"]` | [See docs](projects.html#task-distribution). |
+
+**Output**
+
+Successful status code: `200` (OK)
+
+Payload: JSON (application/json)
+
+| Name          | Example | Description                                                                                           |
+| ------------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| `mapNewIds`   | `{}`    | Not relevant; always empty.                                                                           |
+| `newSettings` |         | New full settings json object of the project. [See docs below](API_settings_v1.html#export-settings). |
+
 
 </div> <!-- Closes section: two-third-col -->
 

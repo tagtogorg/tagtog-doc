@@ -224,56 +224,9 @@ id: collaboration
         <td class="centered">❌</td>
         <td class="centered">✅</td>
       </tr>
+
       <tr>
-        <td rowspan="7">documents</td>
-        <td rowspan="2">Master version</td>
-        <td><code>canReadMaster</code></td>
-        <td><span>Read access to the master version of the annotations</span></td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-      </tr>
-      <tr>
-        <td><code>canEditMaster</code></td>
-        <td><span>Write access for the master version of the annotations (ground truth)</span></td>
-        <td class="centered">❌</td>
-        <td class="centered">❌</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-      </tr>
-      <tr>
-        <td>Own version</td>
-        <td><code>canEditSelf</code></td>
-        <td><span>Write access to the own version of the annotations</span></td>
-        <td class="centered">❌</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-      </tr>
-      <tr>
-        <td rowspan="2">Others' versions</td>
-        <td><code>canReadOthers</code></td>
-        <td><span>Read access to every project member's versions of the annotations</span></td>
-        <td class="centered">❌</td>
-        <td class="centered">❌</td>
-        <td class="centered">❌</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-      </tr>
-      <tr>
-        <td><code>canEditOthers</code></td>
-        <td><span>Write access to every project member's versions of the annotations</span></td>
-        <td class="centered">❌</td>
-        <td class="centered">❌</td>
-        <td class="centered">❌</td>
-        <td class="centered">✅</td>
-        <td class="centered">✅</td>
-      </tr>
-      <tr>
+        <td rowspan="7">documents</td>        
         <td rowspan="2">Content</td>
         <td><code>canCreate</code></td>
         <td><span>Rights to import documents to the project</span></td>
@@ -292,6 +245,54 @@ id: collaboration
         <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
+      <tr>
+        <td rowspan="1">Own version</td>
+        <td><code>canEditSelf</code></td>
+        <td><span>Write access to the own version of the annotations</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>        
+        <td rowspan="2">Master version</td>
+        <td><code>canReadMaster</code></td>
+        <td><span>Read access to the master version of the annotations</span></td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditMaster</code></td>
+        <td><span>Write access for the master version of the annotations (ground truth)</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>      
+      <tr>
+        <td rowspan="2">Others' versions</td>
+        <td><code>canReadOthers</code></td>
+        <td><span>Read access to every project member's versions of the annotations</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>canEditOthers</code></td>
+        <td><span>Write access to every project member's versions of the annotations</span></td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>      
       <tr>
         <td rowspan="3">folders</td>
         <td rowspan="3"></td>

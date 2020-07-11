@@ -57,7 +57,7 @@ GET a JSON map of annotation tasks ids to names (e.g. `{"e_1": "Person"}`).
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 
 None
 
@@ -86,7 +86,7 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend
 
 ---
 
-## Settings management
+## (Full) Settings management
 
 ### Export Settings
 
@@ -105,7 +105,7 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 
 None
 
@@ -193,7 +193,7 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 
 JSON project settings, in the same format as returned by [exporting the settings](#export-settings).
 
@@ -243,7 +243,7 @@ For all folder operations, please note that `pool` must always be the root folde
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 
 Two variants in JSON format:
 
@@ -397,7 +397,7 @@ print(response.text)
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 <table style="width:100%;">
   <tr>
     <th>Name</th>
@@ -460,7 +460,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 <table style="width:100%;">
   <tr>
     <th>Name</th>

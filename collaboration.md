@@ -58,7 +58,7 @@ id: collaboration
 
 <div class="two-third-col">
   <h2>Permissions</h2>
-    <p>You can find below the permissions available in tagtog. Each role has a set of permissions associated.</p>
+    <p>tagtog role-based access control helps you manage what users can do in a project, and what areas they have access to. You can find below the permissions available in tagtog. Each role has a set of permissions associated.</p>
     <table style="width:150%">
       <tr>
         <th>Realm</th>

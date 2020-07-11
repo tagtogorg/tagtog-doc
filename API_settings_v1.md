@@ -82,6 +82,82 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend
 <!-- -------------------------------------------------------------------------- -->
 
 
+<div class="two-third-col" markdown="1">
+
+---
+
+## Members management
+
+### Create member
+
+Add a member to your project.
+
+* Method: `POST`
+* Endpoint: `{{ page.api_endpoint }}/members{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: JSON (application/json)
+
+| Type | Name       | Default | Example  | Description                                                                                                                                                                                                                                        |
+| ---- | ---------- | ------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Body | `loginid`  |         | "John"   | Username or email address of the tagtog user you want to invite to your project to. If you give an email address that is not associated yet with a tagtog user, the email address will receive an invitation link to join tagtog and your project. |
+| Body | `roleName` |         | "reader" | [Role](collaboration.html#roles) (name) to give to the user.                                                                                                                                                                                       |
+
+**Output**
+
+Successful status code: `205` (Reset Content; no payload)
+
+---
+
+### Update member
+
+Change the role of an existing member in your project.
+
+* Method: `PUT`
+* Endpoint: `{{ page.api_endpoint }}/members/:member{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: JSON (application/json)
+
+| Type | Name       | Default    | Example                                                          | Description                               |
+| ---- | ---------- | ---------- | ---------------------------------------------------------------- | ----------------------------------------- |
+| Path | `member`   |            | "John"                                                           | Username of the project member to update. |
+| Body | `roleName` | "reviewer" | New [role](collaboration.html#roles) (name) to give to the user. |                                           |
+
+**Output**
+
+Successful status code: `205` (Reset Content; no payload)
+
+---
+
+### Delete member
+
+Remove an existing member from your project.
+
+* Method: `DELETE`
+* Endpoint: `{{ page.api_endpoint }}/members/:member{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: None
+
+| Type | Name     | Default | Example | Description                               |
+| ---- | -------- | ------- | ------- | ----------------------------------------- |
+| Path | `member` |         | "John"  | Username of the project member to delete. |
+
+**Output**
+
+Successful status code: `205` (Reset Content; no payload)
+
+
+</div> <!-- Closes section: two-third-col -->
+
+
+<!-- -------------------------------------------------------------------------- -->
+
+
 <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
 ---

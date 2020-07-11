@@ -229,11 +229,9 @@ For all folder operations, please note that `pool` must always be the root folde
 
 **Input Parameters**
 
-
-
 Two variants in JSON format:
 
-1. **(Full) path**:
+1) **(Full) path**:
 <table style="width:100%;">
   <tr>
     <th>Name</th>
@@ -249,8 +247,7 @@ Two variants in JSON format:
   </tr>
 </table>
 
-
-2. **Parent path & new folder name** (example):
+2) **Parent path & new folder name**:
 <table style="width:100%;">
   <tr>
     <th>Name</th>

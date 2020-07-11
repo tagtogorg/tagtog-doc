@@ -14,7 +14,7 @@ id: collaboration
 
 <div class="two-third-col">
   <h2>Roles</h2>
-  <p>By default, tagtog comes with a set of predefined roles. Below you can find a general description of the roles. In the <a title="tagtog - permissions" href="collaboration.html#permissions">permissions</a> section you will find a detailed list of the permissions for these roles.</p>
+  <p>tagtog comes with a set of predefined user roles. Here you find a summary description of the roles. In the <a title="tagtog - permissions" href="collaboration.html#permissions">permissions</a> section just below you will find a detailed list of the permissions for these roles.</p>
   <table style="width:100%">
     <tr>
       <th>Role</th>
@@ -34,7 +34,7 @@ id: collaboration
     </tr>
     <tr>
       <td><code>curator</code></td>
-      <td><span>Can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations. They cannot see the metrics of the project or use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
+      <td><span>Can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations. They cannot see the metrics of the project nor use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
     <tr>
       <td><code>reader</code></td>
@@ -226,7 +226,7 @@ id: collaboration
       </tr>
       <tr>
         <td rowspan="7">documents</td>
-        <td rowspan="2">master version</td>
+        <td rowspan="2">Master version</td>
         <td><code>canReadMaster</code></td>
         <td><span>Read access to the master version of the annotations</span></td>
         <td class="centered">✅</td>
@@ -274,7 +274,7 @@ id: collaboration
         <td class="centered">✅</td>
       </tr>
       <tr>
-        <td rowspan="2">content</td>
+        <td rowspan="2">Content</td>
         <td><code>canCreate</code></td>
         <td><span>Rights to import documents to the project</span></td>
         <td class="centered">❌</td>

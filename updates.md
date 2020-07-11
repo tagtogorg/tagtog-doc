@@ -14,6 +14,32 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W28.0 📇
+_2020-07-11_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">New default roles: **reviewer** & **curator**. [More information](collaboration.html#roles) 🙋‍♀️🙋🏾.</span></li>
+  <li class="new"><span markdown="1">Now in task distribution you can define which members will be assigned documents to. [More information](projects.html#task-distribution).</span></li>
+  <li class="new"><span markdown="1">New **permissions** system: [29 different permissions](collaboration.html#permissions) for a fine-grained authorization management! Give access to users to do their tasks and prevent them from accessing information that doesn't pertain to them.</span></li>
+  <li class="new"><span markdown="1">(Enterprise) Now it's possible to [define your own custom roles](collaboration.html#create-custom-roles)!🧙‍♂️ Choose the exact set of permissions from the 29 available. Adapt tagtog to your specific needs and team easily.</span></li>
+  <li class="new"><span markdown="1">New Settings [APIs to programmatically get, add, update, and delete members](  API_settings_v1.html#members-management) from your projects! 🤖</span></li>
+  <li class="new"><span markdown="1">New Settings [APIs to channge the task distribution configuration](API_settings_v1.html#update-task-distribution) of your projects! 🤖</span></li>
+  <li class="new"><span markdown="1">New progress metrics available in the <a title="tagtog - metrics" href="metrics.html">metrics</a> panel. Find out how many documents are production ready, under review, or still in progress. **Check the progress of each annotator**. 📊</span></li>
+  <li class="new"><span markdown="1">Shortcuts for search queries available in the metrics panel. Now it is easier to translate metrics into a list of matching documents. For example, "show me all the documents that have set a specific document label or entity". It is now also easier to learn how to use <a href="search-queries.html" title="tagtog - search queries">search queries</a>. 🔎</span></li>
+  <li class="new"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>
+  <li class="new"><span markdown="1">Error messages on the website now look much better 💄.</span></li>
+  <li class="fix"><span markdown="1">Document labels are now also cleared out when deleting all the annotations for the current document.</span></li>
+  <li class="fix"><span markdown="1">Going to any page that requires login, now properly redirects to the login page, and (if the login is successful) redirects back to the original page.</span></li>
+  <li class="fix"><span markdown="1">Pressing "s" (for "save") on the document editor gets now only triggered if the are changes in the document editor.</span></li>
+  <li class="fix"><span markdown="1">Users (typically readers) who press "s" (for "save") on the document editor, but cannot actually save/edit the requested annotation version, do not longer receive an error. Now, no action happens as expected.</span></li>
+  <li class="fix"><span markdown="1">Fixed the feedback button.</span></li>
+  <li class="fix"><span markdown="1">Return the content type `text/plain` on all API client errors, instead like before sometimes sending an html page.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) fixed the sometimes nonsensical dates in the logs.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) stopped running unnecessary re-trainings of the ML, which caused some performance issues.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W25.3 👀
 _2020-06-26_
 

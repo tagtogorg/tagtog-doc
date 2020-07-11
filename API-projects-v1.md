@@ -14,9 +14,13 @@ api_pwd: yourPassword
 api_project: yourProjectName
 ---
 
-<div class="two-third-col" markdown="1">
-| **Version** | `{{ page.version }}` |
-
+<div class="two-third-col">
+  <table style="width:100%;white-space:nowrap;">
+    <tr>
+      <td><strong>Version</strong></td>
+      <td><code>{{ page.version }}</code></td>
+    </tr>    
+  </table>
 </div>
 
 
@@ -26,6 +30,7 @@ api_project: yourProjectName
 Search and return the list of projects that the (authenticated) user is a member of. This includes the projects created by the user, and the projects as an invitee. When no search parameter is given, all projects are returned.
 
 | **Endpoint**  | `{{ page.api_endpoint }}/search-my-projects` |
+| ------------- | -------------------------------------------- |
 | **Method**    | `GET`                                        |
 | **Output**    | JSON                                         |
 | **Paginated** | Yes                                          |
@@ -66,7 +71,7 @@ Search and return the list of projects that the (authenticated) user is a member
         //array of project members. The project owner is always returned (with role admin)
         {
           "username": "String: members username invited to this project",
-          "role": "String: member's role; string value in {reader, supercurator, admin}"
+          "roleName": "String: member's role; string value"
         },
         //... next members if any
       ]
@@ -90,6 +95,7 @@ Search and return the list of projects that the (authenticated) user is a member
 Return the list of projects that the (authenticated) user is a member of. This includes the projects created by the user, and the projects as an invitee.
 
 | **Endpoint** | `{{ page.api_endpoint }}/my_projects` |
+| ------------ | ------------------------------------- |
 | **Method**   | `GET`                                 |
 | **Output**   | JSON                                  |
 
@@ -103,7 +109,7 @@ None
 
 <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>    
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>
   </ul>
   <div class="tab">
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">

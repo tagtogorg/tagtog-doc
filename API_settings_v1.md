@@ -6,7 +6,7 @@ layout: page
 toc: true
 toc_levels: 1,2
 
-version: 1.0
+version: 1.1
 api_endpoint: /-api/settings/v1
 mandatory_query_parameters: ?owner=...&project=...
 mandatory_query_parameters_full: ?owner=yourUsername&project=yourProjectName
@@ -31,9 +31,235 @@ api_folder_new: myNewFolder
 </div>
 
 
+<!-- -------------------------------------------------------------------------- -->
+
+
 <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
-## Settings management
+---
+
+## Annotations Legend
+
+GET a JSON map of annotation tasks ids to names (e.g. `{"e_1": "Person"}`).
+
+<table style="width:100%;white-space:nowrap;">
+  <tr>
+    <td><strong>Endpoint</strong></td>
+    <td><code>{{ page.api_endpoint }}/annotationsLegend{{ page.mandatory_query_parameters }}</code></td>
+  </tr>
+  <tr>
+    <td><strong>Method</strong></td>
+    <td><code>GET</code></td>
+  </tr>
+  <tr>
+    <td><strong>Output</strong></td>
+    <td>JSON</td>
+  </tr>
+</table>
+
+**Input**
+
+None
+
+**Coding examples**
+
+<div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>
+  </ul>
+  <div class="tab">
+<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend{{ page.mandatory_query_parameters_full }}'
+```
+</div>
+  </div>
+</div>
+
+</div> <!-- Closes main section: two-third-cold div -->
+
+
+<!-- -------------------------------------------------------------------------- -->
+
+
+<div class="two-third-col" markdown="1">
+
+---
+
+## Members management
+
+### Get members
+
+Get the list of confirmed members & pending members in your project.
+
+* Method: `GET`
+* Endpoint: `{{ page.api_endpoint }}/members{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: None
+
+**Output**
+
+Successful status code: `200` (OK)
+
+Payload: JSON (application/json)
+
+| Name             | Example                                                                                                               | Description                                |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| `members`        | `[{"username":"yourUsername","roleName":"admin"},{"username":"John","roleName":"reader"}]`                            | Array of confirmed members in the project. |
+| `pendingMembers` | `[{"invitationToken":"invt-220dc7a2-7c0c-459f-80a6-ba5edc80c71f","roleName":"admin","email":"somebody@example.com"}]` | Array of pending members in the project.   |
+
+---
+
+### Create member
+
+Add a member to your project.
+
+* Method: `POST`
+* Endpoint: `{{ page.api_endpoint }}/members{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: JSON (application/json)
+
+| Type | Name       | Default | Example  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ---- | ---------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Body | `loginid`  |         | "John"   | Username or email address of the tagtog user you want to invite to your project to. If the user exists in tagtog, currently, this is added immediately to your project without requiring confirmation from the user. This might change in the future.<br><br>If you give an email address that is not associated yet with a tagtog user, the email address will receive an invitation link to join tagtog and your project. Invited members who have not confirmed yet are called "pending members". |
+| Body | `roleName` |         | "reader" | [Role](collaboration.html#roles) (name) to give to the user.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+
+**Output**
+
+Successful status code: `205` (Reset Content; no payload)
+
+---
+
+### Update member
+
+Change the role of an existing & confirmed member in your project.
+
+* Method: `PUT`
+* Endpoint: `{{ page.api_endpoint }}/members/:member{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: JSON (application/json)
+
+| Type | Name       | Default    | Example                                                          | Description                               |
+| ---- | ---------- | ---------- | ---------------------------------------------------------------- | ----------------------------------------- |
+| Path | `member`   |            | "John"                                                           | Username of the project member to update. |
+| Body | `roleName` | "reviewer" | New [role](collaboration.html#roles) (name) to give to the user. |                                           |
+
+**Output**
+
+Successful status code: `205` (Reset Content; no payload)
+
+---
+
+### Delete member
+
+Remove an existing & confirmed member from your project.
+
+* Method: `DELETE`
+* Endpoint: `{{ page.api_endpoint }}/members/:member{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: None
+
+| Type | Name     | Default | Example | Description                               |
+| ---- | -------- | ------- | ------- | ----------------------------------------- |
+| Path | `member` |         | "John"  | Username of the project member to delete. |
+
+**Output**
+
+Successful status code: `205` (Reset Content; no payload)
+
+---
+
+### Get pending members (only)
+
+Get the list of pending members in your project.
+
+* Method: `GET`
+* Endpoint: `{{ page.api_endpoint }}/pending-members{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: None
+
+**Output**
+
+Successful status code: `200` (OK)
+
+Payload: JSON (application/json)
+
+| Name             | Example                                                                                                               | Description                              |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| `pendingMembers` | `[{"invitationToken":"invt-220dc7a2-7c0c-459f-80a6-ba5edc80c71f","roleName":"admin","email":"somebody@example.com"}]` | Array of pending members in the project. |
+
+---
+
+### Delete pending member
+
+Remove a pending member from your project.
+
+* Method: `DELETE`
+* Endpoint: `{{ page.api_endpoint }}/pending-members/:invitationToken{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: None
+
+| Type | Name              | Default | Example                                     | Description                                                                       |
+| ---- | ----------------- | ------- | ------------------------------------------- | --------------------------------------------------------------------------------- |
+| Path | `invitationToken` |         | "invt-220dc7a2-7c0c-459f-80a6-ba5edc80c71f" | Invitation token, which uniquely identifies the invitation to the pending member. |
+
+**Output**
+
+Successful status code: `205` (Reset Content; no payload)
+
+---
+
+### Update task distribution
+
+Update the configuration of task distribution of your project.
+
+* Method: `PUT`
+* Endpoint: `{{ page.api_endpoint }}/task-distribution{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: JSON (application/JSON)
+
+| Type | Name                      | Default | Example                             | Description                                  |
+| ---- | ------------------------- | ------- | ----------------------------------- | -------------------------------------------- |
+| Body | `taskDistributionNumber`  |         | 2                                   | [See docs](projects.html#task-distribution). |
+| Body | `taskDistributionMembers` |         | `["yourUsername", "John", "Laura"]` | [See docs](projects.html#task-distribution). |
+
+**Output**
+
+Successful status code: `200` (OK)
+
+Payload: JSON (application/json)
+
+| Name          | Example | Description                                                                                           |
+| ------------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| `mapNewIds`   | `{}`    | Not relevant; always empty.                                                                           |
+| `newSettings` |         | New full settings json object of the project. [See docs below](API_settings_v1.html#export-settings). |
+
+
+</div> <!-- Closes section: two-third-col -->
+
+
+<!-- -------------------------------------------------------------------------- -->
+
+
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
+
+---
+
+## (Full) Settings management
 
 ### Export Settings
 
@@ -52,7 +278,7 @@ api_folder_new: myNewFolder
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 
 None
 
@@ -81,32 +307,39 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
   <div markdown="1">
 ```json
 {
-  "version": "1.3",
-  "domain": "other",
-  "language": "English",
-  "usePreSelections": true,
-  "usePreDeselections": false,
-  "usePreCaseSentive": false,
-  "useMachineLearning": true,
-  "nativePDF": false,
-  "autoSave": false,
-  "confirmLayer": false,
-  "taskDistributionNumber": 0,
-  "taskDistributionOwner": true,
-  "folders": {
-    "pool": {
-      "name": "pool",
-      "index": 0,
-      "children": {}
+  "version" : "1.6",
+  "domain" : "other",
+  "language" : "English",
+  "usePreSelections" : true,
+  "usePreDeselections" : false,
+  "usePreCaseSentive" : false,
+  "useMachineLearning" : false,
+  "nativePDF" : false,
+  "autoSave" : false,
+  "confirmLayer" : false,
+  "taskDistributionNumber" : 0,
+  "taskDistributionMembers" : [ ],
+  "folders" : {
+    "pool" : {
+      "name" : "pool",
+      "index" : 0,
+      "children" : { }
     }
   },
-  "webhooks": {},
-  "metas": {},
-  "entities": {
-    "e_1": { "id": "e_1", "name": "risk", "oldnames": [], "description": "Risk assessment", "color": "#28c72d", "fields": {}, "normalizations": {} }
+  "requirements" : { },
+  "webhooks" : { },
+  "metas" : {
+    "m_2" : {
+      "id" : "m_2",
+      "name" : "Type",
+      "oldnames" : [ ],
+      "description" : "A,B,C",
+      "type" : "enum"
+    }
   },
-  "fields": {},
-  "relations": {}
+  "fields" : { },
+  "relations" : { },
+  "entities" : { }
 }
 ```
   </div>
@@ -133,7 +366,7 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/export{{ page.man
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 
 JSON project settings, in the same format as returned by [exporting the settings](#export-settings).
 
@@ -155,51 +388,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 </div> <!-- Closes main section: two-third-cold div -->
 
 
-
-
-<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
-
----
-## Annotations Legend
-
-GET a JSON map of annotation tasks ids to names (e.g. `{"e_1": "Person"}`).
-
-<table style="width:100%;white-space:nowrap;">
-  <tr>
-    <td><strong>Endpoint</strong></td>
-    <td><code>{{ page.api_endpoint }}/annotationsLegend{{ page.mandatory_query_parameters }}</code></td>
-  </tr>
-  <tr>
-    <td><strong>Method</strong></td>
-    <td><code>GET</code></td>
-  </tr>
-  <tr>
-    <td><strong>Output</strong></td>
-    <td>JSON</td>
-  </tr>
-</table>
-
-**Input Parameters**
-
-None
-
-**Coding examples**
-
-<div id="tabs-container">
-  <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>
-  </ul>
-  <div class="tab">
-<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
-```shell
-curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend{{ page.mandatory_query_parameters_full }}'
-```
-</div>
-  </div>
-</div>
-
-</div> <!-- Closes main section: two-third-cold div -->
-
+<!-- -------------------------------------------------------------------------- -->
 
 
 <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
@@ -227,13 +416,11 @@ For all folder operations, please note that `pool` must always be the root folde
   </tr>
 </table>
 
-**Input Parameters**
-
-
+**Input**
 
 Two variants in JSON format:
 
-1. **(Full) path**:
+1) **(Full) path**:
 <table style="width:100%;">
   <tr>
     <th>Name</th>
@@ -249,8 +436,7 @@ Two variants in JSON format:
   </tr>
 </table>
 
-
-2. **Parent path & new folder name** (example):
+2) **Parent path & new folder name**:
 <table style="width:100%;">
   <tr>
     <th>Name</th>
@@ -317,37 +503,45 @@ print(response.text)
 ```json
 {
   "newSettings": {
-    "version": "1.3",
+    "version": "1.6",
     "domain": "other",
     "language": "English",
     "usePreSelections": true,
     "usePreDeselections": false,
     "usePreCaseSentive": false,
-    "useMachineLearning": true,
+    "useMachineLearning": false,
     "nativePDF": false,
     "autoSave": false,
     "confirmLayer": false,
     "taskDistributionNumber": 0,
-    "taskDistributionOwner": true,
+    "taskDistributionMembers": [],
     "folders": {
       "pool": {
         "name": "pool",
         "index": 0,
         "children": {
-          "mynewfolder": {
-            "name": "mynewfolder",
-            "index": 12,
+          "new": {
+            "name": "new",
+            "index": 10,
             "children": {}
           }
         }
       }
     },
-    "metas": {},
-    "entities": { "e_1": { "id": "e_1", "name": "risk", "oldnames": [], "description": "Risk assessment", "color": "#28c72d", "fields": {}, "normalizations": {} }},
+    "requirements": {},
+    "webhooks": {},
+    "metas": {
+      "m_2": {
+        "id": "m_2",
+        "name": "Type",
+        "oldnames": [],
+        "description": "A,B,C",
+        "type": "enum"
+      }
+    },
     "fields": {},
     "relations": {},
-    "name": "myProject",
-    "webhooks": {}
+    "entities": {}
   },
   "mapNewIds": {}
 }
@@ -376,7 +570,7 @@ print(response.text)
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 <table style="width:100%;">
   <tr>
     <th>Name</th>
@@ -420,9 +614,6 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
 
 
 
-
-
-
 <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
 ### Remove folder
@@ -442,7 +633,7 @@ curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{
   </tr>
 </table>
 
-**Input Parameters**
+**Input**
 <table style="width:100%;">
   <tr>
     <th>Name</th>

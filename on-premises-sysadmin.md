@@ -36,14 +36,36 @@ request_auth_token_endpoint: /-sysadmin/request-auth-token
 
   <div class="two-third-col">
     <h2>Features</h2>
-
     <h3>User Management</h3>
     <p>The admin panel displays a list of the users registered in the instance. You can:</p>
-
     <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: generate a registration link to share with others or to use oneself</p>
     <p class="list-item" markdown="1"><span class="list-item-2"></span>**Edit accounts**: edit the users' accounts main information, namely, username, email, and password. 📝</p>
     <p class="list-item" markdown="1"><span class="list-item-3"></span>**Remove old accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
     <p class="list-item" markdown="1"><span class="list-item-4"></span>**Revoke all auth tokens**: remove all existing token-based logins and registration links</p>
+  </div>
+  <div class="two-third-col">
+    <h3>Roles and permissions</h3>
+    <p>In the admin panel you can find a permission matrix where you can check/modify the permissions of existing roles or to create custom roles. After, these roles can be assigned to users at project level.</p>
+    <p>All the <strong>permissions are explained here</strong>: <a title="tagtog - Multi-user annotation - permissions" href="collaboration.html#permissions">Multi-user annotation - permissions</a></p>
+    <p>By default there are three roles in the system: <code>admin</code>, <code>supercurator</code> and <code>reader</code>. The permissions for these default roles cannot be modified. Admin role cannot be removed (the creator of a project, the owner, will always have this role assigned). The roles supercurator and reader can be removed. If you want to modify their permissions, you should remove the role, and create a new role with the same name.</p>
+    <p>To create a new role simply click on <i>Add new role</i>. To change a permission, you should click on the corresponding checkbox. If you hover on the permission name or on a role name, a description of the permission or the role will show up.</p>
+    <p>For each role, you can perform three actions:</p>
+    <p class="list-item"><span class="list-item-1"></span>{% include inline-image.html name="edit_pencil.png" width="28" %}<strong>Edit its name/description</strong></p>
+    <p class="list-item"><span class="list-item-2"></span>{% include inline-image.html name="editor-doc-remove.PNG" width="23" %}<strong>Remove it</strong>. If you remove a role, you should indicate which is the role that will be assigned to all the users once their original role is removed.</p>
+    <p class="list-item"><span class="list-item-3"></span><strong>Change its permissions</strong></p>
+
+    {% include image.html name="role_matrix.png"  width="650" caption="Permission matrix. In this example, in addition to the default roles, there is a new role myNewRole" %}
+  </div>
+  <div class="one-third-col">
+    <div class="message">
+      Depending on your <a href="https://www.tagtog.net/-plans" title="tagtog - plans">plan</a>, you might not see this feature.
+    </div>
+    <div class="message">
+      <strong>Any change is reflected immediately</strong> across all the projects in the system.
+    </div>
+    <div class="message">
+      When a role is removed, all the users under this role are assigned to another role (chosen by the sysadmin).
+    </div>
   </div>
 
   <div class="two-third-col">
@@ -95,10 +117,10 @@ request_auth_token_endpoint: /-sysadmin/request-auth-token
           <td>false</td>
           <td>true</td>
           <td>Besides the expiration, with this parameter you can decide whether the token can be used only once (true) or not (false, i.e., multiple times until the token is removed or expires).</td>
-        </tr>  
+        </tr>
       </table>
 
-  </div>  
+  </div>
 
   <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
     **Coding examples**
@@ -130,7 +152,7 @@ http --verify no --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{
   </div> <!-- Closes main section: two-third-cold div -->
 
 
-  <div class="two-third-col">    
+  <div class="two-third-col">
     <h4>How to use an auth token</h4>
       <p>Once you have an auth <code>token</code>, use it in a simple GET request to login with the associated-granted user. To the request also add a <code>redirectTo</code> (<a href="https://meyerweb.com/eric/tools/dencoder/">url-encoded</a>) parameter to indicate where to redirect to. You must add these parameters to the <code>/</code> (root endpoint) of your tagtog's installation domain.</p>
       <p>Example: <code>{{ page.tagtog_domain }}/?redirectTo=https%3A%2F%2Fwww.tagtog.net%2F-datasets&token=bbfd-33878148-6062-4934-a507-af4962753c8f</code></p>
@@ -148,7 +170,7 @@ http --verify no --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{
 
     <p markdown="1">Sometimes you do not want to allow visitors to your tagtog installation creating accounts themselves. In such a case, the sysadmin is responsible to create the accounts for all the users.</p>
     <p markdown="1">Set (the java dynamic property) `application.canVisitorsCreateAccounts` to `false` (the default is _true_). Example:</p>
-    <code>      
+    <code>
     export TAGTOG_JAVA_OPTS="${TAGTOG_JAVA_OPTS} -Dapplication.canVisitorsCreateAccounts=false";
     ./tagtog_on_premises restart latest $PWD/tagtog_home
     </code>
@@ -158,7 +180,7 @@ http --verify no --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{
 
     <p markdown="1">In such a case, the sysadmin is responsible to edit the account details of the users.</p>
     <p markdown="1">Set `application.canUsersEditTheirAccounts` to `false` (the default is _true_). Example:</p>
-    <code>      
+    <code>
     export TAGTOG_JAVA_OPTS="${TAGTOG_JAVA_OPTS} -Dapplication.canUsersEditTheirAccounts=false";
     ./tagtog_on_premises restart latest $PWD/tagtog_home
     </code>
@@ -168,7 +190,7 @@ http --verify no --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{
 
     <p markdown="1">In such a case, the sysadmin is entirely responsible for the users' passwords.</p>
     <p markdown="1">Set `application.canUsersRequestForgotPassword` to `false` (the default is _true_). Example:</p>
-    <code>      
+    <code>
     export TAGTOG_JAVA_OPTS="${TAGTOG_JAVA_OPTS} -Dapplication.canUsersRequestForgotPassword=false";
     ./tagtog_on_premises restart latest $PWD/tagtog_home
     </code>

@@ -31,7 +31,60 @@ api_folder_new: myNewFolder
 </div>
 
 
+<!-- -------------------------------------------------------------------------- -->
+
+
 <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
+
+---
+
+## Annotations Legend
+
+GET a JSON map of annotation tasks ids to names (e.g. `{"e_1": "Person"}`).
+
+<table style="width:100%;white-space:nowrap;">
+  <tr>
+    <td><strong>Endpoint</strong></td>
+    <td><code>{{ page.api_endpoint }}/annotationsLegend{{ page.mandatory_query_parameters }}</code></td>
+  </tr>
+  <tr>
+    <td><strong>Method</strong></td>
+    <td><code>GET</code></td>
+  </tr>
+  <tr>
+    <td><strong>Output</strong></td>
+    <td>JSON</td>
+  </tr>
+</table>
+
+**Input Parameters**
+
+None
+
+**Coding examples**
+
+<div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-curl">cURL</a></li>
+  </ul>
+  <div class="tab">
+<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend{{ page.mandatory_query_parameters_full }}'
+```
+</div>
+  </div>
+</div>
+
+</div> <!-- Closes main section: two-third-cold div -->
+
+
+<!-- -------------------------------------------------------------------------- -->
+
+
+<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
+
+---
 
 ## Settings management
 
@@ -147,53 +200,6 @@ JSON project settings, in the same format as returned by [exporting the settings
 <div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u yourUsername:yourPassword -H "Content-Type: application/json" -XPOST '{{ page.api_document_url }}/import{{ page.mandatory_query_parameters_full }}' -d @$HOME/Downloads/tagtog_yourUsername_yourProjectName.json
-```
-</div>
-  </div>
-</div>
-
-</div> <!-- Closes main section: two-third-cold div -->
-
-
-
-
-<div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
-
----
-
-## Annotations Legend
-
-GET a JSON map of annotation tasks ids to names (e.g. `{"e_1": "Person"}`).
-
-<table style="width:100%;white-space:nowrap;">
-  <tr>
-    <td><strong>Endpoint</strong></td>
-    <td><code>{{ page.api_endpoint }}/annotationsLegend{{ page.mandatory_query_parameters }}</code></td>
-  </tr>
-  <tr>
-    <td><strong>Method</strong></td>
-    <td><code>GET</code></td>
-  </tr>
-  <tr>
-    <td><strong>Output</strong></td>
-    <td>JSON</td>
-  </tr>
-</table>
-
-**Input Parameters**
-
-None
-
-**Coding examples**
-
-<div id="tabs-container">
-  <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>
-  </ul>
-  <div class="tab">
-<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
-```shell
-curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend{{ page.mandatory_query_parameters_full }}'
 ```
 </div>
   </div>

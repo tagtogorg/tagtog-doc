@@ -63,25 +63,25 @@ api_plain_text: "\"Hello World\""
     </tr>
     <tr>
       <td><code>text</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_plain_text }}</td>
       <td>Plain text</td>
     </tr>
     <tr>
       <td><code>project</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_project }}</td>
       <td>Name of the project</td>
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td><code>visualize</code></td>
+      <td>"visualize"</td>
       <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
@@ -109,14 +109,14 @@ api_plain_text: "\"Hello World\""
     </tr>
     <tr>
       <td><code>format</code></td>
-      <td>-</td>
-      <td><code>verbatim</code></td>
+      <td></td>
+      <td>"verbatim"</td>
       <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td><code>-</code></td>
-      <td><code>John,Laura</code></td>
+      <td>"-"</td>
+      <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
@@ -285,25 +285,25 @@ URLS
     </tr>
     <tr>
       <td><code>url</code></td>
-      <td><code>-</code></td>
+      <td>"-"</td>
       <td class="break-all"><a href="https://en.wikipedia.org/wiki/Autonomous_cruise_control_system">https://en.wikipedia.org/wiki/Autonomous_cruise_control_system</a></td>
       <td>URL to annotate</td>
     </tr>
     <tr>
       <td><code>project</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_project }}</td>
       <td>Name of the project</td>
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td><code>visualize</code></td>
+      <td>"visualize"</td>
       <td><code>weburl</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
@@ -331,8 +331,8 @@ URLS
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td><code>-</code></td>
-      <td><code>John,Laura</code></td>
+      <td>"-"</td>
+      <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
@@ -410,25 +410,25 @@ FILES
     </tr>
     <tr>
       <td><code>files</code></td>
-      <td>-</td>
+      <td></td>
       <td>text.txt, text2.txt</td>
       <td>List of files to annotate. <a href="/ioformats.html#files">Supported input formats</a></td>
     </tr>
     <tr>
       <td><code>project</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_project }}</td>
       <td>Name of the project</td>
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td><code>visualize</code></td>
+      <td>"visualize"</td>
       <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
@@ -456,14 +456,14 @@ FILES
     </tr>
     <tr>
       <td><code>format</code></td>
-      <td>-</td>
-      <td><code>verbatim</code></td>
+      <td></td>
+      <td>"verbatim"</td>
       <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td><code>-</code></td>
-      <td><code>John,Laura</code></td>
+      <td>"-"</td>
+      <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
@@ -587,25 +587,25 @@ PUBMED IDS
     </tr>
     <tr>
       <td><code>ids</code></td>
-      <td>-</td>
+      <td></td>
       <td>23596191, 29438695</td>
       <td>Comma-separated list of ids, all the same type. The response is limited to the last id imported. </td>
     </tr>
     <tr>
       <td><code>project</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_project }}</td>
       <td>Name of the project</td>
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td><code>visualize</code></td>
+      <td>"visualize"</td>
       <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
@@ -633,8 +633,8 @@ PUBMED IDS
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td><code>-</code></td>
-      <td><code>John,Laura</code></td>
+      <td>"-"</td>
+      <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
@@ -748,25 +748,25 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>files</code></td>
-      <td>-</td>
+      <td></td>
       <td>text.txt, text.ann.json</td>
       <td>You need to upload in the same request both: the text (supported input format) and the ann.json (annotations) files.</td>
     </tr>
     <tr>
       <td><code>project</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_project }}</td>
       <td>Name of the project</td>
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td><code>visualize</code></td>
+      <td>"visualize"</td>
       <td><code>null</code></td>
       <td></td>
     </tr>
@@ -800,8 +800,8 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td><code>-</code></td>
-      <td><code>John,Laura</code></td>
+      <td>"-"</td>
+      <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
@@ -921,25 +921,25 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>files</code></td>
-      <td>-</td>
+      <td></td>
       <td>docidABCDEF.plain.html, docidABCDEF.ann.json</td>
       <td>You need to upload in the same request both: the plain.html (content) and the ann.json (annotations) files.</td>
     </tr>
     <tr>
       <td><code>project</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_project }}</td>
       <td>Name of the project</td>
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td><code>visualize</code></td>
+      <td>"visualize"</td>
       <td><code>null</code></td>
       <td></td>
     </tr>
@@ -973,8 +973,8 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td><code>-</code></td>
-      <td><code>John,Laura</code></td>
+      <td>"-"</td>
+      <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
@@ -1044,19 +1044,19 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>search</code></td>
-      <td>-</td>
+      <td></td>
       <td>entity:GGP:P02649 or folder:pool</td>
       <td><strong>Search query</strong>. Learn how to build queries <a href="/search-queries.html">here</a>.</td>
     </tr>
     <tr>
       <td><code>project</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_project }}</td>
       <td>Name of the project</td>
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -1243,19 +1243,19 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     </tr>
     <tr>
       <td><code>ids</code></td>
-      <td>-</td>
+      <td></td>
       <td class="break-all">aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text</td>
       <td>The id of the document you want to download. Note, the parameter is called "ids" for historical reasons. In the future, we might also allow to download multiple files at once.</td>
     </tr>
     <tr>
       <td><code>project</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_project }}</td>
       <td>Name of the project</td>
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -1375,19 +1375,19 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     </tr>
     <tr>
       <td><code>search</code></td>
-      <td>-</td>
+      <td></td>
       <td>entity:GGP</td>
       <td>Search query to list the documents to remove. Learn how to build queries <a href="/search-queries.html">here</a></td>
     </tr>
     <tr>
       <td><code>project</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_project }}</td>
       <td>Name of the project</td>
     </tr>
     <tr>
       <td><code>owner</code></td>
-      <td>-</td>
+      <td></td>
       <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
       <td>Owner of the project you want to use</td>
     </tr>
@@ -1469,25 +1469,25 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       </tr>
       <tr>
         <td><code>idType</code></td>
-        <td>-</td>
+        <td></td>
         <td><code>tagtogID</code> (mandatory)</td>
         <td></td>
       </tr>
       <tr>
         <td><code>ids</code></td>
-        <td>-</td>
+        <td></td>
         <td>aEVD52vVm.s2zdTmzK_ACNqH7Z1u-text</td>
         <td></td>
       </tr>
       <tr>
         <td><code>project</code></td>
-        <td>-</td>
+        <td></td>
         <td>{{ page.api_project }}</td>
         <td>Name of the project</td>
       </tr>
       <tr>
         <td><code>owner</code></td>
-        <td>-</td>
+        <td></td>
         <td>{{ page.api_username }} (in this example we assume the user is also the owner of the project)</td>
         <td>Owner of the project you want to use</td>
       </tr>
@@ -1531,7 +1531,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
     <th>Description</th>
   </tr>
   <tr>
-    <td><code>visualize</code></td>
+    <td>"visualize"</td>
     <td>This is the default value. Choose to visualize the document resource returning the web page directly (<code>web</code> or <code>web-editor-only</code> if the User Agent is a recognized browser and a tagtog project information was given, i.e. web, or, respectively, no tagtog project was given, i.e., <code>web-editor-only</code>) or otherwise return the <code>weburl</code> (typically, the User Agent will be a command line program)</td>
   </tr>
   <tr>

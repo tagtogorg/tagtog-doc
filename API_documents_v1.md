@@ -11,7 +11,7 @@ api_document_url: https://www.tagtog.net/-api/documents/v1
 api_username: yourUsername
 api_pwd: yourPassword
 api_project: yourProjectName
-api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector function for the clinical effectiveness of monoclonal antibodies, is triggered by the engagement of the antibody Fc domain with the Fcγ receptors expressed by innate immune cells such as natural killer (NK) cells and macrophages.
+api_plain_text: "\"Hello World\""
 ---
 
 <div class="two-third-col">
@@ -164,7 +164,7 @@ tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
 params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
-payload = {'text': '{{ page.api_plain_text }}'}
+payload = {'text': {{ page.api_plain_text }}}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, data=payload)
 print(response.text)
 ```

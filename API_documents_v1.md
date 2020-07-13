@@ -82,7 +82,7 @@ api_plain_text: "\"Hello World\""
     <tr>
       <td><code>output</code></td>
       <td>"visualize"</td>
-      <td><code>ann.json</code></td>
+      <td>"ann.json"</td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
@@ -119,7 +119,7 @@ api_plain_text: "\"Hello World\""
       <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -335,7 +335,7 @@ URLS
       <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -429,7 +429,7 @@ FILES
     <tr>
       <td><code>output</code></td>
       <td>"visualize"</td>
-      <td><code>ann.json</code></td>
+      <td>"ann.json"</td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
@@ -466,7 +466,7 @@ FILES
       <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -606,7 +606,7 @@ PUBMED IDS
     <tr>
       <td><code>output</code></td>
       <td>"visualize"</td>
-      <td><code>ann.json</code></td>
+      <td>"ann.json"</td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
@@ -637,7 +637,7 @@ PUBMED IDS
       <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -804,7 +804,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
       <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -977,7 +977,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
       <td>"John,Laura"</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>&ast;</code> means to select all team members to distribute to; and 3) <code>-</code> means using the project default settings (same as actually not writing this parameter).</p>
+        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
@@ -1232,7 +1232,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     <tr>
       <td><code>output</code></td>
       <td><code>visualization</code></td>
-      <td><code>ann.json</code></td>
+      <td>"ann.json"</td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
     <tr>
@@ -1570,7 +1570,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
     </td>
   </tr>
   <tr>
-    <td><code>ann.json</code></td>
+    <td>"ann.json"</td>
     <td>Annotations part of the <a href="/anndoc.html#ann-json">anndoc format documentation</a>.</td>
   </tr>
   <tr>

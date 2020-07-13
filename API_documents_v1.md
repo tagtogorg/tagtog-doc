@@ -97,7 +97,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>An <i>empty string</i> indicates <code>master</code> aka project ground truth annotations</td>
+      <td>"master"</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
           <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
@@ -320,7 +320,7 @@ URLS
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>An <i>empty string</i> indicates <code>master</code> aka project ground truth annotations</td>
+      <td>"master"</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
           <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
@@ -446,7 +446,7 @@ FILES
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>An <i>empty string</i> indicates <code>master</code> aka project ground truth annotations</td>
+      <td>"master"</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
           <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
@@ -624,7 +624,7 @@ PUBMED IDS
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>An <i>empty string</i> indicates <code>master</code> aka project ground truth annotations</td>
+      <td>"master"</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
           <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
@@ -792,7 +792,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>An <i>empty string</i> indicates <code>master</code> aka project ground truth annotations</td>
+      <td>"master"</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
           <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
@@ -966,7 +966,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>An <i>empty string</i> indicates <code>master</code> aka project ground truth annotations</td>
+      <td>"master"</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
           <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
@@ -1277,7 +1277,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>An <i>empty string</i> indicates <code>master</code> aka project ground truth annotations</td>
+      <td>"master"</td>
       <td>john</td>
       <td><p>Project member you want to use</p>
           <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>

@@ -99,8 +99,7 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
       <td><code>member</code></td>
       <td>"master"</td>
       <td>john</td>
-      <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
+      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
@@ -322,8 +321,7 @@ URLS
       <td><code>member</code></td>
       <td>"master"</td>
       <td>john</td>
-      <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
+      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
@@ -448,8 +446,7 @@ FILES
       <td><code>member</code></td>
       <td>"master"</td>
       <td>john</td>
-      <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
+      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
@@ -626,8 +623,7 @@ PUBMED IDS
       <td><code>member</code></td>
       <td>"master"</td>
       <td>john</td>
-      <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
+      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
@@ -794,8 +790,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
       <td><code>member</code></td>
       <td>"master"</td>
       <td>john</td>
-      <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
+      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
@@ -968,8 +963,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
       <td><code>member</code></td>
       <td>"master"</td>
       <td>john</td>
-      <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
+      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
@@ -1279,8 +1273,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
       <td><code>member</code></td>
       <td>"master"</td>
       <td>john</td>
-      <td><p>Project member you want to use</p>
-          <p>Only applicable if the project has <a href="/collaboration.html">multiple team members</a></p></td>
+      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
   </table>
 

@@ -98,13 +98,13 @@ api_plain_text: Antibody-dependent cellular cytotoxicity (ADCC), a key effector 
     <tr>
       <td><code>member</code></td>
       <td>"master"</td>
-      <td>john</td>
+      <td>"John"</td>
       <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td><code>pool</code></td>
-      <td><code>pool</code></td>
+      <td>"pool"</td>
+      <td>"pool"</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
@@ -320,13 +320,13 @@ URLS
     <tr>
       <td><code>member</code></td>
       <td>"master"</td>
-      <td>john</td>
+      <td>"John"</td>
       <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td><code>pool</code></td>
-      <td><code>pool</code></td>
+      <td>"pool"</td>
+      <td>"pool"</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
@@ -445,13 +445,13 @@ FILES
     <tr>
       <td><code>member</code></td>
       <td>"master"</td>
-      <td>john</td>
+      <td>"John"</td>
       <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td><code>pool</code></td>
-      <td><code>pool</code></td>
+      <td>"pool"</td>
+      <td>"pool"</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
@@ -622,13 +622,13 @@ PUBMED IDS
     <tr>
       <td><code>member</code></td>
       <td>"master"</td>
-      <td>john</td>
+      <td>"John"</td>
       <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td><code>pool</code></td>
-      <td><code>pool</code></td>
+      <td>"pool"</td>
+      <td>"pool"</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
@@ -789,13 +789,13 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     <tr>
       <td><code>member</code></td>
       <td>"master"</td>
-      <td>john</td>
+      <td>"John"</td>
       <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td><code>pool</code></td>
-      <td><code>pool</code></td>
+      <td>"pool"</td>
+      <td>"pool"</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
@@ -962,13 +962,13 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     <tr>
       <td><code>member</code></td>
       <td>"master"</td>
-      <td>john</td>
+      <td>"John"</td>
       <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td><code>pool</code></td>
-      <td><code>pool</code></td>
+      <td>"pool"</td>
+      <td>"pool"</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
@@ -1272,7 +1272,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     <tr>
       <td><code>member</code></td>
       <td>"master"</td>
-      <td>john</td>
+      <td>"John"</td>
       <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
   </table>

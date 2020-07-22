@@ -14,7 +14,7 @@ id: ml
 </div>
 
 <div class="two-third-col">
-  <p>One of the advantages using tagtog is the possibility of annotating text automatically using machine learning (ML) :bookmark_tabs: Why is this important? Automatic annotations are just insights on the top of the text. You can leverage intelligence in different scenarios:</p>
+  <p>One of the advantages using tagtog ML is the possibility of annotating text automatically using machine learning (ML) :bookmark_tabs: Why is this important? Automatic annotations are just insights on the top of the text. You can leverage intelligence in different scenarios:</p>
   <p class="list-item"><span class="list-item-1"></span>tagtog annotates text automatically using custom or pre-trained ML models. This means you can <strong>automate</strong> processes to find relevant insights automatically. E.g. analyze customer feedback on real time.</p>
   <p class="list-item"><span class="list-item-2"></span>Automatic annotations can <strong>boost annotator performance</strong>. Documents are pre-annotated by ML models and annotators only need to correct wrong predictions. tagtog learns from feedback and provide with more accurate results with each iteration.</p>
   <p class="list-item"><span class="list-item-3"></span><strong>Index your data</strong>. Use automatic annotations to augment your data and improve discoverability (e.g. augment records with mutation mentions using standard names, easier to find). You can either import the results into your own system or use the <a href="/API_documents_v1.html#search-documents-in-a-project-get" title="Search API">Search API</a> to find suitable records across the data imported.</p>
@@ -59,7 +59,7 @@ id: ml
 </div>
 <div class="one-third-col">
  {% include message.html message="Machine learning only trains with the <strong>master</strong> version of your documents." %}
-</div>  
+</div>
 <div class="two-third-col">
   <p class="numbered-item"><span class="number-4">4</span><strong>Use the model</strong>. When you import new documents using the interface or the <a title="tagtog - API documentation" href="/API_documents_v1.html">API</a>, they are automatically annotated by the custom ML model.</p>
 </div>
@@ -93,11 +93,21 @@ id: ml
 
 
 <div class="two-third-col">
-  <h2>ML annotations and dictionary annotations</h2>
+  <h2>tagtog ML annotations and dictionary annotations</h2>
   <p>Machine learning and <a title="tagtog-doc - Dictionaries" href="/projects.html#dictionaries">dictionary</a> annotations are annotated automatically. <strong>They can work independently or combined.</strong></p>
   <p>When a ML model is trained, it uses the data from your dictionaries as a feature.</p>
   <p>Currently, the normalization of entities can be only done with dictionaries. ML annotates entities, but it doesn't normalize them. If you combine both mechanisms ML will annotate and dictionaries will normalize.</p>
 </div>
 <div class="one-third-col">
 
+</div>
+
+<div class="two-third-col">
+  <h2>tagtog ML limitations</h2>
+  <p>tagtog ML is designed and optimized for:</p>
+  <p class="list-item"><span class="list-item-1"></span><strong>NER</strong>. Annotations with a small amount of tokens. It is not optimized for sentence or paragraph annotations.</p>
+  <p class="list-item"><span class="list-item-2"></span><strong>Small number of entity types</strong>. Internally, each entity type generates a separated and independent model.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message="Other uses might result in performance bottlenecks and no automatic annotations being generated." %}
 </div>

@@ -205,8 +205,9 @@ export TAGTOG_HTTPS_PORT=9443 # For example
 
 Try:
 
-1. Removing all queued documents for parsing: `find "$TAGTOG_HOME/tmp/to_process/" -type f -delete`
-2. Restarting the application: `./tagtog_on_premises restart latest $TAGTOG_HOME`
+1. Remove all queued documents for parsing: `find $TAGTOG_HOME/tmp/to_process/ -mindepth 1 -delete`
+2. Remove all queued training jobs: `find $TAGTOG_HOME/tmp/training_jobs/ -mindepth 1 -delete`
+3. the application: `./tagtog_on_premises restart latest $TAGTOG_HOME`
 
 
 ### Issues in an update

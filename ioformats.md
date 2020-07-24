@@ -8,11 +8,11 @@ toc: true
 
 <div class="page-section">
   <h2>Input types</h2>
+  <p>This is the type of content you can import to tagtog.</p>
   <div class="two-third-col">
-    <h3>Raw</h3>
     <table style="width:100%">
       <tr>
-        <th>Input sources</th>
+        <th>Input type</th>
         <th>Description</th>
         <th>Default <code>format</code></th>
       </tr>
@@ -24,7 +24,7 @@ toc: true
       <tr>
         <td>File</td>
         <td><a href="#files">See below for the supported file types</a></td>
-        <td>See below for the default formats for each file type</td>
+        <td>See below for the default formats for each file type. You can import one or more files in a single request.</td>
       </tr>
       <tr>
         <td>URL</td>
@@ -104,11 +104,32 @@ toc: true
         The format is <strong>automatically recognized</strong> by the file extension; no other parameter is needed.
       </div>
     </div>
+    <div class="two-third-col">
+      <h4>Bundle files</h4>
+      <table style="width:100%">
+        <tr>
+          <th>File extension</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>tar.gz</code></td>
+          <td><span class="soon">tarball gzip. Bundle of files with accepted format.</span> Coming soon.</td>
+        </tr>
+        <tr>
+          <td><code>zip</code></td>
+          <td><span class="soon">zip file. Bundle of files with accepted format.</span> Coming soon</td>
+        </tr>
+      </table>
+    </div>
+
+  <div class="one-third-col">
+
+  </div>
   <div class="two-third-col">
-    <h4>Formats supported by the <code>format</code> parameter</h4>
+    <h2>Input formats</h2>
     <p>If there is no format specified, the default format for the content imported is used.</p>
-    <p>In the API, use the <a href="API_documents_v1.html#import-annotated-documents-post"><code>format</code> parameter</a> to "force" the format. In the GUI, open the Advanced options under the upload panel to explicitly select a format.</p>
-    <p>Below you find the different formats. There are formats that are used when you import <strong>only content</strong>, and other formats that you should use when you import <strong>pre-annotated</strong> documents. The latter is useful if you want to import documents that were annotated outside tagtog (for example by your own machine learning model) or you want to update the annotations for a specific document.</p>
+    <p>In the API, use the <a href="API_documents_v1.html#import-annotated-documents-post"><code>format</code> parameter</a> to set the format. In the GUI, open the Advanced options under the upload panel to select a format. In both ways, you explicitly "force" tagtog to represent the content by the format selected.</p>
+    <p>Below you find the different formats. There are formats that are used when you import <strong>only content</strong>, and other formats that you should use when you import <strong>pre-annotated</strong> content. The latter is useful if you want to import documents that were annotated outside tagtog (for example by your own machine learning model) or you want to update the annotations for a specific document.</p>
     <table style="width:100%">
       <tr>
         <th>Content</th>
@@ -155,27 +176,7 @@ toc: true
   </div>
 
 
-  <div class="two-third-col">
-    <h3>Bundle files</h3>
-    <table style="width:100%">
-      <tr>
-        <th>File extension</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><code>tar.gz</code></td>
-        <td><span class="soon">tarball gzip. Bundle of files with accepted format.</span> Coming soon.</td>
-      </tr>
-      <tr>
-        <td><code>zip</code></td>
-        <td><span class="soon">zip file. Bundle of files with accepted format.</span> Coming soon</td>
-      </tr>
-    </table>
-  </div>
 
-  <div class="one-third-col">
-
-  </div>
 
 </div>
 

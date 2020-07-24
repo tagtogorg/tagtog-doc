@@ -412,7 +412,7 @@ FILES
       <td><code>files</code></td>
       <td></td>
       <td>text.txt, text2.txt</td>
-      <td>List of files to annotate. <a href="/ioformats.html#files">Supported input formats</a></td>
+      <td>List of files to annotate. <a href="/ioformats.html#files">Supported file types</a></td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -732,7 +732,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 <div class="two-third-col">
   <h3>Import annotated documents <code>POST</code></h3>
   <p>If you have annotated documents you want to import, you need to upload two files:</p>
-  <p class="list-item"><span class="list-item-1"></span><strong>The text or document</strong>. This can be a regular file (e.g. txt, xml, pdf, <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a>, etc.), plain text, etc. Check the supported <a title="tagtog - input formats" href="ioformats.html#input-formats">input formats</a></p>
+  <p class="list-item"><span class="list-item-1"></span><strong>The text or document</strong>. This can be a regular file (e.g. txt, xml, pdf, <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a>, etc.), plain text, etc. Check the supported <a title="tagtog - input types" href="ioformats.html#input-types">input types</a></p>
   <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
   <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc.pdf</code> and <code>mydoc.ann.json</code>.</p>
 
@@ -774,7 +774,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
       <td><code>format</code></td>
       <td><code>default-plus-annjson</code></td>
       <td><code>anndoc</code></td>
-      <td>Format of the pre-annotated document. Remember that <code>anndoc</code> format requires the content as <code>plain.html</code>. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a></td>
+      <td>Format of the pre-annotated document. Remember that <code>anndoc</code> format requires the content as <code>plain.html</code>. List of supported pre-annotated formats: <a title="tagtog - formats" href="ioformats.html#input-formats">Pre-annotated formats</a></td>
     </tr>
   </table>
 
@@ -947,7 +947,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
       <td><code>format</code></td>
       <td><code>anndoc</code></td>
       <td><code>anndoc</code></td>
-      <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a> </td>
+      <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - Annotation input types" href="ioformats.html#input-formats">Pre-annotated formats</a> </td>
     </tr>
   </table>
 
@@ -1685,7 +1685,7 @@ python3 tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page
   </div>
 
   <h5>Upload files</h5>
-  <p>Parameters can be consulted using <code>tagtog.py upload --help</code>. You must include the parameter <code>--extension</code> or <code>-e</code> to indicate the extension of the files to upload (e.g. <code>txt</code>, <code>pdf</code>, etc.). These are the  <a href="/ioformats.html#input-formats">input files supported</a></p>
+  <p>Parameters can be consulted using <code>tagtog.py upload --help</code>. You must include the parameter <code>--extension</code> or <code>-e</code> to indicate the extension of the files to upload (e.g. <code>txt</code>, <code>pdf</code>, etc.). These are the  <a href="/ioformats.html#input-types">input files supported</a></p>
   <p>The example below upload the PDF documents of a folder, to your project.</p>
   <div markdown="1">
 ```shell

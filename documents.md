@@ -18,47 +18,69 @@ toc: true
   <h4>Create a new folder</h4>
   <p>Click on the folder you want to be the parent of the new folder. Click on the folder action <code>Add new</code>, write the name of the new folder and press the key <kbd>↵</kbd>.</p>
   <h4>Rename a folder</h4>
-  <p>Click on the folder you want to rename. Click on the folder action <code>Rename</code>, write the new name of the new folder and press <kbd>↵</kbd>.</p>
+  <p>Click on the folder you want to rename. Click on the folder action <code>Rename</code>, write the new name of the new folder and press the key <kbd>↵</kbd>.</p>
   <h4>Remove a folder</h4>
   <p>Click on the folder you want to remove. Click on the folder action <code>Remove</code>. Please remember that all <strong>the documents stored in this folder will be also removed</strong>.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='<strong>What is a document?</strong>&nbsp;Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: <a title="Input formats" href="/ioformats.html#input-formats">input formats</a>'%}
+  {% include message.html message='<strong>What is a document?</strong>&nbsp;Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: <a title="Input types" href="/ioformats.html#input-types">input types</a>'%}
   {% include message.html message='You can <strong>expand or collapse</strong> folders using the arrows on the left of the folder names.'%}
 </div>
 
 <div class="two-third-col">
-  <h3>Upload text</h3>
-  <p>In order to <strong>upload</strong> a new document, please select the folder you want to upload documents to and click on {% include inline-image.html name="add-content-button.png" width="70" %}. Once clicked, a modal menu is displayed.</p>
-  <p>The different formats accepted are described here: <a href="/ioformats.html#input-formats">Input formats</a></p>
+  <h3>Upload content</h3>
+  <p>To <strong>upload</strong> content, please select the folder you want to upload content to, and click on {% include inline-image.html name="add-content-button.png" width="70" %}. Once clicked, a modal menu is displayed.</p>
+  <p>The different input types accepted are described here: <a href="/ioformats.html#input-types">Input types</a></p>
 </div>
 <div class="one-third-col">
-  {% include image.html name="editor-upload-box.png" caption="Upload box where you can select how to import text" %}
+  {% include image.html name="editor-upload-box.png" caption="Upload menu where you can select how to import content" %}
 </div>
 <div class="two-third-col">
-  <h4>Upload files with predefined document labels</h4>
+  <h4>Upload pre-annotated documents</h4>
+  <p>If you have pre-annotated documents, you can upload them directly to tagtog. You will need these two files:</p>
+
+  <p class="list-item"><span class="list-item-1"></span><strong>The file with the text content</strong>. The file type should be one of our supported <a title="tagtog - Input types" href="ioformats.html#input-types">input types</a>.</p>
+  <p class="list-item"><span class="list-item-2"></span><strong>The file with the annotations</strong>. Currently, the only supported format for pre-annotated content is the
+
+  <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
+  <p><strong>Please remember to name both files the same, except for the extension</strong>. For example: <code>mydoc.pdf</code> and <code>mydoc.ann.json</code>. You can upload multiple pre-annotated documents in a single request. For example, 5 text files and 5 annotation files.</p>
+  <p>Please check the <a title="tagtog - API" href="/API_documents_v1.html">API</a> for more options as replacing existing annotations.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message='You can upload multiple pre-annotated documents at the same time. For example, 5 text files and 5 annotation files.'%}
+</div>
+
+<div class="two-third-col">
+  <h4>Advanced options</h4>
+  <h5>Upload files with predefined document labels</h5>
   <p>If you have document labels defined in your project, you can pre-annotate these labels for the document you want to upload. This is very handy if you have metadata (e.g. time stamp, type of document, industry, severity, etc.) available you want to have <strong>readily available for your annotators or your ML model</strong>.</p>
-  <p>For example, let's say your model use <a title="tagtog - project - webhooks" href="projects.html#webhooks">Webhooks</a> to generate predictions once a document is uploaded. If the user has pre-annotated this document before, your model has valuable information to generate these predictions based on the pre-annotations. Language can significantly vary between departments, contexts, industries, time, etc., so you have an opportunity here to pick this info and generate better predictions accordingly.</p>
-  <p>This option in the user interface is only available when you upload <strong>files</strong>. Expand the <i>Advanced</i> menu and set the document labels.</p>
-  <p>Using the <a title="tagtog - API" href="/API_documents_v1.html">API</a> you can automatically pre-annotate documents uploading together the document/text and the <code><a href="anndoc.html#ann-json">ann.json</a></code> file with the annotations.</p>
+  <p>For example, let's say your model uses <a title="tagtog - project - webhooks" href="projects.html#webhooks">Webhooks</a> to generate predictions once a document is uploaded. If the user has pre-annotated this document before, your model has valuable information to generate these predictions based on the pre-annotations. Language can significantly vary between departments, contexts, industries, time, etc., therefore you have an opportunity here to pick this info and to generate better predictions accordingly.</p>
+  <p>If there are <a title="tagtog - Project requirements" href="projects.html#requirements">Requirements</a> set for the document labels, these conditions should be met upon content upload.</p>
+  <p>Using the <a title="tagtog - API" href="/API_documents_v1.html#import-annotated-documents-post">API</a> you can automatically pre-annotate documents uploading together the content and the <code><a href="anndoc.html#ann-json">ann.json</a></code> file with the annotations.</p>
 </div>
 <div class="one-third-col">
   {% include image.html name="preann-doclabels.png" caption="Predefining document labels before uploading the file" %}
   {% include message.html message='If you upload multiple files at the same time, the predefined document labels will apply to all the files.'%}
 </div>
 <div class="two-third-col">
-  <h4>Upload pre-annotated documents</h4>
-  <p>If you have pre-annotated documents, you can upload them directly to tagtog. You will need these two files:</p>
-
-  <p class="list-item"><span class="list-item-1"></span><strong>The file wit the text content</strong>. The format of this file should be one of our supported <a title="tagtog - Input formats" href="ioformats.html#input-formats">input formats</a>.</p>
-  <p class="list-item"><span class="list-item-2"></span><strong>The file with the annotations</strong>. From the GUI, the only supported format for annotations is the
-
-  <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
-  <p><strong>Please remember to name both files the same, except for the extension</strong>. For example: <code>mydoc.pdf</code> and <code>mydoc.ann.json</code>. You can upload multiple pre-annotated documents at the same time. For example, 5 text files and 5 annotation files.</p>
-  <p>Please check the <a title="tagtog - API" href="/API_documents_v1.html">API</a> for more options as replacing existing annotations.</p>
+  <h5>Define a name</h5>
+  <p>Input types such as plain text, don't have a name associated. In this case, or for regular files, you might want to define your own name for the document. Here you can define a name. The extension attached for plain text is <code>.txt</code>, for files, their original extension.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='You can upload multiple pre-annotated documents at the same time. For example, 5 text files and 5 annotation files.'%}
+</div>
+<div class="two-third-col">
+  <h5>Format</h5>
+  <p>Select <code>Auto</code> to let tagtog decide which is the best format (<a href="/ioformats.html#input-types">default formats</a>).</p>
+  <p>If you want to force tagtog to represent the content using a specific format, you can select it here. For example, you can import plain text and set the format as <code>formatted</code> to clean and format the input.</p>
+</div>
+<div class="one-third-col">
+</div>
+<div class="two-third-col">
+  <h5>Distribute to a group of users</h5>
+  <p>If <a href="projects.html#task-distribution">Task Distribution</a> is enabled, you can select to which users you want to assign the documents to import. If one or more users are selected, the automatic task distribution settings are override for this import request.</p>
+  <p>The list of selectable users matches the list of members specified in the Task Distribution settings.</p>
+</div>
+<div class="one-third-col">
 </div>
 <div class="two-third-col">
   <h3>Remove a document</h3>

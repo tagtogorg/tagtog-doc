@@ -261,7 +261,7 @@ _2020-01-24_
 <ul class="updates">
   <li class="new"><span markdown="1">Define the [data requirements](projects.html#requirements) you want to enforce in your project. For example, tagtog can make sure users fill the document labels defined in your project. Soon we will add more requirements to ensure, for example, that annotators normalize their entities or that each document has at least one entity of an specific entity type. Stay tuned!</span></li>
   <li class="new"><span markdown="1">[Reader role](collaboration.html#roles) can now upload files</span></li>
-  <li class="new"><span markdown="1">The [advanced section in the submit panel](documents.html#upload-text) is now automatically expanded/collapsed depending on your last choice.</span></li>
+  <li class="new"><span markdown="1">The [advanced section in the submit panel](documents.html#upload-content) is now automatically expanded/collapsed depending on your last choice.</span></li>
 </ul>
 
 ---
@@ -531,7 +531,7 @@ _2019-07-21_
 
 <ul class="updates">
   <li class="new"><span markdown="1">[New `verbatim` **format**](ioformats.html#distinguish-format-by-given-format-parameter) to send and have ANY file parsed as verbatim (pre-formatted). This allows you to preserve any indentation or extra spacing 🥳.</span></li>
-  <li class="new"><span markdown="1">Complimentary, [new `verbatim-plus-annjson` **format**](ioformats.html#annotation-input-formats) to have any file parsed as verbatim together with its annotation ann.json file.</span></li>
+  <li class="new"><span markdown="1">Complimentary, [new `verbatim-plus-annjson` **format**](ioformats.html#input-formats) to have any file parsed as verbatim together with its annotation ann.json file.</span></li>
   <li class="new"><span markdown="1">Now `.log` files are also parsed by default in `verbatim` mode (like other programming languages, such as .py for python or .js for JavaScript).</span></li>
   <li class="fix"><span markdown="1">Fixed the parsing of `anndoc` documents that might contain the period `.` character in its file name (besides the file extension).</span></li>
   <li class="fix"><span markdown="1">Return the proper original _content_ file in case it was sent from the beginning with an ann.json annotation file.</span></li>
@@ -1191,7 +1191,7 @@ _2018-07-26_
   <li class="doc">Limited the amount of entity types, depending on the plan: cloud start (3), cloud medium (10), cloud large (25), on-premises annotator (25), on-premises annotator+ML (50)</li>
   <li class="doc">Add documentation links to Settings</li>
   <li class="doc">Extend documentation about <a title="tagtog - Webhooks" href="/projects.html#webhooks">Webhooks</a></li>
-  <li class="doc">Add <a href="/ioformats.html#annotation-input-formats" title="tagtog - input output formats - input annotations">input format</a> to better understand how to import annotated documents</li>
+  <li class="doc">Add <a href="/ioformats.html#input-formats" title="tagtog - input output formats - input annotations">input format</a> to better understand how to import annotated documents</li>
 </ul>
 
 ---

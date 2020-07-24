@@ -53,7 +53,7 @@ id: projects
 <div class="page-subsection">
   <div class="two-third-col">
     <h4>Annotatable sections</h4>
-    <p>Here you select which sections you want to manually or automatically annotate in supported scientific papers (papers should be imported in XML format. <a title="tagtog - XML supported input formats" href="ioformats.html#default-distinguish-format-by-file-extension">Here</a> is the list of supported XML formats). The available sections are: <code>Title</code>, <code>Abstract</code>, <code>Introduction & Background</code>, <code>Materials & Methods</code>, <code>Results, Conclusion & Discussion</code>, <code>Other</code>. The sections not selected will be grayed out in the editor and manual annotations disabled.</p>
+    <p>Here you select which sections you want to manually or automatically annotate in supported scientific papers (papers should be imported in XML format. <a title="tagtog - XML supported input types" href="ioformats.html#files">Here</a> is the list of supported XML formats). The available sections are: <code>Title</code>, <code>Abstract</code>, <code>Introduction & Background</code>, <code>Materials & Methods</code>, <code>Results, Conclusion & Discussion</code>, <code>Other</code>. The sections not selected will be grayed out in the editor and manual annotations disabled.</p>
     <p>You can also select how to annotate <code>Figures & Tables</code> as in <code>always</code>, <code>never</code> or <code>section-dependant</code>.</p>
     <p>To <strong>disable manual annotation</strong>, uncheck each section. Users will be able to read text in the editor as usual, however manual annotation won't be possible.</p>
   </div>

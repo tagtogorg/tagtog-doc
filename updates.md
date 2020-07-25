@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🔫
+## 3.2020-W30.1 🔫
+_2020-07-25_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Use now just "master" in the [API of documents](API_documents_v1.html) to refer to the master version (instead of the old and now deprecated "" empty string). 🤖</span></li>

@@ -11,7 +11,7 @@ api_document_url: https://www.tagtog.net/-api/documents/v1
 api_username: yourUsername
 api_pwd: yourPassword
 api_project: yourProjectName
-api_plain_text: "\"Hello World\""
+api_plain_text: "\"Hello, World!\""
 ---
 
 <div class="two-third-col">

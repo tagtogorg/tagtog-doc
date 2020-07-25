@@ -94,7 +94,7 @@ toc: true
     <h2>Spacing</h2>
     <p>To help your NLP pipeline, this is how tagtog organizes end of lines:</p>
     <p class="list-item"><span class="list-item-1"></span><strong>Single space</strong>. When a new line is close enough to the previous one, a single space is added by tagtog. This is specially useful for multi-column documents.</p>
-    <p class="list-item"><span class="list-item-2"></span><strong>End of line</strong>. When tagtog identifies a change of section or discourse unit, two line feed characters are added (<code>\n\n</code>).</p>
+    <p class="list-item"><span class="list-item-2"></span><strong>End of line</strong>. When tagtog identifies a change of section or discourse unit, two newline characters are added (<code>\n\n</code>).</p>
   </div>
   <div class="one-third-col"></div>
 </div>

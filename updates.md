@@ -14,6 +14,22 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## 3.2020-W30.0 🔫
+_2020-07-25_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Use now just "master" in the [API of documents](API_documents_v1.html) to refer to the master version (instead of the old and now deprecated "" empty string). 🤖</span></li>
+  <li class="new"><span markdown="1">Restored the output "visualize" in the [API of documents](API_documents_v1.html).</span></li>
+  <li class="new"><span markdown="1">(Native PDF) Better recognition of spaces, end of lines and sections! [Documentation](pdf-annotation-tool.html#spacing).</span></li>
+  <li class="new"><span markdown="1">(Native PDF) Reduced memory consumption for Native PDF (in some cases, down to 50%) and slightly improved the loading speed 🏄‍♂️.</span></li>
+  <li class="doc"><span markdown="1">(Native PDF) If you want to import pre-annotated PDFs generated prior this version, you can do it by using a new format: `nativepdfv1-plus-annjson`. [Documentation](ioformats.html#annotation-input-formats).</span></li>
+  <li class="fix"><span markdown="1">(Native PDF) In previous versions, a bounding box would span from the beginning to the end of the annotation. When parts of the annotation were separated, these bounding boxes complicated or prevented the annotation of the text under the bounding box.</span></li>
+  <li class="fix"><span markdown="1">Now when you send pre-annotated files (for instance with formats `anndoc`, `default-plus-annjson`, or `verbatim-pus-annjson`) that are actually incomplete (for example, you send a single file, or a pair of files that do not share the same prefix name), now you get a proper error status code.</span></li>
+  <li></li>
+</ul>
+
+---
+
 ## 3.2020-W28.2 📇
 _2020-07-11_
 
@@ -23,7 +39,7 @@ _2020-07-11_
   <li class="new"><span markdown="1">New **permissions** system: [29 different permissions](collaboration.html#permissions) for a fine-grained authorization management! Give access to users to do their tasks and prevent them from accessing information that doesn't pertain to them.</span></li>
   <li class="new"><span markdown="1">(Enterprise) Now it's possible to [define your own custom roles](collaboration.html#create-custom-roles)!🧙‍♂️ Choose the exact set of permissions from the 29 available. Adapt tagtog to your specific needs and team easily.</span></li>
   <li class="new"><span markdown="1">New Settings [APIs to programmatically get, add, update, and delete members](  API_settings_v1.html#members-management) from your projects! 🤖</span></li>
-  <li class="new"><span markdown="1">New Settings [APIs to channge the task distribution configuration](API_settings_v1.html#update-task-distribution) of your projects! 🤖</span></li>
+  <li class="new"><span markdown="1">New Settings [APIs to change the task distribution configuration](API_settings_v1.html#update-task-distribution) of your projects! 🤖</span></li>
   <li class="new"><span markdown="1">New progress metrics available in the <a title="tagtog - metrics" href="metrics.html">metrics</a> panel. Find out how many documents are production ready, under review, or still in progress. **Check the progress of each annotator**. 📊</span></li>
   <li class="new"><span markdown="1">Shortcuts for search queries available in the metrics panel. Now it is easier to translate metrics into a list of matching documents. For example, "show me all the documents that have set a specific document label or entity". It is now also easier to learn how to use <a href="search-queries.html" title="tagtog - search queries">search queries</a>. 🔎</span></li>
   <li class="new"><span markdown="1">Now non-logged users can also see the settings of tagtog public projects 🥳.</span></li>

@@ -320,11 +320,11 @@ id: projects
     </div>
   </div>
   <div class="two-third-col">
-    <h5>Machine Learning</h5>
-    <p>Each time you press the button <code>Confirm</code> in the annotation editor, in the background, <strong>a machine learning model is being trained with all the project documents confirmed</strong>. Next time you upload a new document, this model can predict new annotations based on this model. You can remove or add new annotations to continue training the model and get more accurate results.</p>
-    <p>If activated, machine learning will start annotating automatically from the first document confirmed. <strong>No deployments or complex configurations are required</strong>, just by annotating you can train a use a machine learning model.</p>
-    <p>If you don't want to use machine learning, deactivate this option.</p>
-    <p>More information on how <a title="tagtog - machine learning" href="/machine-learning.html">Machine Learning</a> works in tagtog.</p>
+    <h5>Machine Learning (tagtog ML)</h5>
+    <p>Each time you press the button <code>Confirm</code> in the annotation editor, in the background, <strong>a tagtog machine learning model is being trained with all the project documents confirmed</strong>. Next time you upload a new document, this model can predict new annotations based on this model. You can remove or add new annotations to continue training the model and get more accurate results.</p>
+    <p>If activated, tagtog machine learning will start annotating automatically from the first document confirmed. <strong>No deployments or complex configurations are required</strong>, just by annotating you can train a use a tagtog machine learning model.</p>
+    <p>If you don't want to use tagtog machine learning, deactivate this option.</p>
+    <p>More information on how <a title="tagtog - machine learning" href="/machine-learning.html">tagtog ML</a> works.</p>
   </div>
   <div class="one-third-col">
     <div class="message">Automatic annotations with <strong>dictionaries</strong> will work with machine learning either activated or deactivated</div>

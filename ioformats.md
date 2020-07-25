@@ -99,7 +99,7 @@ toc: true
       <tr>
         <td>Annotation input formats</td>
         <td><a href="#annotation-input-formats">See below</a></td>
-      </tr>      
+      </tr>
     </table>
 
 
@@ -121,7 +121,7 @@ toc: true
       <tr>
         <td>Annotation input formats</td>
         <td><a href="#annotation-input-formats">See below</a></td>
-      </tr>      
+      </tr>
     </table>
 
 
@@ -177,6 +177,10 @@ toc: true
       <tr>
         <td><code>verbatim-plus-annjson</code></td>
         <td><p>Analogous to <em>default-plus-annjson</em>, and complimentary to the <code>verbatim</code> format, use this format to parse any given file as <em>verbatim</em> accompanied with its annotation file (with ann.json extension). <a href="API_documents_v1.html#examples-import-pre-annotated-verbatim-text">Example</a>.</p></td>
+      </tr>
+      <tr>
+        <td><code>nativepdfv1-plus-annjson</code></td>
+        <td><p>Analogous to <em>default-plus-annjson</em>. Use it only when you want to import pre-annotated PDFs, if these were created using tagtog version <a href="updates.html#32020-w282-">3.2020-W28.2</a> or older versions. You can extract the native PDF version from the plain.html file associated to the PDF.</p></td>
       </tr>
     </table>
   </div>

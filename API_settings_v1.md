@@ -145,10 +145,10 @@ Change the role of an existing & confirmed member in your project.
 
 Body: JSON (application/json)
 
-| Type | Name       | Default    | Example                                                          | Description                               |
-| ---- | ---------- | ---------- | ---------------------------------------------------------------- | ----------------------------------------- |
-| Path | `member`   |            | "John"                                                           | Username of the project member to update. |
-| Body | `roleName` | "reviewer" | New [role](collaboration.html#roles) (name) to give to the user. |                                           |
+| Type | Name       | Default | Example    | Description                                                      |
+| ---- | ---------- | ------- | ---------- | ---------------------------------------------------------------- |
+| Path | `member`   |         | "John"     | Username of the project member to update.                        |
+| Body | `roleName` |         | "reviewer" | New [role](collaboration.html#roles) (name) to give to the user. |
 
 **Output**
 
@@ -243,10 +243,10 @@ Successful status code: `200` (OK)
 
 Payload: JSON (application/json)
 
-| Name          | Example | Description                                                                                           |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------- |
-| `mapNewIds`   | `{}`    | Not relevant; always empty.                                                                           |
-| `newSettings` |         | New full settings json object of the project. [See docs below](API_settings_v1.html#export-settings). |
+| Name          | Example                                                | Description                                   |
+| ------------- | ------------------------------------------------------ | --------------------------------------------- |
+| `mapNewIds`   | `{}`                                                   | Not relevant; always empty.                   |
+| `newSettings` | [See docs below](API_settings_v1.html#export-settings) | New full settings json object of the project. |
 
 
 </div> <!-- Closes section: two-third-col -->

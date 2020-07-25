@@ -78,6 +78,8 @@ toc: true
 </div>
 
 
+
+
 <div class="page-section">
   <div class="two-third-col">
     <h2>Annotations</h2>
@@ -85,6 +87,16 @@ toc: true
     <p class="list-item"><span class="list-item-1"></span><strong>Text offsets</strong>. Each annotation is located using the start offset of its text in reference to the beginning of the page containing the annotation. In order to do that, we transform each page of the PDF into text and save the result in the <code><a title="tagtog - ann.doc - plain.html format" href="anndoc.html#plain-html">plain.html format</a></code>. We use this file as a reference to calculate the offset of the annotations. You can <a title="tagtog - web editor - view output mode" href="webeditor.html#view-output-mode">download and use this file</a> to share a common interface with tagtog. Offsets take into account the reading order of elements such as tables or columns.</p>
     <p class="list-item"><span class="list-item-2"></span><strong>Coordinates</strong>. Each annotation is located using the coordinates of the bounding box containing the annotation. Currently, each annotation uses a pair of coordinates (X, Y) corresponding to the top-left of the first character of the annotation and the bottom-right of the last character of the annotation. In order to facilitate translation, <strong>coordinates are expressed in Points(pt)</strong>. 1pt is equal to exactly 1/72th of an inch. The coordinates system has its 0,0 position in the top left of each page.</p>
     <p>Following the syntax from other text input formats, the <strong>page number</strong> is encoded in the <code>partId</code> field for each text annotation. For example: <code>s6v1</code> refer to page 6, <code>s20v1</code> refers to page 20 and so forth.</p>
+  </div>
+  <div class="one-third-col"></div>
+</div>
+
+<div class="page-section">
+  <div class="two-third-col">
+    <h2>Spacing</h2>
+    <p>To help your NLP pipeline, this is how tagtog organize end of lines:</p>
+    <p class="list-item"><span class="list-item-1"></span><strong>Single space</strong>. When a new line is close enough to the previous one, a single space is added by tagtog. This is specially useful for multi-column documents.</p>
+    <p class="list-item"><span class="list-item-2"></span><strong>End of line</strong>. When tagtog identifies a change of section or discourse unit, two line feed characters are added (<code>\n\n</code>).</p>
   </div>
   <div class="one-third-col"></div>
 </div>

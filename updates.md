@@ -19,8 +19,11 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 <ul class="updates">
   <li class="new"><span markdown="1">Use now just "master" in the [API of documents](API_documents_v1.html) to refer to the master version (instead of the old and now deprecated "" empty string). 🤖</span></li>
   <li class="new"><span markdown="1">Restored the output "visualize" in the [API of documents](API_documents_v1.html).</span></li>
-  <li class="new"><span markdown="1">Reduced memory consumption for Native PDF (in some cases, down to 50%) and slightly improved the loading speed 🏄‍♂️.</span></li>
-  <li class="fix"><span markdown="1">Now when you send pre-annotated files (for instance with formats `anndoc`, `default-plus-annjson`, or `verbatim-pus-annjson`) that are actually incomplete (for example, you send a single file, or a pair of files that do not share the same prefix name), now you get a proper error status code. Before, your request just hanged.</span></li>
+  <li class="new"><span markdown="1">(Native PDF) Better recognition of spaces, end of lines and sections!</span> <a href="pdf-annotation-tool.html#spacing">Documentation</a>.</li>
+  <li class="new"><span markdown="1">(Native PDF) Reduced memory consumption for Native PDF (in some cases, down to 50%) and slightly improved the loading speed 🏄‍♂️.</span></li>
+  <li class="doc"><span markdown="1">(Native PDF) If you want to import pre-annotated PDFs generated prior this version, you can do it by using a new format: <code>nativepdfv1-plus-annjson</code>. <a href="ioformats.html#annotation-input-formats">Documentation</a>.</span></li>
+  <li class="fix"><span markdown="1">Now when you send pre-annotated files (for instance with formats `anndoc`, `default-plus-annjson`, or `verbatim-pus-annjson`) that are actually incomplete (for example, you send a single file, or a pair of files that do not share the same prefix name), now you get a proper error status code.</span></li>
+  <li></li>
 </ul>
 
 ---

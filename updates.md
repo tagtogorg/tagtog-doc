@@ -22,6 +22,8 @@ _2020-07-25_
   <li class="new"><span markdown="1">Restored the output "visualize" in the [API of documents](API_documents_v1.html).</span></li>
   <li class="new"><span markdown="1">(Native PDF) Better recognition of spaces, end of lines and sections! [Documentation](pdf-annotation-tool.html#spacing).</span></li>
   <li class="new"><span markdown="1">(Native PDF) Reduced memory consumption for Native PDF (in some cases, down to 50%) and slightly improved the loading speed 🏄‍♂️.</span></li>
+  <li class="new"><span markdown="1">(Native PDF) Depending on the quality of the original PDF, some OCR systems might identify ligatures or multiple characters. We are now better handling these scenarios to produce a single character per position.</span></li>
+  <li class="new"><span markdown="1">(Native PDF) Better support to annotate emojis 🥰</span></li>
   <li class="doc"><span markdown="1">(Native PDF) If you want to import pre-annotated PDFs generated prior this version, you can do it by using a new format: `nativepdfv1-plus-annjson`. [Documentation](ioformats.html#annotation-input-formats).</span></li>
   <li class="fix"><span markdown="1">(Native PDF) In previous versions, a bounding box would span from the beginning to the end of the annotation. When parts of the annotation were separated, these bounding boxes complicated or prevented the annotation of the text under the bounding box.</span></li>
   <li class="fix"><span markdown="1">Now when you send pre-annotated files (for instance with formats `anndoc`, `default-plus-annjson`, or `verbatim-pus-annjson`) that are actually incomplete (for example, you send a single file, or a pair of files that do not share the same prefix name), now you get a proper error status code.</span></li>

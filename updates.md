@@ -14,6 +14,15 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
+## ??? 👊
+
+<ul class="updates">  
+  <li class="fix"><span markdown="1">Now webhooks are triggered also upong new uploads, as it was intended, not only upon document saves.</span></li>
+  <li></li>
+</ul>
+
+---
+
 ## 3.2020-W30.1 🔫
 _2020-07-25_
 

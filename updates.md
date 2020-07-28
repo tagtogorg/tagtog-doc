@@ -14,7 +14,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 👊
+## 3.2020-W31.0 👊
+_2020-07-28_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">(OnPremises & Cloud) the index0 image's size was reduced a 20%, also the internal logging-to-file was removed, and the volume of logging was reduced in more than 50%. All these things combined signify slightly faster uploads and greater stability in some installations.</span></li>

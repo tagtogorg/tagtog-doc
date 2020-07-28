@@ -226,7 +226,7 @@ id: collaboration
       </tr>
 
       <tr>
-        <td rowspan="7">documents</td>        
+        <td rowspan="7">documents</td>
         <td rowspan="2">Content</td>
         <td><code>canCreate</code></td>
         <td><span>Rights to import documents to the project</span></td>
@@ -255,7 +255,7 @@ id: collaboration
         <td class="centered">✅</td>
         <td class="centered">✅</td>
       </tr>
-      <tr>        
+      <tr>
         <td rowspan="2">Master version</td>
         <td><code>canReadMaster</code></td>
         <td><span>Read access to the master version of the annotations</span></td>
@@ -273,7 +273,7 @@ id: collaboration
         <td class="centered">✅</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
-      </tr>      
+      </tr>
       <tr>
         <td rowspan="2">Others' versions</td>
         <td><code>canReadOthers</code></td>
@@ -292,7 +292,7 @@ id: collaboration
         <td class="centered">❌</td>
         <td class="centered">✅</td>
         <td class="centered">✅</td>
-      </tr>      
+      </tr>
       <tr>
         <td rowspan="3">folders</td>
         <td rowspan="3"></td>
@@ -469,7 +469,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select who you want to distribute documents to and select <strong>2 annotators or more per document</strong>.
+  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select who you want to distribute documents to and select <strong>2 annotators or more per document</strong></p>.
 </div>
 <div class="one-third-col">
   {% include message.html message='From the repeated documents among annotators, the IAA can be computed. Note that even when only <a href="#documents-are-automatically-distributed-one-annotator-per-docume">one annotator is assigned per document</a>, a small sample of documents is randomly chosen by tagtog to always be able to compute the IAA.' %}

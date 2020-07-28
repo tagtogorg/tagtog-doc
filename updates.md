@@ -16,7 +16,8 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ## ??? 👊
 
-<ul class="updates">  
+<ul class="updates">
+  <li class="fix"><span markdown="1">(OnPremises & Cloud) the index0 image's size was reduced a 20%, also the internal logging-to-file was removed, and the volume of logging was reduced in more than 50%. All these things combined signify slightly faster uploads and greater stability in some installations.</span></li>
   <li class="fix"><span markdown="1">Now webhooks are triggered also upong new uploads, as it was intended, not only upon document saves.</span></li>
   <li></li>
 </ul>

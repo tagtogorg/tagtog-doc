@@ -19,7 +19,7 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 <ul class="updates">
   <li class="fix"><span markdown="1">(OnPremises & Cloud) the index0 image's size was reduced a 20%, also the internal logging-to-file was removed, and the volume of logging was reduced in more than 50%. All these things combined signify slightly faster uploads and greater stability in some installations.</span></li>
   <li class="fix"><span markdown="1">Now webhooks are triggered also upong new uploads, as it was intended, not only upon document saves.</span></li>
-  <li></li>
+  <li class="fix"><span markdown="1">Fixed a bug introduced in [3.2020-W25.3](updates.html#32020-w253-), which caused unnecessary internal writes of the json project settings. This had one bad consequence now solved: sometimes sending many files at once threw thread-synchronization errors. Because of this, we encourage all our OnPremises clients to update to this version as soon as possible.</span></li>
 </ul>
 
 ---

@@ -109,9 +109,9 @@ api_plain_text: "\"Hello World\""
     </tr>
     <tr>
       <td><code>format</code></td>
-      <td></td>
-      <td>"verbatim"</td>
-      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
+      <td>Depends on the input type. <a href="ioformats.html#input-types">Check the default formats</a>.</td>
+      <td><code>formatted</code></td>
+      <td>Force the <em>format</em> of the input. <a href="ioformats.html#distinguish-format-by-given-format-parameter">More info</a>.</td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
@@ -139,6 +139,7 @@ api_plain_text: "\"Hello World\""
 
 <div class="two-third-col">
   <h4>Examples: send plain text</h4>
+  <p>By default, plain text imported to tagtog uses the <code>verbatim</code> <a href="ioformats.html#input-formats">input format</a>. You should use the default mode when you want to keep the same formatting as your input text.</p>
   <br/>
   <br/>
   <div id="tabs-container">
@@ -148,7 +149,7 @@ api_plain_text: "\"Hello World\""
       <li><a href="#tab-3-plain-text">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">The example below imports plain text and retrieve the automatic annotations in <code>ann.json</code> format.</p>
+    <p class="code-desc">The example below imports plain text and retrieve the automatic annotations in <code>ann.json</code> format. As you can see, we don't need to specify the <code>format</code> parameter.</p>
 <div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
@@ -214,24 +215,24 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 
 <div class="two-third-col">
-  <h4>Examples: send plain text as verbatim</h4>
-  <p>This is when you need to work on the exactly the same formatting as your input text...</p>
+  <h4>Examples: send plain text and format it</h4>
+  <p>Use the <a href="ioformats.html#input-formats">input format</a> <code>formatted</code> to clean and format your input.</p>
   <br/>
 
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-plain-text-verbatim-python">Python</a></li>
+      <li class="current"><a href="#tab-plain-text-formatted-python">Python</a></li>
     </ul>
     <div class="tab">
-      <p class="code-desc">This example imports plain text in verbatim format (pre-formatted) and returns the result of the operation (<code>null</code> output).</p>
-<div id="tab-plain-text-verbatim-python" class="tab-content" style="display: block" markdown="1">
+      <p class="code-desc">This example imports plain text in <code>formatted</code> format and returns the result of the operation (<code>null</code> <code>output</code>).</p>
+<div id="tab-plain-text-formatted-python" class="tab-content" style="display: block" markdown="1">
 ```python
 import requests
 
 tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
 auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
-params = {"project": "yourProjectName", "owner": "yourUsername", "format": "verbatim", "output": "null"}
+params = {"project": "yourProjectName", "owner": "yourUsername", "format": "formatted", "output": "null"}
 payload = {
     "text": "The film stars Leonardo DiCaprio, Brad Pitt and Margot Robbie"
 }
@@ -264,6 +265,11 @@ print(response.text)
 ```
 </div>
 </div>
+
+
+
+
+
 
 
 
@@ -772,9 +778,9 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>format</code></td>
+      <td>No default for pre-annotated documents, you should always set this parameter</td>
       <td><code>default-plus-annjson</code></td>
-      <td><code>anndoc</code></td>
-      <td>Format of the pre-annotated document. Remember that <code>anndoc</code> format requires the content as <code>plain.html</code>. List of supported pre-annotated formats: <a title="tagtog - formats" href="ioformats.html#input-formats">Pre-annotated formats</a></td>
+      <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - formats" href="ioformats.html#input-formats">Pre-annotated formats</a></td>
     </tr>
   </table>
 
@@ -808,6 +814,12 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
     </tr>
+    <tr>
+      <td><code>filename</code></td>
+      <td>Name of the file imported</td>
+      <td>myPlainTextFile.txt</td>
+      <td>Force the document's filename with this argument, otherwise the default is used. Note that the filename must end with the original file extension. Otherwise, this is appended to your given name.</td>
+    </tr>
   </table>
 
 </div>
@@ -824,7 +836,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     <li class="current"><a href="#tab-1-file">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code>. In this case, we write the content of the ann.json file, but you could easily point to a existing ann.json file. Make sure the ann.json is well formated.</p>
+  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code> to indicate we are importing pre-annotated content, the text content will be represented using the <a href="ioformats.html#input-types">default format</a>. In this case, the default format for plain text is <code>verbatim</code>. We define the ann.json directly in the code, but you could easily point to a existing ann.json file. Make sure the ann.json is well formated.</p>
   <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
   ```python
 
@@ -857,35 +869,36 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
 
 <div class="two-third-col">
-  <h4>Examples: import pre-annotated verbatim text</h4>
-
+  <h4>Examples: import pre-annotated formatted text</h4>
+  <p>Follow this sample only if you want to import pre-annotated documents to tagtog when the input text was <code>formatted</code> when annotated</p>
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to send pre-formatted text along with its annotations. The format used is <code>verbatim-plus-annjson</code>. In this case, the input files are given from the command line. Samples of the files' contents are commented inline.</p>
+  <p class="code-desc">This example shows how to send text to be <code>formatted</code> along with its annotations. The format used is <code>formatted-plus-annjson</code>. The input files are in Github, you can find a link below.</p>
   <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
   ```python
   import requests
   import sys
 
-  plain_path = sys.argv[1]
-  annjson_path = sys.argv[2]
+  plain_path = "formatted.txt"
+  annjson_path = "formatted.ann.json"
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
-  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "verbatim-plus-annjson", "output": "null"}
+  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "formatted-plus-annjson", "output": "null"}
 
   files = [
-      ("plain", open(plain_path)),  # Example text: The film stars Leonardo DiCaprio, Brad Pitt and Margot Robbie
-      ("ann.json", open(annjson_path))  # Example ann.json: {"annotatable":{"parts":["s1v1"]},"anncomplete":false,"sources":[],"metas":{},"entities":[{"classId":"e_29","part":"s1v1","offsets":[{"start":15,"text":"Leonardo DiCaprio"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}},{"classId":"e_29","part":"s1v1","offsets":[{"start":34,"text":"Brad Pitt"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}},{"classId":"e_29","part":"s1v1","offsets":[{"start":48,"text":"Margot Robbie"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}}],"relations":[]}
+      ("plain", open(plain_path)),
+      ("ann.json", open(annjson_path))
   ]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
   ```
+  <p style="float:right">Files{% include github-link.html target="snippets/files" %}</p>
   </div>
 </div>
 </div>
@@ -895,7 +908,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   <p>Response</p>
 <div markdown="1">
 ```json
-{"ok":1,"errors":0,"items":[{"origid":"text.txt","names":["text.ann.json","text.txt"],"rawInputSizeInBytes":774,"tagtogID":"aumzCn3f5E9zDs4yihXZAipZjLx0-text.txt","result":"created","parsedTextSizeInBytes":62}],"warnings":[]}
+{"ok":1,"errors":0,"items":[{"origid":"formattedtext","filenames":["formatted.ann.json","formatted.txt"],"names":["formatted.ann.json","formatted.txt"],"rawInputSizeInBytes":860,"docid":"aAyUEVY5RCLzd8kdaOMg54fXXWj8-formatted","tagtogID":"aAyUEVY5RCLzd8kdaOMg54fXXWj8-formatted","result":"created","parsedTextSizeInBytes":126}],"warnings":[]}
 ```
 </div>
 </div>
@@ -905,11 +918,11 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 <div class="two-third-col">
   <h3>Replace annotations of existing document <code>POST</code></h3>
   <p>You should use two files:</p>
-  <p class="list-item"><span class="list-item-1"></span><strong>The <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></strong>. You can obtain this file by <a title="Get files - tagtog API" href="API_documents_v1.html#get-existing-documents-get">downloading it from the API</a> using the output <code>html</code>.</p>
+  <p class="list-item"><span class="list-item-1"></span><strong>The original content file or the <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></strong>.</p>
   <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
-  <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc-3243hdsfk3.plain.html</code> and <code>mydoc-3243hdsfk3.ann.json</code>.</p>
-
-  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API_documents_v1.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
+  <p>If you use the original content file, it must have the same name as the original. If you want to use the plain.html, it should use the same name as the original plain.html.</p>
+  <p><strong>Both files (content and annotations) should have the same name, except for the file extensions</strong>. For example: <code>mydoc.txt</code> and <code>mydoc.ann.json</code>. Or, if with a plain.html: mydoc-3243hdsfk3.plain.html and mydoc-3243hdsfk3.ann.json</p>
+  <p>If the original content doesn't exist in your project, the pre-annotated document will be also imported as new.</p>
 
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
@@ -922,8 +935,8 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     <tr>
       <td><code>files</code></td>
       <td></td>
-      <td>docidABCDEF.plain.html, docidABCDEF.ann.json</td>
-      <td>You need to upload in the same request both: the plain.html (content) and the ann.json (annotations) files.</td>
+      <td>mydoc.txt, mydoc.ann.json</td>
+      <td>You need to upload in the same request both: the content file and the ann.json (annotations) files.</td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -998,7 +1011,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     <li class="current"><a href="#tab-1-file">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to replace the annotations of an existing document (plain.html + ann.json) to tagtog.</p>
+  <p class="code-desc">This example shows how to replace the annotations of an existing document (content + ann.json) to tagtog.</p>
   <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
   ```python
   import requests
@@ -1006,9 +1019,9 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'anndoc'}
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
 
-  files = [('file', open('/annotated-docs/docidABCDEF.plain.html')), ('file', open('/annotated-docs/docidABCDEF.ann.json'))]
+  files = [('file', open('/annotated-docs/mydoc.txt')), ('file', open('/annotated-docs/mydoc.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```

@@ -143,7 +143,8 @@ toc: true
       </tr>
       <tr>
         <td><code>formatted</code></td>
-        <td>The <strong>content will formatted and cleaned</strong>. For example, one block is created by paragraph. Ideal if your content has different discourse units. For example: chat bots conversations.</td>
+        <td><p>The <strong>content will formatted and cleaned</strong>. For example, one block is created by paragraph. Ideal if your content has different discourse units. For example: chat bots conversations.</p>
+        <p>From tagtog version <a href="updates.html#32020-w301-">3.2020-W30.1</a> backwards, this was the default mode when a user imported plain text. If you want to pre-annotate with annotations created in this period of time, please use <code>formatted-plus-annjson</code>. See below.</p></td>
       </tr>
       <tr>
         <td><code>markdown</code></td>

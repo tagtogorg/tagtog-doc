@@ -6,11 +6,21 @@ id: updates
 notoc: true
 ---
 
-Here is the versioned list of all the new features and changes. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog On-Premises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
+📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog On-Premises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
 
-Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
+❤️ Have feedback? Report bugs and suggestions at [support@tagtog.net](mailto:support@tagtog.net).
 
-Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
+🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
+
+accept any SSL/TSL certificate in old webhooks for backwards compatibility
+
+---
+
+## ??? 🐼
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
+</ul>
 
 ---
 

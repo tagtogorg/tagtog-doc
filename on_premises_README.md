@@ -147,7 +147,7 @@ We recommend that you have periodic backups of this folder to avoid data losses.
 
 ### Proxy
 
-The application supports http proxies and automatically recognizes your environment variables: `$http_proxy`, `$https_proxy`, and `${no_proxy}` (either written in both all lower or all upper case).
+The application supports http proxies and automatically recognizes your environment variables: `$http_proxy`, `$https_proxy`, and `$no_proxy` (either written in both all lower or all upper case).
 
 Note: the port number must be explicitly written, regardless of whether the port is the default 80 for http or 443 for https. That is, always write something like: `export HTTP_PROXY=IP:PORT`.
 

@@ -14,7 +14,7 @@ id: ml
 </div>
 
 <div class="two-third-col">
-  <p>One of the advantages using tagtog ML is the possibility of annotating text automatically using machine learning (ML) :bookmark_tabs: Why is this important? Automatic annotations are just insights on the top of the text. You can leverage intelligence in different scenarios:</p>
+  <p>One of the advantages of using tagtog ML is the possibility of annotating text automatically using machine learning (ML) :bookmark_tabs: Why is this important? Automatic annotations are just insights on the top of the text. You can leverage intelligence in different scenarios:</p>
   <p class="list-item"><span class="list-item-1"></span>tagtog annotates text automatically using custom or pre-trained ML models. This means you can <strong>automate</strong> processes to find relevant insights automatically. E.g. analyze customer feedback on real time.</p>
   <p class="list-item"><span class="list-item-2"></span>Automatic annotations can <strong>boost annotator performance</strong>. Documents are pre-annotated by ML models and annotators only need to correct wrong predictions. tagtog learns from feedback and provide with more accurate results with each iteration.</p>
   <p class="list-item"><span class="list-item-3"></span><strong>Index your data</strong>. Use automatic annotations to augment your data and improve discoverability (e.g. augment records with mutation mentions using standard names, easier to find). You can either import the results into your own system or use the <a href="/API_documents_v1.html#search-documents-in-a-project-get" title="Search API">Search API</a> to find suitable records across the data imported.</p>

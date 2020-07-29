@@ -14,16 +14,42 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 ---
 
-## ??? 🔫
+## ??? 🌶
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Use now just "master" in the [API of documents](API_documents_v1.html) to refer to the master version (instead of the old and now deprecated "" empty string). 🤖</span></li>
-  <li class="new"><span markdown="1">Restored the output "visualize" in the [API of documents](API_documents_v1.html).</span></li>
   <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of <code>enum</code> type.</span></li>
   <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI!</span>. <a href="documents.html#distribute-to-a-group-of-users">Documentation</a>.</li>
   <li class="new"><span markdown="1">Select the <a href="ioformats.html#input-formats">input format</a> directly in the GUI. For example, you can decide if you want tagtog to clean/format your content (<code>formatted</code>) or leave it as is (<code>verbatim</code>). <a href="documents.html#format">Documentation</a>.</span></li>
   <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI</span>. <a href="documents.html#define-a-name">Documentation</a>.</li>
   <li class="new"><span markdown="1">New style for dropdown menus.</li>
+</ul>
+---
+
+## 3.2020-W31.0 👊
+_2020-07-28_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">(OnPremises & Cloud) the index0 image's size was reduced a 20%, also the internal logging-to-file was removed, and the volume of logging was reduced in more than 50%. All these things combined signify slightly faster uploads and greater stability in some installations.</span></li>
+  <li class="fix"><span markdown="1">Now webhooks are triggered also upon new uploads, as it was intended, not only upon document saves.</span></li>
+  <li class="fix"><span markdown="1">Fixed a bug introduced in [3.2020-W25.3](updates.html#32020-w253-), which caused unnecessary internal writes of the json project settings. This had one bad consequence now solved: sometimes sending many files at once threw thread-synchronization errors.</span></li>
+</ul>
+
+---
+
+## 3.2020-W30.1 🔫
+_2020-07-25_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Use now just "master" in the [API of documents](API_documents_v1.html) to refer to the master version (instead of the old and now deprecated "" empty string). 🤖</span></li>
+  <li class="new"><span markdown="1">Restored the output "visualize" in the [API of documents](API_documents_v1.html).</span></li>
+  <li class="new"><span markdown="1">(Native PDF) Better recognition of spaces, end of lines and sections! [Documentation](pdf-annotation-tool.html#spacing).</span></li>
+  <li class="new"><span markdown="1">(Native PDF) Reduced memory consumption for Native PDF (in some cases, down to 50%) and slightly improved the loading speed 🏄‍♂️.</span></li>
+  <li class="new"><span markdown="1">(Native PDF) Depending on the quality of the original PDF, some OCR systems might identify ligatures or multiple characters. We are now better handling these scenarios to produce a single character per position.</span></li>
+  <li class="new"><span markdown="1">(Native PDF) Better support to annotate emojis 🥰</span></li>
+  <li class="doc"><span markdown="1">(Native PDF) If you want to import pre-annotated PDFs generated prior this version, you can do it by using a new format: `nativepdfv1-plus-annjson`. [Documentation](ioformats.html#annotation-input-formats).</span></li>
+  <li class="fix"><span markdown="1">(Native PDF) In previous versions, a bounding box would span from the beginning to the end of the annotation. When parts of the annotation were separated, these bounding boxes complicated or prevented the annotation of the text under the bounding box.</span></li>
+  <li class="fix"><span markdown="1">Now when you send pre-annotated files (for instance with formats `anndoc`, `default-plus-annjson`, or `verbatim-pus-annjson`) that are actually incomplete (for example, you send a single file, or a pair of files that do not share the same prefix name), now you get a proper error status code.</span></li>
+  <li></li>
 </ul>
 
 ---

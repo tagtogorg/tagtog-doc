@@ -110,7 +110,7 @@ An internet connection is only needed for installing and (optionally) [updating 
 * Choose one full-path folder/volume where all your tagtog data will be stored, and assign it to a global variable for convenience. For description purposes, let's call this folder `$TAGTOG_HOME`. **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`).
 
 ```shell
-export TAGTOG_HOME="$PWD/tagtog_data"`
+export TAGTOG_HOME="$PWD/tagtog_data"
 ```
 
 * Run the application:
@@ -205,8 +205,9 @@ export TAGTOG_HTTPS_PORT=9443 # For example
 
 Try:
 
-1. Removing all queued documents for parsing: `find "$TAGTOG_HOME/tmp/to_process/" -type f -delete`
-2. Restarting the application: `./tagtog_on_premises restart latest $TAGTOG_HOME`
+1. Remove all queued documents for parsing: `find $TAGTOG_HOME/tmp/to_process/ -mindepth 1 -delete  # you might need sudo access`
+2. Remove all queued training jobs: `find $TAGTOG_HOME/tmp/training_jobs/ -mindepth 1 -delete  # your might need sudo access`
+3. the application: `./tagtog_on_premises restart latest $TAGTOG_HOME`
 
 
 ### Issues in an update

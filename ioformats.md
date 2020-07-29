@@ -168,6 +168,10 @@ toc: true
         <td><code>anndoc</code></td>
         <td>Use the <a href="anndoc.html">anndoc format</a> to import a pre-annotated <code>plain.html</code> (<code>plain.html</code> + <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#replace-annotations-of-existing-document-post">Example</a>.</td>
       </tr>
+      <tr>
+        <td><code>nativepdfv1-plus-annjson</code></td>
+        <td><p>Analogous to <em>default-plus-annjson</em>. Use it only when you want to import pre-annotated PDFs, if these were created using tagtog version <a href="updates.html#32020-w282-">3.2020-W28.2</a> or older versions. You can extract the native PDF version from the plain.html file associated to the PDF.</p></td>
+      </tr>
     </table>
   </div>
   <div class="one-third-col">

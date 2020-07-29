@@ -31,8 +31,8 @@ The following elements are not interpreted, but parsed as is and escaped. For ex
 * Inline content and styles; in particular: `**bold**`, `_emphatic_`, `code`, `~~scratched~~`, `![images](url)`, `[links](url)`.
 * Other special style-only elements; in particular: horizontal lines (`<hr/>` or `---`) or line breaks (`<br/>`).
 * HTML-only elements. In particular, [HTML entities](https://spec.commonmark.org/0.29/#entity-and-numeric-character-references) are not escaped either, neither in code spans or code blocks, nor in the rest of content types (e.g. paragraphs).
-* Block quotes; coming soon.
-* Tables are not supported at the moment.
+* Block quotes. [Please let us know if you need them](https://tagtog.net/#contact).
+* Tables. [Please let us know if you need them](https://tagtog.net/#contact).
 
 
 ## Example

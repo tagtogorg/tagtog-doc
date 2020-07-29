@@ -6,19 +6,18 @@ id: updates
 notoc: true
 ---
 
-📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog OnPremises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
+📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are on **tagtog OnPremises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
 
 ❤️ Have feedback? Report bugs and suggestions at [support@tagtog.net](mailto:support@tagtog.net).
 
 🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
-
-accept any SSL/TSL certificate in old webhooks for backwards compatibility
 
 ---
 
 ## ??? 🐼
 
 <ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `${no_proxy}` or `$NO_PROXY`, to easily [configure your proxy](http://localhost:4000/on_premises_README.html#proxy).</span></li>
   <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
 </ul>
 

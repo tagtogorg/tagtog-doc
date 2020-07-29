@@ -6,11 +6,21 @@ id: updates
 notoc: true
 ---
 
-Here is the versioned list of all the new features and changes. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog On-Premises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
+📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are on **tagtog OnPremises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
 
-Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
+❤️ Have feedback? Report bugs and suggestions at [support@tagtog.net](mailto:support@tagtog.net).
 
-Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
+🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
+
+---
+
+## 3.2020-W31.1 🐼
+_2020-07-29_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `${no_proxy}` or `$NO_PROXY`, to easily [configure your proxy](http://localhost:4000/on_premises_README.html#proxy).</span></li>
+  <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
+</ul>
 
 ---
 
@@ -19,7 +29,7 @@ _2020-07-28_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">(OnPremises & Cloud) the index0 image's size was reduced a 20%, also the internal logging-to-file was removed, and the volume of logging was reduced in more than 50%. All these things combined signify slightly faster uploads and greater stability in some installations.</span></li>
-  <li class="fix"><span markdown="1">Now webhooks are triggered also upong new uploads, as it was intended, not only upon document saves.</span></li>
+  <li class="fix"><span markdown="1">Now webhooks are triggered also upon new uploads, as it was intended, not only upon document saves.</span></li>
   <li class="fix"><span markdown="1">Fixed a bug introduced in [3.2020-W25.3](updates.html#32020-w253-), which caused unnecessary internal writes of the json project settings. This had one bad consequence now solved: sometimes sending many files at once threw thread-synchronization errors.</span></li>
 </ul>
 

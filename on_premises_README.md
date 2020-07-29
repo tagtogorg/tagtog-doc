@@ -144,13 +144,29 @@ We recommend that you have periodic backups of this folder to avoid data losses.
 2. Copy the entire `$TAGTOG_HOME` folder (example: `cp -r $TAGTOG_HOME SOME_BACKUP_FOLDER`)
 3. Restart tagtog: (typically: `./tagtog_on_premises restart latest $TAGTOG_HOME`)
 
+
 ### Proxy
 
-The application supports http proxies and automatically recognizes your host variables `$http_proxy` and `$https_proxy` (either written in both all lower or all upper case).
+The application supports http proxies and automatically recognizes your environment variables: `$http_proxy`, `$https_proxy`, and `$no_proxy` (either written in both all lower or all upper case).
 
-**Important**: the port number must be explicitly written, regardless of whether the port is the default 80 for http or 443 for https. That is, always write something like: `export HTTP_PROXY=IP:PORT`.
+Note: the port number must be explicitly written, regardless of whether the port is the default 80 for http or 443 for https. That is, always write something like: `export HTTP_PROXY=IP:PORT`.
+
+To test that the tagtog script picks up your proxy information correctly, check the output of running:
+
+```shell
+./tagtog_on_premises extract_all_proxy_info_from_env
+```
 
 
+### Run tagtog on system startup
+
+To start tagtog at system boot, typically on Linux systems you need to add your desired commands to the file: `/etc/rc.local`
+
+Therefore, you will need to add to that file something like: `tagtog_on_premises start latest $TAGTOG_HOME`.
+
+You need to be aware of some caveats. [This is a nice checklist]([https://askubuntu.com/a/401090/159529) to verify that everything will work fine before actually rebooting your system.
+
+For example, you have to make sure to use full paths, the `$TAGTOG_HOME` environment variable must be defined or be accessible in your command/script, and you must be able to run the command as sudo / root. Also, since tagtog depends on docker, you must make sure that docker has been initialized before you run the tagtog start command.
 
 
 ## Update

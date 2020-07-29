@@ -18,7 +18,7 @@ notoc: true
 _2020-07-29_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `${no_proxy}` or `$NO_PROXY`, to easily [configure your proxy](http://localhost:4000/on_premises_README.html#proxy).</span></li>
+  <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `${no_proxy}` or `$NO_PROXY`, to easily [configure your proxy](on_premises_README.html#proxy).</span></li>
   <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
 </ul>
 
@@ -414,7 +414,7 @@ _2019-10-06_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can edit your project description 📝🌈</span></li>
-  <li class="new"><span markdown="1">💁‍♂️Now when the master annotations are shown as default for an user, this is properly indicated with a warning (both on the GUI and [API](http://localhost:4000/API_documents_v1.html#get-existing-documents-get))</span></li>
+  <li class="new"><span markdown="1">💁‍♂️Now when the master annotations are shown as default for an user, this is properly indicated with a warning (both on the GUI and [API](API_documents_v1.html#get-existing-documents-get))</span></li>
   <li class="fix"><span markdown="1">Fixed wrongly showing _0_ as number of documents for many open datasets.</span></li>
   <li class="fix"><span markdown="1">(OnPremises) Fixed wrong redirection in some instances when deleting single documents on the GUI.</span></li>
 </ul>

@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🐼
+## 3.2020-W31.1 🐼
+_2020-07-29_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `${no_proxy}` or `$NO_PROXY`, to easily [configure your proxy](http://localhost:4000/on_premises_README.html#proxy).</span></li>

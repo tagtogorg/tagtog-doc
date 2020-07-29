@@ -6,7 +6,7 @@ id: updates
 notoc: true
 ---
 
-📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog On-Premises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
+📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog OnPremises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
 
 ❤️ Have feedback? Report bugs and suggestions at [support@tagtog.net](mailto:support@tagtog.net).
 

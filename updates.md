@@ -18,7 +18,7 @@ notoc: true
 _2020-07-29_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `${no_proxy}` or `$NO_PROXY`, to easily [configure your proxy](on_premises_README.html#proxy).</span></li>
+  <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `$no_proxy` or `$NO_PROXY`, to easily [configure your proxy](on_premises_README.html#proxy).</span></li>
   <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
 </ul>
 

@@ -42,8 +42,8 @@ Your system must have installed:
 Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the following minimum requirements:
 
 * Memory:
-  * On-Premises Annotator only: **8GB RAM** (e.g. `t3a.large` on AWS, or `D2s_v3` on Azure); recommended **16GB RAM** (e.g. `t3a.xlarge` on AWS, or `D4s_v3` on Azure)
-  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5a.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5a.xlarge` on AWS, or `E4s_v3` on Azure)
+  * OnPremises TEAM: **8GB RAM** (e.g. `t3a.large` on AWS, or `D2s_v3` on Azure); recommended **16GB RAM** (e.g. `t3a.xlarge` on AWS, or `D4s_v3` on Azure)
+  * OnPremises ENTERPRISE: **16GB RAM** (e.g. `r5a.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5a.xlarge` on AWS, or `E4s_v3` on Azure)
 * Disk: **50+ GB of disk space**
 
 
@@ -240,10 +240,14 @@ echo "0" > LATEST_VERSION
 
 ### Wrong entity offsets on the display
 
-On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script:
+On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script.
+
+To avoid any data loss, please first [**backup your data**](#backups-how-and-where-the-data-is-stored).
 
 ```shell
-# PLEASE, BACKUP YOUR DATA FIRST
+#
+# **PLEASE, FIRST BACKUP YOUR DATA**
+#
 ./tagtog_on_premises fix_documents latest $TAGTOG_HOME
 ```
 
@@ -263,7 +267,7 @@ Otherwise, a quick solution is:
 
 ### ml0 tagtog service taking 100% of CPU
 
-Currently, in some cases On-Premises ML can consume too much CPU. You can verify that it's indeed the ml service (`ml0`) the one overloading the CPU by checking `docker stats`, and looking for the `tagtog_ml0_1` container.
+Currently, in some cases tagtog ML can consume too much CPU. You can verify that it's indeed the ml service (`ml0`) the one overloading the CPU by checking `docker stats`, and looking for the `tagtog_ml0_1` container.
 
 We are working on a stable fix. For now, you can quickly liberate the resources by restarting the `ml0` service only (not the entire tagtog app):
 

@@ -14,11 +14,20 @@ notoc: true
 
 ---
 
+## 3.2020-W31.2 👻
+_2020-08-02_
+
+<ul class="updates">  
+  <li class="fix"><span markdown="1">Improved our internal html parser to work with and allow empty elements like `<p>&nbsp;</p>`. Now, those elements are just filtered out instead of the parser throwing a parsing exception.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W31.1 🐼
 _2020-07-29_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `${no_proxy}` or `$NO_PROXY`, to easily [configure your proxy](on_premises_README.html#proxy).</span></li>
+  <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `$no_proxy` or `$NO_PROXY`, to easily [configure your proxy](on_premises_README.html#proxy).</span></li>
   <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
 </ul>
 

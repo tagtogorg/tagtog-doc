@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 👻
+## 3.2020-W31.2 👻
+_2020-08-02_
 
 <ul class="updates">  
   <li class="fix"><span markdown="1">Improved our internal html parser to work with and allow empty elements like `<p>&nbsp;</p>`. Now, those elements are just filtered out instead of the parser throwing a parsing exception.</span></li>

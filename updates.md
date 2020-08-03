@@ -14,6 +14,18 @@ notoc: true
 
 ---
 
+## ??? 🌶
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of <code>enum</code> type.</span></li>
+  <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI! <a href="documents.html#distribute-to-a-group-of-users">Documentation</a>.</span></li>
+  <li class="new"><span markdown="1">Select the <a href="ioformats.html#input-formats">input format</a> directly in the GUI. For example, you can decide if you want tagtog to clean/format your content (<code>formatted</code>) or leave it as is (<code>verbatim</code>). <a href="documents.html#format">Documentation</a>.</span></li>
+  <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. <a href="documents.html#define-a-name">Documentation</a>.</span></li>
+  <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W31.2 👻
 _2020-08-02_
 
@@ -31,17 +43,6 @@ _2020-07-29_
   <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
 </ul>
 
----
-
-## ??? 🌶
-
-<ul class="updates">
-  <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of <code>enum</code> type.</span></li>
-  <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI!. <a href="documents.html#distribute-to-a-group-of-users">Documentation</a>.</span></li>
-  <li class="new"><span markdown="1">Select the <a href="ioformats.html#input-formats">input format</a> directly in the GUI. For example, you can decide if you want tagtog to clean/format your content (<code>formatted</code>) or leave it as is (<code>verbatim</code>). <a href="documents.html#format">Documentation</a>.</span></li>
-  <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. <a href="documents.html#define-a-name">Documentation</a>.</span></li>
-  <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
-</ul>
 ---
 
 ## 3.2020-W31.0 👊

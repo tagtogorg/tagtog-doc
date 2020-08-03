@@ -161,16 +161,12 @@ toc: true
       </tr>
       <tr>
         <td><code>nativepdfv1-plus-annjson</code></td>
-        <td><p>Analogous to <code>default-plus-annjson</code>, and complimentary to the <code>nativepdfv1</code> format. Use this format if you have old annotations you want to import to tagtog along with the original PDF that was annotated in the native editor.</p>
-        <p>You can verify which format was originally used in the <code>plain.html</code> file. If you don't have access to this information, assume that any native PDF annotations generated prior to 2020-July-26 should use this format.</p></td>
+        <td><p>Analogous to <code>default-plus-annjson</code>, and complimentary to the <code>nativepdfv1</code> format. Use this format when you have old annotations you want to import to tagtog, and these were created using the <a href="pdf-annotation-tool.html">PDF native editor</a>.</p>
+        <p>You can verify which format was originally used in the <code>plain.html</code> file. If you don't have access to this information, assume that any native PDF annotations generated up to the <a href="updates.html#32020-w282-">3.2020-W28.2</a> version should use this format.</p></td>
       </tr>
       <tr>
         <td><code>anndoc</code></td>
         <td>Use the <a href="anndoc.html">anndoc format</a> to import a pre-annotated <code>plain.html</code> (<code>plain.html</code> + <code>ann.json</code>). <a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#replace-annotations-of-existing-document-post">Example</a>.</td>
-      </tr>
-      <tr>
-        <td><code>nativepdfv1-plus-annjson</code></td>
-        <td><p>Analogous to <em>default-plus-annjson</em>. Use it only when you want to import pre-annotated PDFs, if these were created using tagtog version <a href="updates.html#32020-w282-">3.2020-W28.2</a> or older versions. You can extract the native PDF version from the plain.html file associated to the PDF.</p></td>
       </tr>
     </table>
   </div>

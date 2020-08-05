@@ -23,6 +23,9 @@ notoc: true
   <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. <a href="documents.html#define-a-name">Documentation</a>.</span></li>
   <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
   <li class="new"><span markdown="1">(OnPremises) refactored script to [fix possible errors in documents](on_premises_README.html#problems-with-documents).</span></li>
+  <li class="doc"><span markdown="1">A lot of new API examples to perform regular operations with documents and annotations: [API documents](API_documents_v1.html).</span></li>
+  <li class="doc"><span markdown="1">New guide to export/import documents among projects or accounts: [Export/Import docs](documents.html#export-import-documents).</span></li>
+  <li class="doc"><span markdown="1">Cleaner documentation for input/output formats: [Input & Output](ioformats.html).</span></li>
 </ul>
 
 ---
@@ -30,7 +33,7 @@ notoc: true
 ## 3.2020-W31.2 👻
 _2020-08-02_
 
-<ul class="updates">  
+<ul class="updates">
   <li class="fix"><span markdown="1">Improved our internal html parser to work with and allow empty elements like `<p>&nbsp;</p>`. Now, those elements are just filtered out instead of the parser throwing a parsing exception.</span></li>
 </ul>
 

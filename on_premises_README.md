@@ -238,7 +238,40 @@ echo "0" > LATEST_VERSION
 ```
 
 
-### Wrong entity offsets on the display
+### Problems with documents
+
+#### Remove "zombie" documents
+
+On a few rare cases, the tagtog system might complain about some duplicate documents that are not findable anywhere. We call these "zombie" documents. They are the result of some hanging cache in our internal databases that was not completely removed due to some uncaught exceptions. The solution is to remove that hanging cache by running the follow script.
+
+First, to avoid any data loss, please [**backup your data**](#backups-how-and-where-the-data-is-stored).
+
+Then, run the script only to report about possible errors (not trying to fix them):
+
+```shell
+#
+# **PLEASE, FIRST BACKUP YOUR DATA**
+#
+
+export TAGTOG_FIX_DOCUMENTS_SCRIPT_MODE="ONLY_CHECK"
+
+./tagtog_on_premises fix_documents latest $TAGTOG_HOME
+```
+
+Finally, once you are sure about the errors and what you are doing, run the script to automatically fix the possible errors:
+
+```shell
+#
+# **PLEASE, FIRST BACKUP YOUR DATA**
+#
+
+export TAGTOG_FIX_DOCUMENTS_SCRIPT_MODE="CHECK_AND_FIX_AUTO"
+
+./tagtog_on_premises fix_documents latest $TAGTOG_HOME
+```
+
+<!-- Deactivated for now
+#### Wrong entity offsets on the display
 
 On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script.
 
@@ -250,6 +283,7 @@ To avoid any data loss, please first [**backup your data**](#backups-how-and-whe
 #
 ./tagtog_on_premises fix_documents latest $TAGTOG_HOME
 ```
+-->
 
 
 ### Lack of writing file access

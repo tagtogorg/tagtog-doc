@@ -1540,7 +1540,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
 <div class="two-third-col">
   <h2>Search documents in a project <code>GET</code></h2>
-  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
+  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics.</p>
   <p>Learn how to <strong>build search queries</strong> <a href="/search-queries.html">here</a>.</p>
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
@@ -1598,7 +1598,48 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   {% include message.html message='Search queries through the API return a response with the JSON <code>search response</code>. <a href="#search-response-format"> Documentation</a>' %}
   {% include message.html message='Use the search features to retrieve the progress of the annotation tasks.' %}
 </div>
+
+
 <div class="two-third-col">
+  <h4>Search response format</h4>
+  <p>Response format for search queries.</p>
+<div markdown="1">
+```javascript
+{
+  "version": "String: this format's version, e.g. 0.5.0",
+  "search": "String: user search query",
+  "totalFound": "Number: total number of documents that match the search query",
+  "pages": {
+    //the search is paginated
+    "current": "Number: paginated search's current page",
+    "previous": "Number: paginated search's previous page; -1 if current page == 0",
+    "next": "Number: paginated search's current page; -1 if current page is the last page",
+  }
+  "docs":
+  [
+    {
+      "id": "String: full tagtogID -- Use this to download the document",
+      "filename": "String: filename of originally uploaded file",
+      "header": "String: title if the document has a natural title or otherwise an excerpt of the text's start",
+      "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2017-02-23T08:31:40.874Z",
+      "anncomplete": "Boolean: status for the document's annotation completion",
+      "members_anncomplete": ["String Array: usernames of members who completed (confirmed) their annotations"],
+      "folder": "String: folder path where the document is located; e.g. `pool/mySubFolder`"
+    },
+    //next documents in the array of results...
+  ]
+}
+```
+</div>
+</div>
+<div class="one-third-col">
+
+</div>
+
+
+
+<div class="two-third-col">
+<h4>Examples: search using search queries</h4>
 
   <br/>
   <div id="tabs-container">
@@ -1687,46 +1728,12 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
 
 
 
-<div class="two-third-col">
-  <h3>Search response format</h3>
-  <p>Response format for search queries.</p>
-<div markdown="1">
-```javascript
-{
-  "version": "String: this format's version, e.g. 0.5.0",
-  "search": "String: user search query",
-  "totalFound": "Number: total number of documents that match the search query",
-  "pages": {
-    //the search is paginated
-    "current": "Number: paginated search's current page",
-    "previous": "Number: paginated search's previous page; -1 if current page == 0",
-    "next": "Number: paginated search's current page; -1 if current page is the last page",
-  }
-  "docs":
-  [
-    {
-      "id": "String: full tagtogID -- Use this to download the document",
-      "filename": "String: filename of originally uploaded file",
-      "header": "String: title if the document has a natural title or otherwise an excerpt of the text's start",
-      "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2017-02-23T08:31:40.874Z",
-      "anncomplete": "Boolean: status for the document's annotation completion",
-      "members_anncomplete": ["String Array: usernames of members who completed (confirmed) their annotations"],
-      "folder": "String: folder path where the document is located; e.g. `pool/mySubFolder`"
-    },
-    //next documents in the array of results...
-  ]
-}
-```
-</div>
-</div>
-<div class="one-third-col">
-
-</div>
 
 
 <div class="two-third-col">
   <h2>Get existing documents <code>GET</code></h2>
   <p>You can use the API to export documents. You need the id of the document to get it. If you don't have this id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
+  <p>Specify the <code>output</code> parameter to define the <a href="ioformats.html#output-formats">output format</a> (e.g. <code>ann.json</code>, <code>html</code>)</p>
 </div>
 <div class="two-third-col">
   <p><strong>Input Parameters</strong></p>
@@ -1793,6 +1800,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
 </div>
 
 <div class="two-third-col">
+  <h4>Examples: get the annotations of a document by document id</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -1865,6 +1873,63 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 </div>
 </div>
 
+
+
+<div class="two-third-col">
+  <h4>Examples: get the original document by document id</h4>
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-getdoc-orig">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example download the original document (format <code>orig</code>) given a document id. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
+<div id="tab-1-getdoc-orig" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'output':'orig'}
+response = requests.get(tagtogAPIUrl, params=params, auth=auth)
+if response.status_code == 200:
+    with open('mydoc.pdf', 'wb') as f:
+        f.write(responseGet.content)
+```
+</div>
+      </div>
+    </div>
+  </div>
+
+<div class="two-third-col">
+  <h4>Examples: get the html version of a document by document id</h4>
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-getdoc-html">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example download the HTML version of a document (format <code>html</code>) given a document id. The HTML follows the <a href="anndoc.html#plain-html">plain.html specification</a>, which is the text representation of the original document, used to calculate the offsets of the annotations.</p>
+<div id="tab-1-getdoc-html" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+docId = "aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':docId, 'output':'html'}
+response = requests.get(tagtogAPIUrl, params=params, auth=auth)
+if response.status_code == 200:
+    with open(docId + '.html', 'wb') as f:
+        f.write(responseGet.content)
+```
+</div>
+      </div>
+    </div>
+  </div>
+
 <div class="two-third-col">
   <h2>Delete documents <code>DELETE</code></h2>
 
@@ -1906,6 +1971,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 </div>
 
 <div class="two-third-col">
+  <h4>Examples: delete documents using a search query</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -2004,6 +2070,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
   <div>
     <br/>
+    <h4>Examples: delete a document by document id</h4>
     <div id="tabs-container">
       <ul class="tabs-menu">
         <li class="current"><a href="#tab-1-del">cURL</a></li>
@@ -2039,7 +2106,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
     <th>Description</th>
   </tr>
   <tr>
-    <td>"visualize"</td>
+    <td><code>visualize</code></td>
     <td>This is the default value. Choose to visualize the document resource returning the web page directly (<code>web</code> or <code>web-editor-only</code> if the User Agent is a recognized browser and a tagtog project information was given, i.e. web, or, respectively, no tagtog project was given, i.e., <code>web-editor-only</code>) or otherwise return the <code>weburl</code> (typically, the User Agent will be a command line program)</td>
   </tr>
   <tr>
@@ -2078,7 +2145,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
     </td>
   </tr>
   <tr>
-    <td>"ann.json"</td>
+    <td><code>ann.json</code></td>
     <td>Annotations part of the <a href="/anndoc.html#ann-json">anndoc format documentation</a>.</td>
   </tr>
   <tr>

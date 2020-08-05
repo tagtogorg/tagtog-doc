@@ -1395,22 +1395,6 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
       <td>"John"</td>
       <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
-    <tr>
-      <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
-      <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
-    </tr>
-    <tr>
-      <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
-      <td>
-        <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
-        <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
-      </td>
-    </tr>
   </table>
 
 </div>
@@ -1809,7 +1793,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
       <li><a href="#tab-3-getdoc">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">This example exports a tagtog document into <code>ann.json</code> format. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
+    <p class="code-desc">This example retrieves the annotations of a document in <code>ann.json</code> format. As the <code>member</code> parameter is not defined, the <code>master</code> version of the annotations is served. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
 <div id="tab-1-getdoc" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
@@ -1872,6 +1856,32 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 ```
 </div>
 </div>
+
+
+<div class="two-third-col">
+  <h4>Examples: get the member's annotations of a document by document id</h4>
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-getdoc-member">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example retrieves the annotations of tagtog document in <code>ann.json</code> format. A document can have different annotation versions, in this case we want the version of the annotations from the member <code>John</code></p>
+<div id="tab-1-getdoc" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'member': 'John', 'output':'ann.json'}
+response = requests.get(tagtogAPIUrl, params=params, auth=auth)
+print(response.text)
+```
+</div>
+      </div>
+    </div>
+  </div>
 
 
 

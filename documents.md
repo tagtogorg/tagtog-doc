@@ -100,3 +100,55 @@ toc: true
   {% include message.html message="If you are training a model within tagtog, only those documents marked as confirmed are used as <strong>training data</strong> for your machine learning model."%}
   {% include message.html message='Using the API, you can also <a href="/API_documents_v1.html#search-documents-in-a-project-get">retrieve which documents are complete</a>.' %}
 </div>
+
+<div class="two-third-col">
+  <h3>Export/Import documents</h3>
+  <p>When you import the settings of a project into another project, the content (the documents and their annotations) is not imported.</p>
+  <p>If you want to export documents from one project and import them into another project, you should follow the next steps in the GUI or API.</p>
+</div>
+<div class="one-third-col">
+</div>
+
+<div class="two-third-col">
+  <h4>GUI</h4>
+  <h5>One by one</h5>
+  <p>Download the original document + the annotations and import them into the new project. The caveat of this method is that, from the GUI, you can only import annotations in the <code>master</code> version</p>. Use the API if you want to export/import also the annotations from the members of the original project.
+</div>
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-1">1</span><strong>Download the original document</strong>. Open the document. In the toolbar, <a href="webeditor.html#view-output-mode">select the option to download</a> the <code>original</code> file.</p>
+</div>
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-2">2</span><strong>Download the annotations</strong>. In the toolbar, <a href="webeditor.html#view-output-mode">select the option to download</a> the annotations in <a href="anndoc.html#ann-json"><code>ann.json</code> format</a>.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message="From the GUI, if you upload an annotation file along with the content, only the <code>master</code> version gets annotated."%}
+</div>
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-3">3</span><strong>Import the original document and the annotations</strong>. Go to the new project, select the folder where you want to import the pre-annotated document and <a href="documents.html#upload-pre-annotated-documents">upload both files</a> (original document + annotations) using the content panel. You can also import multiple pairs of original document + annotations.</p>
+</div>
+<div class="two-third-col">
+  <h5>Download as a ZIP</h5>
+  <p>Download all your content (<a href="anndoc.html#plain-html">plain.html</a> + annotations) at once or download a filtered subset.</p>
+  <p>If you want to download only a subset of documents and annotations, you can use <a href="search-queries.html">search queries</a> to filter your documents.</p>
+</div>
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-1">1</span><strong>Download a ZIP file</strong>. <a href="projects.html#downloads">Download all your content or a filtered list</a>. Please take into consideration that the original document is not stored in the ZIP file, but only its HTML representation (plain.html).</p>
+</div>
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-2">2</span><strong>Import the original documents and the annotations</strong>. Go to the new project, select the folder where you want to import the pre-annotated documents and <a href="documents.html#upload-pre-annotated-documents">upload pairs of files</a> (original document or plain.html + annotations) using the content panel.</p>
+</div>
+
+
+<div class="two-third-col">
+  <h4>API</h4>
+  <p>Download the original document and the annotations and import them into the new project.</p>
+</div>
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-1">1</span><strong>Download the the original documents</strong>. Use a document id to download the original file: <a href="API_documents_v1.html#examples-get-the-original-document-by-document-id">Examples: get the original document by document id</a>, or iterate over a the API result of a search query: <a href="API_documents_v1.html#examples-search-using-search-queries">Examples: search using search queries</a>. For example, you can use the wildcard <code>*</code> to obtain all the document ids of a project.</p>
+</div>
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-2">2</span><strong>Download the annotations</strong>. Use the document id to download the annotations. The same document has multiple annotation versions. You can download the <code>master</code> version: <a href="API_documents_v1.html#examples-get-the-annotations-of-a-document-by-document-id">Examples: get the annotations of a document by document id</a>, or you can download the version from a project member: <a href="API_documents_v1.html#examples-get-the-members-annotations-of-a-document-by-document-i">Examples: get the member's annotations of a document by document id</a></p>
+</div>
+<div class="two-third-col">
+  <p class="numbered-item"><span class="number-3">3</span><strong>Import the original documents and the annotations</strong>. You can upload in the same request multiple pairs of original document + annotations: <a href="API_documents_v1.html#examples-import-a-list-of-pre-annotated-files">Examples: import a list of pre-annotated files</a>.</p>
+</div>

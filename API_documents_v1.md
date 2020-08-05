@@ -193,7 +193,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </div>
 
 <div class="one-third-col">
-  <p>Response <code>ann.json</code></p>
+  <p>Response, output=<code>ann.json</code></p>
 <div markdown="1">
 ```json
 {
@@ -246,7 +246,7 @@ print(response.text)
 </div>
 
 <div class="one-third-col">
-  <p>Response <code>null</code></p>
+  <p>Response, output=<code>null</code></p>
 <div markdown="1">
 ```json
 {
@@ -352,6 +352,7 @@ URLS
   {% include message.html message="<strong>Problems with URL encoding?</strong> encode URLs online <a href='https://meyerweb.com/eric/tools/dencoder/' title='MeyerWeb - URL Decoder/Encoder'>here</a>" %}
 </div>
 <div class="two-third-col">
+  <h4>Examples: import a web page</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -397,6 +398,52 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
   </div>
 
 
+<div class="two-third-col">
+  <h4>Examples: import a file by URL</h4>
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-url-file">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">The example below imports a file given by a URL. The content will be represented by the default format associated to the filetype, in this case <code>markdown</code>. You can import other type of files as PDF or txt.</p>
+<div id="tab-1-url-file" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'url':'https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/lectures/master/README.md'}
+response = requests.post(tagtogAPIUrl, params=params, auth=auth)
+print(response.text)
+```
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "README.md",
+    "filenames": ["README.md"],
+    "names": ["README.md"],
+    "rawInputSizeInBytes": 19680,
+    "docid": "aZkhd3qmP2BRoXhTOhUMjuxrz31i-README.md",
+    "tagtogID": "aZkhd3qmP2BRoXhTOhUMjuxrz31i-README.md",
+    "result": "created",
+    "parsedTextSizeInBytes": 19566
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
 
 
 {::comment}
@@ -482,7 +529,12 @@ FILES
 <div class="one-third-col">
 
 </div>
+
+
 <div class="two-third-col">
+
+  <h4>Examples: import a plain text file</h4>
+
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -528,7 +580,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     </div>
   </div>
 <div class="one-third-col">
-  <p>Response <code>ann.json</code></p>
+  <p>Response, output=<code>ann.json</code></p>
 <div markdown="1">
 ```json
 {
@@ -562,6 +614,178 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   "metas":{},
   "relations":[],
   "annotatable":{"parts":["s1h1","s1p1","s1p2","s1p3","s1p4","s1p5","s1p6","s1p7","s1p8","s1p9","s1p10","s1p11","s1p12","s1p13","s1p14","s1p15","s1p16","s1p17","s1p18","s1p19","s1p20","s1p21"]}
+}
+```
+</div>
+</div>
+
+
+<div class="two-third-col">
+
+  <h4>Examples: import a PDF file</h4>
+
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-2-file-pdf">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example imports a PDF file and retrieves the annotations in <code>ann.json</code>. Please notice we open the PDF file in binary format. You can extend it easily to upload multiple files.</p>
+<div id="tab-2-file-pdf" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
+#you can append more files to the list in case you want to upload multiple files
+files = [('file', open('files/document.pdf', 'rb'))]
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+print(response.text)
+```
+<p style="float:right">{% include github-link.html target="snippets/api_python_import_pdf.py" %}</p>
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response, output=<code>ann.json</code></p>
+  <div class="message">
+    In PDF is page is identified with a partId (e.g. s1v1 is for page 1, s2v1 is for page 2, etc.). In this response, there were no automatic annotations.
+  </div>
+<div markdown="1">
+```json
+{
+  "annotatable": {
+    "parts": ["s1v1", "s2v1", "s3v1", "s4v1", "s5v1", "s6v1", "s7v1", "s8v1", "s9v1", "s10v1", "s11v1", "s12v1", "s13v1", "s14v1"]
+  },
+  "anncomplete": false,
+  "sources": [],
+  "metas": {},
+  "entities": [],
+  "relations": []
+}
+```
+</div>
+</div>
+
+
+<div class="two-third-col">
+
+  <h4>Examples: import a markdown file</h4>
+
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-file-md">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example imports a markdown file. You can also import a txt file and force the format to <code>markdown</code>.</p>
+<div id="tab-1-file-md" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null'}
+files = [('file', open('files/readme.md'))]
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+print(response.text)
+```
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "README.md",
+    "filenames": ["README.md"],
+    "names": ["README.md"],
+    "rawInputSizeInBytes": 19680,
+    "docid": "aZkhd3qmP2BRoXhTOhUMjuxrz31i-README.md",
+    "tagtogID": "aZkhd3qmP2BRoXhTOhUMjuxrz31i-README.md",
+    "result": "created",
+    "parsedTextSizeInBytes": 19566
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+
+
+<div class="two-third-col">
+
+  <h4>Examples: import a list of files</h4>
+
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-2-filelist">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example imports a list of plain text files (it can be any other supported file type or a combination) and retrieves the result of the operation.</p>
+<div id="tab-2-filelist" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null'}
+files = [('file', open('files/item1.txt')), ('file', open('files/item2.txt')), ('file', open('files/item3.txt'))]
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+print(response.text)
+```
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 3,
+  "errors": 0,
+  "items": [{
+    "origid": "item1.txt",
+    "filenames": ["item1.txt"],
+    "names": ["item1.txt"],
+    "rawInputSizeInBytes": 128,
+    "docid": "aGMgsSYn0VJlSHWgGD4zwsIvOqDG-item1.txt",
+    "tagtogID": "aGMgsSYn0VJlSHWgGD4zwsIvOqDG-item1.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 128
+  }, {
+    "origid": "item2.txt",
+    "filenames": ["item2.txt"],
+    "names": ["item2.txt"],
+    "rawInputSizeInBytes": 53,
+    "docid": "aNkqrGOQX49FemNFJhx5GgPc9UAS-item2.txt",
+    "tagtogID": "aNkqrGOQX49FemNFJhx5GgPc9UAS-item2.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 53
+  }, {
+    "origid": "item3.txt",
+    "filenames": ["item3.txt"],
+    "names": ["item3.txt"],
+    "rawInputSizeInBytes": 41,
+    "docid": "azUkkxgJ7taVY7mzM71ciFKwp27i-item3.txt",
+    "tagtogID": "azUkkxgJ7taVY7mzM71ciFKwp27i-item3.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 39
+  }],
+  "warnings": []
 }
 ```
 </div>
@@ -656,6 +880,7 @@ PUBMED IDS
   </div>
 </div>
 <div class="two-third-col">
+  <h4>Examples: import a a list of PubMed articles by PMID</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -704,7 +929,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </div>
   </div>
 <div class="one-third-col">
-  <p>Response <code>ann.json</code></p>
+  <p>Response, output=<code>ann.json</code></p>
 <div markdown="1">
 ```json
 {
@@ -828,15 +1053,17 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   {% include message.html message='You can send multiple annotated documents at the same time. This means you always upload an even number of files.' %}
 </div>
 
+
+
 <div class="two-third-col">
-  <h4>Examples: import pre-annotated text</h4>
+  <h4>Examples: import pre-annotated plain text file</h4>
 
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-1-file">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code> to indicate we are importing pre-annotated content, the text content will be represented using the <a href="ioformats.html#input-types">default format</a>. In this case, the default format for plain text is <code>verbatim</code>. We define the ann.json directly in the code, but you could easily point to a existing ann.json file. Make sure the ann.json is well formated.</p>
+  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code> to indicate we are importing pre-annotated content, the text content will be represented using the <a href="ioformats.html#input-types">default format</a>. In this case, the default format for plain text is <code>verbatim</code>. Make sure the ann.json is well formated according to the <a href="anndoc.html#ann-json">ann.json specification</a>.</p>
   <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
   ```python
 
@@ -846,10 +1073,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
   params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
 
-  files = {
-    'ann': ('text.ann.json', '{"annotatable":{"parts":[]},"anncomplete":false,"sources":[],"metas":{"m_1":{"value":"optionA","confidence":{"state":"pre-added","who":["user:{{ page.api_username }}"],"prob":1}}},"entities":[],"relations":[]}'),
-    'plain': ('text.txt', open('./text.txt'))
-  }
+  files=[('file', open('files/text.txt')), ('file', open('files/text.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
@@ -859,18 +1083,87 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 </div>
 
 <div class="one-third-col">
-  <p>Response</p>
+  <p>Response, output=<code>null</code></p>
+  <div class="message">
+    Notice the result property is <code>created</code>, indicating that this is a new file in your project
+  </div>
 <div markdown="1">
 ```json
-{"ok":1,"errors":0,"items":[{"origid":"text","names":["text.txt","text.ann.json"],"rawInputSizeInBytes":208,"tagtogID":"asFec0QPFqIFaySbl.j0caWPSS9m-text","result":"created","parsedTextSizeInBytes":15}],"warnings":[]}
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "text.txt",
+    "filenames": ["text.txt", "text.ann.json"],
+    "names": ["text.txt", "text.ann.json"],
+    "rawInputSizeInBytes": 1048102,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-text.txt",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-text.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 81360
+  }],
+  "warnings": []
+}
 ```
 </div>
 </div>
 
 
 <div class="two-third-col">
+  <h4>Examples: import pre-annotated raw plain text</h4>
+
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-file">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to upload a preannotated document (plain text + ann.json) to tagtog. The format used is <code>default-plus-annjson</code> to indicate we are importing pre-annotated content, the text content will be represented using the <a href="ioformats.html#input-types">default format</a>. In this case, the default format for plain text is <code>verbatim</code>. Make sure the ann.json is well formated according to the <a href="anndoc.html#ann-json">ann.json specification</a>. In this example, we put directly in the code the plain text and the ann.json. It might be useful if you don't want to store this content on physical files.</p>
+  <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
+  ```python
+
+  import requests
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
+  #you could easily point to an existing ann.json file or text file. e.g.: ('file', open('files/text.ann.json'))
+  files=[('hellotag.txt', 'Hello tag world'), ('hellotag.ann.json', '{"annotatable": {"parts": ["s1v1"]},"anncomplete": false,"sources": [],"metas": {},"entities": [{"classId": "e_1","part": "s1v1","offsets": [{"start": 6,"text": "tag"}],"confidence": {"state": "pre-added","who": ["user:{{ page.api_username }}"],"prob": 1},"fields": {},"normalizations": {}}],"relations": []}')]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  ```
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "hellotag.txt",
+    "filenames": ["hellotag.ann.json", "hellotag.txt"],
+    "names": ["hellotag.ann.json", "hellotag.txt"],
+    "rawInputSizeInBytes": 307,
+    "docid": "awq0S.5DQRW3Cjpv4u1tJyXl.L3m-hellotag.txt",
+    "tagtogID": "awq0S.5DQRW3Cjpv4u1tJyXl.L3m-hellotag.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 15
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+
+
+<div class="two-third-col">
   <h4>Examples: import pre-annotated formatted text</h4>
-  <p>Follow this sample only if you want to import pre-annotated documents to tagtog when the input text was <code>formatted</code> when annotated</p>
+  <p>Follow this sample only if you want to import pre-annotated documents to tagtog when the input text was <code>formatted</code> when annotated.</p>
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
@@ -882,18 +1175,15 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   import requests
   import sys
 
-  plain_path = "formatted.txt"
-  annjson_path = "formatted.ann.json"
+  content_path = "files/formatted.txt"
+  annjson_path = "files/formatted.ann.json"
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
   params = {"project": "yourProjectName", "owner": "yourUsername", "format": "formatted-plus-annjson", "output": "null"}
 
-  files = [
-      ("plain", open(plain_path)),
-      ("ann.json", open(annjson_path))
-  ]
+  files=[('file', open(content_path)), ('file', open(annjson_path))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
@@ -905,10 +1195,137 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 </div>
 
 <div class="one-third-col">
-  <p>Response</p>
+  <p>Response, output=<code>null</code></p>
 <div markdown="1">
 ```json
-{"ok":1,"errors":0,"items":[{"origid":"formattedtext","filenames":["formatted.ann.json","formatted.txt"],"names":["formatted.ann.json","formatted.txt"],"rawInputSizeInBytes":860,"docid":"aAyUEVY5RCLzd8kdaOMg54fXXWj8-formatted","tagtogID":"aAyUEVY5RCLzd8kdaOMg54fXXWj8-formatted","result":"created","parsedTextSizeInBytes":126}],"warnings":[]}
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "formattedtext",
+    "filenames": ["formatted.ann.json", "formatted.txt"],
+    "names": ["formatted.ann.json", "formatted.txt"],
+    "rawInputSizeInBytes": 860,
+    "docid": "aAyUEVY5RCLzd8kdaOMg54fXXWj8-formatted",
+    "tagtogID": "aAyUEVY5RCLzd8kdaOMg54fXXWj8-formatted",
+    "result": "created",
+    "parsedTextSizeInBytes": 126
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+<div class="two-third-col">
+  <h4>Examples: import pre-annotated PDF</h4>
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to import a PDF along with its annotations. The format used is <code>default-plus-annjson</code> as we want the PDF to use the default format and import annotations for this file. The input files are in Github, you can find a link below.</p>
+  <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
+  ```python
+  import requests
+  import sys
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+  auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
+
+  files=[('file', open('files/article.pdf', 'rb')), ('file', open('files/article.ann.json'))]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  print(response.text)
+  ```
+  <p style="float:right">Files{% include github-link.html target="snippets/files" %}</p>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "article.pdf",
+    "filenames": ["article.ann.json", "article.pdf"],
+    "names": ["article.ann.json", "article.pdf"],
+    "rawInputSizeInBytes": 1048119,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "result": "created",
+    "parsedTextSizeInBytes": 83199
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+<div class="two-third-col">
+  <h4>Examples: import a list of pre-annotated files</h4>
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to import a list of pre-annotated files. The format used is <code>default-plus-annjson</code> as we want each file to use the default format and to be pre-annotated by an annotation file.</p>
+  <p class="code-desc">The expected input are pair of content+ann.json files.</p>
+  <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
+  ```python
+  import requests
+  import sys
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+  auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
+
+  files=[('file', open('article.pdf', 'rb')), ('file', open('article.ann.json')), ('file', open('item1.txt')), ('file', open('item1.ann.json'))]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  print(response.text)
+  ```
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 2,
+  "errors": 0,
+  "items": [{
+    "origid": "article.pdf",
+    "filenames": ["article.ann.json", "article.pdf"],
+    "names": ["article.ann.json", "article.pdf"],
+    "rawInputSizeInBytes": 1048119,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "result": "created",
+    "parsedTextSizeInBytes": 83199
+  }, {
+    "origid": "item1.txt",
+    "filenames": ["item1.ann.json", "item1.txt"],
+    "names": ["item1.ann.json", "item1.txt"],
+    "rawInputSizeInBytes": 461,
+    "docid": "aGMgsSYn0VJlSHWgGD4zwsIvOqDG-item1.txt",
+    "tagtogID": "aGMgsSYn0VJlSHWgGD4zwsIvOqDG-item1.txt",
+    "result": "updated",
+    "parsedTextSizeInBytes": 128
+  }],
+  "warnings": []
+}
 ```
 </div>
 </div>
@@ -1006,12 +1423,18 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
 <div class="two-third-col">
 
+  <h4>Examples: replace the annotations of an existing document using the original content</h4>
+  <p>As you can see, this example is basically the same as the example to upload pre-annotated plain text. The only difference is that the original file should already exist in your project.</p>
+</div>
+
+<div class="two-third-col">
+
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-1-file">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to replace the annotations of an existing document (content + ann.json) to tagtog.</p>
+  <p class="code-desc">This example shows how to replace the annotations of an existing document (content + ann.json) to tagtog. If the original file doesn't exist in your project, it will be created.</p>
   <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
   ```python
   import requests
@@ -1031,10 +1454,82 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 </div>
 
 <div class="one-third-col">
-  <p>Response</p>
+  <p>Response, output=<code>null</code></p>
+  <div class="message">
+    Notice the result property is <code>updated</code>, indicating that the file has been updated with new annotations
+  </div>
 <div markdown="1">
 ```json
-{"ok":1,"errors":0,"items":[{"origid":"text","names":["docidABCDEF.ann.json","docidABCDEF.plain.html"],"rawInputSizeInBytes":1038,"tagtogID":"docidABCDEF","result":"created","parsedTextSizeInBytes":29}],"warnings":[]}
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "mydoc.txt",
+    "filenames": ["mydoc.ann.json", "mydoc.txt"],
+    "names": ["mydoc.ann.json", "mydoc.txt"],
+    "rawInputSizeInBytes": 1048119,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-mydoc.txt",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-mydoc.txt",
+    "result": "updated",
+    "parsedTextSizeInBytes": 83199
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+
+<div class="two-third-col">
+  <h4>Examples: replace the annotations of an existing document using plain.html</h4>
+  <p>If it is more convenient, you can use the <code>plain.html</code> version of the original file (plain text representation of the file) to replace the annotations on the original file.</p>
+</div>
+
+<div class="two-third-col">
+
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-file">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to replace the annotations of an existing document (plain.html + ann.json) to tagtog. Please notice that the original file should already exist in your project. tagtog will automatically identify the original file and replace its annotations.</p>
+  <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
+  ```python
+  import requests
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'anndoc'}
+
+  files=[('file', open('files/article.html')), ('file', open('files/article.ann.json'))]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  ```
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "article.pdf",
+    "filenames": ["article2.ann.json", "article2.html"],
+    "names": ["article2.ann.json", "article2.html"],
+    "rawInputSizeInBytes": 86729,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "result": "updated",
+    "parsedTextSizeInBytes": 83199
+  }],
+  "warnings": []
+}
 ```
 </div>
 </div>
@@ -1342,7 +1837,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     </div>
   </div>
 <div class="one-third-col">
-  <p>Response <code>ann.json</code></p>
+  <p>Response, output=<code>ann.json</code></p>
 <div markdown="1">
 ```json
 {

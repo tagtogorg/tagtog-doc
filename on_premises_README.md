@@ -42,8 +42,8 @@ Your system must have installed:
 Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the following minimum requirements:
 
 * Memory:
-  * On-Premises Annotator only: **8GB RAM** (e.g. `t3a.large` on AWS, or `D2s_v3` on Azure); recommended **16GB RAM** (e.g. `t3a.xlarge` on AWS, or `D4s_v3` on Azure)
-  * On-Premises Annotator _+ ML_: **16GB RAM** (e.g. `r5a.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5a.xlarge` on AWS, or `E4s_v3` on Azure)
+  * OnPremises TEAM: **8GB RAM** (e.g. `t3a.large` on AWS, or `D2s_v3` on Azure); recommended **16GB RAM** (e.g. `t3a.xlarge` on AWS, or `D4s_v3` on Azure)
+  * OnPremises ENTERPRISE: **16GB RAM** (e.g. `r5a.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5a.xlarge` on AWS, or `E4s_v3` on Azure)
 * Disk: **50+ GB of disk space**
 
 
@@ -144,13 +144,29 @@ We recommend that you have periodic backups of this folder to avoid data losses.
 2. Copy the entire `$TAGTOG_HOME` folder (example: `cp -r $TAGTOG_HOME SOME_BACKUP_FOLDER`)
 3. Restart tagtog: (typically: `./tagtog_on_premises restart latest $TAGTOG_HOME`)
 
+
 ### Proxy
 
-The application supports http proxies and automatically recognizes your host variables `$http_proxy` and `$https_proxy` (either written in both all lower or all upper case).
+The application supports http proxies and automatically recognizes your environment variables: `$http_proxy`, `$https_proxy`, and `$no_proxy` (either written in both all lower or all upper case).
 
-**Important**: the port number must be explicitly written, regardless of whether the port is the default 80 for http or 443 for https. That is, always write something like: `export HTTP_PROXY=IP:PORT`.
+Note: the port number must be explicitly written, regardless of whether the port is the default 80 for http or 443 for https. That is, always write something like: `export HTTP_PROXY=IP:PORT`.
+
+To test that the tagtog script picks up your proxy information correctly, check the output of running:
+
+```shell
+./tagtog_on_premises extract_all_proxy_info_from_env
+```
 
 
+### Run tagtog on system startup
+
+To start tagtog at system boot, typically on Linux systems you need to add your desired commands to the file: `/etc/rc.local`
+
+Therefore, you will need to add to that file something like: `tagtog_on_premises start latest $TAGTOG_HOME`.
+
+You need to be aware of some caveats. [This is a nice checklist]([https://askubuntu.com/a/401090/159529) to verify that everything will work fine before actually rebooting your system.
+
+For example, you have to make sure to use full paths, the `$TAGTOG_HOME` environment variable must be defined or be accessible in your command/script, and you must be able to run the command as sudo / root. Also, since tagtog depends on docker, you must make sure that docker has been initialized before you run the tagtog start command.
 
 
 ## Update
@@ -224,10 +240,14 @@ echo "0" > LATEST_VERSION
 
 ### Wrong entity offsets on the display
 
-On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script:
+On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script.
+
+To avoid any data loss, please first [**backup your data**](#backups-how-and-where-the-data-is-stored).
 
 ```shell
-# PLEASE, BACKUP YOUR DATA FIRST
+#
+# **PLEASE, FIRST BACKUP YOUR DATA**
+#
 ./tagtog_on_premises fix_documents latest $TAGTOG_HOME
 ```
 
@@ -247,7 +267,7 @@ Otherwise, a quick solution is:
 
 ### ml0 tagtog service taking 100% of CPU
 
-Currently, in some cases On-Premises ML can consume too much CPU. You can verify that it's indeed the ml service (`ml0`) the one overloading the CPU by checking `docker stats`, and looking for the `tagtog_ml0_1` container.
+Currently, in some cases tagtog ML can consume too much CPU. You can verify that it's indeed the ml service (`ml0`) the one overloading the CPU by checking `docker stats`, and looking for the `tagtog_ml0_1` container.
 
 We are working on a stable fix. For now, you can quickly liberate the resources by restarting the `ml0` service only (not the entire tagtog app):
 

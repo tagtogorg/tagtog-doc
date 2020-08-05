@@ -6,11 +6,11 @@ id: updates
 notoc: true
 ---
 
-Here is the versioned list of all the new features and changes. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are running **tagtog On-Premises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
+📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are on **tagtog OnPremises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
 
-Have feedback? :heart: Report bugs and/or suggest improvements on our [:point_right:GitHub issues page:point_left:](https://github.com/tagtog/tagtog-doc/issues).
+❤️ Have feedback? Report bugs and suggestions at [support@tagtog.net](mailto:support@tagtog.net).
 
-Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://twitter.com/tagtog_net) !
+🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
 
 ---
 
@@ -18,11 +18,31 @@ Moreover, follow the latest updates on our [Twitter: @tagtog_net 🐦](https://t
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of <code>enum</code> type.</span></li>
-  <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI!. <a href="documents.html#distribute-to-a-group-of-users">Documentation</a>.</span></li>
+  <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI! <a href="documents.html#distribute-to-a-group-of-users">Documentation</a>.</span></li>
   <li class="new"><span markdown="1">Select the <a href="ioformats.html#input-formats">input format</a> directly in the GUI. For example, you can decide if you want tagtog to clean/format your content (<code>formatted</code>) or leave it as is (<code>verbatim</code>). <a href="documents.html#format">Documentation</a>.</span></li>
   <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. <a href="documents.html#define-a-name">Documentation</a>.</span></li>
   <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
 </ul>
+
+---
+
+## 3.2020-W31.2 👻
+_2020-08-02_
+
+<ul class="updates">  
+  <li class="fix"><span markdown="1">Improved our internal html parser to work with and allow empty elements like `<p>&nbsp;</p>`. Now, those elements are just filtered out instead of the parser throwing a parsing exception.</span></li>
+</ul>
+
+---
+
+## 3.2020-W31.1 🐼
+_2020-07-29_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `$no_proxy` or `$NO_PROXY`, to easily [configure your proxy](on_premises_README.html#proxy).</span></li>
+  <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
+</ul>
+
 ---
 
 ## 3.2020-W31.0 👊
@@ -415,7 +435,7 @@ _2019-10-06_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can edit your project description 📝🌈</span></li>
-  <li class="new"><span markdown="1">💁‍♂️Now when the master annotations are shown as default for an user, this is properly indicated with a warning (both on the GUI and [API](http://localhost:4000/API_documents_v1.html#get-existing-documents-get))</span></li>
+  <li class="new"><span markdown="1">💁‍♂️Now when the master annotations are shown as default for an user, this is properly indicated with a warning (both on the GUI and [API](API_documents_v1.html#get-existing-documents-get))</span></li>
   <li class="fix"><span markdown="1">Fixed wrongly showing _0_ as number of documents for many open datasets.</span></li>
   <li class="fix"><span markdown="1">(OnPremises) Fixed wrong redirection in some instances when deleting single documents on the GUI.</span></li>
 </ul>

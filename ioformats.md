@@ -143,8 +143,8 @@ toc: true
       </tr>
       <tr>
         <td><code>formatted</code></td>
-        <td><p>The <strong>content will formatted and cleaned</strong>. For example, one block is created by paragraph. Ideal if your content has different discourse units. For example: chat bots conversations.</p>
-        <p>From tagtog version <a href="updates.html#32020-w301-">3.2020-W30.1</a> backwards, this was the default mode when a user imported plain text. If you want to pre-annotate with annotations created in this period of time, please use <code>formatted-plus-annjson</code>. See below.</p></td>
+        <td><p>The <strong>content is formatted and cleaned</strong>. For example, for each paragraph, one content part is created . Ideal if your content has different discourse units. For example: chat bots conversations.</p>
+        <p>Up to the tagtog version <a href="updates.html#32020-w301-">3.2020-W30.1</a> this was the default mode when a user imported plain text. If you want to pre-annotate with annotations created in this period of time, please use <code>formatted-plus-annjson</code>. See below.</p></td>
       </tr>
       <tr>
         <td><code>markdown</code></td>
@@ -184,46 +184,125 @@ toc: true
 
 <div class="page-section">
   <h2>Output formats</h2>
-  <br/>
   <div class="two-third-col">
-    <table style="width:100%">
+    <p>Find below the available output formats in tagtog. Some of these outputs are available through the GUI and others through the API.</p>
+  </div>
+  <div class="two-third-col">
+    <table>
       <tr>
         <th>Format</th>
         <th>Description</th>
+        <th>Type</th>
+        <th>GUI</th>
+        <th>API</th>
       </tr>
       <tr>
         <td><code>ann.json</code></td>
-        <td>Only annotations. <a title="tagtog - ann doc" href="/anndoc.html">Official documentation</a></td>
+        <td>This is the official format for annotations. It supports all the annotation tasks in tagtog. <a title="tagtog - ann doc" href="/anndoc.html">Documentation</a>.</td>
+        <td>Only annotations</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>entitiestsv</code></td>
+        <td>Tabulated annotation format, with both plain content and annotations. It closely resembles the output by the Stanford NER tool. <a href="/EntitiesTsv">Documentation</a>.</td>
+        <td>Content + annotations</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>entitiesonlyclassestsv</code></td>
+        <td>Tabulated annotation format, with both <em>partial</em> plain content and annotations. Similar to <code>entitiestsv</code>. The non-labeled text is not included, and it supports <a href="webeditor.html#overlapping-text-annotations">overlapping entities</a>. <a href="/EntitiesOnlyClassesTsv">Documentation</a>.</td>
+        <td>Only annotations</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>plain.html</code>, <code>html</code>, <code>xml</code></td>
-        <td>No annotations provided within this format, only content.</td>
+        <td>This is the official representation of the content imported. Any piece of text/document you import to tagtog is converted to plain content and the annotation offsets always refer back to this format. No annotations provided within this format, only content. <a href="anndoc.html#plain-html">Documentation</a>.</td>
+        <td>Only content</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
         <td><code>txt</code></td>
         <td>Plain text. No annotations provided within this format, only content.</td>
+        <td>Only content</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
-        <td><code>entitiestsv</code></td>
-        <td><a href="/EntitiesTsv">EntitiesTsv documentation</a> (annotation format, with both plain content and annotations)</td>
+        <td><code>orig</code>, <code>original</code></td>
+        <td>The originally submitted file (e.g. the original html or pdf document that was imported to tagtog).</td>
+        <td>Only content</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
-        <td><code>entitiesonlyclassestsv</code></td>
-        <td><a href="/EntitiesOnlyClassesTsv">EntitiesOnlyClassesTsv documentation</a> (annotation format, with both <em>partial</em> plain content and annotations)</td>
+        <td><code>visualize</code></td>
+        <td>This is the default value. Choose to visualize the document resource returning the web page directly (<code>web</code> or <code>web-editor-only</code> if the User Agent is a recognized browser and a tagtog project information was given, i.e. web, or, respectively, no tagtog project was given, i.e., <code>web-editor-only</code>) or otherwise return the <code>weburl</code> (typically, the User Agent will be a command line program).</td>
+        <td>Visualization</td>
+        <td class="centered">✅</td>
+        <td class="centered">✅</td>
       </tr>
       <tr>
-        <td><code>pubannotation</code></td>
-        <td><span class="soon"><a href="http://www.pubannotation.org/docs/annotation-format/">Official documentation</a></span> (annotation format, with both plain content and annotations) Coming soon</td>
+        <td><code>web</code></td>
+        <td>Visual representation of the document and its annotations on the tagtog web interface (HTML page).</td>
+        <td>Visualization</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>web-editor-only</code></td>
+        <td>Analogously as <code>web</code>, yet without the information of a tagtog project, i.e., only the document editor layout. Useful in case you want to create iFrames in your web app.</td>
+        <td>Visualization</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>weburl</code></td>
+        <td>URL of the annotated document at tagtog web interface.</td>
+        <td>Visualization</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>csv</code></td>
+        <td>List of the project's documents and the status of their <code>master</code> (ground truth) annotation version. Currently, it only works with a search query (i.e. with the API parameter <code>search</code>).</td>
+        <td>Search</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
+      </tr>
+      <tr>
+        <td><code>null</code></td>
+        <td>Special output to signify that no document output is desired. A JSON response of the request will be returned instead. For example, when importing a document:
+<div markdown="1">
+```javascript
+{
+  "ok":1 //number of documents successfully changed,
+  "errors":0 //number of documents with errors,
+  "items": //list of documents changed
+  [
+    { "origid":"text",
+      "names":["text.txt"],
+      "tagtogID":"aOM6EFIvULWc6J.7MAYQB3V2sF84-text",
+      "result":"created"}
+  ],
+  "warnings":[]
+}
+```
+<p>You can use this parameter, for example, if you need the API to return you the id of each document imported.</p>
+</div>
+        </td>
+        <td>Operation result</td>
+        <td class="centered">❌</td>
+        <td class="centered">✅</td>
       </tr>
     </table>
-  </div>
-  <div class="one-third-col">
-
+    <p>All output formats are returned in their latest format versions. The output format versions cannot be chosen.</p>
   </div>
   <div class="two-third-col">
     <h2>Other formats?</h2>
-
     <p markdown="1">We are currently experimenting with other formats to ease your work. [Stay tuned :smirk::bird:](https://twitter.com/tagtog_net).</p>
   </div>
-
 </div>

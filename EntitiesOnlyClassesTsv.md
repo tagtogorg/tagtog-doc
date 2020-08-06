@@ -17,7 +17,7 @@ The document text's sections (parts) are still separated by new line.
 
 The format is best explained with an example 🙂 (contrast with that of [EntitiesTsv](EntitiesTsv)'s):
 
-* From the annotated _input_ document (note that it contains overlapping entities):
+* From the annotated _input_ document (note that it contains [overlapping entities](webeditor.html#overlapping-text-annotations)):
 ![Sample document](assets/img/EntityTsv/my-sample-overlapping-onlyclasses-tagtog.png)
 
 * The resulting _output_ is (the `»` character represents a tab, `·` a space, and `¬` a new line):

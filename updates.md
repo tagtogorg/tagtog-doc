@@ -24,7 +24,7 @@ notoc: true
   <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
   <li class="doc"><span markdown="1">A lot of new API examples to perform regular operations with documents and annotations: [API documents](API_documents_v1.html)</span></li>
   <li class="doc"><span markdown="1">New guide to export/import documents among projects or accounts: [Export/Import docs](documents.html#export-import-documents)</span></li>
-  <li class="doc"><span markdown="1">Cleaner documentation for input/output formats: [Input & Output](ioformats.html)</span></li>
+  <li class="doc"><span markdown="1">A more comprehensive and clean documentation for input/output formats: [Input & Output](ioformats.html)</span></li>
 
 </ul>
 
@@ -44,7 +44,7 @@ _2020-07-29_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `$no_proxy` or `$NO_PROXY`, to easily [configure your proxy](on_premises_README.html#proxy).</span></li>
-  <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
+  <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>
 </ul>
 
 ---
@@ -585,7 +585,7 @@ _2019-07-22_
 _2019-07-21_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">[New `verbatim` **format**](ioformats.html#distinguish-format-by-given-format-parameter) to send and have ANY file parsed as verbatim (pre-formatted). This allows you to preserve any indentation or extra spacing 🥳.</span></li>
+  <li class="new"><span markdown="1">[New `verbatim` **format**](ioformats.html#input-formats) to send and have ANY file parsed as verbatim (pre-formatted). This allows you to preserve any indentation or extra spacing 🥳.</span></li>
   <li class="new"><span markdown="1">Complimentary, [new `verbatim-plus-annjson` **format**](ioformats.html#input-formats) to have any file parsed as verbatim together with its annotation ann.json file.</span></li>
   <li class="new"><span markdown="1">Now `.log` files are also parsed by default in `verbatim` mode (like other programming languages, such as .py for python or .js for JavaScript).</span></li>
   <li class="fix"><span markdown="1">Fixed the parsing of `anndoc` documents that might contain the period `.` character in its file name (besides the file extension).</span></li>

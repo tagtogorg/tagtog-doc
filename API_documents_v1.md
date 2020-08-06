@@ -48,11 +48,11 @@ api_plain_text: "\"Hello, World!\""
 </div>
 <div class="two-third-col">
   <h2>Import and annotate text</h2>
-  <p>One of the most common scenarios using tagtog is to annotate text automatically. The API is the perfect way to automate this task.</p>
+  <p>One of the most common scenarios using tagtog is to import text to tagtog. The text will be automatically annotated if you are using any of the mechanisms to annotate text automatically (dictionaries, tagtog ML or your own ML). The API is the perfect way to automate document imports. To import annotated documents, go to the section: <a href="API_documents_v1.html#import-annotated-documents-post">Import annotated documents</a>.</p>
 
 
   <h3>Plain text <code>POST</code></h3>
-  <p>Annotates automatically plain text.</p>
+  <p>Import plain text.</p>
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -81,8 +81,8 @@ api_plain_text: "\"Hello, World!\""
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
-      <td>"ann.json"</td>
+      <td><code>visualize</code></td>
+      <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
@@ -97,26 +97,26 @@ api_plain_text: "\"Hello, World!\""
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>mySubFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>format</code></td>
       <td>Depends on the input type. <a href="ioformats.html#input-types">Check the default formats</a>.</td>
       <td><code>formatted</code></td>
-      <td>Force the <em>format</em> of the input. <a href="ioformats.html#distinguish-format-by-given-format-parameter">More info</a>.</td>
+      <td>Force the <em>format</em> of the input. <a href="ioformats.html#input-formats">More info</a>.</td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
@@ -139,7 +139,7 @@ api_plain_text: "\"Hello, World!\""
 
 <div class="two-third-col">
   <h4>Examples: send plain text</h4>
-  <p>By default, plain text imported to tagtog uses the <code>verbatim</code> <a href="ioformats.html#input-formats">input format</a>. You should use the default mode when you want to keep the same formatting as your input text.</p>
+  <p>By default, plain text imported to tagtog uses the <code>verbatim</code> <a href="ioformats.html#input-formats">input format</a>. You should use this default mode when you want to keep the same formatting as your input text.</p>
   <br/>
   <br/>
   <div id="tabs-container">
@@ -149,7 +149,7 @@ api_plain_text: "\"Hello, World!\""
       <li><a href="#tab-3-plain-text">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">The example below imports plain text and retrieve the automatic annotations in <code>ann.json</code> format. As you can see, we don't need to specify the <code>format</code> parameter.</p>
+    <p class="code-desc">The example below imports plain text and retrieve the annotations identified (if any) in <code>ann.json</code> format.</p>
 <div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
@@ -224,7 +224,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
       <li class="current"><a href="#tab-plain-text-formatted-python">Python</a></li>
     </ul>
     <div class="tab">
-      <p class="code-desc">This example imports plain text in <code>formatted</code> format and returns the result of the operation (<code>null</code> <code>output</code>).</p>
+      <p class="code-desc">This example imports plain text in <code>formatted</code> format and returns the result of the operation (output format <code>null</code>).</p>
 <div id="tab-plain-text-formatted-python" class="tab-content" style="display: block" markdown="1">
 ```python
 import requests
@@ -268,19 +268,13 @@ print(response.text)
 
 
 
-
-
-
-
-
-
 {::comment}
 URLS
 {:/comment}
 
 <div class="two-third-col">
   <h3>URL <code>POST</code> <code>GET</code></h3>
-  <p>Import the text content of a URL and annotate it.</p>
+  <p>Import the content of a URL (HTML or other file) and annotate it.</p>
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -291,7 +285,7 @@ URLS
     </tr>
     <tr>
       <td><code>url</code></td>
-      <td>"-"</td>
+      <td></td>
       <td class="break-all"><a href="https://en.wikipedia.org/wiki/Autonomous_cruise_control_system">https://en.wikipedia.org/wiki/Autonomous_cruise_control_system</a></td>
       <td>URL to annotate</td>
     </tr>
@@ -309,7 +303,7 @@ URLS
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
+      <td><code>visualize</code></td>
       <td><code>weburl</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
@@ -325,25 +319,31 @@ URLS
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>mySubFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
+    </tr>
+    <tr>
+      <td><code>filename</code></td>
+      <td>The original file name</td>
+      <td>Autonomous_cruise_control_system.html</td>
+      <td>Force the document's filename with this argument, otherwise the default is used. Note that the filename must end with the original extension. Otherwise, this is appended to your given name.</td>
     </tr>
   </table>
 
@@ -361,7 +361,7 @@ URLS
       <li><a href="#tab-3-url">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">The example below imports a URL and retrieves the web link for the annotated document. That link redirects to the annotated document at the tagtog app.</p>
+    <p class="code-desc">The example below imports a URL and as the output, it retrieves the web link for the annotated document. That link redirects to the annotated document at the tagtog web app. You can use other <a href="ioformats.html#output-formats">output formats</a>.</p>
 <div id="tab-1-url" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl'
@@ -481,8 +481,8 @@ FILES
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
-      <td>"ann.json"</td>
+      <td><code>visualize</code></td>
+      <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
@@ -497,31 +497,37 @@ FILES
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>myFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>format</code></td>
       <td></td>
-      <td>"verbatim"</td>
-      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
+      <td><code>verbatim</code></td>
+      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#input-formats">more info.</a></td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
+    </tr>
+    <tr>
+      <td><code>filename</code></td>
+      <td>The original file name</td>
+      <td>MyNewDoc.pdf</td>
+      <td>Force the document's filename with this argument, otherwise the default is used. Note that the filename must end with the original extension. Otherwise, this is appended to your given name.</td>
     </tr>
   </table>
 
@@ -542,7 +548,7 @@ FILES
       <li><a href="#tab-3-file">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">This example imports a file and retrieves the annotations in <code>ann.json</code>. You can extend it easily to upload multiple files.</p>
+    <p class="code-desc">This example imports a file and retrieves the annotations in <code>ann.json</code>.</p>
 <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
 ```python
 import requests
@@ -652,7 +658,7 @@ print(response.text)
 <div class="one-third-col">
   <p>Response, output=<code>ann.json</code></p>
   <div class="message">
-    In PDF is page is identified with a partId (e.g. s1v1 is for page 1, s2v1 is for page 2, etc.). In this response, there were no automatic annotations.
+    In PDF each page is identified with a part id (e.g. s1v1 is for page 1, s2v1 is for page 2, etc.). In this response, there were no automatic annotations.
   </div>
 <div markdown="1">
 ```json
@@ -835,8 +841,8 @@ PUBMED IDS
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
-      <td>"ann.json"</td>
+      <td><code>visualize</code></td>
+      <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
@@ -851,25 +857,31 @@ PUBMED IDS
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>myFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
+    </tr>
+    <tr>
+      <td><code>filename</code></td>
+      <td>The original file name</td>
+      <td>myPaper.xml</td>
+      <td>Force the document's filename with this argument, otherwise the default is used. Note that the filename must end with the original extension. Otherwise, this is appended to your given name.</td>
     </tr>
   </table>
 
@@ -997,7 +1009,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
+      <td><code>visualize</code></td>
       <td><code>null</code></td>
       <td></td>
     </tr>
@@ -1019,20 +1031,20 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>myFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
@@ -1369,7 +1381,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
+      <td><code>visualize</code></td>
       <td><code>null</code></td>
       <td></td>
     </tr>
@@ -1391,9 +1403,9 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
   </table>
 
@@ -1731,7 +1743,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     <tr>
       <td><code>output</code></td>
       <td><code>visualization</code></td>
-      <td>"ann.json"</td>
+      <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
     <tr>
@@ -1770,9 +1782,9 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
   </table>
 
@@ -2109,78 +2121,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 
 <div class="two-third-col">
 <h2><code>output</code> parameter</h2>
-<p>These are the different types of outputs supported by the API.</p>
-<table style="width:100%;" class="table-with-code">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><code>visualize</code></td>
-    <td>This is the default value. Choose to visualize the document resource returning the web page directly (<code>web</code> or <code>web-editor-only</code> if the User Agent is a recognized browser and a tagtog project information was given, i.e. web, or, respectively, no tagtog project was given, i.e., <code>web-editor-only</code>) or otherwise return the <code>weburl</code> (typically, the User Agent will be a command line program)</td>
-  </tr>
-  <tr>
-    <td><code>web</code></td>
-    <td>Visual representation of the document and its annotations on the tagtog web interface (HTML page).</td>
-  </tr>
-  <tr>
-    <td><code>web-editor-only</code></td>
-    <td>Analogously as <code>web</code>, yet without the information of a tagtog project, i.e., only the document editor layout. Useful in case you want to create iFrames in your web app.</td>
-  </tr>
-  <tr>
-    <td><code>weburl</code></td>
-    <td>URL of the annotated document at tagtog web interface.</td>
-  </tr>
-  <tr>
-    <td><code>null</code></td>
-    <td>Special output to signify that no document output is desired. A JSON response of the request will be returned instead. For example, when importing a document:
-<div markdown="1">
-```javascript
-{
-  "ok":1 //number of documents successfully changed,
-  "errors":0 //number of documents with errors,
-  "items": //list of documents changed
-  [
-    { "origid":"text",
-      "names":["text.txt"],
-      "tagtogID":"aOM6EFIvULWc6J.7MAYQB3V2sF84-text",
-      "result":"created"}
-  ],
-  "warnings":[]
-}
-```
-<p>You can use this parameter, for example, if you need the API to return you the id of each document imported.</p>
-
-</div>
-    </td>
-  </tr>
-  <tr>
-    <td><code>ann.json</code></td>
-    <td>Annotations part of the <a href="/anndoc.html#ann-json">anndoc format documentation</a>.</td>
-  </tr>
-  <tr>
-    <td><code>html</code>, <code>xml</code>, <code>plain.html</code></td>
-    <td>Content part of the <a href="/anndoc.html#plain-html">anndoc format documentation</a>.</td>
-  </tr>
-  <tr>
-    <td><code>text</code></td>
-    <td>Document content in plain text.</td>
-  </tr>
-  <tr>
-    <td><code>orig</code>, <code>original</code></td>
-    <td>The originally submitted file.</td>
-  </tr>
-  <tr>
-    <td><code>csv</code></td>
-    <td>List of the project's documents and their master (ground truth) annotation status. Currently it works only with parameter <code>search=&ast;</code></td>
-  </tr>
-</table>
-
-</div>
-<div class="one-third-col">
-  {% include message.html message="<strong>Note</strong>: all output formats are returned in their latest format versions. The format versions cannot be chosen." %}
-</div>
-
+<p><a href="ioformats.html#output-formats">Output formats supported by the API</a></p>
 
 
 <div class="two-third-col">

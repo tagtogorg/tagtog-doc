@@ -22,9 +22,10 @@ notoc: true
   <li class="new"><span markdown="1">Select the <a href="ioformats.html#input-formats">input format</a> directly in the GUI. For example, you can decide if you want tagtog to clean/format your content (<code>formatted</code>) or leave it as is (<code>verbatim</code>). <a href="documents.html#format">Documentation</a>.</span></li>
   <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. <a href="documents.html#define-a-name">Documentation</a>.</span></li>
   <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
-  <li class="doc"><span markdown="1">A lot of new API examples to perform regular operations with documents and annotations: [API documents](API_documents_v1.html)</span></li>
-  <li class="doc"><span markdown="1">New guide to export/import documents among projects or accounts: [Export/Import docs](documents.html#export-import-documents)</span></li>
-  <li class="doc"><span markdown="1">A more comprehensive and clean documentation for input/output formats: [Input & Output](ioformats.html)</span></li>
+  <li class="doc"><span markdown="1">A lot of new API examples to perform regular operations with documents and annotations: [API documents](API_documents_v1.html).</span></li>
+  <li class="doc"><span markdown="1">New guide to export/import documents among projects or accounts: [Export/Import docs](documents.html#export-import-documents).</span></li>
+  <li class="doc"><span markdown="1">A more comprehensive and clean documentation for input/output formats: [Input & Output](ioformats.html).</span></li>
+  <li class="doc"><span markdown="1">Including new roles in the supported annotation workflows: [Annotation flows](collaboration.html#annotation-flows-task-distribution).</span></li>
   <li class="new"><span markdown="1">(OnPremises) updated script to [fix possible errors in documents](on_premises_README.html#problems-with-documents).</span></li>
 </ul>
 

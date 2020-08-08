@@ -14,8 +14,7 @@ notoc: true
 
 ---
 
-## 3.2020-W32.2 🌶
-_2020-08-08_
+## ??? 🌶
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of `enum` type.</span></li>

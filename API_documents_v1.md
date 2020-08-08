@@ -48,11 +48,11 @@ api_plain_text: "\"Hello, World!\""
 </div>
 <div class="two-third-col">
   <h2>Import and annotate text</h2>
-  <p>One of the most common scenarios using tagtog is to annotate text automatically. The API is the perfect way to automate this task.</p>
+  <p>One of the most common scenarios using tagtog is to import text to tagtog. The text will be automatically annotated if you are using any of the mechanisms to annotate text automatically (dictionaries, tagtog ML or your own ML). The API is the perfect way to automate document imports. To import annotated documents, go to the section: <a href="API_documents_v1.html#import-annotated-documents-post">Import annotated documents</a>.</p>
 
 
   <h3>Plain text <code>POST</code></h3>
-  <p>Annotates automatically plain text.</p>
+  <p>Import plain text.</p>
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -81,8 +81,8 @@ api_plain_text: "\"Hello, World!\""
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
-      <td>"ann.json"</td>
+      <td><code>visualize</code></td>
+      <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
@@ -97,26 +97,26 @@ api_plain_text: "\"Hello, World!\""
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>mySubFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>format</code></td>
-      <td></td>
-      <td>"verbatim"</td>
-      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
+      <td>Depends on the input type. <a href="ioformats.html#input-types">Check the default formats</a>.</td>
+      <td><code>formatted</code></td>
+      <td>Force the <em>format</em> of the input. <a href="ioformats.html#input-formats">More info</a>.</td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
@@ -139,6 +139,7 @@ api_plain_text: "\"Hello, World!\""
 
 <div class="two-third-col">
   <h4>Examples: send plain text</h4>
+  <p>By default, plain text imported to tagtog uses the <code>verbatim</code> <a href="ioformats.html#input-formats">input format</a>. You should use this default mode when you want to keep the same formatting as your input text.</p>
   <br/>
   <br/>
   <div id="tabs-container">
@@ -148,7 +149,7 @@ api_plain_text: "\"Hello, World!\""
       <li><a href="#tab-3-plain-text">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">The example below imports plain text and retrieve the automatic annotations in <code>ann.json</code> format.</p>
+    <p class="code-desc">The example below imports plain text and retrieve the annotations identified (if any) in <code>ann.json</code> format.</p>
 <div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
@@ -192,7 +193,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   </div>
 
 <div class="one-third-col">
-  <p>Response <code>ann.json</code></p>
+  <p>Response, output=<code>ann.json</code></p>
 <div markdown="1">
 ```json
 {
@@ -214,24 +215,24 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
 
 <div class="two-third-col">
-  <h4>Examples: send plain text as verbatim</h4>
-  <p>This is when you need to work on the exactly the same formatting as your input text...</p>
+  <h4>Examples: send plain text and format it</h4>
+  <p>Use the <a href="ioformats.html#input-formats">input format</a> <code>formatted</code> to clean and format your input.</p>
   <br/>
 
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-plain-text-verbatim-python">Python</a></li>
+      <li class="current"><a href="#tab-plain-text-formatted-python">Python</a></li>
     </ul>
     <div class="tab">
-      <p class="code-desc">This example imports plain text in verbatim format (pre-formatted) and returns the result of the operation (<code>null</code> output).</p>
-<div id="tab-plain-text-verbatim-python" class="tab-content" style="display: block" markdown="1">
+      <p class="code-desc">This example imports plain text in <code>formatted</code> format and returns the result of the operation (output format <code>null</code>).</p>
+<div id="tab-plain-text-formatted-python" class="tab-content" style="display: block" markdown="1">
 ```python
 import requests
 
 tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
 auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
-params = {"project": "yourProjectName", "owner": "yourUsername", "format": "verbatim", "output": "null"}
+params = {"project": "yourProjectName", "owner": "yourUsername", "format": "formatted", "output": "null"}
 payload = {
     "text": "The film stars Leonardo DiCaprio, Brad Pitt and Margot Robbie"
 }
@@ -245,7 +246,7 @@ print(response.text)
 </div>
 
 <div class="one-third-col">
-  <p>Response <code>null</code></p>
+  <p>Response, output=<code>null</code></p>
 <div markdown="1">
 ```json
 {
@@ -267,14 +268,13 @@ print(response.text)
 
 
 
-
 {::comment}
 URLS
 {:/comment}
 
 <div class="two-third-col">
   <h3>URL <code>POST</code> <code>GET</code></h3>
-  <p>Import the text content of a URL and annotate it.</p>
+  <p>Import the content of a URL (HTML or other file) and annotate it.</p>
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
     <tr>
@@ -285,7 +285,7 @@ URLS
     </tr>
     <tr>
       <td><code>url</code></td>
-      <td>"-"</td>
+      <td></td>
       <td class="break-all"><a href="https://en.wikipedia.org/wiki/Autonomous_cruise_control_system">https://en.wikipedia.org/wiki/Autonomous_cruise_control_system</a></td>
       <td>URL to annotate</td>
     </tr>
@@ -303,7 +303,7 @@ URLS
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
+      <td><code>visualize</code></td>
       <td><code>weburl</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
@@ -319,25 +319,31 @@ URLS
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>mySubFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
+    </tr>
+    <tr>
+      <td><code>filename</code></td>
+      <td>The original file name</td>
+      <td>Autonomous_cruise_control_system.html</td>
+      <td>Force the document's filename with this argument, otherwise the default is used. Note that the filename must end with the original extension. Otherwise, this is appended to your given name.</td>
     </tr>
   </table>
 
@@ -346,6 +352,7 @@ URLS
   {% include message.html message="<strong>Problems with URL encoding?</strong> encode URLs online <a href='https://meyerweb.com/eric/tools/dencoder/' title='MeyerWeb - URL Decoder/Encoder'>here</a>" %}
 </div>
 <div class="two-third-col">
+  <h4>Examples: import a web page</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -354,7 +361,7 @@ URLS
       <li><a href="#tab-3-url">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">The example below imports a URL and retrieves the web link for the annotated document. That link redirects to the annotated document at the tagtog app.</p>
+    <p class="code-desc">The example below imports a URL and as the output, it retrieves the web link for the annotated document. That link redirects to the annotated document at the tagtog web app. You can use other <a href="ioformats.html#output-formats">output formats</a>.</p>
 <div id="tab-1-url" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl'
@@ -391,6 +398,52 @@ fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&o
   </div>
 
 
+<div class="two-third-col">
+  <h4>Examples: import a file by URL</h4>
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-url-file">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">The example below imports a file given by a URL. The content will be represented by the default format associated to the filetype, in this case <code>markdown</code>. You can import other type of files as PDF or txt.</p>
+<div id="tab-1-url-file" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'url':'https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/lectures/master/README.md'}
+response = requests.post(tagtogAPIUrl, params=params, auth=auth)
+print(response.text)
+```
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "README.md",
+    "filenames": ["README.md"],
+    "names": ["README.md"],
+    "rawInputSizeInBytes": 19680,
+    "docid": "aZkhd3qmP2BRoXhTOhUMjuxrz31i-README.md",
+    "tagtogID": "aZkhd3qmP2BRoXhTOhUMjuxrz31i-README.md",
+    "result": "created",
+    "parsedTextSizeInBytes": 19566
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
 
 
 {::comment}
@@ -412,7 +465,7 @@ FILES
       <td><code>files</code></td>
       <td></td>
       <td>text.txt, text2.txt</td>
-      <td>List of files to annotate. <a href="/ioformats.html#files">Supported input formats</a></td>
+      <td>List of files to annotate. <a href="/ioformats.html#files">Supported file types</a></td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -428,8 +481,8 @@ FILES
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
-      <td>"ann.json"</td>
+      <td><code>visualize</code></td>
+      <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
@@ -444,31 +497,37 @@ FILES
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>myFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>format</code></td>
       <td></td>
-      <td>"verbatim"</td>
-      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#distinguish-format-by-given-format-parameter">more info.</a></td>
+      <td><code>verbatim</code></td>
+      <td>Force how the <em>format</em> of the inputted text should be interpreted; <a href="ioformats.html#input-formats">more info.</a></td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
+    </tr>
+    <tr>
+      <td><code>filename</code></td>
+      <td>The original file name</td>
+      <td>MyNewDoc.pdf</td>
+      <td>Force the document's filename with this argument, otherwise the default is used. Note that the filename must end with the original extension. Otherwise, this is appended to your given name.</td>
     </tr>
   </table>
 
@@ -476,7 +535,12 @@ FILES
 <div class="one-third-col">
 
 </div>
+
+
 <div class="two-third-col">
+
+  <h4>Examples: import a plain text file</h4>
+
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -484,7 +548,7 @@ FILES
       <li><a href="#tab-3-file">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">This example imports a file and retrieves the annotations in <code>ann.json</code>. You can extend it easily to upload multiple files.</p>
+    <p class="code-desc">This example imports a file and retrieves the annotations in <code>ann.json</code>.</p>
 <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
 ```python
 import requests
@@ -522,7 +586,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     </div>
   </div>
 <div class="one-third-col">
-  <p>Response <code>ann.json</code></p>
+  <p>Response, output=<code>ann.json</code></p>
 <div markdown="1">
 ```json
 {
@@ -556,6 +620,178 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   "metas":{},
   "relations":[],
   "annotatable":{"parts":["s1h1","s1p1","s1p2","s1p3","s1p4","s1p5","s1p6","s1p7","s1p8","s1p9","s1p10","s1p11","s1p12","s1p13","s1p14","s1p15","s1p16","s1p17","s1p18","s1p19","s1p20","s1p21"]}
+}
+```
+</div>
+</div>
+
+
+<div class="two-third-col">
+
+  <h4>Examples: import a PDF file</h4>
+
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-2-file-pdf">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example imports a PDF file and retrieves the annotations in <code>ann.json</code>. Please notice we open the PDF file in binary format. You can extend it easily to upload multiple files.</p>
+<div id="tab-2-file-pdf" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
+#you can append more files to the list in case you want to upload multiple files
+files = [('file', open('files/document.pdf', 'rb'))]
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+print(response.text)
+```
+<p style="float:right">{% include github-link.html target="snippets/api_python_import_pdf.py" %}</p>
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response, output=<code>ann.json</code></p>
+  <div class="message">
+    In PDF each page is identified with a part id (e.g. s1v1 is for page 1, s2v1 is for page 2, etc.). In this response, there were no automatic annotations.
+  </div>
+<div markdown="1">
+```json
+{
+  "annotatable": {
+    "parts": ["s1v1", "s2v1", "s3v1", "s4v1", "s5v1", "s6v1", "s7v1", "s8v1", "s9v1", "s10v1", "s11v1", "s12v1", "s13v1", "s14v1"]
+  },
+  "anncomplete": false,
+  "sources": [],
+  "metas": {},
+  "entities": [],
+  "relations": []
+}
+```
+</div>
+</div>
+
+
+<div class="two-third-col">
+
+  <h4>Examples: import a markdown file</h4>
+
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-file-md">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example imports a markdown file. You can also import a txt file and force the format to <code>markdown</code>.</p>
+<div id="tab-1-file-md" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null'}
+files = [('file', open('files/readme.md'))]
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+print(response.text)
+```
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "README.md",
+    "filenames": ["README.md"],
+    "names": ["README.md"],
+    "rawInputSizeInBytes": 19680,
+    "docid": "aZkhd3qmP2BRoXhTOhUMjuxrz31i-README.md",
+    "tagtogID": "aZkhd3qmP2BRoXhTOhUMjuxrz31i-README.md",
+    "result": "created",
+    "parsedTextSizeInBytes": 19566
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+
+
+<div class="two-third-col">
+
+  <h4>Examples: import a list of files</h4>
+
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-2-filelist">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example imports a list of plain text files (it can be any other supported file type or a combination) and retrieves the result of the operation.</p>
+<div id="tab-2-filelist" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null'}
+files = [('file', open('files/item1.txt')), ('file', open('files/item2.txt')), ('file', open('files/item3.txt'))]
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+print(response.text)
+```
+</div>
+      </div>
+    </div>
+  </div>
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 3,
+  "errors": 0,
+  "items": [{
+    "origid": "item1.txt",
+    "filenames": ["item1.txt"],
+    "names": ["item1.txt"],
+    "rawInputSizeInBytes": 128,
+    "docid": "aGMgsSYn0VJlSHWgGD4zwsIvOqDG-item1.txt",
+    "tagtogID": "aGMgsSYn0VJlSHWgGD4zwsIvOqDG-item1.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 128
+  }, {
+    "origid": "item2.txt",
+    "filenames": ["item2.txt"],
+    "names": ["item2.txt"],
+    "rawInputSizeInBytes": 53,
+    "docid": "aNkqrGOQX49FemNFJhx5GgPc9UAS-item2.txt",
+    "tagtogID": "aNkqrGOQX49FemNFJhx5GgPc9UAS-item2.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 53
+  }, {
+    "origid": "item3.txt",
+    "filenames": ["item3.txt"],
+    "names": ["item3.txt"],
+    "rawInputSizeInBytes": 41,
+    "docid": "azUkkxgJ7taVY7mzM71ciFKwp27i-item3.txt",
+    "tagtogID": "azUkkxgJ7taVY7mzM71ciFKwp27i-item3.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 39
+  }],
+  "warnings": []
 }
 ```
 </div>
@@ -605,8 +841,8 @@ PUBMED IDS
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
-      <td>"ann.json"</td>
+      <td><code>visualize</code></td>
+      <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
   </table>
@@ -621,25 +857,31 @@ PUBMED IDS
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>myFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
+    </tr>
+    <tr>
+      <td><code>filename</code></td>
+      <td>The original file name</td>
+      <td>myPaper.xml</td>
+      <td>Force the document's filename with this argument, otherwise the default is used. Note that the filename must end with the original extension. Otherwise, this is appended to your given name.</td>
     </tr>
   </table>
 
@@ -650,6 +892,7 @@ PUBMED IDS
   </div>
 </div>
 <div class="two-third-col">
+  <h4>Examples: import a a list of PubMed articles by PMID</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -698,7 +941,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </div>
   </div>
 <div class="one-third-col">
-  <p>Response <code>ann.json</code></p>
+  <p>Response, output=<code>ann.json</code></p>
 <div markdown="1">
 ```json
 {
@@ -732,7 +975,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 <div class="two-third-col">
   <h3>Import annotated documents <code>POST</code></h3>
   <p>If you have annotated documents you want to import, you need to upload two files:</p>
-  <p class="list-item"><span class="list-item-1"></span><strong>The text or document</strong>. This can be a regular file (e.g. txt, xml, pdf, <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a>, etc.), plain text, etc. Check the supported <a title="tagtog - input formats" href="ioformats.html#input-formats">input formats</a></p>
+  <p class="list-item"><span class="list-item-1"></span><strong>The text or document</strong>. This can be a regular file (e.g. txt, xml, pdf, <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a>, etc.), plain text, etc. Check the supported <a title="tagtog - input types" href="ioformats.html#input-types">input types</a></p>
   <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
   <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc.pdf</code> and <code>mydoc.ann.json</code>.</p>
 
@@ -766,15 +1009,15 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
+      <td><code>visualize</code></td>
       <td><code>null</code></td>
       <td></td>
     </tr>
     <tr>
       <td><code>format</code></td>
+      <td>No default for pre-annotated documents, you should always set this parameter</td>
       <td><code>default-plus-annjson</code></td>
-      <td><code>anndoc</code></td>
-      <td>Format of the pre-annotated document. Remember that <code>anndoc</code> format requires the content as <code>plain.html</code>. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a></td>
+      <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - formats" href="ioformats.html#input-formats">Pre-annotated formats</a></td>
     </tr>
   </table>
 
@@ -788,25 +1031,31 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
     <tr>
       <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
+      <td><code>pool</code></td>
+      <td>myFolder</td>
       <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
     </tr>
     <tr>
       <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
+      <td><code>-</code></td>
+      <td>John,Laura</td>
       <td>
         <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
         <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
         <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
       </td>
+    </tr>
+    <tr>
+      <td><code>filename</code></td>
+      <td>Name of the file imported</td>
+      <td>myPlainTextFile.txt</td>
+      <td>Force the document's filename with this argument, otherwise the default is used. Note that the filename must end with the original file extension. Otherwise, this is appended to your given name.</td>
     </tr>
   </table>
 
@@ -816,15 +1065,17 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   {% include message.html message='You can send multiple annotated documents at the same time. This means you always upload an even number of files.' %}
 </div>
 
+
+
 <div class="two-third-col">
-  <h4>Examples: import pre-annotated text</h4>
+  <h4>Examples: import pre-annotated plain text file</h4>
 
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-1-file">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code>. In this case, we write the content of the ann.json file, but you could easily point to a existing ann.json file. Make sure the ann.json is well formated.</p>
+  <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code> to indicate we are importing pre-annotated content, the text content will be represented using the <a href="ioformats.html#input-types">default format</a>. In this case, the default format for plain text is <code>verbatim</code>. Make sure the ann.json is well formated according to the <a href="anndoc.html#ann-json">ann.json specification</a>.</p>
   <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
   ```python
 
@@ -834,10 +1085,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
   params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
 
-  files = {
-    'ann': ('text.ann.json', '{"annotatable":{"parts":[]},"anncomplete":false,"sources":[],"metas":{"m_1":{"value":"optionA","confidence":{"state":"pre-added","who":["user:{{ page.api_username }}"],"prob":1}}},"entities":[],"relations":[]}'),
-    'plain': ('text.txt', open('./text.txt'))
-  }
+  files=[('file', open('files/text.txt')), ('file', open('files/text.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
@@ -847,41 +1095,212 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 </div>
 
 <div class="one-third-col">
-  <p>Response</p>
+  <p>Response, output=<code>null</code></p>
+  <div class="message">
+    Notice the result property is <code>created</code>, indicating that this is a new file in your project
+  </div>
 <div markdown="1">
 ```json
-{"ok":1,"errors":0,"items":[{"origid":"text","names":["text.txt","text.ann.json"],"rawInputSizeInBytes":208,"tagtogID":"asFec0QPFqIFaySbl.j0caWPSS9m-text","result":"created","parsedTextSizeInBytes":15}],"warnings":[]}
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "text.txt",
+    "filenames": ["text.txt", "text.ann.json"],
+    "names": ["text.txt", "text.ann.json"],
+    "rawInputSizeInBytes": 1048102,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-text.txt",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-text.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 81360
+  }],
+  "warnings": []
+}
 ```
 </div>
 </div>
 
 
 <div class="two-third-col">
-  <h4>Examples: import pre-annotated verbatim text</h4>
+  <h4>Examples: import pre-annotated raw plain text</h4>
 
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-file">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to upload a preannotated document (plain text + ann.json) to tagtog. The format used is <code>default-plus-annjson</code> to indicate we are importing pre-annotated content, the text content will be represented using the <a href="ioformats.html#input-types">default format</a>. In this case, the default format for plain text is <code>verbatim</code>. Make sure the ann.json is well formated according to the <a href="anndoc.html#ann-json">ann.json specification</a>. In this example, we put directly in the code the plain text and the ann.json. It might be useful if you don't want to store this content on physical files.</p>
+  <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
+  ```python
+
+  import requests
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
+  #you could easily point to an existing ann.json file or text file. e.g.: ('file', open('files/text.ann.json'))
+  files=[('hellotag.txt', 'Hello tag world'), ('hellotag.ann.json', '{"annotatable": {"parts": ["s1v1"]},"anncomplete": false,"sources": [],"metas": {},"entities": [{"classId": "e_1","part": "s1v1","offsets": [{"start": 6,"text": "tag"}],"confidence": {"state": "pre-added","who": ["user:{{ page.api_username }}"],"prob": 1},"fields": {},"normalizations": {}}],"relations": []}')]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  ```
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "hellotag.txt",
+    "filenames": ["hellotag.ann.json", "hellotag.txt"],
+    "names": ["hellotag.ann.json", "hellotag.txt"],
+    "rawInputSizeInBytes": 307,
+    "docid": "awq0S.5DQRW3Cjpv4u1tJyXl.L3m-hellotag.txt",
+    "tagtogID": "awq0S.5DQRW3Cjpv4u1tJyXl.L3m-hellotag.txt",
+    "result": "created",
+    "parsedTextSizeInBytes": 15
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+
+
+<div class="two-third-col">
+  <h4>Examples: import pre-annotated formatted text</h4>
+  <p>Follow this sample only if you want to import pre-annotated documents to tagtog when the input text was <code>formatted</code> when annotated.</p>
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to send pre-formatted text along with its annotations. The format used is <code>verbatim-plus-annjson</code>. In this case, the input files are given from the command line. Samples of the files' contents are commented inline.</p>
+  <p class="code-desc">This example shows how to send text to be <code>formatted</code> along with its annotations. The format used is <code>formatted-plus-annjson</code>. The input files are in Github, you can find a link below.</p>
   <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
   ```python
   import requests
   import sys
 
-  plain_path = sys.argv[1]
-  annjson_path = sys.argv[2]
+  content_path = "files/formatted.txt"
+  annjson_path = "files/formatted.ann.json"
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
-  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "verbatim-plus-annjson", "output": "null"}
+  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "formatted-plus-annjson", "output": "null"}
 
-  files = [
-      ("plain", open(plain_path)),  # Example text: The film stars Leonardo DiCaprio, Brad Pitt and Margot Robbie
-      ("ann.json", open(annjson_path))  # Example ann.json: {"annotatable":{"parts":["s1v1"]},"anncomplete":false,"sources":[],"metas":{},"entities":[{"classId":"e_29","part":"s1v1","offsets":[{"start":15,"text":"Leonardo DiCaprio"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}},{"classId":"e_29","part":"s1v1","offsets":[{"start":34,"text":"Brad Pitt"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}},{"classId":"e_29","part":"s1v1","offsets":[{"start":48,"text":"Margot Robbie"}],"coordinates":[],"confidence":{"state":"pre-added","who":["user:yourUsername"],"prob":1},"fields":{},"normalizations":{}}],"relations":[]}
-  ]
+  files=[('file', open(content_path)), ('file', open(annjson_path))]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  print(response.text)
+  ```
+  <p style="float:right">Files{% include github-link.html target="snippets/files" %}</p>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "formattedtext",
+    "filenames": ["formatted.ann.json", "formatted.txt"],
+    "names": ["formatted.ann.json", "formatted.txt"],
+    "rawInputSizeInBytes": 860,
+    "docid": "aAyUEVY5RCLzd8kdaOMg54fXXWj8-formatted",
+    "tagtogID": "aAyUEVY5RCLzd8kdaOMg54fXXWj8-formatted",
+    "result": "created",
+    "parsedTextSizeInBytes": 126
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+<div class="two-third-col">
+  <h4>Examples: import pre-annotated PDF</h4>
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to import a PDF along with its annotations. The format used is <code>default-plus-annjson</code> as we want the PDF to use the default format and import annotations for this file. The input files are in Github, you can find a link below.</p>
+  <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
+  ```python
+  import requests
+  import sys
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+  auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
+
+  files=[('file', open('files/article.pdf', 'rb')), ('file', open('files/article.ann.json'))]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  print(response.text)
+  ```
+  <p style="float:right">Files{% include github-link.html target="snippets/files" %}</p>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "article.pdf",
+    "filenames": ["article.ann.json", "article.pdf"],
+    "names": ["article.ann.json", "article.pdf"],
+    "rawInputSizeInBytes": 1048119,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "result": "created",
+    "parsedTextSizeInBytes": 83199
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+<div class="two-third-col">
+  <h4>Examples: import a list of pre-annotated files</h4>
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to import a list of pre-annotated files. The format used is <code>default-plus-annjson</code> as we want each file to use the default format and to be pre-annotated by an annotation file.</p>
+  <p class="code-desc">The expected input are pair of content+ann.json files.</p>
+  <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
+  ```python
+  import requests
+  import sys
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+  auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+  params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
+
+  files=[('file', open('article.pdf', 'rb')), ('file', open('article.ann.json')), ('file', open('item1.txt')), ('file', open('item1.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
@@ -892,10 +1311,33 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 </div>
 
 <div class="one-third-col">
-  <p>Response</p>
+  <p>Response, output=<code>null</code></p>
 <div markdown="1">
 ```json
-{"ok":1,"errors":0,"items":[{"origid":"text.txt","names":["text.ann.json","text.txt"],"rawInputSizeInBytes":774,"tagtogID":"aumzCn3f5E9zDs4yihXZAipZjLx0-text.txt","result":"created","parsedTextSizeInBytes":62}],"warnings":[]}
+{
+  "ok": 2,
+  "errors": 0,
+  "items": [{
+    "origid": "article.pdf",
+    "filenames": ["article.ann.json", "article.pdf"],
+    "names": ["article.ann.json", "article.pdf"],
+    "rawInputSizeInBytes": 1048119,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "result": "created",
+    "parsedTextSizeInBytes": 83199
+  }, {
+    "origid": "item1.txt",
+    "filenames": ["item1.ann.json", "item1.txt"],
+    "names": ["item1.ann.json", "item1.txt"],
+    "rawInputSizeInBytes": 461,
+    "docid": "aGMgsSYn0VJlSHWgGD4zwsIvOqDG-item1.txt",
+    "tagtogID": "aGMgsSYn0VJlSHWgGD4zwsIvOqDG-item1.txt",
+    "result": "updated",
+    "parsedTextSizeInBytes": 128
+  }],
+  "warnings": []
+}
 ```
 </div>
 </div>
@@ -905,11 +1347,11 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 <div class="two-third-col">
   <h3>Replace annotations of existing document <code>POST</code></h3>
   <p>You should use two files:</p>
-  <p class="list-item"><span class="list-item-1"></span><strong>The <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></strong>. You can obtain this file by <a title="Get files - tagtog API" href="API_documents_v1.html#get-existing-documents-get">downloading it from the API</a> using the output <code>html</code>.</p>
+  <p class="list-item"><span class="list-item-1"></span><strong>The original content file or the <a title="tagtog - plain.html format" href="/anndoc.html#plain-html">plain.html</a></strong>.</p>
   <p class="list-item"><span class="list-item-2"></span><strong>The annotations</strong>. You pass this as an <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
-  <p><strong>They must have the same name, except for the file extensions</strong>. For example: <code>mydoc-3243hdsfk3.plain.html</code> and <code>mydoc-3243hdsfk3.ann.json</code>.</p>
-
-  <p>You can use the same API method you use to upload a single file to annotate: <a href="/API_documents_v1.html#files-post" title="Import files to tagtog">Files API POST</a>.</p>
+  <p>If you use the original content file, it must have the same name as the original. If you want to use the plain.html, it should use the same name as the original plain.html.</p>
+  <p><strong>Both files (content and annotations) should have the same name, except for the file extensions</strong>. For example: <code>mydoc.txt</code> and <code>mydoc.ann.json</code>. Or, if with a plain.html: mydoc-3243hdsfk3.plain.html and mydoc-3243hdsfk3.ann.json</p>
+  <p>If the original content doesn't exist in your project, the pre-annotated document will be also imported as new.</p>
 
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
@@ -922,8 +1364,8 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     <tr>
       <td><code>files</code></td>
       <td></td>
-      <td>docidABCDEF.plain.html, docidABCDEF.ann.json</td>
-      <td>You need to upload in the same request both: the plain.html (content) and the ann.json (annotations) files.</td>
+      <td>mydoc.txt, mydoc.ann.json</td>
+      <td>You need to upload in the same request both: the content file and the ann.json (annotations) files.</td>
     </tr>
     <tr>
       <td><code>project</code></td>
@@ -939,7 +1381,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>output</code></td>
-      <td>"visualize"</td>
+      <td><code>visualize</code></td>
       <td><code>null</code></td>
       <td></td>
     </tr>
@@ -947,7 +1389,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
       <td><code>format</code></td>
       <td><code>anndoc</code></td>
       <td><code>anndoc</code></td>
-      <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - Annotation input formats" href="ioformats.html#annotation-input-formats">Pre-annotated input formats</a> </td>
+      <td>Format of the pre-annotated document. List of supported pre-annotated formats: <a title="tagtog - Annotation input types" href="ioformats.html#input-formats">Pre-annotated formats</a> </td>
     </tr>
   </table>
 
@@ -961,25 +1403,9 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
-    </tr>
-    <tr>
-      <td><code>folder</code></td>
-      <td>"pool"</td>
-      <td>"pool"</td>
-      <td>Folder to store the document to. <a href="/documents.html">More information</a>. You can <a href="search-queries.html#search-by-folder">refer to a folder by index, full path, or simple name</a>.</td>
-    </tr>
-    <tr>
-      <td><code>distributeToMembers</code></td>
-      <td>"-"</td>
-      <td>"John,Laura"</td>
-      <td>
-        <p>Parameter that overrides the default <a href="projects.html#task-distribution">project task distribution settings</a>.</p>
-        <p>The format is a comma-separated list of the project user members to distribute to, and only those. Moreover, three special values exist: 1) <code>""</code> (the empty string) means to perform no task distribution whatsoever; 2) <code>"&ast;"</code> means to select all team members to distribute to; and 3) <code>"-"</code> means using the project default settings (same as actually not writing this parameter).</p>
-        <p>This parameter is useful to fine-control which documents should be distributed to which members, depending on some criteria. For example, you could distribute documents to different members depending on the upload folder.</p>
-      </td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
   </table>
 
@@ -993,12 +1419,18 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
 <div class="two-third-col">
 
+  <h4>Examples: replace the annotations of an existing document using the original content</h4>
+  <p>As you can see, this example is basically the same as the example to upload pre-annotated plain text. The only difference is that the original file should already exist in your project.</p>
+</div>
+
+<div class="two-third-col">
+
   <div id="tabs-container">
   <ul class="tabs-menu">
     <li class="current"><a href="#tab-1-file">Python</a></li>
   </ul>
   <div class="tab">
-  <p class="code-desc">This example shows how to replace the annotations of an existing document (plain.html + ann.json) to tagtog.</p>
+  <p class="code-desc">This example shows how to replace the annotations of an existing document (content + ann.json) to tagtog. If the original file doesn't exist in your project, it will be created.</p>
   <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
   ```python
   import requests
@@ -1006,9 +1438,9 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'anndoc'}
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
 
-  files = [('file', open('/annotated-docs/docidABCDEF.plain.html')), ('file', open('/annotated-docs/docidABCDEF.ann.json'))]
+  files = [('file', open('/annotated-docs/mydoc.txt')), ('file', open('/annotated-docs/mydoc.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
@@ -1018,10 +1450,82 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 </div>
 
 <div class="one-third-col">
-  <p>Response</p>
+  <p>Response, output=<code>null</code></p>
+  <div class="message">
+    Notice the result property is <code>updated</code>, indicating that the file has been updated with new annotations
+  </div>
 <div markdown="1">
 ```json
-{"ok":1,"errors":0,"items":[{"origid":"text","names":["docidABCDEF.ann.json","docidABCDEF.plain.html"],"rawInputSizeInBytes":1038,"tagtogID":"docidABCDEF","result":"created","parsedTextSizeInBytes":29}],"warnings":[]}
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "mydoc.txt",
+    "filenames": ["mydoc.ann.json", "mydoc.txt"],
+    "names": ["mydoc.ann.json", "mydoc.txt"],
+    "rawInputSizeInBytes": 1048119,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-mydoc.txt",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-mydoc.txt",
+    "result": "updated",
+    "parsedTextSizeInBytes": 83199
+  }],
+  "warnings": []
+}
+```
+</div>
+</div>
+
+
+<div class="two-third-col">
+  <h4>Examples: replace the annotations of an existing document using plain.html</h4>
+  <p>If it is more convenient, you can use the <code>plain.html</code> version of the original file (plain text representation of the file) to replace the annotations on the original file.</p>
+</div>
+
+<div class="two-third-col">
+
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-1-file">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc">This example shows how to replace the annotations of an existing document (plain.html + ann.json) to tagtog. Please notice that the original file should already exist in your project. tagtog will automatically identify the original file and replace its annotations.</p>
+  <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
+  ```python
+  import requests
+
+  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+
+  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'anndoc'}
+
+  files=[('file', open('files/article.html')), ('file', open('files/article.ann.json'))]
+
+  response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+  ```
+  </div>
+</div>
+</div>
+</div>
+
+<div class="one-third-col">
+  <p>Response, output=<code>null</code></p>
+<div markdown="1">
+```json
+{
+  "ok": 1,
+  "errors": 0,
+  "items": [{
+    "origid": "article.pdf",
+    "filenames": ["article2.ann.json", "article2.html"],
+    "names": ["article2.ann.json", "article2.html"],
+    "rawInputSizeInBytes": 86729,
+    "docid": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "tagtogID": "aqXHSykmx2gmA9AJXW38OAl0DnTe-article.pdf",
+    "result": "updated",
+    "parsedTextSizeInBytes": 83199
+  }],
+  "warnings": []
+}
 ```
 </div>
 </div>
@@ -1032,7 +1536,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
 <div class="two-third-col">
   <h2>Search documents in a project <code>GET</code></h2>
-  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics. Here we show you how to do it.</p>
+  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics.</p>
   <p>Learn how to <strong>build search queries</strong> <a href="/search-queries.html">here</a>.</p>
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
@@ -1090,7 +1594,48 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   {% include message.html message='Search queries through the API return a response with the JSON <code>search response</code>. <a href="#search-response-format"> Documentation</a>' %}
   {% include message.html message='Use the search features to retrieve the progress of the annotation tasks.' %}
 </div>
+
+
 <div class="two-third-col">
+  <h4>Search response format</h4>
+  <p>Response format for search queries.</p>
+<div markdown="1">
+```javascript
+{
+  "version": "String: this format's version, e.g. 0.5.0",
+  "search": "String: user search query",
+  "totalFound": "Number: total number of documents that match the search query",
+  "pages": {
+    //the search is paginated
+    "current": "Number: paginated search's current page",
+    "previous": "Number: paginated search's previous page; -1 if current page == 0",
+    "next": "Number: paginated search's current page; -1 if current page is the last page",
+  }
+  "docs":
+  [
+    {
+      "id": "String: full tagtogID -- Use this to download the document",
+      "filename": "String: filename of originally uploaded file",
+      "header": "String: title if the document has a natural title or otherwise an excerpt of the text's start",
+      "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2017-02-23T08:31:40.874Z",
+      "anncomplete": "Boolean: status for the document's annotation completion",
+      "members_anncomplete": ["String Array: usernames of members who completed (confirmed) their annotations"],
+      "folder": "String: folder path where the document is located; e.g. `pool/mySubFolder`"
+    },
+    //next documents in the array of results...
+  ]
+}
+```
+</div>
+</div>
+<div class="one-third-col">
+
+</div>
+
+
+
+<div class="two-third-col">
+<h4>Examples: search using search queries</h4>
 
   <br/>
   <div id="tabs-container">
@@ -1179,46 +1724,12 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
 
 
 
-<div class="two-third-col">
-  <h3>Search response format</h3>
-  <p>Response format for search queries.</p>
-<div markdown="1">
-```javascript
-{
-  "version": "String: this format's version, e.g. 0.5.0",
-  "search": "String: user search query",
-  "totalFound": "Number: total number of documents that match the search query",
-  "pages": {
-    //the search is paginated
-    "current": "Number: paginated search's current page",
-    "previous": "Number: paginated search's previous page; -1 if current page == 0",
-    "next": "Number: paginated search's current page; -1 if current page is the last page",
-  }
-  "docs":
-  [
-    {
-      "id": "String: full tagtogID -- Use this to download the document",
-      "filename": "String: filename of originally uploaded file",
-      "header": "String: title if the document has a natural title or otherwise an excerpt of the text's start",
-      "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2017-02-23T08:31:40.874Z",
-      "anncomplete": "Boolean: status for the document's annotation completion",
-      "members_anncomplete": ["String Array: usernames of members who completed (confirmed) their annotations"],
-      "folder": "String: folder path where the document is located; e.g. `pool/mySubFolder`"
-    },
-    //next documents in the array of results...
-  ]
-}
-```
-</div>
-</div>
-<div class="one-third-col">
-
-</div>
 
 
 <div class="two-third-col">
   <h2>Get existing documents <code>GET</code></h2>
   <p>You can use the API to export documents. You need the id of the document to get it. If you don't have this id, you can find it using the <a href="#search-documents-in-a-project-get">search</a> feature. You can export only 1 document within each request.</p>
+  <p>Specify the <code>output</code> parameter to define the <a href="ioformats.html#output-formats">output format</a> (e.g. <code>ann.json</code>, <code>html</code>)</p>
 </div>
 <div class="two-third-col">
   <p><strong>Input Parameters</strong></p>
@@ -1232,7 +1743,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     <tr>
       <td><code>output</code></td>
       <td><code>visualization</code></td>
-      <td>"ann.json"</td>
+      <td><code>ann.json</code></td>
       <td>The format of the output you want to be returned by the API. <a href="#output-parameter">API output formats</a>.</td>
     </tr>
     <tr>
@@ -1271,9 +1782,9 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     </tr>
     <tr>
       <td><code>member</code></td>
-      <td>"master"</td>
-      <td>"John"</td>
-      <td><p>Annotation version, either "master" (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
+      <td><code>master</code></td>
+      <td>John</td>
+      <td><p>Annotation version, either <code>master</code> (aka ground truth) or a project member's username (see <a href="/collaboration.html">multiple team members</a>).</p></td>
     </tr>
   </table>
 
@@ -1285,6 +1796,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
 </div>
 
 <div class="two-third-col">
+  <h4>Examples: get the annotations of a document by document id</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -1293,7 +1805,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
       <li><a href="#tab-3-getdoc">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">This example exports a tagtog document into <code>ann.json</code> format. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
+    <p class="code-desc">This example retrieves the annotations of a document in <code>ann.json</code> format. As the <code>member</code> parameter is not defined, the <code>master</code> version of the annotations is served. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
 <div id="tab-1-getdoc" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
@@ -1329,7 +1841,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
     </div>
   </div>
 <div class="one-third-col">
-  <p>Response <code>ann.json</code></p>
+  <p>Response, output=<code>ann.json</code></p>
 <div markdown="1">
 ```json
 {
@@ -1356,6 +1868,89 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 ```
 </div>
 </div>
+
+
+<div class="two-third-col">
+  <h4>Examples: get the member's annotations of a document by document id</h4>
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-getdoc-member">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example retrieves the annotations of tagtog document in <code>ann.json</code> format. A document can have different annotation versions, in this case we want the version of the annotations from the member <code>John</code></p>
+<div id="tab-1-getdoc" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'member': 'John', 'output':'ann.json'}
+response = requests.get(tagtogAPIUrl, params=params, auth=auth)
+print(response.text)
+```
+</div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="two-third-col">
+  <h4>Examples: get the original document by document id</h4>
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-getdoc-orig">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example download the original document (format <code>orig</code>) given a document id. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
+<div id="tab-1-getdoc-orig" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'output':'orig'}
+response = requests.get(tagtogAPIUrl, params=params, auth=auth)
+if response.status_code == 200:
+    with open('mydoc.pdf', 'wb') as f:
+        f.write(responseGet.content)
+```
+</div>
+      </div>
+    </div>
+  </div>
+
+<div class="two-third-col">
+  <h4>Examples: get the html version of a document by document id</h4>
+  <br/>
+  <div id="tabs-container">
+    <ul class="tabs-menu">
+      <li class="current"><a href="#tab-1-getdoc-html">Python</a></li>
+    </ul>
+    <div class="tab">
+    <p class="code-desc">This example download the HTML version of a document (format <code>html</code>) given a document id. The HTML follows the <a href="anndoc.html#plain-html">plain.html specification</a>, which is the text representation of the original document, used to calculate the offsets of the annotations.</p>
+<div id="tab-1-getdoc-html" class="tab-content" style="display: block" markdown="1">
+```python
+import requests
+
+tagtogAPIUrl = "{{ page.api_document_url }}"
+docId = "aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text"
+
+auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':docId, 'output':'html'}
+response = requests.get(tagtogAPIUrl, params=params, auth=auth)
+if response.status_code == 200:
+    with open(docId + '.html', 'wb') as f:
+        f.write(responseGet.content)
+```
+</div>
+      </div>
+    </div>
+  </div>
 
 <div class="two-third-col">
   <h2>Delete documents <code>DELETE</code></h2>
@@ -1398,6 +1993,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 </div>
 
 <div class="two-third-col">
+  <h4>Examples: delete documents using a search query</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -1496,6 +2092,7 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
 
   <div>
     <br/>
+    <h4>Examples: delete a document by document id</h4>
     <div id="tabs-container">
       <ul class="tabs-menu">
         <li class="current"><a href="#tab-1-del">cURL</a></li>
@@ -1524,78 +2121,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 
 <div class="two-third-col">
 <h2><code>output</code> parameter</h2>
-<p>These are the different types of outputs supported by the API.</p>
-<table style="width:100%;" class="table-with-code">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>"visualize"</td>
-    <td>This is the default value. Choose to visualize the document resource returning the web page directly (<code>web</code> or <code>web-editor-only</code> if the User Agent is a recognized browser and a tagtog project information was given, i.e. web, or, respectively, no tagtog project was given, i.e., <code>web-editor-only</code>) or otherwise return the <code>weburl</code> (typically, the User Agent will be a command line program)</td>
-  </tr>
-  <tr>
-    <td><code>web</code></td>
-    <td>Visual representation of the document and its annotations on the tagtog web interface (HTML page).</td>
-  </tr>
-  <tr>
-    <td><code>web-editor-only</code></td>
-    <td>Analogously as <code>web</code>, yet without the information of a tagtog project, i.e., only the document editor layout. Useful in case you want to create iFrames in your web app.</td>
-  </tr>
-  <tr>
-    <td><code>weburl</code></td>
-    <td>URL of the annotated document at tagtog web interface.</td>
-  </tr>
-  <tr>
-    <td><code>null</code></td>
-    <td>Special output to signify that no document output is desired. A JSON response of the request will be returned instead. For example, when importing a document:
-<div markdown="1">
-```javascript
-{
-  "ok":1 //number of documents successfully changed,
-  "errors":0 //number of documents with errors,
-  "items": //list of documents changed
-  [
-    { "origid":"text",
-      "names":["text.txt"],
-      "tagtogID":"aOM6EFIvULWc6J.7MAYQB3V2sF84-text",
-      "result":"created"}
-  ],
-  "warnings":[]
-}
-```
-<p>You can use this parameter, for example, if you need the API to return you the id of each document imported.</p>
-
-</div>
-    </td>
-  </tr>
-  <tr>
-    <td>"ann.json"</td>
-    <td>Annotations part of the <a href="/anndoc.html#ann-json">anndoc format documentation</a>.</td>
-  </tr>
-  <tr>
-    <td><code>html</code>, <code>xml</code>, <code>plain.html</code></td>
-    <td>Content part of the <a href="/anndoc.html#plain-html">anndoc format documentation</a>.</td>
-  </tr>
-  <tr>
-    <td><code>text</code></td>
-    <td>Document content in plain text.</td>
-  </tr>
-  <tr>
-    <td><code>orig</code>, <code>original</code></td>
-    <td>The originally submitted file.</td>
-  </tr>
-  <tr>
-    <td><code>csv</code></td>
-    <td>List of the project's documents and their master (ground truth) annotation status. Currently it works only with parameter <code>search=&ast;</code></td>
-  </tr>
-</table>
-
-</div>
-<div class="one-third-col">
-  {% include message.html message="<strong>Note</strong>: all output formats are returned in their latest format versions. The format versions cannot be chosen." %}
-</div>
-
+<p><a href="ioformats.html#output-formats">Output formats supported by the API</a></p>
 
 
 <div class="two-third-col">
@@ -1685,7 +2211,7 @@ python3 tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page
   </div>
 
   <h5>Upload files</h5>
-  <p>Parameters can be consulted using <code>tagtog.py upload --help</code>. You must include the parameter <code>--extension</code> or <code>-e</code> to indicate the extension of the files to upload (e.g. <code>txt</code>, <code>pdf</code>, etc.). These are the  <a href="/ioformats.html#input-formats">input files supported</a></p>
+  <p>Parameters can be consulted using <code>tagtog.py upload --help</code>. You must include the parameter <code>--extension</code> or <code>-e</code> to indicate the extension of the files to upload (e.g. <code>txt</code>, <code>pdf</code>, etc.). These are the  <a href="/ioformats.html#input-types">input files supported</a></p>
   <p>The example below upload the PDF documents of a folder, to your project.</p>
   <div markdown="1">
 ```shell

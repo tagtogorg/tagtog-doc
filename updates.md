@@ -17,10 +17,10 @@ notoc: true
 ## ??? 🌶
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of <code>enum</code> type.</span></li>
-  <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI! <a href="documents.html#distribute-to-a-group-of-users">Documentation</a>.</span></li>
-  <li class="new"><span markdown="1">Select the <a href="ioformats.html#input-formats">input format</a> directly in the GUI. For example, you can decide if you want tagtog to clean/format your content (<code>formatted</code>) or leave it as is (<code>verbatim</code>). <a href="documents.html#format">Documentation</a>.</span></li>
-  <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. <a href="documents.html#define-a-name">Documentation</a>.</span></li>
+  <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of `enum` type.</span></li>
+  <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI! [Documentation](documents.html#distribute-to-a-group-of-users).</span></li>
+  <li class="new"><span markdown="1">Select the [input format](ioformats.html#input-formats) directly on the GUI. For example, you can decide if you want tagtog to clean/format your content (`formatted`) or leave it exactly as it is (`verbatim`). [Documentation](documents.html#format).</span></li>
+  <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. [Documentation](documents.html#define-a-name).</span></li>
   <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
   <li class="doc"><span markdown="1">A lot of new API examples to perform regular operations with documents and annotations: [API documents](API_documents_v1.html).</span></li>
   <li class="doc"><span markdown="1">New guide to export/import documents among projects or accounts: [Export/Import docs](documents.html#export-import-documents).</span></li>

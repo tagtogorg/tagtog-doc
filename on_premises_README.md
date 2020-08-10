@@ -310,7 +310,7 @@ We are working on a stable fix. For now, you can quickly liberate the resources 
 docker-compose -f docker-compose.override.yaml --project-name tagtog restart ml0
 ```
 
-**Note**: you can add this to a crontab file to run this periodically (say every 12 or 24 hours). In this case, better write an absolute path to: `docker-compose.override.yaml`.
+**Note**: you can add the following cronjob to your crontab file to restart the ML periodically (say every 12 or 24 hours). In this case, better write an absolute path to: `docker-compose.override.yaml`.
 
 Example:
 

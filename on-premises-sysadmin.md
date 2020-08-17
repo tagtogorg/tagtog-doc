@@ -78,7 +78,7 @@ You can link to tagtog your **OpenID Connect Provider** (e.g. KeyCloak, Okta, AW
 
 ##### Setup OIDC
 
-First of all, you must define a client for tagtog in your OIDC Provider. This client's access type should be _"Confidential"_. This will generate a secret (a password) that you later pass on to tagtog.
+First of all, you must define a client for tagtog in your OIDC Provider. This client's access type should be _"Confidential"_. This will generate a secret (a password) that you later pass on to tagtog. Moreover, of course, the root URL of the tagtog client should be the domain of your OnPremises instance.
 
 Then, there are 3 variables that tagtog must know about your OIDC Provider and the client you just defined, namely:
 
@@ -101,7 +101,9 @@ export TAGTOG_JAVA_OPTS="${TAGTOG_JAVA_OPTS} \
 -Dapplication.auth.openid.clientId=tagtog \
 -Dapplication.auth.openid.clientSecret=64934247-ea33-4ec7-8e86-197ea9be3417 \
 -Dapplication.auth.openid.usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog= \
-" \
+"
+
+# Then, restart tagtog as normally
 ./tagtog_on_premises restart latest $TAGTOG_HOME
 ```
 

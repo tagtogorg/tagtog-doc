@@ -72,7 +72,7 @@ toc: true
   <p>If you want to force tagtog to represent the content using a specific format, you can select it here. For example, you can import plain text and set the format as <code>formatted</code> to clean and format the input.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='Using Markdown you can also use <a href="tagtogblocks.html">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.'%}
+  {% include message.html message='Using Markdown you can also use <a href="tagtog-blocks">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.'%}
 </div>
 <div class="two-third-col">
   <h5>Distribute to a group of users</h5>

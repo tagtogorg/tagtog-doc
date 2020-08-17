@@ -17,7 +17,7 @@ notoc: true
 ## ??? 🧱
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Using Markdown you can use the new <strong>tagtog blocks</strong> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc. Check it out! <a href="tagtogblocks.html">Documentation</a></span></li>
+  <li class="new"><span markdown="1">Using Markdown you can use the new **tagtog blocks** to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc. [Check it out!](tagtog-blocks)</span></li>
 </ul>
 
 ---

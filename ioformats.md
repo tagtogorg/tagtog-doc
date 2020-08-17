@@ -65,7 +65,7 @@ toc: true
       <tr>
         <td><code>md</code> (Markdown)</td>
         <td><p><span markdown="1">Any Markdown file, supporting a subset of the CommonMark spec. [Go to documentation](MarkdownFileParsing).</span></p>
-            <p>Using Markdown you can also use <a href="tagtogblocks.html">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.</p>
+            <p>Using Markdown you can also use <a href="tagtog-blocks">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.</p>
         </td>
         <td><code>markdown</code></td>
       </tr>

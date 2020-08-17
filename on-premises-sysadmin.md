@@ -138,7 +138,7 @@ curl -u LICENSE_NAME:LICENSE_KEY -X POST -H "Content-Type: application/json" '{{
 
 <div id="tab_api_request_auth_token_httpie" class="tab-content" markdown="1">
 ```shell
-http --verify no --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{{ page.request_auth_token_endpoint }}' toUsername=yourUsername useOnce:=false
+http --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{{ page.request_auth_token_endpoint }}' toUsername=yourUsername useOnce:=false
 # Example output: 6f0d-90c2386a-8a33-4ad1-bd19-d4d35ad06f96
 ```
 </div>

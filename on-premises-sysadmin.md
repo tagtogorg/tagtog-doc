@@ -10,6 +10,7 @@ request_auth_token_endpoint: /-sysadmin/request-auth-token
 ---
 
 <div class="two-third-col" markdown="1">
+
 ## Introduction
 
 In OnPremises instances, use the <strong>SysAdmin page</strong> to perform management tasks at the system level.
@@ -161,7 +162,9 @@ http --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{{ page.reque
 
 
 <div class="two-third-col" markdown="1">
+
 ##### How to use an auth token
+
 Once you have an auth <code>token</code>, use it in a simple GET request to login with the associated-granted user. To the request also add a <code>redirectTo</code> (<a href="https://meyerweb.com/eric/tools/dencoder/">url-encoded</a>) parameter to indicate where to redirect to. You must add these parameters to the <code>/</code> (root endpoint) of your tagtog's installation domain.
 
 Example: `{{ page.tagtog_domain }}/?redirectTo=https%3A%2F%2Fwww.tagtog.net%2F-datasets&token=bbfd-33878148-6062-4934-a507-af4962753c8f`

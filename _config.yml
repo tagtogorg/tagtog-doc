@@ -49,10 +49,10 @@ sidebar_toc:
       - anndoc
       - dictionaries
 
-  - name: On Premises
+  - name: OnPremises
     pages:
       - on_premises_readme
-      - sysadmin-premises
+      - sysadmin-onpremises
 
 
 author:

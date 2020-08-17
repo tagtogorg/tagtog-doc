@@ -20,6 +20,7 @@ Only-text actual content is supported; in particular:
 * headings
 * paragraphs
 * code blocks (both within back ticks or indented)
+* tagtog blocks (For predefined annotation modules: question answering, tweets, annotator tasks, chatbot conversations, etc.). <a href="tagtog-blocks">Documentation</a>.
 * images (not inline)
 * lists (both unordered, ordered, and nested)
 

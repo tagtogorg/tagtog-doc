@@ -40,9 +40,7 @@ toc: true
   <p>If you have pre-annotated documents, you can upload them directly to tagtog. You will need these two files:</p>
 
   <p class="list-item"><span class="list-item-1"></span><strong>The file with the text content</strong>. The file type should be one of our supported <a title="tagtog - Input types" href="ioformats.html#input-types">input types</a>.</p>
-  <p class="list-item"><span class="list-item-2"></span><strong>The file with the annotations</strong>. Currently, the only supported format for pre-annotated content is the
-
-  <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
+  <p class="list-item"><span class="list-item-2"></span><strong>The file with the annotations</strong>. Currently, the only supported format for pre-annotated content is the <code><a title="tagtog - ann.json format" href="/anndoc.html#ann-json">ann.json</a></code>.</p>
   <p><strong>Please remember to name both files the same, except for the extension</strong>. For example: <code>mydoc.pdf</code> and <code>mydoc.ann.json</code>. You can upload multiple pre-annotated documents in a single request. For example, 5 text files and 5 annotation files.</p>
   <p>Please check the <a title="tagtog - API" href="/API_documents_v1.html">API</a> for more options as replacing existing annotations.</p>
 </div>
@@ -74,6 +72,7 @@ toc: true
   <p>If you want to force tagtog to represent the content using a specific format, you can select it here. For example, you can import plain text and set the format as <code>formatted</code> to clean and format the input.</p>
 </div>
 <div class="one-third-col">
+  {% include message.html message='Using Markdown you can also use <a href="tagtog-blocks">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.'%}
 </div>
 <div class="two-third-col">
   <h5>Distribute to a group of users</h5>

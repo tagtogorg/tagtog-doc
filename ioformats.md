@@ -64,7 +64,9 @@ toc: true
       </tr>
       <tr>
         <td><code>md</code> (Markdown)</td>
-        <td><span markdown="1">Any markdown file, supporting a subset of the CommonMark spec. [Go to documentation](MarkdownFileParsing).</span></td>
+        <td><p><span markdown="1">Any Markdown file, supporting a subset of the CommonMark spec. [Go to documentation](MarkdownFileParsing).</span></p>
+            <p>Using Markdown you can also use <a href="tagtog-blocks">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.</p>
+        </td>
         <td><code>markdown</code></td>
       </tr>
       <tr>
@@ -142,13 +144,13 @@ toc: true
         <td>Parsed as already pre-formatted. <strong>No transformation is done at all to the given content</strong>. This is ideal, for instance, for files that contain arbitrary indentation or white spaces. It creates one single block with the whole the content. It is the simpler option if you are dealing with plain text or simple text files. <a href="API_documents_v1.html#examples-send-plain-text-as-verbatim">Example</a>.</td>
       </tr>
       <tr>
+        <td><code>markdown</code></td>
+        <td>The content is expected to follow the <a href="MarkdownFileParsing.html">markdown syntax</a>. The content will be formatted and visualized as markdown (e.g. you can include images, different sections, lists, code blocks, etc.).</td>
+      </tr>
+      <tr>
         <td><code>formatted</code></td>
         <td><p>The <strong>content is formatted and cleaned</strong>. For example, for each paragraph, one content part is created . Ideal if your content has different discourse units. For example: chat bots conversations.</p>
         <p>Up to the tagtog version <a href="updates.html#32020-w301-">3.2020-W30.1</a> this was the default mode when a user imported plain text. If you want to pre-annotate with annotations created in this period of time, please use <code>formatted-plus-annjson</code>. See below.</p></td>
-      </tr>
-      <tr>
-        <td><code>markdown</code></td>
-        <td>The content is expected to follow the <a href="MarkdownFileParsing.html">markdown syntax</a>. The content will be formatted and visualized as markdown (e.g. you can include images, different sections, lists, code blocks, etc.).</td>
       </tr>
       <tr>
         <td rowspan="4">Pre-annotated content</td>

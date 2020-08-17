@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## 3.2020-W34.0 🧱
+_2020-08-17_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Using Markdown you can use the new **tagtog blocks** to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc. [Check it out!](tagtog-blocks)</span></li>
+</ul>
+
+---
+
 ## 3.2020-W32.3 🌶
 _2020-08-08_
 

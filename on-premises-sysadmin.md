@@ -64,10 +64,13 @@ In OnPremises instances, use the <strong>SysAdmin page</strong> to perform manag
 </div>
 
 <div class="two-third-col" markdown="1">
+
 ### Single Sign-On (SSO)
+
 </div>
 
 <div class="two-third-col" markdown="1">
+
 ### OpenID Connect
 
 ...

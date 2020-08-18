@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 🤝
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">(OnPremises) Some installations had problems when updating tagtog (wrong license expirations). This is now solved.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W34.0 🧱
 _2020-08-17_
 

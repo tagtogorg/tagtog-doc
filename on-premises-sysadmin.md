@@ -11,14 +11,14 @@ request_auth_token_endpoint: /-sysadmin/request-auth-token
 
 <div class="two-third-col" markdown="1">
 
-## Introduction
+<br>
 
-In OnPremises instances, use the <strong>SysAdmin page</strong> to perform management tasks at the system level.
+Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets you manage tasks at the system level.
 </div>
 
 <div class="two-third-col">
   <h2>How to access</h2>
-  <p>Go to your root domain set for tagtog (you probably use directly the IP or a custom domain) and access <code>/-sysadmin</code> relative path. For example: <code>https://nlp.cia.com/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
+  <p>Go to your root domain set for tagtog (either an IP or a custom domain) and access <code>/-sysadmin</code> relative path. For example: <code>https://example.org/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
   <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the subscription license name</p>
   <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the subscription license key</p>
 
@@ -30,18 +30,17 @@ In OnPremises instances, use the <strong>SysAdmin page</strong> to perform manag
   </div>
 </div>
 
-<div class="two-third-col">
-  <h2>Features</h2>
-  <h3>User Management</h3>
+<div class="two-third-col">  
+  <h2>User Management</h2>
   <p>The admin panel displays a list of the users registered in the instance. You can:</p>
   <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: generate a registration link to share with others or to use oneself</p>
   <p class="list-item" markdown="1"><span class="list-item-2"></span>**Edit accounts**: edit the users' accounts main information, namely, username, email, and password. 📝</p>
-  <p class="list-item" markdown="1"><span class="list-item-3"></span>**Remove old accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
+  <p class="list-item" markdown="1"><span class="list-item-3"></span>**Remove accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
   <p class="list-item" markdown="1"><span class="list-item-4"></span>**Revoke all auth tokens**: remove all existing token-based logins and registration links</p>
 </div>
 <div class="two-third-col">
-  <h3>Roles and permissions</h3>
-  <p>In the admin panel you can find a permission matrix where you can check/modify the permissions of existing roles or to create custom roles. After, these roles can be assigned to users at project level.</p>
+  <h2>Roles and permissions</h2>
+  <p>In the admin panel you can find a permission matrix where you can check &amp; modify the permissions of existing roles or to create custom roles. After, these roles can be assigned to users at project level.</p>
   <p>All the <strong>permissions are explained here</strong>: <a title="tagtog - Multi-user annotation - permissions" href="collaboration.html#permissions">Multi-user annotation - permissions</a></p>
   <p>By default there are three roles in the system: <code>admin</code>, <code>supercurator</code> and <code>reader</code>. The permissions for these default roles cannot be modified. Admin role cannot be removed (the creator of a project, the owner, will always have this role assigned). The roles supercurator and reader can be removed. If you want to modify their permissions, you should remove the role, and create a new role with the same name.</p>
   <p>To create a new role simply click on <i>Add new role</i>. To change a permission, you should click on the corresponding checkbox. If you hover on the permission name or on a role name, a description of the permission or the role will show up.</p>
@@ -66,24 +65,24 @@ In OnPremises instances, use the <strong>SysAdmin page</strong> to perform manag
 
 <div class="two-third-col" markdown="1">
 
-### Single Sign-On (SSO)
+## Single Sign-On (SSO)
 
 </div>
 
 <div class="two-third-col" markdown="1">
 
-#### OpenID Connect (OIDC)
+### OpenID Connect (OIDC)
 
 You can link to tagtog your **OpenID Connect Provider** (e.g. KeyCloak, Okta, AWS Cognito, Microsoft, Salesforce.com, etc.). With this, your users will be able to login into tagtog seamlessly (with the authentication mechanism they already know).
 
-##### Setup OIDC
+#### Setup OIDC
 
-First of all, you must define a client for tagtog in your OIDC Provider. This client's access type should be _"Confidential"_. This will generate a secret (a password) that you later pass on to tagtog. Moreover, of course, the root URL of the tagtog client should be the domain of your OnPremises instance.
+First of all, you must define a client for tagtog in your OIDC Provider. This client's access type should be _"Confidential"_. This will generate a secret (a password) that you later pass on to tagtog. Moreover, of course, the root URL of the tagtog client should be the domain of your tagtog OnPremises instance.
 
 Then, there are 3 variables that tagtog must know about your OIDC Provider and the client you just defined, namely:
 
-* `configuration`: this is the standard `.well-known/openid-configuration` endpoint URL of your OIDC provider. Example (on KeyCloak): _http://localhost:8080/auth/realms/master/.well-known/openid-configuration_
-* `clientId`: this is the name you give on your provider to tagtog. Typically, you should always call this "tagtog".
+* `wellknownDiscoveryUrl`: this is the standard `.well-known/openid-configuration` endpoint URL of your OIDC Provider.
+* `clientId`: this is the name you give in your Provider to tagtog. Typically, you should always call this "tagtog".
 * `clientSecret`: the secret associated to the tagtog client in your OIDC Provider.
 
 Additionally, you must decide on the value of this tagtog-specific variables:
@@ -97,7 +96,7 @@ Finally, the way you pass these variables to tagtog is by using java dynamic pro
 
 ```shell
 export TAGTOG_JAVA_OPTS="${TAGTOG_JAVA_OPTS} \
--Dapplication.auth.openid.configuration=http://localhost:8080/auth/realms/master/.well-known/openid-configuration \
+-Dapplication.auth.openid.wellknownDiscoveryUrl=http://mySSO:8080/auth/realms/master/.well-known/openid-configuration \
 -Dapplication.auth.openid.clientId=tagtog \
 -Dapplication.auth.openid.clientSecret=64934247-ea33-4ec7-8e86-197ea9be3417 \
 -Dapplication.auth.openid.usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog= \
@@ -110,10 +109,10 @@ export TAGTOG_JAVA_OPTS="${TAGTOG_JAVA_OPTS} \
 </div>
 
 <div class="two-third-col">
-  <h4>Auth Tokens</h4>
+  <h3>Auth Tokens</h3>
   <p markdown="1">An alternative SSO system on tagtog is based on **authentication tokens**. These can only be generated by the sysadmin (via API). The sysadmin can then have injected, in a simple reverse proxy server or just simple URL redirections, the corresponding authentication token that distinctively grant one user to login. The sysadmin can keep an internal map of reusable tokens or generate them on-demand programatically any time a login access is required (see below the `useOnce` API parameter). All auth tokens can easily be deleted at any time (see above: [Revoke all auth tokens](#user-management)).</p>
 
-  <h5>API to request auth token</h5>
+  <h4>API to request auth token</h4>
 
   <table style="width:100%;white-space:nowrap;">
     <tr>
@@ -195,7 +194,7 @@ http --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{{ page.reque
 
 <div class="two-third-col" markdown="1">
 
-##### How to use an auth token
+#### How to use an auth token
 
 Once you have an auth <code>token</code>, use it in a simple GET request to login with the associated-granted user. To the request also add a <code>redirectTo</code> (<a href="https://meyerweb.com/eric/tools/dencoder/">url-encoded</a>) parameter to indicate where to redirect to. You must add these parameters to the <code>/</code> (root endpoint) of your tagtog's installation domain.
 
@@ -208,12 +207,12 @@ Example: `{{ page.tagtog_domain }}/?redirectTo=https%3A%2F%2Fwww.tagtog.net%2F-d
 
 <div class="two-third-col" markdown="1">
 
-### Tighter authorization
+## Tighter authorization
 
 Sometimes you want to have a tighter control about what the users and visitors of your system are allowed to do. You can configure the following authorization controls **using java dynamic properties**. Specifically, you must set the environment variable `TAGTOG_JAVA_OPTS` with the desired configuration values as described for each point below.
 
 
-#### Disallow visitors to create accounts
+### Disallow visitors to create accounts
 
 Sometimes you do not want to allow visitors to your tagtog installation creating accounts themselves. In such a case, the sysadmin is responsible to create the accounts for all the users.
 
@@ -225,7 +224,7 @@ export TAGTOG_JAVA_OPTS="${TAGTOG_JAVA_OPTS} -Dapplication.canVisitorsCreateAcco
 ```
 
 
-#### Disallow users to change their account details
+### Disallow users to change their account details
 
 In such a case, the sysadmin is responsible to edit the account details of the users.
 
@@ -237,7 +236,7 @@ export TAGTOG_JAVA_OPTS="${TAGTOG_JAVA_OPTS} -Dapplication.canUsersEditTheirAcco
 ```
 
 
-#### Disallow users to recover their passwords using the "Forgot Password?" email
+### Disallow users to recover their passwords using the "Forgot Password?" email
 
 In such a case, the sysadmin is entirely responsible for the users' passwords.
 

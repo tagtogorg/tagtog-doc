@@ -688,7 +688,7 @@ print(response.text)
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a markdown file. You can also import a txt file and force the format to <code>markdown</code>.</p>
-    <p class="code-desc">Using Markdown you can also use <a href="tagtogblocks.html">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.</p>
+    <p class="code-desc">Using Markdown you can also use <a href="tagtog-blocks">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.</p>
 <div id="tab-1-file-md" class="tab-content" style="display: block" markdown="1">
 ```python
 import requests

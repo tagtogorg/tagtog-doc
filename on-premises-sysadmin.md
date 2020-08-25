@@ -73,7 +73,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 ### OpenID Connect (OIDC)
 
-You can link to tagtog your **OpenID Connect Provider** (e.g. KeyCloak, Okta, AWS Cognito, Microsoft, Salesforce.com, etc.). With this, your users will be able to login into tagtog seamlessly (with the authentication mechanism they already know).
+You can link to tagtog your **OpenID Connect Provider** (e.g. KeyCloak, Auth0, Okta, AWS Cognito, Microsoft, Salesforce.com, etc.). With this, your users will be able to login into tagtog seamlessly (with the authentication mechanism they already know).
 
 #### Setup OIDC
 

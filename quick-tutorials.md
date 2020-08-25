@@ -107,10 +107,9 @@ Know what you can do with tagtog with the following tutorials. Moreover, we publ
 </div>
 
 <div class="two-third-col">
-  <h2><a title="Jorge Campos at Medium - Build powerful annotation layouts with tagtog blocks" href="https://medium.com/@tagtog/build-powerful-annotation-layouts-with-tagtog-blocks-5ae2a1268917">Build powerful annotation layouts with tagtog blocks</a></h2>
+  <h2><a title="tagtog at Medium - Build powerful annotation layouts with tagtog blocks" href="https://medium.com/@tagtog/build-powerful-annotation-layouts-with-tagtog-blocks-5ae2a1268917">Build powerful annotation layouts with tagtog blocks</a></h2>
   <p>As part of the flavored Markdown used in tagtog, you can create blocks with custom styles/layout. As we all know, annotating data can be a tedious task, and a more attractive content can be key to keep your team engaged. Using Markdown you can use the new tagtog blocks to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.</p>
 </div>
 <div class="one-third-col">
   {% include image.html name="chatbot.png" %}
 </div>
-

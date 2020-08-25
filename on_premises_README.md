@@ -121,12 +121,12 @@ export TAGTOG_HOME="$PWD/tagtog_data"
 # See more parameters in the tagtog_on_premises script
 ```
 
-* Point your browser now to: `https://<tagtog_running_ip>:<tagtog_https_port>` (defaults to 443).
+* Point your browser now to: `https://<tagtog_running_ip>:<tagtog_https_port>` (the port defaults to 443; [you can change the port](#conflicts-with-ports-000080-bind-address-already-in-use-)).
 
 
 ### HTTPS & SSL
 
-tagtog runs on _https_ only and redirects all http requests to https. We recommend setting your http and https ports to the defaults 80 and 443 but you are free to choose other ones. See the `tagtog_on_premises` script.
+tagtog runs on _https_ only and redirects all http requests to https. We recommend setting your http and https ports to the defaults 80 and 443 but you are free to [choose other ports](#conflicts-with-ports-000080-bind-address-already-in-use-). See the `tagtog_on_premises` script.
 
 By default, tagtog uses a SSL self-signed certificate. To use your own SSL certificate, place the following 2 files in the folder `${TAGTOG_HOME}/ssl`:
 
@@ -203,14 +203,14 @@ Please provide detailed information of the problem and **send us always the cont
 
 By default, tagtog runs and exposes http on the port 80, and https on the port 443. You can change these in two ways:
 
-1. Set the special environmental variables:
+a) Set the special environmental variables:
 
 ```shell
 export TAGTOG_HTTP_PORT=9080 # For example
 export TAGTOG_HTTPS_PORT=9443 # For example
 ```
 
-2. Pass the ports parameters into the tagtog running script:
+b) Pass the ports parameters into the tagtog running script:
 
 ```shell
 ./tagtog_on_premises restart latest $TAGTOG_HOME 9080 9443
@@ -224,6 +224,8 @@ Try:
 1. Remove all queued documents for parsing: `find $TAGTOG_HOME/tmp/to_process/ -mindepth 1 -delete  # you might need sudo access`
 2. Remove all queued training jobs: `find $TAGTOG_HOME/tmp/training_jobs/ -mindepth 1 -delete  # your might need sudo access`
 3. the application: `./tagtog_on_premises restart latest $TAGTOG_HOME`
+
+If you using tagtog's ML, please also take a look at [this troubleshooting](#ml0-tagtog-service-taking-100-of-cpu-or-memory).
 
 
 ### Issues in an update
@@ -299,9 +301,9 @@ Otherwise, a quick solution is:
 
 
 
-### ml0 tagtog service taking 100% of CPU
+### ml0 tagtog service taking 100% of CPU or memory
 
-Currently, in some cases tagtog ML can consume too much CPU. You can verify that it's indeed the ml service (`ml0`) the one overloading the CPU by checking `docker stats`, and looking for the `tagtog_ml0_1` container.
+Currently, in some cases tagtog ML can consume too much CPU or memory. You can verify that it's indeed the ml service (`ml0`) the one overloading the machine by checking `docker stats`, and looking for the `tagtog_ml0_1` container.
 
 We are working on a stable fix. For now, you can quickly liberate the resources by restarting the `ml0` service only (not the entire tagtog app):
 
@@ -309,6 +311,8 @@ We are working on a stable fix. For now, you can quickly liberate the resources 
 # export TAGTOG_HOME=...
 docker-compose -f docker-compose.override.yaml --project-name tagtog restart ml0
 ```
+
+**Important**: we also recommend following [this troubleshooting](#issues-with-document-uploading-or-with-the-docker-container-tagtog_taskmanager_1).
 
 **Note**: you can add the following cronjob to your crontab file to restart the ML periodically (say every 12 or 24 hours). In this case, better write an absolute path to: `docker-compose.override.yaml`.
 

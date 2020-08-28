@@ -128,7 +128,9 @@ These are relevant aspects of the tagtog OIDC integration:
 
 * **Scopes & claims**: tagtog's OIDC client (Relying Party) asks your OIDC Provider for only these 3 standard scopes: `openid, email, profile`.
 
-  In particular, we only ask for the scope `profile` to get access to the `preferred_username` claim, might it be present. From the scope `email`, we only access the claims `email` and `email_verified` (if present). Overall, **only the claims `sub`** (from the scope `openid`) **and `email` are mandatory**.
+  In particular, we only ask for the scope `profile` to get access to the `preferred_username` claim, might it be present. From the scope `email`, we only access the claims `email` and `email_verified` (if present).
+
+  **Only mandatory are the claims `sub`** (from the scope `openid`) **and `email`**.
 
 * **Users primary identification is by their email**. This means that the mapping between your users in your OIDC Provider and the tagtog registered users is based on the email claim/attribute. In pratical terms, this means that a user on tagtog with, for instance, username "A" and email "A@example.org", and a user on your Provider with different username "A-alt" but same email "A@example.org", represent the very same user.
 
@@ -137,15 +139,18 @@ These are relevant aspects of the tagtog OIDC integration:
 
 #### OIDC: How to use
 
-Once you [set up your OIDC integration](#oidc-setup), the tagtog loin page (`/-login`), shows an extra option to _"Log in with OpenID"_. Moreover, when a non-logged-yet user goes to a tagtog page that requires authentication, the user will be always redirected to the same login page:
+Once you [set up your OIDC integration](#oidc-setup), the tagtog login page (`/-login`), shows an extra option to _"Log in with OpenID"_. Moreover, when a non-logged-yet user goes to a tagtog page that requires authentication, the user will be always redirected to the same login page:
 
-<img src="/assets/img/sysadmin/oidc-login.png" alt="Screenshot: Login with OpenID Connect" />
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/oidc-login.png" alt="Screenshot: Login with OpenID Connect" />
+  <p>tagtog login box when OpenID Connect is enabled on your tagtog OnPremises instance.</p>
+</div>
 
 When the user clicks on the OpenID link, the user is redirected to the authentication mechanism of your OIDC Provider. Upon a successful authentication, the user's data is sent back to tagtog. Two things can then happen:
 
 * a) If the user's email is already associated to a tagtog user, the login is completed, and the user is redirected to the default page after login.
 
-* b) If the user's email is not yet associated to any tagtog user, but the `usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog` setting allows it, tagtog creates automatically a user account on tagtog. Then the login is completed, the user can access tagtog, and is redirected to the default page.
+* b) If the user's email is not yet associated to any tagtog user, but the `usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog` setting allows it, tagtog creates automatically a user account on tagtog. Then the login is completed, the user can access tagtog, and is redirected to the default page. Note that such users created automatically have no associated password, and therefore (unless you later set a password), cannot login on tagtog with basic authentication.
 
 Upon a successful login, a new tagtog user session begins, and everything else is the same and transparent to the user.
 

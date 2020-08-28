@@ -7,6 +7,7 @@ toc: true
 
 tagtog_domain: https://www.tagtog.net
 request_auth_token_endpoint: /-sysadmin/request-auth-token
+onpremises_sample_domain: https://tagtog.example.org
 ---
 
 <div class="two-third-col" markdown="1">
@@ -18,15 +19,15 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 <div class="two-third-col">
   <h2>How to access</h2>
-  <p>Go to your root domain set for tagtog (either an IP or a custom domain) and access <code>/-sysadmin</code> relative path. For example: <code>https://example.org/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
+  <p>Go to your root domain set for tagtog (either an IP or a custom domain) and access the <code>/-sysadmin</code> relative path; for example: <code>{{page.onpremises_sample_domain}}/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
   <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the subscription license name</p>
   <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the subscription license key</p>
 
-  {% include image.html name="sysadmin-onpremises-users.png"  caption="Username, email address, and registration date." %}
+  {% include image.html name="sysadmin-onpremises-users.png" caption="Username, email address, and registration date." %}
 </div>
 <div class="one-third-col">
   <div class="message">
-    <strong>License information</strong> is sent to you by email by the tagtog team when you first purchased the on-premises software.
+    <strong>License information</strong> is sent to you by email by the tagtog team when you first purchased your tagtog OnPremises subscription.
   </div>
 </div>
 
@@ -73,38 +74,85 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 ### OpenID Connect (OIDC)
 
+***
+
+**🤠 The tagtog OpenID Connect feature is in beta. For most use cases, everything should work just fine. However, rough edges might exist. We [much appreciate your feedback](https://www.tagtog.net/#contact).**
+
+***
+
 You can link to tagtog your **OpenID Connect Provider** (e.g. KeyCloak, Auth0, Okta, AWS Cognito, Microsoft, Salesforce.com, etc.). With this, your users will be able to login into tagtog seamlessly (with the authentication mechanism they already know).
 
-#### Setup OIDC
+#### OIDC: Setup
 
-First of all, you must define a client for tagtog in your OIDC Provider. This client's access type should be _"Confidential"_. This will generate a secret (a password) that you later pass on to tagtog. Moreover, of course, the root URL of the tagtog client should be the domain of your tagtog OnPremises instance.
+First of all, you must define a client for tagtog in your OIDC Provider:
+
+* Define the client id (e.g. "tagtog").
+* Of course, set the root URL of the tagtog client as the domain of your tagtog OnPremises instance.
+* Enable the _"Authorization Code Flow"_ (also called "standard", or "server" authentication).
+* The access type should be _"Confidential"_.
+* The authentication method should be based on **client id & secret**.
 
 Then, there are 3 variables that tagtog must know about your OIDC Provider and the client you just defined, namely:
 
 * `wellknownDiscoveryUrl`: this is the standard `.well-known/openid-configuration` endpoint URL of your OIDC Provider.
-* `clientId`: this is the name you give in your Provider to tagtog. Typically, you should always call this "tagtog".
-* `clientSecret`: the secret associated to the tagtog client in your OIDC Provider.
+* `clientId`: this is the name you give in your Provider to the tagtog client (e.g., again, "tagtog").
+* `clientSecret`: the secret (password) associated to the tagtog client in your OIDC Provider.
 
-Additionally, you must decide on the value of this tagtog-specific variables:
+Finally, and optionally, you can also configure the following tagtog-specific variables:
 
-* `usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog`: tagtog OIDC integration lets you choose whether users of your authentication system should have a tagtog account created automatically if they login on tagtog or not. The possible values are:
+* `usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog` (OPTIONAL; default=`""`): tagtog OIDC integration lets you choose whether users of your authentication system should have a tagtog account created automatically or not (that is, when they login on your Provider but do not have a tagtog account yet). The possible values are:
   * `""` (none): no users will be created automatically unless they exist already on tagtog.
   * `"*"` (all): all users of your OIDC system will be created automatically on tagtog if they log in and they have no associated tagtog account yet.
-  * comma-separated list of usernames (e.g. "John,Maria,Peter"): usernames in your OIDC system of users that can be created automatically on tagtog if they log in and they have no associated tagtog account yet.
+  * comma-separated list of emails (e.g. "John@example.org,Maria@example.org,Peter@example.org"): users' emails in your OIDC system of users that can be created automatically on tagtog if they log in and they have no associated tagtog account yet.
+* `usernameClaim` (OPTIONAL; default=`preferred_username` or, if not existing, `sub`): the _claim_ (attribute) of your OIDC provider that you want to use for your users' usernames. In practice, this parameter is only relevant if you let your users' accounts to be created automatically if they don't exist on tagtog yet (see: `usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog`). If the accounts already exist on tagtog, they are primarily identified by their email address ([see below](#oidc-important-to-know)). In this case, the usernames can take any value ([with some restrictions](#oidc-important-to-know)). Note that you, as the sysadmin, can create the users first manually, associating them the email address registered in your OIDC Provider, and giving them an arbitrary username. Also note that, if you rely on this variable, you can use any custom attribute/claim of your OIDC Provider.
+* `redirectRootTagtogUri` (OPTIONAL; default=originating host): by default when users successfully login on your OIDC Provider, they are redirected back to the originating host, which should be your tagtog OnPremises domain. Therefore, in most cases you should not set this variable. However, sometimes, due to redirections and having "docker-in-between" the originating host might not be read properly, or otherwise be wrongly set to the localhost. For these cases, use this variable. It should be the domain of your tagtog OnPremises domain; e.g. `{{page.onpremises_sample_domain}}` (please do not write a trailing forward slash, "/").
 
 Finally, the way you pass these variables to tagtog is by using java dynamic properties. Example:
 
 ```shell
 export TAGTOG_JAVA_OPTS="${TAGTOG_JAVA_OPTS} \
--Dapplication.auth.openid.wellknownDiscoveryUrl=http://mySSO:8080/auth/realms/master/.well-known/openid-configuration \
--Dapplication.auth.openid.clientId=tagtog \
--Dapplication.auth.openid.clientSecret=64934247-ea33-4ec7-8e86-197ea9be3417 \
--Dapplication.auth.openid.usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog= \
+-Dapplication.auth.openid.default.wellknownDiscoveryUrl=https://mySSO:8443/auth/realms/master/.well-known/openid-configuration \
+-Dapplication.auth.openid.default.clientId=tagtog \
+-Dapplication.auth.openid.default.clientSecret=64934247-ea33-4ec7-8e86-197ea9be3417 \
+-Dapplication.auth.openid.default.usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog= \
+-Dapplication.auth.openid.default.usernameClaim=myCustomAttribute \
 "
 
 # Then, restart tagtog as normally
 ./tagtog_on_premises restart latest $TAGTOG_HOME
 ```
+
+#### OIDC: Important to know
+
+These are relevant aspects of the tagtog OIDC integration:
+
+* **Scopes & claims**: tagtog's OIDC client (Relying Party) asks your OIDC Provider for only these 3 standard scopes: `openid, email, profile`.
+
+  In particular, we only ask for the scope `profile` to get access to the `preferred_username` claim, might it be present. From the scope `email`, we only access the claims `email` and `email_verified` (if present). Overall, **only the claims `sub`** (from the scope `openid`) **and `email` are mandatory**.
+
+* **Users primary identification is by their email**. This means that the mapping between your users in your OIDC Provider and the tagtog registered users is based on the email claim/attribute. In pratical terms, this means that a user on tagtog with, for instance, username "A" and email "A@example.org", and a user on your Provider with different username "A-alt" but same email "A@example.org", represent the very same user.
+
+* **Valid usernames follow the regex: `[a-zA-Z][a-zA-Z0-9-]{0,39}`**. Trying to add users with an invalid username, either manually or "automatically" (upon user OIDC login), will throw an error. If you have good reasons to make the username regex more flexible, [please let us know](https://www.tagtog.net/#contact).
+
+
+#### OIDC: How to use
+
+Once you [set up your OIDC integration](#oidc-setup), the tagtog loin page (`/-login`), shows an extra option to _"Log in with OpenID"_. Moreover, when a non-logged-yet user goes to a tagtog page that requires authentication, the user will be always redirected to the same login page:
+
+<img src="/assets/img/sysadmin/oidc-login.png" alt="Screenshot: Login with OpenID Connect" />
+
+When the user clicks on the OpenID link, the user is redirected to the authentication mechanism of your OIDC Provider. Upon a successful authentication, the user's data is sent back to tagtog. Two things can then happen:
+
+* a) If the user's email is already associated to a tagtog user, the login is completed, and the user is redirected to the default page after login.
+
+* b) If the user's email is not yet associated to any tagtog user, but the `usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog` setting allows it, tagtog creates automatically a user account on tagtog. Then the login is completed, the user can access tagtog, and is redirected to the default page.
+
+Upon a successful login, a new tagtog user session begins, and everything else is the same and transparent to the user.
+
+Of course, if the login is not successful on the end of the OIDC Provider, or if the user does not exist yet on tagtog and cannot be created automatically, tagtog will not allow any access and will throw a "Forbidden" error.
+
+Finally, if the user logs out on tagtog, the user session ends with respect to tagtog. Note that tagtog does not log out the user with respect to the external OIDC Provider.
+
 
 </div>
 

@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🔐
+## 3.2020-W35.0 🔐
+_2020-08-29_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) [**tagtog OpenID Connect for SSO**](on-premises-sysadmin.html#openid-connect-oidc) is now in open beta 🎉.</span></li>

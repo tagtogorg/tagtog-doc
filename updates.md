@@ -14,6 +14,17 @@ notoc: true
 
 ---
 
+## 3.2020-W35.0 🔐
+_2020-08-29_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) [**tagtog OpenID Connect for SSO**](on-premises-sysadmin.html#openid-connect-oidc) is now in open beta 🎉.</span></li>
+  <li class="new"><span markdown="1">(OnPremises) Sysadmins can now control not allowing certain users to create projects by themselves.</span></li>
+  <li class="new"><span markdown="1">Overall better reporting of errors.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W34.1 🤝
 _2020-08-18_
 
@@ -39,6 +50,7 @@ _2020-08-08_
   <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of `enum` type.</span></li>
   <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI! [Documentation](documents.html#distribute-to-a-group-of-users).</span></li>
   <li class="new"><span markdown="1">Select the [input format](ioformats.html#input-formats) directly on the GUI. For example, you can decide if you want tagtog to clean/format your content (`formatted`) or leave it exactly as it is (`verbatim`). [Documentation](documents.html#format).</span></li>
+  <li class="del"><span markdown="1">The default format to parse plain text was changed from `formatted` to `verbatim`. If this is a problem for you, you can now explicitly select the format on the [website](https://docs.tagtog.net/documents.html#format) and via [API](https://docs.tagtog.net/API_documents_v1.html#examples-send-plain-text-and-format-it); set it to: `formatted`.</span></li>
   <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. [Documentation](documents.html#define-a-name).</span></li>
   <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
   <li class="doc"><span markdown="1">A lot of new API examples to perform regular operations with documents and annotations: [API documents](API_documents_v1.html).</span></li>

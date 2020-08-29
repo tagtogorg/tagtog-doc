@@ -14,6 +14,16 @@ notoc: true
 
 ---
 
+## ??? 🔐
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) [tagtog OpenID Connect for SSO](on-premises-sysadmin.html#openid-connect-oidc) is now in open beta 🎉.</span></li>
+  <li class="new"><span markdown="1">(OnPremises) Sysadmins can now choose not allowing certain users to create projects by themselves.</span></li>
+  <li class="new"><span markdown="1">Overall better reporting of errors.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W34.1 🤝
 _2020-08-18_
 

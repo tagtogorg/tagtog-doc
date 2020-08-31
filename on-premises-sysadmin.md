@@ -99,7 +99,7 @@ Then, there are 3 variables that tagtog must know about your OIDC Provider and t
 * `clientId`: this is the name you give in your Provider to the tagtog client (e.g., again, "tagtog").
 * `clientSecret`: the secret (password) associated to the tagtog client in your OIDC Provider.
 
-Finally, and optionally, you can also configure the following tagtog-specific variables:
+Moreover, and optionally, you can also configure the following tagtog-specific variables:
 
 * `usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog` (OPTIONAL; default=`""`): tagtog OIDC integration lets you choose whether users of your authentication system should have a tagtog account created automatically or not (that is, when they login on your Provider but do not have a tagtog account yet). The possible values are:
   * `""` (none): no users will be created automatically unless they exist already on tagtog.

@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ???
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">(OpenID SSO) the [`token_type` is now verified ignoring the case](https://tools.ietf.org/html/rfc6749#section-4.2.2 "OAuth 2.0 spec") (this allows both `"Bearer"` and `"bearer"`). </span></li>
+</ul>
+
+---
+
 ## 3.2020-W35.0 🔐
 _2020-08-29_
 

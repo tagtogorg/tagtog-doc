@@ -88,7 +88,7 @@ curl -u yourUsername:yourPassword '{{ page.api_document_url }}/annotationsLegend
 
 ## Members management
 
-### Get members
+### Read members
 
 Get the list of confirmed members & pending members in your project.
 
@@ -105,16 +105,16 @@ Successful status code: `200` (OK)
 
 Payload: JSON (application/json)
 
-| Name             | Example                                                                                                               | Description                                |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| `members`        | `[{"username":"yourUsername","roleName":"admin"},{"username":"John","roleName":"reader"}]`                            | Array of confirmed members in the project. |
-| `pendingMembers` | `[{"invitationToken":"invt-220dc7a2-7c0c-459f-80a6-ba5edc80c71f","roleName":"admin","email":"somebody@example.com"}]` | Array of pending members in the project.   |
+| Name             | Example                                                                                                                                                      | Description                                |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| `members`        | `[{"username":"yourUsername","roleName":"admin"},{"username":"John","roleName":"reader"},{"username":"Laura","roleName":"reviewer","viaTeamName":"MyTeam"}]` | Array of confirmed members in the project. |
+| `pendingMembers` | `[{"invitationToken":"invt-220dc7a2-7c0c-459f-80a6-ba5edc80c71f","roleName":"admin","email":"somebody@example.com"}]`                                        | Array of pending members in the project.   |
 
 ---
 
-### Create member
+### Create members
 
-Add a member to your project.
+Add a member (or team's members) to your project.
 
 * Method: `POST`
 * Endpoint: `{{ page.api_endpoint }}/members{{ page.mandatory_query_parameters }}`
@@ -123,10 +123,10 @@ Add a member to your project.
 
 Body: JSON (application/json)
 
-| Type | Name       | Default | Example  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ---- | ---------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Body | `loginid`  |         | "John"   | Username or email address of the tagtog user you want to invite to your project to. If the user exists in tagtog, currently, this is added immediately to your project without requiring confirmation from the user. This might change in the future.<br><br>If you give an email address that is not associated yet with a tagtog user, the email address will receive an invitation link to join tagtog and your project. Invited members who have not confirmed yet are called "pending members". |
-| Body | `roleName` |         | "reader" | [Role](collaboration.html#roles) (name) to give to the user.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Type | Name       | Default | Examples           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ---- | ---------- | ------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Body | `loginid`  |         | "John" or "MyTeam" | Username or email address of the tagtog user you want to invite to your project to. Moreover, on [tagtog OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES), you can also give the name of a team; in this case, all the team's members will be added to the project.<br><br>If the users exist on tagtog, currently, they will be added immediately to your project without requiring confirmation from the users. This might change in the future.<br><br>If you give an email address that is not associated yet with a tagtog user, the email address will receive an invitation link to join tagtog and your project. Invited members who have not confirmed yet are called _"pending members"_. |
+| Body | `roleName` |         | "reader"           | [Role](collaboration.html#roles) (name) to give to the user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 **Output**
 
@@ -134,21 +134,21 @@ Successful status code: `205` (Reset Content; no payload)
 
 ---
 
-### Update member
+### Update members
 
-Change the role of an existing & confirmed member in your project.
+Change the role of an existing & confirmed member (or all the members of an existing team) in your project.
 
 * Method: `PUT`
-* Endpoint: `{{ page.api_endpoint }}/members/:member{{ page.mandatory_query_parameters }}`
+* Endpoint: `{{ page.api_endpoint }}/members/:loginid{{ page.mandatory_query_parameters }}`
 
 **Input (parameters)**
 
 Body: JSON (application/json)
 
-| Type | Name       | Default | Example    | Description                                                      |
-| ---- | ---------- | ------- | ---------- | ---------------------------------------------------------------- |
-| Path | `member`   |         | "John"     | Username of the project member to update.                        |
-| Body | `roleName` |         | "reviewer" | New [role](collaboration.html#roles) (name) to give to the user. |
+| Type | Name       | Default | Examples           | Description                                                                                                                                                                                                                                   |
+| ---- | ---------- | ------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Path | `loginid`  |         | "John" or "MyTeam" | Username or email of the project member to update. Moreover, on [tagtog OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES), you can also give the name of a team; in this case all the existing team's members will be updated. |
+| Body | `roleName` |         | "reviewer"         | New [role](collaboration.html#roles) (name) to give to the user.                                                                                                                                                                              |
 
 **Output**
 
@@ -156,20 +156,20 @@ Successful status code: `205` (Reset Content; no payload)
 
 ---
 
-### Delete member
+### Delete members
 
-Remove an existing & confirmed member from your project.
+Remove an existing & confirmed member (or all the members of an existing team) from your project.
 
 * Method: `DELETE`
-* Endpoint: `{{ page.api_endpoint }}/members/:member{{ page.mandatory_query_parameters }}`
+* Endpoint: `{{ page.api_endpoint }}/members/:loginid{{ page.mandatory_query_parameters }}`
 
 **Input (parameters)**
 
 Body: None
 
-| Type | Name     | Default | Example | Description                               |
-| ---- | -------- | ------- | ------- | ----------------------------------------- |
-| Path | `member` |         | "John"  | Username of the project member to delete. |
+| Type | Name      | Default | Examples           | Description                               |
+| ---- | --------- | ------- | ------------------ | ----------------------------------------- |
+| Path | `loginid` |         | "John" or "MyTeam" | Username of the project member to delete. |
 
 **Output**
 

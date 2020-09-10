@@ -16,8 +16,8 @@ notoc: true
 
 ## ???
 
-<ul class="updates">
-
+<ul class="updates">  
+  <li class="new"><span markdown="1">The [APIs to manage project members](API_settings_v1.html#members-management) are now updated to also document the new feature of adding/updating/deleting teams' members. This is an exclusive feature of tagtog [OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES).</span></li>
   <li class="new"><span markdown="1">Now the [APIs to manage project members](API_settings_v1.html#members-management) allow referring to the members also by their email (not only, as before, by their username).</span></li>
   <li class="new"><span markdown="1">Now [auth tokens](on-premises-sysadmin.html#auth-tokens) (an alternative SSO) also work with [OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES).</span></li>
   <li class="fix"><span markdown="1">(OpenID SSO) the [`token_type` is now verified ignoring the case](https://tools.ietf.org/html/rfc6749#section-4.2.2 "OAuth 2.0 spec") (this allows both `"Bearer"` and `"bearer"`).</span></li>

@@ -14,7 +14,7 @@
       function annotateText() {
         var input = document.querySelector('input[type="file"]')
         var data = new FormData()
-        data.append('file', input.files[0])
+        data.append("files", input.files[0])
 
         fetch('https://www.tagtog.net/-api/documents/v1?project=yourProject&owner=yourUsername&output=ann.json', {
           method: 'POST',

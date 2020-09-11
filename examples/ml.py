@@ -86,7 +86,7 @@ def predict_and_upload(text, model, tokenizer, probability, project_name, owner)
     # Create the new document and get the html
     plain_html = upload_new_text(text[1], params)
 
-    files = [('file', ('text.plain.html', plain_html)), ('file', ('text.ann.json', predicted_annjson))]
+    files = [("files", ('text.plain.html', plain_html)), ("files", ('text.ann.json', predicted_annjson))]
     params['format'] = 'anndoc'
     params['output'] = 'null'
     response = requests.post(tagtog_docs_api_url, params=params, auth=auth, files=files)

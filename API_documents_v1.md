@@ -414,7 +414,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'url':'https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/lectures/master/README.md'}
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", "url": "https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/lectures/master/README.md"}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```

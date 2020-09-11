@@ -17,7 +17,8 @@ notoc: true
 ## ??? 🤹‍♂️
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Now pre-defining document labels is also supported for plain text (before it worked with files only).</span></li>  
+  <li class="new"><span markdown="1">Now pre-defining document labels is also supported for plain text (before it worked with files only).</span></li>
+  <li class="new"><span markdown="1">Original files were downloaded with a weird suggested name like "_TAGTOG_TEMPORARY...". Now this is solved 💫.</span></li>
 </ul>
 
 ---

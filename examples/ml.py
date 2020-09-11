@@ -3,21 +3,20 @@ from flask import request
 import json
 import requests
 import pickle
-import random
-from train_model import train_model,predict_trained_model
+from train_model import train_model, predict_trained_model
 from keras.models import load_model
 
-#Initialize the flask app
+# Initialize the flask app
 app = Flask(__name__)
 
-#Endpoint for the tagtog documents API
+# Endpoint for the tagtog documents API
 tagtog_docs_api_url = "https://localhost/-api/documents/v1"
 
-#Name of the path where your model is saved
-model_path="model.h5"
+# Name of the path where your model is saved
+model_path = "model.h5"
 
-#This is where your tagtog username and password would go
-auth = requests.auth.HTTPBasicAuth(username="uxio", password="12345678")
+# This is where your tagtog username and password would go
+auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
 
 ################################################################################
 #   FUNCTION NAME: tagtog_webhook
@@ -32,20 +31,20 @@ auth = requests.auth.HTTPBasicAuth(username="uxio", password="12345678")
 @app.route("/tagtog_webhook", methods=['PUT', 'POST'])
 def tagtog_webhook():
 
-    #First you need to get the body of the request
+    # First you need to get the body of the request
     body = request.get_json()
-    #Get the tagtogID -- If you have chosen ann.json in the webhook definition you don't need to do this
+    # Get the tagtogID -- If you have chosen ann.json in the webhook definition you don't need to do this
     tagtogID = body["tagtogID"]
-    #Get the owner of the project
+    # Get the owner of the project
     owner = body["owner"]
-    #Get the project name
+    # Get the project name
     project_name = body["project"]
-    #Set up the input parameters of your request
+    # Set up the input parameters of your request
     params = {"owner": owner, "project": project_name, "ids": tagtogID}
-    #Set up the output -- Check tagtog documentation for further info about the different possible formats
+    # Set up the output -- Check tagtog documentation for further info about the different possible formats
     params["output"] = "ann.json"
 
-    #Send the get request
+    # Send the get request
     annjson = (requests.get(tagtog_docs_api_url, params=params, auth=auth)).json()
 
     if not annjson["anncomplete"]:
@@ -55,36 +54,37 @@ def tagtog_webhook():
     else:
         label = parse_label(annjson)
 
-    #Now set the output format to be a string and retrieve the text from your document
+    # Now set the output format to be a string and retrieve the text from your document
     params["output"] = "text"
     text = (requests.get(tagtog_docs_api_url, params=params, auth=auth)).text
 
-    #load your machine learning model
+    # load your machine learning model
     model = load_model(model_path)
-    #load the tokenizer associated to the model
+    # load the tokenizer associated to the model
     with open('tokenizer.pickle', 'rb') as handle:
-      tokenizer = pickle.load(handle)
-    #Train your model with the new data
-    (model,acc) = train(text, label, model,tokenizer)
+        tokenizer = pickle.load(handle)
+    # Train your model with the new data
+    (model, acc) = train(text, label, model, tokenizer)
     acc = 1.0
-    #Now pass the model new unseen data and let it make a prediction
+    # Now pass the model new unseen data and let it make a prediction
     corpus = collect_unlabeled_sample()
-    #Make a prediction and upload it to tagtog
-    predict_and_upload(,model,tokenizer,acc,project_name,owner)
+    # Make a prediction and upload it to tagtog
+    predict_and_upload(text, model, tokenizer, acc, project_name, owner)
 
     return tagtogID
 
-def predict_and_upload(text,model,tokenizer,probability, project_name,owner):
-    #Make the prediction and get the probability that the prediction is correct
-    (label, who) = predict(text,model,tokenizer)
-    #Format the prediction
+
+def predict_and_upload(text, model, tokenizer, probability, project_name, owner):
+    # Make the prediction and get the probability that the prediction is correct
+    (label, who) = predict(text, model, tokenizer)
+    # Format the prediction
     predicted_annjson = format_label_as_annjson(label, probability, who)
 
-    #print(text, predicted_annjson)
+    # print(text, predicted_annjson)
 
     params = {"owner": owner, "project": project_name, "output": "html"}
-    #Create the new document and get the html
-    plain_html = upload_new_text(text[1],params)
+    # Create the new document and get the html
+    plain_html = upload_new_text(text[1], params)
 
     files = [('file', ('text.plain.html', plain_html)), ('file', ('text.ann.json', predicted_annjson))]
     params['format'] = 'anndoc'
@@ -135,10 +135,11 @@ def format_label_as_annjson(label, probability, who):
     return format_as_json
 
 
-def train(text,label, model,tokenizer):
-    (model,acc) = train_model(text,label,model,tokenizer)
-    #print("Text to train with: {}, output: {}".format(text,label))
-    return(model,acc)
+def train(text, label, model, tokenizer):
+    (model, acc) = train_model(text, label, model, tokenizer)
+    # print("Text to train with: {}, output: {}".format(text,label))
+    return(model, acc)
+
 
 def collect_unlabeled_sample():
     corpus = [
@@ -151,17 +152,19 @@ def collect_unlabeled_sample():
     return corpus
 
 
-def predict(text,model,tokenizer):
-    prediction = predict_trained_model(text, model,tokenizer)
+def predict(text, model, tokenizer):
+    prediction = predict_trained_model(text, model, tokenizer)
     who = "ml:my_ml"
     return (prediction, who)
 
-def upload_new_text(text,params):
-  payload = {"text": text}
-  response = requests.post(tagtog_docs_api_url, params=params, auth=auth, data=payload)
-  # The plain.html (the request's response is in string form). You will have to parse the html's text
-  plain_html = response.text
-  return plain_html
+
+def upload_new_text(text, params):
+    payload = {"text": text}
+    response = requests.post(tagtog_docs_api_url, params=params, auth=auth, data=payload)
+    # The plain.html (the request's response is in string form). You will have to parse the html's text
+    plain_html = response.text
+    return plain_html
+
 
 if __name__ == '__main__':
-  app.run(debug=True)
+    app.run(debug=True)

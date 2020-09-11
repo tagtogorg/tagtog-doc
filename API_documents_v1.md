@@ -163,7 +163,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "ann.json"}
 payload = {"text": {{ page.api_plain_text }}}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, data=payload)
@@ -373,7 +373,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'weburl', 'url':'https://en.wikipedia.org/wiki/Autonomous_cruise_control_system'}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
@@ -413,7 +413,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'url':'https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/lectures/master/README.md'}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
@@ -555,7 +555,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "ann.json"}
 #you can append more files to the list in case you want to upload multiple files
 files = [('file', open('files/text.txt'))]
@@ -651,7 +651,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "ann.json"}
 #you can append more files to the list in case you want to upload multiple files
 files = [('file', open('files/document.pdf', 'rb'))]
@@ -712,7 +712,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null'}
 files = [('file', open('files/readme.md'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
@@ -772,7 +772,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null'}
 files = [('file', open('files/item1.txt')), ('file', open('files/item2.txt')), ('file', open('files/item3.txt'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
@@ -939,7 +939,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'idType':'PMID', 'ids':['23596191','29438695'], "output": "ann.json"}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
@@ -1108,7 +1108,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   import requests
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
-  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
   params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'format': 'default-plus-annjson'}
 
   files=[('file', open('files/text.txt')), ('file', open('files/text.ann.json'))]
@@ -1162,7 +1162,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   import requests
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
-  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
   params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'format': 'default-plus-annjson'}
   #you could easily point to an existing ann.json file or text file. e.g.: ('file', open('files/text.ann.json'))
   files=[('hellotag.txt', 'Hello tag world'), ('hellotag.ann.json', '{"annotatable": {"parts": ["s1v1"]},"anncomplete": false,"sources": [],"metas": {},"entities": [{"classId": "e_1","part": "s1v1","offsets": [{"start": 6,"text": "tag"}],"confidence": {"state": "pre-added","who": ["user:{{ page.api_username }}"],"prob": 1},"fields": {},"normalizations": {}}],"relations": []}')]
@@ -1463,7 +1463,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
-  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
   params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'format': 'default-plus-annjson'}
 
   files = [('file', open('/annotated-docs/mydoc.txt')), ('file', open('/annotated-docs/mydoc.ann.json'))]
@@ -1521,7 +1521,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
-  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+  auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
   params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'format': 'anndoc'}
 
   files=[('file', open('files/article.html')), ('file', open('files/article.ann.json'))]
@@ -1683,7 +1683,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "search": "entity:GGP:P02649"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
@@ -1843,7 +1843,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', "output": "ann.json"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
@@ -1911,7 +1911,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'member': 'John', "output": "ann.json"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
@@ -1938,7 +1938,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'output':'orig'}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 if response.status_code == 200:
@@ -1966,7 +1966,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 docId = "aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':docId, 'output':'html'}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 if response.status_code == 200:
@@ -2040,7 +2040,7 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'search':'entity:gene'}
 response = requests.delete(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)

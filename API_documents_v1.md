@@ -179,7 +179,7 @@ fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page
               'Accept': 'application/json',
               'Content-Type': 'application/json',
              },
-    body: JSON.stringify({"text":'{{ page.api_plain_text }}'})
+    body: JSON.stringify({"text": {{ page.api_plain_text }}})
 }).then(response => response.json()).then(json => {
   console.log(json);
 }).catch(function(error) {

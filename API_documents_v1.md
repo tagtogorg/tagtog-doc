@@ -164,7 +164,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', "output": "ann.json"}
 payload = {'text': {{ page.api_plain_text }}}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, data=payload)
 print(response.text)
@@ -556,7 +556,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', "output": "ann.json"}
 #you can append more files to the list in case you want to upload multiple files
 files = [('file', open('files/text.txt'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
@@ -652,7 +652,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', "output": "ann.json"}
 #you can append more files to the list in case you want to upload multiple files
 files = [('file', open('files/document.pdf', 'rb'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
@@ -940,7 +940,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'idType':'PMID', 'ids':['23596191','29438695'], 'output':'ann.json'}
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'idType':'PMID', 'ids':['23596191','29438695'], "output": "ann.json"}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -1844,7 +1844,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'output':'ann.json'}
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', "output": "ann.json"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -1912,7 +1912,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'member': 'John', 'output':'ann.json'}
+params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'member': 'John', "output": "ann.json"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```

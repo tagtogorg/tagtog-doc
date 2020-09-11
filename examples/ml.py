@@ -61,7 +61,7 @@ def tagtog_webhook():
     # load your machine learning model
     model = load_model(model_path)
     # load the tokenizer associated to the model
-    with open('tokenizer.pickle', 'rb') as handle:
+    with open('tokenizer.pickle', "rb") as handle:
         tokenizer = pickle.load(handle)
     # Train your model with the new data
     (model, acc) = train(text, label, model, tokenizer)

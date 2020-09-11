@@ -1273,7 +1273,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
   params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
 
-  files=[("files", open('files/article.pdf', 'rb')), ("files", open('files/article.ann.json'))]
+  files=[("files", open('files/article.pdf', "rb")), ("files", open('files/article.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
@@ -1326,7 +1326,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
   params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
 
-  files=[("files", open('article.pdf', 'rb')), ("files", open('article.ann.json')), ("files", open('item1.txt')), ("files", open('item1.ann.json'))]
+  files=[("files", open('article.pdf', "rb")), ("files", open('article.ann.json')), ("files", open('item1.txt')), ("files", open('item1.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)

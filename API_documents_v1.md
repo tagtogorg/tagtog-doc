@@ -152,7 +152,7 @@ api_plain_text: "\"Hello, World!\""
     <p class="code-desc">The example below imports plain text and retrieve the annotations identified (if any) in <code>ann.json</code> format.</p>
 <div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
 ```
 </div>
 
@@ -173,7 +173,7 @@ print(response.text)
 </div>
 <div id="tab-3-plain-text" class="tab-content" markdown="1">
 ```javascript
-fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json', {
     method: 'POST',
     headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}'),
               'Accept': 'application/json',
@@ -364,7 +364,7 @@ URLS
     <p class="code-desc">The example below imports a URL and as the output, it retrieves the web link for the annotated document. That link redirects to the annotated document at the tagtog web app. You can use other <a href="ioformats.html#output-formats">output formats</a>.</p>
 <div id="tab-1-url" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl'
 ```
 </div>
 <div id="tab-2-url" class="tab-content" markdown="1">
@@ -382,7 +382,7 @@ print(response.text)
 </div>
 <div id="tab-3-url" class="tab-content" markdown="1">
 ```javascript
-fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&owner={{ page.api_username }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl', {
+fetch('https://www.tagtog.net/-api/documents/v1?owner={{ page.api_username }}&project={{ page.api_project }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl', {
   method: 'GET',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {
@@ -570,7 +570,7 @@ var input = document.querySelector('input[type="file"]')
 var data = new FormData()
 data.append('file', input.files[0])
 
-fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json', {
   method: 'POST',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
   body: data
@@ -633,11 +633,19 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-2-file-pdf">Python</a></li>
+      <li class="current"><a href="#tab-1-file-pdf">cURL</a></li>
+      <li><a href="#tab-2-file-pdf">Python</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a PDF file and retrieves the annotations in <code>ann.json</code>. Please notice we open the PDF file in binary format. You can extend it easily to upload multiple files.</p>
-<div id="tab-2-file-pdf" class="tab-content" style="display: block" markdown="1">
+
+<div id="tab-1-file-pdf" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F 'files=@/files/document.pdf' '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
+```
+</div>
+
+<div id="tab-2-file-pdf" class="tab-content" markdown="1">
 ```python
 import requests
 
@@ -684,12 +692,21 @@ print(response.text)
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-1-file-md">Python</a></li>
+      <li class="current"><a href="#tab-1-file-md">cURL</a></li>
+      <li><a href="#tab-2-file-md">Python</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a markdown file. You can also import a txt file and force the format to <code>markdown</code>.</p>
     <p class="code-desc">Using Markdown you can also use <a href="tagtog-blocks">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.</p>
+
 <div id="tab-1-file-md" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/readme.md" '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
+```
+</div>
+
+
+<div id="tab-2-file-md" class="tab-content" markdown="1">
 ```python
 import requests
 
@@ -737,11 +754,19 @@ print(response.text)
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-2-filelist">Python</a></li>
+      <li class="current"><a href="#tab-1-filelist">cURL</a></li>
+      <li><a href="#tab-2-filelist">Python</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a list of plain text files (it can be any other supported file type or a combination) and retrieves the result of the operation.</p>
-<div id="tab-2-filelist" class="tab-content" style="display: block" markdown="1">
+
+<div id="tab-1-filelist" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/item1.txt" -F "files=@/files/item2.txt" -F "files=@/files/item3.txt" '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
+```
+</div>
+
+<div id="tab-2-filelist" class="tab-content" markdown="1">
 ```python
 import requests
 
@@ -905,7 +930,7 @@ PUBMED IDS
       <p class="code-desc">The example below imports a list of PMIDs and retrieves the annotations of the last document in <code>ann.json</code> format.</p>
 <div id="tab-1-pmid" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&idType=PMID&ids=23596191,29438695&output=ann.json'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&idType=PMID&ids=23596191,29438695&output=ann.json'
 ```
 </div>
 <div id="tab-2-pmid" class="tab-content" markdown="1">
@@ -1649,7 +1674,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     <p class="code-desc">This example searches across all your folders to find documents that have at least one entity normalized to the gene <a href="https://www.uniprot.org/uniprot/P02649">P02649</a>.</p>
 <div id="tab-1-search" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:GGP:P02649'
 ```
 </div>
 <div id="tab-2-search" class="tab-content" markdown="1">
@@ -1667,7 +1692,7 @@ print(response.text)
 </div>
 <div id="tab-3-search" class="tab-content" markdown="1">
 ```javascript
-fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:GGP:P02649', {
   method: 'GET',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {
@@ -1809,7 +1834,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     <p class="code-desc">This example retrieves the annotations of a document in <code>ann.json</code> format. As the <code>member</code> parameter is not defined, the <code>master</code> version of the annotations is served. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
 <div id="tab-1-getdoc" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
 ```
 </div>
 <div id="tab-2-getdoc" class="tab-content" markdown="1">
@@ -1827,7 +1852,7 @@ print(response.text)
 </div>
 <div id="tab-3-getdoc" class="tab-content" markdown="1">
 ```javascript
-fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json', {
   method: 'GET',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {
@@ -2006,7 +2031,7 @@ if response.status_code == 200:
     <p class="code-desc">This example deletes all documents that contain at least one entity of type <code>gene</code>.</p>
 <div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:gene'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:gene'
 ```
 </div>
 <div id="tab-2-del" class="tab-content" markdown="1">
@@ -2024,7 +2049,7 @@ print(response.text)
 </div>
 <div id="tab-3-del" class="tab-content" markdown="1">
 ```javascript
-fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:gene', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:gene', {
   method: 'DELETE',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {

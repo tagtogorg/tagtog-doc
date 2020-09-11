@@ -82,7 +82,7 @@ def predict_and_upload(text,model,tokenizer,probability, project_name,owner):
 
     #print(text, predicted_annjson)
 
-    params = {'project':project_name, 'owner': owner, 'output':'html'}
+    params = {'project':project_name, 'owner': owner, "output": "html"}
     #Create the new document and get the html
     plain_html = upload_new_text(text[1],params)
 

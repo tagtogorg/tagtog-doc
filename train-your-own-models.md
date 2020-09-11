@@ -61,7 +61,7 @@ notoc: true
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'html'}
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', "output": "html"}
   files = [('file', open('text.txt'))]
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 

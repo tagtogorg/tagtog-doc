@@ -1967,7 +1967,7 @@ tagtogAPIUrl = "{{ page.api_document_url }}"
 docId = "aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text"
 
 auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':docId, 'output':'html'}
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':docId, "output": "html"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 if response.status_code == 200:
     with open(docId + '.html', 'wb') as f:

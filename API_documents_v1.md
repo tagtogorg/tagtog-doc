@@ -1684,7 +1684,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'search':'entity:GGP:P02649'}
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "search": "entity:GGP:P02649"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```

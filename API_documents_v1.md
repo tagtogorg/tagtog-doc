@@ -414,7 +414,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'url':'https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/lectures/master/README.md'}
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'url':'https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/lectures/master/README.md'}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -713,7 +713,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null'}
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null"}
 files = [('file', open('files/readme.md'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 print(response.text)
@@ -773,7 +773,7 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null'}
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null"}
 files = [('file', open('files/item1.txt')), ('file', open('files/item2.txt')), ('file', open('files/item3.txt'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 print(response.text)
@@ -1109,7 +1109,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'format': 'default-plus-annjson'}
+  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'default-plus-annjson'}
 
   files=[('file', open('files/text.txt')), ('file', open('files/text.ann.json'))]
 
@@ -1163,7 +1163,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'format': 'default-plus-annjson'}
+  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'default-plus-annjson'}
   #you could easily point to an existing ann.json file or text file. e.g.: ('file', open('files/text.ann.json'))
   files=[('hellotag.txt', 'Hello tag world'), ('hellotag.ann.json', '{"annotatable": {"parts": ["s1v1"]},"anncomplete": false,"sources": [],"metas": {},"entities": [{"classId": "e_1","part": "s1v1","offsets": [{"start": 6,"text": "tag"}],"confidence": {"state": "pre-added","who": ["user:{{ page.api_username }}"],"prob": 1},"fields": {},"normalizations": {}}],"relations": []}')]
 
@@ -1464,7 +1464,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'format': 'default-plus-annjson'}
+  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'default-plus-annjson'}
 
   files = [('file', open('/annotated-docs/mydoc.txt')), ('file', open('/annotated-docs/mydoc.ann.json'))]
 
@@ -1522,7 +1522,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'output':'null', 'format': 'anndoc'}
+  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'anndoc'}
 
   files=[('file', open('files/article.html')), ('file', open('files/article.ann.json'))]
 
@@ -1562,7 +1562,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
 <div class="two-third-col">
   <h2>Search documents in a project <code>GET</code></h2>
-  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics.</p>
+  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieves the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics.</p>
   <p>Learn how to <strong>build search queries</strong> <a href="/search-queries.html">here</a>.</p>
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">

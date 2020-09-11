@@ -165,7 +165,7 @@ tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
 params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "ann.json"}
-payload = {'text': {{ page.api_plain_text }}}
+payload = {"text": {{ page.api_plain_text }}}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, data=payload)
 print(response.text)
 ```
@@ -179,7 +179,7 @@ fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page
               'Accept': 'application/json',
               'Content-Type': 'application/json',
              },
-    body: JSON.stringify({'text':'{{ page.api_plain_text }}'})
+    body: JSON.stringify({"text":'{{ page.api_plain_text }}'})
 }).then(response => response.json()).then(json => {
   console.log(json);
 }).catch(function(error) {

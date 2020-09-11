@@ -157,7 +157,7 @@ def predict(text,model,tokenizer):
     return (prediction, who)
 
 def upload_new_text(text,params):
-  payload = {'text': text}
+  payload = {"text": text}
   response = requests.post(tagtog_docs_api_url, params=params, auth=auth, data=payload)
   # The plain.html (the request's response is in string form). You will have to parse the html's text
   plain_html = response.text

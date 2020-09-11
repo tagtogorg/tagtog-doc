@@ -1939,10 +1939,10 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
 auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
-params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'output':'orig'}
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', "output": "orig"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 if response.status_code == 200:
-    with open('mydoc.pdf', 'wb') as f:
+    with open("mydoc.pdf", "wb") as f:
         f.write(responseGet.content)
 ```
 </div>

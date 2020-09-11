@@ -1692,7 +1692,7 @@ print(response.text)
 </div>
 <div id="tab-3-search" class="tab-content" markdown="1">
 ```javascript
-fetch('https://www.tagtog.net/-api/documents/v1?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:GGP:P02649', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:GGP:P02649', {
   method: 'GET',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {

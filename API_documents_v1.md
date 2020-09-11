@@ -633,11 +633,19 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-2-file-pdf">Python</a></li>
+      <li class="current"><a href="#tab-1-file-pdf">cURL</a></li>
+      <li><a href="#tab-2-file-pdf">Python</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a PDF file and retrieves the annotations in <code>ann.json</code>. Please notice we open the PDF file in binary format. You can extend it easily to upload multiple files.</p>
-<div id="tab-2-file-pdf" class="tab-content" style="display: block" markdown="1">
+
+<div id="tab-1-file-pdf" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F 'files=@/files/document.pdf' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
+```
+</div>
+
+<div id="tab-2-file-pdf" class="tab-content" markdown="1">
 ```python
 import requests
 
@@ -684,12 +692,21 @@ print(response.text)
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-1-file-md">Python</a></li>
+      <li class="current"><a href="#tab-1-file-md">cURL</a></li>
+      <li><a href="#tab-2-file-md">Python</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a markdown file. You can also import a txt file and force the format to <code>markdown</code>.</p>
     <p class="code-desc">Using Markdown you can also use <a href="tagtog-blocks">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.</p>
+
 <div id="tab-1-file-md" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/readme.md" '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
+```
+</div>
+
+
+<div id="tab-2-file-md" class="tab-content" markdown="1">
 ```python
 import requests
 
@@ -737,11 +754,19 @@ print(response.text)
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-2-filelist">Python</a></li>
+      <li class="current"><a href="#tab-1-filelist">cURL</a></li>
+      <li><a href="#tab-2-filelist">Python</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a list of plain text files (it can be any other supported file type or a combination) and retrieves the result of the operation.</p>
-<div id="tab-2-filelist" class="tab-content" style="display: block" markdown="1">
+
+<div id="tab-1-filelist" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/item1.txt" -F "files=@/files/item2.txt" -F "files=@/files/item3.txt" '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
+```
+</div>
+
+<div id="tab-2-filelist" class="tab-content" markdown="1">
 ```python
 import requests
 

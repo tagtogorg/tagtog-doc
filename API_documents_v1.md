@@ -2146,8 +2146,9 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 
 
 <div class="two-third-col">
-<h2><code>output</code> parameter</h2>
-<p><a href="ioformats.html#output-formats">Output formats supported by the API</a></p>
+  <h2><code>output</code> parameter</h2>
+  <p><a href="ioformats.html#output-formats">Output formats supported by the API</a></p>
+</div>
 
 
 <div class="two-third-col">

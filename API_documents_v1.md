@@ -149,7 +149,7 @@ api_plain_text: "\"Hello, World!\""
       <li><a href="#tab-3-plain-text">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">The example below imports plain text and retrieve the annotations identified (if any) in <code>ann.json</code> format.</p>
+    <p class="code-desc">The example below imports plain text and retrieves the annotations identified (if any) in <code>ann.json</code> format.</p>
 <div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
 ```shell
 curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'

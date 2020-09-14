@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🤹‍♂️
+## 3.2020-W37.0 🤹‍♂️
+_2020-09-14_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now pre-defining document labels is also supported for plain text (before it worked with files only).</span></li>

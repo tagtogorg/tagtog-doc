@@ -14,6 +14,19 @@ notoc: true
 
 ---
 
+## 3.2020-W37.0 🤹‍♂️
+_2020-09-14_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now pre-defining document labels is also supported for plain text (before it worked with files only).</span></li>
+  <li class="fix"><span markdown="1">Original files were downloaded with a weird suggested name like "_TAGTOG_TEMPORARY...". Now this is solved 💫.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Some installations couldn't upload files bigger than 10MB (whereas the intended maximum is 250MB). This is now solved.</span></li>
+  <li class="doc"><span markdown="1">Remove disclaimer about verbatim being the default format.</span></li>
+  <li class="doc"><span markdown="1">Cleaned documentation examples & added some cURL API sample calls, when uploading files.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W35.0 🔐
 _2020-08-29_
 

@@ -18,6 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">(Cloud) Increased the number of days, from 7 to 14, for free tagtog trials 🚀!</span></li>
+  <li class="new"><span markdown="1">Now it is possible to upload pre-annotated files from GUI in [`formatted` format](ioformats.html#input-formats).</span></li>
 </ul>
 
 ---

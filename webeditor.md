@@ -103,6 +103,11 @@ toc: true
         <td>Any document</td>
       </tr>
       <tr>
+        <td class="centered"><kbd>l</kbd></td>
+        <td>Show entity labels (only available when the annotation menu is visible)</td>
+        <td>Any document</td>
+      </tr>
+      <tr>
         <td class="centered"><kbd>ctrl+c</kbd> or <kbd>command+c</kbd></td>
         <td>Copy annotation text (only available when the annotation menu is visible)</td>
         <td>Any document</td>

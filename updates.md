@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🎁
+## 3.2020-W38.0 🎁
+_2020-09-21_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(Cloud) Increased the number of days, from 7 to 14, for free tagtog trials 🚀!</span></li>

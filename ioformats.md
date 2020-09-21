@@ -150,12 +150,12 @@ toc: true
       <tr>
         <td><code>formatted</code></td>
         <td><p>The <strong>content is formatted and cleaned</strong>. For example, for each paragraph, one content part is created . Ideal if your content has different discourse units. For example: chat bots conversations.</p>
-        <p>Up to the tagtog version <a href="updates.html#32020-w301-">3.2020-W30.1</a> this was the default mode when a user imported plain text. If you want to pre-annotate with annotations created in this period of time, please use <code>formatted-plus-annjson</code>. See below.</p></td>
+        <p>Up to the tagtog version <a href="updates.html#32020-w301-">3.2020-W30.1</a> this was the default mode when a user imported plain text. If using the API, you want to pre-annotate with annotations created in this period of time, please use <code>formatted-plus-annjson</code>. See below.</p></td>
       </tr>
       <tr>
         <td rowspan="4">Pre-annotated content</td>
         <td><code>default-plus-annjson</code></td>
-        <td><p>Use it if you are importing pre-annotated documents (content + <code>ann.json</code>) and you want the <strong>content to be recognized using the default format</strong>.</p><p>For example to import preannotated PDFs, plain text or markdown files.</p><p>Choose this option if you are not sure which format to use when sending pre-annotated documents.</p><p><a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#import-annotated-documents-post">Example</a></p></td>
+        <td><p>Use it if you are importing pre-annotated documents (content + <code>ann.json</code>) and you want the <strong>content to be recognized using the default format</strong>.</p><p>For example to import pre-annotated PDFs, plain text or markdown files.</p><p>Choose this option if you are not sure which format to use when sending pre-annotated documents.</p><p><a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#import-annotated-documents-post">Example</a></p></td>
       </tr>
       <tr>
         <td><code>formatted-plus-annjson</code></td>

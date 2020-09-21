@@ -14,6 +14,18 @@ notoc: true
 
 ---
 
+## 3.2020-W38.0 🎁
+_2020-09-21_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(Cloud) Increased the number of days, from 7 to 14, for free tagtog trials 🚀!</span></li>
+  <li class="new"><span markdown="1">Now it is possible to upload pre-annotated files from GUI in [`formatted` format](ioformats.html#input-formats).</span></li>
+  <li class="fix"><span markdown="1">Fix an issue where the values of `enum` entity labels dissapeared from the dropdown menu in events such as scrolling.</span></li>
+  <li class="new"><span markdown="1">New hotkey <kbd>l</kbd> to display the labels of an entity. [More information](webeditor.html#hotkeys-map)</span></li>
+</ul>
+
+---
+
 ## 3.2020-W37.0 🤹‍♂️
 _2020-09-14_
 

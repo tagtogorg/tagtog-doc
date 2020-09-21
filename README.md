@@ -54,7 +54,7 @@ Documentation theme is based on [https://fongandrew.github.io/hydeout/](https://
 
 ### Layout
 The documentation content is displayed in a two columns layout.
-You are free to decide when to use these columns. But please always use both:
+You are free to decide when to use these columns. You can use a single column design (`two-third-column`) or a two-columns design (`two-third-column` and `one-third-column`).
 
 ```html
 <div class="two-third-column">

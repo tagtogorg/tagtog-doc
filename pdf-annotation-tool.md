@@ -134,8 +134,10 @@ toc: true
 <div class="page-section">
   <div class="two-third-col">
     <h2>Caveats</h2>
-    <p class="list-item"><span class="list-item-1"></span>You cannot create an annotation with one piece in one page and the other piece in the next page. The main constraint is that the PDF footer interferes when creating an annotation across two pages.</p>
-    <p class="list-item"><span class="list-item-2"></span>Currently, <a title="tagtog - preannotations" href="webeditor.html#pre-annotations">pre-annotations</a> are not available with this new layout.</p>
+    <p class="list-item" markdown="1"><span class="list-item-1"></span>You cannot create an annotation with one piece in one page and the other piece in the next page. The main constraint is that the PDF footer interferes when creating an annotation across two pages.</p>
+    <p class="list-item" markdown="1"><span class="list-item-2"></span>Currently, [pre-selections/pre-deselections](webeditor.html#pre-annotations) are not available with this new layout.</p>
+    <p class="list-item" markdown="1"><span class="list-item-3"></span>If you double click in a word, no annotation will be created. Currently, this feature is only available in the plain text editor.</p>
+    <p class="list-item" markdown="1"><span class="list-item-4"></span>Warning: please make sure your browser extensions are not conflicting with the viewer. This might have an impact on the viewer's performance.</p>
   </div>
   <div class="one-third-col">
   </div>

@@ -18,7 +18,8 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can restrict an entity label to one or more entity types. Before, it was only possible to limit it to all entity types or a single entity type.</span></li>
-  <li class="new"><span markdown="1">Now forcing the document name on the [Submit Advanced menu](https://docs.tagtog.net/documents.html#define-a-name) also works with pre-annotated documents (that is, pairs of text + .ann.json)</span></li>
+  <li class="new"><span markdown="1">Now forcing the document name on the [Submit Advanced menu](documents.html#define-a-name) also works with pre-annotated documents (that is, pairs of text + .ann.json).</span></li>
+  <li class="fix"><span markdown="1">Now documents with pre-annotated document labels set in the [Submit Advanced menu](documents.html#upload-files-with-predefined-document-labels) do not end up with wrong ".ann.json" suffix.</span></li>
 </ul>
 
 ---

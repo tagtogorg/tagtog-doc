@@ -8,6 +8,9 @@ toc: true
 tagtog_domain: https://www.tagtog.net
 request_auth_token_endpoint: /-sysadmin/request-auth-token
 onpremises_sample_domain: https://tagtog.example.org
+
+openid_login_btn: _"Log in with OpenID"_
+openid_login_url: /-login-openid-connect
 ---
 
 <div class="two-third-col" markdown="1">
@@ -168,14 +171,14 @@ These are relevant aspects of the tagtog OIDC integration:
 
 #### OIDC: How to use
 
-Once you [set up your OIDC integration](#oidc-setup), the tagtog login page (`/-login`), shows an extra option to _"Log in with OpenID"_. Moreover, when a non-logged-yet user goes to a tagtog page that requires authentication, the user will be always redirected to the same login page:
+Once you [set up your OIDC integration](#oidc-setup), the tagtog login page (`/-login`), shows an extra option: {{ page.openid_login_btn }}. Moreover, when a non-logged-yet user goes to a tagtog page that requires authentication, the user will be always redirected to the tagtog login page.
 
 <div class="img-with-caption">
   <img src="/assets/img/sysadmin/oidc-login.png" alt="Screenshot: Login with OpenID Connect" />
   <p>tagtog login box when OpenID Connect is enabled on your tagtog OnPremises instance.</p>
 </div>
 
-When the user clicks on the OpenID link, the user is redirected to the authentication mechanism of your OIDC Provider. Upon a successful authentication, the user's data is sent back to tagtog. Two things can then happen:
+When the user clicks on {{ page.openid_login_btn }}, [the user will be redirected to the authentication mechanism of your OIDC Provider](#oidc-redirect-login-url). Upon a successful authentication, the user's data is sent back to tagtog. Two things can then happen:
 
 * a) If the user's email is already associated to a tagtog user, the login is completed, and the user is redirected to the default page after login.
 
@@ -188,7 +191,17 @@ Of course, if the login is not successful on the end of the OIDC Provider, or if
 Finally, if the user logs out on tagtog, the user session ends with respect to tagtog. Note that tagtog does not log out the user with respect to the external OIDC Provider.
 
 
+##### OIDC: Redirect Login URL
+
+If you want to skip the tagtog login page, you can also just call the (tagtog) endpoint:
+
+(GET) `{{page.openid_login_url}}`
+
+tagtog will immediately redirect to your OIDC Provider. Everything else will work the same.
+
+
 </div>
+
 
 <div class="two-third-col">
   <h3>Auth Tokens</h3>

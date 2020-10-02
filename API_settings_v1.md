@@ -6,7 +6,7 @@ layout: page
 toc: true
 toc_levels: 1,2
 
-version: 1.1
+version: 1.2
 api_endpoint: /-api/settings/v1
 mandatory_query_parameters: ?owner=...&project=...
 mandatory_query_parameters_full: ?owner=yourUsername&project=yourProjectName

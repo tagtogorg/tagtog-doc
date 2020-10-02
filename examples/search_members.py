@@ -5,7 +5,7 @@ project_name = 'Best_Public_Project'
 project_owner = 'demo'
 tagtog_projects_API = 'https://www.tagtog.net/-api/projects/v1/my_projects'
 tagtog_search_API = 'http://www.tagtog.net/-api/documents/v1'
-auth = requests.auth.HTTPBasicAuth(username='yourUsername', password='yourPassword')
+auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
 
 def export_project():
     response = requests.get(tagtog_projects_API, auth=auth)

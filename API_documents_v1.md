@@ -149,10 +149,10 @@ api_plain_text: "\"Hello, World!\""
       <li><a href="#tab-3-plain-text">JavaScript</a></li>
     </ul>
     <div class="tab">
-    <p class="code-desc">The example below imports plain text and retrieve the annotations identified (if any) in <code>ann.json</code> format.</p>
+    <p class="code-desc">The example below imports plain text and retrieves the annotations identified (if any) in <code>ann.json</code> format.</p>
 <div id="tab-1-plain-text" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -d 'text={{ page.api_plain_text }}' '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
 ```
 </div>
 
@@ -163,9 +163,9 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
-payload = {'text': {{ page.api_plain_text }}}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "ann.json"}
+payload = {"text": {{ page.api_plain_text }}}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, data=payload)
 print(response.text)
 ```
@@ -173,13 +173,13 @@ print(response.text)
 </div>
 <div id="tab-3-plain-text" class="tab-content" markdown="1">
 ```javascript
-fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json', {
     method: 'POST',
     headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}'),
               'Accept': 'application/json',
               'Content-Type': 'application/json',
              },
-    body: JSON.stringify({'text':'{{ page.api_plain_text }}'})
+    body: JSON.stringify({"text": {{ page.api_plain_text }}})
 }).then(response => response.json()).then(json => {
   console.log(json);
 }).catch(function(error) {
@@ -364,7 +364,7 @@ URLS
     <p class="code-desc">The example below imports a URL and as the output, it retrieves the web link for the annotated document. That link redirects to the annotated document at the tagtog web app. You can use other <a href="ioformats.html#output-formats">output formats</a>.</p>
 <div id="tab-1-url" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl'
 ```
 </div>
 <div id="tab-2-url" class="tab-content" markdown="1">
@@ -373,8 +373,8 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'weburl', 'url':'https://en.wikipedia.org/wiki/Autonomous_cruise_control_system'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "weburl", "url": "https://en.wikipedia.org/wiki/Autonomous_cruise_control_system"}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -382,7 +382,7 @@ print(response.text)
 </div>
 <div id="tab-3-url" class="tab-content" markdown="1">
 ```javascript
-fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&owner={{ page.api_username }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl', {
+fetch('https://www.tagtog.net/-api/documents/v1?owner={{ page.api_username }}&project={{ page.api_project }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl', {
   method: 'GET',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {
@@ -413,8 +413,8 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'url':'https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/lectures/master/README.md'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", "url": "https://raw.githubusercontent.com/oxford-cs-deepnlp-2017/lectures/master/README.md"}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -555,10 +555,10 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "ann.json"}
 #you can append more files to the list in case you want to upload multiple files
-files = [('file', open('files/text.txt'))]
+files = [("files", open('files/text.txt'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 print(response.text)
 ```
@@ -568,9 +568,9 @@ print(response.text)
 ```javascript
 var input = document.querySelector('input[type="file"]')
 var data = new FormData()
-data.append('file', input.files[0])
+data.append("files", input.files[0])
 
-fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&output=ann.json', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json', {
   method: 'POST',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
   body: data
@@ -633,20 +633,28 @@ fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-2-file-pdf">Python</a></li>
+      <li class="current"><a href="#tab-1-file-pdf">cURL</a></li>
+      <li><a href="#tab-2-file-pdf">Python</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a PDF file and retrieves the annotations in <code>ann.json</code>. Please notice we open the PDF file in binary format. You can extend it easily to upload multiple files.</p>
-<div id="tab-2-file-pdf" class="tab-content" style="display: block" markdown="1">
+
+<div id="tab-1-file-pdf" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F 'files=@/files/document.pdf' '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
+```
+</div>
+
+<div id="tab-2-file-pdf" class="tab-content" markdown="1">
 ```python
 import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'ann.json'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "ann.json"}
 #you can append more files to the list in case you want to upload multiple files
-files = [('file', open('files/document.pdf', 'rb'))]
+files = [("files", open("files/document.pdf", "rb"))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 print(response.text)
 ```
@@ -684,20 +692,29 @@ print(response.text)
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-1-file-md">Python</a></li>
+      <li class="current"><a href="#tab-1-file-md">cURL</a></li>
+      <li><a href="#tab-2-file-md">Python</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a markdown file. You can also import a txt file and force the format to <code>markdown</code>.</p>
     <p class="code-desc">Using Markdown you can also use <a href="tagtog-blocks">tagtog blocks</a> to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc.</p>
+
 <div id="tab-1-file-md" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/readme.md" '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
+```
+</div>
+
+
+<div id="tab-2-file-md" class="tab-content" markdown="1">
 ```python
 import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null'}
-files = [('file', open('files/readme.md'))]
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null"}
+files = [("files", open('files/readme.md'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 print(response.text)
 ```
@@ -737,19 +754,27 @@ print(response.text)
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
-      <li class="current"><a href="#tab-2-filelist">Python</a></li>
+      <li class="current"><a href="#tab-1-filelist">cURL</a></li>
+      <li><a href="#tab-2-filelist">Python</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a list of plain text files (it can be any other supported file type or a combination) and retrieves the result of the operation.</p>
-<div id="tab-2-filelist" class="tab-content" style="display: block" markdown="1">
+
+<div id="tab-1-filelist" class="tab-content" style="display: block" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/item1.txt" -F "files=@/files/item2.txt" -F "files=@/files/item3.txt" '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
+```
+</div>
+
+<div id="tab-2-filelist" class="tab-content" markdown="1">
 ```python
 import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null'}
-files = [('file', open('files/item1.txt')), ('file', open('files/item2.txt')), ('file', open('files/item3.txt'))]
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null"}
+files = [("files", open('files/item1.txt')), ("files", open('files/item2.txt')), ("files", open('files/item3.txt'))]
 response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 print(response.text)
 ```
@@ -905,7 +930,7 @@ PUBMED IDS
       <p class="code-desc">The example below imports a list of PMIDs and retrieves the annotations of the last document in <code>ann.json</code> format.</p>
 <div id="tab-1-pmid" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&idType=PMID&ids=23596191,29438695&output=ann.json'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&idType=PMID&ids=23596191,29438695&output=ann.json'
 ```
 </div>
 <div id="tab-2-pmid" class="tab-content" markdown="1">
@@ -914,8 +939,8 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'idType':'PMID', 'ids':['23596191','29438695'], 'output':'ann.json'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'idType':'PMID', 'ids':['23596191','29438695'], "output": "ann.json"}
 response = requests.post(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -1083,10 +1108,10 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   import requests
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
-  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
+  auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'default-plus-annjson'}
 
-  files=[('file', open('files/text.txt')), ('file', open('files/text.ann.json'))]
+  files=[("files", open('files/text.txt')), ("files", open('files/text.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
@@ -1137,9 +1162,9 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   import requests
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
-  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
-  #you could easily point to an existing ann.json file or text file. e.g.: ('file', open('files/text.ann.json'))
+  auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'default-plus-annjson'}
+  #you could easily point to an existing ann.json file or text file. e.g.: ("files", open('files/text.ann.json'))
   files=[('hellotag.txt', 'Hello tag world'), ('hellotag.ann.json', '{"annotatable": {"parts": ["s1v1"]},"anncomplete": false,"sources": [],"metas": {},"entities": [{"classId": "e_1","part": "s1v1","offsets": [{"start": 6,"text": "tag"}],"confidence": {"state": "pre-added","who": ["user:{{ page.api_username }}"],"prob": 1},"fields": {},"normalizations": {}}],"relations": []}')]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
@@ -1196,7 +1221,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
   params = {"project": "yourProjectName", "owner": "yourUsername", "format": "formatted-plus-annjson", "output": "null"}
 
-  files=[('file', open(content_path)), ('file', open(annjson_path))]
+  files=[("files", open(content_path)), ("files", open(annjson_path))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
@@ -1248,7 +1273,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
   params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
 
-  files=[('file', open('files/article.pdf', 'rb')), ('file', open('files/article.ann.json'))]
+  files=[("files", open('files/article.pdf', "rb")), ("files", open('files/article.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
@@ -1301,7 +1326,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
   params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
 
-  files=[('file', open('article.pdf', 'rb')), ('file', open('article.ann.json')), ('file', open('item1.txt')), ('file', open('item1.ann.json'))]
+  files=[("files", open('article.pdf', "rb")), ("files", open('article.ann.json')), ("files", open('item1.txt')), ("files", open('item1.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
@@ -1438,10 +1463,10 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
-  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'default-plus-annjson'}
+  auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'default-plus-annjson'}
 
-  files = [('file', open('/annotated-docs/mydoc.txt')), ('file', open('/annotated-docs/mydoc.ann.json'))]
+  files = [("files", open('/annotated-docs/mydoc.txt')), ("files", open('/annotated-docs/mydoc.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
@@ -1496,10 +1521,10 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
-  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'null', 'format': 'anndoc'}
+  auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+  params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'anndoc'}
 
-  files=[('file', open('files/article.html')), ('file', open('files/article.ann.json'))]
+  files=[("files", open('files/article.html')), ("files", open('files/article.ann.json'))]
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
@@ -1537,7 +1562,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
 <div class="two-third-col">
   <h2>Search documents in a project <code>GET</code></h2>
-  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieve the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics.</p>
+  <p>You can <a href="/search.html">search</a> using the documents API. Search across your project and retrieves the matching documents. You can use it to augment your own search engine or simply create a new one. It is also very simple to use the search API to display statistics.</p>
   <p>Learn how to <strong>build search queries</strong> <a href="/search-queries.html">here</a>.</p>
   <p><strong>Input Parameters</strong></p>
   <table style="width:100%;">
@@ -1649,7 +1674,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
     <p class="code-desc">This example searches across all your folders to find documents that have at least one entity normalized to the gene <a href="https://www.uniprot.org/uniprot/P02649">P02649</a>.</p>
 <div id="tab-1-search" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:GGP:P02649'
 ```
 </div>
 <div id="tab-2-search" class="tab-content" markdown="1">
@@ -1658,8 +1683,8 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'search':'entity:GGP:P02649'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "search": "entity:GGP:P02649"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -1667,7 +1692,7 @@ print(response.text)
 </div>
 <div id="tab-3-search" class="tab-content" markdown="1">
 ```javascript
-fetch('https://www.tagtog.net/-api/documents/v1?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:GGP:P02649', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:GGP:P02649', {
   method: 'GET',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {
@@ -1809,7 +1834,7 @@ aMHKzF_lIoNrdh9pAx298njgIezy-text,false
     <p class="code-desc">This example retrieves the annotations of a document in <code>ann.json</code> format. As the <code>member</code> parameter is not defined, the <code>master</code> version of the annotations is served. Notice that we don't use the parameter <code>idType</code> because it defaults to <code>tagtogID</code>, the type of the id used.</p>
 <div id="tab-1-getdoc" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json'
 ```
 </div>
 <div id="tab-2-getdoc" class="tab-content" markdown="1">
@@ -1818,8 +1843,8 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'output':'ann.json'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', "output": "ann.json"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -1827,7 +1852,7 @@ print(response.text)
 </div>
 <div id="tab-3-getdoc" class="tab-content" markdown="1">
 ```javascript
-fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json', {
   method: 'GET',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {
@@ -1886,8 +1911,8 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'member': 'John', 'output':'ann.json'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'member': 'John', "output": "ann.json"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -1913,11 +1938,11 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', 'output':'orig'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':'aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text', "output": "orig"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 if response.status_code == 200:
-    with open('mydoc.pdf', 'wb') as f:
+    with open("mydoc.pdf", "wb") as f:
         f.write(responseGet.content)
 ```
 </div>
@@ -1941,8 +1966,8 @@ import requests
 tagtogAPIUrl = "{{ page.api_document_url }}"
 docId = "aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'ids':docId, 'output':'html'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'ids':docId, "output": "html"}
 response = requests.get(tagtogAPIUrl, params=params, auth=auth)
 if response.status_code == 200:
     with open(docId + '.html', 'wb') as f:
@@ -2006,7 +2031,7 @@ if response.status_code == 200:
     <p class="code-desc">This example deletes all documents that contain at least one entity of type <code>gene</code>.</p>
 <div id="tab-1-del" class="tab-content" style="display: block" markdown="1">
 ```shell
-curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:gene'
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:gene'
 ```
 </div>
 <div id="tab-2-del" class="tab-content" markdown="1">
@@ -2015,8 +2040,8 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'search':'entity:gene'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", 'search':'entity:gene'}
 response = requests.delete(tagtogAPIUrl, params=params, auth=auth)
 print(response.text)
 ```
@@ -2024,7 +2049,7 @@ print(response.text)
 </div>
 <div id="tab-3-del" class="tab-content" markdown="1">
 ```javascript
-fetch('{{ page.api_document_url }}?project={{ page.api_project }}&owner={{ page.api_username }}&search=entity:gene', {
+fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&search=entity:gene', {
   method: 'DELETE',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {
@@ -2121,8 +2146,9 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 
 
 <div class="two-third-col">
-<h2><code>output</code> parameter</h2>
-<p><a href="ioformats.html#output-formats">Output formats supported by the API</a></p>
+  <h2><code>output</code> parameter</h2>
+  <p><a href="ioformats.html#output-formats">Output formats supported by the API</a></p>
+</div>
 
 
 <div class="two-third-col">
@@ -2192,7 +2218,7 @@ optional arguments:
   <p>The example below retrieves all the documents from your project.</p>
   <div markdown="1">
 ```shell
-python3 tagtog.py search '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }}
+python3 tagtog.py search "*" -u {{ page.api_username }} -w {{ page.api_pwd }} -o {{ page.api_username }} -p {{ page.api_project }}
 ```
   </div>
 </div>
@@ -2207,7 +2233,7 @@ python3 tagtog.py search '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p
   <p>The example below upload the abstract from two PMIDs to your project. Remember to indicate which is the <a href="#idtype-parameter">type of id</a> (<code>--idType</code> or <code>-i</code>) for the document.</p>
   <div markdown="1">
 ```shell
-python3 tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} -i PMID
+python3 tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page.api_pwd }} -o {{ page.api_username }} -p {{ page.api_project }} -i PMID
 ```
   </div>
 
@@ -2216,14 +2242,14 @@ python3 tagtog.py upload 29539636,29531059 -u {{ page.api_username }} -w {{ page
   <p>The example below upload the PDF documents of a folder, to your project.</p>
   <div markdown="1">
 ```shell
-python3 tagtog.py upload ./myfolder -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} --extension pdf
+python3 tagtog.py upload ./myfolder -u {{ page.api_username }} -w {{ page.api_pwd }} -o {{ page.api_username }} -p {{ page.api_project }} --extension pdf
 ```
   </div>
 
   <p>The example below upload a single file to your project.</p>
   <div markdown="1">
 ```shell
-python3 tagtog.py upload ./myfile.txt -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }}
+python3 tagtog.py upload ./myfile.txt -u {{ page.api_username }} -w {{ page.api_pwd }} -o {{ page.api_username }} -p {{ page.api_project }}
 ```
   </div>
 </div>
@@ -2240,7 +2266,7 @@ python3 tagtog.py upload ./myfile.txt -u {{ page.api_username }} -w {{ page.api_
   <p>The example below download the annotations (<code>ann.json</code>) for all the documents in a project.</p>
    <div markdown="1">
 ```shell
-python3 tagtog.py download '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -p {{ page.api_project }} -o {{ page.api_username }} --output_folder ./myDownloadFolder -t ann.json
+python3 tagtog.py download "*" -u {{ page.api_username }} -w {{ page.api_pwd }} -o {{ page.api_username }} -p {{ page.api_project }} --output_folder ./myDownloadFolder -t ann.json
 ```
   </div>
 </div>

@@ -23,6 +23,40 @@ notoc: true
   <li class="fix"><span markdown="1">The selected members in the list of task distribution was ignored in the actual distribution sometimes. Wrongly, all members who had permissions to annotate, got documents distributed, even if they were not explicitly written in the list of task distribution. This is now fixed.</span></li>
   <li class="fix"><span markdown="1">(OpenID SSO) the [`token_type` is now verified ignoring the case](https://tools.ietf.org/html/rfc6749#section-4.2.2 "OAuth 2.0 spec") (this allows both `"Bearer"` and `"bearer"`).</span></li>
   <li class="fix"><span markdown="1">Pre-selectable document labels are not shown any more when submitting content for the input types URL and PMID/PMCID, for it is not supported.</span></li>
+
+---
+
+## ??? 🔧
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can restrict an entity label to one or more entity types. Before, it was only possible to limit it to all entity types or a single entity type.</span></li>
+  <li class="new"><span markdown="1">Now forcing the document name on the [Submit Advanced menu](documents.html#define-a-name) also works with pre-annotated documents (that is, pairs of text + .ann.json).</span></li>
+  <li class="fix"><span markdown="1">Now documents with pre-annotated document labels set in the [Submit Advanced menu](documents.html#upload-files-with-predefined-document-labels) do not end up with wrong ".ann.json" suffix.</span></li>
+</ul>
+
+---
+
+## 3.2020-W38.0 🎁
+_2020-09-21_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(Cloud) Increased the number of days, from 7 to 14, for free tagtog trials 🚀!</span></li>
+  <li class="new"><span markdown="1">Now it is possible to upload pre-annotated files from GUI in [`formatted` format](ioformats.html#input-formats).</span></li>
+  <li class="fix"><span markdown="1">Fix an issue where the values of `enum` entity labels dissapeared from the dropdown menu in events such as scrolling.</span></li>
+  <li class="new"><span markdown="1">New hotkey <kbd>l</kbd> to display the labels of an entity. [More information](webeditor.html#hotkeys-map)</span></li>
+</ul>
+
+---
+
+## 3.2020-W37.0 🤹‍♂️
+_2020-09-14_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now pre-defining document labels is also supported for plain text (before it worked with files only).</span></li>
+  <li class="fix"><span markdown="1">Original files were downloaded with a weird suggested name like "_TAGTOG_TEMPORARY...". Now this is solved 💫.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Some installations couldn't upload files bigger than 10MB (whereas the intended maximum is 250MB). This is now solved.</span></li>
+  <li class="doc"><span markdown="1">Remove disclaimer about verbatim being the default format.</span></li>
+  <li class="doc"><span markdown="1">Cleaned documentation examples & added some cURL API sample calls, when uploading files.</span></li>
 </ul>
 
 ---

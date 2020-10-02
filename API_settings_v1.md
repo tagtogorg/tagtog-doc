@@ -483,8 +483,8 @@ import requests
 
 tagtogAPIUrl = "{{ page.api_document_url }}/folders/add"
 
-auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}'}
+auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}"}
 payload = {'parentPath': 'pool', 'newFolderName': '{{ page.api_folder_new}}'}
 response = requests.post(tagtogAPIUrl, auth=auth, params=params, json=payload)
 print(response.text)

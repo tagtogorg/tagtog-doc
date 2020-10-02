@@ -17,7 +17,7 @@
                     'Accept': 'application/json', 
                     'Content-Type': 'application/json',
                   },
-          body: JSON.stringify({'text':'Antibody-dependent cellular cytotoxicity (ADCC), a key effector function for the clinical effectiveness of monoclonal antibodies, is triggered by the engagement of the antibody Fc domain with the Fcγ receptors expressed by innate immune cells such as natural killer (NK) cells and macrophages.'})
+          body: JSON.stringify({"text":'Antibody-dependent cellular cytotoxicity (ADCC), a key effector function for the clinical effectiveness of monoclonal antibodies, is triggered by the engagement of the antibody Fc domain with the Fcγ receptors expressed by innate immune cells such as natural killer (NK) cells and macrophages.'})
         }).then(response => response.json()).then(json => {
           console.log(json);
         }).catch(function(error) {

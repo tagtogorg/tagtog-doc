@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🔧
+## 3.2020-W40.0 🔧
+_2020-10-03_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can restrict an entity label to one or more entity types. Before, it was only possible to limit it to all entity types or a single entity type.</span></li>

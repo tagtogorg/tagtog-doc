@@ -2218,7 +2218,7 @@ optional arguments:
   <p>The example below retrieves all the documents from your project.</p>
   <div markdown="1">
 ```shell
-python3 tagtog.py search '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -o {{ page.api_username }} -p {{ page.api_project }}
+python3 tagtog.py search "*" -u {{ page.api_username }} -w {{ page.api_pwd }} -o {{ page.api_username }} -p {{ page.api_project }}
 ```
   </div>
 </div>
@@ -2266,7 +2266,7 @@ python3 tagtog.py upload ./myfile.txt -u {{ page.api_username }} -w {{ page.api_
   <p>The example below download the annotations (<code>ann.json</code>) for all the documents in a project.</p>
    <div markdown="1">
 ```shell
-python3 tagtog.py download '*' -u {{ page.api_username }} -w {{ page.api_pwd }} -o {{ page.api_username }} -p {{ page.api_project }} --output_folder ./myDownloadFolder -t ann.json
+python3 tagtog.py download "*" -u {{ page.api_username }} -w {{ page.api_pwd }} -o {{ page.api_username }} -p {{ page.api_project }} --output_folder ./myDownloadFolder -t ann.json
 ```
   </div>
 </div>

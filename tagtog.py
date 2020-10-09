@@ -57,7 +57,7 @@ def parse_arguments(argv=[]):
     # -----------------------------------------------------------------------------------------------------------------
 
     def add_common_arguments(parser, default_output):
-        parser.add_argument("--domain", "-d", default=DEFAULT_DOMAIN, help="tagtog domain, e.g. http://localhost:80/. You can set the default with the environment variable `TAGTOG_DOMAIN`")
+        parser.add_argument("--domain", "-d", default=DEFAULT_DOMAIN, help="tagtog domain, e.g. https://localhost:443. You can set the default with the environment variable `TAGTOG_DOMAIN`")
         parser.add_argument("--entrypoint", default="-api/documents/v1")
 
         parser.add_argument("--user", "-u", required=True, help="tagtog username making the request")

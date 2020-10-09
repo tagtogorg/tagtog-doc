@@ -19,7 +19,7 @@ WORKDIR /myapp/
 
 COPY Gemfile* *.gemspec /myapp/
 # If we have the gem files already, the following will install the right version of bundler
-RUN gem install bundle
+RUN gem install bundler
 
 RUN bundle install
 

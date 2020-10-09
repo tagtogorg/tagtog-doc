@@ -36,4 +36,4 @@ EXPOSE 4000
 # See jekyll parameters: https://jekyllrb.com/docs/configuration/options/#serve-command-options
 # "--incremental" can be faster, but is too conversative with the cache (https://jekyllrb.com/docs/configuration/incremental-regeneration/#incremental-regeneration)
 ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
-CMD ["--livereload"]
+CMD ["--livereload", "--incremental"]

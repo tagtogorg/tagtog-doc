@@ -121,12 +121,12 @@ export TAGTOG_HOME="$PWD/tagtog_data"
 # See more parameters in the tagtog_on_premises script
 ```
 
-* Point your browser now to: `https://<tagtog_running_ip>:<tagtog_https_port>` (defaults to 443).
+* Point your browser now to: `https://<tagtog_running_ip>:<tagtog_https_port>` (the port defaults to 443; [you can change the port](#conflicts-with-ports-000080-bind-address-already-in-use-)).
 
 
 ### HTTPS & SSL
 
-tagtog runs on _https_ only and redirects all http requests to https. We recommend setting your http and https ports to the defaults 80 and 443 but you are free to choose other ones. See the `tagtog_on_premises` script.
+tagtog runs on _https_ only and redirects all http requests to https. We recommend setting your http and https ports to the defaults 80 and 443 but you are free to [choose other ports](#conflicts-with-ports-000080-bind-address-already-in-use-). See the `tagtog_on_premises` script.
 
 By default, tagtog uses a SSL self-signed certificate. To use your own SSL certificate, place the following 2 files in the folder `${TAGTOG_HOME}/ssl`:
 
@@ -203,14 +203,14 @@ Please provide detailed information of the problem and **send us always the cont
 
 By default, tagtog runs and exposes http on the port 80, and https on the port 443. You can change these in two ways:
 
-1. Set the special environmental variables:
+a) Set the special environmental variables:
 
 ```shell
 export TAGTOG_HTTP_PORT=9080 # For example
 export TAGTOG_HTTPS_PORT=9443 # For example
 ```
 
-2. Pass the ports parameters into the tagtog running script:
+b) Pass the ports parameters into the tagtog running script:
 
 ```shell
 ./tagtog_on_premises restart latest $TAGTOG_HOME 9080 9443
@@ -225,6 +225,8 @@ Try:
 2. Remove all queued training jobs: `find $TAGTOG_HOME/tmp/training_jobs/ -mindepth 1 -delete  # your might need sudo access`
 3. the application: `./tagtog_on_premises restart latest $TAGTOG_HOME`
 
+If you using tagtog's ML, please also take a look at [this troubleshooting](#ml0-tagtog-service-taking-100-of-cpu-or-memory).
+
 
 ### Issues in an update
 
@@ -238,7 +240,40 @@ echo "0" > LATEST_VERSION
 ```
 
 
-### Wrong entity offsets on the display
+### Problems with documents
+
+#### Remove "zombie" documents
+
+On a few rare cases, the tagtog system might complain about some duplicate documents that are not findable anywhere. We call these "zombie" documents. They are the result of some hanging cache in our internal databases that was not completely removed due to some uncaught exceptions. The solution is to remove that hanging cache by running the follow script.
+
+First, to avoid any data loss, please [**backup your data**](#backups-how-and-where-the-data-is-stored).
+
+Then, run the script only to report about possible errors (not trying to fix them):
+
+```shell
+#
+# **PLEASE, FIRST BACKUP YOUR DATA**
+#
+
+export TAGTOG_FIX_DOCUMENTS_SCRIPT_MODE="ONLY_CHECK"
+
+./tagtog_on_premises fix_documents latest $TAGTOG_HOME
+```
+
+Finally, once you are sure about the errors and what you are doing, run the script to automatically fix the possible errors:
+
+```shell
+#
+# **PLEASE, FIRST BACKUP YOUR DATA**
+#
+
+export TAGTOG_FIX_DOCUMENTS_SCRIPT_MODE="CHECK_AND_FIX_AUTO"
+
+./tagtog_on_premises fix_documents latest $TAGTOG_HOME
+```
+
+<!-- Deactivated for now
+#### Wrong entity offsets on the display
 
 On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script.
 
@@ -250,6 +285,7 @@ To avoid any data loss, please first [**backup your data**](#backups-how-and-whe
 #
 ./tagtog_on_premises fix_documents latest $TAGTOG_HOME
 ```
+-->
 
 
 ### Lack of writing file access
@@ -265,9 +301,9 @@ Otherwise, a quick solution is:
 
 
 
-### ml0 tagtog service taking 100% of CPU
+### ml0 tagtog service taking 100% of CPU or memory
 
-Currently, in some cases tagtog ML can consume too much CPU. You can verify that it's indeed the ml service (`ml0`) the one overloading the CPU by checking `docker stats`, and looking for the `tagtog_ml0_1` container.
+Currently, in some cases tagtog ML can consume too much CPU or memory. You can verify that it's indeed the ml service (`ml0`) the one overloading the machine by checking `docker stats`, and looking for the `tagtog_ml0_1` container.
 
 We are working on a stable fix. For now, you can quickly liberate the resources by restarting the `ml0` service only (not the entire tagtog app):
 
@@ -276,7 +312,9 @@ We are working on a stable fix. For now, you can quickly liberate the resources 
 docker-compose -f docker-compose.override.yaml --project-name tagtog restart ml0
 ```
 
-**Note**: you can add this to a crontab file to run this periodically (say every 12 or 24 hours). In this case, better write an absolute path to: `docker-compose.override.yaml`.
+**Important**: we also recommend following [this troubleshooting](#issues-with-document-uploading-or-with-the-docker-container-tagtog_taskmanager_1).
+
+**Note**: you can add the following cronjob to your crontab file to restart the ML periodically (say every 12 or 24 hours). In this case, better write an absolute path to: `docker-compose.override.yaml`.
 
 Example:
 

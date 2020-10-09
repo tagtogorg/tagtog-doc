@@ -18,7 +18,7 @@ api_folder_new: myNewFolder
 ---
 
 <div class="two-third-col">
-  <p><strong>⚠️ All the API for metrics are in a beta version, and can change at any moment. We give early access to the metrics for your benefit.</strong></p>
+  <p><strong>🤠 All the API for metrics are in an alpha version, and can change at any moment. We give early access to the metrics for your benefit.</strong></p>
 
   <table style="width:100%;white-space:nowrap;">
     <tr>

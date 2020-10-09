@@ -60,9 +60,9 @@ notoc: true
 
   tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
 
-  auth = requests.auth.HTTPBasicAuth(username='{{ page.api_username }}', password='{{ page.api_pwd }}')
-  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', 'output':'html'}
-  files = [('file', open('text.txt'))]
+  auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
+  params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', "output": "html"}
+  files = [("files", open('text.txt'))]
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 
   # The plain.html (the request's response is in string form). You will have to parse the html's text
@@ -72,7 +72,7 @@ notoc: true
   # ann_json = '{"annotatable":{"parts":["s1p1","s1p2"]},"anncomplete":false,"sources":[],"metas":{},"entities":[{"classId":"e_1","part":"s1p1","offsets":[{"start":12,"text":"first sentence of the first paragrap"}],"confidence":{"state":"pre-added","who":["user:{{ page.api_username }}"],"prob":1},"fields":{},"normalizations":{}}],"relations":[]}'
 
   # Submit both the plain.html + ann.json in the same request. The important thing: they must have the same name, except for the file extensions
-  files = [('file', ('text.plain.html', plain_html)), ('file', ('text.ann.json', ann_json))]
+  files = [("files", ('text.plain.html', plain_html)), ("files", ('text.ann.json', ann_json))]
   params['format'] = 'anndoc'
   params['output'] = 'null'
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)

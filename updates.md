@@ -14,10 +14,102 @@ notoc: true
 
 ---
 
+## ??? 👮‍♀️
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Our official [python tagtog script](API_documents_v1.html#python-tagtog-script) now supports passing in specific SSL/TLS certificate/s (with the parameter `--verify_ssl`).</span></li>
+</ul>
+
+---
+
+## 3.2020-W40.0 🔧
+_2020-10-03_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can restrict an entity label to one or more entity types. Before, it was only possible to limit it to all entity types or a single entity type.</span></li>
+  <li class="new"><span markdown="1">Now forcing the document name on the [Submit Advanced menu](documents.html#define-a-name) also works with pre-annotated documents (that is, pairs of text + .ann.json).</span></li>
+  <li class="fix"><span markdown="1">Now documents with pre-annotated document labels set in the [Submit Advanced menu](documents.html#upload-files-with-predefined-document-labels) do not end up with wrong ".ann.json" suffix.</span></li>
+</ul>
+
+---
+
+## 3.2020-W38.0 🎁
+_2020-09-21_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(Cloud) Increased the number of days, from 7 to 14, for free tagtog trials 🚀!</span></li>
+  <li class="new"><span markdown="1">Now it is possible to upload pre-annotated files from GUI in [`formatted` format](ioformats.html#input-formats).</span></li>
+  <li class="fix"><span markdown="1">Fix an issue where the values of `enum` entity labels dissapeared from the dropdown menu in events such as scrolling.</span></li>
+  <li class="new"><span markdown="1">New hotkey <kbd>l</kbd> to display the labels of an entity. [More information](webeditor.html#hotkeys-map)</span></li>
+</ul>
+
+---
+
+## 3.2020-W37.0 🤹‍♂️
+_2020-09-14_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now pre-defining document labels is also supported for plain text (before it worked with files only).</span></li>
+  <li class="fix"><span markdown="1">Original files were downloaded with a weird suggested name like "_TAGTOG_TEMPORARY...". Now this is solved 💫.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Some installations couldn't upload files bigger than 10MB (whereas the intended maximum is 250MB). This is now solved.</span></li>
+  <li class="doc"><span markdown="1">Remove disclaimer about verbatim being the default format.</span></li>
+  <li class="doc"><span markdown="1">Cleaned documentation examples & added some cURL API sample calls, when uploading files.</span></li>
+</ul>
+
+---
+
+## 3.2020-W35.0 🔐
+_2020-08-29_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) [**tagtog OpenID Connect for SSO**](on-premises-sysadmin.html#openid-connect-oidc) is now in open beta 🎉.</span></li>
+  <li class="new"><span markdown="1">(OnPremises) Sysadmins can now control not allowing certain users to create projects by themselves.</span></li>
+  <li class="new"><span markdown="1">Overall better reporting of errors.</span></li>
+</ul>
+
+---
+
+## 3.2020-W34.1 🤝
+_2020-08-18_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">(OnPremises) Some installations had problems when updating tagtog (wrong license expirations). This is now solved.</span></li>
+</ul>
+
+---
+
+## 3.2020-W34.0 🧱
+_2020-08-17_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Using Markdown you can use the new **tagtog blocks** to build a customized annotation layout for your project! E.g. question answering datasets, chatbot training, tweets, etc. [Check it out!](tagtog-blocks)</span></li>
+</ul>
+
+---
+
+## 3.2020-W32.3 🌶
+_2020-08-08_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of `enum` type.</span></li>
+  <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI! [Documentation](documents.html#distribute-to-a-group-of-users).</span></li>
+  <li class="new"><span markdown="1">Select the [input format](ioformats.html#input-formats) directly on the GUI. For example, you can decide if you want tagtog to clean/format your content (`formatted`) or leave it exactly as it is (`verbatim`). [Documentation](documents.html#format).</span></li>
+  <li class="del"><span markdown="1">The default format to parse plain text was changed from `formatted` to `verbatim`. If this is a problem for you, you can now explicitly select the format on the [website](https://docs.tagtog.net/documents.html#format) and via [API](https://docs.tagtog.net/API_documents_v1.html#examples-send-plain-text-and-format-it); set it to: `formatted`.</span></li>
+  <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. [Documentation](documents.html#define-a-name).</span></li>
+  <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
+  <li class="doc"><span markdown="1">A lot of new API examples to perform regular operations with documents and annotations: [API documents](API_documents_v1.html).</span></li>
+  <li class="doc"><span markdown="1">New guide to export/import documents among projects or accounts: [Export/Import docs](documents.html#export-import-documents).</span></li>
+  <li class="doc"><span markdown="1">A more comprehensive and clean documentation for input/output formats: [Input & Output](ioformats.html).</span></li>
+  <li class="doc"><span markdown="1">Including new roles in the supported annotation workflows: [Annotation flows](collaboration.html#annotation-flows-task-distribution).</span></li>
+  <li class="new"><span markdown="1">(OnPremises) updated script to [fix possible errors in documents](on_premises_README.html#problems-with-documents).</span></li>
+</ul>
+
+---
+
 ## 3.2020-W31.2 👻
 _2020-08-02_
 
-<ul class="updates">  
+<ul class="updates">
   <li class="fix"><span markdown="1">Improved our internal html parser to work with and allow empty elements like `<p>&nbsp;</p>`. Now, those elements are just filtered out instead of the parser throwing a parsing exception.</span></li>
 </ul>
 
@@ -28,7 +120,7 @@ _2020-07-29_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) added automatic recognition of the environment variables `$no_proxy` or `$NO_PROXY`, to easily [configure your proxy](on_premises_README.html#proxy).</span></li>
-  <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>  
+  <li class="fix"><span markdown="1">Only due to backwards compatibility, accept again any SSL/TSL certificate in current webhooks.</span></li>
 </ul>
 
 ---
@@ -300,7 +392,7 @@ _2020-01-24_
 <ul class="updates">
   <li class="new"><span markdown="1">Define the [data requirements](projects.html#requirements) you want to enforce in your project. For example, tagtog can make sure users fill the document labels defined in your project. Soon we will add more requirements to ensure, for example, that annotators normalize their entities or that each document has at least one entity of an specific entity type. Stay tuned!</span></li>
   <li class="new"><span markdown="1">[Reader role](collaboration.html#roles) can now upload files</span></li>
-  <li class="new"><span markdown="1">The [advanced section in the submit panel](documents.html#upload-text) is now automatically expanded/collapsed depending on your last choice.</span></li>
+  <li class="new"><span markdown="1">The [advanced section in the submit panel](documents.html#upload-content) is now automatically expanded/collapsed depending on your last choice.</span></li>
 </ul>
 
 ---
@@ -569,8 +661,8 @@ _2019-07-22_
 _2019-07-21_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">[New `verbatim` **format**](ioformats.html#distinguish-format-by-given-format-parameter) to send and have ANY file parsed as verbatim (pre-formatted). This allows you to preserve any indentation or extra spacing 🥳.</span></li>
-  <li class="new"><span markdown="1">Complimentary, [new `verbatim-plus-annjson` **format**](ioformats.html#annotation-input-formats) to have any file parsed as verbatim together with its annotation ann.json file.</span></li>
+  <li class="new"><span markdown="1">[New `verbatim` **format**](ioformats.html#input-formats) to send and have ANY file parsed as verbatim (pre-formatted). This allows you to preserve any indentation or extra spacing 🥳.</span></li>
+  <li class="new"><span markdown="1">Complimentary, [new `verbatim-plus-annjson` **format**](ioformats.html#input-formats) to have any file parsed as verbatim together with its annotation ann.json file.</span></li>
   <li class="new"><span markdown="1">Now `.log` files are also parsed by default in `verbatim` mode (like other programming languages, such as .py for python or .js for JavaScript).</span></li>
   <li class="fix"><span markdown="1">Fixed the parsing of `anndoc` documents that might contain the period `.` character in its file name (besides the file extension).</span></li>
   <li class="fix"><span markdown="1">Return the proper original _content_ file in case it was sent from the beginning with an ann.json annotation file.</span></li>
@@ -1230,7 +1322,7 @@ _2018-07-26_
   <li class="doc">Limited the amount of entity types, depending on the plan: cloud start (3), cloud medium (10), cloud large (25), on-premises annotator (25), on-premises annotator+ML (50)</li>
   <li class="doc">Add documentation links to Settings</li>
   <li class="doc">Extend documentation about <a title="tagtog - Webhooks" href="/projects.html#webhooks">Webhooks</a></li>
-  <li class="doc">Add <a href="/ioformats.html#annotation-input-formats" title="tagtog - input output formats - input annotations">input format</a> to better understand how to import annotated documents</li>
+  <li class="doc">Add <a href="/ioformats.html#input-formats" title="tagtog - input output formats - input annotations">input format</a> to better understand how to import annotated documents</li>
 </ul>
 
 ---

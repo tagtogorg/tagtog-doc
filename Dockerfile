@@ -1,4 +1,4 @@
-FROM ruby:alpine
+FROM ruby:2.5.8-alpine3.12
 
 # ---
 
@@ -14,7 +14,7 @@ RUN apk add git
 
 # Install python dependencies for python script
 
-RUN apk add python3 && \
+RUN apk add python3 py3-pip && \
     pip3 install requests
 
 # ---

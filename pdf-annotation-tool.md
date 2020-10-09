@@ -84,7 +84,7 @@ toc: true
     <p>tagtog uses two different measures to locate annotations done over native PDFs. Both are contained in each annotation:</p>
     <p class="list-item"><span class="list-item-1"></span><strong>Text offsets</strong>. Each annotation is located using the start offset of its text in reference to the beginning of the page containing the annotation. In order to do that, we transform each page of the PDF into text and save the result in the <code><a title="tagtog - ann.doc - plain.html format" href="anndoc.html#plain-html">plain.html format</a></code>. We use this file as a reference to calculate the offset of the annotations. You can <a title="tagtog - web editor - view output mode" href="webeditor.html#view-output-mode">download and use this file</a> to share a common interface with tagtog. Offsets take into account the reading order of elements such as tables or columns.</p>
     <p class="list-item"><span class="list-item-2"></span><strong>Coordinates</strong>. Each annotation is located using the coordinates of the bounding box containing the annotation. Currently, each annotation uses a pair of coordinates (X, Y) corresponding to the top-left of the first character of the annotation and the bottom-right of the last character of the annotation. In order to facilitate translation, <strong>coordinates are expressed in Points(pt)</strong>. 1pt is equal to exactly 1/72th of an inch. The coordinates system has its 0,0 position in the top left of each page.</p>
-    <p>Following the syntax from other text input formats, the <strong>page number</strong> is encoded in the <code>partId</code> field for each text annotation. For example: <code>s6v1</code> refer to page 6, <code>s20v1</code> refers to page 20 and so forth.</p>
+    <p>Following the syntax from other text input types, the <strong>page number</strong> is encoded in the <code>partId</code> field for each text annotation. For example: <code>s6v1</code> refer to page 6, <code>s20v1</code> refers to page 20 and so forth.</p>
   </div>
   <div class="one-third-col"></div>
 </div>
@@ -134,8 +134,10 @@ toc: true
 <div class="page-section">
   <div class="two-third-col">
     <h2>Caveats</h2>
-    <p class="list-item"><span class="list-item-1"></span>You cannot create an annotation with one piece in one page and the other piece in the next page. The main constraint is that the PDF footer interferes when creating an annotation across two pages.</p>
-    <p class="list-item"><span class="list-item-2"></span>Currently, <a title="tagtog - preannotations" href="webeditor.html#pre-annotations">pre-annotations</a> are not available with this new layout.</p>
+    <p class="list-item" markdown="1"><span class="list-item-1"></span>You cannot create an annotation with one piece in one page and the other piece in the next page. The main constraint is that the PDF footer interferes when creating an annotation across two pages.</p>
+    <p class="list-item" markdown="1"><span class="list-item-2"></span>Currently, [pre-selections/pre-deselections](webeditor.html#pre-annotations) are not available with this new layout.</p>
+    <p class="list-item" markdown="1"><span class="list-item-3"></span>If you double click in a word, no annotation will be created. Currently, this feature is only available in the plain text editor.</p>
+    <p class="list-item" markdown="1"><span class="list-item-4"></span>Warning: please make sure your browser extensions are not conflicting with the viewer. This might have an impact on the viewer's performance.</p>
   </div>
   <div class="one-third-col">
   </div>

@@ -22,23 +22,23 @@ id: collaboration
     </tr>
     <tr>
       <td><code>admin</code></td>
-      <td><span markdown="1">Can read all user's annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit all project's settings. All permissions are active for this role. By default, the user that creates a project becomes its admin. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
+      <td><span markdown="1">Usually they set the project up and track it. Can read all user's annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit all project's settings. All permissions are active for this role. By default, the user that creates a project becomes its admin. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
     <tr>
       <td><code>reviewer</code></td>
-      <td><span markdown="1">Can read all user's annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit some settings, see the project metrics and use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
+      <td><span markdown="1">They review and approve the annotators' annotations. They can read all user's annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit some settings, see the project metrics, and use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
     <tr>
       <td><code>supercurator</code></td>
-      <td>Can edit <code>master</code>'s and their own annotations. They can read the settings of the project, see the project metrics and use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</td>
+      <td>In addition to the regular annotator routine, they can perform some privileged tasks. They can edit <code>master</code>'s and their own annotations. They can read the settings of the project, see the project metrics, and use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</td>
     </tr>
     <tr>
       <td><code>curator</code></td>
-      <td><span>Can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations. They cannot see the metrics of the project nor use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
+      <td><span>Regular annotators. They can edit their own annotations. They cannot edit <code>master</code>'s annotations, but can export master into their annotations. They cannot see the metrics of the project nor use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
     <tr>
       <td><code>reader</code></td>
-      <td><span>Can only read <code>master</code>'s annotations. They can see the metrics of the project. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
+      <td><span>Perfect for those users that only want to consume the production annotations and check the progress. Can only read <code>master</code>'s annotations. They can see the metrics of the project. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
   </table>
 
@@ -390,13 +390,13 @@ id: collaboration
   <p class="numbered-item"><span class="number-1">1</span><strong>Add users to your project</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> to add members to your project.</p>
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here, the <code>admin</code> writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
+  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here, the <code>admin</code> or <code>reviewer</code> writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='You can create the guidelines at <i>Settings &#8594; Guidelines</i>' %}
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. <code>Admins</code> and <code>supercurators</code> can import the documents to be annotated by the group. Any project member can see these documents.</p>
+  <p class="numbered-item"><span class="number-3">3</span><strong>Import text</strong>. The default roles <code>admin</code>,  <code>supercurator</code>, and <code>reviewer</code> can import the documents to be annotated by the group. Any project member can see these documents.</p>
 </div>
 
 <div class="two-third-col">
@@ -404,7 +404,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Each user annotates only the <code>master</code> version of the assigned documents. Once a document is annotated, the user marks the annotations as completed by clicking the <i>Confirm</i> button. <code>admin</code>'s can check the progress in the document list view.</p>
+  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Each user annotates only the <code>master</code> version of the assigned documents. Once a document is annotated, the user marks the annotations as completed by clicking the <i>Confirm</i> button. For example, <code>admin</code> or <code>reviewer</code> can track the progress in the <a href="metrics.html#documents">metrics of the project</a>.</p>
 </div>
 
 
@@ -421,35 +421,33 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here, the <code>admin</code> writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
+  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here, the <code>admin</code> or <code>reviewer</code> writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select who you want to distribute documents to and select <strong>1 annotator per document</strong>.</p>
+  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. The project <code>admin</code> goes to <i>Settings &#8594; Members</i>, enables <a href="projects.html#task-distribution">task distribution</a>, selects who to distribute documents to, and selects <strong>1 annotator per document</strong>.</p>
 </div>
 <div class="one-third-col">
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-4">4</span><strong>Import text</strong>. <code>Admins</code> and <code>supercurators</code> can import the documents to be annotated by the group. Any project member can see these documents, but each annotator will see a TODO list with the documents assigned and not confirmed yet.</p>
+  <p class="numbered-item"><span class="number-4">4</span><strong>Import text</strong>. The default roles <code>admin</code>, <code>supercurator</code>, and <code>reviewer</code> can import the documents to be annotated by the group. Any project member can see these documents. In addition, each annotator will see a TODO list with the documents assigned to them, and not confirmed by them yet.</p>
 </div>
-
+<div class="one-third-col">
+  {% include message.html message='When you import text (via GUI or API), you can <a href="documents.html#distribute-to-a-group-of-users">define manually to which members you want to distribute the documents to</a>.' %}
+</div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations for the documents assigned. Once completed, the user mark her/his version as completed by clicking on the <i>Confirm</i> button.</p>
+  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations for the documents assigned. Once completed, users mark their version as completed by clicking on the <i>Confirm</i> button.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='You can always assign a document to more than one user. Check out <a href="#documents-are-automatically-distributed-multiple-annotators-per">this annotation flow</a> for details.' %}
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. <code>Admins</code> check which documents are ready for review (via GUI in the document list or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">by using a search query</a>). <code>Admins</code> move the user's annotations to the <code>master</code> version (ground truth), review and make the required changes. <code>admins</code> should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed and the document is ready for production.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. <code>Reviewer</code> (or <code>Admin</code>) checks which documents are ready for review (via GUI in the <i><a href="/metrics.html#documents">metrics panel > documents</a></i> or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">by using a search query</a>). <code>Reviewer</code> moves the user's annotations to the <code>master</code> version (ground truth), review, and make the required changes. <code>Reviewers</code> should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed and the document is ready for production.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='If the Review step was not required, users could annotate directly on the <code>master</code> version. When ready, users should mark the annotations of each document as completed by clicking on the <i>Confirm</i> button.' %}
 </div>
-
-
-
-
 
 
 
@@ -465,27 +463,33 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here, the <code>admin</code> writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
+  <p class="numbered-item"><span class="number-2">2</span><strong>Create clear guidelines</strong>. Here, the <code>admin</code> or <code>reviewer</code> writes what is to be annotated and which type of annotations to use. Clear and complete guidelines are key to align all project members.</p>
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. As a project's <code>admin</code>, go to <i>Settings &#8594; Members</i> and select who you want to distribute documents to and select <strong>2 annotators or more per document</strong></p>.
+  <p class="numbered-item"><span class="number-3">3</span><strong>Distribute documents among annotators</strong>. The project <code>admin</code> goes to <i>Settings &#8594; Members</i>, enables <a href="projects.html#task-distribution">task distribution</a>, selects who to distribute documents to, and selects <strong>2 or more annotators per document</strong>.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='From the repeated documents among annotators, the IAA can be computed. Note that even when only <a href="#documents-are-automatically-distributed-one-annotator-per-docume">one annotator is assigned per document</a>, a small sample of documents is randomly chosen by tagtog to always be able to compute the IAA.' %}
+  {% include message.html message='From the overlapping documents among annotators, the IAA can be computed. Note that even when only <a href="#documents-are-automatically-distributed-one-annotator-per-docume">one annotator is assigned per document</a>, a small sample of documents is randomly chosen by tagtog to always be able to compute the IAA.' %}
 </div>
 
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-4">4</span><strong>Import text</strong>. <code>Admins</code> and <code>supercurators</code> can import the documents to be annotated by the group. Any project member can see these documents, but each annotator will see a TODO list with the documents assigned and not confirmed yet.</p>
+  <p class="numbered-item"><span class="number-4">4</span><strong>Import text</strong>. The default roles <code>admin</code>, <code>supercurator</code>, and <code>reviewer</code> can import the documents to be annotated by the group. Any project member can see these documents. In addition, each annotator will see a TODO list with the documents assigned to them, and not confirmed by them yet.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message='When you import text (via GUI or API), you can <a href="documents.html#distribute-to-a-group-of-users">define manually to which members you want to distribute the documents to</a>.' %}
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations for the documents assigned. Once completed, the user mark her/his version as completed by clicking on the Confirm button.</p>
+  <p class="numbered-item"><span class="number-5">5</span><strong>The group starts annotating</strong>. Users annotate their version of the annotations for the documents assigned. Once completed, users mark their as completed by clicking on the Confirm button.</p>
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Adjudication</strong>. <code>Admins</code> check which documents are ready for review (via GUI in the document list or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">via search query</a>). For a document, <code>admins</code> merge the users' annotations (<a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">automatic adjudication</a>) to the <code>master</code> version (ground truth). <code>Admins</code> review the merged annotations and should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Adjudication</strong>. <code>Reviewers</code> (or <code>Admins</code>) check which documents are ready for review (via GUI in the <i><a href="/metrics.html#documents">metrics panel > documents</a></i> or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">via search query</a>). For a document, <code>Reviewers</code> merge the users' annotations (<a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">automatic adjudication</a>) to the <code>master</code> version (ground truth). <code>Reviewers</code> review the merged annotations and they should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message="As an alternative, <code>reviewers</code> could review each member's annotations, move to <code>master</code> one of them and apply any potential change directly on <code>master</code>." %}
 </div>
 
 

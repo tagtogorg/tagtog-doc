@@ -20,11 +20,9 @@ cd tagtog-doc
 
 ## Run the documentation locally
 
-### With ruby
+### With Ruby (2.5)
 
-**You need Ruby 2.5**
-
-Then just run:
+Just run:
 
 ```shell
 ./dev.sh
@@ -56,6 +54,7 @@ Just run:
 
 2. If the item is to appear in the side bar, add it to the `_config.yml` var `sidebar_toc`.
 3. Follow the style guide below.
+
 
 ## Style guide
 
@@ -145,4 +144,4 @@ To mention tagtog features that will be ready soon or have been temporarily disa
 
 ### Emojis
 
-Use https://gist.github.com/rxaviers/7360908 , e.g. `:bookmark_tabs:` :bookmark_tabs:
+You can use https://gist.github.com/rxaviers/7360908 , e.g. `:bookmark_tabs:` :bookmark_tabs:

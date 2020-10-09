@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 👮‍♀️
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Our official [python tagtog script](API_documents_v1.html#python-tagtog-script) now supports passing in specific SSL/TLS certificate/s (with the parameter `--verify_ssl`).</span></li>
+</ul>
+
+---
+
 ## 3.2020-W40.0 🔧
 _2020-10-03_
 

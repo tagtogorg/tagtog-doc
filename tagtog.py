@@ -44,8 +44,15 @@ def parse_arguments(argv=[]):
     parser = argparse.ArgumentParser(prog="tagtog", description=__doc__, formatter_class=RawTextHelpFormatter)
     subparsers = parser.add_subparsers(dest="action")
 
-    def str2bool(x):
-        return True if x.lower() in {'yes', 'true', 't', 'y', '1'} else False
+    def parse_verify_ssl_argument(x):
+        if os.path.exists(x):
+            return x
+        elif x.lower() in {'yes', 'true', 't', 'y', '1'}:
+            return True
+        elif x.lower() in {'no', 'false', 'f', 'n', '0'}:
+            return False
+        else:
+            raise ValueError
 
     # -----------------------------------------------------------------------------------------------------------------
 
@@ -58,7 +65,7 @@ def parse_arguments(argv=[]):
         parser.add_argument("--owner", "-o", help="Project owner in tagtog -- defaults to the user")
         parser.add_argument("--project", "-p", required=True, help="Project name in tagtog to operate on")
         parser.add_argument("--member", "-m", required=False, help="(Optional) Project member name to operate documents on")
-        parser.add_argument("--verify_ssl", type=str2bool, default=True, help="(Optional) Choose to verify or not the ssl certificate of the endpoint domain when making http requests; true by default")
+        parser.add_argument("--verify_ssl", type=parse_verify_ssl_argument, default=True, help="(Optional) Choose to verify, and if so how, or not to verify the SSL/TLS certificate of the endpoint domain when making http requests. Possible values: True (default), False, or a path with trusted SSL/TLS certificate/s (either a single file or a directory).")
 
         parser.add_argument("--output", "-t", default=default_output, help="Output format of tagtog's response")
 

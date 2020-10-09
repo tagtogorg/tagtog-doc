@@ -1,3 +1,5 @@
 #!/bin/sh
+
 cd "$(dirname "$0")"
-./build.sh && ./run.sh
+
+./docker-build.sh && ./docker-run.sh

@@ -27,7 +27,7 @@ RUN bundle install
 
 # Activate if wanted: copy all existing files from tagtog-doc folder, to have default documentation
 
-# COPY . /myapp/
+COPY . /myapp/
 
 # -----------------------------------------------------------------------------
 

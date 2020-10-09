@@ -20,17 +20,26 @@ cd tagtog-doc
 
 ## Run the documentation locally
 
-You need a **docker** installation. Then simply:
+### With ruby
+
+**You need Ruby 2.5**
+
+Then just run:
 
 ```shell
 ./dev.sh
 ```
 
-In case this doesn't work try:
+### With docker
+
+_NOTE: live reloading might not work_
+
+Just run:
 
 ```shell
-bundle exec jekyll serve
+./docker-dev.sh
 ```
+
 
 ## Add new pages
 

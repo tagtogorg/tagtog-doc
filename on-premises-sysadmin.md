@@ -7,7 +7,7 @@ toc: true
 
 tagtog_domain: https://www.tagtog.net
 request_auth_token_endpoint: /-sysadmin/request-auth-token
-onpremises_sample_domain: https://tagtog.example.org
+onpremises_tagtog_domain: https://tagtog.example.org
 
 openid_login_btn: _"Log in with OpenID"_
 openid_login_url: /-login-openid-connect
@@ -22,7 +22,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 <div class="two-third-col">
   <h2>How to access</h2>
-  <p>Go to your root domain set for tagtog (either an IP or a custom domain) and access the <code>/-sysadmin</code> relative path; for example: <code>{{page.onpremises_sample_domain}}/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
+  <p>Go to your root domain set for tagtog (either an IP or a custom domain) and access the <code>/-sysadmin</code> relative path; for example: <code>{{page.onpremises_tagtog_domain}}/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
   <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the subscription license name</p>
   <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the subscription license key</p>
 </div>
@@ -144,7 +144,7 @@ Moreover, and optionally, you can also configure the following tagtog-specific v
   * `"*"` (all): all users of your OIDC system will be created automatically on tagtog if they log in and they have no associated tagtog account yet.
   * comma-separated list of emails (e.g. "John@example.org,Maria@example.org,Peter@example.org"): users' emails in your OIDC system of users that can be created automatically on tagtog if they log in and they have no associated tagtog account yet.
 * `usernameClaim` (OPTIONAL; default=`preferred_username` or, if not existing, `sub`): the _claim_ (attribute) of your OIDC provider that you want to use for your users' usernames. In practice, this parameter is only relevant if you let your users' accounts to be created automatically if they don't exist on tagtog yet (see: `usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog`). If the accounts already exist on tagtog, they are primarily identified by their email address ([see below](#oidc-important-to-know)). In this case, the usernames can take any value ([with some restrictions](#oidc-important-to-know)). Note that you, as the sysadmin, can create the users first manually, associating them the email address registered in your OIDC Provider, and giving them an arbitrary username. Also note that, if you rely on this variable, you can use any custom attribute/claim of your OIDC Provider.
-* `redirectTagtogRootUri` (OPTIONAL; default=originating host): by default when users successfully login on your OIDC Provider, they are redirected back to the originating host, which should be your tagtog OnPremises domain. Therefore, in most cases you should not set this variable. However, sometimes, due to redirections and having "docker-in-between" the originating host might not be read properly, or otherwise be wrongly set to the localhost. For these cases, use this variable. It should be the domain of your tagtog OnPremises domain; e.g. `{{page.onpremises_sample_domain}}` (please do not write a trailing forward slash, "/").
+* `redirectTagtogRootUri` (OPTIONAL; default=originating host): by default when users successfully login on your OIDC Provider, they are redirected back to the originating host, which should be your tagtog OnPremises domain. Therefore, in most cases you should not set this variable. However, sometimes, due to redirections and having "docker-in-between" the originating host might not be read properly, or otherwise be wrongly set to the localhost. For these cases, use this variable. It should be the domain of your tagtog OnPremises domain; e.g. `{{page.onpremises_tagtog_domain}}` (please do not write a trailing forward slash, "/").
 
 Finally, the way you pass these variables to tagtog is by using java dynamic properties. Example:
 
@@ -300,7 +300,7 @@ http --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{{ page.reque
 
 Once you have an auth <code>token</code>, use it in a simple GET request to login with the associated-granted user. To the request also add a <code>redirectTo</code> (<a href="https://meyerweb.com/eric/tools/dencoder/">url-encoded</a>) parameter to indicate where to redirect to. You must add these parameters to the <code>/</code> (root endpoint) of your tagtog's installation domain.
 
-Example: `{{ page.tagtog_domain }}/?redirectTo=https%3A%2F%2Fwww.tagtog.net%2F-datasets&token=bbfd-33878148-6062-4934-a507-af4962753c8f`
+Example: `{{ page.onpremises_tagtog_domain }}/?redirectTo=???&token=bbfd-33878148-6062-4934-a507-af4962753c8f`
 </div>
 
 <div class="two-third-col" markdown="1">

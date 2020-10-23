@@ -69,11 +69,6 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
   <p markdown="1">You can generate a registration link to share with others or to use oneself. Anyone who has this link and access to the system, can create a regular user account signing up in the application.</p>
 </div>
 
-<div class="two-third-col">
-  <h3>Revoke auth tokens</h3>
-  <p markdown="1">Remove all existing token-based logins and registration links. If you think your system's security might have been compromised, you can revoke all auth tokens thus invalidating old token-based logins and registration invitations.</p>
-</div>
-
 
 <div class="two-third-col" markdown="1">
 
@@ -306,7 +301,15 @@ http --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{{ page.reque
 Once you have an auth <code>token</code>, use it in a simple GET request to login with the associated-granted user. To the request also add a <code>redirectTo</code> (<a href="https://meyerweb.com/eric/tools/dencoder/">url-encoded</a>) parameter to indicate where to redirect to. You must add these parameters to the <code>/</code> (root endpoint) of your tagtog's installation domain.
 
 Example: `{{ page.tagtog_domain }}/?redirectTo=https%3A%2F%2Fwww.tagtog.net%2F-datasets&token=bbfd-33878148-6062-4934-a507-af4962753c8f`
-</div> <!-- Closes main section: two-third-cold div -->
+</div>
+
+<div class="two-third-col" markdown="1">
+
+#### Revoke auth tokens
+
+Remove all existing token-based logins and registration links. If you think your system's security might have been compromised, you can revoke all auth tokens thus invalidating old token-based logins and registration invitations.
+</div>
+
 
 
 <!-- <div class="two-third-col"> -->

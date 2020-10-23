@@ -343,31 +343,46 @@ id: projects
 <div class="page-subsection">
   <div class="two-third-col">
     <h4>Members</h4>
-    <p>In this panel, project admins (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can invite and organize other users in your project, so they can collaborate in the annotation tasks. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
-    <p>Only users with the role <code>admin</code> (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can see/edit these project settings.</p>
+
+    <p>In this panel, project admins (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can invite and manage project members. All added project members will be able to collaborate in the same project-scoped annotation task. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
+
+    {% include image.html name="settings/members.png" width="80%" caption="Invite other users to collaborate in your project." %}
   </div>
-  <div class="one-third-col">
-    {% include image.html name="settings-members.PNG" %}
-  </div>
+
   <div class="two-third-col">
-  <h5>Invite other users to your project</h5>
-  <p>To <strong>add a new member</strong>, simply write the tagtog username, their email associated to their account, or any email address (for those who don't have an account in tagtog yet) in the text box, choose the role, and click on <code>Add Member</code>. Once added, those who don't have an account at tagtog yet, will receive a link to create an account and join the project. Already existing users will receive an email notification.</p>
+  <h5>Invite members to your project</h5>
+
+  <p>To <strong>add a new member</strong>: 1) simply write the tagtog username, or their email associated to their tagtog account, or any email address (for those who don't have an account in tagtog yet) in the input box, 2) choose the role, and 3) click on <kbd>Add Member</kbd>. Once added, those emails who don't have an account at tagtog yet, will receive a link to create an account and join the project. Already existing users will receive an email notification.</p>
+
+  <p>To <strong><a href="on-premises-sysadmin.html#teams-management">add a new team (and its users/members)</a></strong>: everything works the same as for adding individual members; just write the team's name in the input box, and add it.</p>
   </div>
-  <div class="one-third-col">
-    <div class="message">
-      You can invite via email address those who don't have an account at tagtog yet. You can invite via email address or username those who already have an account to at tagtog (either on your on-premises instance or on the cloud version).
-    </div>
-  </div>
+
+
   <div class="two-third-col">
-    <h5>Task distribution</h5>
-    <p>With this feature you can <strong>automatically distribute the project's documents among a group of project's members</strong>. For example, if you choose that each document is assigned to 1 single annotator, every uploaded document will be randomly assigned to only one of the annotators. Otherwise, for example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
-    <p>This overlapping is recommended to increase the overall quality of your annotation project. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration.html#iaa-inter-annotator-agreement">inter-annotator agreement</a>) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a></p>
-    <p>To start task distribution, first you need to enable the feature. Now:</p>
-    <p class="numbered-item"><span class="number-1">1</span><strong>Select the group of project's members that will annotate documents</strong> (the system only distributes documents to these users).</p>
-    <p class="numbered-item"><span class="number-2">2</span><strong>Select how many of these users will annotate each document</strong>.</p>
+  <h5>Delete members from your project</h5>
+
+  <p>To delete an existing project member (or project team) just click on its associated removal button <kbd>x</kbd>. You will be prompted in a 2nd-step dialog to confirm that you do want to delete the project member.</p>
+
+  <p><strong>The removal of project members cannot be undone!</strong> Please make sure you have downloaded their annotations before, or that you have merged their annotations into the <code>master</code> version.</p>
+
+  {% include image.html name="settings/members-delete.png" width="80%" caption="Delete existing project members." %}
+  </div>
+
+
+  <div class="two-third-col">
+    <h5>Task distribution (document assignment)</h5>
+    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose that each document is assigned to 1 single annotator, every uploaded document will be randomly assigned to only one of the annotators. Otherwise, for example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
+
+    <p>Annotating the same document by 2 or more members is recommended to increase the overall quality of your annotation project. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration.html#iaa-inter-annotator-agreement">inter-annotator agreement</a>) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a>.</p>
+
+    {% include image.html name="settings/members-task-distribution.png" width="85%" caption="Task Distribution: assign documents to your labelers as soon they are uploaded." %}
+
+    <p>To start task distribution, first you need to enable the feature. Then:</p>
+    <p class="numbered-item"><span class="number-1">1</span><strong>Select the members you want to distribute documents to</strong> (the system only distributes documents to these users).</p>
+    <p class="numbered-item"><span class="number-2">2</span><strong>Select the number of annotators per document</strong> (how many of the selected users will annotate each document).</p>
     <br>
-    <p><strong>By default, Task distribution is turned off</strong>, documents are not distributed. When task distribution is not active, members see the <a href="collaboration.html#annotation-versions"><code>master</code> version</a> automatically when they open a document. Once the task distribution is active (number of annotators per document is 1 or more), members will see their own version of the annotations when they open a document.</p>
-    <p><strong>When task distribution is active, project members see by default (in Documents) the special search view <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a>. This view lists the documents that have not been confirmed by the annotator yet.</strong></p>
+    <p><strong>By default, task distribution is turned off</strong>. This means that uploaded documents do not get distributed. When task distribution is not active, members see the <a href="collaboration.html#annotation-versions"><code>master</code> version</a> automatically when they open a document. Once the task distribution is active (number of annotators per document is 1 or more), members will see their own version of the annotations when they open a document.</p>
+    <p><strong>When task distribution is active, project members see by default the special search <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a></strong> (in the tab <em>Documents</em>). This view lists the documents that have not been confirmed yet by the logged annotator.</p>
   </div>
   <div class="one-third-col">
     <div class="message">
@@ -378,8 +393,7 @@ id: projects
     </div>
     <div class="message">
       Using the <strong>API</strong> and the parameter <code>distributeToMembers</code>, you can decide who exactly you want to distribute a specific document to. <a title="tagtog - API documents - Import" href="API_documents_v1.html#import-and-annotate-text">More information</a>.
-    </div>
-    {% include image.html name="settings-task-distribution-members.png" %}
+    </div>    
   </div>
  </div>
 

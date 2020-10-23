@@ -20,17 +20,24 @@ cd tagtog-doc
 
 ## Run the documentation locally
 
-You need a **docker** installation. Then simply:
+### With Ruby (2.5)
+
+Just run:
 
 ```shell
 ./dev.sh
 ```
 
-In case this doesn't work try:
+### With docker
+
+_NOTE: live reloading might not work_
+
+Just run:
 
 ```shell
-bundle exec jekyll serve
+./docker-dev.sh
 ```
+
 
 ## Add new pages
 
@@ -47,6 +54,7 @@ bundle exec jekyll serve
 
 2. If the item is to appear in the side bar, add it to the `_config.yml` var `sidebar_toc`.
 3. Follow the style guide below.
+
 
 ## Style guide
 
@@ -136,4 +144,4 @@ To mention tagtog features that will be ready soon or have been temporarily disa
 
 ### Emojis
 
-Use https://gist.github.com/rxaviers/7360908 , e.g. `:bookmark_tabs:` :bookmark_tabs:
+You can use https://gist.github.com/rxaviers/7360908 , e.g. `:bookmark_tabs:` :bookmark_tabs:

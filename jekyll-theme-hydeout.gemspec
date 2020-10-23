@@ -23,5 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-gist", "~> 1.4"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.6"
-  spec.add_development_dependency "bundler", "~> 1.12"
+  # changed by tagtog -- comment out bundler version dependency -- the bundling works also with at least version 2.1.4
+  # spec.add_development_dependency "bundler", "~> 1.12"
 end

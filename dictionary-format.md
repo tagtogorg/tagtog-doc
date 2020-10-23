@@ -40,7 +40,7 @@ id: dictionaries
 </div>
 <div class="one-third-col">
   {% include message.html message="<strong>Note</strong>: the id is not considered a name. If you want it to be a name, put it in the list of names. Only in the basic case where the entity has 1 sole name and this matches the id, the name can be omitted and is therefore defined implicitly." %}
-  {% include message.html message="The ids in a dictionary cannot contain spaces and must match the regular expression: <code>^[a-zA-Z0-9_\-:\.\@]+$ </code>" %}
-  {% include message.html message="<strong>Note</strong>: the names must NOT be tokenized." %}
+  {% include message.html message="<strong>Note</strong>: The entity ids cannot contain spaces nor commas, among other special characters. The exact regular expression is: <code>^[\p{IsAlphabetic}[0-9]\-()_:.@']+$</code>" %}
+  {% include message.html message="<strong>Note</strong>: the names SHOULD NOT be tokenized." %}
   {% include message.html message="Limit the <i>recnames</i> or <i>altnames</i> to <strong>up to 7 words</strong>. To reduce the amount of time required to search and annotate dictionary terms, tagtog won't annotate terms over 7 tokens." %}
 </div>

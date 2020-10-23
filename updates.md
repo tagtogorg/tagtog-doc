@@ -14,7 +14,7 @@ notoc: true
 
 ---
 
-## ???
+## ??? 🎳
 
 <ul class="updates">  
   <li class="new"><span markdown="1">The [APIs to manage project members](API_settings_v1.html#members-management) are now updated to also document the new feature of adding/updating/deleting teams' members. This is an exclusive feature of tagtog [OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES).</span></li>
@@ -23,10 +23,23 @@ notoc: true
   <li class="fix"><span markdown="1">The selected members in the list of task distribution was ignored in the actual distribution sometimes. Wrongly, all members who had permissions to annotate, got documents distributed, even if they were not explicitly written in the list of task distribution. This is now fixed.</span></li>
   <li class="fix"><span markdown="1">(OpenID SSO) the [`token_type` is now verified ignoring the case](https://tools.ietf.org/html/rfc6749#section-4.2.2 "OAuth 2.0 spec") (this allows both `"Bearer"` and `"bearer"`).</span></li>
   <li class="fix"><span markdown="1">Pre-selectable document labels are not shown any more when submitting content for the input types URL and PMID/PMCID, for it is not supported.</span></li>
+</ul>
 
 ---
 
-## ??? 🔧
+## ??? 👮‍♀️
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Our official [python tagtog script](API_documents_v1.html#python-tagtog-script) now supports passing in specific SSL/TLS certificate/s (with the parameter `--verify_ssl`).</span></li>
+  <li class="fix"><span markdown="1">In the project settings, the entity types you can select for an entity label are automatically refreshed in case you update the project's entity types </span></li>
+  <li class="doc"><span markdown="1">Now it is clear what means to force the group of users the documents will be distributed to. The documentation also makes it clear now.</span></li>
+  <li class="doc"><span markdown="1">Improved documentation of the [dictionary format](dictionary-format), denoting the exact regular expresion for allowed entity ids (currently: `^[\p{IsAlphabetic}[0-9]\-()_:.@']+$`).</span></li>
+</ul>
+
+---
+
+## 3.2020-W40.0 🔧
+_2020-10-03_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can restrict an entity label to one or more entity types. Before, it was only possible to limit it to all entity types or a single entity type.</span></li>

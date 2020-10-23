@@ -71,8 +71,17 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
   <h3>Revoke auth tokens</h3>
   <p markdown="1">Remove all existing token-based logins and registration links. If you think your system's security might have been compromised, you can revoke all auth tokens thus invalidating old token-based logins and registration invitations.</p>
 </div>
+
+
+<div class="two-third-col" markdown="1">
+
+## Teams Management
+
+</div>
+
+
 <div class="two-third-col">
-  <h2>Roles and permissions</h2>
+  <h2>Roles &amp; Permissions</h2>
   <p>In the admin panel you can find a permission matrix where you can check &amp; modify the permissions of existing roles or to create custom roles. After, these roles can be assigned to users at project level.</p>
   <p>All the <strong>permissions are explained here</strong>: <a title="tagtog - Multi-user annotation - permissions" href="collaboration.html#permissions">Multi-user annotation - permissions</a></p>
   <p>By default there are three roles in the system: <code>admin</code>, <code>supercurator</code> and <code>reader</code>. The permissions for these default roles cannot be modified. Admin role cannot be removed (the creator of a project, the owner, will always have this role assigned). The roles supercurator and reader can be removed. If you want to modify their permissions, you should remove the role, and create a new role with the same name.</p>
@@ -95,6 +104,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
     When a role is removed, all the users under this role are assigned to another role (chosen by the sysadmin).
   </div>
 </div>
+
 
 <div class="two-third-col" markdown="1">
 

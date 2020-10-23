@@ -74,6 +74,35 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 ## Teams Management
 
+_tagtog Teams_ allow you to group users by their responsibilities, department, guest status, etc. On the SysAdmin page, you have all options to manage the teams of your organization. Of course, you can read your teams, create new ones, update them, and/or delete them.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-panel.png" alt="Screenshot: teams panel" />
+  <p>Teams panel: list, create, update, and delete teams.</p>
+</div>
+
+
+### Creating & updating a team
+
+To create (or update) a team just: define its name, set an optional description, and select the desired users. To select users, just click on their usernames or search by their usernames or by email address.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-create-update.png" width="50%" align="center" alt="Screenshot: popup to create or update a team" />
+  <p>Panel to create &amp; update a team.</p>
+</div>
+
+
+### Invite teams to projects
+
+After defining some teams, you can [invite teams directly to your projects](projects.html#invite-other-users-to-your-project). This will allow you, for example, to easily invite and assign to all the teams' users the same role within the project. Once a team is added to a project, the team users will always be in _"sync"_ with respect to the project. This is bettere explained with an example:
+
+* Say you create, in this SysAdmin page, a team "MyTeam" with users: "John", "Laura", and "Maria".
+* Then say you add "MyTeam" to your project "ProjectA" with role "reviewer".
+* This will mean that "John", "Laura", and "Maria" will be added, all at once, to "ProjectA" with role "reviewer".
+* Later on, for instance, you add another user to your team, "Peter", and remove from the team the user "Maria".
+* This will mean that "Peter" will also be automatically added to "ProjectA" (with role "reviewer") and that "Maria" will be removed from the project. Of course, since "John" and "Laura" were not affected, they will remain in the project.
+
+
 </div>
 
 
@@ -181,7 +210,7 @@ These are relevant aspects of the tagtog OIDC integration:
 Once you [set up your OIDC integration](#oidc-setup), the tagtog login page (`/-login`), shows an extra option: {{ page.openid_login_btn }}. Moreover, when a non-logged-yet user goes to a tagtog page that requires authentication, the user will be always redirected to the tagtog login page.
 
 <div class="img-with-caption">
-  <img src="/assets/img/sysadmin/oidc-login.png" alt="Screenshot: Login with OpenID Connect" />
+  <img src="/assets/img/sysadmin/oidc-login.png" width="80%" alt="Screenshot: Login with OpenID Connect" />
   <p>tagtog login box when OpenID Connect is enabled on your tagtog OnPremises instance.</p>
 </div>
 

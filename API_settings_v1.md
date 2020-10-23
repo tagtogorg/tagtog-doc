@@ -105,10 +105,13 @@ Successful status code: `200` (OK)
 
 Payload: JSON (application/json)
 
-| Name             | Example                                                                                                                                                      | Description                                |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| `members`        | `[{"username":"yourUsername","roleName":"admin"},{"username":"John","roleName":"reader"},{"username":"Laura","roleName":"reviewer","viaTeamName":"MyTeam"}]` | Array of confirmed members in the project. |
-| `pendingMembers` | `[{"invitationToken":"invt-220dc7a2-7c0c-459f-80a6-ba5edc80c71f","roleName":"admin","email":"somebody@example.com"}]`                                        | Array of pending members in the project.   |
+| Name             | Example                                                                                                                                          | Description                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| `members`        | `[{"username":"MyOrganization","role":{"name":"admin"},"inTeams":[]}, ...]`                                                                      | Array of confirmed members in the project (including those added via teams). |
+| `pendingMembers` | `[{"invitationToken":"invt-8ac3e282-3826-4f1f-a415-2cf1df30b3ce","role":{"name":"curator"},"email":"somebody@example.org"}, ...]`                | Array of pending members in the project.                                     |
+| `teams`          | `[{"name":"MyTeam1","defaultRole":{"name":"reader"},"members":[{"username":"test01","role":{"name":"reader"},"inTeams":[{"name":"MyTeam1"}]}]}]` | Array of teams in the project.                                               |
+
+**⚠️ Deprecation**: the previous output field ~~`roleName`~~ was replaced by `{"role":{"name":"..."}}`.
 
 ---
 
@@ -194,9 +197,9 @@ Successful status code: `200` (OK)
 
 Payload: JSON (application/json)
 
-| Name             | Example                                                                                                               | Description                              |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| `pendingMembers` | `[{"invitationToken":"invt-220dc7a2-7c0c-459f-80a6-ba5edc80c71f","roleName":"admin","email":"somebody@example.com"}]` | Array of pending members in the project. |
+| Name             | Example                                                                                                                           | Description                              |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| `pendingMembers` | `[{"invitationToken":"invt-8ac3e282-3826-4f1f-a415-2cf1df30b3ce","role":{"name":"curator"},"email":"somebody@example.org"}, ...]` | Array of pending members in the project. |
 
 ---
 
@@ -213,7 +216,7 @@ Body: None
 
 | Type | Name              | Default | Example                                     | Description                                                                       |
 | ---- | ----------------- | ------- | ------------------------------------------- | --------------------------------------------------------------------------------- |
-| Path | `invitationToken` |         | "invt-220dc7a2-7c0c-459f-80a6-ba5edc80c71f" | Invitation token, which uniquely identifies the invitation to the pending member. |
+| Path | `invitationToken` |         | "invt-8ac3e282-3826-4f1f-a415-2cf1df30b3ce" | Invitation token, which uniquely identifies the invitation to the pending member. |
 
 **Output**
 

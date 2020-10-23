@@ -312,8 +312,6 @@ Remove all existing token-based logins and registration links. If you think your
 
 
 
-<!-- <div class="two-third-col"> -->
-<!-- <br/><hr/><br/> -->
 
 <div class="two-third-col" markdown="1">
 

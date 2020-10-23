@@ -352,7 +352,7 @@ tagtog_domain: https://www.tagtog.net
 
   <p>To <strong>add a new member</strong>: 1) simply write the tagtog username, or their email associated to their tagtog account, or any email address (for those who don't have an account in tagtog yet) in the input box, 2) choose the role, and 3) click on <kbd>Add Member</kbd>. Once added, those emails who don't have an account at tagtog yet, will receive a link to create an account and join the project. Already existing users will receive an email notification.</p>
 
-  <p>To <strong><a href="on-premises-sysadmin.html#teams-management">add a new team (and its users/members)</a></strong>: everything works the same as for adding individual members; just write the team's name in the input box, and add it.</p>
+  <p>To <strong>add a new <a href="on-premises-sysadmin.html#teams-management">team</a> (and its users/members)</strong>: just write the team's name in the input box, and add it. Everything works the same as when adding individual members.</p>
   </div>
 
 
@@ -390,7 +390,8 @@ tagtog_domain: https://www.tagtog.net
       The number of annotators per document is limited to the number of users selected to annotate.
     </div>
     <div class="message">
-      Using the <strong>API</strong> and the parameter <code>distributeToMembers</code>, you can decide who exactly you want to distribute a specific document to. <a title="tagtog - API documents - Import" href="API_documents_v1.html#import-and-annotate-text">More information</a>.
+      Using the <strong>API</strong> with the <a title="tagtog - API documents - Import" href="API_documents_v1.html#import-and-annotate-text">parameter <code>distributeToMembers</code></a>, you can override who exactly you want to distribute a specific document to.<br>
+      Using the <strong>website</strong>, you can also override the Task Distribution settings <a href="documents.html#distribute-to-a-group-of-users">on the upload advanced menu</a>.
     </div>    
   </div>
  </div>

@@ -3,21 +3,19 @@ layout: page
 title: Projects
 sidebar_link: true
 id: projects
+
+tagtog_domain: https://www.tagtog.net
 ---
 
 <div class="two-third-col">
   <p>A project is a collection of documents and rules to annotate documents manually or automatically.</p>
-  <h2>Creating a project</h2>
-  <p>Once you have signed up and you have a user account, you are ready to create a new project.</p>
-  <p class="numbered-item"><span class="number-1">1</span>Choose a <strong>name</strong> for your project</p><br>
-</div>
-<div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span>Choose a <strong>description</strong> for your project. Remember each project has a guidelines section where you can go into detail about the characteristics of your project.</p>
-</div>
-<div class="one-third-col">
-  <div class="message">
-    The <strong>Maximum length</strong> of a project description is 500 characters.
-  </div>
+
+  <h2>Create a new project</h2>
+
+  <p>Once you have signed up and you have a user account, you are ready to <a href="{{page.tagtog_domain}}/-new">create a new project</a>.</p>
+
+  <p class="numbered-item"><span class="number-1">1</span>Set the <strong>name</strong> for your project.</p>
+  <p class="numbered-item"><span class="number-2">2</span>Set an optional <strong>description</strong> for your project. Moreover, each project has a <a href="#guidelines">Guidelines section</a> where you can go into detail about the characteristics of your project.</p>
 </div>
 
 

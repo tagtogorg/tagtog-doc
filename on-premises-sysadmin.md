@@ -26,7 +26,6 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
   <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the subscription license name</p>
   <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the subscription license key</p>
 </div>
-
 <div class="one-third-col">
   <div class="message">
     <strong>License information</strong> is sent to you by email by the tagtog team when you first purchased your tagtog OnPremises subscription.
@@ -51,9 +50,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
   {% include image.html name="sysadmin-onpremises-users.png" caption="User panel" %}
 </div>
-<div class="one-third-col">
-  {% include image.html name="sysadmin-onpremises-user-update.png" caption="Edit user view" width="90%" %}
-</div>
+
 <div class="two-third-col">
   <h3>Create a new user</h3>
   <p markdown="1">To create a new user using the sysadmin user panel, click on **+ Add new user**. A form will show up with the following fields:</p>
@@ -63,10 +60,15 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
   <p class="list-item" markdown="1"><span class="list-item-4"></span>**Password**: the password of the new user. The user can later change the password. This field is only required for accounts with `Basic authentication`.</p>
   <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: a flag to indicate whether the new user can create tagtog projects or not. Users who cannot create projects, can only work in projects they are invited to.</p>
 </div>
+<div class="one-third-col">
+  {% include image.html name="sysadmin-onpremises-user-update.png" caption="Create &amp; edit user view" width="90%" %}
+</div>
+
 <div class="two-third-col">
   <h3>Create a new user by registration link</h3>
   <p markdown="1">You can generate a registration link to share with others or to use oneself. Anyone who has this link and access to the system, can create a regular user account signing up in the application.</p>
 </div>
+
 <div class="two-third-col">
   <h3>Revoke auth tokens</h3>
   <p markdown="1">Remove all existing token-based logins and registration links. If you think your system's security might have been compromised, you can revoke all auth tokens thus invalidating old token-based logins and registration invitations.</p>

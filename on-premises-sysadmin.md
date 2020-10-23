@@ -94,10 +94,10 @@ To create (or update) a team just: define its name, set an optional description,
 
 ### Invite teams to projects
 
-After defining some teams, you can [invite teams directly to your projects](projects.html#invite-other-users-to-your-project). This will allow you, for example, to easily invite and assign to all the teams' users the same role within the project. Once a team is added to a project, the team users will always be in _"sync"_ with respect to the project. This is bettere explained with an example:
+After defining some teams, you can [invite teams directly to your projects](projects.html#invite-other-users-to-your-project). This allows you to easily add a team and all its users to a project. Once a team is added to a project, the team users will always be in _"sync"_ with respect to the project. This is better explained with an example:
 
-* Say you create, in this SysAdmin page, a team "MyTeam" with users: "John", "Laura", and "Maria".
-* Then say you add "MyTeam" to your project "ProjectA" with role "reviewer".
+* Say you create a team "MyTeam" with users: "John", "Laura", and "Maria".
+* Then you add "MyTeam" to your project "ProjectA" with role "reviewer".
 * This will mean that "John", "Laura", and "Maria" will be added, all at once, to "ProjectA" with role "reviewer".
 * Later on, for instance, you add another user to your team, "Peter", and remove from the team the user "Maria".
 * This will mean that "Peter" will also be automatically added to "ProjectA" (with role "reviewer") and that "Maria" will be removed from the project. Of course, since "John" and "Laura" were not affected, they will remain in the project.

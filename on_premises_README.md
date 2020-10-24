@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Installation
+title: Install & Run
 sidebar_link: true
 id: on_premises_readme
 toc: true
@@ -124,11 +124,11 @@ export TAGTOG_HOME="$PWD/tagtog_data"
 * Point your browser now to: `https://<tagtog_running_ip>:<tagtog_https_port>` (the port defaults to 443; [you can change the port](#conflicts-with-ports-000080-bind-address-already-in-use-)).
 
 
-### HTTPS & SSL
+### HTTPS & TLS (SSL)
 
-tagtog runs on _https_ only and redirects all http requests to https. We recommend setting your http and https ports to the defaults 80 and 443 but you are free to [choose other ports](#conflicts-with-ports-000080-bind-address-already-in-use-). See the `tagtog_on_premises` script.
+**tagtog runs on _https_ only** and redirects all http requests to https. We recommend setting your http and https ports to the defaults 80 and 443, but you are free to [choose other ports](#conflicts-with-ports-000080-bind-address-already-in-use-). See the `tagtog_on_premises` script.
 
-By default, tagtog uses a SSL self-signed certificate. To use your own SSL certificate, place the following 2 files in the folder `${TAGTOG_HOME}/ssl`:
+By default, tagtog uses a TLS/SSL self-signed certificate. To use your own TLS/SSL certificate, place the following 2 files in the folder `${TAGTOG_HOME}/ssl`:
 
 * `tagtog_PRIVATE_KEY.key` (you can use a symlink)
 * `tagtog_SSL_CERTIFICATE.pem` (you can use a symlink)

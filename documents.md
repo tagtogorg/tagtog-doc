@@ -76,7 +76,7 @@ toc: true
 </div>
 <div class="two-third-col">
   <h5>Distribute to a group of users</h5>
-  <p>If <a href="projects.html#task-distribution">Task Distribution</a> is enabled, here you can force to which users you want to assign the importing documents to. If one or more users are selected, the automatic task distribution settings are overriden (for this import request).</p>
+  <p>If <a href="projects.html#task-distribution">Task Distribution</a> is enabled, here you can force to which users you want to assign the importing of documents to. If one or more users are selected, the automatic task distribution settings are overriden (for this import request only). tagtog will distribute (assign) the document to all the users selected and only to those.</p>
   <p>The list of selectable users matches the list of members specified in the Task Distribution settings.</p>
 </div>
 <div class="one-third-col">

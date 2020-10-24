@@ -1,37 +1,39 @@
 FROM ruby:2.5.8-alpine3.12
 
-# ---
+# -----------------------------------------------------------------------------
 
-# Install jekyll-system dependencies
+# Install bundle & libraries and/or headers needed by some ruby deps' compilation (those with native-extensions, e.g. eventmachine)
 
 RUN apk update && \
-    apk add gcc make libc-dev g++ && \
-    gem install bundle jekyll
+    apk add gcc make libc-dev g++
 
+# Install git, for otherwise the *.gemspec installation of jekyll-theme-hydeout will not work
 RUN apk add git
 
-# ---
+# -----------------------------------------------------------------------------
 
-# Install python dependencies for python script
+# Install ruby dependencies
 
-RUN apk add python3 py3-pip && \
-    pip3 install requests
+RUN mkdir /myapp/
+WORKDIR /myapp/
 
-# ---
+COPY Gemfile* *.gemspec /myapp/
+# If we have the gem files already, the following will install the right version of bundler
+RUN gem install bundler
 
-# Install pages and derived dependencies
-
-RUN mkdir /my/
-WORKDIR /my/
-
-COPY Gemfile* *.gemspec /my/
 RUN bundle install
 
-COPY . /my/
+# -----------------------------------------------------------------------------
 
-# ---
+# Activate if wanted: copy all existing files from tagtog-doc folder, to have default documentation
+
+COPY . /myapp/
+
+# -----------------------------------------------------------------------------
 
 EXPOSE 4000
 
-# "--incremental" can be faster, but is too conversative with the cache
-ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--incremental"]
+# See jekyll parameters: https://jekyllrb.com/docs/configuration/options/#serve-command-options
+# "--incremental" can be faster, but is too conversative with the cache (https://jekyllrb.com/docs/configuration/incremental-regeneration/#incremental-regeneration)
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
+CMD ["--livereload", "--incremental"]

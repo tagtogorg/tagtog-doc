@@ -18,7 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">Our official [python tagtog script](API_documents_v1.html#python-tagtog-script) now supports passing in specific SSL/TLS certificate/s (with the parameter `--verify_ssl`).</span></li>
-  <li class="fix"><span markdown="1">In the project settings, the entity types you can select for an entity label are automatically refreshed in case you update the project's entity types </span></li>
+  <li class="fix"><span markdown="1">In the project settings, the entity types you can select for an entity label are automatically refreshed in case you update the project's entity types.</span></li>
   <li class="doc"><span markdown="1">Now it is clear what means to force the group of users the documents will be distributed to. The documentation also makes it clear now.</span></li>
   <li class="doc"><span markdown="1">Improved documentation of the [dictionary format](dictionary-format), denoting the exact regular expresion for allowed entity ids (currently: `^[\p{IsAlphabetic}[0-9]\-()_:.@']+$`).</span></li>
 </ul>

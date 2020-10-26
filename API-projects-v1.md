@@ -71,7 +71,9 @@ Search and return the list of projects that the (authenticated) user is a member
         //array of project members. The project owner is always returned (with role admin)
         {
           "username": "String: members username invited to this project",
-          "roleName": "String: member's role; string value"
+          "role": {
+            "name": "String: member's role"
+          }
         },
         //... next members if any
       ]
@@ -80,6 +82,8 @@ Search and return the list of projects that the (authenticated) user is a member
   ]
 }
 ```
+
+**⚠️ Deprecation**: the output field ~~`roleName`~~ was deprecated on 2020-11-01, and will be removed after 2021-05-01. Please use the new field: `{"role":{"name":"..."}}`.
 
 </div>
 

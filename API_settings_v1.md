@@ -111,7 +111,7 @@ Payload: JSON (application/json)
 | `pendingMembers` | `[{"invitationToken":"invt-8ac3e282-3826-4f1f-a415-2cf1df30b3ce","role":{"name":"curator"},"email":"somebody@example.org"}, ...]`                | Array of pending members in the project.                                     |
 | `teams`          | `[{"name":"MyTeam1","defaultRole":{"name":"reader"},"members":[{"username":"test01","role":{"name":"reader"},"inTeams":[{"name":"MyTeam1"}]}]}]` | Array of teams in the project.                                               |
 
-**⚠️ Deprecation**: the previous output field ~~`roleName`~~ was replaced by `{"role":{"name":"..."}}`.
+**⚠️ Deprecation**: the output field ~~`roleName`~~ was deprecated on 2020-11-01, and will be removed after 2021-05-01. Please use the new field: `{"role":{"name":"..."}}`.
 
 ---
 

@@ -6,7 +6,7 @@ layout: page
 toc: true
 toc_levels: 1,2
 
-version: 1.1
+version: 1.2
 api_endpoint: /-api/projects/v1
 api_document_url: https://www.tagtog.net/-api/projects/v1
 api_username: yourUsername
@@ -19,7 +19,7 @@ api_project: yourProjectName
     <tr>
       <td><strong>Version</strong></td>
       <td><code>{{ page.version }}</code></td>
-    </tr>    
+    </tr>
   </table>
 </div>
 
@@ -84,44 +84,5 @@ Search and return the list of projects that the (authenticated) user is a member
 ```
 
 **⚠️ Deprecation**: the output field ~~`roleName`~~ was deprecated on 2020-11-01, and will be removed after 2021-05-01. Please use the new field: `{"role":{"name":"..."}}`.
-
-</div>
-
-
-<div class="two-third-col" markdown="1">
-
-## ~~GET list of my projects~~
-
-**⚠️ DEPRECATED 2019-10-11 -- Will be removed after 2020-01-11**
-
-**👉 Use instead: [search-my-projects](#search-my-projects)**
-
-Return the list of projects that the (authenticated) user is a member of. This includes the projects created by the user, and the projects as an invitee.
-
-| **Endpoint** | `{{ page.api_endpoint }}/my_projects` |
-| ------------ | ------------------------------------- |
-| **Method**   | `GET`                                 |
-| **Output**   | JSON                                  |
-
-
-###### Input Parameters
-
-None
-
-
-###### Coding examples
-
-<div id="tabs-container">
-  <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-curl">cURL</a></li>
-  </ul>
-  <div class="tab">
-<div id="tab-1-curl" class="tab-content" style="display: block" markdown="1">
-```shell
-curl -u yourUsername:yourPassword {{ page.api_document_url }}/my_projects
-```
-</div>
-  </div>
-</div>
 
 </div>

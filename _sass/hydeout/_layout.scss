@@ -191,6 +191,10 @@ body {
 
 .img-with-caption img {
   margin: 0;
+  //Added following 3 lines by tagtog on 2020-10-23
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .img-with-caption p {

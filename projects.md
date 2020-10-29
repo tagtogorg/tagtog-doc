@@ -3,26 +3,24 @@ layout: page
 title: Projects
 sidebar_link: true
 id: projects
+
+tagtog_domain: https://www.tagtog.net
 ---
 
 <div class="two-third-col">
   <p>A project is a collection of documents and rules to annotate documents manually or automatically.</p>
-  <h3>Creating a project</h3>
-  <p>Once you have signed up and you have a user account, you are ready to create a new project.</p>
-  <p class="numbered-item"><span class="number-1">1</span>Choose a <strong>name</strong> for your project</p><br>
-</div>
-<div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span>Choose a <strong>description</strong> for your project. Remember each project has a guidelines section where you can go into detail about the characteristics of your project.</p>
-</div>
-<div class="one-third-col">
-  <div class="message">
-    The <strong>Maximum length</strong> of a project description is 500 characters.
-  </div>
+
+  <h2>Create a new project</h2>
+
+  <p>Once you have signed up and you have a user account, you are ready to <a href="{{page.tagtog_domain}}/-new">create a new project</a>.</p>
+
+  <p class="numbered-item"><span class="number-1">1</span>Set the <strong>name</strong> for your project.</p>
+  <p class="numbered-item"><span class="number-2">2</span>Set an optional <strong>description</strong> for your project. Moreover, each project has a <a href="#guidelines">Guidelines section</a> where you can go into detail about the characteristics of your project.</p>
 </div>
 
 
 <div class="two-third-col">
-  <h3>Project settings</h3>
+  <h2>Project settings</h2>
   <p>If you selected some machines when you created your project, you probably want to start importing text to tagtog. Otherwise, you need to configure the project's settings either to annotate manually or automatically.</p>
 </div>
 <div class="one-third-col">
@@ -31,7 +29,7 @@ id: projects
 
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Guidelines</h4>
+    <h3>Guidelines</h3>
     <p>You can write the <strong>annotation guidelines</strong> for you or your team. It should define what and how to manually annotate. The more clear it is, the better the annotations and the training data you can generate.</p>
   </div>
   <div class="one-third-col">
@@ -52,7 +50,7 @@ id: projects
 
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Annotatable sections</h4>
+    <h3>Annotatable sections</h3>
     <p>Here you select which sections you want to manually or automatically annotate in supported scientific papers (papers should be imported in XML format. <a title="tagtog - XML supported input types" href="ioformats.html#files">Here</a> is the list of supported XML formats). The available sections are: <code>Title</code>, <code>Abstract</code>, <code>Introduction & Background</code>, <code>Materials & Methods</code>, <code>Results, Conclusion & Discussion</code>, <code>Other</code>. The sections not selected will be grayed out in the editor and manual annotations disabled.</p>
     <p>You can also select how to annotate <code>Figures & Tables</code> as in <code>always</code>, <code>never</code> or <code>section-dependant</code>.</p>
     <p>To <strong>disable manual annotation</strong>, uncheck each section. Users will be able to read text in the editor as usual, however manual annotation won't be possible.</p>
@@ -66,7 +64,7 @@ id: projects
 </div>
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Entities</h4>
+    <h3>Entities</h3>
     <p>Here you should define what type of information you want to annotate manually or automatically. Meaning, which type of information you want to identify or annotate in text. You achieve this by defining <code>Entity Types</code> (a.k.a. Entity Classes).</p>
     {% include image.html name="settings-entities-types.PNG" caption="You define entity types from the user interface"%}
   </div>
@@ -90,7 +88,7 @@ id: projects
 </div>
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Dictionaries</h4>
+    <h3>Dictionaries</h3>
     <p>As soon as you create one entity type, this will appear in the <code>Dictionaries</code> panel. Each entity type can have associated one or more dictionaries (<a href="/dictionary-format.html">Dictionary format</a>). From here you can upload, replace or download dictionaries.</p>
     {% include image.html name="settings-dictionaries.PNG" caption="Once you have created a dictionary, you can upload/replace or download the dictionary file"%}
     <p>As an example of dictionary, let's use the entity type <code>vehicleModel</code>. For example, <code>Volkswagen Golf 7</code>, <code>Golf Mk7</code> and <code>Golf VII</code> all identify the same canonical or unique object, this object can be identified with an ID, e.g.: <code>VWGOLF7</code>. Let's create our entry in the dictionary:</p>
@@ -125,7 +123,7 @@ id: projects
 
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Relations</h4>
+    <h3>Relations</h3>
     <p>You can <strong> annotate relations</strong> in text. For that you must first create a new <code>Relation Type</code> by clicking the <code>New Relation Type</code> button. After just choose two Entity Types, those types you want to identify relations for. Optionally you can add a <code>description</code> for the relation. For example, a new relation type between vehicle parts and vehicle models.</p>
   </div>
   <div class="one-third-col">
@@ -143,7 +141,7 @@ id: projects
 
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Document labels</h4>
+    <h3>Document labels</h3>
     <p>Labels used to mark the documents or text you import. It is another type of annotation, but affecting the whole document.</p>
     <p>To create a new Document Label, click on the button <code>New Document Label</code>. Then, write a <code>name</code> for the label (required), <code>type</code> (required) and <code>description</code> (optional).</p>
     <p>You can create different types of Document Labels:</p>
@@ -188,7 +186,7 @@ id: projects
 
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Entity labels</h4>
+    <h3>Entity labels</h3>
     <p>Labels used to add attributes to existing entities. It is usual some attributes make sense only to some entity types (e.g. gender for person, not for city), you can assign an entity label to one specific entity type or all entity types.</p>
     <p>To create a new Entity Label, click on the button <code>New Document Label</code>. Then, write a <code>name</code> for the label (required), <code>type</code> (required), <code>entity type</code> you want to assign the label to (required), and a <code>description</code> (optional).</p>
     <p>You can create different types of Entity Labels:</p>
@@ -230,7 +228,7 @@ id: projects
 
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Webhooks</h4>
+    <h3>Webhooks</h3>
     <p>The webhooks are useful to integrate tagtog within your system. Only users with the role <code>admin</code> (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can see/edit these project settings.</p>
     <p>You can define webhooks to notify automatically an external system after a specific event in tagtog or API.</p>
     <p>These events are:</p>
@@ -309,8 +307,8 @@ id: projects
 </div>
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Annotations</h4>
-    <h5>Pre-annotations</h5>
+    <h3>Annotations</h3>
+    <h4>Pre-annotations</h4>
     <p>These are the annotations that are created automatically while you are manually annotating a document. For example, if you annotate the gene: <code>BRA2</code>. All the mentions of <code>BRA2</code> in this text will be automatically annotated (<a href="/webeditor.html#pre-annotations">more information on pre-annotations</a>).</p>
     <p>In this panel you can decide which are the <strong>default settings</strong> for pre-annotations: pre-selections, pre-deselections and their case sensitivity. You can always change these settings on the web editor for specific documents.</p>
   </div>
@@ -320,7 +318,7 @@ id: projects
     </div>
   </div>
   <div class="two-third-col">
-    <h5>Machine Learning (tagtog ML)</h5>
+    <h4>Machine Learning (tagtog ML)</h4>
     <p>Each time you press the button <code>Confirm</code> in the annotation editor, in the background, <strong>a tagtog machine learning model is being trained with all the project documents confirmed</strong>. Next time you upload a new document, this model can predict new annotations based on this model. You can remove or add new annotations to continue training the model and get more accurate results.</p>
     <p>If activated, tagtog machine learning will start annotating automatically from the first document confirmed. <strong>No deployments or complex configurations are required</strong>, just by annotating you can train a use a tagtog machine learning model.</p>
     <p>If you don't want to use tagtog machine learning, deactivate this option.</p>
@@ -330,7 +328,7 @@ id: projects
     <div class="message">Automatic annotations with <strong>dictionaries</strong> will work with machine learning either activated or deactivated</div>
   </div>
   <div class="two-third-col">
-    <h5>PDF</h5>
+    <h4>PDF</h4>
     <p>Check this option to annotate directly over the native PDF document. This web interface only works with PDF files. If this option is unchecked, only the plain text stripped from the PDF is annotatable.</p>
     <p>Take into consideration that if the PDF file is imported with the option unchecked, only the plain text version will be available for annotation. If you import the file with this option checked, both versions will be available: the native PDF annotation and the plain text annotation when the option is unchecked.</p>
     <p>Find more information of the PDF annotation tool <a title="tagtog - PDF annotation tool" href="/pdf-annotation-tool.html">here</a>.</p>
@@ -342,32 +340,47 @@ id: projects
 
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Members</h4>
-    <p>In this panel, project admins (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can invite and organize other users in your project, so they can collaborate in the annotation tasks. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
-    <p>Only users with the role <code>admin</code> (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can see/edit these project settings.</p>
+    <h3>Members</h3>
+
+    <p>In this panel, project admins (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can invite and manage project members. All added project members will be able to collaborate in the same project-scoped annotation task. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
+
+    {% include image.html name="settings/members.png" width="80%" caption="Invite other users to collaborate in your project." %}
   </div>
-  <div class="one-third-col">
-    {% include image.html name="settings-members.PNG" %}
-  </div>
+
   <div class="two-third-col">
-  <h5>Invite other users to your project</h5>
-  <p>To <strong>add a new member</strong>, simply write the tagtog username, their email associated to their account, or any email address (for those who don't have an account in tagtog yet) in the text box, choose the role, and click on <code>Add Member</code>. Once added, those who don't have an account at tagtog yet, will receive a link to create an account and join the project. Already existing users will receive an email notification.</p>
+  <h4>Invite members to your project</h4>
+
+  <p>To <strong>add a new member</strong>: 1) simply write the tagtog username, or their email associated to their tagtog account, or any email address (for those who don't have an account in tagtog yet) in the input box, 2) choose the role, and 3) click on <kbd>Add Member</kbd>. Once added, those emails who don't have an account at tagtog yet, will receive a link to create an account and join the project. Already existing users will receive an email notification.</p>
+
+  <p>To <strong>add a new <a href="on-premises-sysadmin.html#teams-management">team</a> (and its users/members)</strong>: just write the team's name in the input box, and add it. Everything works the same as when adding individual members.</p>
   </div>
-  <div class="one-third-col">
-    <div class="message">
-      You can invite via email address those who don't have an account at tagtog yet. You can invite via email address or username those who already have an account to at tagtog (either on your on-premises instance or on the cloud version).
-    </div>
-  </div>
+
+
   <div class="two-third-col">
-    <h5>Task distribution</h5>
-    <p>With this feature you can <strong>automatically distribute the project's documents among a group of project's members</strong>. For example, if you choose that each document is assigned to 1 single annotator, every uploaded document will be randomly assigned to only one of the annotators. Otherwise, for example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
-    <p>This overlapping is recommended to increase the overall quality of your annotation project. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration.html#iaa-inter-annotator-agreement">inter-annotator agreement</a>) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a></p>
-    <p>To start task distribution, first you need to enable the feature. Now:</p>
-    <p class="numbered-item"><span class="number-1">1</span><strong>Select the group of project's members that will annotate documents</strong> (the system only distributes documents to these users).</p>
-    <p class="numbered-item"><span class="number-2">2</span><strong>Select how many of these users will annotate each document</strong>.</p>
+  <h4>Delete members from your project</h4>
+
+  <p>To delete an existing project member (or project team) just click on its associated removal button <kbd>x</kbd>. You will be prompted in a 2nd-step dialog to confirm that you do want to delete the project member.</p>
+
+  <p><strong>The removal of project members cannot be undone!</strong> Please make sure you have downloaded their annotations before, or that you have merged their annotations into the <code>master</code> version.</p>
+
+  {% include image.html name="settings/members-delete.png" width="80%" caption="Delete existing project members." %}
+  </div>
+
+
+  <div class="two-third-col">
+    <h4>Task distribution (document assignment)</h4>
+    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose that each document is assigned to 1 single annotator, every uploaded document will be randomly assigned to only one of the annotators. Otherwise, for example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
+
+    <p>Annotating the same document by 2 or more members is recommended to increase the overall quality of your annotation project. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration.html#iaa-inter-annotator-agreement">inter-annotator agreement</a>) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a>.</p>
+
+    {% include image.html name="settings/members-task-distribution.png" width="85%" caption="Task Distribution: assign documents to your labelers as soon they are uploaded." %}
+
+    <p>To start task distribution, first you need to enable the feature. Then:</p>
+    <p class="numbered-item"><span class="number-1">1</span><strong>Select the members you want to distribute documents to</strong> (the system only distributes documents to these users).</p>
+    <p class="numbered-item"><span class="number-2">2</span><strong>Select the number of annotators per document</strong> (how many of the selected users will annotate each document).</p>
     <br>
-    <p><strong>By default, Task distribution is turned off</strong>, documents are not distributed. When task distribution is not active, members see the <a href="collaboration.html#annotation-versions"><code>master</code> version</a> automatically when they open a document. Once the task distribution is active (number of annotators per document is 1 or more), members will see their own version of the annotations when they open a document.</p>
-    <p><strong>When task distribution is active, project members see by default (in Documents) the special search view <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a>. This view lists the documents that have not been confirmed by the annotator yet.</strong></p>
+    <p><strong>By default, task distribution is turned off</strong>. This means that uploaded documents do not get distributed. When task distribution is not active, members see the <a href="collaboration.html#annotation-versions"><code>master</code> version</a> automatically when they open a document. Once the task distribution is active (number of annotators per document is 1 or more), members will see their own version of the annotations when they open a document.</p>
+    <p><strong>When task distribution is active, project members see by default the special search <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a></strong> (in the tab <em>Documents</em>). This view lists the documents that have not been confirmed yet by the logged annotator.</p>
   </div>
   <div class="one-third-col">
     <div class="message">
@@ -377,19 +390,19 @@ id: projects
       The number of annotators per document is limited to the number of users selected to annotate.
     </div>
     <div class="message">
-      Using the <strong>API</strong> and the parameter <code>distributeToMembers</code>, you can decide who exactly you want to distribute a specific document to. <a title="tagtog - API documents - Import" href="API_documents_v1.html#import-and-annotate-text">More information</a>.
-    </div>
-    {% include image.html name="settings-task-distribution-members.png" %}
+      Using the <strong>API</strong> with the <a title="tagtog - API documents - Import" href="API_documents_v1.html#import-and-annotate-text">parameter <code>distributeToMembers</code></a>, you can override who exactly you want to distribute a specific document to.<br>
+      Using the <strong>website</strong>, you can also override the Task Distribution settings <a href="documents.html#distribute-to-a-group-of-users">on the upload advanced menu</a>.
+    </div>    
   </div>
  </div>
 
  <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Requirements</h4>
+    <h3>Requirements</h3>
     <p>Here you can set data requirements for your annotation tasks. These are enforced by tagtog to ensure your annotations comply with your data quality policies.</p>
     <p>Only users with the role <code>admin</code> can see/edit these project settings.</p>
     <p>There are different types of requirements available:</p>
-    <h5>Required labels on file upload</h5>
+    <h4>Required labels on file upload</h4>
     <p>You can <a title="Upload files with predefined document lables" href="documents.html#upload-files-with-predefined-document-labels">upload files with predefined document labels</a>. By default, no document label is selected. You can select one or more document labels if you want to ensure that always a file is uploaded using the GUI, these labels are defined.</p>
 
   </div>
@@ -404,17 +417,17 @@ id: projects
 
 <div class="page-subsection">
   <div class="two-third-col">
-    <h4>Admin</h4>
+    <h3>Admin</h3>
     <p>Only users with the role <code>admin</code> can see/edit these project settings.</p>
-    <h5>Export settings</h5>
+    <h4>Export settings</h4>
     <p>Export the project's settings (entity types, relation types, entity labels, document labels, etc.) as a JSON file to reuse as a template on new projects.</p>
-    <h5>Import settings</h5>
+    <h4>Import settings</h4>
     <p>Import another project's settings. <strong>This will overwrite your current settings and remove all your project's documents</strong>. This should be applied solely on new projects.</p>
-    <h5>Edit Project Description</h5>
+    <h4>Edit Project Description</h4>
     <p>You can change the description of your project at any moment. Just type the new description and click on Save.</p>
-    <h5>Change Privacy Settings</h5>
+    <h4>Change Privacy Settings</h4>
     <p>Switch your <a title="tagtog - Public projects" href="projects.html#public-projects">public project</a> to <a title="tagtog - Private projects" href="projects.html#private-projects">private project</a> or the other way around.</p>
-    <h5>Remove a project</h5>
+    <h4>Remove a project</h4>
     <p>To remove a project, go to its <i>Settings > Admin</i>. Click on the <code>Delete Project</code> button. Please notice that removing a project will remove all the documents within the project.</p>
 
   </div>
@@ -429,7 +442,7 @@ id: projects
 
 <div class="two-third-col" markdown="1">
 
-### Downloads
+## Downloads
 
 Your project has also a tab _"Downloads"_ to... download stuff 😉. Depending on your role in the project, and whether the project is public or private, you will see different actionable buttons.
 
@@ -445,14 +458,14 @@ Other download actions are also available, including a reference to [download do
 </div>
 
 <div class="two-third-col" >
-  <h3>Privacy</h3>
+  <h2>Privacy</h2>
   <p>Projects in tagtog are either public or private. You can change your private project to public or your public project to private in the <a href="projects.html#admin" title="tagtog - Admin settings">Admin Settings</a> of your project.</p>
-  <h4>Public projects</h4>
-  <p>Public projects {% include inline-image.html name="globe.png" width="20" %} are <strong>open projects</strong>. Share your data with the entire world (Cloud) or across your organization (on-Premises). Give to your dataset <strong>transparency and visibility</strong>. It is also a good opportunity to attract other people to collaborate with you to build or maintain open datasets. In public projects: </p>
+  <h3>Public projects</h3>
+  <p>Public projects {% include inline-image.html name="globe.png" width="20" %} are <strong>open projects</strong>. Share your data with the entire world (Cloud) or across your organization (OnPremises). Give to your dataset <strong>transparency and visibility</strong>. It is also a good opportunity to attract other people to collaborate with you to build or maintain open datasets. In public projects: </p>
   <p class="list-item"><span class="list-item-1"></span>Anyone can see its documents and annotations (read-only).</p>
   <p class="list-item"><span class="list-item-2"></span>Only registered users can download documents or annotations using the UI or the <a href="API_documents_v1.html" title="tagtog - API docs">API</a>.</p>
   <p class="list-item"><span class="list-item-3"></span>Only the project members can make changes.</p>
-  <h4>Private projects</h4>
+  <h3>Private projects</h3>
   <p>In private projects {% include inline-image.html name="lock.png" width="20" %}, documents and annotations are kept private:</p>
   <p class="list-item"><span class="list-item-1"></span>Each private project is only visible to its members.</p>
   <p class="list-item"><span class="list-item-2"></span>Only project members can make changes.</p>
@@ -460,7 +473,7 @@ Other download actions are also available, including a reference to [download do
 
 </div>
 <div class="one-third-col">
-  {% include message.html message="For <strong>on-Premises</strong> installations, only those users with accounts in the tagtog instance can see or download documents or annotations from public projects. Only the members of the project can perform changes." %}
+  {% include message.html message="For <strong>OnPremises</strong> installations, only those users with accounts in the tagtog instance can see or download documents or annotations from public projects. Only the members of the project can perform changes." %}
 
   {% include message.html message='The default <strong>license</strong> for public projects is <a title="Creative Commons - Creative Commons: Attribution 4.0 International (CC BY 4.0)" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons: Attribution 4.0 International (CC BY 4.0)</a>. You can always change it directly in the guidelines of your project.' %}
 </div>

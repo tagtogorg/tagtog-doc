@@ -361,11 +361,8 @@ tagtog_domain: https://www.tagtog.net
   <div class="two-third-col">
   <h4>Update members & teams in your project</h4>
 
-  <p>To delete an existing project member (or project team) just click on its associated removal button <kbd>x</kbd>. You will be prompted in a 2nd-step dialog to confirm that you do want to delete the project member.</p>
+  <p>TODO ???</p>
 
-  <p><strong>The removal of project members cannot be undone!</strong> Please make sure you have downloaded their annotations before, or that you have merged their annotations into the <code>master</code> version.</p>
-
-  {% include image.html name="settings/members-delete.png" width="80%" caption="Delete existing project members." %}
   </div>
 
 

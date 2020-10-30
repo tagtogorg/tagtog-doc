@@ -348,16 +348,26 @@ tagtog_domain: https://www.tagtog.net
   </div>
 
   <div class="two-third-col">
-  <h4>Invite members to your project</h4>
+  <h4>Add members & teams to your project</h4>
 
   <p>To <strong>add a new member</strong>: 1) simply write the tagtog username, or their email associated to their tagtog account, or any email address (for those who don't have an account in tagtog yet) in the input box, 2) choose the role, and 3) click on <kbd>Add Member</kbd>. Once added, those emails who don't have an account at tagtog yet, will receive a link to create an account and join the project. Already existing users will receive an email notification.</p>
 
   <p>To <strong>add a new <a href="on-premises-sysadmin.html#teams-management">team</a> (and its users/members)</strong>: just write the team's name in the input box, and add it. Everything works the same as when adding individual members.</p>
   </div>
 
+  <div class="two-third-col">
+  <h4>Update members & teams in your project</h4>
+
+  <p>To delete an existing project member (or project team) just click on its associated removal button <kbd>x</kbd>. You will be prompted in a 2nd-step dialog to confirm that you do want to delete the project member.</p>
+
+  <p><strong>The removal of project members cannot be undone!</strong> Please make sure you have downloaded their annotations before, or that you have merged their annotations into the <code>master</code> version.</p>
+
+  {% include image.html name="settings/members-delete.png" width="80%" caption="Delete existing project members." %}
+  </div>
+
 
   <div class="two-third-col">
-  <h4>Delete members from your project</h4>
+  <h4>Delete members & teams from your project</h4>
 
   <p>To delete an existing project member (or project team) just click on its associated removal button <kbd>x</kbd>. You will be prompted in a 2nd-step dialog to confirm that you do want to delete the project member.</p>
 

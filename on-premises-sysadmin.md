@@ -74,33 +74,64 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 ## Teams Management
 
-_tagtog Teams_ allow you to group users by their responsibilities, department, guest status, etc. On the SysAdmin page, you have all options to manage the teams of your organization. Of course, you can read your teams, create new ones, update them, and/or delete them.
+_tagtog Teams_ allow you to group users by their responsibilities, department, guest status, etc.
+
+Then, you can [add the teams directly to your projects](projects.html#add-members-teams-to-your-project) (rather than adding the individual members one by one). **This makes user control much easier**. For example, with teams you can change in one go, in a project, the role of all team users'.
+
+On the SysAdmin page, you have all options to manage the teams of your organization. Of course, you can inspect your teams, create new ones, update them, and/or delete them.
 
 <div class="img-with-caption">
   <img src="/assets/img/sysadmin/teams-panel.png" alt="Screenshot: teams panel" />
-  <p>Teams panel: list, create, update, and delete teams.</p>
+  <p>Teams panel: inspect, create, update, and delete teams.</p>
 </div>
 
 
 ### Creating & updating a team
 
-To create (or update) a team just: define its name, set an optional description, and select the desired users. To select users, just click on their usernames or search by their usernames or by email address.
+To create (or update) a team just:
+
+* define the team's name,
+* set an optional description,
+* and select the desired users. To select users, just click on their usernames or search by their usernames (or by email address).
 
 <div class="img-with-caption">
-  <img src="/assets/img/sysadmin/teams-create-update.png" width="50%" align="center" alt="Screenshot: popup to create or update a team" />
-  <p>Panel to create &amp; update a team.</p>
+  <img src="/assets/img/sysadmin/teams-create-update-team1.png" width="50%" align="center" alt="Screenshot: popup to create or update a team" />
+  <p>Create a team, by choosing its name and users.</p>
 </div>
 
 
-### Invite teams to projects
+### Teams & Projects are always in sync
 
-After defining some teams, you can [invite teams directly to your projects](projects.html#invite-other-users-to-your-project). This allows you to easily add a team and all its users to a project. Once a team is added to a project, the team users will always be in _"sync"_ with respect to the project. This is better explained with an example:
+[Once a team (and therefore its users) is added to a project](projects.html#add-members-teams-to-your-project), the team users and the project will always be in _sync_. This is better explained with an example:
 
-* Say you create a team "MyTeam" with users: "John", "Laura", and "Maria".
-* Then you add "MyTeam" to your project "ProjectA" with role "reviewer".
-* This will mean that "John", "Laura", and "Maria" will be added, all at once, to "ProjectA" with role "reviewer".
-* Later on, for instance, you add another user to your team, "Peter", and remove from the team the user "Maria".
-* This will mean that "Peter" will also be automatically added to "ProjectA" (with role "reviewer") and that "Maria" will be removed from the project. Of course, since "John" and "Laura" were not affected, they will remain in the project.
+* Say you you have created a team _"Team1"_ with users: _"userA"_, _"userB"_, and _"userC"_.
+* Then you add _"Team1"_ to your project _"DemoProject"_ with some role (for instance, _"reviewer"_).
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-add-team1-to-project.png" width="50%" align="center" alt="Screenshot: adding a team to your project" />
+  <p>Adding a team to your project (with some role), will also add all the team users to your project (with default same role).</p>
+</div>
+
+* This will mean that _"userA"_, _"userB"_, and _"userC"_ will be added, all at once, to _"DemoProject"_ (with role _"reviewer"_).
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-team1-in-project.png" width="50%" align="center" alt="Screenshot: show team in project" />
+  <p>Read the teams &amp; members from your project.</p>
+</div>
+
+* Later on, for instance, you add another user to your team, _"userD"_, and remove from the team the user _"userC"_.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-team1-updated.png" width="40%" align="center" alt="Screenshot: update your team" />
+  <p>You can update your teams at any time.</p>
+</div>
+
+* This will mean that, automatically, _"userD"_ will also be added to _"DemoProject"_ (with role _"reviewer"_), and that _"userC"_ will be removed from the project. Of course, since _"userA"_ and _"userB"_ were not affected, they will remain in the project.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-team1-in-project-updated.png" width="50%" align="center" alt="Screenshot: show your updated team in project" />
+  <p>Your teams &amp; projects are always in sync.</p>
+</div>
 
 
 </div>

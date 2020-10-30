@@ -346,6 +346,9 @@ tagtog_domain: https://www.tagtog.net
 
     {% include image.html name="settings/members.png" width="80%" caption="Invite other users to collaborate in your project." %}
   </div>
+  <div class="one-third-col">
+    <p class="message" markdown="1">**Tip:** you can also manage your project members with the [members API](API_settings_v1.html#members-management).</p>
+  </div>
 
   <div class="two-third-col">
   <h4>Add members & teams to your project</h4>

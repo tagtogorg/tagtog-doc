@@ -22,7 +22,7 @@ notoc: true
   <li class="new"><span markdown="1">Now [auth tokens](on-premises-sysadmin.html#auth-tokens) (an alternative SSO) also work with [OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES).</span></li>
   <li class="fix"><span markdown="1">The selected members in the list of task distribution was ignored in the actual distribution sometimes. Wrongly, all members who had permissions to annotate, got documents distributed, even if they were not explicitly written in the list of task distribution. This is now fixed.</span></li>
   <li class="fix"><span markdown="1">(OpenID SSO) the [`token_type` is now verified ignoring the case](https://tools.ietf.org/html/rfc6749#section-4.2.2 "OAuth 2.0 spec") (this allows both `"Bearer"` and `"bearer"`).</span></li>
-  <li class="fix"><span markdown="1">Pre-selectable document labels are not shown any more when submitting content for the input types URL and PMID/PMCID, for it is not supported.</span></li>
+  <li class="fix"><span markdown="1">The [advanced option to pre-define document labels](documents.html#upload-files-with-predefined-document-labels) is not shown any more for the input types: URL and PMID/PMCID. This is not supported.</span></li>
   <li class="del"><span markdown="1">Removed deprecated route API: `/-api/projects/v1/my_projects`. [Use the new route](API-projects-v1.html#search-my-projects).</span></li>
 </ul>
 

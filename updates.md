@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🎳
+## 3.2020-W44.0 🎳
+_2020-11-01_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New feature: **[Teams](on-premises-sysadmin.html#teams-management)**! Teams allow you to group your users as you see fit. Then, **add the teams directly to your projects** (rather than adding the individual members one by one). **This makes user management much easier**. You can now, for example, **change in one go, in a project, the role of all team members'**. On top, later on if you add/remove users in your team, these changes will be reflected automatically for all your projects (where that team was added). tagtog Teams is an [exclusive feature of tagtog OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES).</span></li>

@@ -105,17 +105,17 @@ To create (or update) a team just:
 [Once a team (and therefore its users) is added to a project](projects.html#add-members-teams-to-your-project), the team users and the project will always be in _sync_. This is better explained with an example:
 
 * Say you you have created a team _"Team1"_ with users: _"userA"_, _"userB"_, and _"userC"_.
-* Then you add _"Team1"_ to your project _"DemoProject"_ with some role (for instance, _"reviewer"_).
+* Then you add _"Team1"_ to your project _"DemoProject"_ with some role (for instance, _"curator"_).
 
 <div class="img-with-caption">
-  <img src="/assets/img/sysadmin/teams-add-team1-to-project.png" width="50%" align="center" alt="Screenshot: adding a team to your project" />
+  <img src="/assets/img/sysadmin/teams-add-team1-to-project-c.png" width="50%" align="center" alt="Screenshot: adding a team to your project" />
   <p>Adding a team to your project (with some role), will also add all the team users to your project (with default same role).</p>
 </div>
 
-* This will mean that _"userA"_, _"userB"_, and _"userC"_ will be added, all at once, to _"DemoProject"_ (with role _"reviewer"_).
+* This will mean that _"userA"_, _"userB"_, and _"userC"_ will be added, all at once, to _"DemoProject"_ (with role _"curator"_).
 
 <div class="img-with-caption">
-  <img src="/assets/img/sysadmin/teams-team1-in-project.png" width="50%" align="center" alt="Screenshot: show team in project" />
+  <img src="/assets/img/sysadmin/teams-team1-in-project-b.png" width="50%" align="center" alt="Screenshot: show team in project" />
   <p>Read the teams &amp; members from your project.</p>
 </div>
 
@@ -126,10 +126,10 @@ To create (or update) a team just:
   <p>You can update your teams at any time.</p>
 </div>
 
-* This will mean that, automatically, _"userD"_ will also be added to _"DemoProject"_ (with role _"reviewer"_), and that _"userC"_ will be removed from the project. Of course, since _"userA"_ and _"userB"_ were not affected, they will remain in the project.
+* This will mean that, automatically, _"userD"_ will also be added to _"DemoProject"_ (with role _"curator"_), and that _"userC"_ will be removed from the project. Of course, since _"userA"_ and _"userB"_ were not affected, they will remain in the project.
 
 <div class="img-with-caption">
-  <img src="/assets/img/sysadmin/teams-team1-in-project-updated.png" width="50%" align="center" alt="Screenshot: show your updated team in project" />
+  <img src="/assets/img/sysadmin/teams-team1-in-project-updated-b.png" width="50%" align="center" alt="Screenshot: show your updated team in project" />
   <p>Your teams &amp; projects are always in sync.</p>
 </div>
 

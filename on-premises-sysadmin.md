@@ -48,7 +48,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
   <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: flag to indicate whether the user can create projects or not.</p>
   <p class="list-item" markdown="1"><span class="list-item-6"></span>**Has password**: accounts with `Basic authentication` have password. `Single sign-on` accounts don't have password within the application.</p>
 
-  {% include image.html name="sysadmin-onpremises-users.png" caption="User panel" %}
+  {% include image.html name="sysadmin-onpremises-users.png" caption="User panel: inspect, create, update, and delete users." %}
 </div>
 
 <div class="two-third-col">
@@ -102,14 +102,14 @@ To create (or update) a team just:
 
 ### Teams & Projects are always in sync
 
-[Once a team (and therefore its users) is added to a project](projects.html#add-members-teams-to-your-project), the team users and the project will always be in _sync_. This is better explained with an example:
+[Once a team (and therefore its users) is added to a project](projects.html#add-members-teams-to-your-project), the team's users and the project will always be in _sync_. This is better explained with an example:
 
 * Say you you have created a team _"Team1"_ with users: _"userA"_, _"userB"_, and _"userC"_.
 * Then you add _"Team1"_ to your project _"DemoProject"_ with some role (for instance, _"curator"_).
 
 <div class="img-with-caption">
   <img src="/assets/img/sysadmin/teams-add-team1-to-project-c.png" width="50%" align="center" alt="Screenshot: adding a team to your project" />
-  <p>Adding a team to your project (with some role), will also add all the team users to your project (with default same role).</p>
+  <p>Adding a team to your project (with some role), will also add all the team's users to your project (with default same role).</p>
 </div>
 
 * This will mean that _"userA"_, _"userB"_, and _"userC"_ will be added, all at once, to _"DemoProject"_ (with role _"curator"_).
@@ -133,6 +133,36 @@ To create (or update) a team just:
   <p>Your teams &amp; projects are always in sync.</p>
 </div>
 
+
+### Deleting a team
+
+To delete a team just click on its associated removal button (the trash can icon). You will be asked in a 2nd-step dialog to confirm that you do want to delete the team. On top, you can confirm or not the checkbox _"Remove the team's users from the projects they are assigned to"_:
+
+* If you leave the checkbox unchecked, the team will be deleted from all associated projects. However, the team's users (if any) will remain in the respective projects, with the role they already had.
+* If you check the checkbox, the team and also the the team's users will be deleted from all associated projects.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-delete-b.png" width="90%" align="center" alt="Screenshot: dialog to confirm deleting a team" />
+  <p>You can delete teams, thus removing the teams from the associated projects, and also possibly the team's users.</p>
+</div>
+
+Important: **the removal of project members/teams cannot be undone!** Please make sure you have downloaded their annotations before, or that you have merged their annotations into the <code>master</code> version.
+
+
+### Teams are flexible
+
+With tagtog Teams, you can:
+
+* **Add/update/delete the team' users at any moment**
+* **Have in a project multiple teams**
+* **Have one user belong to 2 or more teams, also in a project**
+* **Define empty teams (that is, without users) and add them to projects**
+* **Combine in a project individual members and teams**
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-flexible-many.png" width="60%" align="center" alt="Screenshot: many projects in a team" />
+  <p>Teams give you more tools to control your users' level of authorization.</p>
+</div>
 
 </div>
 

@@ -344,7 +344,7 @@ tagtog_domain: https://www.tagtog.net
 
     <p>In this panel, project admins (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can invite and manage project members. All added project members will be able to collaborate in the same project-scoped annotation task. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
 
-    {% include image.html name="settings/members.png" width="80%" caption="Invite other users to collaborate in your project." %}
+    {% include image.html name="settings/members-b.png" width="80%" caption="Invite other users to collaborate in your project." %}
   </div>
   <div class="one-third-col">
     <p class="message" markdown="1">**Tip:** you can also manage your project members with the [members API](API_settings_v1.html#members-management).</p>
@@ -363,11 +363,11 @@ tagtog_domain: https://www.tagtog.net
 
   <p>At any time, you can change the role of an individual member or of an entire team. To do so, just click on the member/team's role, and select in the shown dropdown the desired new role.</p>
 
-  {% include image.html name="settings/members-update.png" width="80%" caption="You can change the roles of individual members and entire teams." %}
+  {% include image.html name="settings/members-update-b.png" width="80%" caption="You can change the roles of individual members and entire teams." %}
 
-  <p>When you change the role of a team, you change the role of all its users. Additionally, if desired, you can change the role of the team users independently. This will allow you to have all the team's users sharing some equal role (say <em>"reviewer"</em>), but a few of them, which will have other roles (say <em>"admin"</em>).</p>
+  <p>When you change the role of a team, you change the role of all its users. Additionally, if desired, you can change the role of the team users independently. This will allow you to set all the team's users to share some equal role (say <em>"curator"</em>), but a few of them, which might have different roles (say <em>"supercurator"</em>).</p>
 
-  {% include image.html name="settings/members-update-team.png" width="60%" caption="You can also change the role of the team's users independently." %}  
+  {% include image.html name="settings/members-update-team-b.png" width="60%" caption="You can also change the role of the team's users independently." %}  
 
   </div>
 
@@ -375,9 +375,9 @@ tagtog_domain: https://www.tagtog.net
   <div class="two-third-col">
   <h4>Delete members & teams from your project</h4>
 
-  <p>To delete an existing project member (or project team) just click on its associated removal button <kbd>x</kbd>. You will be prompted in a 2nd-step dialog to confirm that you do want to delete the project member.</p>
+  <p>To delete an existing project member (or project team) just click on its associated removal button <kbd>x</kbd>. You will be asked in a 2nd-step dialog to confirm that you do want to delete the project member.</p>
 
-  <p>Important: <strong>The removal of project members cannot be undone!</strong> Please make sure you have downloaded their annotations before, or that you have merged their annotations into the <code>master</code> version.</p>
+  <p>Important: <strong>the removal of project members/teams cannot be undone!</strong> Please make sure you have downloaded their annotations before, or that you have merged their annotations into the <code>master</code> version.</p>
 
   {% include image.html name="settings/members-delete.png" width="80%" caption="Delete existing project members." %}
   </div>

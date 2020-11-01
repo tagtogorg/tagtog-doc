@@ -7,7 +7,10 @@ toc: true
 
 tagtog_domain: https://www.tagtog.net
 request_auth_token_endpoint: /-sysadmin/request-auth-token
-onpremises_sample_domain: https://tagtog.example.org
+onpremises_tagtog_domain: https://tagtog.example.org
+
+openid_login_btn: _"Log in with OpenID"_
+openid_login_url: /-login-openid-connect
 ---
 
 <div class="two-third-col" markdown="1">
@@ -19,11 +22,10 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 <div class="two-third-col">
   <h2>How to access</h2>
-  <p>Go to your root domain set for tagtog (either an IP or a custom domain) and access the <code>/-sysadmin</code> relative path; for example: <code>{{page.onpremises_sample_domain}}/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
+  <p>Go to your root domain set for tagtog (either an IP or a custom domain) and access the <code>/-sysadmin</code> relative path; for example: <code>{{page.onpremises_tagtog_domain}}/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
   <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the subscription license name</p>
   <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the subscription license key</p>
 </div>
-
 <div class="one-third-col">
   <div class="message">
     <strong>License information</strong> is sent to you by email by the tagtog team when you first purchased your tagtog OnPremises subscription.
@@ -46,11 +48,9 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
   <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: flag to indicate whether the user can create projects or not.</p>
   <p class="list-item" markdown="1"><span class="list-item-6"></span>**Has password**: accounts with `Basic authentication` have password. `Single sign-on` accounts don't have password within the application.</p>
 
-  {% include image.html name="sysadmin-onpremises-users.png" caption="User panel" %}
+  {% include image.html name="sysadmin-onpremises-users.png" caption="User panel: inspect, create, update, and delete users." %}
 </div>
-<div class="one-third-col">
-  {% include image.html name="sysadmin-onpremises-user-update.png" caption="Edit user view" width="90%" %}
-</div>
+
 <div class="two-third-col">
   <h3>Create a new user</h3>
   <p markdown="1">To create a new user using the sysadmin user panel, click on **+ Add new user**. A form will show up with the following fields:</p>
@@ -60,16 +60,115 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
   <p class="list-item" markdown="1"><span class="list-item-4"></span>**Password**: the password of the new user. The user can later change the password. This field is only required for accounts with `Basic authentication`.</p>
   <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: a flag to indicate whether the new user can create tagtog projects or not. Users who cannot create projects, can only work in projects they are invited to.</p>
 </div>
+<div class="one-third-col">
+  {% include image.html name="sysadmin-onpremises-user-update.png" caption="Create &amp; edit user view" width="90%" %}
+</div>
+
 <div class="two-third-col">
   <h3>Create a new user by registration link</h3>
   <p markdown="1">You can generate a registration link to share with others or to use oneself. Anyone who has this link and access to the system, can create a regular user account signing up in the application.</p>
 </div>
-<div class="two-third-col">
-  <h3>Revoke auth tokens</h3>
-  <p markdown="1">Remove all existing token-based logins and registration links. If you think your system's security might have been compromised, you can revoke all auth tokens thus invalidating old token-based logins and registration invitations.</p>
+
+
+<div class="two-third-col" markdown="1">
+
+## Teams Management
+
+_tagtog Teams_ allow you to group users by their responsibilities, department, guest status, etc.
+
+Then, you can [add the teams directly to your projects](projects.html#add-members-teams-to-your-project) (rather than adding the individual members one by one). **This makes user control much easier**. For example, with teams you can change in one go, in a project, the role of all team users'.
+
+On the SysAdmin page, you have all options to manage the teams of your organization. Of course, you can inspect your teams, create new ones, update them, and/or delete them.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-panel.png" alt="Screenshot: teams panel" />
+  <p>Teams panel: inspect, create, update, and delete teams.</p>
 </div>
+
+
+### Creating & updating a team
+
+To create (or update) a team just:
+
+* define the team's name,
+* set an optional description,
+* and select the desired users. To select users, just click on their usernames or search by their usernames (or by email address).
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-create-update-team1.png" width="50%" align="center" alt="Screenshot: popup to create or update a team" />
+  <p>Create a team, by choosing its name and users.</p>
+</div>
+
+
+### Teams & Projects are always in sync
+
+[Once a team (and therefore its users) is added to a project](projects.html#add-members-teams-to-your-project), the team's users and the project will always be in _sync_. This is better explained with an example:
+
+* Say you you have created a team _"Team1"_ with users: _"userA"_, _"userB"_, and _"userC"_.
+* Then you add _"Team1"_ to your project _"DemoProject"_ with some role (for instance, _"curator"_).
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-add-team1-to-project-c.png" width="50%" align="center" alt="Screenshot: adding a team to your project" />
+  <p>Adding a team to your project (with some role), will also add all the team's users to your project (with default same role).</p>
+</div>
+
+* This will mean that _"userA"_, _"userB"_, and _"userC"_ will be added, all at once, to _"DemoProject"_ (with role _"curator"_).
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-team1-in-project-b.png" width="50%" align="center" alt="Screenshot: show team in project" />
+  <p>Read the teams &amp; members from your project.</p>
+</div>
+
+* Later on, for instance, you add another user to your team, _"userD"_, and remove from the team the user _"userC"_.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-team1-updated.png" width="40%" align="center" alt="Screenshot: update your team" />
+  <p>You can update your teams at any time.</p>
+</div>
+
+* This will mean that, automatically, _"userD"_ will also be added to _"DemoProject"_ (with role _"curator"_), and that _"userC"_ will be removed from the project. Of course, since _"userA"_ and _"userB"_ were not affected, they will remain in the project.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-team1-in-project-updated-b.png" width="50%" align="center" alt="Screenshot: show your updated team in project" />
+  <p>Your teams &amp; projects are always in sync.</p>
+</div>
+
+
+### Deleting a team
+
+To delete a team just click on its associated removal button (the trash can icon). You will be asked in a 2nd-step dialog to confirm that you do want to delete the team. On top, you can confirm or not the checkbox _"Remove the team's users from the projects they are assigned to"_:
+
+* If you leave the checkbox unchecked, the team will be deleted from all associated projects. However, the team's users (if any) will remain in the respective projects, with the role they already had.
+* If you check the checkbox, the team and also the the team's users will be deleted from all associated projects.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-delete-b.png" width="90%" align="center" alt="Screenshot: dialog to confirm deleting a team" />
+  <p>You can delete teams, thus removing the teams from the associated projects, and also possibly the team's users.</p>
+</div>
+
+Important: **the removal of project members/teams cannot be undone!** Please make sure you have downloaded their annotations before, or that you have merged their annotations into the <code>master</code> version.
+
+
+### Teams are flexible
+
+With tagtog Teams, you can:
+
+* **Add/update/delete the team' users at any moment**
+* **Have in a project multiple teams**
+* **Have one user belong to 2 or more teams, also in a project**
+* **Define empty teams (that is, without users) and add them to projects**
+* **Combine in a project individual members and teams**
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/teams-flexible-many.png" width="60%" align="center" alt="Screenshot: many projects in a team" />
+  <p>Teams give you more tools to control your users' level of authorization.</p>
+</div>
+
+</div>
+
+
 <div class="two-third-col">
-  <h2>Roles and permissions</h2>
+  <h2>Roles &amp; Permissions</h2>
   <p>In the admin panel you can find a permission matrix where you can check &amp; modify the permissions of existing roles or to create custom roles. After, these roles can be assigned to users at project level.</p>
   <p>All the <strong>permissions are explained here</strong>: <a title="tagtog - Multi-user annotation - permissions" href="collaboration.html#permissions">Multi-user annotation - permissions</a></p>
   <p>By default there are three roles in the system: <code>admin</code>, <code>supercurator</code> and <code>reader</code>. The permissions for these default roles cannot be modified. Admin role cannot be removed (the creator of a project, the owner, will always have this role assigned). The roles supercurator and reader can be removed. If you want to modify their permissions, you should remove the role, and create a new role with the same name.</p>
@@ -92,6 +191,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
     When a role is removed, all the users under this role are assigned to another role (chosen by the sysadmin).
   </div>
 </div>
+
 
 <div class="two-third-col" markdown="1">
 
@@ -134,7 +234,7 @@ Moreover, and optionally, you can also configure the following tagtog-specific v
   * `"*"` (all): all users of your OIDC system will be created automatically on tagtog if they log in and they have no associated tagtog account yet.
   * comma-separated list of emails (e.g. "John@example.org,Maria@example.org,Peter@example.org"): users' emails in your OIDC system of users that can be created automatically on tagtog if they log in and they have no associated tagtog account yet.
 * `usernameClaim` (OPTIONAL; default=`preferred_username` or, if not existing, `sub`): the _claim_ (attribute) of your OIDC provider that you want to use for your users' usernames. In practice, this parameter is only relevant if you let your users' accounts to be created automatically if they don't exist on tagtog yet (see: `usersThatCanBeCreatedAutomaticallyIfNotFoundInTagtog`). If the accounts already exist on tagtog, they are primarily identified by their email address ([see below](#oidc-important-to-know)). In this case, the usernames can take any value ([with some restrictions](#oidc-important-to-know)). Note that you, as the sysadmin, can create the users first manually, associating them the email address registered in your OIDC Provider, and giving them an arbitrary username. Also note that, if you rely on this variable, you can use any custom attribute/claim of your OIDC Provider.
-* `redirectTagtogRootUri` (OPTIONAL; default=originating host): by default when users successfully login on your OIDC Provider, they are redirected back to the originating host, which should be your tagtog OnPremises domain. Therefore, in most cases you should not set this variable. However, sometimes, due to redirections and having "docker-in-between" the originating host might not be read properly, or otherwise be wrongly set to the localhost. For these cases, use this variable. It should be the domain of your tagtog OnPremises domain; e.g. `{{page.onpremises_sample_domain}}` (please do not write a trailing forward slash, "/").
+* `redirectTagtogRootUri` (OPTIONAL; default=originating host): by default when users successfully login on your OIDC Provider, they are redirected back to the originating host, which should be your tagtog OnPremises domain. Therefore, in most cases you should not set this variable. However, sometimes, due to redirections and having "docker-in-between" the originating host might not be read properly, or otherwise be wrongly set to the localhost. For these cases, use this variable. It should be the domain of your tagtog OnPremises domain; e.g. `{{page.onpremises_tagtog_domain}}` (please do not write a trailing forward slash, "/").
 
 Finally, the way you pass these variables to tagtog is by using java dynamic properties. Example:
 
@@ -168,14 +268,14 @@ These are relevant aspects of the tagtog OIDC integration:
 
 #### OIDC: How to use
 
-Once you [set up your OIDC integration](#oidc-setup), the tagtog login page (`/-login`), shows an extra option to _"Log in with OpenID"_. Moreover, when a non-logged-yet user goes to a tagtog page that requires authentication, the user will be always redirected to the same login page:
+Once you [set up your OIDC integration](#oidc-setup), the tagtog login page (`/-login`), shows an extra option: {{ page.openid_login_btn }}. Moreover, when a non-logged-yet user goes to a tagtog page that requires authentication, the user will be always redirected to the tagtog login page.
 
 <div class="img-with-caption">
-  <img src="/assets/img/sysadmin/oidc-login.png" alt="Screenshot: Login with OpenID Connect" />
+  <img src="/assets/img/sysadmin/oidc-login.png" width="80%" alt="Screenshot: Login with OpenID Connect" />
   <p>tagtog login box when OpenID Connect is enabled on your tagtog OnPremises instance.</p>
 </div>
 
-When the user clicks on the OpenID link, the user is redirected to the authentication mechanism of your OIDC Provider. Upon a successful authentication, the user's data is sent back to tagtog. Two things can then happen:
+When the user clicks on {{ page.openid_login_btn }}, [the user will be redirected to the authentication mechanism of your OIDC Provider](#oidc-redirect-login-url). Upon a successful authentication, the user's data is sent back to tagtog. Two things can then happen:
 
 * a) If the user's email is already associated to a tagtog user, the login is completed, and the user is redirected to the default page after login.
 
@@ -188,7 +288,17 @@ Of course, if the login is not successful on the end of the OIDC Provider, or if
 Finally, if the user logs out on tagtog, the user session ends with respect to tagtog. Note that tagtog does not log out the user with respect to the external OIDC Provider.
 
 
+##### OIDC: Redirect Login URL
+
+If you want to skip the tagtog login page, you can also just call the (tagtog) endpoint:
+
+(GET) `{{page.openid_login_url}}`
+
+tagtog will immediately redirect to your OIDC Provider. Everything else will work the same.
+
+
 </div>
+
 
 <div class="two-third-col">
   <h3>Auth Tokens</h3>
@@ -280,12 +390,18 @@ http --auth LICENSE_NAME:LICENSE_KEY POST '{{ page.tagtog_domain }}{{ page.reque
 
 Once you have an auth <code>token</code>, use it in a simple GET request to login with the associated-granted user. To the request also add a <code>redirectTo</code> (<a href="https://meyerweb.com/eric/tools/dencoder/">url-encoded</a>) parameter to indicate where to redirect to. You must add these parameters to the <code>/</code> (root endpoint) of your tagtog's installation domain.
 
-Example: `{{ page.tagtog_domain }}/?redirectTo=https%3A%2F%2Fwww.tagtog.net%2F-datasets&token=bbfd-33878148-6062-4934-a507-af4962753c8f`
-</div> <!-- Closes main section: two-third-cold div -->
+Example: `{{ page.onpremises_tagtog_domain }}/?redirectTo=???&token=bbfd-33878148-6062-4934-a507-af4962753c8f`
+</div>
+
+<div class="two-third-col" markdown="1">
+
+#### Revoke auth tokens
+
+Remove all existing token-based logins and registration links. If you think your system's security might have been compromised, you can revoke all auth tokens thus invalidating old token-based logins and registration invitations.
+</div>
 
 
-<!-- <div class="two-third-col"> -->
-<!-- <br/><hr/><br/> -->
+
 
 <div class="two-third-col" markdown="1">
 

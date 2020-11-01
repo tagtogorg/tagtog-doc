@@ -14,6 +14,23 @@ notoc: true
 
 ---
 
+## 3.2020-W44.0 🎳
+_2020-11-01_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">New feature: **[Teams](on-premises-sysadmin.html#teams-management)**! Teams allow you to group your users as you see fit. Then, **add the teams directly to your projects** (rather than adding the individual members one by one). **This makes user management much easier**. You can now, for example, **change in one go, in a project, the role of all team members'**. On top, later on if you add/remove users in your team, these changes will be reflected automatically for all your projects (where that team was added). tagtog Teams is an [exclusive feature of tagtog OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES).</span></li>
+  <li class="new"><span markdown="1">The [APIs to manage project members](API_settings_v1.html#members-management) are now updated to also document the new feature of adding/updating/deleting teams.</span></li>
+  <li class="new"><span markdown="1">Now the [APIs to manage project members](API_settings_v1.html#members-management) allow referring to the members also by their email (not only, as before, by their username).</span></li>
+  <li class="new"><span markdown="1">Now [auth tokens](on-premises-sysadmin.html#auth-tokens) (an alternative SSO) also work with [OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES).</span></li>
+  <li class="fix"><span markdown="1">The selected members in the list of task distribution was ignored in the actual distribution sometimes. Wrongly, all members who had permissions to annotate, got documents distributed, even if they were not explicitly written in the list of task distribution. This is now fixed.</span></li>
+  <li class="fix"><span markdown="1">Now it is possible to download the original file regardless of whether the file was uploaded with non-lowercase extension (like ".PDF", r ".Pdf", or ".TXT", etc.) </span></li>
+  <li class="fix"><span markdown="1">(OpenID SSO) the [`token_type` is now verified ignoring the case](https://tools.ietf.org/html/rfc6749#section-4.2.2 "OAuth 2.0 spec") (this allows both `"Bearer"` and `"bearer"`).</span></li>
+  <li class="fix"><span markdown="1">The [advanced option to pre-define document labels](documents.html#upload-files-with-predefined-document-labels) is not shown any more for the input types: URL and PMID/PMCID. This is not supported.</span></li>
+  <li class="del"><span markdown="1">Removed deprecated route API: `/-api/projects/v1/my_projects`. [Use the new route](API-projects-v1.html#search-my-projects).</span></li>
+</ul>
+
+---
+
 ## 3.2020-W43.0 👮‍♀️
 _2020-10-24_
 

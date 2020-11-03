@@ -19,6 +19,7 @@ notoc: true
 <ul class="updates">
   <li class="new"><span markdown="1">The [special output view `web-editor-only`](ioformats.html#output-formats) now also works for Native PDF! You can use this special view within iframes to embed/integrate tagtog into your own application.</span></li>
   <li class="fix"><span markdown="1">The [special output view `web-editor-only`](ioformats.html#output-formats) works again for plain texts.</span></li>
+  <li class="del"><span markdown="1">(OnPremises) For now, for stability reasons, we reduce the maximum upload file size, from 250MB to 50MB.</span></li>  
 </ul>
 
 ---

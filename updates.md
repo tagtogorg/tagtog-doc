@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## ??? 🧩
+
+<ul class="updates">
+  <li class="new"><span markdown="1">The [special output view `web-editor-only`](ioformats.html#output-formats) now also works for Native PDF! You can use this special view within iframes to embed/integrate tagtog into your own application.</span></li>
+  <li class="fix"><span markdown="1">The [special output view `web-editor-only`](ioformats.html#output-formats) works again for plain texts.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W44.1 🎳
 _2020-11-01_
 

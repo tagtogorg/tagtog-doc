@@ -361,6 +361,18 @@ id: collaboration
 <div class="one-third-col">
 </div>
 
+<div class="two-third-col">
+  <h2>Teams</h2>
+  <p>tagtog comes with a feature to define teams of users to simplify and speed up your collaboration.
+     It allows you to group users into teams so you don't have to add each user to a project separately. 
+     It can be very handy especially when you have many users in the system. Then you can add a whole teams
+     to projects, delete them from projects, define permission for all team members and so on. For now, it's 
+     only available for <a href="on_premises_README.html">OnPremises</a>. For more details, please go <a href="on-premises-sysadmin.html#teams-management">here</a>.</p>
+</div>
+
+</div>
+<div class="one-third-col">
+</div>
 
 
 <div class="two-third-col">

@@ -260,7 +260,7 @@ toc: true
       </tr>
       <tr>
         <td><code>web-editor-only</code></td>
-        <td>Analogously as <code>web</code>, yet without the information of a tagtog project, i.e., only the document editor layout. Useful in case you want to create iFrames in your web app.</td>
+        <td>Analogously as <code>web</code>, yet without the information of a tagtog project, i.e., only the document editor layout. Use this output to integrate tagtog in your own web app with <strong>iframes</strong>.</td>
         <td>Visualization</td>
         <td class="centered">❌</td>
         <td class="centered">✅</td>

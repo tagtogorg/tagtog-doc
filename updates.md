@@ -18,6 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">The [special output view `web-editor-only`](ioformats.html#output-formats) now also works for Native PDF! You can use this special view within iframes to embed/integrate tagtog into your own application.</span></li>
+  <li class="new"><span markdown="1">New add-ons for [tagtog blocks](tagtog-blocks) available: set a multi-column layout, make not-annotatable blocks, set the background color, create custom text, etc. Check it out!</span></li>
   <li class="fix"><span markdown="1">The [special output view `web-editor-only`](ioformats.html#output-formats) works again for plain texts.</span></li>
   <li class="del"><span markdown="1">(OnPremises) For now, for stability reasons, we reduce the maximum upload file size, from 250MB to 50MB.</span></li>
   <li class="fix"><span markdown="1">Remove a misleading warning in *Settings > Dictionaries*. The users under a plan supporting automatic annotations were incorrectly notified that automatic annotations were not available for their plan.</span></li>

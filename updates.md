@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🧩
+## 3.2020-W45.0 🧩
+_2020-11-07_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New add-ons for [tagtog blocks](tagtog-blocks) available: set a multi-column layout, make non-annotatable blocks, set the background color, create custom text, ... and much more!</span></li>

@@ -15,7 +15,7 @@ notoc: true
 ## ??? 🧘
 
 <ul class="updates">
-  <li class="new"><span markdown="1">New [tagtog block](tagtog-blocks) available: <code>quote</code> to annotate quotes. [More information](tagtog-blocks.html#quotes).</span></li>
+  <li class="new"><span markdown="1">New [tagtog block](tagtog-blocks) available: `quote` to annotate quotes. [More information](tagtog-blocks.html#quotes).</span></li>
 </ul>
 
 ---

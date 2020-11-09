@@ -12,6 +12,12 @@ notoc: true
 
 🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
 
+## ??? 🧘
+
+<ul class="updates">
+  <li class="new"><span markdown="1">New [tagtog block](tagtog-blocks) available: <code>quote</code> to annotate quotes. [More information](tagtog-blocks.html#quotes).</span></li>
+</ul>
+
 ---
 
 ## 3.2020-W45.0 🧩

@@ -145,7 +145,10 @@ toc: true
       </tr>
       <tr>
         <td><code>markdown</code></td>
-        <td>The content is expected to follow the <a href="MarkdownFileParsing.html">markdown syntax</a>. The content will be formatted and visualized as markdown (e.g. you can include images, different sections, lists, code blocks, etc.).</td>
+        <td>
+          <p>The content is expected to follow the <a href="MarkdownFileParsing.html">markdown syntax</a>. The content will be formatted and visualized as markdown (e.g. you can include images, different sections, lists, code blocks, etc.).</p>
+          <p>Using this format you can also insert <a href="tagtog-blocks">tagtog blocks</a> to customize your annotation layout (e.g. question answering datasets, chatbot training, tweets, multi-column, etc.).</p>
+        </td>
       </tr>
       <tr>
         <td><code>formatted</code></td>

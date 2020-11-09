@@ -259,6 +259,23 @@ human for the human interaction</p>
 
 <div class="two-third-col">
   <h3>Miscellaneous</h3>
+
+  <h4>Quotes</h4>
+  <p>Layout to display quotes.</p>
+  <p>Code: <code>quote</code></p>
+  <p>Block to define quotes.</p>
+
+  <p>Example:</p>
+  <div markdown="1">
+    ```quote
+    It is easy to hate and it is difficult to love. This is how the whole scheme of things works. All good things are difficult to achieve, and bad things are very easy to get.
+
+    Confucius
+    ```
+  </div>
+  {% include image.html name="quote_block.png" caption="Confucius quote. Notice the content of any block uses the <a href='ioformats.html#input-formats'><code>verbatim</code> format</a>. Therefore, all spaces, line breaks, etc. are respected." %}
+
+
   <h4>Lyrics</h4>
   <p>Layout to display lyrics.</p>
   <p>Code: <code>lyrics</code></p>

@@ -7,22 +7,23 @@ id: introduction
 <div class="content">
   <div class="two-third-col">
     <h1>Welcome to tagtog</h1>
-    <p>This is the official documentation for {% include inline-image.html name="icon_leafs.png" width="18" %}<a href="https://www.tagtog.net" title="tagtog.net - The Text Annotation Tool to Train AI">tagtog</a>, an efficient text annotation tool ready to train AI. Available on the cloud and on-premises. <strong>Easy</strong>.</p>
-    <p><strong>Annotate manually or automatically</strong>. Use already trained machine learning models or train your own model to annotate and work at scale. Simply annotate manually and tagtog will generate a model with no hassle in deployment or maintenance. Save time and costs.</p>
-    <p>Invite others to annotate in your projects and <strong>collaborate</strong> to build together awesome stuff: find custom insights in text automatically, augment or index your data, train your own AI, classify text, etc.</p>
-    <p>Below are some things you can with tagtog. For more in-depth information or tutorials, use the navigation to the left to explore our documentation.</p>
+    <p>This is the official documentation for {% include inline-image.html name="icon_leafs.png" width="18" %}<a href="https://www.tagtog.net" title="tagtog.net - The Text Annotation Tool to Train AI">tagtog</a>, an efficient text annotation tool ready to train AI. Available on the Cloud and on-Premises. <strong>Easy</strong>.</p>
+    <p>Below you can find a brief summary with the main features of tagtog and an overview of what you can achieve using this tool. For more in-depth information or tutorials, use the navigation to the left to explore our documentation.</p>
     <br>
 
     <h2>What can you achieve?</h2>
     <div class="page-section">
       <h3>Manual text annotation</h3>
-      <p>Use the text annotation editor to quickly annotate and normalize entities, relations and <a title="tagtog-docs: type of annotations" href="/webeditor.html#annotation-types">more</a>. If you just need to annotate at document level, you can use labels to tag documents. The <strong>user interface adapts automatically so you only see what you need</strong>. No more complex or non-intuitive annotating systems/interfaces, engage your domain experts from the very beginning.</p>
-      <p>Too much work for a single person? <a href="#team-collaboration">Invite others and work in group</a>. Each annotator can annotate the same text to facilitate the review process. Once the annotations are completed, you can export them to JSON format.</p>
-      {% include image.html name="annotation_editor.png" caption="Named Entity Recognition with tagtog annotation editor" %}
+      <p>Use the text annotation editor to quickly annotate and normalize entities (overlapping annotations supported), add entity labels, relations and <a title="tagtog-docs: type of annotations" href="/webeditor.html#annotation-types">more</a>. If you just need to annotate at document level, you can use labels to tag documents. The <strong>user interface adapts automatically so you only see what you need</strong>. No more complex or non-intuitive annotating systems/interfaces, engage your domain experts from the very beginning.</p>
+      <p>Too much work for a single person? <a href="#team-collaboration">Invite others and work in group</a>. Each annotator can annotate the same text to facilitate the review process and to meet quality requirements. Once the annotations are completed, you can adjudicate, and export them to JSON format.</p>
+
       {% include image.html name="editor-mainview-described.jpg" caption="Editor layout. In this examples there are entities, entity labels, document labels, relations and normalizations" %}
-      <p>Not fast enough? Use automatic annotations to speed up annotator tasks. Use trained models or customize your own. Users will see the automatic annotations and just make an action when predictions are wrong. Powered by <strong>NLP</strong> and <strong>active learning</strong> algorithms, tagtog uses the corrections to improve accuracy and <strong>continuously reduce the load of annotators' work</strong>.</p>
+      {% include image.html name="chatbot.png" caption="Building your custom annotation layout. Example of a conversation between a human and Facebook BlenderBot chatbot" %}
       <p>Do you need to deal with <strong>PDFs</strong>? {% include inline-image.html name="icon-pdf.png" width="30" %} Use the <a title="tagtog - PDF annotation tool" href="pdf-annotation-tool.html">PDF Annotation tool</a> to annotate native PDFs within tagtog.</p>
       {% include image.html name="pdf-annotation.jpg"  caption="Annotate PDF natively, as they are and the way your team is used to work with them " %}
+      <h3>Automatic text annotation</h3>
+      <p>Not fast enough? Use automatic annotations to speed up annotator tasks. Use pre-selections, <a href="projects.html#dictionaries">dictionaries</a>, <a href="machine-learning.html">tagtog ML</a> or plug <a href="train-your-own-models.html">your own ML model</a> in. Users will see the automatic annotations and just make an action when predictions are wrong. Powered by <strong>NLP</strong> algorithms, tagtog uses the corrections to improve accuracy and <strong>continuously reduce the load of annotators' work</strong>.</p>
+
     </div>
   </div>
   <div class="one-third-col">
@@ -30,46 +31,6 @@ id: introduction
     <br/><br/>
     {% include message.html message='<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3978375/" title="tagtog: interactive and text-mining-assisted annotation of gene mentions in PLOS full-text articles">Read</a> how FlyBase managed to shorten their annotation efforts by 1.6- to 1.9-fold.'%}
   </div>
-
-
-  <div class="page-section">
-    <div class="two-third-col">
-      <div>
-        <h3>Get relevant insights from text automatically</h3>
-        <p>Insights are just meta information (annotations) on the top of the text analyzed. You can either combine some of our <a href="#pre-trained-models">already trained machine learning models</a> or create a custom model adapted to your problem to automatically generate this meta-information without the hassle of deployments, setup, etc. Just annotate, you don’t need to code, deal with complex installations or juggle with data.</p>
-      </div>
-    </div>
-    <div class="one-third-col">
-
-    </div>
-    <div class="two-third-col">
-      <p class="numbered-item"><span class="number-1">1</span><strong>Provide tagtog with as many initial examples as possible</strong>. Bootstrap a model with pre-annotated data or <a href="/projects.html#dictionaries">dictionaries</a> with the terminology you would like to identify automatically. If you don't have these resources, no worries. Just start from scratch.</p>
-
-      <p class="numbered-item"><span class="number-2">2</span><strong>Train a model</strong>: import text (cloud or on-premises) through the <a href="/API_documents_v1.html">API</a> or the user interface. The text is annotated automatically. You or a team just need to correct the wrong model predictions in the annotation editor. Repeat this step until you get the accuracy level required.</p>
-      <p class="numbered-item"><span class="number-3">3</span><strong>Congratulations! You get a machine learning model ready for production use</strong>. Simply send text to the API or user interface to retrieve relevant insights. If you detect any problem with the results, you can always continue annotating to fine tune the model.</p>
-    </div>
-    <div class="one-third-col">
-      {% include image.html name="diagram_ml.svg" %}
-    </div>
-  </div>
-
-
-    <div class="two-third-col">
-      <h3>Index your data</h3>
-      <p>Use already trained models or simply train your own model within tagtog to annotate automatically your data. These annotations will be the meta-information used to index your data. This data augmentation improves the <strong>discoverability</strong> and it is key to <strong>make search quicker and more intuitive</strong> for users.</p>
-    </div>
-    <div class="one-third-col">
-      {% include message.html message="You can export to your system the meta-information used to index your data and handle it locally" %}
-    </div>
-    <div class="two-third-col">
-      <p class="numbered-item"><span class="number-1">1</span><strong>Train a machine learning model</strong> as described in the previous use case or use an <a href="#pre-trained-models">already trained model</a>.</p>
-      <p class="numbered-item"><span class="number-2">2</span><strong>Send your text</strong> items to tagtog using the API. Get the annotations in JSON format and decide whether to store these in your own system or keep them at tagtog. Your data is indexed.</p>
-      <p class="numbered-item"><span class="number-3">3</span>If you keep these annotations at tagtog, you can <strong>use the concept <a href="/API_documents_v1.html#search-documents-in-a-project-get">search via API</a> as your search engine</strong>. Otherwise, you can store this data locally as meta-information for your own search engine.</p>
-    </div>
-    <div class="one-third-col">
-      {% include image.html name="diagram_index.svg" %}
-    </div>
-
 
   <div class="page-section">
     <div class="two-third-col">
@@ -83,6 +44,8 @@ id: introduction
       <p class="numbered-item"><span class="number-1">1</span><strong>Use tagtog to annotate text and create training data</strong>. This is a collaborative tool, so you can invite others to share the effort. Augment your data: label documents, annotate text, relations, etc. Export this data to your model to train it.</p>
       <p class="numbered-item"><span class="number-2">2</span><strong>Import the new model's predictions to tagtog and use the annotation editor to correct any wrong prediction</strong>. The user interface is built to minimize annotator's effort while maximizing the input for your model. Once done, export the new training data to your model.</p>
       <p class="numbered-item"><span class="number-3">3</span>Repeat the last step until <strong>you have tuned your model</strong>.</p>
+      <br>
+      <p><a href="train-your-own-models.html">Continue reading</a></p>
     </div>
     <div class="one-third-col">
       {% include image.html name="diagram_own_ml.svg" %}
@@ -91,37 +54,50 @@ id: introduction
 
   <div class="page-section">
     <div class="two-third-col">
-      <h2>Pre-trained models</h2>
-      <p>Already trained high-quality NER models ready to extract entities of interest in your domain. You can combine several models to customize your solution. Find below some examples. More are coming.</p>
+      <div>
+        <h3>Get relevant insights from text automatically</h3>
+        <p>Insights are just meta information (annotations) on the top of the text analyzed. You can either use <a href="projects.html#dictionaries">dictionaries</a>, <a href="machine-learning.html">tagtog ML</a>, or <a href="train-your-own-models.html">plug your custom model in</a> to automatically generate this meta-information. Just annotate, you don’t need to code, deal with complex installations or juggle with data.</p>
+      </div>
     </div>
     <div class="one-third-col">
-        {% include message.html message="When you create a new project, you can choose among all the pre-trained models." %}
+
     </div>
     <div class="two-third-col">
-      <table class="clean-table">
-        <tr>
-          <td class="centered" style="width:15%">{% include image.html name="automobile-154764.svg" %}</td>
-          <td><strong>Vehicle Parts</strong>. Recognize automotive components in text. Perfect for vehicle forums, automotive reports, garages, CRMs, etc.</td>
-        </tr>
-        <tr>
-          <td class="centered" style="width:15%">{% include image.html name="ggp.svg" %}</td>
-          <td><strong>GGP (Gene or Gene Product)</strong>. Recognize gene names in text.</td>
-        </tr>
-        <tr>
-          <td class="centered" style="width:15%">{% include image.html name="got.svg" %}</td>
-          <td><strong>Game of Thrones</strong>. Recognize more than 2000 characters of Game of Thrones in text. Perfect for forums or fans.</td>
-        </tr>
-      </table>
+      <p class="numbered-item"><span class="number-1">1</span><strong>Provide tagtog with as many initial examples as possible</strong>. Bootstrap a model with pre-annotated data or <a href="/projects.html#dictionaries">dictionaries</a> with the terminology you would like to identify automatically. If you don't have these resources, no worries. Just start from scratch.</p>
+
+      <p class="numbered-item"><span class="number-2">2</span><strong>Train a model</strong>: import text (cloud or on-premises) through the <a href="/API_documents_v1.html">API</a> or the user interface. The text is annotated automatically. You can distribute the work across your team and they simply need to correct the wrong model predictions in the annotation editor and confirm the corrections. With each confirmation your model learns. Repeat this step until you get the accuracy level required.</p>
+      <p class="numbered-item"><span class="number-3">3</span><strong>Congratulations! You get a machine learning model ready for production use</strong>. Simply send text (or documents) to the API or user interface to retrieve relevant insights. If you detect any problem with the results, you can always continue annotating to fine tune the model.</p>
+      <br>
+      <p><a href="machine-learning.html">Continue reading</a></p>
     </div>
     <div class="one-third-col">
-        {% include message.html message="Pre-trained models can be used also in <strong>on-premises</strong> version of tagtog. Model is self-contained on your instance and no Internet connection is required. " %}
+      {% include image.html name="diagram_ml.svg" %}
     </div>
   </div>
 
   <div class="page-section">
-      <h2>NLP annotation editor</h2>
+    <div class="two-third-col">
+      <h3>Index your data</h3>
+      <p>Train tagtog ML or your own model to annotate automatically your data. These annotations will be the meta-information used to index your data. This data augmentation improves the <strong>discoverability</strong> and it is key to <strong>make search quicker and more intuitive</strong>.</p>
+    </div>
+    <div class="one-third-col">
+      {% include message.html message="You can export to your system the meta-information used to index your data and handle it locally" %}
+    </div>
+    <div class="two-third-col">
+      <p class="numbered-item"><span class="number-1">1</span><strong>Train a machine learning model</strong> as described in the previous use case.</p>
+      <p class="numbered-item"><span class="number-2">2</span><strong>Send your text</strong> items to tagtog using the API. Get the annotations in JSON format and decide whether to store these in your own system or keep them at tagtog. Your data is indexed.</p>
+      <p class="numbered-item"><span class="number-3">3</span>If you keep these annotations at tagtog, you can <strong>use the concept <a href="/API_documents_v1.html#search-documents-in-a-project-get">search via API</a> as your search engine</strong>. Otherwise, you can store this data locally as meta-information for your own search engine.</p>
+      <br>
+      <p><a href="search.html">Continue reading</a></p>
+    </div>
+    <div class="one-third-col">
+      {% include image.html name="diagram_index.svg" %}
+    </div>
+  </div>
+  <div class="page-section">
+      <h2>The annotation editor</h2>
       <div class="two-third-col">
-        <p>tagtog comes with an advanced text annotation tool for <strong>data augmentation</strong>. Its design is based on the feedback from annotator groups.</p>
+        <p>tagtog comes with an advanced text annotation tool for <strong>data augmentation</strong>. Its design is based on the feedback from annotation groups.</p>
         <p><strong>Focus</strong> is key in order to generate a high-quality annotated corpora, and we know this. Each single mistake in the annotations means a step backward and more effort to achieve the desired results. With this in mind and to make the user feel comfortable while reading, we have created a <strong>minimalist user interface</strong> where the text is presented with natural spacing, same as any user can be familiar with. By <strong>protecting the reading experience</strong> the tool is more accessible. This is specially important when you involve subject matter experts in your annotation projects.</p>
         <p>Usually annotation tasks involve dealing with big volumes of texts. <strong>Speed and efficiency</strong> are essential to minimize costs and time. tagtog includes features as automatic annotations, overlapping text annotations or full-text annotation, that reduce significantly the time required to annotate text.</p>
         <p>Do you need to annotate or process PDFs? Use the <a title="tagtog - PDF annotation tool" href="pdf-annotation-tool.html">PDF annotation tool</a>, it is fully integrated with tagtog web interface.</p>
@@ -166,12 +142,32 @@ id: introduction
 
     </div>
 
+  <div class="page-section">
+    <h2>Build powerful annotation layouts with tagtog blocks</h2>
+    <div class="two-third-col">
+      <p>tagtog supports a wide variety of <a href="ioformats.html#input-types">input formats</a>. In addition, you can create <strong>custom styles/layouts</strong> to build <strong>more attractive content</strong> and keep your team engaged.</p>
+      <p>Using <a href="tagtog-blocks">tagtog blocks</a> you can add multi-column layouts, tweets, human-bot conversations, quotes, annotation tasks, etc. There are <a href="tagtog-blocks#add-ons">add-ons</a> available to further customize annotation blocks. For example, you can mark a block with a warning to indicate the annotator should focus on that piece.</p>
+      {% include image.html name="col_6_block.png" caption="Two-column layout for a translation task. The text to translate is on the left column, the text translated is on the right column. The translation in the second row was marked with the <code>attention</code> add-on to warn the user of a potential issue with this translation." %}
+      <br>
+      {% include image.html name="alignblocks.png" caption="Tweets on the left, comments for those tweets on the right" %}
+      <p><a href="tagtog-blocks">Continue reading</a></p>
 
+    </div>
+  </div>
   <div class="page-section">
     <h2>Team collaboration</h2>
     <div class="two-third-col">
-      <p>Define your annotation <strong>guidelines</strong> within the application and invite others to join your project. A group of users can annotate together the same corpus, <strong>each document or piece of text can be annotated separately by each member</strong> to facilitate the <strong>review</strong> process. You can compare the annotations of each member and use the most convenient. Once annotations are ready, each document can be marked as completed to make other team members aware that it is ready for review. There is an <a href="/collaboration.html#roles">admin role</a> with privileges to manage annotators' work.</p>
-      <p>It is easier than ever to collaborate and train machine learning models together. Each time a document is marked as completed, a model is being trained automatically and can be used right away. You can of course use the tool only for manual annotation.</p>
+      <p class="list-item"><span class="list-item-1"></span><strong><a href="projects.html#guidelines">Guidelines</a></strong>: define your annotation <strong>guidelines</strong> within the application and invite others to join your project.</p>
+      <p class="list-item"><span class="list-item-2"></span><strong><a href="collaboration.html#annotation-versions">Versions</a></strong>: <strong>each annotator has their own version of each document</strong>. Therefore, the same document can be annotated by one or more member. Your team can annotate directly on master (ground truth) or on their own versions.</p>
+      <p class="list-item"><span class="list-item-3"></span><strong><a href="collaboration.html#roles">Roles</a></strong>: you can <strong>assign different roles</strong> to your team members to perform common tasks in an annotation project: admin, annotator, reviewer, reader, etc. There is a pool of about 30 different <a href="collaboration.html#permissions">permissions</a> to define custom roles.</p>
+      <p class="list-item"><span class="list-item-4"></span><strong><a href="collaboration.html#teams">Teams</a></strong>: you can <strong>create teams</strong> (user groups) and add members to it for easier user management. Invite a team to a project, edit team members, etc.</p>
+      <p class="list-item"><span class="list-item-5"></span><strong><a href="collaboration.html#quality-management">Track Quality</a></strong>: use the Inter-Annotation Agreement (IAA) for each annotation task, check how well your team agrees on, for example, annotating drug names, law provisions or risk attributes. These values help you understand the quality of your data.</p>
+      <p class="list-item"><span class="list-item-6"></span><strong><a href="collaboration.html#adjudication">Adjudication</a></strong>: if many users annotate the same document for quality purposes, eventually it needs to be decided, which version (or combination) to adjudicate to master. In tagtog, <strong>you can adjudicate a specific version or merge the different versions automatically applying different strategies</strong> (e.g. by IAA, majority vote, intersection, union, etc.)</p>
+      <p class="list-item"><span class="list-item-7"></span><strong><a href="collaboration.html#annotation-flows-task-distribution">Review</a></strong>: validate or correct the members' annotations. <strong>Merge</strong> them together and resolve conflicts.</p>
+      <p class="list-item"><span class="list-item-8"></span><strong><a href="collaboration.html#annotation-flows-task-distribution">Automatic task distribution</a></strong>: distribute documents automatically to all annotators or to a subset.</p>
+      <p class="list-item"><span class="list-item-9"></span><strong><a href="collaboration.html#annotation-flows-task-distribution">Track progress</a></strong>: follow your project progress, bias metrics and the progress of each member.</p>
+      <p class="list-item"><span class="list-item-5"></span><strong><a href="train-your-own-models.html">Train AI as a team</a></strong>: it is easier than ever to collaborate and to train machine learning models together. Using <a href="projects.html#webhooks">Webhooks</a> you can <strong>plug in your custom ML model to train it through tagtog's user interface</strong>. Load your model predictions into tagtog and let your team correct them. Each time a document is confirmed, your model will receive the corrected annotations to train itself. Repeat the process until you get the desired accuracy.</p>
+
       <p><a href="/collaboration.html">Continue reading</a></p>
     </div>
     <div class="one-third-col">
@@ -193,7 +189,10 @@ id: introduction
           <td></td>
         </tr>
         <tr>
-          <td><strong>On-premises</strong>. If you need to meet strong privacy regulations, legal requirements, or you simply want to make a custom installation within your infrastructure or any public cloud (AWS, Google, Azure, etc) , tagtog is also served on-premises. This is a self-contained version (no Internet connection is required) of tagtog, <strong>no data will leave your infrastructure</strong>. To make the installation the easiest possible we offer tagtog contained in a <a href="https://www.docker.com/" title="Docker official site"><strong>Docker</strong></a> image.</td>
+          <td>
+            <p><strong>On-premises</strong>. If you need to meet strong privacy regulations, legal requirements, or you simply want to make a custom installation within your infrastructure or any public cloud (AWS, Google, Azure, etc) , tagtog is also served on-premises. This is a self-contained version (no Internet connection is required) of tagtog, <strong>no data will leave your infrastructure</strong>. To make the installation the easiest possible we offer tagtog contained in a <a href="https://www.docker.com/" title="Docker official site"><strong>Docker</strong></a> image. <a href="on_premises_README.html">Check our on-premises guide</a>.</p>
+            <p>There is available support for <strong>Single Sign-on</strong> and <strong>advanced user management</strong> (user groups, roles and permissions). All through an intuitive <a href="on-premises-sysadmin.html">sysadmin panel</a>.</p>
+          </td>
           <td class="centered" style="width:15%">{% include image.html name="docker.svg" %}</td>
         </tr>
       </table>
@@ -205,7 +204,7 @@ id: introduction
   <div class="page-section">
     <div class="two-third-col">
       <h2>Concept search</h2>
-      <p>Each fragment of text annotated or processed using tagtog is <strong>indexed</strong> within your project. The search engine makes easier to <strong>discover patterns or find actionable insights</strong>. This is specially handy when you have trained a model that annotates automatically relevant information. For example, if you have trained a model that has extracted skills in thousands of CVs, those got indexed and you can search across them using normalizations, entity classes, etc. You can do things like: <code>entity:softskill:time-management</code> to retrieve all CVs from people who are good organizing their work time.</p>
+      <p>Each fragment of text annotated or processed using tagtog is <strong>indexed</strong> within your project. The search engine makes easier to <strong>discover patterns or find actionable insights</strong> through <strong><a href="search-queries.html">search queries</a></strong>. This is specially handy when you have trained a model that annotates automatically relevant information. For example, if you have trained a model that has extracted skills in thousands of CVs, those got indexed and you can search across them using normalizations, entity classes, etc. You can do things like: <code>entity:softskill:time-management</code> to retrieve all CVs from people who are good organizing their work time.</p>
     </div>
     <div class="one-third-col"></div>
 
@@ -246,6 +245,7 @@ id: introduction
           <td>With more than 5 million pages, <strong>Wikipedia</strong> is the largest encyclopedia ever. Wikidata acts as a central storage repository for Wikipedia and consist mainly of uniquely identified items each one having a label, a description and any number of aliases. This information is typically used for normalization tasks. Coming soon.</td>
         </tr>
       </table>
+      <p>Check all the <strong><a href="ioformats.html">input/output formats available</a></strong>.</p>
     </div>
     <div class="one-third-col">
     </div>
@@ -253,16 +253,20 @@ id: introduction
 
   <div class="page-section">
       <div class="two-third-col">
-        <h2>Corpora</h2>
-        <p>Access our repository of public corpora or share your own.</p>
-        <p>You can import these corpora into tagtog and build a machine learning model that generates similar annotations automatically. You can also download, reuse or extend these corpora.</p>
-        <p></p>
+        <h2>Open Datasets</h2>
+        <p class="list-item"><span class="list-item-1"></span>Visualize, check quality and download Open datasets from the community.</p>
+        <p class="list-item"><span class="list-item-2"></span>Extend existing open datasets with your custom data.</p>
+        <p class="list-item"><span class="list-item-3"></span>Combine the data with the same info type from different data sources (e.g. sentiment labels from product review datasets). Make your data grow easily.</p>
+        <p class="list-item"><span class="list-item-4"></span>Invite other users to help you annotate your data.</p>
+        <p class="list-item"><span class="list-item-5"></span>Use existing open datasets, and build a machine learning model that generates similar annotations automatically.</p>
+        <p class="list-item"><span class="list-item-6"></span>It's free!</p>
+
         <table class="clean-table corpora-inline-table">
           <tr>
             <td class="centered corpus">{% include image.html name="flybase.png" %}<span>FlyBase</span></td>
             <td class="centered corpus">{% include image.html name="rostlab_logo.png" %}<span>IDP4+</span></td>
             <td class="centered corpus">{% include image.html name="Virus300.jpg" %}<span>V300</span></td>
-            <td class="centered"><a href="https://www.tagtog.net/-corpora">Go to corpora full list</a></td>
+            <td class="centered"><a href="https://www.tagtog.net/-datasets">Go to dataset full list</a></td>
           </tr>
         </table>
       </div>

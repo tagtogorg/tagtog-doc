@@ -16,6 +16,7 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">New [tagtog block](tagtog-blocks) available: `quote` to annotate quotes. [More information](tagtog-blocks.html#quotes).</span></li>
+  <li class="fix"><span markdown="1">Fixed some broken links of older projects. These include: [FlyBase_PLOS-BioCreativeIV_Corpus](https://www.tagtog.net/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus), [Helen Cook's V300](https://www.tagtog.net/helencook/V300), [nala](https://www.tagtog.net/jmcejuela/nala), and [LocText](https://www.tagtog.net/jmcejuela/LocText).</span></li>
 </ul>
 
 ---

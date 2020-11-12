@@ -16,7 +16,7 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">New [tagtog block](tagtog-blocks) available: `quote` to annotate quotes. [More information](tagtog-blocks.html#quotes).</span></li>
-  <li class="new"><span markdown="1">New [tagtog block](tagtog-blocks) available: `meta` to add meta information for your blocks. [More information](tagtog-blocks.html#quotes).</span></li>
+  <li class="new"><span markdown="1">New [tagtog block](tagtog-blocks) available: `meta` to add meta information for your blocks. [More information](tagtog-blocks.html#meta-information).</span></li>
   <li class="new"><span markdown="1">New background color for your [tagtog blocks](tagtog-blocks) available: `colwhite`.</span></li>
   <li class="fix"><span markdown="1">There was a visualization defect when displaying human/bot coversations using tagtog blocks and background colors other than default. Now all colors are aligned.</span></li>
   <li class="new"><span markdown="1">(Cloud & OnPremises) [Paid tagtog subscriptions](https://www.tagtog.net/-plans) now see, when creating a new project, that the default is for the project to be "private" (before the default was "public"). Of course, you can nonetheless change the project to be "public" (upon creation and afterwards too). Read more: [private vs. public projects](projects.html#privacy).</span></li>

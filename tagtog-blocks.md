@@ -258,7 +258,54 @@ human for the human interaction</p>
 </div>
 
 <div class="two-third-col">
+  <h3>Meta information</h3>
+  <p>Sometimes you need to add meta information to other blocks or parts of your document. This contextual information might be important for the annotation task. For example: timestamps, specific ids, etc. or any other piece of information associated to the block. </p>
+  <p markdown="1">Meta blocks are not explicitly linked to other blocks, they are stand alone blocks. Therefore, meta blocks won't auto align with the blocks they refer to.</p>
+  <p markdown="1">This block is not annotatable, and users cannot create any manual annotations.</p>
+  <p>Code: <code>meta</code></p>
+  <p>Block to define meta information.</p>
+
+  <p>Example:</p>
+  <div markdown="1">
+    ```meta left
+    12/11/2020 14:44:30
+    ```
+    ```human
+    Good morning. I cannot login to my account. I see a connection error. Is your site down?
+    ```
+    ```meta right
+    12/11/2020 14:44:35
+    ```
+    ```bot
+    Thank you for your question. According to our status records, our site is now up and running. Can you please check again?
+    ```
+  </div>
+  {% include image.html name="metablock.png" caption="We add the timestamp to each interaction human/bot. This information can be useful for the annotator to better understand the context. In this case, as human/bot interactions are aligned to left/right respectfully, we also added the <code>left</code> and <code>right</code> add-ons to align the meta information." %}
+</div>
+
+<div class="one-third-col">
+
+</div>
+
+<div class="two-third-col">
   <h3>Miscellaneous</h3>
+
+  <h4>Quotes</h4>
+  <p>Layout to display quotes.</p>
+  <p>Code: <code>quote</code></p>
+  <p>Block to define quotes.</p>
+
+  <p>Example:</p>
+  <div markdown="1">
+    ```quote
+    It is easy to hate and it is difficult to love. This is how the whole scheme of things works. All good things are difficult to achieve, and bad things are very easy to get.
+
+    Confucius
+    ```
+  </div>
+  {% include image.html name="quote_block.png" caption="Confucius quote. Notice the content of any block uses the <a href='ioformats.html#input-formats'><code>verbatim</code> format</a>. Therefore, all spaces, line breaks, etc. are respected." %}
+
+
   <h4>Lyrics</h4>
   <p>Layout to display lyrics.</p>
   <p>Code: <code>lyrics</code></p>
@@ -371,6 +418,8 @@ human for the human interaction</p>
 <div class="two-third-col">
   <h3>Layout</h3>
   <p>This collection of add-ons are useful to align your blocks. For example, to align a block to the left/right or to create a multi-columns layout.</p>
+</div>
+<div class="two-third-col">
   <h4>Align blocks</h4>
   <p>Use this add-on to align a block to the left/right.</p>
   <p markdown="1">Codes: `left` / `right`</p>
@@ -401,6 +450,8 @@ human for the human interaction</p>
   {% include image.html name="alignblocks.png" caption="In this example, tweet blocks are aligned to the left and comments for those tweets to the right" %}
 </div>
 <div class="one-third-col">
+  <br>
+  {% include message.html message="<code>left</code> or <code>right</code> add-ons will make the block <strong>float</strong>. Be aware that this state can conflict with other floating elements such as the multi-column add-ons or human/bot blocks."%}
 </div>
 
 <div class="two-third-col">
@@ -474,10 +525,9 @@ human for the human interaction</p>
 
 <div class="two-third-col">
   <h4>Align text within blocks</h4>
-  <p markdown="1">Using this add-on you can align the text within your blocks to left/right.</p>
-  <p markdown="1">Codes: `txtleft` / `txtright`</p>
+  <p markdown="1">Using this add-on you can align the text within your blocks to left/center/right.</p>
+  <p markdown="1">Codes: `txtleft` / `txtcenter` / `txtright` </p>
 
-  <br>
   <br>
 
   <p>Example:</p>
@@ -510,6 +560,7 @@ human for the human interaction</p>
   <p class="list-item" markdown="1"><span class="list-item-3" style="background: rgb(214, 255, 176)"></span>Green: `colgreen`</p>
   <p class="list-item" markdown="1"><span class="list-item-4" style="background: rgb(250, 252, 150)"></span>Yellow: `colyellow`</p>
   <p class="list-item" markdown="1"><span class="list-item-5" style="background: rgb(196, 246, 255)"></span>Blue: `colblue`</p>
+  <p class="list-item" markdown="1"><span class="list-item-6" style="background: #fcfcfc; border: 1px solid #aba8a8;"></span>White: `colwhite`</p>
 
   <h4>Text color</h4>
   <p>Using these add-ons you can set/overwrite the color of the text in a block. The default color is black. Currently, there is a set of predefined colors.</p>

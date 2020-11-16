@@ -14,6 +14,20 @@ notoc: true
 
 ---
 
+## 3.2020-W46.0 🧘
+_2020-11-16_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">New [tagtog block: `quote`](tagtog-blocks#quotes), to annotate quotes.</span></li>
+  <li class="new"><span markdown="1">New [tagtog block: `meta`](tagtog-blocks#meta-information), to add meta information for your blocks.</span></li>
+  <li class="new"><span markdown="1">New background color for your [tagtog blocks: `colwhite`](tagtog-blocks#colors).</span></li>  
+  <li class="new"><span markdown="1">(Cloud & OnPremises) [Paid tagtog subscriptions](https://www.tagtog.net/-plans) now see, when creating a new project, that the default is for the project to be "private" (before the default was "public"). Of course, you can nonetheless change the project to be "public" (upon creation and afterwards too). Read more: [private vs. public projects](projects.html#privacy).</span></li>
+  <li class="fix"><span markdown="1">There was a visualization defect when displaying human/bot coversations using tagtog blocks and background colors other than default. Now all colors are aligned.</span></li>
+  <li class="fix"><span markdown="1">Fixed some broken links of older projects. These include: [FlyBase_PLOS-BioCreativeIV_Corpus](https://www.tagtog.net/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus), [Helen Cook's V300](https://www.tagtog.net/helencook/V300), [IDP4](https://www.tagtog.net/jmcejuela/IDP4), [nala](https://www.tagtog.net/jmcejuela/nala), and [LocText](https://www.tagtog.net/jmcejuela/LocText).</span></li>
+</ul>
+
+---
+
 ## 3.2020-W45.0 🧩
 _2020-11-07_
 

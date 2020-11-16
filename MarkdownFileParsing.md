@@ -8,7 +8,7 @@ toc: false
 
 You can import markdown (`.md`) files onto tagtog.
 
-In particular, we target a subset of [CommonMark (spec 0.28)](https://spec.commonmark.org/0.28/).
+In particular, we target a subset of [CommonMark (spec 0.28)](https://spec.commonmark.org/0.28/) + [tagtog-blocks 🧱](tagtog-blocks) (tagtog-flavored styles for code blocks).
 
 ![Markdown logo](https://commonmark.org/help/images/favicon.png)
 
@@ -20,9 +20,9 @@ Only-text actual content is supported; in particular:
 * headings
 * paragraphs
 * code blocks (both within back ticks or indented)
-* tagtog blocks (For predefined annotation modules: question answering, tweets, annotator tasks, chatbot conversations, etc.). <a href="tagtog-blocks">Documentation</a>.
 * images (not inline)
 * lists (both unordered, ordered, and nested)
+* [tagtog-blocks 🧱](tagtog-blocks) (tagtog-flavored styles for code blocks). With _tagtog-blocks_ you can customize the layout of your documents to best annotate tasks for: Q&A (Question & Answering), tweets, chatbots, etc.
 
 
 ## Not Supported
@@ -32,8 +32,8 @@ The following elements are not interpreted, but parsed as is and escaped. For ex
 * Inline content and styles; in particular: `**bold**`, `_emphatic_`, `code`, `~~scratched~~`, `![images](url)`, `[links](url)`.
 * Other special style-only elements; in particular: horizontal lines (`<hr/>` or `---`) or line breaks (`<br/>`).
 * HTML-only elements. In particular, [HTML entities](https://spec.commonmark.org/0.29/#entity-and-numeric-character-references) are not escaped either, neither in code spans or code blocks, nor in the rest of content types (e.g. paragraphs).
-* Block quotes. [Please let us know if you need them](https://tagtog.net/#contact).
-* Tables. [Please let us know if you need them](https://tagtog.net/#contact).
+* Block quotes. [Please let us know if you need them](https://tagtog.net/#contact). A current alternative is the [tagtog-block: `quote`](tagtog-blocks#quotes).
+* Tables. [Please let us know if you need them](https://tagtog.net/#contact). A current alternative is the [tagtog-block addon: `multi-column`](tagtog-blocks#multi-column).
 
 
 ## Example

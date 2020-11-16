@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🧘
+## 3.2020-W46.0 🧘
+_2020-11-16_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New [tagtog block: `quote`](tagtog-blocks#quotes), to annotate quotes.</span></li>

@@ -12,6 +12,8 @@ notoc: true
 
 🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
 
+---
+
 ## ??? 🧘
 
 <ul class="updates">

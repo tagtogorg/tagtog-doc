@@ -83,8 +83,8 @@ toc: true
 </div>
 <div class="two-third-col">    
   <h3>Remove documents</h3>
-    <p><strong>To delete a single document</strong>, from either the <a href="webeditor.html#remove-document">document editor view</a> or the <a href="documents.html#document-list-view">document list view</a>, just click on the associated remove button {% include inline-image.html name="editor-doc-remove.PNG" %}. Of course, you can also <a href="API_documents_v1.html#delete-document-by-id">delete single documents with the API</a>.</p>
-    <p><strong>To delete multiple documents in batch</strong>, please use the <a title="Search - web app" href="/search.html#remove-documents-in-batch">search bar</a>. The <a title="API - Delete" href="/API_documents_v1.html#delete-documents-delete">search-based deletion of documents is also available via API</a>.</p>    
+    <p><strong>To delete a single document</strong>, from either the <a href="webeditor.html#remove-document">document editor view</a> or the <a href="documents.html#document-list-view">document list view</a>, just click on the associated remove button {% include inline-image.html name="editor-doc-remove.PNG" %}. You can also <a href="API_documents_v1.html#delete-document-by-id">delete single documents with the API</a>.</p>
+    <p><strong>To delete multiple documents in batch</strong>, please use the <a title="Search - web app" href="search.html#remove-documents">search bar</a>. The <a title="API - Delete" href="/API_documents_v1.html#delete-documents-delete">search-based deletion of documents is also available via API</a>.</p>
 </div>
 <div class="one-third-col">
 </div>

@@ -194,9 +194,14 @@ Might you have required a license change (e.g. to prolong your current installat
 
 Upon a problem, try one of the following solutions first.
 
-If your issue or question is not resolved yet, shoot us an email at: [support@tagtog.net](mailto:support@tagtog.net). If you are subscribed to the OnPremises ENTERPRISE plan, you also have access to an exclusive and private Slack or Microsoft Teams channel to quickly chat with us.
+If your issue or question is not resolved yet, shoot us an email at: [support@tagtog.net](mailto:support@tagtog.net). If you are subscribed to the OnPremises ENTERPRISE plan, you also have access to an exclusive and private channel to quickly chat with us.
 
-Please provide detailed information of the problem and **send us always the container logs**: `docker logs tagtog_webapp_1` && `docker logs tagtog_taskmanager_1`.
+Please, in order to help you best, provide us detailed information of the problem and **send us always the tagtog docker container logs**:
+
+```shell
+docker logs --tail 3000 tagtog_webapp_1 &> tagtog_webapp_1.$(date +%Y-%m-%d).log
+docker logs --tail 3000 tagtog_taskmanager_1 &> tagtog_taskmanager_1.$(date +%Y-%m-%d).log
+```
 
 
 ### Conflicts with ports (_0.0.0.0:80: bind: address already in use_ ...)

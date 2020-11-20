@@ -64,7 +64,7 @@ toc: true
 </div>
 <div class="two-third-col">
   <h4>Remove documents</h4>
-  <p>To <strong>remove documents in batch</strong>, you can use a search query that retrieves the documents you want to remove. In the web app, click on the button with the caption <i>Delete matching documents</i> to remove these documents. You can also use the <a title="API - Delete" href="/API_documents_v1.html#delete-documents-delete">API for batch removal</a>.</p>
+  <p>To <strong>remove documents in batch</strong>, you can use a search query that retrieves the documents you want to remove. In the web app, after the search is done, click on the button with the caption <kbd>Delete matching documents</kbd> to remove these documents. You can also use the <a title="API - Delete" href="/API_documents_v1.html#delete-documents-delete">API for batch removal</a>.</p>
 </div>
 <div class="one-third-col">
 </div>

@@ -199,8 +199,9 @@ If your issue or question is not resolved yet, shoot us an email at: [support@ta
 Please, in order to help you best, provide us detailed information of the problem and **send us always the tagtog docker container logs**:
 
 ```shell
-docker logs --tail 3000 tagtog_webapp_1 &> tagtog_webapp_1.$(date +%Y-%m-%d).log
-docker logs --tail 3000 tagtog_taskmanager_1 &> tagtog_taskmanager_1.$(date +%Y-%m-%d).log
+# For example:
+docker logs --tail 3000 tagtog_webapp_1 &> tagtog_webapp_1.log
+docker logs --tail 3000 tagtog_taskmanager_1 &> tagtog_taskmanager_1.log
 ```
 
 

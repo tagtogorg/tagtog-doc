@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? ⛑
+## 3.2020-W47.0 ⛑
+_2020-11-23_
 
 <ul class="updates">  
   <li class="fix"><span markdown="1">(OnPremises) fixed bug introduced in [3.2020-W44.1](updates.html#32020-w441-), which caused the tagtog ML to not run for some accounts.</span></li>

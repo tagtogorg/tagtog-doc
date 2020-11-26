@@ -519,6 +519,13 @@ toc: true
           <td><code>Entity label value</code></td>
           <td><p>Type the value of an entity label to only display those entities with at least one entity label with that value. As there can be a large number of entities, the match is exact.</p><p>As you type, a list of recommended values appears in a drop down menu. This list is generated using fuzzy search against the possible values of those entity labels with type <code>enum</code>.</p><p>This filter only shows up when there is at least one entity label defined in the project.</p></td>
         </tr>
+         <tr>
+          <td><code>Entity probability</code></td>
+          <td>
+            <p>All the entities with a probability lower than the value indicated in the range slider will be selected. The idea is that you can focus on the entities with low probability. This filter doesn't take into consideration the probability of other annotation tasks within the entity (e.g. entity labels, normalizations, relationships).</p>
+            <p>This filter only shows up when there is at least one entity type defined in the project.</p>
+          </td>
+        </tr>
 
       </table>
     </div>

@@ -15,7 +15,7 @@ id: metrics
   </div>
   <div class="two-third-col">
     <h3>Inter-Annotator Agreement</h3>
-    <p>You can read all about the Inter-Annotator Agreement (IAA) <a title="tagtog docs - IAA" href="collaboration.html#iaa-inter-annotator-agreement">here</a>.</p>
+    <p>You can read all about the Inter-Annotator Agreement (IAA) <a title="tagtog docs - IAA" href="collaboration#iaa-inter-annotator-agreement">here</a>.</p>
   </div>
   <div class="one-third-col">
   </div>

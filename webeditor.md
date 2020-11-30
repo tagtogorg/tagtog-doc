@@ -352,7 +352,7 @@ toc: true
         </tr>
         <tr>
           <td>Merge Annotations</td>
-          <td>Automatic adjudication process that merges all the member's annotations into <code>master</code>. This adjudication is based on the <a title="tagtog - inter-annotator agreement" href="collaboration.html#iaa-inter-annotator-agreement">inter-annotator agreement</a> (IAA) and it is explained in detail here: <a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">Automatic adjudication based on IAA</a>.</td>
+          <td>Automatic adjudication process that merges all the member's annotations into <code>master</code>. This adjudication is based on the <a title="tagtog - inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> (IAA) and it is explained in detail here: <a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">Automatic adjudication based on IAA</a>.</td>
         </tr>
       </table>
       <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p>

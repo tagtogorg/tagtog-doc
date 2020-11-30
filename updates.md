@@ -687,7 +687,7 @@ _2019-08-05_
 _2019-08-04_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">[The **IAA** is now also calculated for all members against the **master** / official annotations](collaboration.html#iaa-inter-annotator-agreement)!</span></li>
+  <li class="new"><span markdown="1">[The **IAA** is now also calculated for all members against the **master** / official annotations](collaboration#iaa-inter-annotator-agreement)!</span></li>
   <li class="new"><span markdown="1">Two new functionalities for the annotation menu in read-only mode (e.g. for the users with reader role or in public projects): Copy text and Permalink. Check the [available functionalities for the menu in read-only mode](webeditor.html#annotation-menu).</span></li>
   <li class="new"><span markdown="1">Added functionality to [**DELETE** documents with the official tagtog python script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py)</span></li>
   <li class="new"><span markdown="1">Now **showing the IAA of every document** on the document!</span></li>
@@ -837,7 +837,7 @@ _2019-05-05_
   <li class="fix"><span markdown="1">Fixed error of having to upload a PDF twice after activating _Native PDF_ to make it actually work.</span></li>
   <li class="fix"><span markdown="1">Fixed errors on changing the number of members and task distribution settings that sometimes caused inconsistent states.</span></li>
   <li class="fix"><span markdown="1">Downloads of PubMeds and PMCs updated and fixed.</span></li>
-  <li class="doc"><span markdown="1">IAA documentation added: [IAA docs](collaboration.html#iaa-inter-annotator-agreement)</span></li>
+  <li class="doc"><span markdown="1">IAA documentation added: [IAA docs](collaboration#iaa-inter-annotator-agreement)</span></li>
 </ul>
 
 ---

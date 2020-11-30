@@ -250,7 +250,7 @@ Defined as URL query parameters.
     <td><code>metric</code></td>
     <td>-</td>
     <td><code>exact_v1</code></td>
-    <td>The name of the metric you want, typically <code>exact_v1</code> (this is the same metric used in the <a href="collaboration.html#iaa-inter-annotator-agreement">default IAA visualizations</a>). <a title="IAA: how it is calculated" href="IAA-calculation-methods">Possible values: <code>{exact_v1, overlapping_v1, documentlevel_v1}</code></a></td>
+    <td>The name of the metric you want, typically <code>exact_v1</code> (this is the same metric used in the <a href="collaboration#iaa-inter-annotator-agreement">default IAA visualizations</a>). <a title="IAA: how it is calculated" href="IAA-calculation-methods">Possible values: <code>{exact_v1, overlapping_v1, documentlevel_v1}</code></a></td>
   </tr>
 </table>
 

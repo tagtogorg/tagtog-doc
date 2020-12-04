@@ -38,7 +38,7 @@ api_plain_text: "\"Hello, World!\""
   </table>
 </div>
 <div class="one-third-col">
-  {% include message.html message='Use this <a href="https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python script</strong></a> ready to do many common operations in tagtog using the API: upload (also folders), search, and download documents!' %}
+  {% include message.html message='Use this <a href="https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python script</strong></a> ready to do many common operations in tagtog using the API: upload (also folders), search, delete, and download documents!' %}
 </div>
 <div class="two-third-col">
   <h2>Authentication</h2>
@@ -2189,21 +2189,26 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 <div class="two-third-col">
   <h2>API Clients</h2>
   <h3>Python tagtog script</h3>
-  <p>If you want to use an <strong>already built API client</strong>. You have the {% include inline-image.html name="icon_leafs.png" width="18" %}<a href="https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python API script</strong></a> to do many common operations in tagtog using the API: upload (also folders), search, and download documents!</p>
+  <p>If you want to use an <strong>already built API client</strong>. You have the {% include inline-image.html name="icon_leafs.png" width="18" %}<a href="https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python API script</strong></a> to do many common operations in tagtog using the API: upload (also folders), search, delete, and download documents!</p>
   <div markdown="1">
 ```shell
-usage: tagtog [-h] {upload,search,download} ...
+usage: tagtog [-h] {upload,search,download,delete} ...
 
-tagtog official script to Upload & Search & Download documents. Version: 0.1.2
-Author: tagtog (@tagtog_net) - Contact: Juan Miguel Cejuela (@juanmirocks) API
-documentation: https://docs.tagtog.net/API_documents_v1.html
+    tagtog official script to Upload & Search & Download & Delete documents.
+
+    Version: 0.3.0
+    Author: tagtog.net (@tagtog_net)
+
+    Website: https://www.tagtog.net
+    API documentation: https://docs.tagtog.net/API_documents_v1.html
+
 
 positional arguments:
-  {upload,search,download}
+  {upload,search,download,delete}
     upload              Upload files to tagtog
     search              Search documents by query, e.g. `*` (all)
-    download            Download documents by search query, e.g.
-                        `updated:[NOW-1DAY to NOW]
+    download            Download documents by search query, e.g. `updated:[NOW-1DAY to NOW]
+    delete              Delete documents that match a search query, e.g. `docid:aZ8wXRHvqyw7tjBQW8NXMTPQ0S.C-test.md` (to delete a specific doc)
 
 optional arguments:
   -h, --help            show this help message and exit

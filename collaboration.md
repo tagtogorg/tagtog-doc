@@ -547,7 +547,7 @@ id: collaboration
   <h3>Adjudication</h3>
   <p> When different users annotate the same documents, as a result, there are multiple annotation versions. <strong>Adjudication is the process to resolve inconsistencies among these versions before promoting a version to master</strong>. tagtog supports automatic adjudication. </p>
   <h4>Automatic adjudication based on IAA</h4>
-  <p>Do you need first more information about what IAA (inter-annotator agreement) is. Read here: <a title="tagtog - inter-annotator agreement" href="collaboration.html#iaa-inter-annotator-agreement">inter-annotator agreement</a> ? </p>
+  <p>Do you need first more information about what IAA (inter-annotator agreement) is. Read here: <a title="tagtog - inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> ? </p>
   <p>It follows a merging strategy based on <strong>choosing the available-best user for each annotation task</strong>, i.e. choosing the annotations from the user with the highest IAA for a specific annotation task (regarding the <a title="tagtog - IAA calculation methods" href="IAA-calculation-methods">exact_v1 metric</a>; for all documents).</p>
   {% include image.html caption="In this example SME A has the highest IAA for task A and SME B for task B. The result are the annotations for task A by SME A plus the annotations from task B by SME B" name="automatic_adjudication.png" %}
   <p>In the background, tagtog creates an IAA ranking of all annotators for each specific task. In that ordered ranking,

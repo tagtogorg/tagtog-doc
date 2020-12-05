@@ -13,11 +13,20 @@ notoc: true
 🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
 
 ---
+## 3.2020-W49.0 🎚
+_2020-12-05_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">You can now filter entities by probability. Focus on those annotations with low probability 🔎 [More information](webeditor.html#filter-entities).</span></li>
+  <li class="new"><span markdown="1">You can now apply the filter to the whole document (it is not limited to the entity tally anymore). Only show those entities you are interested in, directly in the document. [More information](webeditor.html#filter-entities).</span></li>
+  <li class="new"><span markdown="1">There is a new option to reset the whole filter (before, you could reset each filter property independently). [More information](webeditor.html#filter-entities). </span></li>
+  <li class="fix"><span markdown="1">In the side bar, if the annotations were grouped by text, the total number of entities was out of sync when the filter was active.</span></li>
+</ul>
 
 ## 3.2020-W47.0 ⛑
 _2020-11-23_
 
-<ul class="updates">  
+<ul class="updates">
   <li class="fix"><span markdown="1">(OnPremises) fixed bug introduced in [3.2020-W44.1](updates.html#32020-w441-), which caused the tagtog ML to not run for some accounts.</span></li>
 </ul>
 
@@ -28,8 +37,8 @@ _2020-11-16_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New [tagtog block: `quote`](tagtog-blocks#quotes), to annotate quotes.</span></li>
-  <li class="new"><span markdown="1">New [tagtog block: `meta`](tagtog-blocks#meta-information), to add meta information for your blocks.</span></li>
-  <li class="new"><span markdown="1">New background color for your [tagtog blocks: `colwhite`](tagtog-blocks#colors).</span></li>  
+  <li class="new"><span markdown="1">New [tagtog block: `meta`](tagtog-blocks#meta-information), to add meta information for yourlocks.</span></li>
+  <li class="new"><span markdown="1">New background color for your [tagtog blocks: `colwhite`](tagtog-blocks#colors).</span></li>
   <li class="new"><span markdown="1">(Cloud & OnPremises) [Paid tagtog subscriptions](https://www.tagtog.net/-plans) now see, when creating a new project, that the default is for the project to be "private" (before the default was "public"). Of course, you can nonetheless change the project to be "public" (upon creation and afterwards too). Read more: [private vs. public projects](projects.html#privacy).</span></li>
   <li class="fix"><span markdown="1">There was a visualization defect when displaying human/bot coversations using tagtog blocks and background colors other than default. Now all colors are aligned.</span></li>
   <li class="fix"><span markdown="1">Fixed some broken links of older projects. These include: [FlyBase_PLOS-BioCreativeIV_Corpus](https://www.tagtog.net/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus), [Helen Cook's V300](https://www.tagtog.net/helencook/V300), [IDP4](https://www.tagtog.net/jmcejuela/IDP4), [nala](https://www.tagtog.net/jmcejuela/nala), and [LocText](https://www.tagtog.net/jmcejuela/LocText).</span></li>
@@ -681,7 +690,7 @@ _2019-08-05_
 _2019-08-04_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">[The **IAA** is now also calculated for all members against the **master** / official annotations](collaboration.html#iaa-inter-annotator-agreement)!</span></li>
+  <li class="new"><span markdown="1">[The **IAA** is now also calculated for all members against the **master** / official annotations](collaboration#iaa-inter-annotator-agreement)!</span></li>
   <li class="new"><span markdown="1">Two new functionalities for the annotation menu in read-only mode (e.g. for the users with reader role or in public projects): Copy text and Permalink. Check the [available functionalities for the menu in read-only mode](webeditor.html#annotation-menu).</span></li>
   <li class="new"><span markdown="1">Added functionality to [**DELETE** documents with the official tagtog python script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py)</span></li>
   <li class="new"><span markdown="1">Now **showing the IAA of every document** on the document!</span></li>
@@ -831,7 +840,7 @@ _2019-05-05_
   <li class="fix"><span markdown="1">Fixed error of having to upload a PDF twice after activating _Native PDF_ to make it actually work.</span></li>
   <li class="fix"><span markdown="1">Fixed errors on changing the number of members and task distribution settings that sometimes caused inconsistent states.</span></li>
   <li class="fix"><span markdown="1">Downloads of PubMeds and PMCs updated and fixed.</span></li>
-  <li class="doc"><span markdown="1">IAA documentation added: [IAA docs](collaboration.html#iaa-inter-annotator-agreement)</span></li>
+  <li class="doc"><span markdown="1">IAA documentation added: [IAA docs](collaboration#iaa-inter-annotator-agreement)</span></li>
 </ul>
 
 ---

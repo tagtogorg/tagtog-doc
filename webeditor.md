@@ -352,7 +352,7 @@ toc: true
         </tr>
         <tr>
           <td>Merge Annotations</td>
-          <td>Automatic adjudication process that merges all the member's annotations into <code>master</code>. This adjudication is based on the <a title="tagtog - inter-annotator agreement" href="collaboration.html#iaa-inter-annotator-agreement">inter-annotator agreement</a> (IAA) and it is explained in detail here: <a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">Automatic adjudication based on IAA</a>.</td>
+          <td>Automatic adjudication process that merges all the member's annotations into <code>master</code>. This adjudication is based on the <a title="tagtog - inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> (IAA) and it is explained in detail here: <a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">Automatic adjudication based on IAA</a>.</td>
         </tr>
       </table>
       <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p>
@@ -442,12 +442,12 @@ toc: true
     <div class="two-third-col">
       <br/>
       <h4>Entity tally</h4>
-      <p>The entity tally displays statistics for each entity type in the current document.</p>
-      <p>On the top of this section you find a summary with the number entities annotated and the entities not normalized. E.g. {% include inline-image.html name="editor-tally-headline.PNG" width="190"%}. Below the header, you can find the statistics for the annotations in the current document:</p>
+      <p>The entity tally displays a summary for the entities annotated in your current document.</p>
+      <p>On the top of this section you find some statistics with the number entities annotated and the entities not normalized. E.g. {% include inline-image.html name="editor-tally-headline.PNG" width="190"%}. Below the header, you can find a summary for the entities annotated in the current document. For example:</p>
       <br/>
       {% include image.html name="editor-tally-icons.png" width="600" caption="Entities are classified under Entity types. For each type some statistics are displayed: number of entities, manual annotated entities, automatic annotated entities, normalized entities" %}
       <br/>
-      <p>To digest the status of the annotated entities as fast as possible and reduce the noise, you can:</p>
+      <p>To quickly digest the status of the annotated entities, you can:</p>
       <p class="list-item"><span class="list-item-1"></span><strong>Group</strong> entities</p>
       <p class="list-item"><span class="list-item-2"></span><strong>Filter</strong> entities</p>
     </div>
@@ -462,8 +462,8 @@ toc: true
           <th>Description</th>
         </tr>
         <tr>
-          <td><code>Normalization</code>(default)</td>
-          <td><p>Group annotations by normalization. Very useful to understand which concepts are annotated in the current document.</p>
+          <td><code>Normalization</code></td>
+          <td><p>Group annotations by normalization. Very useful to understand which concepts are annotated in the current document. This option doesn't appear if you don't have dictionaries associated to your project.</p>
           <p>Entities not normalized are highlighted to spot them at a glance.</p>
           <p>Clicking on the icon {% include inline-image.html name="editor-tally-roll-down.PNG" width="20"%} you expand a view with the information of each single annotation.</p></td>
         </tr>
@@ -473,7 +473,7 @@ toc: true
         </tr>
         <tr>
           <td><code>Entity label</code></td>
-          <td>Group annotations by entity label. Check which annotations have been labeled and which not. Check the list of annotations labeled with a particular entity label.</td>
+          <td>Group annotations by entity label. Check whether annotations have been labeled or not. Check the list of annotations labeled with a particular entity label.</td>
         </tr>
         <tr>
           <td><code>No group</code></td>
@@ -496,7 +496,12 @@ toc: true
     </div>
     <div class="two-third-col">
       <h5>Filter entities</h5>
-      <p>You can display entities that meet certain requirements.</p>
+      <p markdown="1">You can **display entities that meet certain criteria**.</p>
+      <p markdown="1">You decide whether you want to **apply the filter only to the entity tally or extend the scope to the document**. To control this functionality, there is an _Apply to document_ switch available:  {% include inline-image.html name="filter-scope.png" width="" %}</p>
+      <p class="list-item" markdown="1"><span class="list-item-1"></span>**Off**: show the resulting entities only in the entity tally. Only those entities meeting the filter criteria are listed.</p>
+      <p class="list-item" markdown="1"><span class="list-item-2"></span>**On**: show the resulting entities in the entity tally, and in the document. In the entity tally, only those entities meeting the filter criteria are listed. In the document, these entities are visible, the rest are hidden (visually almost transparent).</p>
+       {% include image.html name="filter-scope-document.png" caption='Example of a filter applied to a document. Notice that the entities filtered out are hidden (visually almost transparent). In this example, the document is styled using <a href="tagtog-blocks.html#question-answering">tagtog blocks</a>.' %}
+      <p>You can filter entities by the following properties:</p>
       <table style="width:100%">
         <tr>
           <th>Filter by</th>
@@ -519,8 +524,17 @@ toc: true
           <td><code>Entity label value</code></td>
           <td><p>Type the value of an entity label to only display those entities with at least one entity label with that value. As there can be a large number of entities, the match is exact.</p><p>As you type, a list of recommended values appears in a drop down menu. This list is generated using fuzzy search against the possible values of those entity labels with type <code>enum</code>.</p><p>This filter only shows up when there is at least one entity label defined in the project.</p></td>
         </tr>
-
+         <tr>
+          <td><code>Entity probability</code></td>
+          <td>
+            <p>All the entities with a probability lower than the value indicated in the range slider will be selected. The idea is that you can focus on the entities with low probability. This filter doesn't take into consideration the probability of other annotation tasks within the entity (e.g. entity labels, normalizations, relationships).</p>
+            <p>This filter only shows up when there is at least one entity type defined in the project.</p>
+          </td>
+        </tr>
       </table>
+      <p markdown="1">To **reset the filter** to the default values, there are two options:</p>
+      <p class="list-item" markdown="1"><span class="list-item-1"></span>**Reset each filter property independently**: click on a {% include inline-image.html name="editor-clean.PNG" width="20" %} icon near the property.</p>
+      <p class="list-item" markdown="1"><span class="list-item-2"></span>**Reset all filter properties**: if the filter is active, an option to reset the whole filter shows up on the top of the filter.</p>
     </div>
     <div class="one-third-col">
       <div class="message">
@@ -528,6 +542,9 @@ toc: true
       </div>
       <div class="message">
         You can <strong>combine groups and filters</strong> to gain flexibility.
+      </div>
+      <div class="message">
+        <strong>tagtog remembers whether you want to extend the filter scope to the document or not</strong>. If you turn on/off the switch, the next time you open a new document or login to tagtog, the same option will be selected by default.
       </div>
     </div>
     <div class="two-third-col">

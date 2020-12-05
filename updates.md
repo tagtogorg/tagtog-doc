@@ -13,7 +13,8 @@ notoc: true
 🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
 
 ---
-## ??? 🎚
+## 3.2020-W49.0 🎚
+_2020-12-05_
 
 <ul class="updates">
   <li class="new"><span markdown="1">You can now filter entities by probability. Focus on those annotations with low probability 🔎 [More information](webeditor.html#filter-entities).</span></li>

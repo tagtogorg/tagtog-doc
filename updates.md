@@ -13,6 +13,7 @@ notoc: true
 🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
 
 ---
+
 ## 3.2020-W49.0 🎚
 _2020-12-05_
 
@@ -22,6 +23,8 @@ _2020-12-05_
   <li class="new"><span markdown="1">There is a new option to reset the whole filter (before, you could reset each filter property independently). [More information](webeditor.html#filter-entities). </span></li>
   <li class="fix"><span markdown="1">In the side bar, if the annotations were grouped by text, the total number of entities was out of sync when the filter was active.</span></li>
 </ul>
+
+---
 
 ## 3.2020-W47.0 ⛑
 _2020-11-23_

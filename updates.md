@@ -13,15 +13,18 @@ notoc: true
 🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
 
 ---
+
 ## 3.2020-W49.0 🎚
 _2020-12-05_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">You can now filter entities by probability. Focus on those annotations with low probability 🔎 [More information](webeditor.html#filter-entities).</span></li>
   <li class="new"><span markdown="1">You can now apply the filter to the whole document (it is not limited to the entity tally anymore). Only show those entities you are interested in, directly in the document. [More information](webeditor.html#filter-entities).</span></li>
+  <li class="new"><span markdown="1">You can now filter entities by probability. Focus on those annotations with low probability 🔎 [More information](webeditor.html#filter-entities).</span></li>
   <li class="new"><span markdown="1">There is a new option to reset the whole filter (before, you could reset each filter property independently). [More information](webeditor.html#filter-entities). </span></li>
   <li class="fix"><span markdown="1">In the side bar, if the annotations were grouped by text, the total number of entities was out of sync when the filter was active.</span></li>
 </ul>
+
+---
 
 ## 3.2020-W47.0 ⛑
 _2020-11-23_

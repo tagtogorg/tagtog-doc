@@ -18,9 +18,9 @@ notoc: true
 _2020-12-05_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">You can now apply the filter to the whole document (it is not limited to the entity tally anymore). Only show those entities you are interested in, directly in the document. [More information](webeditor.html#filter-entities).</span></li>
-  <li class="new"><span markdown="1">You can now filter entities by probability. Focus on those annotations with low probability 🔎 [More information](webeditor.html#filter-entities).</span></li>
-  <li class="new"><span markdown="1">There is a new option to reset the whole filter (before, you could reset each filter property independently). [More information](webeditor.html#filter-entities). </span></li>
+  <li class="new"><span markdown="1">You can now [apply the entity filter to the document](webeditor.html#filter-entities), and thus **show & hide only those entities you care about, right in the document!** 👀</span></li>
+  <li class="new"><span markdown="1">You can now [filter entities by probability](webeditor.html#filter-entities). **Focus on those annotations with low probability!** 🔎</span></li>
+  <li class="new"><span markdown="1">There is a [new option to reset the whole filter](webeditor.html#filter-entities) (before, you could only reset each filter property independently). </span></li>
   <li class="fix"><span markdown="1">In the side bar, if the annotations were grouped by text, the total number of entities was out of sync when the filter was active.</span></li>
 </ul>
 

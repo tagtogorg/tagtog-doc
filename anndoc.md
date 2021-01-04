@@ -131,7 +131,7 @@ toc: true
       <td><code>confidence</code></td>
       <td><p><code>state</code> can be empty (manual annotation) or have the following values: <code>pre-added</code> (automatic annotation or pre-annotation -preselected-), <code>pre-removed</code> (pre-annotation -predeselected-).</p>
       <p><code>who</code> string array. Each string represents who performed the annotation. Possibly multiple actors, prefixed by either <code>ml:</code> (automatic annotation or pre-annotation) or <code>user:</code> (manual annotation).</p>
-      <p><code>prob</code> aggregated probability between all actors.</p>
+      <p><code>prob</code> annotation's probability, in <code>(0, 1]</code>. This estimates how reliable the annotation is: the higher, the better. Typically, this probability is arbitrarily set to <em>1</em> for manual (user) annotations. For automatic annotations, however, this will be the confidence probability of the automatic model. You can write in here the probability of your model (if your model rather estimates the error or "distance error", you should normalize it). Finally, in case the annotation was merged from multiple users/models, this indicates the aggregated probability between all actors.</p>
       </td>
     </tr>
     <tr>

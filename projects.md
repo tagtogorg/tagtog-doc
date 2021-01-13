@@ -142,8 +142,8 @@ tagtog_domain: https://www.tagtog.net
 <div class="page-subsection">
   <div class="two-third-col">
     <h3>Document labels</h3>
-    <p>Labels used to mark the documents or text you import. It is another type of annotation, but affecting the whole document.</p>
-    <p>To create a new Document Label, click on the button <code>New Document Label</code>. Then, write a <code>name</code> for the label (required), <code>type</code> (required) and <code>description</code> (optional).</p>
+    <p>These are tags (labels) that you associate to the <em>whole</em> document. This is useful for text classification / categorization (e.g. sentiment analysis).</p>
+    <p>To create a new Document Label, click on the button <code>New Document Label</code>. Then, write a <code>name</code> for the label (required), <code>type</code> (required), and <code>description</code> (optional).</p>
     <p>You can create different types of Document Labels:</p>
     <table style="width:100%">
       <tr>
@@ -156,11 +156,11 @@ tagtog_domain: https://www.tagtog.net
       </tr>
       <tr>
         <td><code>string</code></td>
-        <td>One or more words describing a document. This is particularly handy whether you don't have a specific list of options or if you do, it might change often. e.g. which disease is related to this clinical profile? </td>
+        <td>One or more words describing a document. This is particularly handy whether you don't have a specific list of options or if you do, it might change often. e.g. which disease is related to this clinical profile? You can also use the <code>string</code> type to attach any meta information, e.g.: comments, URLs, json data, etc.</td>
       </tr>
       <tr>
         <td><code>enum</code></td>
-        <td>list of options which can describe a document. <strong>In this case the options should be written in the description of the label separated by commas</strong>. e.g. severity of the error report could be: low, medium, high or critical. </td>
+        <td>list of options which can describe a document. <strong>In this case, the options must be written in the description of the label separated by commas</strong>. e.g. an error's severity could be broken down as: low, medium, high, critical. </td>
       </tr>
     </table>
   </div>
@@ -173,9 +173,7 @@ tagtog_domain: https://www.tagtog.net
     </div>
   </div>
   <div class="two-third-col">
-    {% include image.html name="settings-doclabel.png" caption="Setting a document label with the <code>enum</code> type"%}
-    <p>Once saved, you can start using them on the web editor.</p>
-    <p>Soon you will be able to generate document labels automatically within tagtog. Now, as a workaround, you can infer the document label based on the entities extracted automatically.</p>
+    {% include image.html name="settings-doclabel.png" caption="Example: setting a document label of <code>enum</code> type."%}    
   </div>
   <div class="one-third-col">
     <div class="message">

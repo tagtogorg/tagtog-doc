@@ -14,6 +14,17 @@ notoc: true
 
 ---
 
+## ??? 🦾
+
+HOLA
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) The tagtog ML docker image's size is now 30% smaller! This means faster deployments & faster loading times.</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Several improvements in the internal performance of tagtog ML. In some installations, the reported [memory leak bug](on_premises_README.html#ml0-tagtog-service-taking-100-of-cpu-or-memory) is now fixed.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W49.0 🎚
 _2020-12-05_
 

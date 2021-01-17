@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🦾
+## 3.2021-W02.0 🦾
+_2021-01-17_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) The tagtog ML docker image's size is now 30% smaller! This means faster deployments & faster loading times.</span></li>

@@ -14,6 +14,18 @@ notoc: true
 
 ---
 
+## 3.2021-W02.0 🦾
+_2021-01-17_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) The tagtog ML docker image's size is now 30% smaller! This means faster deployments & faster loading times.</span></li>
+  <li class="new"><span markdown="1">(OnPremises) The internal docker logs are now managed much more efficiently (with maximum size limits & file rotation).</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) Several improvements in the internal performance of tagtog ML. In some installations, the reported [memory leak bug](on_premises_README.html#ml0-tagtog-service-taking-100-of-cpu-or-memory) is now fixed.</span></li>
+  <li class="fix"><span markdown="1">Previously-trained NER models that, however, do not have any training data left, are successfully deleted.</span></li>
+</ul>
+
+---
+
 ## 3.2020-W49.0 🎚
 _2020-12-05_
 

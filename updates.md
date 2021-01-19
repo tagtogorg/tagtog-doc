@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🖇
+## 3.2021-W03.0 🖇
+_2021-01-19_
 
 <ul class="updates">
   <li class="del"><span markdown="1">(OnPremises) The webserver doesn't listen anymore on IPv6, thus supporting hosts that have IPv6 disabled. On the contrary, if your host _only_ supports IPv6 (and not IPv4) this update will create problems for you; [please contact us](https://www.tagtog.net/#contact) if this is your case.</span></li>

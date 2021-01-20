@@ -22,7 +22,7 @@ notoc: true
   <li class="fix"><span markdown="1">With Safari, when scrolling, the Document Labels sometimes overlapped the Entity Tally, this is now solved.</span></li>
   <li class="fix"><span markdown="1">With Safari, hiding the sidebar sometimes resulted in an ugly effect with part of the sidebar still visible.</span></li>
   <li class="new"><span markdown="1">Performance improvements in the PDF viewer, it is faster, specially visible in Safari.</span></li>
-  <li class="new"><span markdown="1">In the relation tally, you can now click on the different entities to focus these.</span></li>
+  <li class="new"><span markdown="1">In the relation tally, you can now click on the entities involved in the relation to highlight these independtly in text. This is specially useful in the case the entities are far from each other.</span></li>
   <li class="new"><span markdown="1">Now, all modal dialogs can be fully navigated by keyboard (e.g. entity labels menu).</span></li>
   <li class="new"><span markdown="1">When you select an entity or a relation in the sidebar, these are easier to identify in the text thanks to the new highlight effect for the plain text editor.</span></li>
   <li class="del"><span markdown="1">The hotkey to start a new relation <kbd>r</kbd> has been replaced with <kbd>t</kbd>. Now <kbd>r</kbd> starts Document Review.<a href=""></a>[More information about hotkeys](webeditor.html#hotkeys-map)</span></li>

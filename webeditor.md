@@ -70,7 +70,7 @@ toc: true
 <div class="page-section">
   <div class="two-third-col">
     <h2>Hotkeys map</h2>
-    <p>If you hover the mouse on the icon <kbd>hotkeys</kbd>, the list of hotkeys is displayed.</p>
+    <p>At the top-right corner of the editor, you find a <kbd>hotkeys</kbd> icon. If you hover the mouse on this icon, the list of hotkeys is displayed.</p>
     <table style="width:100%">
       <tr>
         <th>Hotkey</th>
@@ -94,23 +94,28 @@ toc: true
       </tr>
       <tr>
         <td class="centered"><kbd>r</kbd></td>
-        <td>Start a new relation (only available when the annotation menu is visible)</td>
+        <td>Start Document Review</td>
         <td>Any document</td>
+      </tr>
+      <tr>
+        <td class="centered"><kbd>t</kbd></td>
+        <td>Start a new relation</td>
+        <td>Any document. Only when the annotation menu is visible or in Document Review mode.</td>
       </tr>
       <tr>
         <td class="centered"><kbd>d</kbd></td>
-        <td>Delete annotation (only available when the annotation menu is visible)</td>
-        <td>Any document</td>
+        <td>Delete annotation </td>
+        <td>Any document. Only when the annotation menu is visible or in Document Review mode.</td>
       </tr>
       <tr>
         <td class="centered"><kbd>l</kbd></td>
-        <td>Show entity labels (only available when the annotation menu is visible)</td>
-        <td>Any document</td>
+        <td>Show entity labels</td>
+        <td>Any document. Only when the annotation menu is visible or in Document Review mode.</td>
       </tr>
       <tr>
         <td class="centered"><kbd>ctrl+c</kbd> or <kbd>command+c</kbd></td>
-        <td>Copy annotation text (only available when the annotation menu is visible)</td>
-        <td>Any document</td>
+        <td>Copy annotation text</td>
+        <td>Any document. Only when the annotation menu is visible or in Document Review mode.</td>
       </tr>
       <tr>
         <td class="centered"><kbd>q</kbd></td>
@@ -447,6 +452,7 @@ toc: true
       <br/>
       {% include image.html name="editor-tally-icons.png" width="600" caption="Entities are classified under Entity types. For each type some statistics are displayed: number of entities, manual annotated entities, automatic annotated entities, normalized entities" %}
       <br/>
+      <p markdown="1">If you **click on an entity, the entity is highlighted in the text and the [Document Review](webeditor.html#document-review) starts** with this entity. If you click again on the entity, you get out the Document Review mode</p>
       <p>To quickly digest the status of the annotated entities, you can:</p>
       <p class="list-item"><span class="list-item-1"></span><strong>Group</strong> entities</p>
       <p class="list-item"><span class="list-item-2"></span><strong>Filter</strong> entities</p>
@@ -558,6 +564,44 @@ toc: true
         If you click in a relation, the document area <strong>scroll to highlight the entities related</strong> in the text.
       </div>
       {% include image.html name="editor-relation-tally.PNG" width="230" %}
+    </div>
+  </div>
+  <div class="page-subsection">
+    <div class="two-third-col">
+      <br/>
+      <h2>Document Review</h2>
+      <p>If you want to review a set of entities from your document, you can use the Document Review mode:</p>
+      <p class="numbered-item"><span class="number-1">1</span><span markdown="1">Using the [filter](webeditor.html#filter-entities), select the entities you want to review. For example: review all the entities under 0.7 probability threshold.</span></p>
+      <p class="numbered-item"><span class="number-2">2</span><span markdown="1">Press the [hotkey](webeditor.html#hotkeys-map) <kbd>r</kbd> to start the Document Review from the first entity. Alternatively, you can click on an entity in the Entity tally to start from that entity. Use <kbd>↑</kbd> and <kbd>↓</kbd> to navigate across the matching entities. For each entity, using hotkeys, you can perform the following actions:</span>
+      <table style="width:100%">
+        <tr>
+          <th>Hotkey</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td class="centered"><kbd>d</kbd></td>
+          <td>Delete entity</td>
+        </tr>
+        <tr>
+          <td class="centered"><kbd>l</kbd></td>
+          <td>Show/Edit entity labels</td>
+        </tr>
+        <tr>
+          <td class="centered"><kbd>t</kbd></td>
+          <td>Add relation</td>
+        </tr>
+        <tr>
+          <td class="centered"><kbd>command+c</kbd> <kbd>ctrl+c</kbd></td>
+          <td>Copy entity text</td>
+        </tr>
+      </table>
+      </p>
+      <p>Click on an entity in the text or press <kbd>ESC</kbd> to exit the Document Review mode.</p>
+    </div>
+    <div class="one-third-col">
+      <div class="message">
+        The Document Review <a href="webeditor.html#group-entities">ungroups</a> (<code>No Group</code>) the entities automatically to easily navigate across entities ordered by their position in the document.
+      </div>
     </div>
   </div>
   <div class="page-subsection">

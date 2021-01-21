@@ -12,7 +12,7 @@ toc: true
 ---
 
 <div class="two-third-col">
-  <p>Here you learn how to build your search queries.</p>
+  <p markdown="1">Here you learn how to build your search queries. Please bear in mind that these queries are **case sensitive**, and this extends to all the syntax.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='To build more advanced queries you can base on the <a href="http://lucene.apache.org/core/3_1_0/queryparsersyntax.html ">Query Parser Syntax from Lucene</a>' %}

@@ -597,6 +597,8 @@ toc: true
       </table>
       </p>
       <p>Click on an entity in the text or press <kbd>ESC</kbd> to exit the Document Review mode.</p>
+      <br/>
+      {% include image.html name="documentReview.gif" caption="Document Review. In this example, we first filter the entities by text, and next, we review the resulting items performing some actions with the keyboard (change entity labels, creating a relationship, and removing the last entity)" %}
     </div>
     <div class="one-third-col">
       <div class="message">

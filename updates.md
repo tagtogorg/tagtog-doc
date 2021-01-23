@@ -18,14 +18,14 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">New [Document Review](webeditor.html#document-review) mode. Select the entities for review using the filter (e.g. review entities with less probability than 0.7) and use <kbd>↑</kbd> and <kbd>↓</kbd> to navigate across entities. For each item, using hotkeys, the reviewer can perform actions such as remove an entity, change entity labels, etc.</span></li>
-  <li class="new"><span markdown="1">Add keyboard shorcuts to the entities in the Entity tally (sidebar). Now you can remove the entity, see its entity labels, create a relation or copy its text directly from the sidebar.</span></li>
+  <li class="new"><span markdown="1">Addred keyboard shorcuts to the entities in the Entity Tally (sidebar). Now you can remove the entity, see its entity labels, create a relation or copy its text directly from the sidebar.</span></li>
   <li class="fix"><span markdown="1">With Safari, when scrolling, the Document Labels sometimes overlapped the Entity Tally, this is now solved.</span></li>
   <li class="fix"><span markdown="1">With Safari, hiding the sidebar sometimes resulted in an ugly effect with part of the sidebar still visible.</span></li>
-  <li class="new"><span markdown="1">Performance improvements in the PDF viewer, it is faster, specially visible in Safari.</span></li>
-  <li class="new"><span markdown="1">In the relation tally, you can now click on the entities involved in the relation to highlight these independtly in text. This is specially useful in the case the entities are far from each other.</span></li>
+  <li class="new"><span markdown="1">Performance improvements in the PDF viewer. Now it's faster! This is specially visible on Safari.</span></li>
+  <li class="new"><span markdown="1">In the Relation Tally, you can now click on the entities involved in the relation to highlight these independtly in text. This is specially useful in the case the entities are far from each other.</span></li>
   <li class="new"><span markdown="1">Now, all modal dialogs can be fully navigated by keyboard (e.g. entity labels menu).</span></li>
   <li class="new"><span markdown="1">When you select an entity or a relation in the sidebar, these are easier to identify in the text thanks to the new highlight effect for the plain text editor.</span></li>
-  <li class="del"><span markdown="1">The hotkey to start a new relation <kbd>r</kbd> has been replaced with <kbd>t</kbd>. Now <kbd>r</kbd> starts Document Review.<a href=""></a>[More information about hotkeys](webeditor.html#hotkeys-map)</span></li>
+  <li class="del"><span markdown="1">The hotkey to start a new relation <kbd>r</kbd> has been replaced with <kbd>t</kbd>. Now <kbd>r</kbd> starts the Document Review. [More information about hotkeys](webeditor.html#hotkeys-map).</span></li>
   <br/>
   {% include image.html name="documentReview.gif" width="800" caption="Document Review. In this example, we first filter the entities by text, and next, we review the resulting items performing some actions with the keyboard (change entity labels, creating a relationship, and removing the last entity)" %}
 

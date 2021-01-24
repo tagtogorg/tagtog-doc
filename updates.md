@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🖍
+## 3.2021-W03.1 🖍
+_2021-01-24_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New [Document Review](webeditor.html#document-review) mode. Select the entities for review using the filter (e.g. review entities with less probability than 0.7) and use <kbd>↑</kbd> and <kbd>↓</kbd> to navigate across entities. For each item, using hotkeys, the reviewer can perform actions such as remove an entity, change entity labels, etc.</span></li>

@@ -18,6 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="fix"><span markdown="1">([OpenID SSO](on-premises-sysadmin.html#single-sign-on-sso)) fixed a security bug, which allowed OpenID-only users (without a basic password) to change their passwords, thus in practice setting for them a basic password. This is not anymore allowed.</span></li>
+  <li class="fix"><span markdown="1">Creating an annotation task (e.g. Entity Type) with exact name "name" resulted in a dummy error before. Not anymore.</span></li>
 </ul>
 
 ---

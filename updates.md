@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 🧄
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">([OpenID SSO](on-premises-sysadmin.html#single-sign-on-sso)) fixed a security bug, which allowed OpenID-only users (without a basic password) to change their passwords, thus in practice setting for them a basic password. This is not anymore allowed.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W03.1 🖍
 _2021-01-24_
 
@@ -29,7 +37,6 @@ _2021-01-24_
   <li class="del"><span markdown="1">The hotkey to start a new relation <kbd>r</kbd> has been replaced with <kbd>t</kbd>. Now <kbd>r</kbd> starts the Document Review. [More information about hotkeys](webeditor.html#hotkeys-map).</span></li>
   <br/>
   {% include image.html name="documentReview.gif" width="800" caption="Document Review. In this example, we first filter the entities by text, and next, we review the resulting items performing some actions with the keyboard (change entity labels, create a relationship, and remove the last entity)" %}
-
 </ul>
 
 ---

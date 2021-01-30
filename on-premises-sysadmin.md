@@ -203,12 +203,6 @@ With tagtog Teams, you can:
 
 ### OpenID Connect (OIDC)
 
-***
-
-**🤠 The tagtog OpenID Connect feature is in beta. For most use cases, everything should work just fine. However, rough edges might exist. We [much appreciate your feedback](https://www.tagtog.net/#contact).**
-
-***
-
 You can link to tagtog your **OpenID Connect Provider** (e.g. KeyCloak, Auth0, Okta, AWS Cognito, Microsoft, Salesforce.com, etc.). With this, your users will be able to login into tagtog seamlessly (with the authentication mechanism they already know).
 
 #### OIDC: Setup

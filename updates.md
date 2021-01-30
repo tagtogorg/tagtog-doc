@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🧄
+## 3.2021-W04.0 🧄
+_2021-01-30_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">([OpenID SSO](on-premises-sysadmin.html#single-sign-on-sso)) fixed a security bug, which allowed OpenID-only users (without a basic password) to change their passwords, thus in practice setting for them a basic password. This is not anymore allowed.</span></li>

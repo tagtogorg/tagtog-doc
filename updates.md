@@ -13,6 +13,14 @@ notoc: true
 🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
 
 ---
+## ??? 🪆
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">If a user set a document label (type enum or boolean) for their document version and saved it, another user who changed to that version, was seeing the document label as not set.</span></li>
+  <li class="fix"><span markdown="1">For projects with a large number of entity types, the filter were not showing all the entity types in the select menu.</span></li>
+</ul>
+
+---
 
 ## 3.2021-W04.0 🧄
 _2021-01-30_

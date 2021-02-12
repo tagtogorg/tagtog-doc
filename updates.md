@@ -16,6 +16,8 @@ notoc: true
 ## ??? 🪆
 
 <ul class="updates">
+  <li class="doc  "><span markdown="1">New [quick tutorial](quick-tutorials.html): [Integrating tagtog and spaCy: a simple example](https://tagtog.medium.com/integrating-tagtog-and-spacy-16fb0addeea1)</span></li>
+  <li class="doc  "><span markdown="1">New [quick tutorial](quick-tutorials.html): [Connect your NLP models to tagtog using webhooks](https://tagtog.medium.com/connect-your-nlp-models-to-tagtog-using-webhooks-13d422ae4dff)</span></li>
   <li class="fix"><span markdown="1">If a user set a document label (type enum or boolean) for their document version and saved it, another user who changed to that version, was seeing the document label as not set.</span></li>
   <li class="fix"><span markdown="1">For projects with a large number of entity types, the filter were not showing all the entity types in the select menu.</span></li>
 </ul>
@@ -46,7 +48,6 @@ _2021-01-24_
   <li class="new"><span markdown="1">When you select an entity or a relation in the sidebar, these are easier to identify in the text thanks to the new highlight effect for the plain text editor.</span></li>
   <li class="del"><span markdown="1">The hotkey to start a new relation <kbd>r</kbd> has been replaced with <kbd>t</kbd>. Now <kbd>r</kbd> starts the Document Review. [More information about hotkeys](webeditor.html#hotkeys-map).</span></li>
   <br/>
-  {% include image.html name="documentReview.gif" width="800" caption="Document Review. In this example, we first filter the entities by text, and next, we review the resulting items performing some actions with the keyboard (change entity labels, create a relationship, and remove the last entity)" %}
 </ul>
 
 ---

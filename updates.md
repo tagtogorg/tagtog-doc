@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🪆
+## 3.2021-W06.0 🪆
+_2021-02-13_
 
 <ul class="updates">
   <li class="doc"><span markdown="1">New [quick tutorial](quick-tutorials.html): [Integrating tagtog and spaCy: a simple example](https://tagtog.medium.com/integrating-tagtog-and-spacy-16fb0addeea1).</span></li>

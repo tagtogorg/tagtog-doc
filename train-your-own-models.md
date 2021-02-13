@@ -18,14 +18,14 @@ notoc: true
 
   <p class="numbered-item"><span class="number-1">1</span><strong>Train a seed version</strong> of your in-house model (e.g. using <a href="http://scikit-learn.org/stable/">scikit-learn</a>). Have this model annotate new documents and upload them to tagtog through the <a href="/API_documents_v1.html">API</a>.</p>
 
-  <p class="numbered-item"><span class="number-2">2</span>Review <a href="collaboration.html">within your team</a> the newly annotated & uploaded documents using the tagtog interface. The human reviewers, typically subject-matter experts (SMEs) (i.e. domain experts), will go through the predicted annotations, and <strong>accept, reject, or change the annotations</strong> as they see fit. Likely, you will want your team to review documents selected in an AL fashion.</p>  
+  <p class="numbered-item"><span class="number-2">2</span>Review <a href="collaboration.html">within your team</a> the newly annotated & uploaded documents using the tagtog interface. The human reviewers, typically subject-matter experts (SMEs) (i.e. domain experts), will go through the predicted annotations, and <strong>accept, reject, or change the annotations</strong> as they see fit. Likely, you will want your team to review documents selected in an AL fashion.</p>
 
   <p class="numbered-item"><span class="number-3">3</span>Download the reviewed documents again using the <a href="/API_documents_v1.html">API</a>, and use them to <strong>re-train</strong> your model.</p>
 </div>
 
 
 <div class="two-third-col">
-  <br>
+  <p markdown="1">To easily integrate your models with tagtog, use [webhooks](projects.html#webhooks). tagtog sends event notifications to your model on document upload or document save.</p>
   <p>Eventually, you can repeat this same workflow multiple times to <a href="machine-learning.html#continuous-learning"><strong>continuously re-train your models</strong></a>.</p>
 
   {% include image.html name="diagram_ml_small.svg" caption="Training flow." %}
@@ -50,7 +50,7 @@ notoc: true
     <br/>
     <div id="tabs-container">
       <ul class="tabs-menu">
-        <li class="current"><a href="#tab-1-file">Python</a></li>        
+        <li class="current"><a href="#tab-1-file">Python</a></li>
       </ul>
       <div class="tab">
       <p class="code-desc">This example shows how to upload a document, download it back in plain.html format, annotate it with your model generating an ann.json, and upload the whole annotated document (plain.html + ann.json) to tagtog.</p>
@@ -78,7 +78,7 @@ notoc: true
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
 
   print(response.text)
-  ```    
+  ```
   </div>
 </div>
 </div>

@@ -918,7 +918,7 @@ PUBMED IDS
   </div>
 </div>
 <div class="two-third-col">
-  <h4>Examples: import a a list of PubMed articles by PMID</h4>
+  <h4>Examples: import a list of PubMed articles by PMID</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -1366,10 +1366,93 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 }
 ```
 </div>
+{% include message.html message='You can send multiple annotated documents at the same time. This means you always upload an even number of files.' %}
+</div>
+<div class="two-third-col">
+  <h4>Examples: import text pre-annotated by spaCy</h4>
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc" markdown="1">This example shows how to generate a set of annotations with a [spaCy](https://spacy.io) model and send the pre-annotated text to tagtog. The model used is [en_core_web_sm](https://spacy.io/models/en#en_core_web_sm). We want to do NER and extract PEOPLE, ORG and MONEY entities.</p>
+  <p class="code-desc" markdown="1">For more details about this example, please read this step-by-step guide: [Integrating tagtog and spaCy: a simple example](https://tagtog.medium.com/integrating-tagtog-and-spacy-16fb0addeea1)</p>
+  <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
+  ```python
+import spacy
+import json
+import requests
+import os
+
+def get_class_id(label):
+  """
+  Translates the spaCy label id into the tagtog entity type id
+  - label: spaCy label id
+  """
+  choices = {'PERSON': 'e_1', 'ORG': 'e_2', 'MONEY': 'e_3'}
+  return choices.get(label, None)
+
+def get_entities(spans, pipeline):
+  """
+  Translates a tuple of named entity Span objects (https://spacy.io/api/span) into a
+  list of tagtog entities (https://docs.tagtog.net/anndoc.html#ann-json). Each entity is
+  defined by the entity type ID (classId), the part name where the annotation is (part),
+  the entity offsets and the confidence (annotation status, who created it and probabilty).
+  - spans: the named entities in the spaCy doc
+  - pipeline: trained pipeline name
+  """
+  default_prob = 1
+  default_part_id = 's1v1'
+  default_state = 'pre-added'
+  tagtog_entities = []
+  for span in spans:
+    class_id = get_class_id(span.label_)
+    if class_id is not None:
+      tagtog_entities.append( {
+        'classId': class_id,
+        'part': default_part_id,
+        'offsets':[{'start': span.start_char, 'text': span.text}],
+        'confidence': {'state': default_state,'who': ['ml:' + pipeline],'prob': default_prob},
+        'fields':{},
+        # this is related to the kb_id (knowledge base ID) field from the Span spaCy object
+        'normalizations': {}} )
+  return tagtog_entities
+
+MY_USERNAME = os.environ['MY_TAGTOG_USERNAME']
+MY_PASSWORD = os.environ['MY_TAGTOG_PASSWORD']
+MY_PROJECT = 'demo-spaCy'
+
+tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+auth = requests.auth.HTTPBasicAuth(username=MY_USERNAME, password=MY_PASSWORD)
+
+text = "Paypal Holdings Inc (PYPL) President and CEO Daniel Schulman Sold $2.7 million of Shares"
+# Load the spaCy trained pipeline (https://spacy.io/models/en#en_core_web_sm) and apply it to text
+pipeline = 'en_core_web_sm'
+nlp = spacy.load(pipeline)
+doc = nlp(text)
+
+# Fill the ann.json
+annjson = {}
+annjson['anncomplete'] = False
+annjson['metas'] = {}
+annjson['relations'] = []
+annjson['entities'] = get_entities(doc.ents, pipeline)
+
+params = {'owner': MY_USERNAME, 'project': MY_PROJECT, 'output': 'null', 'format': 'default-plus-annjson'}
+files=[('doc1.txt', text), ('doc1.ann.json', json.dumps(annjson))]
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+
+print(response.text)
+  ```
+  <p style="float:right">{% include gist-link.html gistid="05ca8cc4d2cb12b786aa5270814e65e4" %}</p>
+  </div>
+</div>
+</div>
 </div>
 
-
-
+<div class="one-third-col">
+    {% include image.html name="pre-annotated-doc-spacy.png" caption="The resulting pre-annotated document visualized in tagtog editor" %}
+</div>
 <div class="two-third-col">
   <h3>Replace annotations of existing document <code>POST</code></h3>
   <p>You should use two files:</p>

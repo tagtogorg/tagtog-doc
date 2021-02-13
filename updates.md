@@ -19,7 +19,7 @@ notoc: true
 <ul class="updates">
   <li class="doc"><span markdown="1">New [quick tutorial](quick-tutorials.html): [Integrating tagtog and spaCy: a simple example](https://tagtog.medium.com/integrating-tagtog-and-spacy-16fb0addeea1).</span></li>
   <li class="doc"><span markdown="1">New [quick tutorial](quick-tutorials.html): [Connect your NLP models to tagtog using webhooks](https://tagtog.medium.com/connect-your-nlp-models-to-tagtog-using-webhooks-13d422ae4dff).</span></li>
-  <li class="fix"><span markdown="1">If a user set a document label (type enum or boolean) for their document version and saved it, another user who changed to that version, was seeing the document label as not set.</span></li>
+  <li class="fix"><span markdown="1">Before, if a user set a document label (type enum or boolean) for their document version and saved it, another user who changed to that version, was seeing the document label as not set.</span></li>
   <li class="fix"><span markdown="1">For projects with a large number of entity types, the filter were not showing all the entity types in the select menu.</span></li>
 </ul>
 

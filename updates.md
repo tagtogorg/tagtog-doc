@@ -14,6 +14,16 @@ notoc: true
 
 ---
 
+## 3.2021-W07.0 🐧
+_2021-02-20_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Now all unauthenticated requests coming from non-browsers immediately receive a 401 status error, instead of, like before, 303 (Redirect). This avoid confusions when your scripts automatically follow redirections and end up with a wrong 200 status (the redirected Login page).</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) the automatic annotation with dictionaries did not work in some servers with non-English locale.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W06.0 🪆
 _2021-02-13_
 

@@ -546,6 +546,7 @@ FILES
     <ul class="tabs-menu">
       <li class="current"><a href="#tab-2-file">Python</a></li>
       <li><a href="#tab-3-file">JavaScript</a></li>
+      <li><a href="#tab-4-file">cURL</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a file and retrieves the annotations in <code>ann.json</code>.</p>
@@ -581,6 +582,11 @@ fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page
 });
 ```
 <p style="float:right">{% include github-link.html target="snippets/api_js_annotate_files.html" %}</p>
+</div>
+<div id="tab-4-file" class="tab-content" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F 'files=@/files/document.txt' '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
+```
 </div>
       </div>
     </div>
@@ -1098,11 +1104,12 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-file">Python</a></li>
+    <li class="current"><a href="#tab-1-file-txt-preann">Python</a></li>
+    <li><a href="#tab-2-file-txt-preann">cURL</a></li>
   </ul>
   <div class="tab">
   <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code> to indicate we are importing pre-annotated content, the text content will be represented using the <a href="ioformats.html#input-types">default format</a>. In this case, the default format for plain text is <code>verbatim</code>. Make sure the ann.json is well formated according to the <a href="anndoc.html#ann-json">ann.json specification</a>.</p>
-  <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
+  <div id="tab-1-file-txt-preann" class="tab-content" style="display: block" markdown="1">
   ```python
 
   import requests
@@ -1115,10 +1122,15 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
+</div>
+<div id="tab-2-file-txt-preann" class="tab-content" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/item1.txt" -F "files=@/files/item1.ann.json" '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&format=default-ann-json&output=ann.json'
+```
+</div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
 
 <div class="one-third-col">
   <p>Response, output=<code>null</code></p>

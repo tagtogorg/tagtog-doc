@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🐧
+## 3.2021-W07.0 🐧
+_2021-02-20_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Now all unauthenticated requests coming from non-browsers immediately receive a 401 status error, instead of, like before, 303 (Redirect). This avoid confusions when your scripts automatically follow redirections and end up with a wrong 200 status (the redirected Login page).</span></li>

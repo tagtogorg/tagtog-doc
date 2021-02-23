@@ -364,9 +364,9 @@ id: collaboration
 <div class="two-third-col">
   <h2>Teams</h2>
   <p>tagtog comes with a feature to define teams of users to simplify and speed up your collaboration.
-     It allows you to group users into teams so you don't have to add each user to a project separately. 
+     It allows you to group users into teams so you don't have to add each user to a project separately.
      It can be very handy especially when you have many users in the system. Then you can add whole teams
-     to projects, delete them from projects, define permission for all team members and so on. For now, it's 
+     to projects, delete them from projects, define permission for all team members and so on. For now, it's
      only available for <a href="on_premises_README.html">OnPremises</a>. For more details, please go <a href="on-premises-sysadmin.html#teams-management">here</a>.</p>
 </div>
 
@@ -508,16 +508,21 @@ id: collaboration
 <div class="two-third-col">
   <h2>Quality Management</h2>
   <p>Here you will learn how to <strong>track the quality</strong> of your project in real time.</p>
+</div>
+<div class="two-third-col">
   <h3>IAA (Inter-Annotator Agreement)</h3>
   <p>The <a title="Wikipedia - Inter-rater_reliability" href="https://en.wikipedia.org/wiki/Inter-rater_reliability">Inter-Annotator Agreement (IAA)</a> gauges the quality of your annotation project, that is the degree of consensus among your annotators. If all your annotators make the same annotations independently, it means your guidelines are clear and your annotations are most likely correct. <strong>The higher the IAA, the higher the quality</strong>.</p>
 
-  <p>In tagtog, each annotator can annotate the same piece of text separately. <strong>The percentage agreement is measured as soon as two different <em>confirmed</em>✅ annotation versions for a same document exist; i.e., at least one member's and master annotations are confirmed, or 2 or more members' annotations are confirmed</strong>. These scores are <a href="IAA-calculation-methods">calculated</a> <strong>automatically</strong> in tagtog for you. You can <a title="tagtog - Project's members" href="projects.html#members">add members to your project</a> at <i>Settings > Members</i>.</p>
+  <p markdown="1">In tagtog, each annotator can annotate the same piece of text separately. <strong>The percentage agreement is measured as soon as two different <em>confirmed</em>✅ annotation versions for a same document exist; i.e., at least one member's and master annotations are confirmed, or 2 or more members' annotations are confirmed</strong>. These scores are <a href="IAA-calculation-methods">calculated</a> <strong>automatically</strong> in tagtog for you ([IAA calculation methods](IAA-calculation-methods)). You can <a title="tagtog - Project's members" href="projects.html#members">add members to your project</a> at <i>Settings > Members</i>.</p>
+
+  <h4>IAA at the project level</h4>
 
   <p>To go to the IAA results, open your project and click on the <strong>Metrics</strong> section. Results are split into annotation types (entity types, entity labels, document labels, normalizations and relations). Each annotation type is divided into annotation tasks (e.g. Entity types: Entity type 1, Entity type 2; Document labels: document label 1, document label 2, etc.). <strong>For each annotation task, scores are displayed as a matrix</strong>. <strong>Each cell represents the agreement pair for two annotators</strong>, being 100% the maximum level of agreement and 0% the minimum.</p>
   <p>The agreement percentage near the title of each annotation task represents the average agreement for this annotation task.</p>
   {% include image.html caption="<strong>Inter-annotator agreement matrix</strong>. It contains the scores between pairs of users. For example, Vega and Joao agree on the 87% of the cases. Vega and Gerard on the 47%. This visualization provides an overview of the agreement among annotators. It also helps find weak spots. In this example we can see how Gerard is not aligned with the rest of annotators (25%, 47%, 35%, 18%). A training might be required to have him aligned with the guidelines and the rest of the team. On the top left we find the annotation task name, id and the agreement average (59,30%)." name="iaa-matrix.png" %}
-</div>
-<div class="one-third-col">
+  </div>
+
+  <div class="one-third-col">
   {% include message.html message="If your project has activated <a href='#annotation-flows' title='tagtog - Automatic Task Distribution'>Automatic Task Distribution</a>, tagtog will distribute some annotators with the same documents and calculate right away the IAA. Otherwise, if you want tagtog to produce IAA metrics, you can organize your annotators to annotate the same subsample of documents." %}
 
   {% include message.html message="Note that having a high IAA doesn’t strictly mean that the annotations are correct. It just means that the annotators are following the guidelines with a similar understanding." %}
@@ -525,6 +530,33 @@ id: collaboration
   {% include message.html message="All the metrics measure the IAA in <a href='https://en.wikipedia.org/wiki/F1_score' title='Wikipedia - F1 Score'>F1</a>." %}
 
   {% include message.html message="Note that for a large amount of documents the IAA results might be cached." %}
+
+  {% include message.html message="Only those <a href='collaboration.html#roles'>roles</a> with the <a href='collaboration.html#permissions'>permission</a> to read the project metrics (metrics > <code>canRead</code>) can see the IAA values." %}
+
+</div>
+
+  <div class="two-third-col">
+
+
+  <h4>IAA at the document level</h4>
+  <p markdown="1">tagtog would calculate the agreement if at least two users confirmed their document version. The values are shown on the **sidebar**, near each annotation task. Each value represents the **agreement of the annotation/s for this task in a specific document**. The agreement is calculated only using the annotations from confirmed versions.</p>
+
+  <p markdown="1">Only those [roles](collaboration.html#roles) with the [permission](collaboration.html#permissions) to read the project metrics (metrics > `canRead`) can see the IAA values. This is ideal for `reviewers`, where they need to assess the quality of the annotations before accepting them. Suppose a user's role has this permission (e.g., default roles such as `supercurator`, but not `curator`). In that case, this user also sees the IAA values at the document level for their annotations. While this can increase the annotation bias in some scenarios, it also creates an exciting use case where the users can understand their annotations' quality and spot not intended errors.</p>
+
+  <p markdown="1">If you click on any of these IAA values, a modal dialog shows up with the **list of annotation tasks and the respective IAA values**. In this way, you see all the information in one place, and it is easier to compare and identify problems.</p>
+
+  <p markdown="1">To easily understand the IAA values, imagine you see a 70% IAA near to a document label. It means the value selected by this user was also selected by 70% of all users who confirmed this document. You can find a more detailed example below:</p>
+
+  {% include image.html caption="In this example, you see Kevin's annotations." name="IAA-document-level-content.png" %}
+
+  {% include image.html caption="On the sidebar, you find the IAA values for this document. You can observe that Kevin's agreement with the rest of users who already confirmed their version is 100% for the entity types <code>identifier</code> and <code>argument</code>. However, the value selected for the entity label <code>category</code> ('SEC') has not been selected by any of the other users (agreement 0%). For the relation specified, only half of the users agree with him (agreement: 50%). This information should give you an oversight of  Kevin's annotations quality for this specific document" name="IAA-document-level-sidebar.png" %}
+
+  {% include image.html caption="By clicking on any of the IAA values, a modal dialog shows a summary with all the annotation tasks and their respective IAA for this specific document" name="IAA-document-level-summary.png" %}
+
+
+</div>
+<div class="one-third-col">
+  {% include message.html message="IAA values at document level only are displayed in confirmed versions" %}
 </div>
 
 <div class="two-third-col">

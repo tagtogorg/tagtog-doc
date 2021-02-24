@@ -577,18 +577,75 @@ id: collaboration
 </div>
 <div class="two-third-col">
   <h3>Adjudication</h3>
-  <p> When different users annotate the same documents, as a result, there are multiple annotation versions. <strong>Adjudication is the process to resolve inconsistencies among these versions before promoting a version to master</strong>. tagtog supports automatic adjudication. </p>
-  <h4>Automatic adjudication based on IAA</h4>
+  <p> When different users annotate the same document, as a result, there are multiple annotation versions. <strong>Adjudication is the process to resolve inconsistencies among these versions before promoting a version to master</strong>. tagtog supports manual adjudication and automatic adjudication.</p>
+  <p>The adjudication methods presented below are available in the user interface or via the API. For the user interface, in the toolbar of the annotation editor, you find these options under (<a title="tagtog - manage annotation versions" href="webeditor.html#manage-annotation-versions">Manage annotation versions</a>{% include inline-image.html name="editor-toolbar-import-ann.PNG" width="28" %}).</p>
+  <h4>Manual adjudication</h4>
+  <p>A user with the role reviewer or a role with similar permissions (e.g., supercurator) promotes a user version to master using the adjudication option Copy to master. If required, the reviewer can manually change master to ammend any of the user's annotations.</p>
+  <p>Alternatively, the reviewer can use one of the automatic adjudication methods explained below and then apply the required changes to master.</p>
+</div>
+<div class="two-third-col">
+  <h4>Automatic adjudication</h4>
+  <p markdown="1">Based on your quality requirements, you might want to automate to some extent the review of the annotations. In case more than one user is annotating each document, you can use the automatic adjudication methods to obtain a master version by merging all users' versions for a given document. Notice that a user with the required permissions can still edit master after the adjudication (e.g. role `reviewer`). Therefore, you can either fully automate the review process or accelerate it by only reviewing master rather than each user version.</p>
+  <p>Let's explore the different methods for automatic adjudication.</p>
+</div>
+<div class="one-third-col">
+</div>
+<div class="two-third-col">
+  <h5>Automatic adjudication based on IAA</h5>
   <p>Do you need first more information about what IAA (inter-annotator agreement) is. Read here: <a title="tagtog - inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> ? </p>
-  <p>It follows a merging strategy based on <strong>choosing the available-best user for each annotation task</strong>, i.e. choosing the annotations from the user with the highest IAA for a specific annotation task (regarding the <a title="tagtog - IAA calculation methods" href="IAA-calculation-methods">exact_v1 metric</a>; for all documents).</p>
-  {% include image.html caption="In this example SME A has the highest IAA for task A and SME B for task B. The result are the annotations for task A by SME A plus the annotations from task B by SME B" name="automatic_adjudication.png" %}
-  <p>In the background, tagtog creates an IAA ranking of all annotators for each specific task. In that ordered ranking,
-  the chosen annotator is the first one, which has annotations made for the document to merge.</p>
-  <p>Also, a ranking of the best overall annotators as an average of all IAAs is calculated. If there are no best overall annotators, this means there is no IAA at all calculated for the project. If the IAA is not calculated for a specific IAA, its best annotator is defaulted to the available-best overall annotator.</p>
-  <p>Currently this adjudication process is only available in the user interface (no through API), in the toolbar of the annotation editor (<a title="tagtog - manage annotation versions" href="webeditor.html#manage-annotation-versions">Manage annotation versions</a>{% include inline-image.html name="editor-toolbar-import-ann.PNG" width="28" %}). </p>
+  <p>For each single annotation task, this method promotes to master the annotations of the user with the best IAA (using the calculation <a title="tagtog - IAA calculation methods" href="IAA-calculation-methods">exact_v1 metric</a>; for all documents).</p>
+  <p>The goal is to have in master the <strong>available-best annotations for each annotation task</strong>. That is the reason why this adjudication method is also know as adjudication by Best Annotators</p>
+  {% include image.html caption="In this example, SME A (Subject-Matter Expert A) has the highest IAA for task A and SME B for task B. The result are the annotations for task A by SME A plus the annotations from task B by SME B" name="automatic_adjudication.png" %}
+  <p>tagtog continuosly computes the IAA values for each annotation task. If there is not enough information to compute the IAA for an specific task, then tagtog, only for that task, promotes to master the annotations of the user with the highest IAA in the project.</p>
+
   <p>If you want to know more about the adjudication process and when it makes sense to use an automatic process, take a look at this blog post: <a title="Jorge Campos at Medium - The adjudication process in collaborative annotation" href="https://medium.com/@jorgecp/the-adjudication-process-in-collaborative-annotation-61623c46b700?source=friends_link&sk=41adf0909b87899133ac3ef87fa88ccf">The adjudication process in collaborative annotation</a></p>
   <p>If you want to see a step-by-step example for setting up automatic adjudication, check out this post: <a title="tagtog at Medium - Automatic adjudication based on the inter-annotator agreement" href="https://medium.com/@tagtog/automatic-adjudication-based-on-the-inter-annotator-agreement-a62f49be7bcf">Automatic adjudication based on the inter-annotator agreement</a></p>
 </div>
 <div class="one-third-col">
 
 </div>
+
+<div class="two-third-col">
+  <h5>Automatic adjudication by Union</h5>
+  <p markdown="1">This method promotes to master **all the annotations from all the confirmed user's versions**.</p>
+    {% include image.html caption="In this example, user A's version and user B's version are merged using the Union method. All the annotations from user A and user B are promoted to master." name="adjudication-union.png" %}
+  <p markdown="1">**If an annotation is repeated in two or more versions**, only one of the ocurrences is promoted to master. However, this ocurrence will have different properties in comparison to the original annotation:</p>
+  <p class="list-item" markdown="1"><span class="list-item-1" ></span>**Probability**: the average of probabilities of all the occurrences. For example, if three users confirmed their annotation version and only two users have this annotation on their version, tagtog will promote the annotation to master with a probability of 2/3. This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) with  `confidence > prob`.</p>
+  <p class="list-item" markdown="1"><span class="list-item-2" ></span>**User list**: it is composed by all the users that have this annotation in their version. This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) in  `confidence > who`.</p>
+  <p class="list-item" markdown="1"><span class="list-item-3" ></span>**Entity labels and Normalizations**: if an entity is common to all versions, but not the entity label values or normalizations, the result of Union is one entity with the entity label/normalization value set using the first version's value. For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `2` for this label, and user C has selected value `3`. The value of the entity label for this entity in `master` is `1`. For entity labels, this information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) under  `entities > entity > fields`, for normalizations under `entities > entity > normalizations`. Notice that each entity label or normalization (as the rest of annotation types) has its own confindence with their own probability or user list.</p>
+
+</div>
+
+<div class="one-third-col">
+
+</div>
+
+<div class="two-third-col">
+  <h5>Automatic adjudication by Intersection</h5>
+  <p markdown="1">This method promotes to master all the annotations **common in all the confirmed user's versions**.</p>
+  <p markdown="1">Because all the users should agree on an annotation in order to be promoted to master, this is considered the strictest adjudication method. It is recommended for environments where annotations play a critical role and where wrong annotations might have a considerable impact.</p>
+  {% include image.html caption="In this example, user A's version and user B's version are merged using the Intersection method. Only the annotations that are in both versions are promoted to master." name="adjudication-intersection.png" %}
+  <p class="list-item" markdown="1"><span class="list-item-1" ></span>**Probability**: because the annotations promoted the master are common to all the versions, the probability is always `1` (100%). This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) with  `confidence > prob`.</p>
+  <p class="list-item" markdown="1"><span class="list-item-2" ></span>**User list**: because the annotations promoted the master are common to all the versions, all the users who confirmed their version at the moment of the adjudication are in this list. This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) in  `confidence > who`.</p>
+  <p class="list-item" markdown="1"><span class="list-item-3" ></span>**Entity labels and Normalizations**: if an entity is common to all versions, but not the entity label values or normalizations, the result of Intersection is one entity with no entity labels or normalizations set. For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `2` for this label, and user C has selected value `3`. The entity label for this entity in `master` is not set. For entity labels, this information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) under  `entities > entity > fields`, for normalizations under `entities > entity > normalizations`.</p>
+
+</div>
+<div class="one-third-col">
+
+</div>
+
+<div class="two-third-col">
+  <h5>Automatic adjudication by Majority Vote</h5>
+  <p markdown="1">For each single annotation, this method promotes it to master **only if it was annotated by over 50% of the annotators**.</p>
+  {% include image.html caption="In this example, the versions of user A, user B and user C are merged using the Majority Vote method. Only the annotations that are common in more than 50% (majority) of the versions are promoted to master. For example, the annotation for the task C (red) on the top left has been selected by user A and user B, therefore they form majority (2 out of 3, or over 66%) and this annotation is promoted to master. On the contrary, those annotations that have not been selected by the majority, are not promoted to master." name="adjudication-vote.png" %}
+</div>
+<div class="two-third-col">
+  <p class="list-item" markdown="1"><span class="list-item-1" ></span>**Probability**: tagtog only promotes to master those annotations that more than 50% (majority) of the users have in their version. This means, the probability of any annotation promoted to master will be over `0.5` (50%). This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) with  `confidence > prob`.</p>
+  <p class="list-item" markdown="1"><span class="list-item-2" ></span>**User list**: it is composed by all the users that have this annotation in their version. This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) in  `confidence > who`.</p>
+  <p class="list-item" markdown="1"><span class="list-item-3" ></span>**Entity labels and Normalizations**: suppose an entity is common to all versions, but the values for an entity label or normalization are different. If the same value has been chosen by 50% or less of the users, the Majority Vote method results in one entity with no entity label or normalization set. If more than 50% of the users choose the same value, then the entity label or normalization is set using that value.  For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `1` for this label, and user C has selected value `2`. The entity label for this entity in `master` is set to `1`. For entity labels, this information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) under  `entities > entity > fields`, for normalizations under `entities > entity > normalizations`.</p>
+
+</div>
+<div class="one-third-col">
+  {% include message.html message="If an annotation is shared by exactly 50% of the versions, the annotation is not promoted to <code>master</code>. A value over 50% is required for the promotion." %}
+</div>
+

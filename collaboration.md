@@ -370,7 +370,6 @@ id: collaboration
      only available for <a href="on_premises_README.html">OnPremises</a>. For more details, please go <a href="on-premises-sysadmin.html#teams-management">here</a>.</p>
 </div>
 
-</div>
 <div class="one-third-col">
 </div>
 
@@ -515,24 +514,24 @@ id: collaboration
 
   <p markdown="1">In tagtog, each annotator can annotate the same piece of text separately. <strong>The percentage agreement is measured as soon as two different <em>confirmed</em>✅ annotation versions for a same document exist; i.e., at least one member's and master annotations are confirmed, or 2 or more members' annotations are confirmed</strong>. These scores are <a href="IAA-calculation-methods">calculated</a> <strong>automatically</strong> in tagtog for you ([IAA calculation methods](IAA-calculation-methods)). You can <a title="tagtog - Project's members" href="projects.html#members">add members to your project</a> at <i>Settings > Members</i>.</p>
 
+  <p>If your project has activated <a href='#annotation-flows' title='tagtog - Automatic Task Distribution'>Automatic Task Distribution</a>, tagtog will distribute the same documents to a set of annotators to calculate the IAA right away. Even if you set the task distribution as one annotator per document (each document is assigned to a different annotator), tagtog automatically tries to allocate 5% of your documents to two annotators to calculate IAA. Otherwise, if you want to control this process manually, the only requirement is that more than one annotator annotates the same documents. Using task distribution, you can manually assign a document to a specific set of annotators - <a href='#annotation-flows' title='tagtog - Automatic Task Distribution'>More information</a>.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message="Note that having a high IAA doesn’t strictly mean that the annotations are correct. It just means that the annotators are following the guidelines with a similar understanding." %}
+  {% include message.html message="All the metrics measure the IAA in <a href='https://en.wikipedia.org/wiki/F1_score' title='Wikipedia - F1 Score'>F1</a>." %}
+</div>
+<div class="two-third-col">
   <h4>IAA at the project level</h4>
 
   <p>To go to the IAA results, open your project and click on the <strong>Metrics</strong> section. Results are split into annotation types (entity types, entity labels, document labels, normalizations and relations). Each annotation type is divided into annotation tasks (e.g. Entity types: Entity type 1, Entity type 2; Document labels: document label 1, document label 2, etc.). <strong>For each annotation task, scores are displayed as a matrix</strong>. <strong>Each cell represents the agreement pair for two annotators</strong>, being 100% the maximum level of agreement and 0% the minimum.</p>
   <p>The agreement percentage near the title of each annotation task represents the average agreement for this annotation task.</p>
   {% include image.html caption="<strong>Inter-annotator agreement matrix</strong>. It contains the scores between pairs of users. For example, Vega and Joao agree on the 87% of the cases. Vega and Gerard on the 47%. This visualization provides an overview of the agreement among annotators. It also helps find weak spots. In this example we can see how Gerard is not aligned with the rest of annotators (25%, 47%, 35%, 18%). A training might be required to have him aligned with the guidelines and the rest of the team. On the top left we find the annotation task name, id and the agreement average (59,30%)." name="iaa-matrix.png" %}
-  </div>
+</div>
 
-  <div class="one-third-col">
-  {% include message.html message="If your project has activated <a href='#annotation-flows' title='tagtog - Automatic Task Distribution'>Automatic Task Distribution</a>, tagtog will distribute some annotators with the same documents and calculate right away the IAA. Otherwise, if you want tagtog to produce IAA metrics, you can organize your annotators to annotate the same subsample of documents." %}
-
-  {% include message.html message="Note that having a high IAA doesn’t strictly mean that the annotations are correct. It just means that the annotators are following the guidelines with a similar understanding." %}
-
-  {% include message.html message="All the metrics measure the IAA in <a href='https://en.wikipedia.org/wiki/F1_score' title='Wikipedia - F1 Score'>F1</a>." %}
-
+<div class="one-third-col">
   {% include message.html message="Note that for a large amount of documents the IAA results might be cached." %}
 
   {% include message.html message="Only those <a href='collaboration.html#roles'>roles</a> with the <a href='collaboration.html#permissions'>permission</a> to read the project metrics (metrics > <code>canRead</code>) can see the IAA values." %}
-
 </div>
 
   <div class="two-third-col">
@@ -557,6 +556,8 @@ id: collaboration
 </div>
 <div class="one-third-col">
   {% include message.html message="IAA values at document level only are displayed in confirmed versions" %}
+
+  {% include message.html message="Only those <a href='collaboration.html#roles'>roles</a> with the <a href='collaboration.html#permissions'>permission</a> to read the project metrics (metrics > <code>canRead</code>) can see the IAA values at document level." %}
 </div>
 
 <div class="two-third-col">
@@ -606,13 +607,45 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
+
   <h5>Automatic adjudication by Union</h5>
   <p markdown="1">This method promotes to master **all the annotations from all the confirmed user's versions**.</p>
     {% include image.html caption="In this example, user A's version and user B's version are merged using the Union method. All the annotations from user A and user B are promoted to master." name="adjudication-union.png" %}
-  <p markdown="1">**If an annotation is repeated in two or more versions**, only one of the ocurrences is promoted to master. However, this ocurrence will have different properties in comparison to the original annotation:</p>
-  <p class="list-item" markdown="1"><span class="list-item-1" ></span>**Probability**: the average of probabilities of all the occurrences. For example, if three users confirmed their annotation version and only two users have this annotation on their version, tagtog will promote the annotation to master with a probability of 2/3. This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) with  `confidence > prob`.</p>
-  <p class="list-item" markdown="1"><span class="list-item-2" ></span>**User list**: it is composed by all the users that have this annotation in their version. This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) in  `confidence > who`.</p>
-  <p class="list-item" markdown="1"><span class="list-item-3" ></span>**Entity labels and Normalizations**: if an entity is common to all versions, but not the entity label values or normalizations, the result of Union is one entity with the entity label/normalization value set using the first version's value. For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `2` for this label, and user C has selected value `3`. The value of the entity label for this entity in `master` is `1`. For entity labels, this information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) under  `entities > entity > fields`, for normalizations under `entities > entity > normalizations`. Notice that each entity label or normalization (as the rest of annotation types) has its own confindence with their own probability or user list.</p>
+  <p markdown="1">**If an annotation is repeated in two or more versions**, only one of the ocurrences is promoted to master. However, this ocurrence will have different properties in comparison to the original annotation.</p>
+  <p markdown="1">Find below how this method generates the resulting `master` version:</p>
+
+  <table style="width:100%">
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+      <th>ann.json location</th>
+    </tr>
+    <tr>
+      <td>Probability</td>
+      <td><p markdown="1">The average of probabilities of all the occurrences. For example, if three users confirmed their annotation version and only two users have this annotation on their version, tagtog will promote the annotation to master with a probability of 2/3.</p></td>
+      <td><p markdown="1">`confidence.prob`</p></td>
+    </tr>
+    <tr>
+      <td>User list</td>
+      <td><p markdown="1">It is composed by all the users that have this annotation in their version.</p></td>
+      <td><p markdown="1">`confidence.who`</p></td>
+    </tr>
+    <tr>
+      <td>Entity Labels and Normalizations</td>
+      <td><p markdown="1">If an entity is common to all versions, but not the entity label values or normalizations, the result of Union is one entity with the entity label/normalization value set using the first version's value. For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `2` for this label, and user C has selected value `3`. The value of the entity label for this entity in `master` is `1`.</p></td>
+      <td><p markdown="1">`entity.fields` or `entity.normalizations`</p></td>
+    </tr>
+    <tr>
+      <td>Relations</td>
+      <td><p markdown="1">Each different relation is promoted to `master`.</p></td>
+      <td><p markdown="1">`relations`</p></td>
+    </tr>
+    <tr>
+      <td>Document Labels</td>
+      <td><p markdown="1">Value is set using the first version's value</p></td>
+      <td><p markdown="1">`metas`</p></td>
+    </tr>
+  </table>
 
 </div>
 
@@ -623,11 +656,36 @@ id: collaboration
 <div class="two-third-col">
   <h5>Automatic adjudication by Intersection</h5>
   <p markdown="1">This method promotes to master all the annotations **common in all the confirmed user's versions**.</p>
-  <p markdown="1">Because all the users should agree on an annotation in order to be promoted to master, this is considered the strictest adjudication method. It is recommended for environments where annotations play a critical role and where wrong annotations might have a considerable impact.</p>
+  <p markdown="1">The Intersection method is the strictest adjudication method because to promote an annotation to master, all the users should agree on that annotation.  It is recommended for environments where annotations play a critical role and where incorrect annotations might have a considerable impact.</p>
   {% include image.html caption="In this example, user A's version and user B's version are merged using the Intersection method. Only the annotations that are in both versions are promoted to master." name="adjudication-intersection.png" %}
-  <p class="list-item" markdown="1"><span class="list-item-1" ></span>**Probability**: because the annotations promoted the master are common to all the versions, the probability is always `1` (100%). This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) with  `confidence > prob`.</p>
-  <p class="list-item" markdown="1"><span class="list-item-2" ></span>**User list**: because the annotations promoted the master are common to all the versions, all the users who confirmed their version at the moment of the adjudication are in this list. This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) in  `confidence > who`.</p>
-  <p class="list-item" markdown="1"><span class="list-item-3" ></span>**Entity labels and Normalizations**: if an entity is common to all versions, but not the entity label values or normalizations, the result of Intersection is one entity with no entity labels or normalizations set. For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `2` for this label, and user C has selected value `3`. The entity label for this entity in `master` is not set. For entity labels, this information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) under  `entities > entity > fields`, for normalizations under `entities > entity > normalizations`.</p>
+  <p markdown="1">Find below how this method generates the resulting `master` version:</p>
+  <table style="width:100%">
+    <tr>
+      <td>Probability</td>
+      <td><p markdown="1">Because the annotations promoted the master are common to all the versions, the probability is always `1` (100%).</p></td>
+      <td><p markdown="1">`confidence.prob`</p></td>
+    </tr>
+    <tr>
+      <td>User list</td>
+      <td><p markdown="1">Because the annotations promoted the master are common to all the versions, all the users who confirmed their version at the moment of the adjudication are in this list.</p></td>
+      <td><p markdown="1">`confidence.who`</p></td>
+    </tr>
+    <tr>
+      <td>Entity Labels and Normalizations</td>
+      <td><p markdown="1">If an entity is common to all versions, but not the entity label values or normalizations, the result of Intersection is the entity with no entity labels or normalizations set. For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `2` for this label, and user C has selected value `3`. The entity label for this entity in `master` is not set.</p></td>
+      <td><p markdown="1">`entity.fields` or `entity.normalizations`</p></td>
+    </tr>
+    <tr>
+      <td>Relations</td>
+      <td><p markdown="1">Only the relations (and their entities) common to all the versions are promoted to master. If any of the entities composing the relation is not promoted to master for not meeting the adjudication method criteria, then the relation is not promoted.</p></td>
+      <td><p markdown="1">`relations`</p></td>
+    </tr>
+    <tr>
+      <td>Document Labels</td>
+      <td><p markdown="1">Value is only set if all the users agree on the same value.</p></td>
+      <td><p markdown="1">`metas`</p></td>
+    </tr>
+  </table>
 
 </div>
 <div class="one-third-col">
@@ -640,12 +698,48 @@ id: collaboration
   {% include image.html caption="In this example, the versions of user A, user B and user C are merged using the Majority Vote method. Only the annotations that are common in more than 50% (majority) of the versions are promoted to master. For example, the annotation for the task C (red) on the top left has been selected by user A and user B, therefore they form majority (2 out of 3, or over 66%) and this annotation is promoted to master. On the contrary, those annotations that have not been selected by the majority, are not promoted to master." name="adjudication-vote.png" %}
 </div>
 <div class="two-third-col">
-  <p class="list-item" markdown="1"><span class="list-item-1" ></span>**Probability**: tagtog only promotes to master those annotations that more than 50% (majority) of the users have in their version. This means, the probability of any annotation promoted to master will be over `0.5` (50%). This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) with  `confidence > prob`.</p>
-  <p class="list-item" markdown="1"><span class="list-item-2" ></span>**User list**: it is composed by all the users that have this annotation in their version. This information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) in  `confidence > who`.</p>
-  <p class="list-item" markdown="1"><span class="list-item-3" ></span>**Entity labels and Normalizations**: suppose an entity is common to all versions, but the values for an entity label or normalization are different. If the same value has been chosen by 50% or less of the users, the Majority Vote method results in one entity with no entity label or normalization set. If more than 50% of the users choose the same value, then the entity label or normalization is set using that value.  For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `1` for this label, and user C has selected value `2`. The entity label for this entity in `master` is set to `1`. For entity labels, this information is represented in the annotation format ([`ann.json`](anndoc.html#ann-json)) under  `entities > entity > fields`, for normalizations under `entities > entity > normalizations`.</p>
-
+  <p markdown="1">Find below how this method generates the resulting `master` version:</p>
+  <table style="width:100%">
+    <tr>
+      <td>Probability</td>
+      <td><p markdown="1">tagtog only promotes to master those annotations that more than 50% (majority) of the users have in their version. This means, the probability of any annotation promoted to master will be over `0.5` (50%).</p></td>
+      <td><p>`confidence.prob`</p></td>
+    </tr>
+    <tr>
+      <td>User list</td>
+      <td><p markdown="1">It is composed by all the users that have this annotation in their version.</p></td>
+      <td><p>`confidence.who`</p></td>
+    </tr>
+    <tr>
+      <td>Entity Labels and Normalizations</td>
+      <td><p markdown="1">Suppose an entity is common to all versions, but the values for an entity label or normalization are different. If the same value has been chosen by 50% or less of the users, the Majority Vote method results in the entity with no entity label or normalization set. If more than 50% of the users choose the same value, then the entity label or normalization is set using that value. For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `1` for this label, and user C has selected value `2`. The entity label for this entity in `master` is set to `1`.</p></td>
+    </tr>
+    <tr>
+      <td>Relations</td>
+      <td><p markdown="1">Only the relations (and their entities) common to more than 50% of the versions are promoted to master. If any of the entities composing the relation is not promoted to master for not meeting the adjudication method criteria, then the relation is not promoted.</p></td>
+      <td><p markdown="1">`relations`</p></td>
+    </tr>
+    <tr>
+      <td>Document Labels</td>
+      <td><p markdown="1">Value is only set if more than 50% of the users agree on the same value.</p></td>
+      <td><p markdown="1">`metas`</p></td>
+    </tr>
+  </table>
 </div>
 <div class="one-third-col">
   {% include message.html message="If an annotation is shared by exactly 50% of the versions, the annotation is not promoted to <code>master</code>. A value over 50% is required for the promotion." %}
+</div>
+<div class="two-third-col">
+  <h3>Conflict resolution</h3>
+  <p markdown="1">When you start an annotation project, you will want your annotators to align with your project guidelines. Depending on the project, this might be challenging for the first few iterations when annotators might not adhere to the guidelines or resolve the annotation tasks differently. During this process, we recommend approaching these differences via conflict resolution:</p>
+  <p class="numbered-item" markdown="1"><span class="number-1">1</span>Upload a set of documents. Each annotator will annotate each of the documents.</p>
+  <p class="numbered-item" markdown="1"><span class="number-2">2</span>Using the [GUI](webeditor.html#manage-annotation-versions) or the API, select automatic adjudication by Union to move all the users' annotations to `master`.</p>
+  <p class="numbered-item" markdown="1"><span class="number-3">3</span>The user taking care of the conflict resolution goes to the master version and [**filter the annotations by probability**](webeditor.html#filter-entities). Any probability under 100% will show the annotations that have a conflict, i.e., not all the users agreed on the annotation. For example, if you set the filter to 99%, it will show you all the annotations that less than 99% of the annotators annotated). You probably want to filter for many annotators using a lower probability (e.g., less than 70%).</p>
+</div>
+<div class="two-third-col">
+  <p class="numbered-item" markdown="1"><span class="number-4">4</span>Go over each annotation with your team to understand what went wrong.  Update the guidelines to avoid this issue in the future.</p>
+</div>
+<div class="one-third-col">
+  {% include message.html message='You can use the <a href="webeditor.html#document-review">Document Review</a> feature to navigate the conflicts by keyboard' %}
 </div>
 

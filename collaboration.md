@@ -581,7 +581,7 @@ id: collaboration
 
 ### Adjudication (Merging)
 
-When different users annotate the same document, as a result, there are multiple annotation versions. **Adjudication is the process to resolve inconsistencies among these versions before promoting a version to master**. In other words, the different annotators' versions are **merged** into one (using various strategies).
+When different users annotate the same document, as a result, there are **different annotation versions**. **Adjudication is the process to resolve inconsistencies among these versions before promoting a version to master**. In other words, the different annotators' versions are **merged** into one (using various strategies).
 
 tagtog supports manual adjudication and automatic adjudication. The adjudication methods presented below are available both from the user interface and via the API. For the user interface, in the toolbar of the annotation editor, you find these options under (<a title="tagtog - manage annotation versions" href="webeditor.html#manage-annotation-versions">Manage annotation versions</a>{% include inline-image.html name="editor-toolbar-import-ann.PNG" width="28" %}).
 

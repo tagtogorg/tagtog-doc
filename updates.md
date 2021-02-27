@@ -17,9 +17,16 @@ notoc: true
 ## ??? 🪄
 
 <ul class="updates">
+  <li class="new"><span markdown="1">New **merging strategies** for [automatic adjudication](collaboration.html#automatic-adjudication): [**union**](collaboration.html#automatic-adjudication-by-union), [**intersection**](collaboration.html#automatic-adjudication-by-intersection), and [**majority vote**](collaboration.html#automatic-adjudication-by-majority-vote)!</span></li>
+  <li class="new"><span markdown="1">Early access [API to merge your documents programmatically](API_documents_v1.html#merge-the-annotations-of-a-document-automatic-adjudication)!</span></li>
   <li class="new"><span markdown="1">Now the Inter-Annotator Agreement (IAA) is also available at the document level. It helps reviewers or any user with the required permissions (e.g., `supercurators`) to understand the quality of the annotations for a specific user and document. While these IAA values are displayed on the sidebar near each annotation task, you can also access a summary with all the information in one place. [Documentation](collaboration.html#iaa-at-the-document-level).</span></li>
   <li class="fix"><span markdown="1">Better visualization of the IAA values shown in the Metrics panel: when the average is 0%, this is also shown, and the background for 0% values are now red.</span></li>
 </ul>
+
+<div class="img-with-caption">
+  <img src="/assets/img/editor/toolbar/adjudication-merging-actions.png" width="30%" alt="Screenshot: tagtog adjudication / merging button actions" />
+  <p>Manual &amp; Automatic Adjudication Actions available on the tagtog document editor.</p>
+</div>
 
 ---
 

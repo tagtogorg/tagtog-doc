@@ -2290,7 +2290,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 
 ## Manage annotation versions (Adjudication)
 
-### Merging (Automatic Adjudication)
+### Merge the annotations of a document (Automatic Adjudication)
 
 <strong>🤠 This API is an alpha version, and can change at any moment. We give early access to the API for your benefit.</strong>
 

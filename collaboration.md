@@ -665,6 +665,11 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
   <p markdown="1">Find below how this method generates the resulting `master` version:</p>
   <table style="width:100%">
     <tr>
+      <th>Component</th>
+      <th>Description</th>
+      <th>ann.json location</th>
+    </tr>
+    <tr>
       <td>Probability</td>
       <td><p markdown="1">Because the annotations promoted the master are common to all the versions, the probability is always `1` (100%).</p></td>
       <td><p markdown="1">`confidence.prob`</p></td>
@@ -704,18 +709,24 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
   <p markdown="1">Find below how this method generates the resulting `master` version:</p>
   <table style="width:100%">
     <tr>
+      <th>Component</th>
+      <th>Description</th>
+      <th>ann.json location</th>
+    </tr>
+    <tr>
       <td>Probability</td>
       <td><p markdown="1">tagtog only promotes to master those annotations that more than 50% (majority) of the users have in their version. This means, the probability of any annotation promoted to master will be over `0.5` (50%).</p></td>
-      <td><p>`confidence.prob`</p></td>
+      <td><p markdown="1">`confidence.prob`</p></td>
     </tr>
     <tr>
       <td>User list</td>
       <td><p markdown="1">It is composed by all the users that have this annotation in their version.</p></td>
-      <td><p>`confidence.who`</p></td>
+      <td><p markdown="1">`confidence.who`</p></td>
     </tr>
     <tr>
       <td>Entity Labels and Normalizations</td>
       <td><p markdown="1">Suppose an entity is common to all versions, but the values for an entity label or normalization are different. If the same value has been chosen by 50% or less of the users, the Majority Vote method results in the entity with no entity label or normalization set. If more than 50% of the users choose the same value, then the entity label or normalization is set using that value. For example, suppose user A has selected the value `1` for the entity label `category`, user B has selected the value `1` for this label, and user C has selected value `2`. The entity label for this entity in `master` is set to `1`.</p></td>
+      <td><p markdown="1">`entity.fields` or `entity.normalizations`</p></td>
     </tr>
     <tr>
       <td>Relations</td>

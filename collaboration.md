@@ -22,11 +22,11 @@ id: collaboration
     </tr>
     <tr>
       <td><code>admin</code></td>
-      <td><span markdown="1">Usually they set the project up and track it. Can read all user's annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit all project's settings. All permissions are active for this role. By default, the user that creates a project becomes its admin. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
+      <td><span markdown="1">Usually they set the project up and track it. Can read all users' annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit all project's settings. All permissions are active for this role. By default, the user that creates a project becomes its admin. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
     <tr>
       <td><code>reviewer</code></td>
-      <td><span markdown="1">They review and approve the annotators' annotations. They can read all user's annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit some settings, see the project metrics, and use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
+      <td><span markdown="1">They review and approve the annotators' annotations. They can read all users' annotations and can edit them. They can edit `master`'s and their own annotations. Moreover, they can edit some settings, see the project metrics, and use the API. <a title="tagtog - permissions" href="collaboration.html#permissions">More details</a>.</span></td>
     </tr>
     <tr>
       <td><code>supercurator</code></td>
@@ -600,8 +600,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 
 <div class="two-third-col">
   <h5>Automatic adjudication based on: IAA</h5>
-  <p>Do you need first more information about what IAA (inter-annotator agreement) is. Read here: <a title="tagtog - inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> ? </p>
-  <p>For each single annotation task, this method promotes to master the annotations of the user with the best IAA (using the calculation <a title="tagtog - IAA calculation methods" href="IAA-calculation-methods">exact_v1 metric</a>; for all documents).</p>
+  <p>For each single annotation task, this method promotes to master the annotations of the user with the best <a title="tagtog - inter-annotator agreement (IAA)" href="collaboration#iaa-inter-annotator-agreement">IAA</a> (using the calculation <a title="tagtog - IAA calculation methods" href="IAA-calculation-methods">exact_v1 metric</a>; for all documents).</p>
   <p>The goal is to have in master the <strong>available-best annotations for each annotation task</strong>. That is the reason why this adjudication method is also know as adjudication by Best Annotators</p>
   {% include image.html caption="In this example, SME A (Subject-Matter Expert A) has the highest IAA for task A and SME B for task B. The result are the annotations for task A by SME A plus the annotations from task B by SME B" name="automatic_adjudication.png" %}
   <p>tagtog continuosly computes the IAA values for each annotation task. If there is not enough information to compute the IAA for an specific task, then tagtog, only for that task, promotes to master the annotations of the user with the highest IAA in the project.</p>
@@ -614,7 +613,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 
 <div class="two-third-col">
   <h5>Automatic adjudication by: Union</h5>
-  <p markdown="1">This method promotes to master **all the annotations from all the confirmed user's versions**.</p>
+  <p markdown="1">This method promotes to master **all the annotations from all the confirmed users' versions**.</p>
     {% include image.html caption="In this example, user A's version and user B's version are merged using the Union method. All the annotations from user A and user B are promoted to master." name="adjudication-union.png" %}
   <p markdown="1">**If an annotation is repeated in two or more versions**, only one of the ocurrences is promoted to master. However, this ocurrence will have different properties in comparison to the original annotation.</p>
   <p markdown="1">Find below how this method generates the resulting `master` version:</p>
@@ -659,7 +658,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 
 <div class="two-third-col">
   <h5>Automatic adjudication by: Intersection</h5>
-  <p markdown="1">This method promotes to master all the annotations **common in all the confirmed user's versions**.</p>
+  <p markdown="1">This method promotes to master all the annotations **common in all the confirmed users' versions**.</p>
   <p markdown="1">The Intersection method is the strictest adjudication method because to promote an annotation to master, all the users should agree on that annotation.  It is recommended for environments where annotations play a critical role and where incorrect annotations might have a considerable impact.</p>
   {% include image.html caption="In this example, user A's version and user B's version are merged using the Intersection method. Only the annotations that are in both versions are promoted to master." name="adjudication-intersection.png" %}
   <p markdown="1">Find below how this method generates the resulting `master` version:</p>
@@ -741,7 +740,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
   </table>
 </div>
 <div class="one-third-col">
-  {% include message.html message="If an annotation is shared by exactly 50% of the versions, the annotation is not promoted to <code>master</code>. A value over 50% is required for the promotion." %}
+  {% include message.html message="If an annotation is shared by exactly 50% of the versions, the annotation is not promoted to <code>master</code>. The value must be _over 50%_ for the promotion." %}
 </div>
 <div class="two-third-col">
   <h3>Conflict resolution</h3>

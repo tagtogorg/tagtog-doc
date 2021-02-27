@@ -14,6 +14,23 @@ notoc: true
 
 ---
 
+## 3.2021-W08.0 🪄
+_2021-02-27_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">New **merging strategies** for [automatic adjudication](collaboration.html#automatic-adjudication): [**union**](collaboration.html#automatic-adjudication-by-union), [**intersection**](collaboration.html#automatic-adjudication-by-intersection), and [**majority vote**](collaboration.html#automatic-adjudication-by-majority-vote)!</span></li>
+  <li class="new"><span markdown="1">Early access [API to merge your documents programmatically](API_documents_v1.html#merge-the-annotations-of-a-document-automatic-adjudication)!</span></li>
+  <li class="new"><span markdown="1">Now the Inter-Annotator Agreement (IAA) is also available at the document level. It helps reviewers or any user with the required permissions (e.g., `supercurators`) to understand the quality of the annotations for a specific user and document. While these IAA values are displayed on the sidebar near each annotation task, you can also access a summary with all the information in one place. [Documentation](collaboration.html#iaa-at-the-document-level).</span></li>
+  <li class="fix"><span markdown="1">Better visualization of the IAA values shown in the Metrics panel: when the average is 0%, this is also shown, and the background for 0% values are now red.</span></li>
+</ul>
+
+<div class="img-with-caption">
+  <img src="/assets/img/editor/toolbar/adjudication-merging-actions.png" width="30%" alt="Screenshot: tagtog adjudication / merging button actions" />
+  <p>Manual &amp; Automatic Adjudication Actions available on the tagtog document editor.</p>
+</div>
+
+---
+
 ## 3.2021-W07.0 🐧
 _2021-02-20_
 
@@ -623,7 +640,7 @@ _2019-11-06_
 _2019-10-20_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Work now better in teams... with [**Automatic Adjudication**](collaboration.html#adjudication)! If users annotate the same documents, now you can merge their annotations into a sigle version automatically. tagtog uses the IAA metrics for each annotation task to compute which annotation to choose in each case.</span></li>
+  <li class="new"><span markdown="1">Work now better in teams... with [**Automatic Adjudication**](collaboration.html#adjudication-merging)! If users annotate the same documents, now you can merge their annotations into a sigle version automatically. tagtog uses the IAA metrics for each annotation task to compute which annotation to choose in each case.</span></li>
   <li class="new"><span markdown="1">Now the `filter:TODO` view of documents, is sorted just like folders. This makes it easier to reason about the order of wip "TODO" documents.</span></li>
   <li class="new"><span markdown="1">Now `supercurator`s have also the active button to copy their annotations to `master`'s.</span></li>
   <li class="fix"><span markdown="1">Fixed sometimes wrong showing the status of the confirmation checkmark when annotations where copied from one version to another.</span></li>

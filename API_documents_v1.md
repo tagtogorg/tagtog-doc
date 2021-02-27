@@ -7,6 +7,8 @@ sidebar_link: true
 toc: true
 
 api_endpoint: /-api/documents/v1
+api_versions_endpoint: /-api/documents/versions/v0
+mandatory_query_parameters: ?owner=...&project=...
 api_document_url: https://www.tagtog.net/-api/documents/v1
 api_username: yourUsername
 api_pwd: yourPassword
@@ -2280,6 +2282,49 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 <div class="one-third-col">
 
 </div>
+
+
+
+
+<div class="two-third-col" markdown="1">
+
+## Manage annotation versions (Adjudication)
+
+### Merge the annotations of a document (Automatic Adjudication)
+
+<strong>🤠 This API is an alpha version, and can change at any moment. We give early access to the API for your benefit.</strong>
+
+Merge the _confirmed_ members' annotations of a document.
+
+This assumes that the document was confirmed by at least one member. If the given document was no confirmed by any member yet, the response will return an error.
+
+You can [know which documents have at least one version confirmed](search-queries.html#search-which-documents-a-user-has-confirmed) using the [search API](API_documents_v1.html#search-documents-in-a-project-get).
+
+* Method: `POST`
+* Endpoint: `{{ page.api_versions_endpoint }}/merge{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: None
+
+| Type  | Name    | Default | Example                                 | Description                           |
+|-------|---------|---------|-----------------------------------------|---------------------------------------|
+| Query | `docid` |         | "aeTJs3Ce9udaTUTtGt5RVqSjhSOu-text.txt" | tagtog's id of the document to merge. |
+| Query | `strategy`          |         | "union_v1"                              | Merging strategy, in: <br>[`union_v1`](collaboration.html#automatic-adjudication-by-union), <br>[`intersection_v1`](collaboration.html#automatic-adjudication-by-intersection), <br>[`majority_v1`](collaboration.html#automatic-adjudication-by-majority-vote), <br>[`best_iaa_v1`](collaboration.html#automatic-adjudication-based-on-iaa)`               |
+| Query | `saveTo` (OPTIONAL) | N.A.    | "master"     | project member's username (incl. "master") to save the annotation merging result to. The merging result is always returned in the body response as an ann.json object. Additionally, if you set this parameter, the result annotations will be saved in the given member.                                                                                              |
+
+**Output**
+
+Successful status code: `200` (OK)
+
+Payload: JSON (application/json)
+
+The merging's [ann.json](anndoc.html#ann-json) result.
+
+</div>
+
+
+
 
 <div class="two-third-col">
   <h2>API Clients</h2>

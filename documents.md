@@ -76,12 +76,12 @@ toc: true
 </div>
 <div class="two-third-col">
   <h5>Distribute to a group of users</h5>
-  <p>If <a href="projects.html#task-distribution">Task Distribution</a> is enabled, here you can force to which users you want to assign the importing of documents to. If one or more users are selected, the automatic task distribution settings are overriden (for this import request only). tagtog will distribute (assign) the document to all the users selected and only to those.</p>
+  <p>If <a href="projects.html#task-distribution">Task Distribution</a> is enabled, here you can force to which users you want to assign the importing of documents to. If one or more users are selected, the automatic task distribution settings are overridden (for this import request only). tagtog will distribute (assign) the document to all the users selected and only to those.</p>
   <p>The list of selectable users matches the list of members specified in the Task Distribution settings.</p>
 </div>
 <div class="one-third-col">
 </div>
-<div class="two-third-col">    
+<div class="two-third-col">
   <h3>Remove documents</h3>
     <p><strong>To delete a single document</strong>, from either the <a href="webeditor.html#remove-document">document editor view</a> or the <a href="documents.html#document-list-view">document list view</a>, just click on the associated remove button {% include inline-image.html name="editor-doc-remove.PNG" %}. You can also <a href="API_documents_v1.html#delete-document-by-id">delete single documents with the API</a>.</p>
     <p><strong>To delete multiple documents in batch</strong>, please use the <a title="Search - web app" href="search.html#remove-documents">search bar</a>. The <a title="API - Delete" href="/API_documents_v1.html#delete-documents-delete">search-based deletion of documents is also available via API</a>.</p>

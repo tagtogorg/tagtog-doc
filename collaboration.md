@@ -589,6 +589,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
   <p>A user with the role reviewer or a role with similar permissions (e.g., supercurator) promotes a user version to master using the adjudication option Copy to master. If required, the reviewer can manually change master to ammend any of the user's annotations.</p>
   <p>Alternatively, the reviewer can use one of the automatic adjudication methods explained below and then apply the required changes to master.</p>
 </div>
+
 <div class="two-third-col">
   <h4>Automatic adjudication</h4>
   <p markdown="1">Based on your quality requirements, you might want to automate to some extent the review of the annotations. In case more than one user is annotating each document, you can use the automatic adjudication methods to obtain a master version by merging all users' versions for a given document. Notice that a user with the required permissions can still edit master after the adjudication (e.g. role `reviewer`). Therefore, you can either fully automate the review process or accelerate it by only reviewing master rather than each user version.</p>
@@ -597,7 +598,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 <div class="one-third-col">
 </div>
 <div class="two-third-col">
-  <h5>Automatic adjudication based on IAA</h5>
+  <h5>Automatic adjudication based on: IAA</h5>
   <p>Do you need first more information about what IAA (inter-annotator agreement) is. Read here: <a title="tagtog - inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> ? </p>
   <p>For each single annotation task, this method promotes to master the annotations of the user with the best IAA (using the calculation <a title="tagtog - IAA calculation methods" href="IAA-calculation-methods">exact_v1 metric</a>; for all documents).</p>
   <p>The goal is to have in master the <strong>available-best annotations for each annotation task</strong>. That is the reason why this adjudication method is also know as adjudication by Best Annotators</p>
@@ -613,7 +614,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 
 <div class="two-third-col">
 
-  <h5>Automatic adjudication by Union</h5>
+  <h5>Automatic adjudication by: Union</h5>
   <p markdown="1">This method promotes to master **all the annotations from all the confirmed user's versions**.</p>
     {% include image.html caption="In this example, user A's version and user B's version are merged using the Union method. All the annotations from user A and user B are promoted to master." name="adjudication-union.png" %}
   <p markdown="1">**If an annotation is repeated in two or more versions**, only one of the ocurrences is promoted to master. However, this ocurrence will have different properties in comparison to the original annotation.</p>
@@ -659,7 +660,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 </div>
 
 <div class="two-third-col">
-  <h5>Automatic adjudication by Intersection</h5>
+  <h5>Automatic adjudication by: Intersection</h5>
   <p markdown="1">This method promotes to master all the annotations **common in all the confirmed user's versions**.</p>
   <p markdown="1">The Intersection method is the strictest adjudication method because to promote an annotation to master, all the users should agree on that annotation.  It is recommended for environments where annotations play a critical role and where incorrect annotations might have a considerable impact.</p>
   {% include image.html caption="In this example, user A's version and user B's version are merged using the Intersection method. Only the annotations that are in both versions are promoted to master." name="adjudication-intersection.png" %}
@@ -698,7 +699,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 </div>
 
 <div class="two-third-col">
-  <h5>Automatic adjudication by Majority Vote</h5>
+  <h5>Automatic adjudication by: Majority Vote</h5>
   <p markdown="1">For each single annotation, this method promotes it to master **only if it was annotated by over 50% of the annotators**.</p>
   {% include image.html caption="In this example, the versions of user A, user B and user C are merged using the Majority Vote method. Only the annotations that are common in more than 50% (majority) of the versions are promoted to master. For example, the annotation for the task C (red) on the top left has been selected by user A and user B, therefore they form majority (2 out of 3, or over 66%) and this annotation is promoted to master. On the contrary, those annotations that have not been selected by the majority, are not promoted to master." name="adjudication-vote.png" %}
 </div>

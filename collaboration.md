@@ -597,6 +597,7 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 </div>
 <div class="one-third-col">
 </div>
+
 <div class="two-third-col">
   <h5>Automatic adjudication based on: IAA</h5>
   <p>Do you need first more information about what IAA (inter-annotator agreement) is. Read here: <a title="tagtog - inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> ? </p>
@@ -609,11 +610,9 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
   <p>If you want to see a step-by-step example for setting up automatic adjudication, check out this post: <a title="tagtog at Medium - Automatic adjudication based on the inter-annotator agreement" href="https://medium.com/@tagtog/automatic-adjudication-based-on-the-inter-annotator-agreement-a62f49be7bcf">Automatic adjudication based on the inter-annotator agreement</a></p>
 </div>
 <div class="one-third-col">
-
 </div>
 
 <div class="two-third-col">
-
   <h5>Automatic adjudication by: Union</h5>
   <p markdown="1">This method promotes to master **all the annotations from all the confirmed user's versions**.</p>
     {% include image.html caption="In this example, user A's version and user B's version are merged using the Union method. All the annotations from user A and user B are promoted to master." name="adjudication-union.png" %}
@@ -656,7 +655,6 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 </div>
 
 <div class="one-third-col">
-
 </div>
 
 <div class="two-third-col">
@@ -695,7 +693,6 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
 
 </div>
 <div class="one-third-col">
-
 </div>
 
 <div class="two-third-col">

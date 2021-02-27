@@ -585,6 +585,11 @@ When different users annotate the same document, as a result, there are multiple
 
 tagtog supports manual adjudication and automatic adjudication. The adjudication methods presented below are available both from the user interface and via the API. For the user interface, in the toolbar of the annotation editor, you find these options under (<a title="tagtog - manage annotation versions" href="webeditor.html#manage-annotation-versions">Manage annotation versions</a>{% include inline-image.html name="editor-toolbar-import-ann.PNG" width="28" %}).
 
+<div class="img-with-caption">
+  <img src="/assets/img/editor/toolbar/adjudication-merging-actions.png" width="40%" alt="Screenshot: tagtog adjudication / merging button actions" />
+  <p>Manual &amp; Automatic Adjudication Actions available on the tagtog document editor.</p>
+</div>
+
   <h4>Manual adjudication</h4>
   <p>A user with the role reviewer or a role with similar permissions (e.g., supercurator) promotes a user version to master using the adjudication option Copy to master. If required, the reviewer can manually change master to ammend any of the user's annotations.</p>
   <p>Alternatively, the reviewer can use one of the automatic adjudication methods explained below and then apply the required changes to master.</p>

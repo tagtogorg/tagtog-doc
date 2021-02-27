@@ -394,10 +394,12 @@ tagtog_domain: https://www.tagtog.net
 
 
   <div class="two-third-col">
-    <h4>Task distribution (document assignment)</h4>
-    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose that each document is assigned to 1 single annotator, every uploaded document will be randomly assigned to only one of the annotators. Otherwise, for example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
+    <h4>Task distribution</h4>
+    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
 
-    <p>Annotating the same document by 2 or more members is recommended to increase the overall quality of your annotation project. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a>) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a>.</p>
+    <p markdown="1">Annotating the same document by 2 or more members is recommended to increase the overall **quality of your annotation project**. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> or IAA) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a>.</p>
+
+    <br>
 
     {% include image.html name="settings/members-task-distribution.png" width="85%" caption="Task Distribution: assign documents to your labelers as soon they are uploaded." %}
 
@@ -405,6 +407,7 @@ tagtog_domain: https://www.tagtog.net
     <p class="numbered-item"><span class="number-1">1</span><strong>Select the members you want to distribute documents to</strong> (the system only distributes documents to these users).</p>
     <p class="numbered-item"><span class="number-2">2</span><strong>Select the number of annotators per document</strong> (how many of the selected users will annotate each document).</p>
     <br>
+    <p>To keep track of the project quality, even if you set the task distribution as one annotator per document (each document is assigned to a different annotator), tagtog automatically tries to allocate 5% of your documents to two annotators to calculate IAA.</p>
     <p><strong>By default, task distribution is turned off</strong>. This means that uploaded documents do not get distributed. When task distribution is not active, members see the <a href="collaboration.html#annotation-versions"><code>master</code> version</a> automatically when they open a document. Once the task distribution is active (number of annotators per document is 1 or more), members will see their own version of the annotations when they open a document.</p>
     <p><strong>When task distribution is active, project members see by default the special search <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a></strong> (in the tab <em>Documents</em>). This view lists the documents that have not been confirmed yet by the logged annotator.</p>
   </div>

@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🪄
+## 3.2021-W08.0 🪄
+_2021-02-27_
 
 <ul class="updates">
   <li class="new"><span markdown="1">New **merging strategies** for [automatic adjudication](collaboration.html#automatic-adjudication): [**union**](collaboration.html#automatic-adjudication-by-union), [**intersection**](collaboration.html#automatic-adjudication-by-intersection), and [**majority vote**](collaboration.html#automatic-adjudication-by-majority-vote)!</span></li>

@@ -18,7 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now the Inter-Annotator Agreement (IAA) is also available at the document level. It helps reviewers or any user with the required permissions (e.g., `supercurators`) to understand the quality of the annotations for a specific user and document. While these IAA values are displayed on the sidebar near each annotation task, you can also access a summary with all the information in one place. [Documentation](collaboration.html#iaa-at-the-document-level).</span></li>
-  <li class="fix"><span markdown="1">Better visualization of the IAA values shown in the Metrics panel: when the average is 0%, it is also shown, the background for 0% values are now red.</span></li>
+  <li class="fix"><span markdown="1">Better visualization of the IAA values shown in the Metrics panel: when the average is 0%, this is also shown, and the background for 0% values are now red.</span></li>
 </ul>
 
 ---

@@ -576,10 +576,15 @@ id: collaboration
 <div class="one-third-col">
   {% include message.html message="You can create a separate project with the same setup as your production project and <strong>perform tests</strong>. If you bring someone aboard, you can have them annotate the test documents already annotated by the team and check the level of agreement. To train your team, you can add new documents and check the team agreement." %}
 </div>
-<div class="two-third-col">
-  <h3>Adjudication</h3>
-  <p> When different users annotate the same document, as a result, there are multiple annotation versions. <strong>Adjudication is the process to resolve inconsistencies among these versions before promoting a version to master</strong>. tagtog supports manual adjudication and automatic adjudication.</p>
-  <p>The adjudication methods presented below are available in the user interface or via the API. For the user interface, in the toolbar of the annotation editor, you find these options under (<a title="tagtog - manage annotation versions" href="webeditor.html#manage-annotation-versions">Manage annotation versions</a>{% include inline-image.html name="editor-toolbar-import-ann.PNG" width="28" %}).</p>
+
+<div class="two-third-col" markdown="1">
+
+### Adjudication (Merging)
+
+When different users annotate the same document, as a result, there are multiple annotation versions. **Adjudication is the process to resolve inconsistencies among these versions before promoting a version to master**. In other words, the different annotators' versions are **merged** into one (using various strategies).
+
+tagtog supports manual adjudication and automatic adjudication. The adjudication methods presented below are available both from the user interface and via the API. For the user interface, in the toolbar of the annotation editor, you find these options under (<a title="tagtog - manage annotation versions" href="webeditor.html#manage-annotation-versions">Manage annotation versions</a>{% include inline-image.html name="editor-toolbar-import-ann.PNG" width="28" %}).
+
   <h4>Manual adjudication</h4>
   <p>A user with the role reviewer or a role with similar permissions (e.g., supercurator) promotes a user version to master using the adjudication option Copy to master. If required, the reviewer can manually change master to ammend any of the user's annotations.</p>
   <p>Alternatively, the reviewer can use one of the automatic adjudication methods explained below and then apply the required changes to master.</p>
@@ -587,7 +592,7 @@ id: collaboration
 <div class="two-third-col">
   <h4>Automatic adjudication</h4>
   <p markdown="1">Based on your quality requirements, you might want to automate to some extent the review of the annotations. In case more than one user is annotating each document, you can use the automatic adjudication methods to obtain a master version by merging all users' versions for a given document. Notice that a user with the required permissions can still edit master after the adjudication (e.g. role `reviewer`). Therefore, you can either fully automate the review process or accelerate it by only reviewing master rather than each user version.</p>
-  <p>Let's explore the different methods for automatic adjudication.</p>
+  <p>Let's explore the different strategies for automatic adjudication.</p>
 </div>
 <div class="one-third-col">
 </div>

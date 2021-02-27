@@ -632,7 +632,7 @@ _2019-11-06_
 _2019-10-20_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Work now better in teams... with [**Automatic Adjudication**](collaboration.html#adjudication)! If users annotate the same documents, now you can merge their annotations into a sigle version automatically. tagtog uses the IAA metrics for each annotation task to compute which annotation to choose in each case.</span></li>
+  <li class="new"><span markdown="1">Work now better in teams... with [**Automatic Adjudication**](collaboration.html#adjudication-merging)! If users annotate the same documents, now you can merge their annotations into a sigle version automatically. tagtog uses the IAA metrics for each annotation task to compute which annotation to choose in each case.</span></li>
   <li class="new"><span markdown="1">Now the `filter:TODO` view of documents, is sorted just like folders. This makes it easier to reason about the order of wip "TODO" documents.</span></li>
   <li class="new"><span markdown="1">Now `supercurator`s have also the active button to copy their annotations to `master`'s.</span></li>
   <li class="fix"><span markdown="1">Fixed sometimes wrong showing the status of the confirmation checkmark when annotations where copied from one version to another.</span></li>

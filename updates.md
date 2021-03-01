@@ -24,6 +24,10 @@ _2021-02-27_
   <li class="fix"><span markdown="1">Better visualization of the IAA values shown in the Metrics panel: when the average is 0%, this is also shown, and the background for 0% values are now red.</span></li>
 </ul>
 
+<div class="img-with-caption" align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rf7Za0NBpqA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <div class="img-with-caption">
   <img src="/assets/img/editor/toolbar/adjudication-merging-actions.png" width="30%" alt="Screenshot: tagtog adjudication / merging button actions" />
   <p>Manual &amp; Automatic Adjudication Actions available on the tagtog document editor.</p>

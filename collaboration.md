@@ -599,6 +599,11 @@ tagtog supports manual adjudication and automatic adjudication. The adjudication
   <h4>Automatic adjudication</h4>
   <p markdown="1">Based on your quality requirements, you might want to automate to some extent the review of the annotations. In case more than one user is annotating each document, you can use the automatic adjudication methods to obtain a master version by merging all users' versions for a given document. Notice that a user with the required permissions can still edit master after the adjudication (e.g. role `reviewer`). Therefore, you can either fully automate the review process or accelerate it by only reviewing master rather than each user version.</p>
   <p>Let's explore the different strategies for automatic adjudication.</p>
+
+  <div class="img-with-caption" align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rf7Za0NBpqA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
 </div>
 <div class="one-third-col">
 </div>

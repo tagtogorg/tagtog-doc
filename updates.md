@@ -14,6 +14,13 @@ notoc: true
 
 ---
 
+## ??? 🪜
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Entity text was incorrectly breaking in the Entity Tally</span></li>
+</ul>
+---
+
 ## 3.2021-W08.0 🪄
 _2021-02-27_
 

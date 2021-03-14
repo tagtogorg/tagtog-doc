@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## ??? 💸
+_2021-03-06_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can also pay & subscribe with PayPal!</span></li>
+</ul>
+
+---
+
 ## 3.2021-W09.1 🪜
 _2021-03-06_
 

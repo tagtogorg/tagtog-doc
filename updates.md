@@ -16,7 +16,6 @@ notoc: true
 
 ## 3.2021-W10.0 💸
 _2021-03-14_
-_2021-03-06_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can also pay & subscribe with PayPal!</span></li>

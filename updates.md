@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 🪶
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) now the tagtog docker webapp image is 44% leaner! (reduced from ~900MB to ~500MB). This means faster downloads and a lower memory footprint.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W10.0 💸
 _2021-03-14_
 

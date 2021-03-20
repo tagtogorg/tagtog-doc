@@ -200,8 +200,9 @@ Please, in order to help you best, provide us detailed information of the proble
 
 ```shell
 # For example:
-docker logs --tail 3000 tagtog_webapp_1 &> tagtog_webapp_1.log
-docker logs --tail 3000 tagtog_taskmanager_1 &> tagtog_taskmanager_1.log
+docker logs --tail 10000 tagtog_webapp_1 &> tagtog_webapp_1.$(date -u '+%Y-%m-%d-%s').log
+docker logs --tail 10000 tagtog_taskmanager_1 &> tagtog_taskmanager_1.$(date -u '+%Y-%m-%d-%s').log
+docker logs --tail 10000 tagtog_ml0_1 &> tagtog_ml0_1.$(date -u '+%Y-%m-%d-%s').log
 ```
 
 

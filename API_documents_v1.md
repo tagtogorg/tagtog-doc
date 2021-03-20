@@ -2292,7 +2292,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 
 ### Merge the annotations of a document (Automatic Adjudication)
 
-<strong>🤠 This API is an alpha version, and can change at any moment. We give early access to the API for your benefit.</strong>
+**🤠𝛂 This API is in alpha, and can change at any moment. We give early access for your benefit.**
 
 Merge the _confirmed_ members' annotations of a document.
 

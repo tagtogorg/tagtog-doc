@@ -171,9 +171,14 @@ For example, you have to make sure to use full paths, the `$TAGTOG_HOME` environ
 
 ## Update
 
-You can manually check for [new tagtog updates on this link](https://docs.tagtog.net/updates.html). Then:
+You can manually check for [new tagtog updates on this link](https://docs.tagtog.net/updates.html).
+
+To download the latest tagtog version (i.e. the latest docker images), do this:
 
 ```shell
+# Before updating the tagtog version, we strongly recommend to first **back up your data**
+# https://docs.tagtog.net/on_premises_README.html#backups-how-and-where-the-data-is-stored
+
 ./tagtog_on_premises update
 ./tagtog_on_premises restart latest $TAGTOG_HOME
 ```
@@ -185,7 +190,12 @@ Might you have required a license change (e.g. to prolong your current installat
 
 ```shell
 # It's recommended to stop the running service first: ./tagtog_on_premises stop latest $TAGTOG_HOME
+
 ./tagtog_on_premises change_license NEW_LICENSE_NAME NEW_LICENSE_KEY
+
+# If you have not run tagtog in a while, we also recommend you to update the tagtog version:
+# https://docs.tagtog.net/on_premises_README.html#update
+
 # Afterwards, restart tagtog as usual: ./tagtog_on_premises restart latest $TAGTOG_HOME
 ```
 

@@ -3,8 +3,11 @@ layout: page
 title: CSV (and TSV) file input parsing
 sidebar_link: false
 id: CsvFileParsing
+version: 1.0
 toc: false
 ---
+
+Current format version: `{{ page.version }}`
 
 You can import CSV (comma-separated values) and TSV (tab-separated values) files onto tagtog 😻. This also means, you can easily **import any excel sheet** onto tagtog 📊.
 
@@ -38,7 +41,7 @@ The file will look like this on a text editor:
 ```
 Header Section 1,Header Section 2
 doc1 - section 1,doc1 - section 2
-doc2 - section 1,doc2 - section 2  
+doc2 - section 1,doc2 - section 2
 ```
 
 <br/>

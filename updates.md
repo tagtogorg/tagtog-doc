@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## 3.2021-W12.0 🥸
+_2021-03-27_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">In projects with many annotation types (75 or more), the [Metrics tab](metrics.html) (and the [Metrics API](API_metrics_v0.html)) threw an error before. This is now fixed! 🥳</span></li>
+</ul>
+
+---
+
 ## 3.2021-W11.0 🪶
 _2021-03-20_
 

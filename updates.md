@@ -18,6 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="fix"><span markdown="1">(OnPremises) The optional configuration [environment variables](on_premises_README.html#conflicts-with-ports-000080-bind-address-already-in-use-) `TAGTOG_HTTP_PORT` & `TAGTOG_HTTPS_PORT` were not read even if defined.</span></li>
+  <li class="sec"><span markdown="1">Updated this documentation's dependency [kramdown version to ~>2.3.1, as per security recommendation](https://github.com/advisories/GHSA-52p9-v744-mwjj).</span></li>
 </ul>
 
 ---

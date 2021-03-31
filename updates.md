@@ -18,6 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="fix"><span markdown="1">(OnPremises) The optional configuration [environment variables](on_premises_README.html#conflicts-with-ports-000080-bind-address-already-in-use-) `TAGTOG_HTTP_PORT` & `TAGTOG_HTTPS_PORT` were not read even if defined.</span></li>
+  <li class="fix"><span markdown="1">The links in the Metrics section for Document Labels (type `enum`), were producing incorrect search queries when the `enum` values contained spaces.</span></li>
 </ul>
 
 ---

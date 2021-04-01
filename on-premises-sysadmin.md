@@ -76,7 +76,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 <h3>Flexible seats</h3>
 
-In OnPremises, you can have more annotators than your license allows. However, you can only have that many <strong>active</strong> users as it allows. Let's say you have a license for 25 annotators - therefore, you can have more users than 25, but only 25 of them can be <strpmg>active</strong>. Other users must be <strong>inactive</strong>.
+In OnPremises, you can have more annotators than your license allows. However, you can only have that many <strong>active</strong> users as it allows. Let's say you have a license for 25 annotators - therefore, you can have more users than 25, but only 25 of them can be <strong>active</strong>. Other users must be <strong>inactive</strong>.
 
 When a user is <strong>inactive</strong>, he cannot log in, perform requests through API. Moreover, his annotations cannot be modified. You can easily <strong>activate</strong> and <strong>deactivate</strong> users in the sysadmin panel.
 

@@ -42,13 +42,14 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
   <p>Fields in the table</p>
   <p class="list-item" markdown="1"><span class="list-item-1"></span>**Count**: index of the user.</p>
-  <p class="list-item" markdown="1"><span class="list-item-2"></span>**Username**</p>
-  <p class="list-item" markdown="1"><span class="list-item-3"></span>**Email**</p>
-  <p class="list-item" markdown="1"><span class="list-item-4"></span>**Creation date**: date the user account was created.</p>
-  <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: flag to indicate whether the user can create projects or not.</p>
-  <p class="list-item" markdown="1"><span class="list-item-6"></span>**Has password**: accounts with `Basic authentication` have password. `Single sign-on` accounts don't have password within the application.</p>
+  <p class="list-item" markdown="1"><span class="list-item-2"></span>**Is active** flag to indicate whether the user is active or not ([see below](#flexible-seats)).</p>
+  <p class="list-item" markdown="1"><span class="list-item-3"></span>**Username**</p>
+  <p class="list-item" markdown="1"><span class="list-item-4"></span>**Email**</p>
+  <p class="list-item" markdown="1"><span class="list-item-5"></span>**Creation date**: date the user account was created.</p>
+  <p class="list-item" markdown="1"><span class="list-item-6"></span>**Can create projects**: flag to indicate whether the user can create projects or not.</p>
+  <p class="list-item" markdown="1"><span class="list-item-7"></span>**Has password**: accounts with `Basic authentication` have password. `Single sign-on` accounts don't have password within the application.</p>
 
-  {% include image.html name="sysadmin-onpremises-users.png" caption="User panel: inspect, create, update, and delete users." %}
+  {% include image.html name="sysadmin-onpremises-users_updated.png" caption="User panel: inspect, create, update, and delete users." %}
 </div>
 
 <div class="two-third-col">
@@ -59,9 +60,10 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
   <p class="list-item" markdown="1"><span class="list-item-3"></span>**Email**: the email of the new user.</p>
   <p class="list-item" markdown="1"><span class="list-item-4"></span>**Password**: the password of the new user. The user can later change the password. This field is only required for accounts with `Basic authentication`.</p>
   <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: a flag to indicate whether the new user can create tagtog projects or not. Users who cannot create projects, can only work in projects they are invited to.</p>
+   <p class="list-item" markdown="1"><span class="list-item-6"></span>**Is active**: a flag to indicate whether the new user will be active or not ([see below](#flexible-seats)).</p>
 </div>
 <div class="one-third-col">
-  {% include image.html name="sysadmin-onpremises-user-update.png" caption="Create &amp; edit user view" width="90%" %}
+  {% include image.html name="sysadmin-onpremises-user-update_updated.png" caption="Create &amp; edit user view" width="90%" %}
 </div>
 
 <div class="two-third-col">
@@ -70,6 +72,17 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 </div>
 
 
+<div class="two-third-col" markdown="1">
+
+<h3>Flexible seats</h3>
+
+In OnPremises, you can have more annotators than your license allows. However, you can only have that many <strong>active</strong> users as it allows. Let's say you have a license for 25 annotators - therefore, you can have more users than 25, but only 25 of them can be <strpmg>active</strong>. Other users must be <strong>inactive</strong>.
+
+When a user is <strong>inactive</strong>, he cannot log in, perform requests through API. Moreover, his annotations cannot be modified. You can easily <strong>activate</strong> and <strong>deactivate</strong> users in the sysadmin panel.
+
+You don't have to worry about <strong>inactive</strong> users' data - it remains, as long as he is not removed from the project. When you <strong>activate</strong> his account, he will be able to continue his work.
+
+</div>
 <div class="two-third-col" markdown="1">
 
 ## Teams Management

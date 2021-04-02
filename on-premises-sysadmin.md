@@ -49,7 +49,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
   <p class="list-item" markdown="1"><span class="list-item-6"></span>**Can create projects**: flag to indicate whether the user can create projects or not.</p>
   <p class="list-item" markdown="1"><span class="list-item-7"></span>**Has password**: accounts with `Basic authentication` have password. `Single sign-on` accounts don't have password within the application.</p>
 
-  {% include image.html name="sysadmin-onpremises-users_updated.png" caption="User panel: inspect, create, update, and delete users." %}
+  {% include image.html name="sysadmin-onpremises-users_updated_2.png" caption="User panel: inspect, create, update, and delete users." %}
 </div>
 
 <div class="two-third-col">
@@ -63,7 +63,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
    <p class="list-item" markdown="1"><span class="list-item-6"></span>**Is active**: a flag to indicate whether the new user will be active or not ([see below](#flexible-seats)).</p>
 </div>
 <div class="one-third-col">
-  {% include image.html name="sysadmin-onpremises-user-update_updated.png" caption="Create &amp; edit user view" width="90%" %}
+  {% include image.html name="sysadmin-onpremises-user-update_updated_2.png" caption="Create &amp; edit user view" width="90%" %}
 </div>
 
 <div class="two-third-col">
@@ -79,7 +79,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 In OnPremises, you can have more annotators than your license allows. However, you can only have that many <strong>active</strong> users as it allows. Let's say you have a license for 25 annotators - therefore, you can have more users than 25, but only 25 of them can be <strong>active</strong>. Other users must be <strong>inactive</strong>.
 
 <div class="img-with-caption">
-  <img src="/assets/img/sysadmin/users-limits.png" width="50%" align="center" alt="Screenshot: panel informing about users in the system & limit of active users" />
+  <img src="/assets/img/sysadmin/users-limits_updated.png" width="50%" align="center" alt="Screenshot: panel informing about users in the system & limit of active users" />
   <p>Panel informing about users in the system & limit of active users.</p>
 </div>
 

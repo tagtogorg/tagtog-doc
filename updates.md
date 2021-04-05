@@ -14,6 +14,17 @@ notoc: true
 
 ---
 
+## 3.2021-W13.0 🔑
+_2021-04-05_
+
+<ul class="updates">
+  <li class="sec"><span markdown="1">Updated this documentation's dependency [kramdown version to ~>2.3.1, as per security recommendation](https://github.com/advisories/GHSA-52p9-v744-mwjj).</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) The optional configuration [environment variables](on_premises_README.html#conflicts-with-ports-000080-bind-address-already-in-use-) `TAGTOG_HTTP_PORT` & `TAGTOG_HTTPS_PORT` were not read even if defined.</span></li>
+  <li class="fix"><span markdown="1">The links in the [Metrics tab](metrics.html) for Document Labels (type `enum`), were producing incorrect search queries when the `enum` values contained spaces.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W12.0 🥸
 _2021-03-27_
 

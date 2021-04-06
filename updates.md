@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 📑
+
+<ul class="updates">
+  <li class="doc"><span markdown="1">Clarified documentation about [pre-selections](webeditor.html#pre-selections).</span></li>
+</ul>
+
+---
+
 ## 3.2021-W13.0 🔑
 _2021-04-05_
 

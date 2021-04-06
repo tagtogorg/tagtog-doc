@@ -204,7 +204,7 @@ toc: true
       <p>Currently, pre-selections don't work in the <a href="pdf-annotation-tool.html" title="tagtog - PDF annotation tool">PDF annotation tool</a>.</p>
       <table style="width:100%">
         <tr>
-          <th>Pre-annotation type</th>
+          <th>Type</th>
           <th>Description</th>
         </tr>
         <tr>

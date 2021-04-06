@@ -325,7 +325,7 @@ tagtog_domain: https://www.tagtog.net
 
   <div class="two-third-col">
     <h4>Machine Learning (tagtog ML)</h4>
-    <p>Each time you press the button <code>Confirm</code> in the annotation editor, in the background, <strong>a tagtog machine learning model is being trained with all the project documents confirmed</strong>. Next time you upload a new document, this model can predict new annotations based on this model. You can remove or add new annotations to continue training the model and get more accurate results.</p>
+    <p>Each time you press the button {% include inline-image.html name="editor-confirm-button.PNG" width="80" %} in the annotation editor, <strong>a tagtog ML model gets trained in the background with all the confirmed project documents</strong>. Next time you upload a new document, this model will predict new annotations based on the training data. You can remove or add new annotations to continue training the model and get more accurate results.</p>
     <p>If activated, tagtog machine learning will start annotating automatically from the first document confirmed. <strong>No deployments or complex configurations are required</strong>, just by annotating you can train a use a tagtog machine learning model.</p>
     <p>If you don't want to use tagtog machine learning, deactivate this option.</p>
     <p>More information on how <a title="tagtog - machine learning" href="/machine-learning.html">tagtog ML</a> works.</p>

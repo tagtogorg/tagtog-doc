@@ -379,7 +379,7 @@ toc: true
       <p>Each time a change is made in the document (e.g. new annotation or relation added), the Save button will turn into green to indicate there are changes to save. Click the button {% include inline-image.html name="editor-save-button.png" width="50" %} to save the changes. </p>
     </div>
     <div class="one-third-col">
-      <div class="message">The on-premises version has the possibility of <strong>auto-save</strong>. Each change is saved automatically upon action.</div>
+      <div class="message">The OnPremises version boasts <strong>auto-save</strong>.</div>
     </div>
     <div class="two-third-col">
       <h4>Confirm a document</h4>
@@ -388,13 +388,13 @@ toc: true
       <p>Once you have confirmed a document, many actions are disabled. You can undo the Confirm action by clicking again the button. It is a toggle button.</p>
     </div>
     <div class="one-third-col">
-      <div class="message">If you have <code>Machine Learning</code> activated in Settings, each time you confirm a document, a <strong>model will be trained automatically</strong> in the background together with all the previously confirmed documents.</div>
+      <div class="message"><a href="projects.html#machine-learning-tagtog-ml">If you have <code>Machine Learning</code> activated in Settings</a>, each time you confirm a document, a <strong>model will be trained automatically</strong> in the background together with all the previously confirmed documents.</div>
     </div>
     <div class="two-third-col">
-      <h4>View / output mode</h4>
+      <h4>Download / View / Export</h4>
       <p>Here you can select which way you want to display or <strong>export</strong> the annotated document.</p>
-      <p>Annotated documents can be exported in various formats: <a href="/ioformats.html#output-formats">output formats</a></p>
-      <p><code>tagtog Web Editor</code> refers to the visualization of the annotated document in the annotation editor.</p>
+      <p>Annotated documents can be exported into various formats: <a href="/ioformats.html#output-formats">output formats</a>.</p>
+      <p>The <code>tagtog Editor</code> refers to the visualization of the annotated document in the annotation editor.</p>
       <br/>
       <h4>Remove annotations</h4>
       <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} and select the option <code>Remove annotations</code>to delete all the annotations in the current document. This won't remove the document.</p>
@@ -403,7 +403,7 @@ toc: true
       <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} and select the option <code>Remove document</code>to remove the document from the folder.</p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-view.PNG" width="250"%}
+      {% include image.html name="editor/toolbar/download-view-export.png" width="250"%}
     </div>
     <div class="two-third-col">
       <br/>

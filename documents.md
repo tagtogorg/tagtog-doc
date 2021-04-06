@@ -114,10 +114,10 @@ toc: true
   <p>Download the original document + the annotations and import them into the new project. The caveat of this method is that, from the GUI, you can only import annotations in the <code>master</code> version</p>. Use the API if you want to export/import also the annotations from the members of the original project.
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-1">1</span><strong>Download the original document</strong>. Open the document. In the toolbar, <a href="webeditor.html#view-output-mode">select the option to download</a> the <code>original</code> file.</p>
+  <p class="numbered-item"><span class="number-1">1</span><strong>Download the original document</strong>. Open the document. In the toolbar, <a href="webeditor.html#download-view-export">select the option to download</a> the <code>original</code> file.</p>
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-2">2</span><strong>Download the annotations</strong>. In the toolbar, <a href="webeditor.html#view-output-mode">select the option to download</a> the annotations in <a href="anndoc.html#ann-json"><code>ann.json</code> format</a>.</p>
+  <p class="numbered-item"><span class="number-2">2</span><strong>Download the annotations</strong>. In the toolbar, <a href="webeditor.html#download-view-export">select the option to download</a> the annotations in <a href="anndoc.html#ann-json"><code>ann.json</code> format</a>.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message="From the GUI, if you upload an annotation file along with the content, only the <code>master</code> version gets annotated."%}

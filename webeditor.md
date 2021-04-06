@@ -199,9 +199,9 @@ toc: true
       {% include message.html message='More on overlapping annotations in this <a href="https://medium.com/@tagtog/overlapping-text-annotations-19d7ac5b247a">blog post</a>.' %}
     </div>
     <div class="two-third-col">
-      <h5>Pre-annotations</h5>
+      <h5>Pre-selections</h5>
       <p>Automatic annotations created upon the manual creation or removal of other <strong>equal annotation</strong> (same entity type and same text). These type of annotations increase annotator's <strong>efficiency</strong> as potential candidates for new/to-remove annotations are automatically identified.</p>
-      <p>Currently, pre-annotations don't work in the <a href="pdf-annotation-tool.html" title="tagtog - PDF annotation tool">PDF annotation tool</a>.</p>
+      <p>Currently, pre-selections don't work in the <a href="pdf-annotation-tool.html" title="tagtog - PDF annotation tool">PDF annotation tool</a>.</p>
       <table style="width:100%">
         <tr>
           <th>Pre-annotation type</th>
@@ -220,11 +220,11 @@ toc: true
           {% include image.html name="editor-pre-deselection.PNG" width="250" %}</td>
         </tr>
       </table>
-      <p>You can choose whether pre-annotations are <strong>case sensitive</strong> or not. As other properties from pre-annotations, this setting can be change both from the editor and/or at project level: <i>Settings > Annotations</i>.</p>
+      <p markdown="1">You can choose whether pre-selections are **case sensitive or not**. As other properties from pre-selections, this setting can be changed both directly [in the document toolbar](#pre-selections-1) and/or [at the project level](projects.html#pre-selections).</p>
     </div>
     <div class="one-third-col">
-      {% include message.html message="From the editor you can choose whether the pre-selections or pre-deselections are activated or deactivated. You can also change the <strong>default</strong> of these settings at project level in <i>Settings > Annotations</i>." %}
-      {% include message.html message="You can turn on/off <strong>case sensitivity</strong> for pre-annotations" %}
+      {% include message.html message="You can recognize pre-selections (&amp; pre-deselections) because they have a <strong>yellow border</strong>. If you click on a pre-selected annotation, you confirm the annotation as valid. If you click on a pre-deselect annotation, you remove the annotation." %}
+      {% include message.html message="You can turn on/off <strong>case sensitivity</strong> for pre-selections." %}
     </div>
     <div class="two-third-col">
       <h5>Annotation Menu</h5>
@@ -366,13 +366,13 @@ toc: true
       {% include image.html name="editor/toolbar/adjudication-merging-actions.png" width="300" %}
     </div>
     <div class="two-third-col">
-      <h4>Pre-annotations</h4>
-      <p>Here you can select whether pre-selections or pre-deselections are activated or deactivated. You can also turn on/off case sensitivity.</p>
-      <p>Each time you load a new document, the default settings from <i>Settings > Annotations</i> will apply. The changes in this menu won't change these default values and only will affect the current document. There are two types of pre-annotations: pre-selections and pre-deselections. You can find more information about pre-annotations <a href="#pre-annotations">here</a>.
+      <h4>Pre-selections</h4>
+      <p markdown="1">Here you can turn on/off [pre-selections or pre-deselections](#pre-selections). You can also turn on/off case sensitivity.</p>
+      <p markdown="1">Each time you load a new document, the [default settings from your project](projects.html#pre-selections) will apply. The changes in this menu won't change the default values. That is, the changes here only affect the current document.
     </p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-pre-annotations.PNG" width="300" %}
+      {% include image.html name="editor/toolbar/pre-selections.png" width="300" %}
     </div>
     <div class="two-third-col">
       <h4>Save a document</h4>

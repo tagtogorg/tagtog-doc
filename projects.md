@@ -319,15 +319,10 @@ tagtog_domain: https://www.tagtog.net
 <div class="page-subsection">
   <div class="two-third-col">
     <h3>Annotations</h3>
-    <h4>Pre-annotations</h4>
-    <p>These are the annotations that are created automatically while you are manually annotating a document. For example, if you annotate the gene: <code>BRA2</code>. All the mentions of <code>BRA2</code> in this text will be automatically annotated (<a href="/webeditor.html#pre-annotations">more information on pre-annotations</a>).</p>
-    <p>In this panel you can decide which are the <strong>default settings</strong> for pre-annotations: pre-selections, pre-deselections and their case sensitivity. You can always change these settings on the web editor for specific documents.</p>
+    <h4>Pre-selections</h4>
+    <p markdown="1">Here you can decide the **default settings** for: [pre-selections, pre-deselections](webeditor.html#pre-selections), and their case sensitivity. You can always [change these settings on the web editor toolbar for a specific document](webeditor.html#pre-selections-1).</p>
   </div>
-  <div class="one-third-col">
-    <div class="message">
-      You can recognize pre-annotations because they have a <strong>yellow border</strong>. If you click on a pre-selected annotation, you confirm the annotation as valid. If you click on a pre-deselect annotation, you remove the annotation.
-    </div>
-  </div>
+
   <div class="two-third-col">
     <h4>Machine Learning (tagtog ML)</h4>
     <p>Each time you press the button <code>Confirm</code> in the annotation editor, in the background, <strong>a tagtog machine learning model is being trained with all the project documents confirmed</strong>. Next time you upload a new document, this model can predict new annotations based on this model. You can remove or add new annotations to continue training the model and get more accurate results.</p>

@@ -14,13 +14,14 @@ toc: true
   <p>In tagtog, documents are listed based on a <a title="tagtog - search queries" href="search-queries.html">search query</a>. For example, listing the documents of a folder or listing all the documents that contain a specific entity. You can use these lists for <a title="tagtog - batch operations" href="search.html#batch-operations">batch processing</a>, for example, to remove or download documents matching a search.</p>
 
   <h3>Folders</h3>
-  <p>Use folders to organize your documents better. The <strong>root is the <code>pool</code> folder</strong>, which is created by default with each new project. Folders are sorted <strong>alphabetically</strong>.</p>
+  <p markdown="1">Use folders to organize your documents better. The <strong>root is the <code>pool</code> folder</strong>, which is created by default with each new project. Folders are sorted <strong>alphabetically</strong>. You can [manage folders via API](API_settings_v1.html#folders-management) or directly on the website as now described.</p>
   <h4>Create a new folder</h4>
   <p>Click on the folder you want to be the parent of the new folder. Click on the folder action <code>Add new</code>, write the name of the new folder and press the key <kbd>↵</kbd>.</p>
   <h4>Rename a folder</h4>
   <p>Click on the folder you want to rename. Click on the folder action <code>Rename</code>, write the new name of the new folder and press the key <kbd>↵</kbd>.</p>
   <h4>Remove a folder</h4>
-  <p>Click on the folder you want to remove. Click on the folder action <code>Remove</code>. Please remember that all <strong>the documents stored in this folder will be also removed</strong>.</p>
+  <p>Click on the folder you want to remove. Click on the folder action <code>Remove</code>.</p>
+  <p>CAUTION: keep in mind that all <strong>the documents stored in this folder will be also removed</strong>.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='<strong>What is a document?</strong>&nbsp;Any fragment of text. It can be plain text or have one of the formats (PDF, HTML, XML, etc.) defined here: <a title="Input types" href="/ioformats.html#input-types">input types</a>'%}

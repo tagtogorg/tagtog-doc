@@ -25,6 +25,7 @@ api_project: yourProjectName
 
 
 <div class="two-third-col" markdown="1">
+
 ## Search my projects
 
 Search and return the list of projects that the (authenticated) user is a member of. This includes the projects created by the user, and the projects as an invitee. When no search parameter is given, all projects are returned.
@@ -84,5 +85,34 @@ Search and return the list of projects that the (authenticated) user is a member
 ```
 
 **⚠️ Deprecation**: the output field ~~`roleName`~~ was deprecated on 2020-11-01, and will be removed after 2021-05-01. Please use the new field: `{"role":{"name":"..."}}`.
+
+## Search projects
+
+Search and return the list of the other user projects. 
+When no search parameter `?search=...``` is given, all projects of the searched 
+user are returned.
+
+| **Endpoint**  | `{{ page.api_endpoint }}/search-projects`    |
+| ------------- | -------------------------------------------- |
+| **Method**    | `GET`                                        |
+| **Output**    | JSON                                         |
+| **Paginated** | Yes                                          |
+
+The detailed behavior depends on the relation between logged user (LU) 
+and searched user (SU) and is as follows:
+ 
+| **logged user (LU)** | **searched user (SU)** | **searched projects of the searched user**                                                                                                    |
+| -------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| logged in            | existing               | public projects where SU is the owner or member and private projects where SU is an owner or member and simultaneously LU is owner or member. |
+| logged in            | non-existing           | redirected to `-dataset` endpoint                                                                                                             |
+| not logged           | existing               | public projects where SU is the owner or member                                                                                               |
+| not logged           | non-existing           | redirected to `-dataset` endpoint                                                                                                             |
+
+###### Input Parameters
+
+| **Name** | **Default** | **Example** | **Description**                                                                                                                                                                                                                        |
+| -------- | ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `search` | `""`        | `"reports"` | If the parameter is not given or otherwise it's the empty string, all the projects are returned. Otherwise, the given search parameter is matched against the searched user project names, descriptions, or project members usernames. |
+| `p`      | `0`         | `7`         | Page number (0 indexed) of the search results to fetch.                                                                                                                                                                                |
 
 </div>

@@ -59,7 +59,7 @@ The file will look like this in a text editor:
 <img src="assets/img/csv/example_text_editor.png" alt="CSV in text editor" width="30%"/>
 
 <br/>
-Uploading that CSV file, will result in 6 documents on tagtog:
+[Uploading that CSV file](assets/documents/sample-csv-v2.csv), will result in 6 documents on tagtog:
 
 <img src="assets/img/csv/6_parsed_documents.png" alt="Upload CSV file" width="100%"/>
 

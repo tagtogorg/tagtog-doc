@@ -48,12 +48,12 @@ How the parsing works is best explained with an example 🙂. Say you start with
 <img src="assets/img/csv/example_excel.png" alt="Example excel" width="40%"/>
 
 <br/>
-You can save the file as CSV - [download](assets/documents/drg.csv):
+You can save the file as CSV:
 
 <img src="assets/img/csv/save_as_csv.png" alt="Save as CSV" width="40%"/>
 
 <br/>
-The file will look like this in a text editor:
+The file will look like this in a text editor - [download](assets/documents/drg.csv):
 
 <img src="assets/img/csv/example_text_editor.png" alt="CSV in text editor" width="30%"/>
 

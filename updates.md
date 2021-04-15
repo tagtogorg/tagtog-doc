@@ -17,7 +17,7 @@ notoc: true
 ## ??? 🎼
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Revamped CSV & TSV parser </span></li>
+  <li class="new"><span markdown="1">Revamped [**CSV & TSV parser**](CsvFileParsing.html), now allowing escaped double quotes, commas, tabs, and even new lines! 💪 Also possible input errors are now much better reported 📊</span></li>
   <li class="doc"><span markdown="1">Clarified documentation about [pre-selections](webeditor.html#pre-selections).</span></li>
 </ul>
 

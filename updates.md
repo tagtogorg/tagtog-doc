@@ -14,9 +14,10 @@ notoc: true
 
 ---
 
-## ??? 📑
+## ??? 🎼
 
 <ul class="updates">
+  <li class="new"><span markdown="1">Revamped CSV & TSV parser </span></li>
   <li class="doc"><span markdown="1">Clarified documentation about [pre-selections](webeditor.html#pre-selections).</span></li>
 </ul>
 

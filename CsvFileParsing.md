@@ -43,7 +43,7 @@ inside"
 
 #### Example
 
-How the parsing works is best explained with an example 🙂. Say you start with an Excel file (or numbers file on macOS) like the following - [download](assets/documents/sample-csv-v2.xlsx):
+How the parsing works is best explained with an example 🙂. Say you start with an Excel file (or numbers file on macOS) like the [following](assets/documents/sample-csv-v2.xlsx):
 
 <img src="assets/img/csv/example_excel.png" alt="Example excel" width="40%"/>
 

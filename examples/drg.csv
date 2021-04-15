@@ -1,0 +1,14 @@
+Diagnosis Code,Description, CC, MDC, MS-DRG
+J12.82,"Pneumonia due to
+Coronavirus disease 2019", MCC,"04
+25","193, 194, 195
+974, 975, 976"
+M35.81,"Multisystem inflammatory 
+Syndrome", CC,08,"545, 546, 547"
+M35.89,"Other specified systemic
+Involvement of connective tissue", CC,08,"545, 546, 547"
+Z11.52,"Encounter for screening
+For „COVID-19”", N,23,951
+Z20.822,"Contact with and (suspected)
+exposure to „COVID-19”", N,23,951
+Z86.16,Personal history of „COVID-19”, N,23,951

@@ -44,13 +44,12 @@ inside"
 
 #### Example
 
-How the parsing works is best explained with an example 🙂. Say you start with an excel 
-file (or numbers file on macOS) like the following:
+How the parsing works is best explained with an example 🙂. Say you start with an Excel file (or numbers file on macOS) like the following - [download](examples/drg.xlsx):
 
 <img src="assets/img/csv/example_excel.png" alt="Example excel" width="40%"/>
 
 <br/>
-You can save the file as CSV:
+You can save the file as CSV - [download](examples/drg.csv):
 
 <img src="assets/img/csv/save_as_csv.png" alt="Save as CSV" width="40%"/>
 

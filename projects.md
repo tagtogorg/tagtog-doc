@@ -470,9 +470,9 @@ tagtog_domain: https://www.tagtog.net
 
 Your project has also a tab _"Downloads"_ to... download stuff 😉. Depending on your role in the project, and whether the project is public or private, you will see different actionable buttons.
 
-In particular, with the button `Download All Documents (and their annotations)` you can **download as a Zip file** all your project's documents and their annotations (in [anndoc format](anndoc)). This button is available only to project admins in private projects. It is available to all logged-in users in public projects.
+In particular, with the button `Download All Documents (and their annotations)` you can **download as a Zip file** all your project's documents and their annotations (in [anndoc format](anndoc)). This button is available only to project admins in private projects. It is available to all logged-in users in public projects. Moreover, an analogous button `Download as Zip` is present in all document searches and folders (_"Documents"_ tab) to download as Zip the subset of documents that match the search.
 
-Moreover, an analogous button `Download as Zip` is present in all document searches and folders (_"Documents"_ tab) to download as Zip the subset of documents that match the search.
+In this section, you can also download a CSV file with the annotation status of your documents. This report lists in one column the document ids and in a second column the status of their `master` version (`true` if confirmed, `false` if not confirmed).
 
 Other download actions are also available, including a reference to [download documents using the API](API_documents_v1), and [exporting the annotations legend](API_settings_v1.html#annotations-legend).
 

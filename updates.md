@@ -14,6 +14,19 @@ notoc: true
 
 ---
 
+## 3.2021-W15.0 🎼
+_2021-04-17_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Revamped [**CSV & TSV parser**](CsvFileParsing.html), now allowing escaped double quotes, commas, tabs, and even new lines! 💪 Also possible input errors are now much better reported 📊</span></li>
+  <li class="new"><span markdown="1">Performance improvements in the [PDF annotation tool](pdf-annotation-tool.html) by caching and image decoding.</span></li>
+  <li class="new"><span markdown="1">Expanded & improved levels of [zooming in PDF pages 🔍](pdf-annotation-tool.html#zoom).</span></li>
+  <li class="fix"><span markdown="1">In the PDF annotation tool, some images or tables were not displayed.</span></li>
+  <li class="doc"><span markdown="1">Clarified documentation about [pre-selections](webeditor.html#pre-selections).</span></li>
+</ul>
+
+---
+
 ## 3.2021-W13.0 🔑
 _2021-04-05_
 
@@ -1079,7 +1092,7 @@ _2019-03-06_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Fixed problem that prompted an error to some users when saving/confirming a document. The underlying issue was operating with documents that had document labels set when these labels were previously removed from the project settings.</span></li>
-  <li class="new"><span markdown="1"><a title="Pre-annotations - tagtog.net" href="webeditor.html#pre-annotations">Pre-annotations</a> now work with entity labels. When you create pre-selections, these inherit the entity labels coming from the main entity.</span></li>
+  <li class="new"><span markdown="1"><a title="Pre-selections - tagtog.net" href="webeditor.html#pre-selections">Pre-selections</a> now work with entity labels. When you create pre-selections, these inherit the entity labels coming from the main entity.</span></li>
   <li class="new"><span markdown="1">When you change the type of an entity, only common entity labels are preserved.</span></li>
   <li class="fix"><span markdown="1">Fixed a rare error On-Premises that caused the cache sometimes to fail.</span></li>
   <li class="new"><span markdown="1">IMPROVEMENT Forced indexing of documents upon document searching.</span></li>
@@ -1524,8 +1537,8 @@ _2018-08-05_
 _2018-07-26_
 
 <ul class="updates">
-  <li class="new">On-Premises ML version is officially out!</li>
-  <li class="new">Now you can choose whether <a title="tagtog - pre-annotations" href="/webeditor.html#pre-annotations">pre-annotations</a> (i.e. the automatic annotations that are created while manually annotating) are <strong>case sensitive or not</strong></li>
+  <li class="new">OnPremises ML version is officially out!</li>
+  <li class="new">Now you can choose whether <a title="tagtog - pre-selections" href="/webeditor.html#pre-selections">pre-selections</a> (i.e. the automatic annotations that are created while manually annotating) are <strong>case sensitive or not</strong></li>
   <li class="doc">Improved reporting of parsing errors in API uploads</li>
   <li class="new"><a href="/machine-learning.html">Machine Learning</a> is now deactivated by default for new projects -- <a title="Settings - Machine Learning" href="/projects.html#machine-learning">You can activate it in Settings</a></li>
   <li class="fix">Correct URLs for Project Settings sections</li>

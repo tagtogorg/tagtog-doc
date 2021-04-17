@@ -129,12 +129,12 @@ toc: true
       </tr>
       <tr>
         <td class="centered"><kbd>z</kbd></td>
-        <td>Zoom in</td>
+        <td>Zoom Out</td>
         <td>Only for paginated documents as PDFs</td>
       </tr>
       <tr>
         <td class="centered"><kbd>x</kbd></td>
-        <td>Zoom out</td>
+        <td>Zoom In</td>
         <td>Only for paginated documents as PDFs</td>
       </tr>
       <tr>
@@ -199,12 +199,12 @@ toc: true
       {% include message.html message='More on overlapping annotations in this <a href="https://medium.com/@tagtog/overlapping-text-annotations-19d7ac5b247a">blog post</a>.' %}
     </div>
     <div class="two-third-col">
-      <h5>Pre-annotations</h5>
+      <h5>Pre-selections</h5>
       <p>Automatic annotations created upon the manual creation or removal of other <strong>equal annotation</strong> (same entity type and same text). These type of annotations increase annotator's <strong>efficiency</strong> as potential candidates for new/to-remove annotations are automatically identified.</p>
-      <p>Currently, pre-annotations don't work in the <a href="pdf-annotation-tool.html" title="tagtog - PDF annotation tool">PDF annotation tool</a>.</p>
+      <p>Currently, pre-selections don't work in the <a href="pdf-annotation-tool.html" title="tagtog - PDF annotation tool">PDF annotation tool</a>.</p>
       <table style="width:100%">
         <tr>
-          <th>Pre-annotation type</th>
+          <th>Type</th>
           <th>Description</th>
         </tr>
         <tr>
@@ -220,11 +220,11 @@ toc: true
           {% include image.html name="editor-pre-deselection.PNG" width="250" %}</td>
         </tr>
       </table>
-      <p>You can choose whether pre-annotations are <strong>case sensitive</strong> or not. As other properties from pre-annotations, this setting can be change both from the editor and/or at project level: <i>Settings > Annotations</i>.</p>
+      <p markdown="1">You can choose whether pre-selections are **case sensitive or not**. As other properties from pre-selections, this setting can be changed both directly [in the document toolbar](#pre-selections-1) and/or [at the project level](projects.html#pre-selections).</p>
     </div>
     <div class="one-third-col">
-      {% include message.html message="From the editor you can choose whether the pre-selections or pre-deselections are activated or deactivated. You can also change the <strong>default</strong> of these settings at project level in <i>Settings > Annotations</i>." %}
-      {% include message.html message="You can turn on/off <strong>case sensitivity</strong> for pre-annotations" %}
+      {% include message.html message="You can recognize pre-selections (&amp; pre-deselections) because they have a <strong>yellow border</strong>. If you click on a pre-selected annotation, you confirm the annotation as valid. If you click on a pre-deselect annotation, you remove the annotation." %}
+      {% include message.html message="You can turn on/off <strong>case sensitivity</strong> for pre-selections." %}
     </div>
     <div class="two-third-col">
       <h5>Annotation Menu</h5>
@@ -366,20 +366,20 @@ toc: true
       {% include image.html name="editor/toolbar/adjudication-merging-actions.png" width="300" %}
     </div>
     <div class="two-third-col">
-      <h4>Pre-annotations</h4>
-      <p>Here you can select whether pre-selections or pre-deselections are activated or deactivated. You can also turn on/off case sensitivity.</p>
-      <p>Each time you load a new document, the default settings from <i>Settings > Annotations</i> will apply. The changes in this menu won't change these default values and only will affect the current document. There are two types of pre-annotations: pre-selections and pre-deselections. You can find more information about pre-annotations <a href="#pre-annotations">here</a>.
+      <h4>Pre-selections</h4>
+      <p markdown="1">Here you can turn on/off [pre-selections or pre-deselections](#pre-selections). You can also turn on/off case sensitivity.</p>
+      <p markdown="1">Each time you load a new document, the [default settings from your project](projects.html#pre-selections) will apply. The changes in this menu won't change the default values. That is, the changes here only affect the current document.
     </p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-pre-annotations.PNG" width="300" %}
+      {% include image.html name="editor/toolbar/pre-selections.png" width="300" %}
     </div>
     <div class="two-third-col">
       <h4>Save a document</h4>
       <p>Each time a change is made in the document (e.g. new annotation or relation added), the Save button will turn into green to indicate there are changes to save. Click the button {% include inline-image.html name="editor-save-button.png" width="50" %} to save the changes. </p>
     </div>
     <div class="one-third-col">
-      <div class="message">The on-premises version has the possibility of <strong>auto-save</strong>. Each change is saved automatically upon action.</div>
+      <div class="message">The OnPremises version boasts <strong>auto-save</strong>.</div>
     </div>
     <div class="two-third-col">
       <h4>Confirm a document</h4>
@@ -388,13 +388,13 @@ toc: true
       <p>Once you have confirmed a document, many actions are disabled. You can undo the Confirm action by clicking again the button. It is a toggle button.</p>
     </div>
     <div class="one-third-col">
-      <div class="message">If you have <code>Machine Learning</code> activated in Settings, each time you confirm a document, a <strong>model will be trained automatically</strong> in the background together with all the previously confirmed documents.</div>
+      <div class="message"><a href="projects.html#machine-learning-tagtog-ml">If you have <code>Machine Learning</code> activated in Settings</a>, each time you confirm a document, a <strong>model will be trained automatically</strong> in the background together with all the previously confirmed documents.</div>
     </div>
     <div class="two-third-col">
-      <h4>View / output mode</h4>
+      <h4>Download / View / Export</h4>
       <p>Here you can select which way you want to display or <strong>export</strong> the annotated document.</p>
-      <p>Annotated documents can be exported in various formats: <a href="/ioformats.html#output-formats">output formats</a></p>
-      <p><code>tagtog Web Editor</code> refers to the visualization of the annotated document in the annotation editor.</p>
+      <p>Annotated documents can be exported into various formats: <a href="/ioformats.html#output-formats">output formats</a>.</p>
+      <p>The <code>tagtog Editor</code> refers to the visualization of the annotated document in the annotation editor.</p>
       <br/>
       <h4>Remove annotations</h4>
       <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} and select the option <code>Remove annotations</code>to delete all the annotations in the current document. This won't remove the document.</p>
@@ -403,7 +403,7 @@ toc: true
       <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} and select the option <code>Remove document</code>to remove the document from the folder.</p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-view.PNG" width="250"%}
+      {% include image.html name="editor/toolbar/download-view-export.png" width="250"%}
     </div>
     <div class="two-third-col">
       <br/>

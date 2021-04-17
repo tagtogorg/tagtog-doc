@@ -319,18 +319,13 @@ tagtog_domain: https://www.tagtog.net
 <div class="page-subsection">
   <div class="two-third-col">
     <h3>Annotations</h3>
-    <h4>Pre-annotations</h4>
-    <p>These are the annotations that are created automatically while you are manually annotating a document. For example, if you annotate the gene: <code>BRA2</code>. All the mentions of <code>BRA2</code> in this text will be automatically annotated (<a href="/webeditor.html#pre-annotations">more information on pre-annotations</a>).</p>
-    <p>In this panel you can decide which are the <strong>default settings</strong> for pre-annotations: pre-selections, pre-deselections and their case sensitivity. You can always change these settings on the web editor for specific documents.</p>
+    <h4>Pre-selections</h4>
+    <p markdown="1">Here you can decide the **default settings** for: [pre-selections, pre-deselections](webeditor.html#pre-selections), and their case sensitivity. You can always [change these settings on the web editor toolbar for a specific document](webeditor.html#pre-selections-1).</p>
   </div>
-  <div class="one-third-col">
-    <div class="message">
-      You can recognize pre-annotations because they have a <strong>yellow border</strong>. If you click on a pre-selected annotation, you confirm the annotation as valid. If you click on a pre-deselect annotation, you remove the annotation.
-    </div>
-  </div>
+
   <div class="two-third-col">
     <h4>Machine Learning (tagtog ML)</h4>
-    <p>Each time you press the button <code>Confirm</code> in the annotation editor, in the background, <strong>a tagtog machine learning model is being trained with all the project documents confirmed</strong>. Next time you upload a new document, this model can predict new annotations based on this model. You can remove or add new annotations to continue training the model and get more accurate results.</p>
+    <p>Each time you press the button {% include inline-image.html name="editor-confirm-button.PNG" width="80" %} in the annotation editor, <strong>a tagtog ML model gets trained in the background with all the confirmed project documents</strong>. Next time you upload a new document, this model will predict new annotations based on the training data. You can remove or add new annotations to continue training the model and get more accurate results.</p>
     <p>If activated, tagtog machine learning will start annotating automatically from the first document confirmed. <strong>No deployments or complex configurations are required</strong>, just by annotating you can train a use a tagtog machine learning model.</p>
     <p>If you don't want to use tagtog machine learning, deactivate this option.</p>
     <p>More information on how <a title="tagtog - machine learning" href="/machine-learning.html">tagtog ML</a> works.</p>
@@ -475,9 +470,9 @@ tagtog_domain: https://www.tagtog.net
 
 Your project has also a tab _"Downloads"_ to... download stuff 😉. Depending on your role in the project, and whether the project is public or private, you will see different actionable buttons.
 
-In particular, with the button `Download All Documents (and their annotations)` you can **download as a Zip file** all your project's documents and their annotations (in [anndoc format](anndoc)). This button is available only to project admins in private projects. It is available to all logged-in users in public projects.
+In particular, with the button `Download All Documents (and their annotations)` you can **download as a Zip file** all your project's documents and their annotations (in [anndoc format](anndoc)). This button is available only to project admins in private projects. It is available to all logged-in users in public projects. Moreover, an analogous button `Download as Zip` is present in all document searches and folders (_"Documents"_ tab) to download as Zip the subset of documents that match the search.
 
-Moreover, an analogous button `Download as Zip` is present in all document searches and folders (_"Documents"_ tab) to download as Zip the subset of documents that match the search.
+In this section, you can also download a CSV file with the annotation status of your documents. This report lists in one column the document ids and in a second column the status of their `master` version (`true` if confirmed, `false` if not confirmed).
 
 Other download actions are also available, including a reference to [download documents using the API](API_documents_v1), and [exporting the annotations legend](API_settings_v1.html#annotations-legend).
 

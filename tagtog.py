@@ -79,7 +79,7 @@ def parse_arguments(argv=[]):
 
     upload_parser.add_argument("paths", nargs="+", help="paths of files or folders containing (recursively) the files to upload or otherwise the ids in the external repository (see idType) of documents to upload")
 
-    upload_parser.add_argument("--folder", default=None, help="Folder in tagtog (by index, path, or name) to upload to")
+    upload_parser.add_argument("--folder", default=None, help='Folder in tagtog to upload to; refer a folder by index (e.g. 0), or by path (e.g. "pool/mySubFolder"), or by name (e.g. "mySubFolder")')
     upload_parser.add_argument("--format", "--input", default=None, help="Input format for tagtog's request. If not given, this is guessed by the tagtog server")
     upload_parser.add_argument("--batch_size", type=int, default=10, help="Number of documents to upload to tagtog at once in batches. The number must be even if you are uploading annotated documents")
     upload_parser.add_argument("--extension", "-e", default="", help="Extension of files to upload when recursively reading files from a folder, e.g. .json or .txt. Leave it as the default, i.e. the empty string, to upload all files")

@@ -14,11 +14,13 @@ notoc: true
 
 ---
 
-## ??? 🎼
+## 3.2021-W15.0 🎼
+_2021-04-17_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Revamped [**CSV & TSV parser**](CsvFileParsing.html), now allowing escaped double quotes, commas, tabs, and even new lines! 💪 Also possible input errors are now much better reported 📊</span></li>
   <li class="new"><span markdown="1">Performance improvements in the [PDF annotation tool](pdf-annotation-tool.html) by caching and image decoding.</span></li>
+  <li class="new"><span markdown="1">Expanded & improved levels of [zooming in PDF pages 🔍](pdf-annotation-tool.html#zoom).</span></li>
   <li class="fix"><span markdown="1">In the PDF annotation tool, some images or tables were not displayed.</span></li>
   <li class="doc"><span markdown="1">Clarified documentation about [pre-selections](webeditor.html#pre-selections).</span></li>
 </ul>

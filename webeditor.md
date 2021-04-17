@@ -128,13 +128,13 @@ toc: true
         <td>Only for paginated documents as PDFs</td>
       </tr>
       <tr>
-        <td class="centered"><kbd>z</kbd></td>
-        <td>Zoom in</td>
+        <td class="centered"><kbd>x</kbd></td>
+        <td>Zoom out</td>
         <td>Only for paginated documents as PDFs</td>
       </tr>
       <tr>
-        <td class="centered"><kbd>x</kbd></td>
-        <td>Zoom out</td>
+        <td class="centered"><kbd>z</kbd></td>
+        <td>Zoom in</td>
         <td>Only for paginated documents as PDFs</td>
       </tr>
       <tr>

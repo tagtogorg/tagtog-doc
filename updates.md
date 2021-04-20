@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## ??? 🧵
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">When a projecthad big number of entity labels or document labels, the navigation of Settings was slow. This is now fixed ⚡️.</span></li>
+  <li class="fix"><span markdown="1">Better performance in the document editor when the number of document labels or entity labels is large.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W15.1 🎼
 _2021-04-19_
 

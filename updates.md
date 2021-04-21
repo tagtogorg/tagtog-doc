@@ -17,7 +17,8 @@ notoc: true
 ## ??? 🧵
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">When a projecthad big number of entity labels or document labels, the navigation of Settings was slow. This is now fixed ⚡️.</span></li>
+  <li class="sec"><span markdown="1">401/Unauthorized responses now properly add the [`WWW-Authenticate`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate) header to comply with the recommendations and to play well with non-preemptive authentication http clients (e.g. Apache HttpClient; refs. [1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication), [2](https://github.com/apache/httpcomponents-client/tree/4.5.x/httpclient/src/examples/org/apache/http/examples/client/ClientPreemptiveBasicAuthentication.java), [3](https://stackoverflow.com/a/51240654/341320)).</span></li>
+  <li class="fix"><span markdown="1">When a project had a big number of entity labels or document labels, the navigation of Settings was slow. This is now fixed ⚡️.</span></li>
   <li class="fix"><span markdown="1">Better performance in the document editor when the number of document labels or entity labels is large.</span></li>
 </ul>
 

@@ -76,7 +76,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 <h3>Flexible seats</h3>
 
-In OnPremises, you can have more annotators than your license allows. However, you can only have that many <strong>active</strong> users as it allows. Let's say you have a license for 25 annotators - therefore, you can have more users than 25, but only 25 of them can be <strong>active</strong>. Other users must be <strong>inactive</strong>.
+In OnPremises, you can have more users than your license allows. However, you can only have that many <strong>active</strong> users as it allows. For example, let's say you have a license for 25 annotators - therefore, you can have more users created than 25, but only 25 of them can be <strong>active</strong>. The rest of the users must be <strong>inactive</strong>.
 
 <div class="img-with-caption">
   <img src="/assets/img/sysadmin/users-limits_updated.png" width="50%" align="center" alt="Screenshot: panel informing about users in the system & limit of active users" />

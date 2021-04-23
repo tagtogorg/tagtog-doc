@@ -76,7 +76,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 <h3>Flexible seats</h3>
 
-In OnPremises, you can have more users than your license allows. However, you can only have that many <strong>active</strong> users as it allows. For example, let's say you have a license for 25 annotators - therefore, you can have more users created than 25, but only 25 of them can be <strong>active</strong>. The rest of the users must be <strong>inactive</strong>.
+In OnPremises, your tagtog license allows you a maximum number of <strong>active</strong> users. However, you could have in your system more users created (which will necessarily be <strong>inactive</strong>). For example, let's say you have a tagtog license for 25 annotators. In this case, you could have more users registered than 25, but only 25 of them can be <strong>active</strong>. The rest of the users must be <strong>inactive</strong>.
 
 <div class="img-with-caption">
   <img src="/assets/img/sysadmin/users-limits_updated.png" width="50%" align="center" alt="Screenshot: panel informing about users in the system & limit of active users" />
@@ -84,7 +84,7 @@ In OnPremises, you can have more users than your license allows. However, you ca
 </div>
 
 
-When a user is <strong>inactive</strong>, he cannot log in, perform requests through API. Moreover, his annotations cannot be modified. You can easily <strong>activate</strong> and <strong>deactivate</strong> users in the sysadmin panel.
+When a user is <strong>inactive</strong>, he cannot log in (nor call the API). Moreover, his annotations cannot be modified. You can easily <strong>activate</strong> and <strong>deactivate</strong> users in the sysadmin panel.
 
 You don't have to worry about <strong>inactive</strong> users' data - it remains, as long as he is not removed from the project. When you <strong>activate</strong> his account, he will be able to continue his work.
 

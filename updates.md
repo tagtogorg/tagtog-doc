@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🧵
+## 3.2021-W16.0 🧵
+_2021-04-24_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises ENTERPRISE) New license model: [**floating seats**](on-premises-sysadmin.html#license-model-floating-seats). Before, when your team members left or shifted, you had to remove their tagtog user accounts -- thus losing their data! Now, you can just deactivate their user accounts, which leaves all their annotations untouched & readily available in tagtog 😃. Moreover, you can flexibly assign the free active seats to new members in your team. 🙆‍♀️</span></li>

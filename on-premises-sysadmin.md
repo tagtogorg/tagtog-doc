@@ -91,7 +91,7 @@ Changing the "is active" status of your users is always possible and easily done
    <p class="list-item" markdown="1"><span class="list-item-6"></span>**Is active**: flag to indicate whether the new user will be [active or not](#license-model-floating-seats).</p>
 </div>
 <div class="one-third-col">
-  {% include image.html name="sysadmin-onpremises-user-update_updated_2.png" caption="Create &amp; edit user view" width="90%" %}
+  {% include image.html name="sysadmin/user-create-or-update.png" caption="Create &amp; edit user view" width="90%" %}
 </div>
 
 <div class="two-third-col">

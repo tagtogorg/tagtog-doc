@@ -56,6 +56,11 @@ Changing the "is active" status of your users is always possible and easily done
 
 **Your benefit**: if your team members rotate, leave, or change, you don't have to remove their tagtog users. As long as your inactive users remain invited to the projects, all their data will still be there. Moreover, if you activate their tagtog users again, they will be able to continue their work.
 
+<div class="img-with-caption" align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/aYsouRrJ_Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>Video explaining the floating seats tagtog license model.</p>
+</div>
+
 </div>
 
 

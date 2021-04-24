@@ -54,7 +54,7 @@ In OnPremises, your tagtog license allows you a maximum number of **active** use
 
 Changing the "is active" status of your users is always possible and easily done in the [user panel](#user-panel).
 
-**Your benefit**: if your team members rotate, leave, or change, you don't have to remove their tagtog users. As long as your inactive users remain invited to the projects, all their data will still be there. Moreover, if you activate their tagtog users again, they will be able to continue their work.
+**Your benefit**: if your team members rotate, leave, or change, you don't have to remove their tagtog users. You can just deactivate them. Then, as long as your inactive users remain invited to the projects, all their data will still be there. Moreover, if you activate their tagtog users again, they will be able to pick up their work. This gives you peace of mind and more flexibility.
 
 <div class="img-with-caption" align="center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/aYsouRrJ_Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -78,7 +78,7 @@ Changing the "is active" status of your users is always possible and easily done
   <p class="list-item" markdown="1"><span class="list-item-3"></span>**Username**</p>
   <p class="list-item" markdown="1"><span class="list-item-4"></span>**Email**</p>
   <p class="list-item" markdown="1"><span class="list-item-5"></span>**Creation date**: date the user account was created in.</p>
-  <p class="list-item" markdown="1"><span class="list-item-6"></span>**Can create projects**: flag to indicate whether the user can create projects or not.</p>
+  <p class="list-item" markdown="1"><span class="list-item-6"></span>**Can create projects**: flag to indicate whether the user can create projects or not. Users who cannot create projects, can only work in projects they are invited to. This is useful when you want in your organization only one or a small set of accounts owning all the projects. This makes control & management easier.</p>
   <p class="list-item" markdown="1"><span class="list-item-7"></span>**Has password**: accounts with `Basic authentication` have password. `Single sign-on` accounts don't have password within the application.</p>
 
   {% include image.html name="sysadmin/users-panel.png" caption="User panel: inspect, create, update, and delete users." %}
@@ -92,7 +92,7 @@ Changing the "is active" status of your users is always possible and easily done
   <p class="list-item" markdown="1"><span class="list-item-2"></span>**Username**: the new user's username.</p>
   <p class="list-item" markdown="1"><span class="list-item-3"></span>**Email**: the new user's email.</p>
   <p class="list-item" markdown="1"><span class="list-item-4"></span>**Password**: the password of the new user. The user can later change the password. This field is only required for accounts with `Basic authentication`.</p>
-  <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: a flag to indicate whether the new user can create tagtog projects or not. Users who cannot create projects, can only work in projects they are invited to.</p>
+  <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: flag to indicate whether the new user can create tagtog projects or not.</p>
    <p class="list-item" markdown="1"><span class="list-item-6"></span>**Is active**: flag to indicate whether the new user will be [active or not](#license-model-floating-seats).</p>
 </div>
 <div class="one-third-col">

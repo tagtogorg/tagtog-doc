@@ -41,7 +41,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 ### License model: floating seats
 
-In OnPremises, your tagtog license allows you a maximum number of **active** users (seats). On top, you can have in your system more created users (which will necessarily be **inactive**). For example, let's say you have a tagtog license for 25 annotators. In this case, you could have more users registered than 25, but only 25 of them can be **active**. The rest of the users must be **inactive**.
+In OnPremises, your tagtog license allows you a maximum number of **active** users (seats). On top, in the [tagtog ENTERPRISE plan](https://www.tagtog.net/-plans#ONPREMISES), you can have in your system more users created (which will necessarily be **inactive**). For example, let's say you have a tagtog ENTERPRISE license for 25 annotators. In this case, you could have more users registered than 25, but only 25 of them can be **active**. The rest of the users must be **inactive**.
 
 <div class="img-with-caption">
   <img src="/assets/img/sysadmin/users-summary-info.png" width="40%" alt="Screenshot: panel informing about users in the system & limit of active users" />

@@ -54,11 +54,11 @@ In OnPremises, your tagtog license allows you a maximum number of **active** use
 
 Changing the "is active" status of your users is always possible and easily done in the [user panel](#user-panel).
 
-**Your benefit**: if your team members rotate, leave, or change, you don't have to remove their tagtog users. You can just deactivate them. Then, as long as your inactive users remain invited to the projects, all their data will still be there. Moreover, if you activate their tagtog users again, they will be able to pick up their work. This gives you peace of mind and more flexibility.
+**Your benefit**: if your team members rotate, leave, or change, you don't have to remove their tagtog users. You can just deactivate them. Then, as long as your inactive users remain invited to the projects, all their data will still be there. Moreover, if you activate their tagtog users again, they will be able to pick up their work. This gives you more flexibility and peace of mind.
 
 <div class="img-with-caption" align="center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/aYsouRrJ_Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <p>Video explaining the floating seats tagtog license model.</p>
+  <p>Floating seats: flexibly assign & re-assign your free active seats.</p>
 </div>
 
 </div>

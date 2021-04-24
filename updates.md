@@ -14,6 +14,23 @@ notoc: true
 
 ---
 
+## 3.2021-W16.0 🧵
+_2021-04-24_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises ENTERPRISE) New license model: [**floating seats**](on-premises-sysadmin.html#license-model-floating-seats). Before, when your team members left or shifted, you had to remove their tagtog user accounts -- thus losing their data! Now, you can just deactivate their user accounts, which leaves all their annotations untouched & readily available in tagtog 😃. Moreover, you can flexibly assign the free active seats to new members in your team. 🙆‍♀️</span></li>
+  <li class="sec"><span markdown="1">401/Unauthorized responses now properly add the [`WWW-Authenticate`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate) header to comply with the recommendations and to play well with non-preemptive authentication http clients (e.g. Apache HttpClient; refs. [1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication), [2](https://github.com/apache/httpcomponents-client/tree/4.5.x/httpclient/src/examples/org/apache/http/examples/client/ClientPreemptiveBasicAuthentication.java), [3](https://stackoverflow.com/a/51240654/341320)).</span></li>
+  <li class="fix"><span markdown="1">When a project had a big number of entity labels or document labels, the navigation of Settings was slow. This is now fixed ⚡️.</span></li>
+  <li class="fix"><span markdown="1">Better performance in the document editor when the number of document labels or entity labels is large.</span></li>
+</ul>
+
+<div class="img-with-caption" align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/aYsouRrJ_Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>Floating seats: flexibly assign & re-assign your free active seats.</p>
+</div>
+
+---
+
 ## 3.2021-W15.1 🎼
 _2021-04-19_
 

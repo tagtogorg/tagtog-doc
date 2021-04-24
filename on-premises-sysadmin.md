@@ -23,45 +23,80 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 <div class="two-third-col">
   <h2>How to access</h2>
   <p>Go to your root domain set for tagtog (either an IP or a custom domain) and access the <code>/-sysadmin</code> relative path; for example: <code>{{page.onpremises_tagtog_domain}}/-sysadmin</code>. You will be prompted with a basic authentication panel, to enter the fields:</p>
-  <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the subscription license name</p>
-  <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the subscription license key</p>
+  <p class="list-item"><span class="list-item-1"></span><strong>Username</strong>: use the subscription license name.</p>
+  <p class="list-item"><span class="list-item-2"></span><strong>Password</strong>: use the subscription license key.</p>
 </div>
 <div class="one-third-col">
   <div class="message">
-    <strong>License information</strong> is sent to you by email by the tagtog team when you first purchased your tagtog OnPremises subscription.
+    <strong>License information</strong> is sent to you by email by the tagtog team when you purchase your tagtog OnPremises subscription.
   </div>
 </div>
 
 <div class="two-third-col">
   <h2>User Management</h2>
+
+</div>
+
+<div class="two-third-col" markdown="1">
+
+### License model: floating seats
+
+In OnPremises, your tagtog license allows you a maximum number of **active** users (seats). On top, in the [tagtog ENTERPRISE plan](https://www.tagtog.net/-plans#ONPREMISES), you can have in your system more users created (which will necessarily be **inactive**). For example, let's say you have a tagtog ENTERPRISE license for 25 annotators. In this case, you could have more users registered than 25, but only 25 of them can be **active**. The rest of the users must be **inactive**.
+
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/users-summary-info.png" width="40%" alt="Screenshot: panel informing about users in the system & limit of active users" />
+  <p>Panel informing about users in the system & limit of active users.</p>
+</div>
+
+**Active** users are regular users, which can use the system.
+
+**Inactive** users, however, cannot log in. Moreover, their annotations cannot be modified.
+
+Changing the "is active" status of your users is always possible and easily done in the [user panel](#user-panel).
+
+**Your benefit**: if your team members rotate, leave, or change, you don't have to remove their tagtog users. You can just deactivate them. Then, as long as your inactive users remain invited to the projects, all their data will still be there. Moreover, if you activate their tagtog users again, they will be able to pick up their work. This gives you peace of mind and more flexibility.
+
+<div class="img-with-caption" align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/aYsouRrJ_Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>Video explaining the floating seats tagtog license model.</p>
+</div>
+
+</div>
+
+
+<div class="two-third-col">
+
   <h3>User panel</h3>
   <p>The user panel displays a list of the users registered in the instance. You can:</p>
   <p class="list-item" markdown="1"><span class="list-item-1"></span>**Create new accounts**: you can add a user account directly in the sysadmin panel.</p>
   <p class="list-item" markdown="1"><span class="list-item-2"></span>**Edit accounts**: edit the users' accounts main information. Edit a user from the system by clicking on the edit button {% include inline-image.html name="edit_pencil.png" width="20" %}</p>
   <p class="list-item" markdown="1"><span class="list-item-3"></span>**Remove accounts**: remove users that for example do not use anymore the application. Remove a user from the system by clicking on the remove button {% include inline-image.html name="editor-doc-remove.PNG" %}.</p>
 
-  <p>Fields in the table</p>
+  <p>Fields in the table:</p>
   <p class="list-item" markdown="1"><span class="list-item-1"></span>**Count**: index of the user.</p>
-  <p class="list-item" markdown="1"><span class="list-item-2"></span>**Username**</p>
-  <p class="list-item" markdown="1"><span class="list-item-3"></span>**Email**</p>
-  <p class="list-item" markdown="1"><span class="list-item-4"></span>**Creation date**: date the user account was created.</p>
-  <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: flag to indicate whether the user can create projects or not.</p>
-  <p class="list-item" markdown="1"><span class="list-item-6"></span>**Has password**: accounts with `Basic authentication` have password. `Single sign-on` accounts don't have password within the application.</p>
+  <p class="list-item" markdown="1"><span class="list-item-2"></span>**Is active**: flag to indicate whether the user is [active or not](#license-model-floating-seats).</p>
+  <p class="list-item" markdown="1"><span class="list-item-3"></span>**Username**</p>
+  <p class="list-item" markdown="1"><span class="list-item-4"></span>**Email**</p>
+  <p class="list-item" markdown="1"><span class="list-item-5"></span>**Creation date**: date the user account was created in.</p>
+  <p class="list-item" markdown="1"><span class="list-item-6"></span>**Can create projects**: flag to indicate whether the user can create projects or not. Users who cannot create projects, can only work in projects they are invited to. This is useful when you want in your organization only one or a small set of accounts owning all the projects. This makes control & management easier.</p>
+  <p class="list-item" markdown="1"><span class="list-item-7"></span>**Has password**: accounts with `Basic authentication` have password. `Single sign-on` accounts don't have password within the application.</p>
 
-  {% include image.html name="sysadmin-onpremises-users.png" caption="User panel: inspect, create, update, and delete users." %}
+  {% include image.html name="sysadmin/users-panel.png" caption="User panel: inspect, create, update, and delete users." %}
+
 </div>
 
 <div class="two-third-col">
   <h3>Create a new user</h3>
   <p markdown="1">To create a new user using the sysadmin user panel, click on **+ Add new user**. A form will show up with the following fields:</p>
   <p class="list-item" markdown="1"><span class="list-item-1"></span>**Account type**: `Basic authentication` (regular tagtog account with username and password) or `Single sign-on` ([documentation](on-premises-sysadmin.html#single-sign-on-sso)). <br/> In the user panel, accounts with `Basic authentication` with the flag `Has Password`   </p>
-  <p class="list-item" markdown="1"><span class="list-item-2"></span>**Username**: the username of the new user.</p>
-  <p class="list-item" markdown="1"><span class="list-item-3"></span>**Email**: the email of the new user.</p>
+  <p class="list-item" markdown="1"><span class="list-item-2"></span>**Username**: the new user's username.</p>
+  <p class="list-item" markdown="1"><span class="list-item-3"></span>**Email**: the new user's email.</p>
   <p class="list-item" markdown="1"><span class="list-item-4"></span>**Password**: the password of the new user. The user can later change the password. This field is only required for accounts with `Basic authentication`.</p>
-  <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: a flag to indicate whether the new user can create tagtog projects or not. Users who cannot create projects, can only work in projects they are invited to.</p>
+  <p class="list-item" markdown="1"><span class="list-item-5"></span>**Can create projects**: flag to indicate whether the new user can create tagtog projects or not.</p>
+   <p class="list-item" markdown="1"><span class="list-item-6"></span>**Is active**: flag to indicate whether the new user will be [active or not](#license-model-floating-seats).</p>
 </div>
 <div class="one-third-col">
-  {% include image.html name="sysadmin-onpremises-user-update.png" caption="Create &amp; edit user view" width="90%" %}
+  {% include image.html name="sysadmin/user-create-or-update.png" caption="Create &amp; edit user view" width="90%" %}
 </div>
 
 <div class="two-third-col">

@@ -6,7 +6,22 @@ id: quick_tutorials
 notoc: true
 ---
 
-Know what you can do with tagtog with the following tutorials. Moreover, we publish other tips on our [🗞 Medium blog](https://medium.com/@tagtog).
+Know what you can do withe tagtog with the following tutorials. Moreover, we publish other tips on our [🗞 Medium blog](https://medium.com/@tagtog).
+
+
+<div class="two-third-col" markdown="1">
+
+## [How to annotate scans for NLP](https://tagtog.medium.com/how-to-annotate-scans-for-nlp-7333ad4bab3a?source=friends_link&sk=ca708d310fee15aa4573dfafe11bfe95)
+
+Learn how to integrate an external OCR software into tagtog, including [fully-functioning java code](https://github.com/tagtog/java-ocr-amazon-textract-searchable-pdf) to:
+
+1. OCR scans calling the APIs of Amazon Textract
+2. Uplaod the resulting text-embedded PDFs into tagtog (to do there the labeling)
+
+</div>
+<div class="one-third-col">
+  <div vertical-align="center"><img width="80%" src="/assets/img/tutorials/2021-04-27-scans-OCR-PDF.png"></div>
+</div>
 
 <div class="two-third-col">
   <h2><a title="Connect your NLP models to tagtog using webhooks" href="https://tagtog.medium.com/connect-your-nlp-models-to-tagtog-using-webhooks-13d422ae4dff">Connect your NLP models to tagtog using webhooks</a></h2>
@@ -17,7 +32,7 @@ Know what you can do with tagtog with the following tutorials. Moreover, we publ
   <p class="list-item"><span class="list-item-4"></span>How using webhooks will make the training of your model more accessible</p>
 </div>
 <div class="one-third-col">
-  {% include image.html name="webhook_icon.png" %}
+  {% include image.html width="80%" name="webhook_icon.png" %}
 </div>
 
 <div class="two-third-col">

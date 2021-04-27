@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ???
+
+<ul class="updates">
+  <li class="doc"><span markdown="1">New tutorial! [Learn how to integrate an external OCR software](quick-tutorials.html#how-to-annotate-scans-for-NLP) (e.g. Google Vision, Tesseract, or Amazon Textract) into tagtog!</span></li>
+</ul>
+
+---
+
 ## 3.2021-W16.0 🧵
 _2021-04-24_
 

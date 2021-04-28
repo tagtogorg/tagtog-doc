@@ -18,6 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="doc"><span markdown="1">New tutorial! [Learn how to integrate an external OCR software](quick-tutorials.html#how-to-annotate-scans-for-NLP) (e.g. Google Vision, Tesseract, or Amazon Textract) into tagtog!</span></li>
+  <li class="doc"><span markdown="1">(OnPremises) added more documentation for [dealing with](on_premises_README.html#tlsssl-certificate-warning-security-risk) and/or [installing your desired TLS/SSL certificate](on_premises_README.html#https--tls-ssl--installing-your-own-certificate).</span></li>
 </ul>
 
 ---

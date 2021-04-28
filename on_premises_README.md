@@ -403,3 +403,14 @@ Your solutions are three, either:
 1. Accept (trust) the tagtog default self-signed certificate in your browser. As this entirely depends on your individual browser, version, and sometimes OS too, please look up your specific case.
 2. Create your own self-signed certificate and [install the TLS/SSL certificate in your tagtog instance](#https--tls-ssl--installing-your-own-certificate). You will still need to configure your browser/s to trust that certificate.
 3. Buy a certificate from a well-known [Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority) & consequently [install this certificate in tagtog](#https--tls-ssl--installing-your-own-certificate).
+
+
+### The webapp or another container just logs "Killed"
+
+If you read "Killed" or "Killed process" in one of the [containers' logs](on_premises_README.html#troubleshooting), chances are that you need to increase the memory of your server / VM. [Please consider our minimal & recommended machine requirements](on_premises_README.html#machine-requirements).
+
+If you are running Docker Desktop, on Windows or macOs, you need to look into these preferences, and increase the memory if needed:
+
+<div class="img-with-caption">
+  <img src="/assets/img/onpremises/docker-desktop-preferences.png" width="80%" alt="Screenshot: Docker Desktop Preferences Pane" />
+</div>

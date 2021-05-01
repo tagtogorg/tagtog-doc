@@ -14,6 +14,17 @@ notoc: true
 
 ---
 
+## 3.2021-W17.0 🧭
+_2021-05-01_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Fixed document navigation bug which resulted in the error `"0 of 0"` and not being able to proceed with the navigation. This happened before when the search results changed during navigation (e.g. upon new documents upload). This is now fixed! 🎉</span></li>
+  <li class="doc"><span markdown="1">New tutorial! [Learn how to integrate an external OCR software](quick-tutorials.html#how-to-annotate-scans-for-NLP) (e.g. Google Vision, Tesseract, or Amazon Textract) into tagtog!</span></li>
+  <li class="doc"><span markdown="1">(OnPremises) added more documentation for [dealing with](on_premises_README.html#tlsssl-certificate-warning-security-risk) and/or [installing your desired TLS/SSL certificate](on_premises_README.html#https--tls-ssl--installing-your-own-certificate).</span></li>
+</ul>
+
+---
+
 ## 3.2021-W16.0 🧵
 _2021-04-24_
 

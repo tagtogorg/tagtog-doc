@@ -124,11 +124,13 @@ export TAGTOG_HOME="$PWD/tagtog_data"
 * Point your browser now to: `https://<tagtog_running_ip>:<tagtog_https_port>` (the port defaults to 443; [you can change the port](#conflicts-with-ports-000080-bind-address-already-in-use-)).
 
 
-### HTTPS & TLS (SSL)
+### HTTPS & TLS (SSL) + Installing your own certificate
 
-**tagtog runs on _https_ only** and redirects all http requests to https. We recommend setting your http and https ports to the defaults 80 and 443, but you are free to [choose other ports](#conflicts-with-ports-000080-bind-address-already-in-use-). See the `tagtog_on_premises` script.
+**tagtog runs on _https_ only** and redirects all http requests to https. We recommend setting your http and https ports to the defaults 80 and 443, but you are free to [choose other ports](#conflicts-with-ports-000080-bind-address-already-in-use-).
 
-By default, tagtog uses a TLS/SSL self-signed certificate. To use your own TLS/SSL certificate, place the following 2 files in the folder `${TAGTOG_HOME}/ssl`:
+By default, tagtog uses a TLS/SSL self-signed certificate.
+
+To use your own TLS/SSL certificate, place the following 2 files (with the same exact given filenames) in the folder `${TAGTOG_HOME}/ssl`:
 
 * `tagtog_PRIVATE_KEY.key` (you can use a symlink)
 * `tagtog_SSL_CERTIFICATE.pem` (you can use a symlink)
@@ -390,3 +392,25 @@ establish a secure connection to it. To learn more about this situation and
 how to fix it, please visit the web page mentioned above.
 An error happened:
 ```
+
+
+### TLS/SSL certificate warning (security risk)
+
+[By default tagtog OnPremises uses a self-signed certificate](#https--tls-ssl--installing-your-own-certificate). This means that, when accessing your tagtog installations, all browsers will either report a security warning or not even allow entering the site.
+
+Your solutions are three, either:
+
+1. Accept (trust) the tagtog default self-signed certificate in your browser. As this entirely depends on your individual browser, version, and sometimes OS too, please look up your specific case.
+2. Create your own self-signed certificate and [install the TLS/SSL certificate in your tagtog instance](#https--tls-ssl--installing-your-own-certificate). You will still need to configure your browser/s to trust that certificate.
+3. Buy a certificate from a well-known [Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority) & consequently [install this certificate in tagtog](#https--tls-ssl--installing-your-own-certificate).
+
+
+### The webapp or another container just logs "Killed"
+
+If you read "Killed" or "Killed process" in one of the [containers' logs](on_premises_README.html#troubleshooting), chances are that you need to increase the memory of your server / VM. [Please consider our minimal & recommended machine requirements](on_premises_README.html#machine-requirements).
+
+If you are running Docker Desktop, on Windows or macOs, you need to look into these preferences, and increase the memory if needed:
+
+<div class="img-with-caption">
+  <img src="/assets/img/onpremises/docker-desktop-preferences.png" width="80%" alt="Screenshot: Docker Desktop Preferences Pane" />
+</div>

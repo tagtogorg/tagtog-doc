@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? ⚡️
+## 3.2021-W18.2 ⚡️
+_2021-05-08_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) now the tagtog docker cluster image is 32% leaner! (reduced from ~900MB to ~600MB). This means faster downloads and a lower memory footprint!</span></li>

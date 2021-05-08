@@ -19,7 +19,7 @@ _2021-05-08_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) now the tagtog docker cluster image is 32% leaner! (reduced from ~900MB to ~600MB). This means faster downloads and a lower memory footprint!</span></li>
-  <li class="fix"><span markdown="1">Limited maximum number of annotation tasks (anntasks) to 100. This avoids performance issues down the lince (e.g. in the Metrics tab).</span></li>
+  <li class="fix"><span markdown="1">Limited maximum number of annotation tasks (anntasks) to 100. This avoids performance issues down the line (e.g. in the Metrics tab).</span></li>
 </ul>
 
 ---

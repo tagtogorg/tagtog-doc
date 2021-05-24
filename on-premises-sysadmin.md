@@ -41,11 +41,11 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 ### License model: floating seats
 
-In OnPremises, your tagtog license allows you a maximum number of **active** users (seats). On top, in the [tagtog ENTERPRISE plan](https://www.tagtog.net/-plans#ONPREMISES), you can have in your system more users created (which will necessarily be **inactive**). For example, let's say you have a tagtog ENTERPRISE license for 25 annotators. In this case, you could have more users registered than 25, but only 25 of them can be **active**. The rest of the users must be **inactive**.
+In OnPremises, your tagtog license allows you a maximum number of **active** users (seats). On top, in the [tagtog ENTERPRISE plan](https://www.tagtog.net/-plans#ONPREMISES), you can have in your system more users created. For example, let's say you have a tagtog ENTERPRISE license for 25 annotators. In this case, you could have more users registered than 25, but only 25 of them can be **active**. The rest of the users must be **inactive**.
 
-<div class="img-with-caption">
-  <img src="/assets/img/sysadmin/users-summary-info.png" width="40%" alt="Screenshot: panel informing about users in the system & limit of active users" />
-  <p>Panel informing about users in the system & limit of active users.</p>
+<div class="img-with-caption" align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/aYsouRrJ_Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>Floating seats: flexibly assign & re-assign your free active seats.</p>
 </div>
 
 **Active** users are regular users, which can use the system.
@@ -56,9 +56,9 @@ Changing the "is active" status of your users is always possible and easily done
 
 **Your benefit**: if your team members rotate, leave, or change, you don't have to remove their tagtog users. You can just deactivate them. Then, as long as your inactive users remain invited to the projects, all their data will still be there. Moreover, if you activate their tagtog users again, they will be able to pick up their work. This gives you more flexibility and peace of mind.
 
-<div class="img-with-caption" align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/aYsouRrJ_Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <p>Floating seats: flexibly assign & re-assign your free active seats.</p>
+<div class="img-with-caption">
+  <img src="/assets/img/sysadmin/users-summary-info.png" width="40%" alt="Screenshot: panel informing about users in the system & limit of active users" />
+  <p>Panel informing about users in the system & limit of active users.</p>
 </div>
 
 </div>

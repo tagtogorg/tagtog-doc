@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 👪
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">(OnPremises) fixed some wrongly disallowed accesess in a floating seats workflow.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W18.2 ⚡️
 _2021-05-08_
 

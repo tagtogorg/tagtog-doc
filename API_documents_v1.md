@@ -1277,6 +1277,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/ite
   </ul>
   <div class="tab">
   <p class="code-desc">This example shows how to import a PDF along with its annotations. The format used is <code>default-plus-annjson</code> as we want the PDF to use the default format and import annotations for this file. The input files are in Github, you can find a link below.</p>
+  <p class="code-desc" markdown="1">If you are rather annotating the PDF through tagtog's internal [plain.html](anndoc.html#plain-html) (which contains the PDF's text), take a look at this fully-working [GitHub sample repository](https://github.com/tagtog/demo-webhooks/blob/main/app.py).</p>
   <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
   ```python
   import requests

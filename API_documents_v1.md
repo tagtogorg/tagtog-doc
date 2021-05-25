@@ -1240,7 +1240,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/ite
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
   ```
-  <p style="float:right">Files{% include github-link.html target="snippets/files" %}</p>
+  <p style="float:right">{% include github-link.html target="snippets/files" %}</p>
   </div>
 </div>
 </div>
@@ -1292,7 +1292,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/ite
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
   ```
-  <p style="float:right">Files{% include github-link.html target="snippets/files" %}</p>
+  <p style="float:right">{% include github-link.html target="snippets/files" %}</p>
   </div>
 </div>
 </div>

@@ -14,6 +14,17 @@ notoc: true
 
 ---
 
+## 3.2021-W21.0 👪
+_2021-05-29_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Before, uploading annotations to members with [`anncomplete=true`](anndoc.html#ann-json) got not reflected in the document search results (by querying for [`members_anncomplete`](search-queries.html#search-which-documents-a-user-has-confirmed)). Fixed! 😺</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) fixed some wrongly disallowed accesess in a floating seats workflow.</span></li>
+  <li class="doc"><span markdown="1">Generalized the [sample repository on webhooks](https://github.com/tagtog/demo-webhooks) to work with any file, also Native PDFs!</span></li>
+</ul>
+
+---
+
 ## 3.2021-W18.2 ⚡️
 _2021-05-08_
 

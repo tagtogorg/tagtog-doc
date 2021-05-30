@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 👪
+## 3.2021-W21.1 👪
+_2021-05-30_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Before, uploading annotations to members with [`anncomplete=true`](anndoc.html#ann-json) got not reflected in the document search results (by querying for [`members_anncomplete`](search-queries.html#search-which-documents-a-user-has-confirmed)). Fixed! 😺</span></li>

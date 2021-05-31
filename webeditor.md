@@ -201,7 +201,7 @@ toc: true
     <div class="two-third-col">
       <h5>Pre-selections</h5>
       <p>Automatic annotations created upon the manual creation or removal of other <strong>equal annotation</strong> (same entity type and same text). These type of annotations increase annotator's <strong>efficiency</strong> as potential candidates for new/to-remove annotations are automatically identified.</p>
-      <p>Currently, pre-selections don't work in the <a href="pdf-annotation-tool.html" title="tagtog - PDF annotation tool">PDF annotation tool</a>.</p>
+      <p>Pre-selections also work in the <a href="pdf-annotation-tool.html" title="tagtog - PDF annotation tool">PDF annotation tool</a>.</p>
       <table style="width:100%">
         <tr>
           <th>Type</th>

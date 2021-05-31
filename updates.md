@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 🧲
+
+<ul class="updates">
+  <li class="new"><span markdown="1">[Pre-selections](webeditor.html#pre-selections) are now available in the native PDF editor! When you make a new annotation, tagtog will find all the occurrences in the whole document with the same text and automatically create new annotations.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W21.1 👪
 _2021-05-30_
 

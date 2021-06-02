@@ -2330,6 +2330,7 @@ The merging's [ann.json](anndoc.html#ann-json) result.
 
 This assumes that the member to copy the annotations from, actually has some annotations (nevermind confirmed or not). It's also possible to copy the annotations of master to another member or viceversa.
 
+NOTE: by default, the server will not allow copying the annotations if the `saveTo` member (the target) already had annotations. This can be overriden with the `overwrite` parameter.
 
 * Method: `POST`
 * Endpoint: `{{ page.api_versions_endpoint }}/copy{{ page.mandatory_query_parameters }}`
@@ -2338,11 +2339,12 @@ This assumes that the member to copy the annotations from, actually has some ann
 
 Body: None
 
-| Type  | Name     | Default | Example        | Description                                                                                                                                                      |
-|-------|----------|---------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Query | `docid`  |         | "xxx-text.txt" | tagtog's id of the document (annotations) to copy.                                                                                                               |
-| Query | `from`   |         | "user-A"       | project member's username (incl. "master") to copy the annotations from.                                                                                         |
-| Query | `saveTo` |         | "user-B"       | project member's username (incl. "master") to save the annotations to. The resulting annotations are always returned in the body response as an ann.json object. |
+| Type  | Name        | Default | Example        | Description                                                                                                                                                              |
+|-------|-------------|---------|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Query | `docid`     |         | "xxx-text.txt" | tagtog's id of the document (annotations) to copy.                                                                                                                       |
+| Query | `from`      |         | "user-A"       | source; project member's username (incl. "master") to copy the annotations from.                                                                                         |
+| Query | `saveTo`    |         | "user-B"       | target; project member's username (incl. "master") to save the annotations to. The resulting annotations are always returned in the body response as an ann.json object. |
+| Query | `overwrite` | false   | true           | Unless this is explicitly set to true, the server will throw an error when the target member already has annotations.                                                    |
 
 **Output**
 

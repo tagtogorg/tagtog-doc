@@ -18,8 +18,8 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">[Pre-selections](webeditor.html#pre-selections) are now available in the Native PDF editor! When you make a new annotation, tagtog will find all the occurrences in the whole document with the same text and automatically create new annotations.</span></li>
-  <li class="fix"><span markdown="1">The option to reset the [filter for entities](https://docs.tagtog.net/webeditor.html#filter-entities) is now also visible when you type the entity text.</span></li>
-  <li class="fix"><span markdown="1">When you are in Document Review mode, it was not possible to jump on the following entity upon entity removal under specific scenarios. This issue was limited to the Native PDF editor when the following entity was on a different page.</span></li>
+  <li class="fix"><span markdown="1">The option to reset the [filter for entities](webeditor.html#filter-entities) is now also visible when you type the entity text.</span></li>
+  <li class="fix"><span markdown="1">When you are in [Document Review mode](webeditor.html#document-review), it was not possible to jump on the following entity upon entity removal under specific scenarios. This issue was limited to the Native PDF editor when the following entity was on a different page.</span></li>
 </ul>
 
 ---

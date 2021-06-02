@@ -2289,11 +2289,12 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 
 <div class="two-third-col" markdown="1">
 
-## Manage annotation versions (Adjudication)
+## Manage annotation versions
+
+**🤠𝛂 These APIs are in alpha, and can change at any moment. We give early access for your benefit.**
+
 
 ### Merge the annotations of a document (Automatic Adjudication)
-
-**🤠𝛂 This API is in alpha, and can change at any moment. We give early access for your benefit.**
 
 Merge the _confirmed_ members' annotations of a document.
 
@@ -2308,9 +2309,9 @@ You can [know which documents have at least one version confirmed](search-querie
 
 Body: None
 
-| Type  | Name    | Default | Example                                 | Description                           |
-|-------|---------|---------|-----------------------------------------|---------------------------------------|
-| Query | `docid` |         | "aeTJs3Ce9udaTUTtGt5RVqSjhSOu-text.txt" | tagtog's id of the document to merge. |
+| Type  | Name    | Default | Example        | Description                           |
+|-------|---------|---------|----------------|---------------------------------------|
+| Query | `docid` |         | "xxx-text.txt" | tagtog's id of the document to merge. |
 | Query | `strategy`          |         | "union_v1"                              | Merging strategy, in: <br>[`union_v1`](collaboration.html#automatic-adjudication-by-union), <br>[`intersection_v1`](collaboration.html#automatic-adjudication-by-intersection), <br>[`majority_v1`](collaboration.html#automatic-adjudication-by-majority-vote), <br>[`best_iaa_v1`](collaboration.html#automatic-adjudication-based-on-iaa)`               |
 | Query | `saveTo` (OPTIONAL) | N.A.    | "master"     | project member's username (incl. "master") to save the annotation merging result to. The merging result is always returned in the body response as an ann.json object. Additionally, if you set this parameter, the result annotations will be saved in the given member.                                                                                              |
 
@@ -2321,6 +2322,36 @@ Successful status code: `200` (OK)
 Payload: JSON (application/json)
 
 The merging's [ann.json](anndoc.html#ann-json) result.
+
+
+
+
+### Copy the annotations from a member to another one
+
+This assumes that the member to copy the annotations from, actually has some annotations (nevermind confirmed or not). It's also possible to copy the annotations of master to another member or viceversa.
+
+
+* Method: `POST`
+* Endpoint: `{{ page.api_versions_endpoint }}/copy{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: None
+
+| Type  | Name     | Default | Example        | Description                                                                                                                                                      |
+|-------|----------|---------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Query | `docid`  |         | "xxx-text.txt" | tagtog's id of the document (annotations) to copy.                                                                                                               |
+| Query | `from`   |         | "user-A"       | project member's username (incl. "master") to copy the annotations from.                                                                                         |
+| Query | `saveTo` |         | "user-B"       | project member's username (incl. "master") to save the annotations to. The resulting annotations are always returned in the body response as an ann.json object. |
+
+**Output**
+
+Successful status code: `200` (OK)
+
+Payload: JSON (application/json)
+
+The final [ann.json](anndoc.html#ann-json) now stored in the `saveTo` member.
+
 
 </div>
 

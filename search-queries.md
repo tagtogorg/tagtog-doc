@@ -27,6 +27,13 @@ toc: true
 </div>
 
 <div class="two-third-col">
+  <h3>Search by document ID (docid)</h3>
+  <p>Each document in your project has a unique document ID (docid). This search query retrieves the file matching your given docid. You can also use modifiers such as a wildcard.</p>
+  <p>Example, search a unique document by docid: <code>docid:bXYmSmlclyO01lP1kOLKSA0cyPAT-letter.txt</code></p>
+  <p>Example using the wildcard: <code>docid:&ast;-letter.txt</code> or <code>docid:bXYmSmlclyO01lP1kOLKSA0cyPAT&ast;</code>.</p>
+</div>
+
+<div class="two-third-col">
   <h3>Search by filename</h3>
   <p>Retrieve all files matching some filename, possibly with a wildcard.</p>
   <p>Example, search all your pdf files: <code>filename:&ast;.pdf</code></p>

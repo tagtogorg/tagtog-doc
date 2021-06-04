@@ -98,7 +98,7 @@ tagtog_domain: https://www.tagtog.net
   </div>
   <div class="one-third-col">
     <div class="message">
-      <strong>What is a dictionary?</strong> A simple list of terms with their synonyms. E.g. the model <code>Volkswagen Golf 7</code> is also known as <code>Golf Mk7</code>. This list facilitates NER, i.e. the <strong>automatic extraction of entities</strong> in text and their normalization. The <strong>normalization</strong> of entities is the process to identify a canonical unambiguous reference to an entity. <a href="/dictionary-format.html">Dictionary format</a>.
+      <strong>What is a dictionary?</strong> A simple list of terms with their synonyms. E.g. the model <code>Volkswagen Golf 7</code> is also known as <code>Golf Mk7</code>. This list facilitates NER, i.e. the <strong>automatic extraction of entities</strong> in text and their normalization. <strong>Entity normalization (also called Entity Linking or Entity Disambiguation)</strong> means identifing the canonical, <em>unambiguous</em> reference of the entity. <a href="/dictionary-format.html">Dictionary format</a>.
     </div>
   </div>
   <div class="two-third-col">

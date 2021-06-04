@@ -41,7 +41,7 @@ toc: true
       </tr>
       <tr>
         <td>Normalization</td>
-        <td>Id assigned to a named entity. These annotations help in <strong>disambiguation</strong>. Normalization or canonicalization is the process for assigning an id or unique name to data that has more than one possible representation. This process is supported by <a href="/projects.html#dictionaries">dictionaries</a>. For example an <code>air filter</code> in automotive can make reference to a <code>cabin air filter</code> or an <code>engine air filter</code>. With tagtog you can assign the correct reference to the entity. Each entity can have assigned one or more Ids (e.g. Id from Wikipedia, and an Id from your internal database).</td>
+        <td>Id assigned to a named entity. These annotations help in <strong>disambiguation</strong> (<strong>entity linking</strong>). Normalization or canonicalization is the process for assigning an id or unique name to data that has more than one possible representation. This process is supported by <a href="/projects.html#dictionaries">dictionaries</a>. For example an <code>air filter</code> in automotive can make reference to a <code>cabin air filter</code> or an <code>engine air filter</code>. With tagtog you can assign the correct reference to the entity. Each entity can have assigned one or more Ids (e.g. Id from Wikipedia, and an Id from your internal database).</td>
       </tr>
       <tr>
         <td>Entity label</td>

@@ -41,7 +41,7 @@ toc: true
       </tr>
       <tr>
         <td>Normalization</td>
-        <td>Id assigned to a named entity. These annotations help in <strong>disambiguation</strong>. Normalization or canonicalization is the process for assigning an id or unique name to data that has more than one possible representation. This process is supported by <a href="/projects.html#dictionaries">dictionaries</a>. For example an <code>air filter</code> in automotive can make reference to a <code>cabin air filter</code> or an <code>engine air filter</code>. With tagtog you can assign the correct reference to the entity. Each entity can have assigned one or more Ids (e.g. Id from Wikipedia, and an Id from your internal database).</td>
+        <td>Id assigned to a named entity. These annotations help in <strong>disambiguation</strong> (<strong>entity linking</strong>). Normalization or canonicalization is the process for assigning an id or unique name to data that has more than one possible representation. This process is supported by <a href="/projects.html#dictionaries">dictionaries</a>. For example an <code>air filter</code> in automotive can make reference to a <code>cabin air filter</code> or an <code>engine air filter</code>. With tagtog you can assign the correct reference to the entity. Each entity can have assigned one or more Ids (e.g. Id from Wikipedia, and an Id from your internal database).</td>
       </tr>
       <tr>
         <td>Entity label</td>
@@ -201,7 +201,7 @@ toc: true
     <div class="two-third-col">
       <h5>Pre-selections</h5>
       <p>Automatic annotations created upon the manual creation or removal of other <strong>equal annotation</strong> (same entity type and same text). These type of annotations increase annotator's <strong>efficiency</strong> as potential candidates for new/to-remove annotations are automatically identified.</p>
-      <p>Currently, pre-selections don't work in the <a href="pdf-annotation-tool.html" title="tagtog - PDF annotation tool">PDF annotation tool</a>.</p>
+      <p>Pre-selections also work in the <a href="pdf-annotation-tool.html" title="tagtog - PDF annotation tool">PDF annotation tool</a>.</p>
       <table style="width:100%">
         <tr>
           <th>Type</th>

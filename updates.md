@@ -14,6 +14,19 @@ notoc: true
 
 ---
 
+## 3.2021-W22.0 🧲
+_2021-06-05_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">**[Pre-selections](webeditor.html#pre-selections) are now available in the Native PDF editor!** When you make a new text annotation, tagtog will automatically annotate in the whole document all the occurrences with the same text.</span></li>
+  <li class="new"><span markdown="1">New [**API to copy annotations** from a member to another one](API_documents_v1.html#copy-the-annotations-from-a-member-to-another-one)!</span></li>
+  <li class="fix"><span markdown="1">Now the automatic [pre-selections (& pre-deselections)](webeditor.html#pre-selections) annotations have arbitrary probability _0.5_. Before they had a numb probability of 0.</span></li>
+  <li class="fix"><span markdown="1">The option to reset the [filter for entities](webeditor.html#filter-entities) is now also visible when you type the entity text.</span></li>
+  <li class="fix"><span markdown="1">When you are in [Document Review mode](webeditor.html#document-review), it was not possible to jump on the following entity upon entity removal under specific scenarios. This issue was limited to the Native PDF editor when the following entity was on a different page.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W21.1 👪
 _2021-05-30_
 

@@ -85,8 +85,13 @@ toc: true
     <p class="list-item"><span class="list-item-1"></span><strong>Text offsets</strong>. Each annotation is located using the start offset of its text in reference to the beginning of the page containing the annotation. In order to do that, we transform each page of the PDF into text and save the result in the <code><a title="tagtog - ann.doc - plain.html format" href="anndoc.html#plain-html">plain.html format</a></code>. We use this file as a reference to calculate the offset of the annotations. You can <a title="tagtog - web editor - view output mode" href="webeditor.html#download-view-export">download and use this file</a> to share a common interface with tagtog. Offsets take into account the reading order of elements such as tables or columns.</p>
     <p class="list-item"><span class="list-item-2"></span><strong>Coordinates</strong>. Each annotation is located using the coordinates of the bounding box containing the annotation. Currently, each annotation uses a pair of coordinates (X, Y) corresponding to the top-left of the first character of the annotation and the bottom-right of the last character of the annotation. In order to facilitate translation, <strong>coordinates are expressed in Points(pt)</strong>. 1pt is equal to exactly 1/72th of an inch. The coordinates system has its 0,0 position in the top left of each page.</p>
     <p>Following the syntax from other text input types, the <strong>page number</strong> is encoded in the <code>partId</code> field for each text annotation. For example: <code>s6v1</code> refer to page 6, <code>s20v1</code> refers to page 20 and so forth.</p>
+    <p markdown="1">**[Pre-selections](webeditor.html#pre-selections)** are available in the PDF annotation tool. For example, when a user annotates a text, if there are other occurrences of the same text in the document, these are also annotated. Please notice that the annotation coordinates are not attached to the newly created pre-selections. tagtog attaches the coordinates only when the user confirms the pre-selection.</p>
   </div>
-  <div class="one-third-col"></div>
+  <div class="one-third-col">
+    <div class="message">
+      <a href="webeditor.html#pre-selections">Pre-selections</a> are also available in the PDF annotation tool.
+    </div>
+  </div>
 </div>
 
 <div class="page-section">
@@ -134,7 +139,6 @@ toc: true
   <div class="two-third-col">
     <h2>Caveats</h2>
     <p class="list-item" markdown="1"><span class="list-item-1"></span>You cannot create an annotation with one piece in one page and the other piece in the next page. The main constraint is that the PDF footer interferes when creating an annotation across two pages.</p>
-    <p class="list-item" markdown="1"><span class="list-item-2"></span>Currently, [pre-selections/pre-deselections](webeditor.html#pre-selections) are not available on Native PDF.</p>
     <p class="list-item" markdown="1"><span class="list-item-3"></span>If you double click in a word, no annotation will be created. Currently, this feature is only available in the plain text editor.</p>
     <p class="list-item" markdown="1"><span class="list-item-4"></span>Warning: please make sure your browser extensions are not conflicting with the viewer. This might have an impact on the viewer's performance.</p>
   </div>

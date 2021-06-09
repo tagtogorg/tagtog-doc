@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🔑
+## 3.2021-W23.0 🔑
+_2021-06-09_
 
 <ul class="updates">
   <li class="sec"><span markdown="1">Updated this documentation's dependency [kramdown version to ~>2.3.1, as per security recommendation](https://github.com/advisories/GHSA-52p9-v744-mwjj).</span></li>

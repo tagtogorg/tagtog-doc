@@ -40,13 +40,14 @@ toc: true
 
 <div class="two-third-col">
   <h3>Search by document label</h3>
-  <p>Find documents tagged with specific label and value. </p>
+  <p>Find documents tagged with specific label and value.</p>
   <p>Boolean example: <code>label:isSevere:true</code></p>
   <p>Enum example: <code>label:severity:high</code></p>
   <p>String example: <code>label:name:Lois</code></p>
   <p>Range example: <code>label:number_issues:[10 TO 20]</code></p>
 </div>
 <div class="one-third-col">
+  {% include message.html message='If you search for a value that contains spaces, surround it with quotes. Example: <code>label:option:"option A"</code>' %}
 </div>
 
 <div class="two-third-col">

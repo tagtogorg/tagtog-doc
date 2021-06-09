@@ -173,7 +173,7 @@ tagtog_domain: https://www.tagtog.net
     </div>
   </div>
   <div class="two-third-col">
-    {% include image.html name="settings-doclabel.png" caption="Example: setting a document label of <code>enum</code> type."%}    
+    {% include image.html name="settings-doclabel.png" caption="Example: setting a document label of <code>enum</code> type."%}
   </div>
   <div class="one-third-col">
     <div class="message">
@@ -227,9 +227,15 @@ tagtog_domain: https://www.tagtog.net
 <div class="page-subsection">
   <div class="two-third-col">
     <h3>Webhooks</h3>
-    <p>The webhooks are useful to integrate tagtog within your system. Only users with the role <code>admin</code> (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can see/edit these project settings.</p>
-    <p>You can define webhooks to notify automatically an external system after a specific event in tagtog or API.</p>
-    <p>These events are:</p>
+    <h4>What is a webhook?</h4>
+    <p>A webhook is a notification mechanism that allows your system to receive events from a different service in real-time. Event notifications are sent via HTTP POST requests to an endpoint defined by you.</p>
+    <p>Think of it as an SMS notification. You make a change to your bank account details (event), and you receive an SMS asking you for confirmation (event notification). When you opened your bank account, you gave your phone number (endpoint), so they know how to reach you.</p>
+    <h4>Webhooks in tagtog</h4>
+    <p>The webhooks are useful to integrate your system or models with tagtog. You can define webhooks to notify automatically an external system right after a specific action was performed using tagtog GUI or API.</p>
+    <p>Only users with the role <code>admin</code> (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can see/edit these project settings.</p>
+    <p>In tagtog, there are two events that trigger an event notification:</p>
+    <p class="list-item"><span class="list-item-1"></span>Import new document: an event notification is sent once a user uploads a document. Use this notification, for example, to annotate the document using your models and push the annotated document back to tagtog.</p>
+    <p class="list-item"><span class="list-item-2"></span>Save a document: an event notification is sent once a user saves a document. Use this notification, for example, to get the annotations done by your team and add them to your training data.</p>
     <table style="width:100%">
       <tr>
         <th>Event</th>
@@ -247,7 +253,7 @@ tagtog_domain: https://www.tagtog.net
         <td><code>GUI</code> and <code>API</code> (<a href="/train-your-own-models.html#how-to-upload-annotated-documents">update annotations via API</a>)</td>
       </tr>
     </table>
-    <p>When any of those events is triggered, we'll send a <strong>HTTP POST payload</strong> to the webhook's configured End Point URL.</p>
+    <p>When any of those events are triggered, we'll send a <strong>HTTP POST payload</strong> to the webhook's configured End Point URL.</p>
     <p>We also send information in the delivery <strong>HTTP headers</strong> for you to better process the event:</p>
     <table style="width:100%">
       <tr>
@@ -302,6 +308,13 @@ tagtog_domain: https://www.tagtog.net
   <div class="one-third-col">
     {% include image.html name="settings-webhook.PNG" %}
   </div>
+  <div class="two-third-col">
+    <h4>How to test webhooks locally?</h4>
+    <p markdown="1">To easily expose your app externally, you can use [ngrok](https://ngrok.com). This tool forwards the incoming requests to your local app. If you are using our Cloud, this tool will make easier for tagtog.net to reach your app.</p>
+    <h4>A full example</h4>
+    <p markdown="1">In this step-by-step guide you will find a end-to-end example in Python about how to connect your models to tagtog using webhooks: [Connect your NLP models to tagtog using webhooks](https://tagtog.medium.com/connect-your-nlp-models-to-tagtog-using-webhooks-13d422ae4dff). Here you can find the GitHub repository: [demo-webhooks](https://github.com/tagtog/demo-webhooks)</p>
+  </div>
+
 </div>
 <div class="page-subsection">
   <div class="two-third-col">
@@ -339,7 +352,6 @@ tagtog_domain: https://www.tagtog.net
 <div class="page-subsection">
   <div class="two-third-col">
     <h3>Members</h3>
-
     <p>In this panel, project admins (or a custom role with enough <a href="collaboration.html#permissions" title="tagtog - Permissions">permissions</a>) can invite and manage project members. All added project members will be able to collaborate in the same project-scoped annotation task. <a href="/collaboration.html">See for more info about roles and collaborative annotation</a>.</p>
 
     {% include image.html name="settings/members-b.png" width="80%" caption="Invite other users to collaborate in your project." %}
@@ -365,7 +377,7 @@ tagtog_domain: https://www.tagtog.net
 
   <p>When you change the role of a team, you change the role of all its users. Additionally, if desired, you can change the role of the team users independently. This will allow you to set all the team's users to share some equal role (say <em>"curator"</em>), but a few of them, which might have different roles (say <em>"supercurator"</em>).</p>
 
-  {% include image.html name="settings/members-update-team-b.png" width="60%" caption="You can also change the role of the team's users independently." %}  
+  {% include image.html name="settings/members-update-team-b.png" width="60%" caption="You can also change the role of the team's users independently." %}
 
   </div>
 
@@ -382,10 +394,12 @@ tagtog_domain: https://www.tagtog.net
 
 
   <div class="two-third-col">
-    <h4>Task distribution (document assignment)</h4>
-    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose that each document is assigned to 1 single annotator, every uploaded document will be randomly assigned to only one of the annotators. Otherwise, for example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
+    <h4>Task distribution</h4>
+    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
 
-    <p>Annotating the same document by 2 or more members is recommended to increase the overall quality of your annotation project. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a>) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a>.</p>
+    <p markdown="1">Annotating the same document by 2 or more members is recommended to increase the overall **quality of your annotation project**. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> or IAA) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a>.</p>
+
+    <br>
 
     {% include image.html name="settings/members-task-distribution.png" width="85%" caption="Task Distribution: assign documents to your labelers as soon they are uploaded." %}
 
@@ -393,6 +407,7 @@ tagtog_domain: https://www.tagtog.net
     <p class="numbered-item"><span class="number-1">1</span><strong>Select the members you want to distribute documents to</strong> (the system only distributes documents to these users).</p>
     <p class="numbered-item"><span class="number-2">2</span><strong>Select the number of annotators per document</strong> (how many of the selected users will annotate each document).</p>
     <br>
+    <p>To keep track of the project quality, even if you set the task distribution as one annotator per document (each document is assigned to a different annotator), tagtog automatically tries to allocate 5% of your documents to two annotators to calculate IAA.</p>
     <p><strong>By default, task distribution is turned off</strong>. This means that uploaded documents do not get distributed. When task distribution is not active, members see the <a href="collaboration.html#annotation-versions"><code>master</code> version</a> automatically when they open a document. Once the task distribution is active (number of annotators per document is 1 or more), members will see their own version of the annotations when they open a document.</p>
     <p><strong>When task distribution is active, project members see by default the special search <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a></strong> (in the tab <em>Documents</em>). This view lists the documents that have not been confirmed yet by the logged annotator.</p>
   </div>
@@ -406,7 +421,7 @@ tagtog_domain: https://www.tagtog.net
     <div class="message">
       Using the <strong>API</strong> with the <a title="tagtog - API documents - Import" href="API_documents_v1.html#import-and-annotate-text">parameter <code>distributeToMembers</code></a>, you can override who exactly you want to distribute a specific document to.<br>
       Using the <strong>website</strong>, you can also override the Task Distribution settings <a href="documents.html#distribute-to-a-group-of-users">on the upload advanced menu</a>.
-    </div>    
+    </div>
   </div>
  </div>
 

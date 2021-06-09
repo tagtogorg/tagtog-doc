@@ -352,18 +352,18 @@ toc: true
           <td>Replace master's annotations version with the version displayed in the document area.</td>
         </tr>
         <tr>
-          <td>Copy to mine</td>
+          <td>Copy to me</td>
           <td>Replace your annotations with the version displayed in the document area.</td>
         </tr>
         <tr>
           <td>Merge Annotations</td>
-          <td>Automatic adjudication process that merges all the member's annotations into <code>master</code>. This adjudication is based on the <a title="tagtog - inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> (IAA) and it is explained in detail here: <a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">Automatic adjudication based on IAA</a>.</td>
+          <td>Automatic adjudication process that merges all the member's annotations into <code>master</code>. tagtog has built-in multiple <a href="collaboration.html#automatic-adjudication" title="tagtog - Automatic adjudication">merging automatic strategies</a>.</td>
         </tr>
       </table>
       <p>The availability of these options depends on the role permissions. <a href="/collaboration.html">More information on multi-user annotation</a></p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-copy-annotations.PNG" width="300" %}
+      {% include image.html name="editor/toolbar/adjudication-merging-actions.png" width="300" %}
     </div>
     <div class="two-third-col">
       <h4>Pre-annotations</h4>

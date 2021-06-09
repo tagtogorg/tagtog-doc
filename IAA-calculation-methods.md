@@ -20,7 +20,7 @@ As of now, the **GUI** shows a **default method to calculate the Inter-Annotator
 
 ## Document labels
 
-Given two different document labels (from two different annotation versions, e.g. different members), they are equal iff:
+Given two different document labels (from two different annotation versions, e.g. different members), they are equal if:
 
 ### `exact_v1` (default)
 
@@ -32,7 +32,7 @@ Given two different document labels (from two different annotation versions, e.g
 
 ## Entity Types
 
-Given two entity types (from two different annotation versions, e.g. different members), they are equal iff:
+Given two entity types (from two different annotation versions, e.g. different members), they are equal if:
 
 ### `exact_v1` (default)
 
@@ -49,7 +49,7 @@ Given two entity types (from two different annotation versions, e.g. different m
 
 ## Entity Normalizations
 
-Given two entity normalizations (from two different annotation versions, e.g. different members), they are equal iff:
+Given two entity normalizations (from two different annotation versions, e.g. different members), they are equal if:
 
 ### `exact_v1` (default)
 
@@ -77,7 +77,7 @@ Given two entity normalizations (from two different annotation versions, e.g. di
 
 ## Entity Labels
 
-Given two entity labels (from two different annotation versions, e.g. different members), they are equal iff:
+Given two entity labels (from two different annotation versions, e.g. different members), they are equal if:
 
 ### `exact_v1` (default)
 
@@ -96,7 +96,7 @@ Given two entity labels (from two different annotation versions, e.g. different 
 
 ## Entity Relations
 
-Given two entity relations (from two different annotation versions, e.g. different members), relating two entities (e.g. a & b and a' & b', resp.), they are equal iff:
+Given two entity relations (from two different annotation versions, e.g. different members), relating two entities (e.g. a & b and a' & b', resp.), they are equal if:
 
 ### `exact_v1` (default)
 

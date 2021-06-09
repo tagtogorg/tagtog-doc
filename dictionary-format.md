@@ -7,14 +7,14 @@ id: dictionaries
 ---
 
 <div class="two-third-col">
-  <p>Dictionaries are used to <a href="/webeditor.html#annotation-types">normalize entities</a>. This is the format of dictionary files used at tagtog.</p>
-  <p>The dictionary file to upload must be a <code>.tsv</code> file (tab-separated values) (or a compressed <code>.zip</code> or <code>.tar.gz</code> containing a single <code>.tsv</code>). To upload dictionary files visit <i>Settings > Dictionaries</i>.</p>
+  <p>Dictionaries are used to <a href="/webeditor.html#annotation-types">normalize entities</a>.</p>
+  <p markdown="1">The [dictionary file to upload](projects.html#dictionaries) must be a <code>.tsv</code> file (tab-separated values) (or a compressed <code>.zip</code> or <code>.tar.gz</code> containing a single <code>.tsv</code>).</p>
   <p>The dictionary format should follow this pattern:</p>
 
   <div markdown="1">
   ```
-  entity_1_id    recname1    recname2    ...
-  entity_2_id    recname1    recname2    @@@    altname1    altname2    ...
+  entity_1_id    recName1    recName2    ...
+  entity_2_id    recName1    recName2    @@@    altName1    altName2    ...
   ...
   ```
 </div>
@@ -35,7 +35,7 @@ id: dictionaries
   <p class="list-item"><span class="list-item-3"></span>After the id, a list of names follows. These are considered different names (synonyms) of the entity.</p>
   <p class="list-item"><span class="list-item-4"></span>You can define <strong>recommended names</strong> and, optionally, <strong>alternative names</strong>. At least one recommended name must be given. Alternative names are those placed after the special delimiter <code>@@@</code> (also separated within tabs). Use them when you know that some names appear less frequently than the standard ones. With this information, the system can handle synonyms better.</p>
 
-  <p>If you want to check out a sample, you can <strong>download this dictionary</strong>: <a href="/assets/dictionaries/arabidopsis_proteins_and_genes_swissprot.zip">Arabidopsis gene names (source: SwissProt)</a>.</p>
+  <p markdown="1">👉 Here are some [**sample, reference dictionaries**](https://github.com/tagtog/tagtog-doc/tree/master/assets/dictionaries).</p>
 
 </div>
 <div class="one-third-col">

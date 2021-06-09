@@ -113,3 +113,23 @@ Know what you can do with tagtog with the following tutorials. Moreover, we publ
 <div class="one-third-col">
   {% include image.html name="chatbot.png" %}
 </div>
+
+<div class="two-third-col">
+  <h2><a title="Integrating tagtog and spaCy: a simple example" href="https://tagtog.medium.com/integrating-tagtog-and-spacy-16fb0addeea1">Integrating tagtog and spaCy: a simple example</a></h2>
+  <p>This tutorial uses the spaCy library to automatically generate NER (Named-Entity Recognition) annotations and display these annotations directly in tagtog.</p>
+</div>
+<div class="one-third-col">
+  {% include image.html name="SpaCy_logo.png" %}
+</div>
+
+<div class="two-third-col">
+  <h2><a title="Connect your NLP models to tagtog using webhooks" href="https://tagtog.medium.com/connect-your-nlp-models-to-tagtog-using-webhooks-13d422ae4dff">Connect your NLP models to tagtog using webhooks</a></h2>
+  <p>When you finish this tutorial, you will understand:</p>
+  <p class="list-item"><span class="list-item-1"></span>What is a webhook.</p>
+  <p class="list-item"><span class="list-item-2"></span>How to connect your model to tagtog (or other services) using webhooks</p>
+  <p class="list-item"><span class="list-item-3"></span>How to test webhooks locally</p>
+  <p class="list-item"><span class="list-item-4"></span>How using webhooks will make the training of your model more accessible</p>
+</div>
+<div class="one-third-col">
+  {% include image.html name="webhook_icon.png" %}
+</div>

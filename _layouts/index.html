@@ -162,7 +162,7 @@ id: introduction
       <p class="list-item"><span class="list-item-3"></span><strong><a href="collaboration.html#roles">Roles</a></strong>: you can <strong>assign different roles</strong> to your team members to perform common tasks in an annotation project: admin, annotator, reviewer, reader, etc. There is a pool of about 30 different <a href="collaboration.html#permissions">permissions</a> to define custom roles.</p>
       <p class="list-item"><span class="list-item-4"></span><strong><a href="collaboration.html#teams">Teams</a></strong>: you can <strong>create teams</strong> (user groups) and add members to it for easier user management. Invite a team to a project, edit team members, etc.</p>
       <p class="list-item"><span class="list-item-5"></span><strong><a href="collaboration.html#quality-management">Track Quality</a></strong>: use the Inter-Annotation Agreement (IAA) for each annotation task, check how well your team agrees on, for example, annotating drug names, law provisions or risk attributes. These values help you understand the quality of your data.</p>
-      <p class="list-item"><span class="list-item-6"></span><strong><a href="collaboration.html#adjudication">Adjudication</a></strong>: if many users annotate the same document for quality purposes, eventually it needs to be decided, which version (or combination) to adjudicate to master. In tagtog, <strong>you can adjudicate a specific version or merge the different versions automatically applying different strategies</strong> (e.g. by IAA, majority vote, intersection, union, etc.)</p>
+      <p class="list-item"><span class="list-item-6"></span><strong><a href="collaboration.html#adjudication-merging">Adjudication</a></strong>: if many users annotate the same document for quality purposes, eventually it needs to be decided, which version (or combination) to adjudicate to master. In tagtog, <strong>you can adjudicate a specific version or merge the different versions automatically applying different strategies</strong> (e.g. by IAA, majority vote, intersection, union, etc.)</p>
       <p class="list-item"><span class="list-item-7"></span><strong><a href="collaboration.html#annotation-flows-task-distribution">Review</a></strong>: validate or correct the members' annotations. <strong>Merge</strong> them together and resolve conflicts.</p>
       <p class="list-item"><span class="list-item-8"></span><strong><a href="collaboration.html#annotation-flows-task-distribution">Automatic task distribution</a></strong>: distribute documents automatically to all annotators or to a subset.</p>
       <p class="list-item"><span class="list-item-9"></span><strong><a href="collaboration.html#annotation-flows-task-distribution">Track progress</a></strong>: follow your project progress, bias metrics and the progress of each member.</p>
@@ -178,7 +178,7 @@ id: introduction
 
   <div class="page-section">
     <div class="two-third-col">
-      <h2>Cloud or On-premises</h2>
+      <h2>Cloud or OnPremises</h2>
       <table class="clean-table">
         <tr>
           <td><strong>On the Cloud</strong>. To use tagtog on the cloud, <strong>you don't need to install anything</strong>; just <a href="https://www.tagtog.net/#signup" title="Sign up at tagtog.net">sign up</a>, create a project, and start annotating. Out of these annotations you can create and use a machine learning model without worrying about hardware requirements, databases, scalability, deployments and any other hassle or cost related to setting up a production environment and maintaining it.</td>
@@ -190,7 +190,7 @@ id: introduction
         </tr>
         <tr>
           <td>
-            <p><strong>On-premises</strong>. If you need to meet strong privacy regulations, legal requirements, or you simply want to make a custom installation within your infrastructure or any public cloud (AWS, Google, Azure, etc) , tagtog is also served on-premises. This is a self-contained version (no Internet connection is required) of tagtog, <strong>no data will leave your infrastructure</strong>. To make the installation the easiest possible we offer tagtog contained in a <a href="https://www.docker.com/" title="Docker official site"><strong>Docker</strong></a> image. <a href="on_premises_README.html">Check our on-premises guide</a>.</p>
+            <p><strong>OnPremises</strong>. If you need to meet strong privacy regulations, legal requirements, or you simply want to make a custom installation within your infrastructure or any public cloud (AWS, Google, Azure, etc) , tagtog is also served on-premises. This is a self-contained version (no Internet connection is required) of tagtog, <strong>no data will leave your infrastructure</strong>. To make the installation the easiest possible we offer tagtog contained in a <a href="https://www.docker.com/" title="Docker official site"><strong>Docker</strong></a> image. <a href="on_premises_README.html">Check our on-premises guide</a>.</p>
             <p>There is available support for <strong>Single Sign-on</strong> and <strong>advanced user management</strong> (user groups, roles and permissions). All through an intuitive <a href="on-premises-sysadmin.html">sysadmin panel</a>.</p>
           </td>
           <td class="centered" style="width:15%">{% include image.html name="docker.svg" %}</td>

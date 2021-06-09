@@ -7,6 +7,8 @@ sidebar_link: true
 toc: true
 
 api_endpoint: /-api/documents/v1
+api_versions_endpoint: /-api/documents/versions/v0
+mandatory_query_parameters: ?owner=...&project=...
 api_document_url: https://www.tagtog.net/-api/documents/v1
 api_username: yourUsername
 api_pwd: yourPassword
@@ -546,6 +548,7 @@ FILES
     <ul class="tabs-menu">
       <li class="current"><a href="#tab-2-file">Python</a></li>
       <li><a href="#tab-3-file">JavaScript</a></li>
+      <li><a href="#tab-4-file">cURL</a></li>
     </ul>
     <div class="tab">
     <p class="code-desc">This example imports a file and retrieves the annotations in <code>ann.json</code>.</p>
@@ -581,6 +584,11 @@ fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page
 });
 ```
 <p style="float:right">{% include github-link.html target="snippets/api_js_annotate_files.html" %}</p>
+</div>
+<div id="tab-4-file" class="tab-content" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F 'files=@/files/document.txt' '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&output=ann.json'
+```
 </div>
       </div>
     </div>
@@ -918,7 +926,7 @@ PUBMED IDS
   </div>
 </div>
 <div class="two-third-col">
-  <h4>Examples: import a a list of PubMed articles by PMID</h4>
+  <h4>Examples: import a list of PubMed articles by PMID</h4>
   <br/>
   <div id="tabs-container">
     <ul class="tabs-menu">
@@ -1098,11 +1106,12 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   <div id="tabs-container">
   <ul class="tabs-menu">
-    <li class="current"><a href="#tab-1-file">Python</a></li>
+    <li class="current"><a href="#tab-1-file-txt-preann">Python</a></li>
+    <li><a href="#tab-2-file-txt-preann">cURL</a></li>
   </ul>
   <div class="tab">
   <p class="code-desc">This example shows how to upload a preannotated document (txt file + ann.json) to tagtog. The format used is <code>default-plus-annjson</code> to indicate we are importing pre-annotated content, the text content will be represented using the <a href="ioformats.html#input-types">default format</a>. In this case, the default format for plain text is <code>verbatim</code>. Make sure the ann.json is well formated according to the <a href="anndoc.html#ann-json">ann.json specification</a>.</p>
-  <div id="tab-2-file" class="tab-content" style="display: block" markdown="1">
+  <div id="tab-1-file-txt-preann" class="tab-content" style="display: block" markdown="1">
   ```python
 
   import requests
@@ -1115,10 +1124,15 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   ```
+</div>
+<div id="tab-2-file-txt-preann" class="tab-content" markdown="1">
+```shell
+curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/item1.txt" -F "files=@/files/item1.ann.json" '{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page.api_project }}&format=default-ann-json&output=ann.json'
+```
+</div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
 
 <div class="one-third-col">
   <p>Response, output=<code>null</code></p>
@@ -1366,10 +1380,93 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 }
 ```
 </div>
+{% include message.html message='You can send multiple annotated documents at the same time. This means you always upload an even number of files.' %}
+</div>
+<div class="two-third-col">
+  <h4>Examples: import text pre-annotated by spaCy</h4>
+  <div id="tabs-container">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#tab-preannotated-verbatim-python">Python</a></li>
+  </ul>
+  <div class="tab">
+  <p class="code-desc" markdown="1">This example shows how to generate a set of annotations with a [spaCy](https://spacy.io) model and send the pre-annotated text to tagtog. The model used is [en_core_web_sm](https://spacy.io/models/en#en_core_web_sm). We want to do NER and extract PEOPLE, ORG and MONEY entities.</p>
+  <p class="code-desc" markdown="1">For more details about this example, please read this step-by-step guide: [Integrating tagtog and spaCy: a simple example](https://tagtog.medium.com/integrating-tagtog-and-spacy-16fb0addeea1)</p>
+  <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
+  ```python
+import spacy
+import json
+import requests
+import os
+
+def get_class_id(label):
+  """
+  Translates the spaCy label id into the tagtog entity type id
+  - label: spaCy label id
+  """
+  choices = {'PERSON': 'e_1', 'ORG': 'e_2', 'MONEY': 'e_3'}
+  return choices.get(label, None)
+
+def get_entities(spans, pipeline):
+  """
+  Translates a tuple of named entity Span objects (https://spacy.io/api/span) into a
+  list of tagtog entities (https://docs.tagtog.net/anndoc.html#ann-json). Each entity is
+  defined by the entity type ID (classId), the part name where the annotation is (part),
+  the entity offsets and the confidence (annotation status, who created it and probabilty).
+  - spans: the named entities in the spaCy doc
+  - pipeline: trained pipeline name
+  """
+  default_prob = 1
+  default_part_id = 's1v1'
+  default_state = 'pre-added'
+  tagtog_entities = []
+  for span in spans:
+    class_id = get_class_id(span.label_)
+    if class_id is not None:
+      tagtog_entities.append( {
+        'classId': class_id,
+        'part': default_part_id,
+        'offsets':[{'start': span.start_char, 'text': span.text}],
+        'confidence': {'state': default_state,'who': ['ml:' + pipeline],'prob': default_prob},
+        'fields':{},
+        # this is related to the kb_id (knowledge base ID) field from the Span spaCy object
+        'normalizations': {}} )
+  return tagtog_entities
+
+MY_USERNAME = os.environ['MY_TAGTOG_USERNAME']
+MY_PASSWORD = os.environ['MY_TAGTOG_PASSWORD']
+MY_PROJECT = 'demo-spaCy'
+
+tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+auth = requests.auth.HTTPBasicAuth(username=MY_USERNAME, password=MY_PASSWORD)
+
+text = "Paypal Holdings Inc (PYPL) President and CEO Daniel Schulman Sold $2.7 million of Shares"
+# Load the spaCy trained pipeline (https://spacy.io/models/en#en_core_web_sm) and apply it to text
+pipeline = 'en_core_web_sm'
+nlp = spacy.load(pipeline)
+doc = nlp(text)
+
+# Fill the ann.json
+annjson = {}
+annjson['anncomplete'] = False
+annjson['metas'] = {}
+annjson['relations'] = []
+annjson['entities'] = get_entities(doc.ents, pipeline)
+
+params = {'owner': MY_USERNAME, 'project': MY_PROJECT, 'output': 'null', 'format': 'default-plus-annjson'}
+files=[('doc1.txt', text), ('doc1.ann.json', json.dumps(annjson))]
+response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+
+print(response.text)
+  ```
+  <p style="float:right">{% include gist-link.html gistid="05ca8cc4d2cb12b786aa5270814e65e4" %}</p>
+  </div>
+</div>
+</div>
 </div>
 
-
-
+<div class="one-third-col">
+    {% include image.html name="pre-annotated-doc-spacy.png" caption="The resulting pre-annotated document visualized in tagtog editor" %}
+</div>
 <div class="two-third-col">
   <h3>Replace annotations of existing document <code>POST</code></h3>
   <p>You should use two files:</p>
@@ -2185,6 +2282,49 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
 <div class="one-third-col">
 
 </div>
+
+
+
+
+<div class="two-third-col" markdown="1">
+
+## Manage annotation versions (Adjudication)
+
+### Merge the annotations of a document (Automatic Adjudication)
+
+**🤠𝛂 This API is in alpha, and can change at any moment. We give early access for your benefit.**
+
+Merge the _confirmed_ members' annotations of a document.
+
+This assumes that the document was confirmed by at least one member. If the given document was no confirmed by any member yet, the response will return an error.
+
+You can [know which documents have at least one version confirmed](search-queries.html#search-which-documents-a-user-has-confirmed) using the [search API](API_documents_v1.html#search-documents-in-a-project-get).
+
+* Method: `POST`
+* Endpoint: `{{ page.api_versions_endpoint }}/merge{{ page.mandatory_query_parameters }}`
+
+**Input (parameters)**
+
+Body: None
+
+| Type  | Name    | Default | Example                                 | Description                           |
+|-------|---------|---------|-----------------------------------------|---------------------------------------|
+| Query | `docid` |         | "aeTJs3Ce9udaTUTtGt5RVqSjhSOu-text.txt" | tagtog's id of the document to merge. |
+| Query | `strategy`          |         | "union_v1"                              | Merging strategy, in: <br>[`union_v1`](collaboration.html#automatic-adjudication-by-union), <br>[`intersection_v1`](collaboration.html#automatic-adjudication-by-intersection), <br>[`majority_v1`](collaboration.html#automatic-adjudication-by-majority-vote), <br>[`best_iaa_v1`](collaboration.html#automatic-adjudication-based-on-iaa)`               |
+| Query | `saveTo` (OPTIONAL) | N.A.    | "master"     | project member's username (incl. "master") to save the annotation merging result to. The merging result is always returned in the body response as an ann.json object. Additionally, if you set this parameter, the result annotations will be saved in the given member.                                                                                              |
+
+**Output**
+
+Successful status code: `200` (OK)
+
+Payload: JSON (application/json)
+
+The merging's [ann.json](anndoc.html#ann-json) result.
+
+</div>
+
+
+
 
 <div class="two-third-col">
   <h2>API Clients</h2>

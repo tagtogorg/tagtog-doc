@@ -47,4 +47,14 @@ ul.updates {
     font-weight: bold;
     font-family: Lucida Console, Courier, monospace;
   }
+
+  .sec::before {
+    content: "🔐SEC";
+    background-color: rgb(218, 188, 247);
+    border-radius: 8px;
+    padding-right: 8px;
+    margin-right: 4px;
+    font-weight: bold;
+    font-family: Lucida Console, Courier, monospace;
+  }
 }

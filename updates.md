@@ -14,6 +14,107 @@ notoc: true
 
 ---
 
+## 3.2021-W23.0 🔑
+_2021-06-09_
+
+<ul class="updates">
+  <li class="sec"><span markdown="1">Updated this documentation's dependency [kramdown version to ~>2.3.1, as per security recommendation](https://github.com/advisories/GHSA-52p9-v744-mwjj).</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) The optional configuration [environment variables](on_premises_README.html#conflicts-with-ports-000080-bind-address-already-in-use-) `TAGTOG_HTTP_PORT` & `TAGTOG_HTTPS_PORT` were not read even if defined.</span></li>
+  <li class="fix"><span markdown="1">The links in the [Metrics tab](metrics.html) for Document Labels (type `enum`), were producing incorrect search queries when the `enum` values contained spaces.</span></li>
+</ul>
+
+---
+
+## 3.2021-W12.0 🥸
+_2021-03-27_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">In projects with many annotation types (75 or more), the [Metrics tab](metrics.html) (and the [Metrics API](API_metrics_v0.html)) threw an error before. This is now fixed! 🥳</span></li>
+</ul>
+
+---
+
+## 3.2021-W11.0 🪶
+_2021-03-20_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) now the tagtog docker webapp image is 44% leaner! (reduced from ~900MB to ~500MB). This means faster downloads and a lower memory footprint.</span></li>
+  <li class="fix"><span markdown="1">The internal maximum ML training timeout was increased to accomodate slower trainings.</span></li>
+</ul>
+
+---
+
+## 3.2021-W10.0 💸
+_2021-03-14_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can also pay & subscribe with PayPal!</span></li>
+</ul>
+
+---
+
+## 3.2021-W09.1 🪜
+_2021-03-06_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Entity text was incorrectly breaking in the Entity Tally</span></li>
+</ul>
+
+---
+
+## 3.2021-W08.0 🪄
+_2021-02-27_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">New **merging strategies** for [automatic adjudication](collaboration.html#automatic-adjudication): [**union**](collaboration.html#automatic-adjudication-by-union), [**intersection**](collaboration.html#automatic-adjudication-by-intersection), and [**majority vote**](collaboration.html#automatic-adjudication-by-majority-vote)!</span></li>
+  <li class="new"><span markdown="1">Early access [API to merge your documents programmatically](API_documents_v1.html#merge-the-annotations-of-a-document-automatic-adjudication)!</span></li>
+  <li class="new"><span markdown="1">Now the Inter-Annotator Agreement (IAA) is also available at the document level. It helps reviewers or any user with the required permissions (e.g., `supercurators`) to understand the quality of the annotations for a specific user and document. While these IAA values are displayed on the sidebar near each annotation task, you can also access a summary with all the information in one place. [Documentation](collaboration.html#iaa-at-the-document-level).</span></li>
+  <li class="fix"><span markdown="1">Better visualization of the IAA values shown in the Metrics panel: when the average is 0%, this is also shown, and the background for 0% values are now red.</span></li>
+</ul>
+
+<div class="img-with-caption" align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rf7Za0NBpqA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="img-with-caption">
+  <img src="/assets/img/editor/toolbar/adjudication-merging-actions.png" width="30%" alt="Screenshot: tagtog adjudication / merging button actions" />
+  <p>Manual &amp; Automatic Adjudication Actions available on the tagtog document editor.</p>
+</div>
+
+---
+
+## 3.2021-W07.0 🐧
+_2021-02-20_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Now all unauthenticated requests coming from non-browsers immediately receive a 401 status error, instead of, like before, 303 (Redirect). This avoid confusions when your scripts automatically follow redirections and end up with a wrong 200 status (the redirected Login page).</span></li>
+  <li class="fix"><span markdown="1">(OnPremises) the automatic annotation with dictionaries did not work in some servers with non-English locale.</span></li>
+</ul>
+
+---
+
+## 3.2021-W06.0 🪆
+_2021-02-13_
+
+<ul class="updates">
+  <li class="doc"><span markdown="1">New [quick tutorial](quick-tutorials.html): [Integrating tagtog and spaCy: a simple example](https://tagtog.medium.com/integrating-tagtog-and-spacy-16fb0addeea1).</span></li>
+  <li class="doc"><span markdown="1">New [quick tutorial](quick-tutorials.html): [Connect your NLP models to tagtog using webhooks](https://tagtog.medium.com/connect-your-nlp-models-to-tagtog-using-webhooks-13d422ae4dff).</span></li>
+  <li class="fix"><span markdown="1">Before, if a user set a document label (type enum or boolean) for their document version and saved it, another user who changed to that version, was seeing the document label as not set.</span></li>
+  <li class="fix"><span markdown="1">For projects with a large number of entity types, the filter were not showing all the entity types in the select menu.</span></li>
+</ul>
+
+---
+
+## 3.2021-W04.0 🧄
+_2021-01-30_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">([OpenID SSO](on-premises-sysadmin.html#single-sign-on-sso)) fixed a security bug, which allowed OpenID-only users (without a basic password) to change their passwords, thus in practice setting for them a basic password. This is not anymore allowed.</span></li>
+  <li class="fix"><span markdown="1">Creating an annotation task (e.g. Entity Type) with exact name "name" resulted in a dummy error before. Not anymore.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W03.1 🖍
 _2021-01-24_
 
@@ -28,8 +129,6 @@ _2021-01-24_
   <li class="new"><span markdown="1">When you select an entity or a relation in the sidebar, these are easier to identify in the text thanks to the new highlight effect for the plain text editor.</span></li>
   <li class="del"><span markdown="1">The hotkey to start a new relation <kbd>r</kbd> has been replaced with <kbd>t</kbd>. Now <kbd>r</kbd> starts the Document Review. [More information about hotkeys](webeditor.html#hotkeys-map).</span></li>
   <br/>
-  {% include image.html name="documentReview.gif" width="800" caption="Document Review. In this example, we first filter the entities by text, and next, we review the resulting items performing some actions with the keyboard (change entity labels, create a relationship, and remove the last entity)" %}
-
 </ul>
 
 ---
@@ -593,7 +692,7 @@ _2019-11-06_
 _2019-10-20_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Work now better in teams... with [**Automatic Adjudication**](collaboration.html#adjudication)! If users annotate the same documents, now you can merge their annotations into a sigle version automatically. tagtog uses the IAA metrics for each annotation task to compute which annotation to choose in each case.</span></li>
+  <li class="new"><span markdown="1">Work now better in teams... with [**Automatic Adjudication**](collaboration.html#adjudication-merging)! If users annotate the same documents, now you can merge their annotations into a sigle version automatically. tagtog uses the IAA metrics for each annotation task to compute which annotation to choose in each case.</span></li>
   <li class="new"><span markdown="1">Now the `filter:TODO` view of documents, is sorted just like folders. This makes it easier to reason about the order of wip "TODO" documents.</span></li>
   <li class="new"><span markdown="1">Now `supercurator`s have also the active button to copy their annotations to `master`'s.</span></li>
   <li class="fix"><span markdown="1">Fixed sometimes wrong showing the status of the confirmation checkmark when annotations where copied from one version to another.</span></li>

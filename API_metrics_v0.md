@@ -18,7 +18,7 @@ api_folder_new: myNewFolder
 ---
 
 <div class="two-third-col">
-  <p><strong>🤠 All the API for metrics are in an alpha version, and can change at any moment. We give early access to the metrics for your benefit.</strong></p>
+  <p><strong>🤠𝛂 All APIs are in alpha, and can change at any moment. We give early access for your benefit.</strong></p>
 
   <table style="width:100%;white-space:nowrap;">
     <tr>
@@ -35,7 +35,7 @@ api_folder_new: myNewFolder
 
 <div class="two-third-col" markdown="1"> <!-- Opens main section: two-third-cold div -->
 
-## Project Stats  
+## Project Stats
 
 ### Annotation Stats
 
@@ -99,10 +99,10 @@ curl -u 'yourUsername:yourPassword' '{{ page.api_document_url }}/search_stats?pr
   <p>Response example <code>json</code>, search stats</p>
   <div markdown="1">
 ```json
-{  
+{
   "numDocuments": 4101,
   "numAnnotatedDocuments": 14,
-  "numConfirmedDocuments": 5,  
+  "numConfirmedDocuments": 5,
   "allDocumentLabelsTotalCount": 7,
   "allEntitiesTotalCount": 12,
   "e_21": {

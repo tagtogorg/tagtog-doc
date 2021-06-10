@@ -166,7 +166,7 @@ To start tagtog at system boot, typically on Linux systems you need to add your 
 
 Therefore, you will need to add to that file something like: `tagtog_on_premises start latest $TAGTOG_HOME`.
 
-You need to be aware of some caveats. [This is a nice checklist]([https://askubuntu.com/a/401090/159529) to verify that everything will work fine before actually rebooting your system.
+You need to be aware of some caveats. [This is a nice checklist](https://askubuntu.com/a/401090/159529) to verify that everything will work fine before actually rebooting your system.
 
 For example, you have to make sure to use full paths, the `$TAGTOG_HOME` environment variable must be defined or be accessible in your command/script, and you must be able to run the command as sudo / root. Also, since tagtog depends on docker, you must make sure that docker has been initialized before you run the tagtog start command.
 

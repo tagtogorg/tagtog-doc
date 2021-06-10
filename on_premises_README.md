@@ -107,7 +107,7 @@ An internet connection is only needed for installing and (optionally) [updating 
 
 ## Run
 
-* Choose one full-path folder/volume where all your tagtog data will be stored, and assign it to a global variable for convenience. For description purposes, let's call this folder `$TAGTOG_HOME`. **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`).
+* [Choose one full-path folder/volume where all your tagtog data will be stored](#tagtog_home-folder-backups--where-your-data-is-stored), and assign it to a global variable for convenience. For description purposes, let's call this folder `$TAGTOG_HOME`. **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`).
 
 ```shell
 export TAGTOG_HOME="$PWD/tagtog_data"

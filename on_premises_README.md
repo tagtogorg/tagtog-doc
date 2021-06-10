@@ -414,3 +414,14 @@ If you are running Docker Desktop, on Windows or macOs, you need to look into th
 <div class="img-with-caption">
   <img src="/assets/img/onpremises/docker-desktop-preferences.png" width="80%" alt="Screenshot: Docker Desktop Preferences Pane" />
 </div>
+
+
+### Changing the tagtog license in an offline / air gapped machine
+
+You need to make sure to run the [command to change the tagtog license](#change-license) & [then run tagtog](#run) for just-one-time (to validate the license against tagtog.net servers) in a machine with internet access.
+
+To keep all your existing data and still change & validate your new license, you have at least these options:
+
+a) Give temporary internet connection to your end offline server, at least just whitelisting the tagtog.net domain, to do the license change & validation. Right after this, you can cut off the internet again.
+
+b) Copy all your tagtog data (the [`$TAGTOG_HOME` folder](#backups-how-and-where-the-data-is-stored)) to a temporary machine with internet connection, then do there the license change & validation, and then finally move back the tagtog data to your end server. Of course, you should remove the data from the temporary machine.

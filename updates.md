@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## 3.2021-W23.0 🚀
+_2021-06-13_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(Cloud) The [tagtog ML for NER](machine-learning.html) is now activated by default for all [Cloud TEAM PRO subscriptions](https://www.tagtog.net/-plans)!</span></li>
+</ul>
+
+---
+
 ## 3.2021-W22.0 🧲
 _2021-06-05_
 

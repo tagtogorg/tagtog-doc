@@ -107,7 +107,7 @@ An internet connection is only needed for installing and (optionally) [updating 
 
 ## Run
 
-* Choose one full-path folder/volume where all your tagtog data will be stored, and assign it to a global variable for convenience. For description purposes, let's call this folder `$TAGTOG_HOME`. **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`).
+* [Choose one full-path folder/volume where all your tagtog data will be stored](#tagtog_home-folder-backups--where-your-data-is-stored), and assign it to a global variable for convenience. For description purposes, let's call this folder `$TAGTOG_HOME`. **Important**: always write this as a full path (that is, not as a relative path such ~/tagtog or ./tagtog, but rather `/my/volume/tagtog`).
 
 ```shell
 export TAGTOG_HOME="$PWD/tagtog_data"
@@ -136,7 +136,7 @@ To use your own TLS/SSL certificate, place the following 2 files (with the same 
 * `tagtog_SSL_CERTIFICATE.pem` (you can use a symlink)
 
 
-### Backups: How and where the data is stored
+### `$TAGTOG_HOME` folder: backups & where your data is stored
 
 All tagtog data is stored in the folder: `${TAGTOG_HOME}`. In particular, the subfolder `${TAGTOG_HOME}/persistent_data/` contains the actually persisted data (other subfolders exist, but you can ignore these details).
 
@@ -166,7 +166,7 @@ To start tagtog at system boot, typically on Linux systems you need to add your 
 
 Therefore, you will need to add to that file something like: `tagtog_on_premises start latest $TAGTOG_HOME`.
 
-You need to be aware of some caveats. [This is a nice checklist]([https://askubuntu.com/a/401090/159529) to verify that everything will work fine before actually rebooting your system.
+You need to be aware of some caveats. [This is a nice checklist](https://askubuntu.com/a/401090/159529) to verify that everything will work fine before actually rebooting your system.
 
 For example, you have to make sure to use full paths, the `$TAGTOG_HOME` environment variable must be defined or be accessible in your command/script, and you must be able to run the command as sudo / root. Also, since tagtog depends on docker, you must make sure that docker has been initialized before you run the tagtog start command.
 
@@ -179,7 +179,7 @@ To download the latest tagtog version (i.e. the latest docker images), do this:
 
 ```shell
 # Before updating the tagtog version, we strongly recommend to first **back up your data**
-# https://docs.tagtog.net/on_premises_README.html#backups-how-and-where-the-data-is-stored
+# https://docs.tagtog.net/on_premises_README.html#tagtog_home-folder-backups--where-your-data-is-stored
 
 ./tagtog_on_premises update
 ./tagtog_on_premises restart latest $TAGTOG_HOME
@@ -265,7 +265,7 @@ echo "0" > LATEST_VERSION
 
 On a few rare cases, the tagtog system might complain about some duplicate documents that are not findable anywhere. We call these "zombie" documents. They are the result of some hanging cache in our internal databases that was not completely removed due to some uncaught exceptions. The solution is to remove that hanging cache by running the follow script.
 
-First, to avoid any data loss, please [**backup your data**](#backups-how-and-where-the-data-is-stored).
+First, to avoid any data loss, please [**backup your data**](#tagtog_home-folder-backups--where-your-data-is-stored).
 
 Then, run the script only to report about possible errors (not trying to fix them):
 
@@ -296,7 +296,7 @@ export TAGTOG_FIX_DOCUMENTS_SCRIPT_MODE="CHECK_AND_FIX_AUTO"
 
 On a few rare cases, the entity offsets from the underlying data model (ann.json) may not match those of the interface. This visually results in some seemingly-broken entities. You might try to fix these errors running the following script.
 
-To avoid any data loss, please first [**backup your data**](#backups-how-and-where-the-data-is-stored).
+To avoid any data loss, please first [**backup your data**](#tagtog_home-folder-backups--where-your-data-is-stored).
 
 ```shell
 #
@@ -414,3 +414,14 @@ If you are running Docker Desktop, on Windows or macOs, you need to look into th
 <div class="img-with-caption">
   <img src="/assets/img/onpremises/docker-desktop-preferences.png" width="80%" alt="Screenshot: Docker Desktop Preferences Pane" />
 </div>
+
+
+### Changing the tagtog license in an offline / air gapped machine
+
+You need to make sure to run the [command to change the tagtog license](#change-license) & [then run tagtog](#run) for just-one-time (to validate the license against tagtog.net servers) in a machine with internet access.
+
+To keep all your existing data and still change & validate your new license, you have at least these options:
+
+a) Give temporary internet connection to your end offline server, at least just whitelisting the tagtog.net domain, to do the license change & validation. Right after this, you can cut off the internet again.
+
+b) Copy all your tagtog data (the [`$TAGTOG_HOME` folder](#tagtog_home-folder-backups--where-your-data-is-stored)) to a temporary machine with internet connection, then do there the license change & validation, and then finally move back the tagtog data to your end server. Of course, you should remove the data from the temporary machine.

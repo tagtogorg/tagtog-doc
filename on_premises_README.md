@@ -44,7 +44,7 @@ Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the foll
 * Memory:
   * OnPremises TEAM: **8GB RAM** (e.g. `t3a.large` on AWS, or `D2s_v3` on Azure); recommended **16GB RAM** (e.g. `t3a.xlarge` on AWS, or `D4s_v3` on Azure)
   * OnPremises ENTERPRISE: **16GB RAM** (e.g. `r5a.large` on AWS, or `E2s_v3` on Azure); recommended **32GB RAM** (e.g. `r5a.xlarge` on AWS, or `E4s_v3` on Azure)
-* Disk: **50+ GB of disk space**
+* Disk: **50+ GB of disk space** (we recommend storing [all tagtog's data](#tagtog_home-folder-backups--where-your-data-is-stored) in an external mounted device, e.g. AWS EBS or Azure managed Disk).
 
 
 ### Example setup on AWS

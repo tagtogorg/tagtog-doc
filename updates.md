@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## ??? 💳
+
+<ul class="updates">
+  <li class="sec"><span markdown="1">(Cloud Payments) Better handling of 3D Secure 2 verifications.</span></li>
+  <li class="fix"><span markdown="1">Improved selectability recognition of .tsv (and .zip) files when [uploading dictionaries](projects.html#dictionaries) in some OSes and/or browsers.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W23.5 🚀
 _2021-06-15_
 

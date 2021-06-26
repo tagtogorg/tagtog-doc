@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 💳
+## 3.2021-W25.0 💳
+_2021-06-26_
 
 <ul class="updates">
   <li class="sec"><span markdown="1">(Cloud Payments) Better handling of 3D Secure 2 verifications.</span></li>

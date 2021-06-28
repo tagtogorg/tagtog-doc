@@ -440,8 +440,10 @@ You can get which tagtog version you are running, in at least three ways:
     </div>
 3. By running this command:
 
+{% raw %}
 ```shell
 docker images --filter=reference="tagtog:[^l]*" --format={{.Tag}} | head -n 1
 ```
+{% endraw %}
 
 To benefit from all [new tagtog features & improvements](updates.html), we always recommend you to [update to the latest tagtog version](#update).

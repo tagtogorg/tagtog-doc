@@ -427,3 +427,21 @@ To keep all your existing data and still change & validate your new license, you
 a) Give temporary internet connection to your end offline server, at least just whitelisting the tagtog.net domain, to do the license change & validation. Right after this, you can cut off the internet again.
 
 b) Copy all your tagtog data (the [`$TAGTOG_HOME` folder](#tagtog_home-folder-backups--where-your-data-is-stored)) to a temporary machine with internet connection, then do there the license change & validation, and then finally move back the tagtog data to your end server. Of course, you should remove the data from the temporary machine.
+
+
+### I don't know which tagtog version I'm running... how to find out?
+
+You can get which tagtog version you are running, in at least three ways:
+
+1. Cat & copy the content of the file: `LATEST_VERSION` (located along the `tagtog_on_premises` script).
+2. By inspecting the HTML content of the tagtog frontpage (without being logged in), written as a HTML comment right at the end:
+    <div class="img-with-caption">
+      <img src="/assets/img/onpremises/tagtog_version_in_html.png" width="50%" alt="Screenshot: tagtog version written as a comment at the bottom of the tagtog frontpage HTML content." />
+    </div>
+3. By running this command:
+
+```shell
+docker images --filter=reference="tagtog:[^l]*" --format={{.Tag}} | head -n 1
+```
+
+To benefit from all [new tagtog features & improvements](updates.html), we always recommend you to [update to the latest tagtog version](#update).

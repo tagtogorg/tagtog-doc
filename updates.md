@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🔒
+## 3.2021-W26.0 🔒
+_2021-07-03_
 
 <ul class="updates">
   <li class="sec"><span markdown="1">(Payments) Now you can delete your payment methods as long as you do not have a running subscription.</span></li>

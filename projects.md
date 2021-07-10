@@ -390,7 +390,7 @@ tagtog_domain: https://www.tagtog.net
 
   <div class="two-third-col">
     <h4>Task distribution</h4>
-    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose 2 annotators, every uploaded document will be randomly assigned to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
+    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose 2 annotators, every uploaded document will be randomly allocated to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
 
     <p markdown="1">Annotating the same document by 2 or more members is recommended to increase the overall **quality of your annotation project**. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> or IAA) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a>.</p>
 

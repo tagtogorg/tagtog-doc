@@ -127,7 +127,7 @@ toc: true
   {% include message.html message='Find out on this tutorial <a href="https://medium.com/@tagtog/how-to-rank-review-your-annotators-4a814c941ac3?source=friends_link&sk=c354f53823defdaf2844271185fd28e3" title="Medium post: How to rank &amp; review your annotators">how to rank &amp; review your annotators with the <code>members_anncomplete</code> query</a>.' %}
 </div>
 <div class="one-third-col">
-  {% include message.html message='Note that <code>members_anncomplete</code> searches in members versions only. If you rather want to search for a confirmed document in any <em>version</em> (i.e. any member or master), you need to search for: <code>members_anncomplete:* OR anncomplete:true</code>' %}
+  {% include message.html message='Note that <code>members_anncomplete</code> searches in members versions only. If you rather want to search for a confirmed document in any <em>version</em> (i.e. any member or master), you need to search for: <code>members_anncomplete:* OR anncomplete:true</code>.<br>You can also search the opposite, that is, all documents not confirmed on any version yet, by negating the previous query, as in: <code>-(members_anncomplete:* OR anncomplete:true)</code>, or just <code>anncomplete:false AND -members_anncomplete:*</code>.' %}
 </div>
 
 

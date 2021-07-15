@@ -117,6 +117,7 @@ toc: true
   {% include message.html message="Here, a <strong>confirmed document</strong> means a document with the master version of the annotations confirmed." %}
 </div>
 
+
 <div class="two-third-col">
   <h3>Search which documents a user has confirmed</h3>
   <p>You can retrieve the documents a given member has confirmed with the query: <code>members_anncomplete:username</code></p>
@@ -128,6 +129,14 @@ toc: true
 </div>
 <div class="one-third-col">
   {% include message.html message='Note that <code>members_anncomplete</code> searches in members versions only. If you rather want to search for a confirmed document in any <em>version</em> (i.e. any member or master), you need to search for: <code>members_anncomplete:* OR anncomplete:true</code>.<br>You can also search the opposite, that is, all documents not confirmed on any version yet, by negating the previous query, as in: <code>-(members_anncomplete:* OR anncomplete:true)</code>, or just <code>anncomplete:false AND -members_anncomplete:*</code>.' %}
+</div>
+
+
+<div class="two-third-col">
+  <h3>Search which documents a user was assigned to</h3>
+  <p>You can retrieve the documents distributed to a given member, with the query: <code>members_assigned:username</code></p>
+  <p>You can also retrieve all the documents that have <em>at least one</em> assignee, with the query: <code>members_assigned:*</code></p>
+  <p>You can combine the query fields with boolean logic, for example to find all documents allocated to two given users: <code>members_assigned:user-A AND members_assigned:user-C</code></p>
 </div>
 
 

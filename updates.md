@@ -17,8 +17,8 @@ notoc: true
 ## ??? 📥
 
 <ul class="updates">
-  <li class="new"><span markdown="1">Also return the **`member_assignments` (i.e. the [distribution/allocation for each document](projects.html#task-distribution)) in the output format of the [search documents API](API_documents_v1.html#search-response-format) 🍾.</span></li>
-  <li class="new"><span markdown="1">Also return the **`created` date** (upload date) in the output format of the [search documents API](API_documents_v1.html#search-response-format).</span></li>
+  <li class="new"><span markdown="1">Also return the **`members_assigned`** (i.e. the [distribution/allocation for each document](projects.html#task-distribution)) in the output format of the [search documents API](API_documents_v1.html#search-response-format) 🍾.</span></li>
+  <li class="new"><span markdown="1">Also return the **`created` date** (upload time) in the output format of the [search documents API](API_documents_v1.html#search-response-format).</span></li>
 </ul>
 
 ---

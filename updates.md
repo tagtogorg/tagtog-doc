@@ -20,6 +20,7 @@ notoc: true
   <li class="new"><span markdown="1">Now you can also [**search documents by assignee**](search-queries.html#search-which-documents-a-user-was-assigned-to) (i.e., who got the documents distributed to) 🎉.</span></li>
   <li class="new"><span markdown="1">Also return the **`members_assigned`** (i.e. the [distribution/allocation for each document](projects.html#task-distribution)) in the output format of the [search documents API](API_documents_v1.html#search-response-format) 🎊.</span></li>
   <li class="new"><span markdown="1">Also return the **`created` date** (upload time) in the output format of the [search documents API](API_documents_v1.html#search-response-format).</span></li>
+  <li class="fix"><span markdown="1">Handle well programmatic HTTP requests that do not have the header `User-Agent`.</span></li>
 </ul>
 
 ---

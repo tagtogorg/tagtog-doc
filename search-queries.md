@@ -134,7 +134,7 @@ toc: true
 
 <div class="two-third-col">
   <h3>Search which documents a user was assigned to</h3>
-  <p>You can retrieve the documents distributed to a given member, with the query: <code>members_assigned:username</code></p>
+  <p>You can retrieve the <a href="projects.html#task-distribution">documents distributed</a> to a given member, with the query: <code>members_assigned:username</code></p>
   <p>You can also retrieve all the documents that have <em>at least one</em> assignee, with the query: <code>members_assigned:*</code></p>
   <p>You can combine the query fields with boolean logic, for example to find all documents allocated to two given users: <code>members_assigned:user-A AND members_assigned:user-C</code></p>
 </div>

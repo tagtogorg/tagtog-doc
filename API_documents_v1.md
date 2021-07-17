@@ -1726,14 +1726,16 @@ print(response.text)
 <div markdown="1">
 ```javascript
 {
-  "version": "String: this format's version, e.g. 0.5.0",
+  "version": "String: this format's version, e.g. 0.7.0",
   "search": "String: user search query",
   "totalFound": "Number: total number of documents that match the search query",
   "pages": {
     //the search is paginated
-    "current": "Number: paginated search's current page",
+    "current": "Number: paginated search's current page number (0-indexed)",
     "previous": "Number: paginated search's previous page; -1 if current page == 0",
     "next": "Number: paginated search's current page; -1 if current page is the last page",
+    "numPages": "Number: number of pages; at least 1",
+    "pageSize": "Number: number of document elements in the page; always 50"
   }
   "docs":
   [
@@ -1741,9 +1743,11 @@ print(response.text)
       "id": "String: full tagtogID -- Use this to download the document",
       "filename": "String: filename of originally uploaded file",
       "header": "String: title if the document has a natural title or otherwise an excerpt of the text's start",
-      "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2017-02-23T08:31:40.874Z",
+      "created": "String: date for the document' upload time, in ISO_INSTANT format, e.g. 2021-07-15T16:21:25.750Z",
+      "updated": "String: date for the document' last update, in ISO_INSTANT format, e.g. 2021-07-16T16:28:17.285Z",
       "anncomplete": "Boolean: status for the document's annotation completion",
-      "members_anncomplete": ["String Array: usernames of members who completed (confirmed) their annotations"],
+      "members_anncomplete": ["String Array: members' usernames who completed (confirmed) their annotations"],
+      "members_assigned": ["String Array: members' usernames who were asssigned to this document"],
       "folder": "String: folder path where the document is located; e.g. `pool/mySubFolder`"
     },
     //next documents in the array of results...
@@ -1810,22 +1814,34 @@ fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page
 <div markdown="1">
 ```json
 {
-  "version": "0.5.0",
+  "version": "0.7.0",
   "search": "entity:GGP:P02649",
   "totalFound": 1,
-  "pages": {"current": 0, "previous": -1, "next": -1},
-  "docs":
-    [
-      {
-        "id": "aMHKzF_lIoNrdh9pAx298njgIezy-text",
-        "filename": "text.txt",
-        "header": "Certain genes make you more likely to develop Alzheimer's disease. Genes control the function of every cell in your body. Some genes determine basic characterist",
-        "updated": "2018-03-03T20:59:56.467Z",
-        "anncomplete": false,
-        "members_anncomplete": ["someMemberUsername"],
-        "folder": "pool/mySubFolder"
-      }
-    ]
+  "pages": {
+    "current": 0,
+    "next": -1,
+    "numPages": 1,
+    "pageSize": 50,
+    "previous": -1
+  },
+  "docs": [
+    {
+      "anncomplete": false,
+      "created": "2021-07-15T16:34:41.720Z",
+      "filename": "text.txt",
+      "folder": "pool",
+      "header": "tagtog is awesome ;-)",
+      "id": "aE7DVwx5pj.KxZtSadEce0HkNGk0-text.txt",
+      "members_anncomplete": [
+          "user-A"
+      ],
+      "members_assigned": [
+          "user-C",
+          "user-A"
+      ],
+      "updated": "2021-07-15T16:35:34.428Z"
+    }
+  ]
 }
 ```
 </div>

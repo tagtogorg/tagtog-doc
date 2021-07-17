@@ -447,3 +447,11 @@ docker images --filter=reference="tagtog:[^l]*" --format={{.Tag}} | head -n 1
 {% endraw %}
 
 To benefit from all [new tagtog features & improvements](updates.html), we always recommend you to [update to the latest tagtog version](#update).
+
+
+### TLS/SSL termination
+
+tagtog runs by default on https only.
+In most cases, we recommend against doing TLS/SSL termination.
+
+If you really need this, please contact us.

@@ -13,6 +13,14 @@ toc: true
   <h3>Document List View</h3>
   <p>In tagtog, documents are listed based on a <a title="tagtog - search queries" href="search-queries.html">search query</a>. For example, listing the documents of a folder or listing all the documents that contain a specific entity. You can use these lists for <a title="tagtog - batch operations" href="search.html#batch-operations">batch processing</a>, for example, to remove or download documents matching a search.</p>
 
+  <h3>Document List Item</h3>
+  <p>Each document (each row in the Document List) contains the following information:</p>
+  <p class="list-item" markdown="1"><span class="list-item-1"></span>**Whether the master version is confirmed or not**. A background color of the checkmark is green if the master version is confirmed.</p>
+  <p class="list-item" markdown="1"><span class="list-item-2"></span>**Track document progress**. If [Task Distribution](projects.html#task-distribution) is active, a progress wheel indicates how many of the users assigned to the document confirmed it. Users not assigned to the document aren't taken into consideration.<br/>If you hover over the progress wheel, you can see the list of users assigned to the document and, from this list, who confirmed the document.</p>
+  <p class="list-item" markdown="1"><span class="list-item-3"></span>**Document filename**.</p>
+  <p class="list-item" markdown="1"><span class="list-item-4"></span>**Document excerpt**. The first piece of text from the document.</p>
+  <p class="list-item" markdown="1"><span class="list-item-5"></span>**Remove**. You can use this action to remove the document from your project.</p>
+
   <h3>Folders</h3>
   <p markdown="1">Use folders to organize your documents better. The <strong>root is the <code>pool</code> folder</strong>, which is created by default with each new project. Folders are sorted <strong>alphabetically</strong>. You can [manage folders via API](API_settings_v1.html#folders-management) or directly on the website as now described.</p>
   <h4>Create a new folder</h4>
@@ -77,8 +85,8 @@ toc: true
 </div>
 <div class="two-third-col">
   <h5>Distribute to a group of users</h5>
-  <p>If <a href="projects.html#task-distribution">Task Distribution</a> is enabled, here you can force to which users you want to assign the importing of documents to. If one or more users are selected, the automatic task distribution settings are overridden (for this import request only). tagtog will distribute (assign) the document to all the users selected and only to those.</p>
-  <p>The list of selectable users matches the list of members specified in the Task Distribution settings.</p>
+  <p>If <a href="projects.html#task-distribution">Task Distribution</a> is enabled, here you can force to which users you want to assign the documents to. If one or more users are selected, the automatic task distribution settings are overridden (for this request only). tagtog will distribute (assign) the document to all the users selected and only to those.</p>
+  <p markdown="1">Members with a role with the [permission](collaboration.html#permissions) `canEditSelf` will be listed for selection. For each member, the role is also displayed.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -90,9 +98,10 @@ toc: true
 <div class="one-third-col">
 </div>
 <div class="two-third-col">
-  <h3>Manually confirmed documents</h3>
-  <p>In the document list view, each document has a check mark, when it is green, it means the document is confirmed.</p>
-  <p>Manually confirmed documents are those with the <strong><code>master</code> version confirmed</strong>. Depending on the project, it can also mean that the annotations have been reviewed by a human, and they can be used as ground truth.</p>
+  <h3>Confirmed documents</h3>
+  <p>In the document list view, each document has a checkmark, when it is green, it means the <strong><code>master</code> version of the document is confirmed</strong>.</p>
+  <p markdown="1">In addition to `master`, each document has an annotation version per member. Each of these versions can be confirmed separately to `master`. [More information](collaboration.html#annotation-versions).</p>
+  <p>Confirmed documents are those with the <strong><code>master</code> version confirmed</strong>. Depending on the project, it can also mean that the annotations have been reviewed by a human, and they can be used as ground truth.</p>
   <p>To confirm documents is helpful to keep the progress of the annotation tasks. If <a href="projects.html#task-distribution" title="task distribution">task distribution</a> is active, a number will appear together with the confirm check mark. This number indicates the number of users that have confirmed their version of the annotations. When you hover with your mouse, the list of users who confirmed their version will show up.</p>
 </div>
 

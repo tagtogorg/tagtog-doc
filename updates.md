@@ -14,6 +14,19 @@ notoc: true
 
 ---
 
+## ??? 📊
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Now you can see the annotation progress of each document directly in the document list 🌟. [More information](documents.html#document-list-item).</span></li>
+  <li class="new"><span markdown="1">The assignments from task distribution are now displayed in the document list. [More information](documents.html#document-list-item).</span></li>
+  <li class="new"><span markdown="1">The assignments from task distribution are also visible in the document view. [More information](webeditor.html#annotations-from-other-users).</span></li>
+  <li class="new"><span markdown="1">If you want to force the distribution of a document to a specific set of users, you can now choose from a list of all suitable users (not only those selected for task distribution). Their role is now visible. [More information](documents.html#distribute-to-a-group-of-users).</span></li>
+  <li class="new"><span markdown="1">The role of each member is displayed (in the HTML title) in the document member list. [More information](webeditor.html#annotations-from-other-users)</span></li>
+  <li class="new"><span markdown="1">Now the different versions in the document member list are sorted conveniently.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W28.1 📥
 _2021-07-21_
 
@@ -631,7 +644,7 @@ _2020-04-25_
   <li class="new"><span markdown="1">New free unlimited plan for public data 💚 <a title="tagtog - public projects" href="/projects.html#public-projects">Learn more</a>.</span></li>
   <li class="new"><span markdown="1">Now you can start a trial for the paid Cloud plans on your own ✌️.</span></li>
   <li class="new"><span markdown="1">(Cloud) increase or decrease the number of users in your subscription, monthly, with total flexibility.</span></li>
-  <li class="new"><span markdown="1">Now, you can see from the list of documents how many users have confirmed their version of the annotations. [More information](documents.html#manually-confirmed-documents "tagtog - manually confirmed documents").</span></li>
+  <li class="new"><span markdown="1">Now, you can see from the list of documents how many users have confirmed their version of the annotations. [More information](documents.html#confirmed-documents "tagtog - manually confirmed documents").</span></li>
   v
   <li class="new"><span markdown="1">(Security) Now all our cookies are sent with the [(`Set-Cookie`) `Secure`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) directive, which ensures that cookies are sent only on **https**.</span></li>
 </ul>

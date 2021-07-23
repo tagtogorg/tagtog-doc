@@ -376,7 +376,8 @@ id: collaboration
 
 <div class="two-third-col">
   <h2>Annotation versions</h2>
-  <p><strong>Each user has an independent version of the annotations for each single document</strong>. For instance, UserA could have 20 entities; UserB could have 5 different entities on the same exact document. <strong>In addition, each document has a <code>master</code> version</strong> which is usually treated as the final/official version (ground truth).</p>
+  <p markdown="1">**Each user (with a role with the [permission](collaboration.html#permissions) `canEditSelf`) has an independent version of the annotations for each single document**. For instance, UserA could have 20 entities; UserB could have 5 different entities on the same exact document. <strong>In addition, each document has a <code>master</code> version</strong> which is usually treated as the final/official version (ground truth).</p>
+  <p markdown="1">Any of these versions are independent and can be **confirmed separately**.</p>
 </div>
 <div class="one-third-col">
 </div>

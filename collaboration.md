@@ -376,7 +376,8 @@ id: collaboration
 
 <div class="two-third-col">
   <h2>Annotation versions</h2>
-  <p><strong>Each user has an independent version of the annotations for each single document</strong>. For instance, UserA could have 20 entities; UserB could have 5 different entities on the same exact document. <strong>In addition, each document has a <code>master</code> version</strong> which is usually treated as the final/official version (ground truth).</p>
+  <p markdown="1">**Each user (with a role with the [permission](collaboration.html#permissions) `canEditSelf`) has an independent version of the annotations for each single document**. For instance, UserA could have 20 entities; UserB could have 5 different entities on the same exact document. <strong>In addition, each document has a <code>master</code> version</strong> which is usually treated as the final/official version (ground truth).</p>
+  <p markdown="1">Any of these versions are independent and can be **confirmed separately**.</p>
 </div>
 <div class="one-third-col">
 </div>
@@ -454,7 +455,7 @@ id: collaboration
   {% include message.html message='You can always assign a document to more than one user. Check out <a href="#documents-are-automatically-distributed-multiple-annotators-per">this annotation flow</a> for details.' %}
 </div>
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. <code>Reviewer</code> (or <code>Admin</code>) checks which documents are ready for review (via GUI in the <i><a href="/metrics.html#documents">metrics panel > documents</a></i> or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">by using a search query</a>). <code>Reviewer</code> moves the user's annotations to the <code>master</code> version (ground truth), review, and make the required changes. <code>Reviewers</code> should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed and the document is ready for production.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Review</strong>. <code>Reviewer</code> (or <code>Admin</code>) checks which documents are ready for review (via GUI in the <a href="documents.html#document-list-item">Document list</a>, in Metrics <i><a href="/metrics.html#documents">metrics panel > documents</a></i>, or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">by using a search query</a>). <code>Reviewer</code> moves the user's annotations to the <code>master</code> version (ground truth), review, and make the required changes. <code>Reviewers</code> should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed and the document is ready for production.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message='If the Review step was not required, users could annotate directly on the <code>master</code> version. When ready, users should mark the annotations of each document as completed by clicking on the <i>Confirm</i> button.' %}
@@ -497,7 +498,7 @@ id: collaboration
 </div>
 
 <div class="two-third-col">
-  <p class="numbered-item"><span class="number-6">6</span><strong>Adjudication</strong>. <code>Reviewers</code> (or <code>Admins</code>) check which documents are ready for review (via GUI in the <i><a href="/metrics.html#documents">metrics panel > documents</a></i> or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">via search query</a>). For a document, <code>Reviewers</code> merge the users' annotations (<a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">automatic adjudication</a>) to the <code>master</code> version (ground truth). <code>Reviewers</code> review the merged annotations and they should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed.</p>
+  <p class="numbered-item"><span class="number-6">6</span><strong>Adjudication</strong>. <code>Reviewers</code> (or <code>Admins</code>) check which documents are ready for review (via GUI in the <a href="documents.html#document-list-item">Document list</a>, in the <i><a href="/metrics.html#documents">metrics panel > documents</a></i> or <a title="tagtog - Search for confirmed documents" href="search-queries.html#search-confirmed-documents">via search query</a>). For a document, <code>Reviewers</code> merge the users' annotations (<a title="tagtog - Automatic adjudication based on IAA" href="collaboration.html#automatic-adjudication-based-on-iaa">automatic adjudication</a>) to the <code>master</code> version (ground truth). <code>Reviewers</code> review the merged annotations and they should click on the <i>Confirm</i> button in the <code>master</code> version to indicate that the review is completed.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message="As an alternative, <code>reviewers</code> could review each member's annotations, move to <code>master</code> one of them and apply any potential change directly on <code>master</code>." %}

@@ -390,9 +390,9 @@ tagtog_domain: https://www.tagtog.net
 
   <div class="two-third-col">
     <h4>Task distribution</h4>
-    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose 2 annotators, every uploaded document will be randomly allocated to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your group. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
+    <p>With this feature, you can <strong>automatically distribute (assign) uploaded documents to selected project members</strong>. For example, if you choose 2 annotators, every uploaded document will be randomly allocated to 2 annotators; that is, every document will have to be annotated by at least 2 annotators. You can choose between different flows to annotate documents in your team. Find <a title="tagtog - Annotation flows" href="collaboration.html#annotation-flows">here</a> the options.</p>
 
-    <p markdown="1">Annotating the same document by 2 or more members is recommended to increase the overall **quality of your annotation project**. Using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> or IAA) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a>.</p>
+    <p markdown="1">Annotating the same document by 2 or more members is recommended to increase the overall **quality of your annotation project**. By using it, tagtog compares the annotations from different annotators to calculate their level of agreement (<a title="tagtog - Inter-annotator agreement" href="collaboration#iaa-inter-annotator-agreement">inter-annotator agreement</a> or IAA) automatically, a good indicator of quality. For more information about quality management at tagtog, go <a title="tagtog - Quality Management" href="collaboration.html#quality-management">here</a>.</p>
 
     <br>
 
@@ -403,8 +403,40 @@ tagtog_domain: https://www.tagtog.net
     <p class="numbered-item"><span class="number-2">2</span><strong>Select the number of annotators per document</strong> (how many of the selected users will annotate each document).</p>
     <br>
     <p>To keep track of the project quality, even if you set the task distribution as one annotator per document (each document is assigned to a different annotator), tagtog automatically tries to allocate 5% of your documents to two annotators to calculate IAA.</p>
-    <p><strong>By default, task distribution is turned off</strong>. This means that uploaded documents do not get distributed. When task distribution is not active, members see the <a href="collaboration.html#annotation-versions"><code>master</code> version</a> automatically when they open a document. Once the task distribution is active (number of annotators per document is 1 or more), members will see their own version of the annotations when they open a document.</p>
-    <p><strong>When task distribution is active, project members see by default the special search <a href="search-queries.html#filter-todo"><code>filter:TODO</code></a></strong> (in the tab <em>Documents</em>). This view lists the documents that have not been confirmed yet by the logged annotator.</p>
+    <p><strong>By default, task distribution is turned off</strong>. This means that uploaded documents do not get distributed.</p>
+    <p>You can find below the differences between a project with task distribution active or not:</p>
+    <table style="width:100%">
+      <tr>
+        <th>Feature</th>
+        <th>:heavy_check_mark: Task distribution Active</th>
+        <th>:x: Task distribution Not Active</th>
+      </tr>
+      <tr>
+        <td class="centered">Default annotations version</td>
+        <td>Members are redirected to their own version of the annotations when they open a document</td>
+        <td><p markdown="1">Members are redirected to the [`master`](collaboration.html#annotation-versions) version when they open a document.</p></td>
+      </tr>
+      <tr>
+        <td class="centered">Default search filter</td>
+        <td><p markdown="1">Members see by default the special search [`filter:TODO`](search-queries.html#filter-todo) (in the tab _Documents_). This view lists the documents that have been assigned to the member, but their version is not confirmed yet, i.e. the TODO member's tasks.</p></td>
+        <td>No search filter active</td>
+      </tr>
+      <tr>
+        <td class="centered">Track document progress</td>
+        <td><p markdown="1">In the document list, members see a [progress wheel](documents.html#document-list-item) indicating how many of the assigned members confirmed the document. If you hover over this wheel, you see the list of members assigned to the document, and who confirmed it.</p></td>
+        <td>Document progress is not displayed.</td>
+      </tr>
+      <tr>
+        <td class="centered">Document distribution</td>
+        <td><p markdown="1">At the document view, in the [document member list](webeditor.html#annotations-from-other-users), the members' versions are split into two groups: members assigned to the document ("Assigned") and members that are not assigned to the document ("Other").</p></td>
+        <td><p markdown="1">At the document view, in the [document member list](webeditor.html#annotations-from-other-users), the members' versions are not split into groups. All suitable members' versions are listed.</p></td>
+      </tr>
+      <tr>
+        <td class="centered">Force document distribution</td>
+        <td><p markdown="1">When you upload documents, you can [select manually who you want to distribute the documents to](documents.html#distribute-to-a-group-of-users).</p></td>
+        <td><p markdown="1">You cannot manually distribute documents.</p></td>
+      </tr>
+    </table>
   </div>
   <div class="one-third-col">
     <div class="message">

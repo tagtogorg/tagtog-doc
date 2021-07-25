@@ -330,13 +330,15 @@ toc: true
     </div>
     <div class="two-third-col">
       <h4>Annotations from other users</h4>
-      <p>Click on the user list to show all the project members. Click on the one you are interested, the version of the annotations for that user will be displayed on the document area.</p>
-      <p>Depending on your permissions you are able to edit or not the different versions of the annotations. A locker icon {% include inline-image.html name="editor-member-locker.PNG" width="15" %} indicates that your permissions on that version are read-only.</p>
-      <p>If you are a project admin, you will be able to see which of the members have already confirmed the document in the member list</p>
+      <p markdown="1">Each document has a `master` version and one separate annotation version per project member.</p>
+      <p>Click on the user list to show the different versions available. Click on any of these annotation versions to load it in the document editor area.</p>
+      <p>Depending on your permissions you can/cannot edit the different annotation versions. A locker icon {% include inline-image.html name="editor-member-locker.PNG" width="15" %} indicates that your permissions for that version are read-only.</p>
+      <p>For each version listed, there is a checkmark indicating if that version is confirmed (green) or not. If you hover over the username, the role is displayed.</p>
+      <p markdown="1">If [Task Distribution](projects.html#task-distribution) is active, the list of versions is split into two groups: members assigned to the document (this document was distributed to this member), and members not assigned to the document ("Other"). If Task Distribution is not active, all suitable members' versions are listed.</p>
       <p><a href="/collaboration.html">More information on multi-user annotation</a></p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor-members.PNG" width="150"%}
+      {% include image.html name="editor/toolbar/editor_members.png" width="150" %}
     </div>
     <div class="two-third-col">
       <h4>Manage annotation versions</h4>
@@ -403,7 +405,7 @@ toc: true
       <p>Click on the button with the icon {% include inline-image.html name="editor-doc-remove.PNG" width="20" %} and select the option <code>Remove document</code>to remove the document from the folder.</p>
     </div>
     <div class="one-third-col">
-      {% include image.html name="editor/toolbar/download-view-export.png" width="250"%}
+      {% include image.html name="editor/toolbar/download-view-export.png" width="150"%}
     </div>
     <div class="two-third-col">
       <br/>

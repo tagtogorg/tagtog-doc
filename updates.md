@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 📊
+## 3.2021-W29.3 📊
+_2021-08-12_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Now you can see the annotation progress of each document directly in the document list 🌟. [More information](documents.html#document-list-item).</span></li>

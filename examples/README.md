@@ -1,4 +1,6 @@
-Here you can find the code for the "Train your own AI models with tagtog" medium post.  
+Here you can find sample code to interact with tagtog APIs and webhooks.
 
-### How to run it  
-You may find any info you need in the [Medium post](https://medium.com/@tagtog/how-to-train-your-ai-models-with-tagtog-5a2beaa12eb).
+Mostly:
+
+* the code for the [medium post: "How To Train Your AI Models With tagtog"](https://medium.com/@tagtog/how-to-train-your-ai-models-with-tagtog-5a2beaa12eb)
+* [merge.py: python sample code to automatically merge/adjudicate multiple documents](merge.py)

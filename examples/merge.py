@@ -1,3 +1,6 @@
+# Python sample code to automatically merge/adjudicate multiple documents using tagtog APIs
+# The multiple documents come from the user's search query --> see `MY_SEARCH`
+
 import requests
 import os
 import urllib.parse

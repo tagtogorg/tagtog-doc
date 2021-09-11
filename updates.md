@@ -18,6 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="fix"><span markdown="1">(OnPremises) The download button for the documents annotation status was not working.</span></li>
+  <li class="sec"><span markdown="1">(OnPremises) Improved security in logging reporting.</span></li>
 </ul>
 
 ---

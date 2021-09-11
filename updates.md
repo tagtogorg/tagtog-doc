@@ -14,6 +14,16 @@ notoc: true
 
 ---
 
+## 3.2021-W36.0 📤
+_2021-09-11_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">(OnPremises) The download button for the documents annotation status was not working.</span></li>
+  <li class="sec"><span markdown="1">(OnPremises) Improved security in logging reporting.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W29.4 📊
 _2021-08-12_
 

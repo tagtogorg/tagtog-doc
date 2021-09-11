@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 📤
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">(OnPremises) The download button for the documents annotation status was not working.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W29.4 📊
 _2021-08-12_
 

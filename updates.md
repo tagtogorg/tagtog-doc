@@ -18,6 +18,7 @@ notoc: true
 
 <ul class="updates">
   <li class="new"><span markdown="1">Increased the throughput and stability of uploading many and large documents.</span></li>
+  <li class="sec"><span markdown="1">(OnPremises) Further improved the security in logging, removing content leaks.</span></li>
 </ul>
 
 ---

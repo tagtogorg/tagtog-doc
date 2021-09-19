@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🚤
+## 3.2021-W37.0 🚤
+_2021-09-19_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(OnPremises) Increased the throughput and stability of uploading many and large documents, specially while using dictionaries.</span></li>

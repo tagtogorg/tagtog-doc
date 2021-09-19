@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## ??? 🚤
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(OnPremises) Increased the throughput and stability of uploading many and large documents, specially while using dictionaries.</span></li>
+  <li class="sec"><span markdown="1">(OnPremises) Further improved the security in logging, removing content leaks.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W36.0 📤
 _2021-09-11_
 

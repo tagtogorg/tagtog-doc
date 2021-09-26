@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## ??? 🇩🇪
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Slightly faster document saving.</span></li>
+  <li class="sec"><span markdown="1">(OnPremises) Removed some document content leaks in logging. Some of these logs could also be too many and too verbose, which could cause performance and disk issues.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W37.0 🚤
 _2021-09-19_
 

@@ -20,7 +20,7 @@ notoc: true
   <li class="new"><span markdown="1">Much faster document upload, up to x2. This is specially so for large and many batches.</span></li>
   <li class="new"><span markdown="1">(OnPremises) Much better performance and machine's memory utilization. Now all our JVM-based services set optimized `*RAMPercentage` parameters.</span></li>
   <li class="fix"><span markdown="1">On rare occasions (unprobable race conditions), some document uploads resulted in 500 errors. This is now fixed.</span></li>
-  <li class="doc"><span markdown="1">Clear indicate in [inputs & outputs formats](ioformats.html#input-formats), that the format _nativepdfv1-plus-annjson_ is deprecated.</span></li>
+  <li class="doc"><span markdown="1">Clarify in [inputs & outputs formats](ioformats.html#input-formats), that the format _nativepdfv1-plus-annjson_ is deprecated.</span></li>
   <li class="sec"><span markdown="1">Updated the versions of some internal services for security and performance.</span></li>
 </ul>
 

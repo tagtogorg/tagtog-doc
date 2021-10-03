@@ -125,8 +125,8 @@ toc: true
     </div>
 
   <div class="one-third-col">
-
   </div>
+
   <div class="two-third-col">
     <h2>Input formats</h2>
     <p>If there is no format specified, the default format for the content imported is used.</p>
@@ -158,7 +158,7 @@ toc: true
       <tr>
         <td rowspan="5">Pre-annotated content</td>
         <td><code>default-plus-annjson</code></td>
-        <td><p>Use it if you are importing pre-annotated documents (content + <code>ann.json</code>) and you want the <strong>content to be recognized using the default format</strong>.</p><p>For example to import pre-annotated PDFs, plain text or markdown files.</p><p>Choose this option if you are not sure which format to use when sending pre-annotated documents.</p><p><a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#examples-import-pre-annotated-plain-text-file">Example</a></p></td>
+        <td><p>Use it if you are importing pre-annotated documents (content + <code>ann.json</code>) and you want the <strong>content to be recognized using the default format</strong>.</p><p>For example to import pre-annotated native PDFs, plain text, or markdown files.</p><p>Choose this option if you are not sure which format to use when sending pre-annotated documents.</p><p><a title="tagtog - How to upload annotated documents?" href="API_documents_v1.html#examples-import-pre-annotated-plain-text-file">Example</a></p></td>
       </tr>
       <tr>
         <td><code>verbatim-plus-annjson</code></td>
@@ -170,8 +170,7 @@ toc: true
       </tr>
       <tr>
         <td><code>nativepdfv1-plus-annjson</code></td>
-        <td><p>Analogous to <code>default-plus-annjson</code>, and complimentary to the <code>nativepdfv1</code> format. Use this format when you have old annotations you want to import to tagtog, and these were created using the <a href="pdf-annotation-tool.html">PDF native editor</a>.</p>
-        <p>You can verify which format was originally used in the <code>plain.html</code> file. If you don't have access to this information, assume that any native PDF annotations generated up to the <a href="updates.html#32020-w282-">3.2020-W28.2</a> version should use this format.</p></td>
+        <td><p>(DEPRECATED) Analogous to <code>default-plus-annjson</code>, and complimentary to the <code>nativepdfv1</code> format. Only use this format to import <a href="pdf-annotation-tool.html">Native PDF</a>-based annotations, which are old. That is, your annorations are based on Native PDFs uploaded to tagtog up to the tagtog version <a href="updates.html#32020-w282-">3.2020-W28.2</a> (including). You can double check which PDF parsing format was originally used in the <code>plain.html</code>.</p></td>
       </tr>
       <tr>
         <td><code>anndoc</code></td>
@@ -179,15 +178,12 @@ toc: true
       </tr>
     </table>
   </div>
+
   <div class="one-third-col">
     <div class="message">
       In the GUI, it is not necessary to specify a pre-annotated format, it is recognized automatically that you are importing content + annotations.
     </div>
   </div>
-
-
-
-
 </div>
 
 

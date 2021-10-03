@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🚄
+## 3.2021-W39.0 🚄
+_2021-10-03_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Much faster document upload, up to x2. This is specially so for large and many batches.</span></li>

@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 🧫
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">In confirmed documents, upon clicking on an entity and showing its annotation menu, its normalizations wrongly appeared editable.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W39.0 🚄
 _2021-10-03_
 

@@ -17,6 +17,7 @@ notoc: true
 ## ??? 🧫
 
 <ul class="updates">
+  <li class="new"><span markdown="1">(Cloud) Better memory handling when rendering Native PDFs, which improves the stability of the tagtog servers.</span></li>
   <li class="fix"><span markdown="1">In confirmed documents, upon clicking on an entity and showing its annotation menu, its normalizations wrongly appeared editable.</span></li>
 </ul>
 

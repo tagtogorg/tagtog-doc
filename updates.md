@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🧫
+## 3.2021-W40.0 🧫
+_2021-10-10_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(Cloud) Better memory handling when rendering Native PDFs, which improves the stability of the tagtog servers.</span></li>

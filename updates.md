@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 🔬
+
+<ul class="updates">
+  <li class="new"><span markdown="1">Broader support for [PMC articles (PubMedCentral)](ioformats.html#input-types).</span></li>
+</ul>
+
+---
+
 ## 3.2021-W40.0 🧫
 _2021-10-10_
 

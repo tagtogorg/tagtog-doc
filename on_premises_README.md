@@ -51,8 +51,6 @@ Your server (e.g. private one, or on AWS, Azure, or Linode) should meet the foll
 
 ### Example setup on AWS
 
-_Starting tagtog with an AWS template is currently not available. It will be soon!_
-
 Start an EC2 instance with Linux, for example `Amazon Linux 2 AMI` x86, with type `t3a.large`.
 
 After that, `ssh` into the newly created machine and run in bash:
@@ -74,8 +72,6 @@ exit # Note, exit for the next session to pick up that the user is indeed in the
 
 
 ### Example setup on Azure
-
-_Starting tagtog with an Azure template or Azure Web App is currently not available. It will be soon!_
 
 Start a VM with Linux, for example `Ubuntu Server 18.04 LTS` with size `D2s_v3`.
 

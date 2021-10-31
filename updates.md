@@ -14,6 +14,17 @@ notoc: true
 
 ---
 
+## 3.2021-W43.0 🔦
+_2021-10-31_
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">Removed the deprecated "doclabel_accepted" search from the Advanced Search menu. Internally, the handling and storing of such old data was also removed. This improves the performance for search.</span></li>
+  <li class="doc"><span markdown="1">Added a docs link on the [Advanced Search menu](search.html#advanced-search).</span></li>
+  <li class="doc"><span markdown="1">Fixed the docs link for [Requirements](projects.html#requirements).</span></li>
+</ul>
+
+---
+
 ## 3.2021-W41.0 🔬
 _2021-10-17_
 

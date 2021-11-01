@@ -7,7 +7,7 @@ toc: true
 ---
 
 <div class="two-third-col">
-  <p>Traditional search is built around string matching. tagtog uses your annotated data to create a <strong>semantic layer</strong> allowing users to perform queries across their documents using concepts, labels and other metadata. The augmentation of the search functionality makes easier to discover patterns or find actionable insights. This is a major benefit when you have built a model that annotates text automatically and you want to grasp the intelligence of the data processed.</p>
+  <p>Traditional search is built around string matching. tagtog uses your annotated data to create a <strong>semantic layer</strong> allowing users to perform queries across their documents using concepts, labels, and other metadata. The augmentation of the search functionality makes easier to discover patterns or find actionable insights. This is a major benefit when you have built a model that annotates text automatically and you want to grasp the intelligence of the data processed.</p>
   <p>The search engine can be used through the user interface or the API. Learn <a href="/search-queries.html">how to build queries</a> and make the most of the concept search.</p>
 </div>
 <div class="one-third-col">
@@ -46,7 +46,7 @@ toc: true
 
 <div class="two-third-col">
   <h4>Normalization</h4>
-  <p>Just start typing the first 3 characters of one of the names of the entity you are looking for. All the possible entities gathered across all your dictionaries will show up. Click on one of the items to display the search query on the normalization text box and, when you are ready, just click on the Search button {% include inline-image.html name="search-button.png" width="28" %} to retrieve all the documents that contain at least one entity normalized to that name. In the case of the picture below, all documents containing entities with the name: minivan, people carrier, etc.</p>
+  <p>Just start typing the first 3 characters of one of the names of the entity you are looking for. All the possible entities gathered across all your dictionaries will show up. Click on one of the items to display the search query on the normalization text box and, when you are ready, just click on the Search button {% include inline-image.html name="search-button.png" width="28" %} to retrieve all the documents that contain at least one entity normalized to that name.</p>
   <p>The search results are paginated. If your query retrieves a long list of results, you will find a <code>Load more</code> link at the bottom of the list. Just click it to load more results.</p>
   {% include image.html name="search/AdvancedSearchByNormalizationId.png" caption=""%}
 </div>
@@ -78,7 +78,7 @@ toc: true
 
 <div class="two-third-col">
   <h4>Download as Zip</h4>
-  <p>Download the subset of documents (and their annotations) that match the search query, in <a title="tagtog - anndoc format" href="https://docs.tagtog.net/anndoc.html">anndoc format</a> format).</p>
+  <p>Download the subset of documents (and their annotations) that match the search query, in <a title="tagtog - anndoc format" href="https://docs.tagtog.net/anndoc.html">anndoc format</a> format.</p>
 </div>
 <div class="one-third-col">
 </div>

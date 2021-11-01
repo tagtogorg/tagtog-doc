@@ -28,19 +28,22 @@ toc: true
 </div>
 <div class="one-third-col">
 </div>
+
 <div class="two-third-col">
   <h4>Annotation complete</h4>
   <p>Find which documents have been already marked as confirmed or which not.</p>
 </div>
 <div class="one-third-col">
 </div>
+
 <div class="two-third-col">
   <h4>Entity Type</h4>
   <p>Find which documents contain at least one annotation from the entity type selected from the dropdown menu.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message="<strong>Tip</strong>: there is a <code>none</code> option. You can use it to find which documents are not annotated, i.e. don't have any annotation." %}
+  {% include message.html message="<strong>Tip</strong>: there is a <code>none</code> option. You can use it to find which documents have no annotated entity type." %}
 </div>
+
 <div class="two-third-col">
   <h4>Normalization</h4>
   <p>Just start typing the first 3 characters of one of the names of the entity you are looking for. All the possible entities gathered across all your dictionaries will show up. Click on one of the items to display the search query on the normalization text box and, when you are ready, just click on the Search button {% include inline-image.html name="search-button.png" width="28" %} to retrieve all the documents that contain at least one entity normalized to that name. In the case of the picture below, all documents containing entities with the name: minivan, people carrier, etc.</p>
@@ -50,6 +53,7 @@ toc: true
 <div class="one-third-col">
   {% include message.html message="The normalization search engine finds names and IDs across all your dictionaries. You don't need to know the entity type, just one of the names of the concept you are looking for." %}
 </div>
+
 <div class="two-third-col">
   <h4>Document ID</h4>
   <p>Documents such as biomedical articles have usually associated an id (e.g. PubMed articles). Type the id in order to find matching documents in the pool. You can also use wildcard characters as in the example below.</p>
@@ -58,11 +62,13 @@ toc: true
 <div class="one-third-col">
   {% include message.html message='Check <a href="/API_documents_v1.html#idtype-parameter">here</a> the available ID types.' %}
 </div>
+
 <div class="two-third-col">
   <h3>Batch operations</h3>
 </div>
 <div class="one-third-col">
 </div>
+
 <div class="two-third-col">
   <h4>Remove documents</h4>
   <p>To <strong>remove documents in batch</strong>, you can use a search query that retrieves the documents you want to remove. In the web app, after the search is done, click on the button with the caption <kbd>Delete matching documents</kbd> to remove these documents. You can also use the <a title="API - Delete" href="/API_documents_v1.html#delete-documents-delete">API for batch removal</a>.</p>

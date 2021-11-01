@@ -31,14 +31,14 @@ toc: true
 
 <div class="two-third-col">
   <h4>Annotation complete</h4>
-  <p>Find which documents have been already marked as confirmed or which not.</p>
+  <p>Find which documents have been already marked as <a href="search-queries.html#search-confirmed-documents">confirmed</a> or which not.</p>
 </div>
 <div class="one-third-col">
 </div>
 
 <div class="two-third-col">
   <h4>Entity Type</h4>
-  <p>Find which documents contain at least one annotation from the entity type selected from the dropdown menu.</p>
+  <p>Find which documents contain at least one annotation from the <a href="search-queries.html#search-by-entity-type">entity type</a> selected from the dropdown menu.</p>
 </div>
 <div class="one-third-col">
   {% include message.html message="<strong>Tip</strong>: there is a <code>none</code> option. You can use it to find which documents have no annotated entity type." %}
@@ -46,7 +46,7 @@ toc: true
 
 <div class="two-third-col">
   <h4>Normalization</h4>
-  <p>Just start typing the first 3 characters of one of the names of the entity you are looking for. All the possible entities gathered across all your dictionaries will show up. Click on one of the items to display the search query on the normalization text box and, when you are ready, just click on the Search button {% include inline-image.html name="search-button.png" width="28" %} to retrieve all the documents that contain at least one entity normalized to that name.</p>
+  <p>Just start typing the first 3 characters of one of the names of the entity you are looking for. All the possible entities gathered across all your dictionaries will show up. Click on one of the items to display the search query on the normalization text box and, when you are ready, just click on the Search button {% include inline-image.html name="search-button.png" width="28" %} to retrieve all the documents that contain at least one <a href="search-queries.html#search-by-normalization">entity normalized to that name</a>.</p>
   <p>The search results are paginated. If your query retrieves a long list of results, you will find a <code>Load more</code> link at the bottom of the list. Just click it to load more results.</p>
   {% include image.html name="search/AdvancedSearchByNormalizationId.png" caption=""%}
 </div>
@@ -56,7 +56,7 @@ toc: true
 
 <div class="two-third-col">
   <h4>Document ID</h4>
-  <p>Documents such as biomedical articles have usually associated an id (e.g. PubMed articles). Type the id in order to find matching documents in the pool. You can also use wildcard characters as in the example below.</p>
+  <p>Documents such as biomedical articles have usually associated an id (e.g. PubMed articles). Type the <a href="search-queries.html#search-by-document-id-docid">document id</a> in order to find matching documents in the pool. You can also use wildcard characters as in the example below.</p>
   {% include image.html name="search/AdvancedSearchByDocid.png" caption=""%}
 </div>
 <div class="one-third-col">

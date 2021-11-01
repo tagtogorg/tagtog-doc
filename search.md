@@ -5,6 +5,7 @@ sidebar_link: true
 id: search
 toc: true
 ---
+
 <div class="two-third-col">
   <p>Traditional search is built around string matching. tagtog uses your annotated data to create a <strong>semantic layer</strong> allowing users to perform queries across their documents using concepts, labels and other metadata. The augmentation of the search functionality makes easier to discover patterns or find actionable insights. This is a major benefit when you have built a model that annotates text automatically and you want to grasp the intelligence of the data processed.</p>
   <p>The search engine can be used through the user interface or the API. Learn <a href="/search-queries.html">how to build queries</a> and make the most of the concept search.</p>

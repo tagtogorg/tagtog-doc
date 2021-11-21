@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🕵️
+## 3.2021-W46.0 🕵️
+_2021-11-21_
 
 <ul class="updates">
   <li class="doc"><span markdown="1">Updated & clarified the documentation for [Search](search.html).</span></li>

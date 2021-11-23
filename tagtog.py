@@ -21,7 +21,7 @@ assert sys.version_info.major == 3, "This script requires Python 3"
 # ---------------------------------------------------------------------------------------------------------------------
 
 __author__ = "tagtog.net (@tagtog_net)"
-__version__ = "0.3.0"
+__version__ = "0.3.1"
 __doc__ = \
     """
     tagtog official script to Upload & Search & Download & Delete documents.
@@ -64,7 +64,7 @@ def parse_arguments(argv=[]):
         parser.add_argument('--password', "-w", default=None, help="User's password -- if not given, the password is prompted")
         parser.add_argument("--owner", "-o", help="Project owner in tagtog -- defaults to the user")
         parser.add_argument("--project", "-p", required=True, help="Project name in tagtog to operate on")
-        parser.add_argument("--member", "-m", required=False, help="(Optional) Project member name to operate documents on")
+        parser.add_argument("--member", "-m", required=False, help='(Optional) Project member name to operate documents on -- defaults to "master"')
         parser.add_argument("--verify_ssl", type=parse_verify_ssl_argument, default=True, help="(Optional) Choose to verify, and if so how, or not to verify the SSL/TLS certificate of the endpoint domain when making http requests. Possible values: True (default), False, or a path with trusted SSL/TLS certificate/s (either a single file or a directory).")
 
         parser.add_argument("--output", "-t", default=default_output, help="Output format of tagtog's response")

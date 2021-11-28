@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 🤠
+## 3.2021-W47.0 🤠
+_2021-11-28_
 
 <ul class="updates">
   <li class="new"><span markdown="1">(Cloud) New, alpha, radically faster ML-NER enabled for selected users.</span></li>

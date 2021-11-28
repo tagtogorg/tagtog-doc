@@ -14,9 +14,10 @@ notoc: true
 
 ---
 
-## ??? 💳
+## ??? 🤠
 
 <ul class="updates">
+  <li class="new"><span markdown="1">(Cloud) New, alpha, radically faster ML-NER enabled for selected users.</span></li>
   <li class="sec"><span markdown="1">(Cloud Payments) Better handling of 3D Secure 2 challenges.</span></li>
 </ul>
 

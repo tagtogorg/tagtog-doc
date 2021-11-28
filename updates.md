@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 💳
+
+<ul class="updates">
+  <li class="sec"><span markdown="1">(Cloud Payments) Better handling of 3D Secure 2 challenges.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W46.0 🕵️
 _2021-11-21_
 

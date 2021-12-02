@@ -14,6 +14,12 @@ notoc: true
 
 ---
 
+## ??? 💪
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">(Cloud) New users can again start a 2-weeks free trial and a subcription from the plans page. [Start your free trial today](https://www.tagtog.net/-plans)!</span></li>
+</ul>
+
 ## 3.2021-W47.0 🤠
 _2021-11-28_
 

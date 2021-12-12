@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## 3.2021-W47.1 🏎
+_2021-12-12_
+
+<ul class="updates">
+  <li class="new"><span markdown="1">(Cloud) Optimized, speedier documenting indexing & searching.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W47.0 🤠
 _2021-11-28_
 

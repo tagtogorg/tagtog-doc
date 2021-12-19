@@ -17,6 +17,7 @@ notoc: true
 ## ??? 💪
 
 <ul class="updates">
+  <li class="sec"><span markdown="1">tagtog was not affected by CVE-2021-44228. Regardless, to be extra cautious, we added `-Dlog4j2.formatMsgNoLookups=true` as a default JVM parameter in one internal docker image.</span></li>
   <li class="doc"><span markdown="1">(Cloud) When a new public project is created, a notification is displayed informing users that uploading Personal data is forbidden.</span></li>
 </ul>
 

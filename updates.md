@@ -14,7 +14,8 @@ notoc: true
 
 ---
 
-## ??? 💪
+## 3.2021-W47.2 💪
+_2021-12-19_
 
 <ul class="updates">
   <li class="sec"><span markdown="1">tagtog was not affected by CVE-2021-44228. Regardless, to be extra cautious, we added `-Dlog4j2.formatMsgNoLookups=true` as a default JVM parameter in one internal docker image.</span></li>

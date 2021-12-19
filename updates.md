@@ -20,6 +20,8 @@ notoc: true
   <li class="doc"><span markdown="1">(Cloud) When a new public project is created, a notification is displayed informing users that uploading Personal data is forbidden.</span></li>
 </ul>
 
+---
+
 ## 3.2021-W47.1 🏎
 _2021-12-12_
 

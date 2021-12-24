@@ -313,7 +313,7 @@ In this case, figure out why that could be the case. Anything related to your us
 
 Otherwise, a quick solution is:
 
-1. Grant all permissions to everybody: `chmod 777 -r $TAGTOG_HOME`
+1. Grant all permissions to everybody: `chmod -R 777 $TAGTOG_HOME`
 2. Restart the application: `./tagtog_on_premises restart ...`
 
 

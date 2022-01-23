@@ -14,6 +14,15 @@ notoc: true
 
 ---
 
+## 3.2022-W03.0 🧭
+_2022-01-23_
+
+<ul class="updates">
+  <li class="sec"><span markdown="1">Internal improvements.</span></li>
+</ul>
+
+---
+
 ## 3.2021-W47.3 💪
 _2021-12-19_
 

@@ -9,6 +9,7 @@ import argparse
 from argparse import RawTextHelpFormatter
 import getpass
 import json
+import re
 
 try:
     import requests
@@ -36,6 +37,7 @@ __doc__ = \
 # ---------------------------------------------------------------------------------------------------------------------
 
 DEFAULT_DOMAIN = os.environ.get('TAGTOG_DOMAIN') or "https://www.tagtog.net/"
+CONTENT_DISPOSITION_HEADER_FILENAME_RGX = re.compile('filename="(.+?)"')
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -299,7 +301,16 @@ def print_download(args):
 
                 if response.ok:
                     content_disposition = response.headers.get("Content-Disposition")
-                    if content_disposition:
+                    if download_output == "orig" or download_output == "original":
+                        filename = doc["id"]
+                    elif content_disposition:
+                        match_result = CONTENT_DISPOSITION_HEADER_FILENAME_RGX.search(content_disposition)
+                        if match_result:
+                            filename = match_result.group(1)
+                        # e.g inline; filename="a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818"; filename*=utf-8\'\'a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818'
+                        else:
+                            filename = content_disposition[10:-1]
+                        # e.g filename="aVqgBChe0bUw_mP1ti_ypKdrg2gC-PCM000600172907.json"
                         filename = content_disposition[10:-1]  # e.g filename="aVqgBChe0bUw_mP1ti_ypKdrg2gC-PCM000600172907.json"
                     else:
                         filename = doc["id"] + "." + download_output

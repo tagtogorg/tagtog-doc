@@ -303,12 +303,13 @@ def print_download(args):
                     if download_output == "orig" or download_output == "original":
                         filename = doc["id"]
                     else:
+                        # Example 1: filename="aVqgBChe0bUw_mP1ti_ypKdrg2gC-PCM000600172907.json"
+                        # Example 2: inline; filename="a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818"; filename*=utf-8\'\'a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818'
                         content_disposition = response.headers.get("Content-Disposition", "")
                         match_result = CONTENT_DISPOSITION_HEADER_FILENAME_RGX.search(content_disposition)
+
                         if match_result:
                             filename = match_result.group(1)
-                        # e.g inline; filename="a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818"; filename*=utf-8\'\'a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818'
-                        # e.g2 filename="aVqgBChe0bUw_mP1ti_ypKdrg2gC-PCM000600172907.json"
                         else:
                             filename = doc["id"] + "." + download_output
 

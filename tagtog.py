@@ -9,6 +9,7 @@ import argparse
 from argparse import RawTextHelpFormatter
 import getpass
 import json
+import re
 
 try:
     import requests
@@ -21,7 +22,7 @@ assert sys.version_info.major == 3, "This script requires Python 3"
 # ---------------------------------------------------------------------------------------------------------------------
 
 __author__ = "tagtog.net (@tagtog_net)"
-__version__ = "0.3.1"
+__version__ = "0.3.2"
 __doc__ = \
     """
     tagtog official script to Upload & Search & Download & Delete documents.
@@ -36,6 +37,7 @@ __doc__ = \
 # ---------------------------------------------------------------------------------------------------------------------
 
 DEFAULT_DOMAIN = os.environ.get('TAGTOG_DOMAIN') or "https://www.tagtog.net/"
+CONTENT_DISPOSITION_HEADER_FILENAME_RGX = re.compile('filename="(.+?)"')
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -298,11 +300,18 @@ def print_download(args):
                 del args.req_params["ids"]
 
                 if response.ok:
-                    content_disposition = response.headers.get("Content-Disposition")
-                    if content_disposition:
-                        filename = content_disposition[10:-1]  # e.g filename="aVqgBChe0bUw_mP1ti_ypKdrg2gC-PCM000600172907.json"
+                    if download_output == "orig" or download_output == "original":
+                        filename = doc["id"]
                     else:
-                        filename = doc["id"] + "." + download_output
+                        # Example 1: filename="aVqgBChe0bUw_mP1ti_ypKdrg2gC-PCM000600172907.json"
+                        # Example 2: inline; filename="a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818"; filename*=utf-8\'\'a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818'
+                        content_disposition = response.headers.get("Content-Disposition", "")
+                        match_result = CONTENT_DISPOSITION_HEADER_FILENAME_RGX.search(content_disposition)
+
+                        if match_result:
+                            filename = match_result.group(1)
+                        else:
+                            filename = doc["id"] + "." + download_output
 
                     filepath = os.path.join(args.output_folder, filename)
                     with open(filepath, "wb") as f:

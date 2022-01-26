@@ -303,7 +303,8 @@ def print_download(args):
                     if download_output == "orig" or download_output == "original":
                         filename = doc["id"]
                     else:
-                        match_result = CONTENT_DISPOSITION_HEADER_FILENAME_RGX.search(response.headers.get("Content-Disposition"))
+                        content_disposition = response.headers.get("Content-Disposition") if response.headers.get("Content-Disposition") else ""
+                        match_result = CONTENT_DISPOSITION_HEADER_FILENAME_RGX.search(content_disposition)
                         if match_result:
                             filename = match_result.group(1)
                         # e.g inline; filename="a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818"; filename*=utf-8\'\'a.qMG9WVGlFtV9f5JOR64JTxQ.ei-20680818'

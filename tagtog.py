@@ -22,7 +22,7 @@ assert sys.version_info.major == 3, "This script requires Python 3"
 # ---------------------------------------------------------------------------------------------------------------------
 
 __author__ = "tagtog.net (@tagtog_net)"
-__version__ = "0.3.1"
+__version__ = "0.3.2"
 __doc__ = \
     """
     tagtog official script to Upload & Search & Download & Delete documents.

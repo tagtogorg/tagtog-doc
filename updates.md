@@ -14,6 +14,14 @@ notoc: true
 
 ---
 
+## ??? 🐍
+
+<ul class="updates">
+  <li class="fix"><span markdown="1">The [python tagtog script](API_documents_v1.html#python-tagtog-script) did not work properly when downloading [`orig`/`original`](ioformats.html#output-formats) documents; the filenames were wrong. This is now fixed. More information: [#33](https://github.com/tagtog/tagtog-doc/issues/33).</span></li>
+</ul>
+
+---
+
 ## 3.2022-W03.0 🧭
 _2022-01-23_
 

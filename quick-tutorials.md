@@ -130,11 +130,3 @@ Learn how to integrate an external OCR software into tagtog, including [fully-fu
 <div class="one-third-col">
   {% include image.html name="pdfanno.jpeg" %}
 </div>
-
-<div class="two-third-col">
-  <h2><a title="Demo of tagtog, in Video!" href="https://medium.com/@tagtog/demo-of-tagtog-in-video-2821293cb382">Demo of tagtog, in Video! 🎥</a></h2>
-  <p>Learn the core of tagtog comfortably, grab some 🍿 and <a href="https://www.youtube.com/watch?v=2G3Eqci9YgE&t=2s">watch the movie</a>.</p>
-</div>
-<div class="one-third-col">
-  <a href="https://www.youtube.com/watch?v=2G3Eqci9YgE&t=2s">{% include image.html name="tutorials/demo_youtube_video.png" %}</a>
-</div>

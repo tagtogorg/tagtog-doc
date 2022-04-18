@@ -10,7 +10,7 @@ notoc: true
 
 ❤️ Have feedback? Report bugs and suggestions at [support@tagtog.net](mailto:support@tagtog.net).
 
-🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net) !
+🐦 Twitter user? We post all our updates and are reachable on [@tagtog_net](https://twitter.com/tagtog_net)
 
 ---
 

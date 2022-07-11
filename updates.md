@@ -18,7 +18,7 @@ notoc: true
 _2022-04-18_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">The [python tagtog script](API_documents_v1.html#python-tagtog-script) did not work properly when downloading [`orig`/`original`](ioformats.html#output-formats) documents. The filenames were not read correctly from the header _Content-Disposition_. This is now fixed. More information: [#33](https://github.com/tagtog/tagtog-doc/issues/33).</span></li>
+  <li class="fix"><span markdown="1">The [python tagtog script](API_documents_v1.html#python-tagtog-script) did not work properly when downloading [`orig`/`original`](ioformats.html#output-formats) documents. The filenames were not read correctly from the header _Content-Disposition_. This is now fixed.</span></li>
 </ul>
 
 ---
@@ -1027,7 +1027,7 @@ _2019-09-29_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Empty project folders now list links to the other folders for easier navigation.</span></li>
-  <li class="fix"><span markdown="1">(BIG ONE) Fixed an old bug caused when html entities were written in the input files literally (for instance, `&lt;` instead of just `<`). The bug appeared if annotations were made in text parts that contained such html entities. This resulted in wrongly formatted ann.jsons and in weird-looking annotations on the interface. An extra [python script](https://github.com/tagtog/gists/blob/master/fix_html_entities.py) was created to fix the ann.jsons locally.</span></li>
+  <li class="fix"><span markdown="1">(BIG ONE) Fixed an old bug caused when html entities were written in the input files literally (for instance, `&lt;` instead of just `<`). The bug appeared if annotations were made in text parts that contained such html entities. This resulted in wrongly formatted ann.jsons and in weird-looking annotations on the interface. An extra [python script](https://github.com/tagtogorg/gists/blob/master/fix_html_entities.py) was created to fix the ann.jsons locally.</span></li>
   <li class="doc"><span markdown="1">Documented [how the IAA is calculated](IAA-calculation-methods).</span></li>
 </ul>
 
@@ -1038,7 +1038,7 @@ _2019-09-22_
 
 <ul class="updates">
   <li class="new"><span markdown="1">Thanks now to the [new search parameter `members_anncomplete:*|memberUsername`](search-queries.html#search-which-documents-a-user-has-confirmed), you can now search how many documents' annotations were confirmed by a given user, and/or search how many documents were at least confirmed by one user! [Find out some handy applications of the `members_anncomplete` query in this tutorial](https://medium.com/@tagtog/how-to-rank-review-your-annotators-4a814c941ac3?source=friends_link&sk=c354f53823defdaf2844271185fd28e3).</span></li>
-  <li class="new"><span markdown="1">New functionalities in the [official tagtog python script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py): upload to given folder, define the upload batch size, and (optionally) upload absolutely all files recursively regardless of file extension.</span></li>
+  <li class="new"><span markdown="1">New functionalities in the [official tagtog python script](https://github.com/tagtogorg/tagtog-doc/blob/master/tagtog.py): upload to given folder, define the upload batch size, and (optionally) upload absolutely all files recursively regardless of file extension.</span></li>
   <li class="new"><span markdown="1">Now, when a _default_ annotations version is returned for a member's annotations file, a new HTTP Warning Header is added to the request response to indicate the case. [See documentation](API_documents_v1.html#get-existing-documents-get).</span></li>
 </ul>
 
@@ -1115,7 +1115,7 @@ _2019-08-04_
 <ul class="updates">
   <li class="new"><span markdown="1">[The **IAA** is now also calculated for all members against the **master** / official annotations](collaboration#iaa-inter-annotator-agreement)!</span></li>
   <li class="new"><span markdown="1">Two new functionalities for the annotation menu in read-only mode (e.g. for the users with reader role or in public projects): Copy text and Permalink. Check the [available functionalities for the menu in read-only mode](webeditor.html#annotation-menu).</span></li>
-  <li class="new"><span markdown="1">Added functionality to [**DELETE** documents with the official tagtog python script](https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py)</span></li>
+  <li class="new"><span markdown="1">Added functionality to [**DELETE** documents with the official tagtog python script](https://github.com/tagtogorg/tagtog-doc/blob/master/tagtog.py)</span></li>
   <li class="new"><span markdown="1">Now **showing the IAA of every document** on the document!</span></li>
 </ul>
 

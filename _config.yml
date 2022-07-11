@@ -57,7 +57,7 @@ sidebar_toc:
 
 author:
   name:           'tagtog Sp. z o.o.'
-  url:            https://twitter.com/tagtog_net
+  url:            https://www.linkedin.com/company/tagtog/
 
 paginate:         5
 # paginate_path:    '/page:num'
@@ -79,7 +79,7 @@ search_page: false
                                 # set this to the root of the paginate_path
                                 # to enable a separate blog link.
 github:
-  repo:             https://github.com/tagtog/
+  repo:             https://github.com/tagtogorg/tagtog-doc
 
 defaults:
 - scope:

@@ -13,7 +13,7 @@ Please report any issues here or contact us at [info@tagtog.net](mailto:info@tag
 ## Clone the repo
 
 ```shell
-git clone https://github.com/tagtog/tagtog-doc.git
+git clone https://github.com/tagtogorg/tagtog-doc.git
 cd tagtog-doc
 
 ```

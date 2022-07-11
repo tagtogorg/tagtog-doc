@@ -35,7 +35,7 @@ id: dictionaries
   <p class="list-item"><span class="list-item-3"></span>After the id, a list of names follows. These are considered different names (synonyms) of the entity.</p>
   <p class="list-item"><span class="list-item-4"></span>You can define <strong>recommended names</strong> and, optionally, <strong>alternative names</strong>. At least one recommended name must be given. Alternative names are those placed after the special delimiter <code>@@@</code> (also separated within tabs). Use them when you know that some names appear less frequently than the standard ones. With this information, the system can handle synonyms better.</p>
 
-  <p markdown="1">👉 Here are some [**sample, reference dictionaries**](https://github.com/tagtog/tagtog-doc/tree/master/assets/dictionaries).</p>
+  <p markdown="1">👉 Here are some [**sample, reference dictionaries**](https://github.com/tagtogorg/tagtog-doc/tree/master/assets/dictionaries).</p>
 
 </div>
 <div class="one-third-col">

@@ -40,7 +40,7 @@ api_plain_text: "\"Hello, World!\""
   </table>
 </div>
 <div class="one-third-col">
-  {% include message.html message='Use this <a href="https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python script</strong></a> ready to do many common operations in tagtog using the API: upload (also folders), search, delete, and download documents!' %}
+  {% include message.html message='Use this <a href="https://github.com/tagtogorg/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python script</strong></a> ready to do many common operations in tagtog using the API: upload (also folders), search, delete, and download documents!' %}
 </div>
 <div class="two-third-col">
   <h2>Authentication</h2>
@@ -2380,7 +2380,7 @@ The final [ann.json](anndoc.html#ann-json) now stored in the `saveTo` member. Th
 <div class="two-third-col">
   <h2>API Clients</h2>
   <h3>Python tagtog script</h3>
-  <p>If you want to use an <strong>already built API client</strong>. You have the {% include inline-image.html name="icon_leafs.png" width="18" %}<a href="https://github.com/tagtog/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python API script</strong></a> to do many common operations in tagtog using the API: upload (also folders), search, delete, and download documents!</p>
+  <p>If you want to use an <strong>already built API client</strong>. You have the {% include inline-image.html name="icon_leafs.png" width="18" %}<a href="https://github.com/tagtogorg/tagtog-doc/blob/master/tagtog.py" title="tagtog python script"><strong>tagtog python API script</strong></a> to do many common operations in tagtog using the API: upload (also folders), search, delete, and download documents!</p>
   <div markdown="1">
 ```shell
 usage: tagtog [-h] {upload,search,download,delete} ...

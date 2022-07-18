@@ -462,7 +462,6 @@ _2020-11-16_
   <li class="new"><span markdown="1">New background color for your [tagtog blocks: `colwhite`](tagtog-blocks#colors).</span></li>
   <li class="new"><span markdown="1">(Cloud & OnPremises) [Paid tagtog subscriptions](https://www.tagtog.com/-plans) now see, when creating a new project, that the default is for the project to be "private" (before the default was "public"). Of course, you can nonetheless change the project to be "public" (upon creation and afterwards too). Read more: [private vs. public projects](projects.html#privacy).</span></li>
   <li class="fix"><span markdown="1">There was a visualization defect when displaying human/bot coversations using tagtog blocks and background colors other than default. Now all colors are aligned.</span></li>
-  <li class="fix"><span markdown="1">Fixed some broken links of older projects. These include: [FlyBase_PLOS-BioCreativeIV_Corpus](https://www.tagtog.com/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus), [Helen Cook's V300](https://www.tagtog.com/helencook/V300), [IDP4](https://www.tagtog.com/jmcejuela/IDP4), [nala](https://www.tagtog.com/jmcejuela/nala), and [LocText](https://www.tagtog.com/jmcejuela/LocText).</span></li>
 </ul>
 
 ---
@@ -984,7 +983,7 @@ _2019-10-20_
 _2019-10-14_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">Reestablished the old links to the corpora: [LocText](https://www.tagtog.com/jmcejuela/LocText/-settings), [IDP4+](https://www.tagtog.com/jmcejuela/IDP4plus/-settings), [FlyBase](https://www.tagtog.com/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus/-settings), and [V300](https://www.tagtog.com/helencook/V300/-settings)</span></li>
+  <li class="fix"><span markdown="1">Reestablished the old links to the corpora</span></li>
 </ul>
 
 ---

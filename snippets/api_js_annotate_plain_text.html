@@ -11,10 +11,10 @@
     <p><button>Annotate plain text and check the result in console</button></p>
     <script>
       function annotateText() {
-        fetch('https://www.tagtog.net/-api/documents/v1?project=yourProject&owner=yourUsername&output=ann.json', {
+        fetch('https://www.tagtog.com/-api/documents/v1?project=yourProject&owner=yourUsername&output=ann.json', {
           method: 'POST',
-          headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'), 
-                    'Accept': 'application/json', 
+          headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'),
+                    'Accept': 'application/json',
                     'Content-Type': 'application/json',
                   },
           body: JSON.stringify({"text":'Antibody-dependent cellular cytotoxicity (ADCC), a key effector function for the clinical effectiveness of monoclonal antibodies, is triggered by the engagement of the antibody Fc domain with the Fcγ receptors expressed by innate immune cells such as natural killer (NK) cells and macrophages.'})
@@ -24,7 +24,7 @@
           console.log('Error: ', error);
         });
       }
-    
+
       var submitBtn = document.querySelector('button');
       submitBtn.addEventListener('click', annotateText);
     </script>

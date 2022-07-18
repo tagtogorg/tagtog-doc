@@ -10,7 +10,7 @@ version: 0.0
 api_endpoint: /-api/metrics/v0
 mandatory_query_parameters: ?owner=...&project=...
 mandatory_query_parameters_full: ?owner=yourUsername&project=yourProjectName
-api_document_url: https://www.tagtog.net/-api/metrics/v0
+api_document_url: https://www.tagtog.com/-api/metrics/v0
 api_username: yourUsername
 api_pwd: yourPassword
 api_project: yourProjectName

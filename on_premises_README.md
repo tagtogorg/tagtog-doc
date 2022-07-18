@@ -100,7 +100,7 @@ exit # Note, exit for the next session to pick up that the user is indeed in the
 
 **tagtog does not require an external internet connection**. This allows you to have tagtog running on your private local network with absolute safety.
 
-An internet connection is only needed for installing and (optionally) [updating your tagtog version](updates). If you also need to install/update tagtog "offline", you can do so by temporally (during the process) exclusively whitelisting the domain `*.tagtog.net`.
+An internet connection is only needed for installing and (optionally) [updating your tagtog version](updates). If you also need to install/update tagtog "offline", you can do so by temporally (during the process) exclusively whitelisting the domain `*.tagtog.com`.
 
 
 ## Run
@@ -171,13 +171,13 @@ For example, you have to make sure to use full paths, the `$TAGTOG_HOME` environ
 
 ## Update
 
-You can manually check for [new tagtog updates on this link](https://docs.tagtog.net/updates.html).
+You can manually check for [new tagtog updates on this link](https://docs.tagtog.com/updates.html).
 
 To download the latest tagtog version (i.e. the latest docker images), do this:
 
 ```shell
 # Before updating the tagtog version, we strongly recommend to first **back up your data**
-# https://docs.tagtog.net/on_premises_README.html#tagtog_home-folder-backups--where-your-data-is-stored
+# https://docs.tagtog.com/on_premises_README.html#tagtog_home-folder-backups--where-your-data-is-stored
 
 ./tagtog_on_premises update
 ./tagtog_on_premises restart latest $TAGTOG_HOME
@@ -194,7 +194,7 @@ Might you have required a license change (e.g. to prolong your current installat
 ./tagtog_on_premises change_license NEW_LICENSE_NAME NEW_LICENSE_KEY
 
 # If you have not run tagtog in a while, we also recommend you to update the tagtog version:
-# https://docs.tagtog.net/on_premises_README.html#update
+# https://docs.tagtog.com/on_premises_README.html#update
 
 # Afterwards, restart tagtog as usual: ./tagtog_on_premises restart latest $TAGTOG_HOME
 ```
@@ -204,7 +204,7 @@ Might you have required a license change (e.g. to prolong your current installat
 
 Upon a problem, try one of the following solutions first.
 
-If your issue or question is not resolved yet, shoot us an email at: [support@tagtog.net](mailto:support@tagtog.net). If you are subscribed to the OnPremises ENTERPRISE plan, you also have access to an exclusive and private channel to quickly chat with us.
+If your issue or question is not resolved yet, shoot us an email at: [support@tagtog.com](mailto:support@tagtog.com). If you are subscribed to the OnPremises ENTERPRISE plan, you also have access to an exclusive and private channel to quickly chat with us.
 
 Please, in order to help you best, provide us detailed information of the problem and **send us always the tagtog docker container logs**:
 
@@ -416,11 +416,11 @@ If you are running Docker Desktop, on Windows or macOs, you need to look into th
 
 ### Changing the tagtog license in an offline / air gapped machine
 
-You need to make sure to run the [command to change the tagtog license](#change-license) & [then run tagtog](#run) for just-one-time (to validate the license against tagtog.net servers) in a machine with internet access.
+You need to make sure to run the [command to change the tagtog license](#change-license) & [then run tagtog](#run) for just-one-time (to validate the license against tagtog.com servers) in a machine with internet access.
 
 To keep all your existing data and still change & validate your new license, you have at least these options:
 
-a) Give temporary internet connection to your end offline server, at least just whitelisting the tagtog.net domain, to do the license change & validation. Right after this, you can cut off the internet again.
+a) Give temporary internet connection to your end offline server, at least just whitelisting the tagtog.com domain, to do the license change & validation. Right after this, you can cut off the internet again.
 
 b) Copy all your tagtog data (the [`$TAGTOG_HOME` folder](#tagtog_home-folder-backups--where-your-data-is-stored)) to a temporary machine with internet connection, then do there the license change & validation, and then finally move back the tagtog data to your end server. Of course, you should remove the data from the temporary machine.
 

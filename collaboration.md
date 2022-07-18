@@ -48,7 +48,7 @@ id: collaboration
 
 <div class="two-third-col">
   <h3>Create custom roles</h3>
-  <p>Depending on your <a href="https://www.tagtog.net/-plans" title="tagtog - plans">plan</a>, you can create custom roles and define their permissions. Read <a title="tagtpg - sysadmin panel - roles and permissions" href="on-premises-sysadmin.html#roles-and-permissions">how to manage and create custom roles</a>.</p>
+  <p>Depending on your <a href="https://www.tagtog.com/-plans" title="tagtog - plans">plan</a>, you can create custom roles and define their permissions. Read <a title="tagtpg - sysadmin panel - roles and permissions" href="on-premises-sysadmin.html#roles-and-permissions">how to manage and create custom roles</a>.</p>
 </div>
 
 <div class="one-third-col">

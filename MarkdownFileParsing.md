@@ -32,10 +32,10 @@ The following elements are not interpreted, but parsed as is and escaped. For ex
 * Inline content and styles; in particular: `**bold**`, `_emphatic_`, `code`, `~~scratched~~`, `![images](url)`, `[links](url)`.
 * Other special style-only elements; in particular: horizontal lines (`<hr/>` or `---`) or line breaks (`<br/>`).
 * HTML-only elements. In particular, [HTML entities](https://spec.commonmark.org/0.29/#entity-and-numeric-character-references) are not escaped either, neither in code spans or code blocks, nor in the rest of content types (e.g. paragraphs).
-* Block quotes. [Please let us know if you need them](https://tagtog.net/#contact). A current alternative is the [tagtog-block: `quote`](tagtog-blocks#quotes).
-* Tables. [Please let us know if you need them](https://tagtog.net/#contact). A current alternative is the [tagtog-block addon: `multi-column`](tagtog-blocks#multi-column).
+* Block quotes. [Please let us know if you need them](https://tagtog.com/#contact). A current alternative is the [tagtog-block: `quote`](tagtog-blocks#quotes).
+* Tables. [Please let us know if you need them](https://tagtog.com/#contact). A current alternative is the [tagtog-block addon: `multi-column`](tagtog-blocks#multi-column).
 
 
 ## Example
 
-Here is a [markdown reference file](https://www.tagtog.net/tagtog/sample/pool/aqwpeyj_yOishcnevE.c3JBaI6s0-test_spec.md) file to know [how it's parsed and visualized in tagtog](https://www.tagtog.net/tagtog/sample/pool/amyZOgLzTcfL9.aO1AXOsT1zsieS-test_spec.md).
+Here is a [markdown reference file](https://www.tagtog.com/tagtog/sample/pool/aqwpeyj_yOishcnevE.c3JBaI6s0-test_spec.md) file to know [how it's parsed and visualized in tagtog](https://www.tagtog.com/tagtog/sample/pool/amyZOgLzTcfL9.aO1AXOsT1zsieS-test_spec.md).

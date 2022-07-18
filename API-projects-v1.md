@@ -8,7 +8,7 @@ toc_levels: 1,2
 
 version: 1.2
 api_endpoint: /-api/projects/v1
-api_document_url: https://www.tagtog.net/-api/projects/v1
+api_document_url: https://www.tagtog.com/-api/projects/v1
 api_username: yourUsername
 api_pwd: yourPassword
 api_project: yourProjectName

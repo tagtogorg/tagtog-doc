@@ -4,7 +4,7 @@ title: Projects
 sidebar_link: true
 id: projects
 
-tagtog_domain: https://www.tagtog.net
+tagtog_domain: https://www.tagtog.com
 ---
 
 <div class="two-third-col">
@@ -310,7 +310,7 @@ tagtog_domain: https://www.tagtog.net
   </div>
   <div class="two-third-col">
     <h4>How to test webhooks locally?</h4>
-    <p markdown="1">To easily expose your app externally, you can use [ngrok](https://ngrok.com). This tool forwards the incoming requests to your local app. If you are using our Cloud, this tool will make easier for tagtog.net to reach your app.</p>
+    <p markdown="1">To easily expose your app externally, you can use [ngrok](https://ngrok.com). This tool forwards the incoming requests to your local app. If you are using our Cloud, this tool will make easier for tagtog.com to reach your app.</p>
     <h4>A full example</h4>
     <p markdown="1">In this step-by-step guide you will find a end-to-end example in Python about how to connect your models to tagtog using webhooks: [Connect your NLP models to tagtog using webhooks](https://tagtog.medium.com/connect-your-nlp-models-to-tagtog-using-webhooks-13d422ae4dff). Here you can find the GitHub repository: [demo-webhooks](https://github.com/tagtog/demo-webhooks)</p>
   </div>
@@ -340,7 +340,7 @@ tagtog_domain: https://www.tagtog.net
     <p>Find more information of the PDF annotation tool <a title="tagtog - PDF annotation tool" href="/pdf-annotation-tool.html">here</a>.</p>
   </div>
   <div class="one-third-col">
-    <div class="message">This feature is only available in some plans. Check the <a title="tagtog - plans" href="https://tagtog.net/-plans">available features for each plan</a>.</div>
+    <div class="message">This feature is only available in some plans. Check the <a title="tagtog - plans" href="https://tagtog.com/-plans">available features for each plan</a>.</div>
   </div>
 </div>
 

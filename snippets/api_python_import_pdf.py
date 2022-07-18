@@ -1,6 +1,6 @@
 import requests
 
-tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
 
 auth = requests.auth.HTTPBasicAuth(username='YourUsername', password='YourPassword')
 params = {'project':'YourProjectName', 'owner': 'YourUsername', "output": "ann.json"}

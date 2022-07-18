@@ -674,7 +674,7 @@ human for the human interaction</p>
 
   <div class="two-third-col">
     <h2>Suggestions</h2>
-    <p>Do you have any other suggestions, feedback or requests? Write us at <a href="mailto:support@tagtog.net">support@tagtog.net</a></p>
+    <p>Do you have any other suggestions, feedback or requests? Write us at <a href="mailto:support@tagtog.com">support@tagtog.com</a></p>
   </div>
   <div class="one-third-col">
   </div>

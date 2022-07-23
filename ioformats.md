@@ -306,8 +306,5 @@ toc: true
     </table>
     <p>All output formats are returned in their latest format versions. The output format versions cannot be chosen.</p>
   </div>
-  <div class="two-third-col">
-    <h2>Other formats?</h2>
-    <p markdown="1">We are currently experimenting with other formats to ease your work. [Stay tuned :smirk::bird:](https://twitter.com/tagtog_net).</p>
-  </div>
+  
 </div>

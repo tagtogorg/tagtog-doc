@@ -18,7 +18,7 @@ toc: true
   <div class="one-third-col">
     {% include image.html name="robot.ann.svg" width=300 %}
     <div class="message">
-      The editor is part of a <strong>web app</strong>. You don't need anything than a web browser to use it. If you are using an <strong>on-premises</strong> version, contact the internal administrator of the application to understand how to access the app. If you are using the <strong>Cloud</strong> version, just go to <a href="https://tagtog.net">tagtog.net</a>.
+      The editor is part of a <strong>web app</strong>. You don't need anything than a web browser to use it. If you are using an <strong>on-premises</strong> version, contact the internal administrator of the application to understand how to access the app. If you are using the <strong>Cloud</strong> version, just go to <a href="https://tagtog.com">tagtog.com</a>.
     </div>
     <div class="message">
       By protecting the reading experience the tool is more accessible. This is specially important when you involve <strong>subject matter experts</strong> in your annotation projects.
@@ -312,7 +312,7 @@ toc: true
     <p>You can create permalinks for annotated entities. Just click on the entity and click the <code>Permalink</code> entry in the annotation menu. You can copy and share it. When opened, the link points exactly to the annotation, the document editor will scroll to highlight the annotation properly.</p>
   </div>
   <div class="one-third-col">
-    {% include message.html message="A permalink looks like this example: <code>https://tagtog.net/demo/test/pool/a7Kiphm8zanJ9q-text?p=0&i=0&ann=s14v1|e_14|428,434</code>" %}
+    {% include message.html message="A permalink looks like this example: <code>https://tagtog.com/demo/test/pool/a7Kiphm8zanJ9q-text?p=0&i=0&ann=s14v1|e_14|428,434</code>" %}
   </div>
   <div class="page-subsection">
     <div class="two-third-col">
@@ -612,7 +612,7 @@ toc: true
     <div class="two-third-col">
       <br/>
       <h2>Folders</h2>
-      <p>Folders can be accessed from the document pool or the web editor. You can find the folders panel of the left side of the editor. <a title="Folders - tagtog.net" href="documents.html#folders">More information about folders</a>.</p>
+      <p>Folders can be accessed from the document pool or the web editor. You can find the folders panel of the left side of the editor. <a title="Folders - tagtog.com" href="documents.html#folders">More information about folders</a>.</p>
     </div>
     <div class="one-third-col">
     </div>

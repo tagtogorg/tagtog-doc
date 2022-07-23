@@ -11,10 +11,10 @@
     <p><button>Annotate PubMed abstracts and check the result in console</button></p>
     <script>
       function annotateText() {
-        fetch('https://www.tagtog.net/-api/documents/v1?project=yourProject&owner=yourUsername&idType=PMID&ids=23596191,29438695&output=ann.json', {
+        fetch('https://www.tagtog.com/-api/documents/v1?project=yourProject&owner=yourUsername&idType=PMID&ids=23596191,29438695&output=ann.json', {
           method: 'POST',
-          headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'), 
-                    'Accept': 'application/json', 
+          headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'),
+                    'Accept': 'application/json',
                     'Content-Type': 'application/json',
                   },
         }).then(response => response.json()).then(json => {
@@ -23,7 +23,7 @@
           console.log('Error: ', error);
         });
       }
-    
+
       var submitBtn = document.querySelector('button');
       submitBtn.addEventListener('click', annotateText);
     </script>

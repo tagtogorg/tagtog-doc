@@ -11,7 +11,7 @@
     <p><button>Annotate a URL and check the result in console</button></p>
     <script>
       function annotateText() {
-        fetch('https://www.tagtog.net/-api/documents/v1?project=yourProject&owner=yourUsername&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl', {
+        fetch('https://www.tagtog.com/-api/documents/v1?project=yourProject&owner=yourUsername&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl', {
           method: 'GET',
           headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword')},
         }).then(response => response.text()).then(text => {
@@ -20,7 +20,7 @@
           console.log('Error: ', error);
         });
       }
-    
+
       var submitBtn = document.querySelector('button');
       submitBtn.addEventListener('click', annotateText);
     </script>

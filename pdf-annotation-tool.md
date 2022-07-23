@@ -26,7 +26,7 @@ toc: true
     <p><strong>By default this feature is turned off</strong>. You can change this setting differently for each project. To activate this feature follow <a title="tagtog - Activate PDF native tool" href="projects.html#pdf">these instructions</a>.</p>
   </div>
   <div class="one-third-col">
-    <div class="message">The PDF annotation tool is only available in some plans. Check the <a title="tagtog - plans" href="https://tagtog.net/-plans">available features for each plan</a>.</div>
+    <div class="message">The PDF annotation tool is only available in some plans. Check the <a title="tagtog - plans" href="https://tagtog.com/-plans">available features for each plan</a>.</div>
   </div>
 </div>
 

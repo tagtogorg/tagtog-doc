@@ -21,7 +21,7 @@ assert sys.version_info.major == 3, "This script requires Python 3"
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-__author__ = "tagtog.net (@tagtog_net)"
+__author__ = "tagtog.com (tagtog Sp. z o.o.)"
 __version__ = "0.3.2"
 __doc__ = \
     """
@@ -30,13 +30,13 @@ __doc__ = \
     Version: {}
     Author: {}
 
-    Website: https://www.tagtog.net
-    API documentation: https://docs.tagtog.net/API_documents_v1.html
+    Website: https://www.tagtog.com
+    API documentation: https://docs.tagtog.com/API_documents_v1.html
     """.format(__version__, __author__)
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-DEFAULT_DOMAIN = os.environ.get('TAGTOG_DOMAIN') or "https://www.tagtog.net/"
+DEFAULT_DOMAIN = os.environ.get('TAGTOG_DOMAIN') or "https://www.tagtog.com/"
 CONTENT_DISPOSITION_HEADER_FILENAME_RGX = re.compile('filename="(.+?)"')
 
 # ---------------------------------------------------------------------------------------------------------------------

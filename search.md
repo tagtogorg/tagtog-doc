@@ -78,7 +78,7 @@ toc: true
 
 <div class="two-third-col">
   <h4>Download as Zip</h4>
-  <p>Download the subset of documents (and their annotations) that match the search query, in <a title="tagtog - anndoc format" href="https://docs.tagtog.net/anndoc.html">anndoc format</a> format.</p>
+  <p>Download the subset of documents (and their annotations) that match the search query, in <a title="tagtog - anndoc format" href="https://docs.tagtog.com/anndoc.html">anndoc format</a> format.</p>
 </div>
 <div class="one-third-col">
 </div>

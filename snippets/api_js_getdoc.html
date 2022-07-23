@@ -11,7 +11,7 @@
     <p><button>Click to search</button></p>
     <script>
       function search() {
-        fetch('https://www.tagtog.net/-api/documents/v1?project=yourProject&owner=yourUsername&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json', {
+        fetch('https://www.tagtog.com/-api/documents/v1?project=yourProject&owner=yourUsername&ids=aVTjgPL0x5m_xgJr3qcpfXcSoY_q-text&output=ann.json', {
           method: 'GET',
           headers: {'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword')},
         }).then(response => response.text()).then(text => {
@@ -20,7 +20,7 @@
           console.log('Error: ', error);
         });
       }
-    
+
       var submitBtn = document.querySelector('button');
       submitBtn.addEventListener('click', search);
     </script>

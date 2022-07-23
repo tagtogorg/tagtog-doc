@@ -9,7 +9,7 @@ toc: true
 api_endpoint: /-api/documents/v1
 api_versions_endpoint: /-api/documents/versions/v0
 mandatory_query_parameters: ?owner=...&project=...
-api_document_url: https://www.tagtog.net/-api/documents/v1
+api_document_url: https://www.tagtog.com/-api/documents/v1
 api_username: yourUsername
 api_pwd: yourPassword
 api_project: yourProjectName
@@ -21,7 +21,7 @@ api_plain_text: "\"Hello, World!\""
   <p>Thanks for choosing the <strong>Documents API</strong> to build NLP solutions into your app or website. Getting started with a new API can be challenging, so we have created a step-by-step guide that walks you through how to make your first API calls and more.</p>
 </div>
 <div class="one-third-col">
-  {% include message.html message='You will need an <strong>account at tagtog</strong>. <a href="https://www.tagtog.net/#signup">Sign up at tagtog.net</a> if you are using the cloud version or check with your admin if you are using an on-premises version.' %}
+  {% include message.html message='You will need an <strong>account at tagtog</strong>. <a href="https://www.tagtog.com/#signup">Sign up at tagtog.com</a> if you are using the cloud version or check with your admin if you are using an on-premises version.' %}
 </div>
 
 
@@ -231,7 +231,7 @@ fetch('{{ page.api_document_url }}?owner={{ page.api_username }}&project={{ page
 ```python
 import requests
 
-tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
 
 auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
 params = {"project": "yourProjectName", "owner": "yourUsername", "format": "formatted", "output": "null"}
@@ -384,7 +384,7 @@ print(response.text)
 </div>
 <div id="tab-3-url" class="tab-content" markdown="1">
 ```javascript
-fetch('https://www.tagtog.net/-api/documents/v1?owner={{ page.api_username }}&project={{ page.api_project }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl', {
+fetch('https://www.tagtog.com/-api/documents/v1?owner={{ page.api_username }}&project={{ page.api_project }}&url=https://en.wikipedia.org/wiki/Autonomous_cruise_control_system&output=weburl', {
   method: 'GET',
   headers: {'Authorization' : "Basic " + btoa('{{ page.api_username }}' + ":" + '{{ page.api_pwd }}')},
 }).then(response => response.text()).then(text => {
@@ -956,7 +956,7 @@ print(response.text)
 </div>
 <div id="tab-3-pmid" class="tab-content" markdown="1">
 ```javascript
-fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUsername&idType=PMID&ids=23596191,29438695&output=ann.json', {
+fetch('https://www.tagtog.com/api/0.1/documents?project=yourProject&owner=yourUsername&idType=PMID&ids=23596191,29438695&output=ann.json', {
   method: 'POST',
   headers:  { 'Authorization' : "Basic " + btoa('yourUsername' + ":" + 'yourPassword'),
               'Accept': 'application/json',
@@ -1116,7 +1116,7 @@ fetch('https://www.tagtog.net/api/0.1/documents?project=yourProject&owner=yourUs
 
   import requests
 
-  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
   params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'default-plus-annjson'}
 
@@ -1175,7 +1175,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/ite
 
   import requests
 
-  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
   params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'default-plus-annjson'}
   #you could easily point to an existing ann.json file or text file. e.g.: ("files", open('files/text.ann.json'))
@@ -1230,7 +1230,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/ite
   content_path = "files/formatted.txt"
   annjson_path = "files/formatted.ann.json"
 
-  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
   params = {"project": "yourProjectName", "owner": "yourUsername", "format": "formatted-plus-annjson", "output": "null"}
@@ -1283,7 +1283,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/ite
   import requests
   import sys
 
-  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
   params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
@@ -1336,7 +1336,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/ite
   import requests
   import sys
 
-  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
   params = {"project": "yourProjectName", "owner": "yourUsername", "format": "default-plus-annjson", "output": "null"}
@@ -1410,7 +1410,7 @@ def get_class_id(label):
 def get_entities(spans, pipeline):
   """
   Translates a tuple of named entity Span objects (https://spacy.io/api/span) into a
-  list of tagtog entities (https://docs.tagtog.net/anndoc.html#ann-json). Each entity is
+  list of tagtog entities (https://docs.tagtog.com/anndoc.html#ann-json). Each entity is
   defined by the entity type ID (classId), the part name where the annotation is (part),
   the entity offsets and the confidence (annotation status, who created it and probabilty).
   - spans: the named entities in the spaCy doc
@@ -1437,7 +1437,7 @@ MY_USERNAME = os.environ['MY_TAGTOG_USERNAME']
 MY_PASSWORD = os.environ['MY_TAGTOG_PASSWORD']
 MY_PROJECT = 'demo-spaCy'
 
-tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
 auth = requests.auth.HTTPBasicAuth(username=MY_USERNAME, password=MY_PASSWORD)
 
 text = "Paypal Holdings Inc (PYPL) President and CEO Daniel Schulman Sold $2.7 million of Shares"
@@ -1559,7 +1559,7 @@ print(response.text)
   ```python
   import requests
 
-  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
   params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'default-plus-annjson'}
@@ -1617,7 +1617,7 @@ print(response.text)
   ```python
   import requests
 
-  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
   params = {"owner": "{{ page.api_username }}", "project": "{{ page.api_project }}", "output": "null", 'format': 'anndoc'}
@@ -2285,14 +2285,6 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X DELETE '{{ page.api_docume
     <td><code>PMCID</code></td>
     <td><a href="https://en.wikipedia.org/wiki/PubMed#PubMed_identifier">PubMed Central ID</a>.</td>
   </tr>
-  <tr class="soon">
-    <td><code>WikipediaID</code></td>
-    <td>Wikipedia ID. Cooming soon.</td>
-  </tr>
-  <tr class="soon">
-    <td><code>TweetID</code></td>
-    <td><a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object">Tweet ID</a>. e.g: <a href="https://twitter.com/tagtog_net/status/931029434814959616">931029434814959616</a>. Coming soon</td>
-  </tr>
 </table>
 <br/>
 </div>
@@ -2388,10 +2380,10 @@ usage: tagtog [-h] {upload,search,download,delete} ...
     tagtog official script to Upload & Search & Download & Delete documents.
 
     Version: 0.3.0
-    Author: tagtog.net (@tagtog_net)
+    Author: tagtog Sp. z o.o.
 
-    Website: https://www.tagtog.net
-    API documentation: https://docs.tagtog.net/API_documents_v1.html
+    Website: https://www.tagtog.com
+    API documentation: https://docs.tagtog.com/API_documents_v1.html
 
 
 positional arguments:

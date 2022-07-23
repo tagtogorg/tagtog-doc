@@ -4,7 +4,7 @@ title: Train your own models
 sidebar_link: true
 id: train-your-own-models
 
-api_document_url: https://www.tagtog.net/-api/documents/v1
+api_document_url: https://www.tagtog.com/-api/documents/v1
 api_username: yourUsername
 api_pwd: yourPassword
 api_project: yourProjectName
@@ -58,7 +58,7 @@ notoc: true
   ```python
   import requests
 
-  tagtogAPIUrl = "https://www.tagtog.net/-api/documents/v1"
+  tagtogAPIUrl = "https://www.tagtog.com/-api/documents/v1"
 
   auth = requests.auth.HTTPBasicAuth(username="{{ page.api_username }}", password="{{ page.api_pwd }}")
   params = {'project':'{{ page.api_project }}', 'owner': '{{ page.api_username }}', "output": "html"}

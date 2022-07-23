@@ -4,7 +4,7 @@ title: Search queries
 sidebar_link: true
 id: search_queries
 
-api_document_url: https://www.tagtog.net/-api/documents/v1
+api_document_url: https://www.tagtog.com/-api/documents/v1
 api_username: yourUsername
 api_pwd: yourPassword
 api_project: yourProjectName

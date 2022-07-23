@@ -6,7 +6,7 @@ id: updates
 notoc: true
 ---
 
-📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.net) runs always on the latest version. If you are on **tagtog OnPremises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
+📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.com) runs always on the latest version. If you are on **tagtog OnPremises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
 
 <div class="message">
   <p>:warning: <strong>IMPORTANT:</strong>  During the <strong>weekend of July 23rd - July 24th, 2022</strong>, there will be <strong>scheduled maintenance work</strong>. We expect a few hours of downtime, but it can extend if we find issues. During this maintenance window, we plan to migrate the platform from https://www.tagtog.net to <a href="https://www.tagtog.com">https://www.tagtog.com</a>.</p>
@@ -19,8 +19,8 @@ notoc: true
 
 ---
 
-## 3.2022-W16.1 🐍
-_2022-04-18_
+## 3.2022-W29.0 🐍
+_2022-07-23_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">The [python tagtog script](API_documents_v1.html#python-tagtog-script) did not work properly when downloading [`orig`/`original`](ioformats.html#output-formats) documents. The filenames were not read correctly from the header _Content-Disposition_. This is now fixed.</span></li>
@@ -216,7 +216,7 @@ _2021-06-26_
 _2021-06-15_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">(Cloud) The [tagtog ML for NER](machine-learning.html) is now activated by default for all [Cloud TEAM PRO subscriptions](https://www.tagtog.net/-plans)!</span></li>
+  <li class="new"><span markdown="1">(Cloud) The [tagtog ML for NER](machine-learning.html) is now activated by default for all [Cloud TEAM PRO subscriptions](https://www.tagtog.com/-plans)!</span></li>
 </ul>
 
 ---
@@ -422,7 +422,7 @@ _2021-01-24_
 _2021-01-19_
 
 <ul class="updates">
-  <li class="del"><span markdown="1">(OnPremises) The webserver doesn't listen anymore on IPv6, thus supporting hosts that have IPv6 disabled. On the contrary, if your host _only_ supports IPv6 (and not IPv4) this update will create problems for you; [please contact us](https://www.tagtog.net/#contact) if this is your case.</span></li>
+  <li class="del"><span markdown="1">(OnPremises) The webserver doesn't listen anymore on IPv6, thus supporting hosts that have IPv6 disabled. On the contrary, if your host _only_ supports IPv6 (and not IPv4) this update will create problems for you; [please contact us](https://www.tagtog.com/#contact) if this is your case.</span></li>
 </ul>
 
 ---
@@ -467,9 +467,8 @@ _2020-11-16_
   <li class="new"><span markdown="1">New [tagtog block: `quote`](tagtog-blocks#quotes), to annotate quotes.</span></li>
   <li class="new"><span markdown="1">New [tagtog block: `meta`](tagtog-blocks#meta-information), to add meta information for yourlocks.</span></li>
   <li class="new"><span markdown="1">New background color for your [tagtog blocks: `colwhite`](tagtog-blocks#colors).</span></li>
-  <li class="new"><span markdown="1">(Cloud & OnPremises) [Paid tagtog subscriptions](https://www.tagtog.net/-plans) now see, when creating a new project, that the default is for the project to be "private" (before the default was "public"). Of course, you can nonetheless change the project to be "public" (upon creation and afterwards too). Read more: [private vs. public projects](projects.html#privacy).</span></li>
+  <li class="new"><span markdown="1">(Cloud & OnPremises) [Paid tagtog subscriptions](https://www.tagtog.com/-plans) now see, when creating a new project, that the default is for the project to be "private" (before the default was "public"). Of course, you can nonetheless change the project to be "public" (upon creation and afterwards too). Read more: [private vs. public projects](projects.html#privacy).</span></li>
   <li class="fix"><span markdown="1">There was a visualization defect when displaying human/bot coversations using tagtog blocks and background colors other than default. Now all colors are aligned.</span></li>
-  <li class="fix"><span markdown="1">Fixed some broken links of older projects. These include: [FlyBase_PLOS-BioCreativeIV_Corpus](https://www.tagtog.net/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus), [Helen Cook's V300](https://www.tagtog.net/helencook/V300), [IDP4](https://www.tagtog.net/jmcejuela/IDP4), [nala](https://www.tagtog.net/jmcejuela/nala), and [LocText](https://www.tagtog.net/jmcejuela/LocText).</span></li>
 </ul>
 
 ---
@@ -492,10 +491,10 @@ _2020-11-07_
 _2020-11-01_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">New feature: **[Teams](on-premises-sysadmin.html#teams-management)**! Teams allow you to group your users as you see fit. Then, **add the teams directly to your projects** (rather than adding the individual members one by one). **This makes user management much easier**. You can now, for example, **change in one go, in a project, the role of all team members'**. On top, later on if you add/remove users in your team, these changes will be reflected automatically for all your projects (where that team was added). tagtog Teams is an [exclusive feature of tagtog OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES).</span></li>
+  <li class="new"><span markdown="1">New feature: **[Teams](on-premises-sysadmin.html#teams-management)**! Teams allow you to group your users as you see fit. Then, **add the teams directly to your projects** (rather than adding the individual members one by one). **This makes user management much easier**. You can now, for example, **change in one go, in a project, the role of all team members'**. On top, later on if you add/remove users in your team, these changes will be reflected automatically for all your projects (where that team was added). tagtog Teams is an [exclusive feature of tagtog OnPremises ENTERPRISE](https://www.tagtog.com/-plans#ONPREMISES).</span></li>
   <li class="new"><span markdown="1">The [APIs to manage project members](API_settings_v1.html#members-management) are now updated to also document the new feature of adding/updating/deleting teams.</span></li>
   <li class="new"><span markdown="1">Now the [APIs to manage project members](API_settings_v1.html#members-management) allow referring to the members also by their email (not only, as before, by their username).</span></li>
-  <li class="new"><span markdown="1">Now [auth tokens](on-premises-sysadmin.html#auth-tokens) (an alternative SSO) also work with [OnPremises ENTERPRISE](https://www.tagtog.net/-plans#ONPREMISES).</span></li>
+  <li class="new"><span markdown="1">Now [auth tokens](on-premises-sysadmin.html#auth-tokens) (an alternative SSO) also work with [OnPremises ENTERPRISE](https://www.tagtog.com/-plans#ONPREMISES).</span></li>
   <li class="fix"><span markdown="1">The selected members in the list of task distribution was ignored in the actual distribution sometimes. Wrongly, all members who had permissions to annotate, got documents distributed, even if they were not explicitly written in the list of task distribution. This is now fixed.</span></li>
   <li class="fix"><span markdown="1">Now it is possible to download the original file regardless of whether the file was uploaded with non-lowercase extension (like ".PDF", or ".Pdf", or ".TXT", etc.) </span></li>
   <li class="fix"><span markdown="1">([OpenID SSO](on-premises-sysadmin.html#single-sign-on-sso)) the [`token_type` is now verified ignoring the case](https://tools.ietf.org/html/rfc6749#section-4.2.2 "OAuth 2.0 spec") (this allows both `"Bearer"` and `"bearer"`).</span></li>
@@ -589,7 +588,7 @@ _2020-08-08_
   <li class="new"><span markdown="1">Now you can live search when you are selecting values in a document/entity label of `enum` type.</span></li>
   <li class="new"><span markdown="1">Distribute documents to specific members directly from the GUI! [Documentation](documents.html#distribute-to-a-group-of-users).</span></li>
   <li class="new"><span markdown="1">Select the [input format](ioformats.html#input-formats) directly on the GUI. For example, you can decide if you want tagtog to clean/format your content (`formatted`) or leave it exactly as it is (`verbatim`). [Documentation](documents.html#format).</span></li>
-  <li class="del"><span markdown="1">The default format to parse plain text was changed from `formatted` to `verbatim`. If this is a problem for you, you can now explicitly select the format on the [website](https://docs.tagtog.net/documents.html#format) and via [API](https://docs.tagtog.net/API_documents_v1.html#examples-send-plain-text-and-format-it); set it to: `formatted`.</span></li>
+  <li class="del"><span markdown="1">The default format to parse plain text was changed from `formatted` to `verbatim`. If this is a problem for you, you can now explicitly select the format on the [website](https://docs.tagtog.com/documents.html#format) and via [API](https://docs.tagtog.com/API_documents_v1.html#examples-send-plain-text-and-format-it); set it to: `formatted`.</span></li>
   <li class="new"><span markdown="1">Assign a custom name to your documents directly from the GUI. [Documentation](documents.html#define-a-name).</span></li>
   <li class="new"><span markdown="1">New style for dropdown menus.</span></li>
   <li class="doc"><span markdown="1">A lot of new API examples to perform regular operations with documents and annotations: [API documents](API_documents_v1.html).</span></li>
@@ -752,7 +751,7 @@ _2020-05-17_
 _2020-05-11_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">(Security) With several improvements in our TSL/SSL (https) configuration, [tagtog.net is proud to receive an **A+** rating from SSL Labs (Qualys)](https://www.ssllabs.com/ssltest/analyze.html?d=tagtog.net).</span></li>
+  <li class="new"><span markdown="1">(Security) With several improvements in our TSL/SSL (https) configuration, [tagtog.com is proud to receive an **A+** rating from SSL Labs (Qualys)](https://www.ssllabs.com/ssltest/analyze.html?d=tagtog.com).</span></li>
   <li class="new"><span markdown="1">(Security) **Add support for [TSL/SSL](https://wiki.openssl.org/index.php/SSL_and_TLS_Protocols) protocol TLSv1.3**. The supported SSL protocol versions are now: TLSv1.2 & TLSv1.3.</span></li>
   <li class="del"><span markdown="1">(Security) Drop support for SSL protocols TLSv1 and TLSv1.1.</span></li>
   <li class="new"><span markdown="1">(Security) Serve now all resources via https, including assets such as images.</span></li>
@@ -791,7 +790,7 @@ _2020-04-25_
 _2020-04-22_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">(OnPremises) We now distribute the `tagtog_cache` image from our `*.tagtog.net` servers directly, thus not having to rely anymore on hub.docker.com.</span></li>
+  <li class="new"><span markdown="1">(OnPremises) We now distribute the `tagtog_cache` image from our `*.tagtog.com` servers directly, thus not having to rely anymore on hub.docker.com.</span></li>
 </ul>
 
 ---
@@ -991,7 +990,7 @@ _2019-10-20_
 _2019-10-14_
 
 <ul class="updates">
-  <li class="fix"><span markdown="1">Reestablished the old links to the corpora: [LocText](https://www.tagtog.net/jmcejuela/LocText/-settings), [IDP4+](https://www.tagtog.net/jmcejuela/IDP4plus/-settings), [FlyBase](https://www.tagtog.net/FlyBase/FlyBase_PLOS-BioCreativeIV_Corpus/-settings), and [V300](https://www.tagtog.net/helencook/V300/-settings)</span></li>
+  <li class="fix"><span markdown="1">Reestablished the old links to the corpora</span></li>
 </ul>
 
 ---
@@ -1171,7 +1170,7 @@ _2019-07-11_
 <ul class="updates">
   <li class="new"><span markdown="1">First rollout of **Public Projects** ⛱.</span></li>
   <li class="new"><span markdown="1">New role: [`reader`](collaboration.html#roles) 👓.</span></li>
-  <li class="new"><span markdown="1">Created an independent page to see the [status of tagtog's services](http://status.tagtog.net)</span></li>
+  <li class="new"><span markdown="1">Created an independent page to see the [status of tagtog's services](http://status.tagtog.com)</span></li>
   <li class="new"><span markdown="1">See your active projects first: your list of projects is now sorted by your last access to them!.</span></li>
   <li class="fix"><span markdown="1">No longer can users without enough authorization see action buttons that do require authorization (for example in settings).</span></li>
   <li class="fix"><span markdown="1">(PDF Viewer) Eliminate race conditions for Pan functionality.</span></li>
@@ -1183,7 +1182,7 @@ _2019-07-11_
 _2019-06-23_
 
 <ul class="updates">
-  <li class="new"><span>(On-Premises) White-labeling tagtog is now possible. White labeling lets you customize the way tagtog looks so that it matches your organization's branding. Please contact with us at <a href="mailto:info@tagtog.net">info@tagtog.net</a> if you are interested.</span></li>
+  <li class="new"><span>(On-Premises) White-labeling tagtog is now possible. White labeling lets you customize the way tagtog looks so that it matches your organization's branding. Please contact with us at <a href="mailto:info@tagtog.com">info@tagtog.com</a> if you are interested.</span></li>
   <li class="new"><span markdown="1">Supercurator role is able now to export the project settings.</span></li>
   <li class="new"><span markdown="1">[tagtog.ai](http://tagtog.ai) 😉🤖</span></li>
   <li class="doc"><span markdown="1">(On-Premises) [Added troubleshooting to fix the ml service consuming too much CPU](on_premises_README.html#ml0-tagtog-service-taking-100-of-cpu)</span></li>
@@ -1263,7 +1262,7 @@ _2019-05-13_
 _2019-05-05_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">New parameter [`distributeToMembers` (API documents) to fine-tune the distribution of tasks](https://docs.tagtog.net/API_documents_v1.html#import-and-annotate-text).</span></li>
+  <li class="new"><span markdown="1">New parameter [`distributeToMembers` (API documents) to fine-tune the distribution of tasks](https://docs.tagtog.com/API_documents_v1.html#import-and-annotate-text).</span></li>
   <li class="fix"><span markdown="1">Fixed non-breaking error of repeatedly adding _nav=false_ to the URL query string when removing documents manually.</span></li>
   <li class="fix"><span markdown="1">Fixed error of having to upload a PDF twice after activating _Native PDF_ to make it actually work.</span></li>
   <li class="fix"><span markdown="1">Fixed errors on changing the number of members and task distribution settings that sometimes caused inconsistent states.</span></li>
@@ -1364,7 +1363,7 @@ _2019-03-06_
 
 <ul class="updates">
   <li class="fix"><span markdown="1">Fixed problem that prompted an error to some users when saving/confirming a document. The underlying issue was operating with documents that had document labels set when these labels were previously removed from the project settings.</span></li>
-  <li class="new"><span markdown="1"><a title="Pre-selections - tagtog.net" href="webeditor.html#pre-selections">Pre-selections</a> now work with entity labels. When you create pre-selections, these inherit the entity labels coming from the main entity.</span></li>
+  <li class="new"><span markdown="1"><a title="Pre-selections - tagtog.com" href="webeditor.html#pre-selections">Pre-selections</a> now work with entity labels. When you create pre-selections, these inherit the entity labels coming from the main entity.</span></li>
   <li class="new"><span markdown="1">When you change the type of an entity, only common entity labels are preserved.</span></li>
   <li class="fix"><span markdown="1">Fixed a rare error On-Premises that caused the cache sometimes to fail.</span></li>
   <li class="new"><span markdown="1">IMPROVEMENT Forced indexing of documents upon document searching.</span></li>
@@ -1414,7 +1413,7 @@ _2019-02-17_
 _2019-02-05_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">[Full international unicode support for dictionaries! 🎉🎊🧧](https://twitter.com/tagtog_net/status/1092877445009756160)</span></li>
+  <li class="new"><span markdown="1">Full international unicode support for dictionaries! 🎉🎊🧧</span></li>
 </ul>
 
 ---
@@ -1552,7 +1551,7 @@ _2018-11-26_
 _2018-11-19_
 
 <ul class="updates">
-  <li class="doc"><span markdown="1">Improve [tagtog.net](http://tagtog.net "The Text Annotation Tool")'s discoverability in search engines</span></li>
+  <li class="doc"><span markdown="1">Improve [tagtog.com](http://tagtog.com "The Text Annotation Tool")'s discoverability in search engines</span></li>
 </ul>
 
 ---
@@ -1561,8 +1560,8 @@ _2018-11-19_
 _2018-11-15_
 
 <ul class="updates">
-  <li class="new"><span markdown="1">[Native PDF 📃 ! Annotate actual PDFs; then use them to train your ML models as easily as if they were plain texts! 😲](http://tagtog.net#pdf-annotation)</span></li>
-  <li class="new"><span markdown="1">[Use the new automated payment gateway to manage your subscriptions!](https://tagtog.net/-plans)</span></li>
+  <li class="new"><span markdown="1">[Native PDF 📃 ! Annotate actual PDFs; then use them to train your ML models as easily as if they were plain texts! 😲](http://tagtog.com#pdf-annotation)</span></li>
+  <li class="new"><span markdown="1">[Use the new automated payment gateway to manage your subscriptions!](https://tagtog.com/-plans)</span></li>
   <li class="fix"><span markdown="1">Stability improvements</span></li>
   <li class="doc"><span markdown="1">Add documentation: [upload annotated documents via API](API_documents_v1.html#import-annotated-documents-post "tagtog - upload annotated documents")</span></li>
   <li class="doc"><span markdown="1">Add documentation: [search by document label](search-queries.html#search-by-document-label "tagtog - search by document label")</span></li>

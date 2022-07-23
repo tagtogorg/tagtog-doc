@@ -1,11 +1,11 @@
-Repo containing the official documentation for [🍃tagtog](https://www.tagtog.net).
+Repo containing the official documentation for [🍃tagtog](https://www.tagtog.com).
 
-The latest stable documentation is hosted at [docs.tagtog.net](https://docs.tagtog.net/).
+The latest stable documentation is hosted at [docs.tagtog.com](https://docs.tagtog.com/).
 
 
 # Issues
 
-Please report any issues here or contact us at [info@tagtog.net](mailto:info@tagtog.net)
+Please report any issues here or contact us at [info@tagtog.com](mailto:info@tagtog.com)
 
 
 # Do you want to contribute?

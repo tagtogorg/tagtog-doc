@@ -5,7 +5,7 @@ sidebar_link: true
 id: sysadmin-onpremises
 toc: true
 
-tagtog_domain: https://www.tagtog.net
+tagtog_domain: https://www.tagtog.com
 request_auth_token_endpoint: /-sysadmin/request-auth-token
 onpremises_tagtog_domain: https://tagtog.example.org
 
@@ -41,7 +41,7 @@ Accessible only in tagtog OnPremises, the <strong>SysAdmin page</strong> lets yo
 
 ### License model: floating seats
 
-In OnPremises, your tagtog license allows you a maximum number of **active** users (seats). On top, in the [tagtog ENTERPRISE plan](https://www.tagtog.net/-plans#ONPREMISES), you can have in your system more users created. For example, let's say you have a tagtog ENTERPRISE license for 25 annotators. In this case, you could have more users registered than 25, but only 25 of them can be **active**. The rest of the users must be **inactive**.
+In OnPremises, your tagtog license allows you a maximum number of **active** users (seats). On top, in the [tagtog ENTERPRISE plan](https://www.tagtog.com/-plans#ONPREMISES), you can have in your system more users created. For example, let's say you have a tagtog ENTERPRISE license for 25 annotators. In this case, you could have more users registered than 25, but only 25 of them can be **active**. The rest of the users must be **inactive**.
 
 <div class="img-with-caption" align="center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/aYsouRrJ_Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -217,7 +217,7 @@ With tagtog Teams, you can:
 </div>
 <div class="one-third-col">
   <div class="message">
-    Depending on your <a href="https://www.tagtog.net/-plans" title="tagtog - plans">plan</a>, you might not see this feature.
+    Depending on your <a href="https://www.tagtog.com/-plans" title="tagtog - plans">plan</a>, you might not see this feature.
   </div>
   <div class="message">
     <strong>Any change is reflected immediately</strong> across all the projects in the system.
@@ -292,7 +292,7 @@ These are relevant aspects of the tagtog OIDC integration:
 
 * **Users primary identification is by their email**. This means that the mapping between your users in your OIDC Provider and the tagtog registered users is based on the email claim/attribute. In pratical terms, this means that a user on tagtog with, for instance, username "A" and email "A@example.org", and a user on your Provider with different username "A-alt" but same email "A@example.org", represent the very same user.
 
-* **Valid usernames follow the regex: `[a-zA-Z][a-zA-Z0-9-]{0,39}`**. Trying to add users with an invalid username, either manually or "automatically" (upon user OIDC login), will throw an error. If you have good reasons to make the username regex more flexible, [please let us know](https://www.tagtog.net/#contact).
+* **Valid usernames follow the regex: `[a-zA-Z][a-zA-Z0-9-]{0,39}`**. Trying to add users with an invalid username, either manually or "automatically" (upon user OIDC login), will throw an error. If you have good reasons to make the username regex more flexible, [please let us know](https://www.tagtog.com/#contact).
 
 
 #### OIDC: How to use

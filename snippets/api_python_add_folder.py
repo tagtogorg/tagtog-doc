@@ -1,6 +1,6 @@
 import requests
 
-tagtogAPIUrl = "https://www.tagtog.net/-api/settings/v1/folders/add"
+tagtogAPIUrl = "https://www.tagtog.com/-api/settings/v1/folders/add"
 
 auth = requests.auth.HTTPBasicAuth(username='username', password='password')
 params = {'project':'projectName', 'owner': 'ownername'}

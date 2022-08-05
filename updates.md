@@ -9,8 +9,8 @@ notoc: true
 📝 This is tagtog's changelog, with all new features and improvements. [tagtog Cloud](https://www.tagtog.com) runs always on the latest version. If you are on **tagtog OnPremises**, make sure to [update to the latest version](on_premises_README.html) to make the most of your experience.
 
 <div class="message">
-  <p>:warning: <strong>IMPORTANT:</strong>  During the <strong>weekend of July 23rd - July 24th, 2022</strong>, there will be <strong>scheduled maintenance work</strong>. We expect a few hours of downtime, but it can extend if we find issues. During this maintenance window, we plan to migrate the platform from https://www.tagtog.net to <a href="https://www.tagtog.com">https://www.tagtog.com</a>.</p>
-  <p>From July 25th, please always access tagtog using <strong><a href="https://www.tagtog.com">https://www.tagtog.com</a></strong>. From now on, also use the email address <a href="mailto:support@tagtog.com">support@tagtog.com</a> (or <a href="mailto:info@tagtog.com">info@tagtog.com</a>) to contact us.</p>
+  <p>:warning: <strong>IMPORTANT:</strong>  we migrated the platform from https://www.tagtog.net to <a href="https://www.tagtog.com">https://www.tagtog.com</a>.</p>
+  <p>From now on, please use the email address <a href="mailto:support@tagtog.com">support@tagtog.com</a> (or <a href="mailto:info@tagtog.com">info@tagtog.com</a>) to contact us.</p>
   <p>If you are using the API, please make sure you change your code to point to the new domain <a href="https://www.tagtog.com">https://www.tagtog.com</a>.</p>
 </div>
 
@@ -23,6 +23,7 @@ notoc: true
 _2022-07-23_
 
 <ul class="updates">
+  <li class="new"><span markdown="1">Migration from tagtog.net to [tagtog.com](https://www.tagtog.com).</span></li>
   <li class="fix"><span markdown="1">The [python tagtog script](API_documents_v1.html#python-tagtog-script) did not work properly when downloading [`orig`/`original`](ioformats.html#output-formats) documents. The filenames were not read correctly from the header _Content-Disposition_. This is now fixed.</span></li>
 </ul>
 

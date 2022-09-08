@@ -1277,7 +1277,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/ite
   </ul>
   <div class="tab">
   <p class="code-desc">This example shows how to import a PDF along with its annotations. The format used is <code>default-plus-annjson</code> as we want the PDF to use the default format and import annotations for this file. The input files are in Github, you can find a link below.</p>
-  <p class="code-desc" markdown="1">If you are rather annotating the PDF through tagtog's internal [plain.html](anndoc.html#plain-html) (which contains the PDF's text), take a look at this fully-working [GitHub sample repository](https://github.com/tagtog/demo-webhooks/blob/main/app.py).</p>
+  <p class="code-desc" markdown="1">If you are rather annotating the PDF through tagtog's internal [plain.html](anndoc.html#plain-html) (which contains the PDF's text), take a look at this fully-working [GitHub sample repository](https://github.com/tagtogorg/demo-webhooks/blob/main/app.py).</p>
   <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
   ```python
   import requests
@@ -1391,7 +1391,7 @@ curl -u {{ page.api_username }}:{{ page.api_pwd }} -X POST -F "files=@/files/ite
   </ul>
   <div class="tab">
   <p class="code-desc" markdown="1">This example shows how to generate a set of annotations with a [spaCy](https://spacy.io) model and send the pre-annotated text to tagtog. The model used is [en_core_web_sm](https://spacy.io/models/en#en_core_web_sm). We want to do NER and extract `PEOPLE`, `ORG`, and `MONEY` [entities](https://spacy.io/models/en#en_core_web_sm-labels) (see "Label Scheme").</p>
-  <p class="code-desc" markdown="1">For more details, check out this step-by-step guide: [Integrating tagtog and spaCy](https://tagtog.medium.com/integrating-tagtog-and-spacy-16fb0addeea1) & the [full GitHub repository](https://github.com/tagtog/demo-webhooks).</p>
+  <p class="code-desc" markdown="1">For more details, check out this step-by-step guide: [Integrating tagtog and spaCy](https://tagtog.medium.com/integrating-tagtog-and-spacy-16fb0addeea1) & the [full GitHub repository](https://github.com/tagtogorg/demo-webhooks).</p>
   <div id="tab-preannotated-verbatim-python" class="tab-content" style="display: block" markdown="1">
   ```python
 import spacy

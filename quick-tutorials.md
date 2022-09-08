@@ -13,7 +13,7 @@ Know what you can do withe tagtog with the following tutorials. Moreover, we pub
 
 ## [How to annotate scans for NLP](https://tagtog.medium.com/how-to-annotate-scans-for-nlp-7333ad4bab3a?source=friends_link&sk=ca708d310fee15aa4573dfafe11bfe95)
 
-Learn how to integrate an external OCR software into tagtog, including [fully-functioning java code](https://github.com/tagtog/java-ocr-amazon-textract-searchable-pdf) to:
+Learn how to integrate an external OCR software into tagtog, including [fully-functioning java code](https://github.com/tagtogorg/java-ocr-amazon-textract-searchable-pdf) to:
 
 1. OCR scans calling the APIs of Amazon Textract
 2. Uplaod the resulting text-embedded PDFs into tagtog (to do there the labeling)

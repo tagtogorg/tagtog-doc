@@ -312,7 +312,7 @@ tagtog_domain: https://www.tagtog.com
     <h4>How to test webhooks locally?</h4>
     <p markdown="1">To easily expose your app externally, you can use [ngrok](https://ngrok.com). This tool forwards the incoming requests to your local app. If you are using our Cloud, this tool will make easier for tagtog.com to reach your app.</p>
     <h4>A full example</h4>
-    <p markdown="1">In this step-by-step guide you will find a end-to-end example in Python about how to connect your models to tagtog using webhooks: [Connect your NLP models to tagtog using webhooks](https://tagtog.medium.com/connect-your-nlp-models-to-tagtog-using-webhooks-13d422ae4dff). Here you can find the GitHub repository: [demo-webhooks](https://github.com/tagtog/demo-webhooks)</p>
+    <p markdown="1">In this step-by-step guide you will find a end-to-end example in Python about how to connect your models to tagtog using webhooks: [Connect your NLP models to tagtog using webhooks](https://tagtog.medium.com/connect-your-nlp-models-to-tagtog-using-webhooks-13d422ae4dff). Here you can find the GitHub repository: [demo-webhooks](https://github.com/tagtogorg/demo-webhooks)</p>
   </div>
 
 </div>
